@@ -60,8 +60,8 @@
 % Insert Author names, affiliations and corresponding author email.
 \\
 Luiz Max Fagundes de Carvalho$^{1\ast}$,
-Nuno Faria$^{2}$,
 Guy Baele$^{2}$,
+Nuno Faria$^{2}$,
 Andres M. Perez$^{3}$,
 Philippe Lemey$^{2}$,
 Waldemir de Castro Silveira$^{1}$
@@ -95,18 +95,26 @@ powerful tool to evaluate control programmes and guide vaccine formulation \cite
 % Results and Discussion can be combined.\\
 \section*{Results}
 \subsection*{Phylogenetic Analysis and Demographic Reconstruction}
-\indent In this study, we analyzed all publicly available VP1 (1D) sequences for serotypes A and O in South America (131 and 167 sequences, respectively) from a Bayesian phylogenetic point of view. The BEAST \cite{BEAST} package was used to build time-structured phylogenies for each serotype, as well as select the best combination of tree (coalescent) prior and molecular clock model. The results of this last analysis (Table S1) allowed for decisive rejection of the constant population assumption (A: BF= 11; O: BF= 21.1). Interestingly, best fit molecular clock models were different for the two serotypes (O: exponential, A: lognormal, Table S1), suggesting different evolutionary dynamics. Moreover, a `temporal signal' test (see Methods) showed that both serotypes present substantial temporal information contained in the sequences (A:BF=310; O:BF=348).\\
-\indent The maximum clade credibility (MCC) tree estimated for serotype A (Figure~\ref{fig:Atree}) shows a time to most common recent ancestor (TMRCA) of around 75 years, placing the origin of the circulating strains in the early years of the 1920's decade. Also, the mutation rate was estimated around $4$ x $10^{-3}$ substitutions/site/year. Figure~\ref{fig:Atree} shows that sequences from the same location do not present a tendency to form monophyletic clades, showing considerable interspersing, what suggests viral flow between countries (see also Spatial Signal below).\\
-\indent Figure~\ref{fig:Otree} presents the estimated MCC tree for serotype O. The same interspersing trend can be noticed, with Ecuador and Colombia showing several interleaved clades. \\
+\indent In this study, we analyzed all publicly available VP1 (1D) sequences for serotypes A and O in South America (131 and 167 sequences, respectively) from a Bayesian phylogenetic point of view. The BEAST \cite{BEAST} package was used to build time-structured phylogenies for each serotype, as well as select the best combination of tree (coalescent) prior and molecular clock model. The results of this last analysis (Table S1) allowed for decisive rejection of the constant population assumption (A: BF= 11; O: BF= 21.1). Interestingly, best fit molecular clock models were different for the two serotypes (O: exponential, A: lognormal, Table S1), suggesting different evolutionary dynamics. Moreover, a `temporal signal' test (see Methods) showed that both serotypes present substantial temporal information contained in the sequences (A: BF=$310$; O: BF=$348$).\\
+\indent The maximum clade credibility (MCC) tree estimated for serotype A (Figure~\ref{fig:Atree}) shows a time to most common recent ancestor (TMRCA) of around 75 years, placing the origin of the circulating strains in the early years of the 1920's decade. Also, the mutation rate was estimated around $4$ x $10^{-3}$ substitutions/site/year. Figure~\ref{fig:Atree} shows that sequences from the same location do not present a tendency to form monophyletic clades, showing considerable interspersing, what suggests viral flow between countries (see also \textbf{Quantifying temporal and spatial signal below}).\\
+\begin{center}
+ [Figure 1 about here]
+\end{center}
+\indent Figure~\ref{fig:Otree} presents the estimated MCC tree for serotype O. The same interspersing trend can be noticed, with Ecuador and Colombia showing several interleaved clades. The TMRCA for serotype O was estimated in around 20 years showing a more recent origin. The estimated mutation rate was aproximately $1x10^{-2}$, what is consistent with previous studies \cite{Perez2001,Carvalho2012}.\\
+\begin{center}
+ [Figure 2 about here]
+\end{center}
 \indent The Skygrid results show strikingly different dynamical behaviors for the two serotypes, with serotype O exhibiting considerable more oscillation over time, and a diversity peak occurring in late years of the 1990 decade. Serotype A exhibits a more stable behavior over most of the 20th century, with most variation occurring within the temporal sampling interval, mainly in the last years of the 2000 decade.\\
+\begin{center}
+ [Figure 3 about here]
+\end{center}
 \subsection*{Spatial Dynamics of FMDV in South America}
+\indent To assess the spatial signal contained in our sequences, we used Bayesian tip-association tests \cite{bats} to determine the amount of spatial signal in our reconstructed phylogenies. To gain insight into the amount of association for each location, we computed the maximum clade (MC) statistic.  The results for serotype A are presented in Table~\ref{tab:BaTSA}. The results for serotype O are shown in Table~\ref{tab:BaTSO}. For both serotypes, we observed significant location-tip association. MC statistics were different for each country in each dataset, showing different geographic structures for each serotype.\\
 \begin{itemize}
- \item BaTS
  \item MJ and BSSVS
  \item shared vs separated
  \item Regions
 \end{itemize}
-
 \subsection*{Sampling Bias Assessment}
 \section*{Discussion}
 % You may title this section "Methods" or "Models".
@@ -166,7 +174,7 @@ The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=15cm,height=10cm]{FIGURES/A.pdf}
+\includegraphics[scale=.85]{FIGURES/A.pdf}
 \end{center}
 \caption{
 {\bf Phylogenetic Relationships of 131 serotype A FMDV isolates from South America.} Time-scaled phylogenetic maximum clade credibility (MCC) tree for FMDV VP1 sequences from eight countries in the period 1955-2010 is presented. Tips were collapsed for clarity and colored according to geographic origin. Diamonds sizes are proportional to posterior probabilities.\\
@@ -178,7 +186,7 @@ The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications 
 \newpage
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=15cm,height=10cm]{FIGURES/O.pdf}
+\includegraphics[scale=.60]{FIGURES/O.pdf}
 \end{center}
 \caption{
 {\bf Phylogenetic Relationships of 167 serotype O FMDV isolates from South America.} Time-scaled phylogenetic maximum clade credibility tree for FMDV VP1 sequences from eight countries in the period 1955-2010. Tips were collapsed for clarity and colored according to geographic origin. Diamonds sizes are proportional to posterior probabilities.\\
@@ -190,7 +198,7 @@ The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications 
 \newpage
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=15cm,height=15cm]{FIGURES/skygrid.pdf}
+\includegraphics[scale=1.0]{FIGURES/skygrid.pdf}
 \end{center}
 \caption{
 {\bf Temporal dynamics of FMDV serotypes A and O in South America} Population dynamics were reconstructed for both serotypes using the Skygrid model (see Methods). Additionally, data on vaccination  (doses per head) and (log) FMD serotype-specific notifications were superimposed on the demographic reconstruction, with 95 \% Bayesian Credible Intervals shaded in grey.\\
@@ -199,11 +207,10 @@ The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \newpage
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=15cm,height=15cm]{FIGURES/compound.pdf}
+\includegraphics[scale=.85]{FIGURES/compound.pdf}
 \end{center}
 \caption{
 {\bf Migration networks for FMDV serotypes A and O in South America} We estimated the number of migration events between countries using Markov jumps.  Bayesian Stochastic Variable Search Selection (BSVSS) was used to determine most significant migration routes and Bayes factors are depicted by arrows, with line thickness proportional to BF magnitude. Coroplethic maps show the net migration rates for each country, for both serotypes.\\
@@ -216,7 +223,7 @@ The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications 
 \newpage
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=15cm,height=15cm]{FIGURES/trade_info.jpeg}
+\includegraphics[scale=.5]{FIGURES/trade_info.jpeg}
 \end{center}
 \caption*{
 {\bf S1. Kernel density estimation for the trade-informed priors used in this study}.\\
