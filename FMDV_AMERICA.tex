@@ -98,7 +98,7 @@ However, to allow epidemiological inference, phylogenetic evidence has still to 
 
 The increased availability of molecular sequences with known date and location of sampling has fostered the development of new methods to integrate epidemiological and environmental data in order to reconstruct pathogen population dynamics and test evolutionary hypotheses \cite{MEP,grenfell}. Most notably, Bayesian phylogeography, introduced by Lemey et al. (2009) \cite{roots}, has been successfully applied to study FMDV patterns of spread as well as trace spatial  origins of FMD epidemics \cite{Carvalho2012,bulgaria,phymal}.
 
-In this study we apply state-of-art Bayesian Phylogeography methods, implemented within the BEAST \cite{BEAST} package, to address the evolutionary dynamics of serotypes A and O in South America, both in space and in time. This full probabilistic framework allows for incorporating multiple sources of information in order to test hypothesis about viral dispersal, while naturally accommodating uncertainty \cite{roots,towards}. We use BEAST to build time-structured phylogenies and the Skygrid model to reconstruct past population dynamics, to which we overlay vaccination and serotype-specific notification data. Moreover, we use data on livestock trade and geographical distances as predictors for viral spatial diffusion and use recently developed methods to accurately calculate marginal likelihoods for each predictor. Finally, we offer an appreciation of the statistical hurdles that may be caused by biased geographic sampling, and propose ways to ameliorate their effects.
+In this study we apply state-of-art Bayesian Phylogeography methods, implemented within the BEAST \cite{BEAST} package, to address the evolutionary dynamics of serotypes A and O in South America, both in space and in time. This full probabilistic framework allows for incorporating multiple sources of information in order to test hypothesis about viral dispersal, while naturally accommodating uncertainty \cite{roots,towards}. We use BEAST to build time-structured phylogenies and the Skygrid \cite{skygrid} model to reconstruct past population dynamics, to which we overlay vaccination and serotype-specific notification data. Moreover, we use data on livestock trade and geographical distances as predictors for viral spatial diffusion and use recently developed methods to accurately calculate marginal likelihoods for each predictor. Finally, we offer an appreciation of the statistical hurdles that may be caused by biased geographic sampling, and propose ways to ameliorate their effects.
 
 % Results and Discussion can be combined.
 
@@ -146,10 +146,13 @@ In order to strenghten epidemiological inference, it may be interesting to compa
 \subsection*{Spatial Dynamics of FMDV in South America}
 
 To assess the spatial pattern of FMDV spread within South America, we also performed Bayesian phylogeographic analysis, again using the models available in BEAST \cite{roots}.
-We begin by evaluating the spatial signal contained in our sequences using Bayesian tip-association tests \cite{bats} to determine the amount of spatial signal in our reconstructed phylogenies. To gain insight into the amount of association for each location, we computed the maximum clade (MC) statistic.  The results for serotype A are presented in Table~\ref{tab:BaTSA} while results for serotype O can be found in Table~\ref{tab:BaTSO}. For both serotypes, we observed significant location-tip association. MC statistics were different for each country in each dataset, showing different geographic structures for each serotype. As an overall result our datasets presented high degree of spatial signal, what justifies more complex phylogeographic analyses to study the transmission network of FMDV in the continent.\\
-Fist, we employ an asymmetric continuous-time Markov chain (CTMC) 
+We begin by evaluating the spatial signal contained in our sequences using Bayesian tip-association tests \cite{bats} to determine the amount of spatial signal in our reconstructed phylogenies. To gain insight into the amount of association for each location, we computed the maximum clade (MC) statistic.  The results for serotype A are presented in Table~\ref{tab:BaTSA} while results for serotype O can be found in Table~\ref{tab:BaTSO}. For both serotypes, we observed significant location-tip association. MC statistics were different for each country in each dataset, showing different geographic structures for each serotype. As an overall result our datasets presented high degree of spatial signal, what justifies more complex phylogeographic analyses to study the transmission network of FMDV in the continent.
 
-Using animal trade data as predictors can be a valuable tool to understand the role of livestock commerce in the spread of animal and zoonotic diseases \cite{Nelson2011}. We used data from the detailed trade matrix available from the Food and Agriculture Organization (FAO) to elicit CMTC rate matrix priors (predictors), henceforth called trade-informed priors. By accurately calculating the marginal likelihood of each trade-informed prior we can gain insight into the importance of each predictor on viral spread.
+Fist, we employ an asymmetric continuous-time Markov chain (CTMC) phylogeographic model \cite{roots}, coupled with a Bayesian stochastic search variable selection (BSSVS) procedure that allows us to simultaneously model viral spatial diffusion while choosing a minimal set of transitions (routes) that parsimoniously explain the diffusion process. BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path. The results of this analysis are presented in Figures ~\ref{fig:mj&BFs} and ~\ref{fig:migration}
+
+Using animal trade data as predictors can be a valuable tool to understand the role of livestock commerce in the spread of animal and zoonotic diseases \cite{Nelson2011}. We used data from the detailed trade matrix available from the Food and Agriculture Organization (FAO) to elicit CMTC rate matrix priors (predictors), henceforth called ``trade-informed priors''. By accurately calculating the marginal likelihood of each trade-informed prior we can gain insight into the importance of each predictor on viral spread \cite{Carvalho2012,Nelson2011}. {{\bf MORE [on trade + viral flow]}}
+
+To further explore the spatial behavior of FMDV we employ the so-called ``Markov jump'' counts \cite{Minin2008} of the expected number of location state transitions along the  branches of the phylogeny, which  provide a quantitative measure of gene flow between countries, representing successful viral introductions from one region to another.
 \begin{itemize}
  \item MJ and BSSVS
  \item shared vs separated
@@ -182,12 +185,12 @@ Data on animal trade were obtained from the FAO database (\url{http://faostat.fa
 
 First, we checked both data sets for recombination using the tools (SBP and GARD \cite{sbpgard}) available from the Datamonkey facility (\url{http://www.datamonkey.org/}), and no recombination was found. We then used hierarchical likelihood model selection, as implemented in the package jModeltest 0.1.1 \cite{jmodel}, to select the best nucleotide substitution model for each data set. This analysis yielded the general time reversible (GTR) model with a discretized gamma distributed across-site rate variation and a proportion of invariant sites (GTR+I+$\Gamma_{4}$) model as the best fit for both data sets.
 
-  We performed Bayesian model selection to assess the performance of different demographic and molecular clock models.
+We performed Bayesian model selection to assess the performance of different demographic and molecular clock models.
 To this end, we used state-of-the-art marginal likelihood estimators, such as path sampling (PS) \cite{LartillotPhilippe} and stepping-stone sampling (SS) \cite{Xie}, which have only recently been introduced in the field of phylogenetics.
 Both PS and SS have been shown to outperform traditional posterior-based marginal likelihood estimators, such as the harmonic mean estimator (HME) and its stabilized version (sHME) \cite{LartillotPhilippe,Xie,Baele2012,Baele2013a,Baele2013b}.
 Further, it has been shown that the use of proper priors is essential when performing Bayesian model selection \cite{Baele2013a}, and by extension, when conducting Bayesian inference through Markov chain Monte Carlo (MCMC).
                                                                        
-%GB: Did we estimate marginal likelihoods for the skyride or for the skygrid? <- LM: skyride..
+%GB: Did we estimate marginal likelihoods for the skyride or for the skygrid? <- LM: skyride...
 %GB: Why did we not compare the UCED and UCLD to the STRICT clock? Should we still do that? <-LM: we did, indeed. updated
 Using PS and SS, we have estimated the (log) marginal likelihood for several combinations of tree priors and molecular clocks, and this for each data set.
 We compared the Skyride model, i.e. a Bayesian nonparametric model that parameterizes the effective population size as a piecewise constant function and employs a GMRF prior to smooth the trajectory \cite{skygrid}, to a constant population size model.
@@ -461,10 +464,12 @@ A	&Constant	&ULN	&-12285\\
 A	&Skyride 	&ULN	&\textbf{-12274}\\
 A	&Constant	&UCED	&-12316\\
 A	&Skyride 	&UCED	&-12307\\
+A       &Skyride       &STRICT &-12308\\
 O	&Constant	&ULN	&-8087\\
 O	&Skyride 	&ULN	&-8082\\
 O	&Constant	&UCED	&-8090\\
 O	&Skyride 	&UCED	&\textbf{-8069}\\
+O       &Skyride       &STRICT &-8125\\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
