@@ -225,7 +225,10 @@ Spatial signal was quantified using Bayesian tip-association tests, implemented 
 
 We apply the recently developed Skygrid coalescent model \cite{skygrid} in order to reconstruct the past population dynamics for both serotypes and then overlay the results to serotype-specific outbreak notifications.
 
-Skygrid is a nonparametric coalescent-based method that uses a Gaussian Markov Random Field (GMRF) prior to obtain smooth estimates for effective population size trajectories over time \ldots [NUNO'S SHARE]
+Skygrid is a nonparametric coalescent-based method that uses a Gaussian Markov Random Field (GMRF) prior to obtain smooth estimates for effective population size trajectories over time \ldots 
+\begin{center}
+ [NUNO'S SHARE]
+\end{center}
 
 
 \subsection*{Spatial Analysis}
@@ -297,6 +300,20 @@ We acknowledge the support of the National Evolutionary Synthesis Center (NESCen
 \bibliography{FMDV_AMERICA}
 \newpage
 \section*{Figure Legends}
+
+{\bf Figure~\ref{fig:Atree}. Phylogenetic Relationships of 131 serotype A FMDV isolates from South America.} Time-scaled phylogenetic maximum clade credibility (MCC) tree for FMDV VP1 sequences from eight countries in the period 1955-2010 is presented. Tips were collapsed for clarity and colored according to geographic origin. Diamonds sizes are proportional to posterior probabilities.
+
+{\bf Figure~\ref{fig:Otree}. Phylogenetic Relationships of 167 serotype O FMDV isolates from South America.} Time-scaled phylogenetic maximum clade credibility tree for FMDV VP1 sequences from eight countries in the period 1955-2010. Tips were collapsed for clarity and colored according to geographic origin. Diamonds sizes are proportional to posterior probabilities.
+
+{\bf Figure~\ref{fig:skygrid}. Temporal dynamics of FMDV serotypes A and O in South America.} Population dynamics were reconstructed for both serotypes using the Skygrid model (see Methods). Additionally, data on vaccination  (doses per head) and (log) FMD serotype-specific notifications were superimposed on the demographic reconstruction, with 95 \% Bayesian Credible Intervals shaded in grey.
+
+{\bf Figure~\ref{fig:mj&BFs}. Migration networks for FMDV serotypes A and O in South America.} We estimated the number of migration events between countries using Markov jumps.  Bayesian Stochastic Variable Search Selection (BSVSS) was used to determine most significant migration routes and Bayes factors are depicted by arrows, with line thickness proportional to BF magnitude. Coroplethic maps show the net migration rates for each country, for both serotypes.
+
+{\bf Figure~\ref{fig:migration}. Spatiotemporal dynamics of FMDV in South America} Using an asymmetric diffusion model, we reconstructed the spatial spread of FMDV serotypes A and O throughout the South American continent during the XX century. Circle radius's are proportional to lineage diversity. Illustrations produced using data annotated from SPREAD \cite{spread} and vizualized using Google Earth (\url{http://www.google.com/earth/index.
+html}).
+
+{\bf SFigure~\ref{sfig:tradeinfo}. Kernel density estimation for the trade-informed priors used in this study}. Information on cattle, sheep and pigs trade was retrieved from FAO and used to create trade-informed prior distributions for the CTMC infinitesimal rate matrix. Each prior was evaluated for prior predictive probability (marginal likelihood) using the PS and SS algorithms.
+
 \newpage
 \section{Figures}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -305,9 +322,7 @@ We acknowledge the support of the National Evolutionary Synthesis Center (NESCen
 \begin{center}
 \includegraphics[scale=.85]{FIGURES/A.pdf}
 \end{center}
-\caption{
-{\bf Phylogenetic Relationships of 131 serotype A FMDV isolates from South America.} Time-scaled phylogenetic maximum clade credibility (MCC) tree for FMDV VP1 sequences from eight countries in the period 1955-2010 is presented. Tips were collapsed for clarity and colored according to geographic origin. Diamonds sizes are proportional to posterior probabilities.\\
-}
+\caption{}
 \label{fig:Atree}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -317,9 +332,7 @@ We acknowledge the support of the National Evolutionary Synthesis Center (NESCen
 \begin{center}
 \includegraphics[scale=.60]{FIGURES/O.pdf}
 \end{center}
-\caption{
-{\bf Phylogenetic Relationships of 167 serotype O FMDV isolates from South America.} Time-scaled phylogenetic maximum clade credibility tree for FMDV VP1 sequences from eight countries in the period 1955-2010. Tips were collapsed for clarity and colored according to geographic origin. Diamonds sizes are proportional to posterior probabilities.\\
-}
+\caption{}
 \label{fig:Otree}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -329,9 +342,7 @@ We acknowledge the support of the National Evolutionary Synthesis Center (NESCen
 \begin{center}
 \includegraphics[scale=1.0]{FIGURES/skygrid.pdf}
 \end{center}
-\caption{
-{\bf Temporal dynamics of FMDV serotypes A and O in South America} Population dynamics were reconstructed for both serotypes using the Skygrid model (see Methods). Additionally, data on vaccination  (doses per head) and (log) FMD serotype-specific notifications were superimposed on the demographic reconstruction, with 95 \% Bayesian Credible Intervals shaded in grey.\\
-}
+\caption{}
 \label{fig:skygrid}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -341,17 +352,14 @@ We acknowledge the support of the National Evolutionary Synthesis Center (NESCen
 \begin{center}
 \includegraphics[scale=.85]{FIGURES/compound.pdf}
 \end{center}
-\caption{
-{\bf Migration networks for FMDV serotypes A and O in South America} We estimated the number of migration events between countries using Markov jumps.  Bayesian Stochastic Variable Search Selection (BSVSS) was used to determine most significant migration routes and Bayes factors are depicted by arrows, with line thickness proportional to BF magnitude. Coroplethic maps show the net migration rates for each country, for both serotypes.\\
-}
+\caption{}
 \label{fig:mj&BFs}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \newpage
 \begin{figure}[!ht]
-%\begin{center}
+\begin{center}
 \subfigure[A --1945 ]{\includegraphics[scale=.20]{FIGURES/A_1945.jpg}}
 \subfigure[O --1995 ]{\includegraphics[scale=.20]{FIGURES/O_1995.jpg}}\\
 \subfigure[A --1965 ]{\includegraphics[scale=.20]{FIGURES/A_1965.jpg}}
@@ -360,23 +368,19 @@ We acknowledge the support of the National Evolutionary Synthesis Center (NESCen
 \subfigure[O --2005 ]{\includegraphics[scale=.20]{FIGURES/O_2005.jpg}}\\
 \subfigure[A --2008 ]{\includegraphics[scale=.20]{FIGURES/A_2008.jpg}}
 \subfigure[O --2010 ]{\includegraphics[scale=.20]{FIGURES/O_2010.jpg}}
-%\end{center}
-\caption{
-{\bf } . .\\
-}
-\label{fig:mj&BFs}
+\end{center}
+\caption{}
+\label{fig:migration}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+\setcounter{figure}{0}
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics[scale=.5]{FIGURES/trade_info.jpeg}
 \end{center}
-\caption*{
-{\bf S1. Kernel density estimation for the trade-informed priors used in this study}.\\
-}
-
+\caption{}
 \label{sfig:tradeinfo}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
