@@ -19,6 +19,7 @@
 \usepackage{indentfirst} %% LM: in order to indent the first paragraph of each section
 \usepackage{url} %% LM: in order to include nice urls
 \usepackage{booktabs} %% LM: nice tables...
+\usepackage{subfigure}
 % Use doublespacing - comment out for single spacing
 %\usepackage{setspace}
 %\doublespacing
@@ -350,6 +351,25 @@ We acknowledge the support of the National Evolutionary Synthesis Center (NESCen
 
 \newpage
 \begin{figure}[!ht]
+%\begin{center}
+\subfigure[A --1945 ]{\includegraphics[scale=.20]{FIGURES/A_1945.jpg}}
+\subfigure[O --1995 ]{\includegraphics[scale=.20]{FIGURES/O_1995.jpg}}\\
+\subfigure[A --1965 ]{\includegraphics[scale=.20]{FIGURES/A_1965.jpg}}
+\subfigure[O --2000 ]{\includegraphics[scale=.20]{FIGURES/O_2000.jpg}}\\
+\subfigure[A --1980 ]{\includegraphics[scale=.20]{FIGURES/A_1980.jpg}}
+\subfigure[O --2005 ]{\includegraphics[scale=.20]{FIGURES/O_2005.jpg}}\\
+\subfigure[A --2008 ]{\includegraphics[scale=.20]{FIGURES/A_2008.jpg}}
+\subfigure[O --2010 ]{\includegraphics[scale=.20]{FIGURES/O_2010.jpg}}
+%\end{center}
+\caption{
+{\bf } . .\\
+}
+\label{fig:mj&BFs}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{figure}[!ht]
 \begin{center}
 \includegraphics[scale=.5]{FIGURES/trade_info.jpeg}
 \end{center}
@@ -429,7 +449,6 @@ Model & AICM  & PS    & SS    & Root  & Pr(Root)\\
     Uniform & 24139.71 & -2560.88 & -2568.39 & Per   & 0.94 \\
     Cattle & 24191.77 & -2574.87 & -2578.35 & Per   & 0.92 \\
     Sheep-Freq & 24175.47 & -2579.22 & -2585.73 & Per   & 0.9 \\
-    Simple & \textbf{23877.84} & -2584.48 & -2588.93 & -     & - \\
     Pig-Freq & 24271.98 & -2609.59 & -2617.82 & Col   & 0.51 \\
     Cattle-Freq & 24305.81 & -2638.48 & -2645.64 & Per   & 0.89 \\
 \bottomrule
@@ -455,7 +474,6 @@ Cattle	&15548.98	&-8292.72	&-8300.47	&Col	&0.95\\
 Pig	&15580.74	&-8292.14	&-8301.20	&Col	&0.52\\
 Sheep-Freq	&15566.45	&-8294.83	&-8301.42	&Col	&0.86\\
 Pig-Freq	&15604.59	&-8308.37	&-8315.31	&Col	&0.57\\
-Simple	&\textbf{15419.93}	&-8407.13	&-8412.42	&-	&-\\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
