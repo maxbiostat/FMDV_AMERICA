@@ -140,16 +140,29 @@ The results from the Skygrid reconstruction show strikingly different dynamical 
 To assess the spatial pattern of FMDV spread within South America, we also performed Bayesian phylogeographic analysis, again using the models available in BEAST \cite{roots}.
 We begin by evaluating the spatial signal contained in our sequences using Bayesian tip-association tests \cite{bats} to determine the amount of spatial signal in our reconstructed phylogenies. To gain insight into the amount of association for each location, we computed the maximum clade (MC) statistic.  The results for serotype A are presented in Table~\ref{tab:BaTSA} while results for serotype O can be found in Table~\ref{tab:BaTSO}. For both serotypes, we observed significant location-tip association. MC statistics were different for each country in each dataset, showing different geographic structures for each serotype. As an overall result our datasets presented high degree of spatial signal, what justifies more complex phylogeographic analyses to study the transmission network of FMDV in the continent.
 
-Fist, we employ an asymmetric continuous-time Markov chain (CTMC) phylogeographic model \cite{roots}, coupled with a Bayesian stochastic search variable selection (BSSVS) procedure that allows us to simultaneously model viral spatial diffusion while choosing a minimal set of transitions (routes) that parsimoniously explain the diffusion process. BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path. The results of this analysis are presented in Figures ~\ref{fig:mj&BFs} and ~\ref{fig:migration}.
+Fist, we employ an asymmetric continuous-time Markov chain (CTMC) phylogeographic model \cite{roots}  and ~\ref{fig:migration}.
 
-We used data from the detailed trade matrix available from the Food and Agriculture Organization (FAO) to elicit CMTC rate matrix priors (predictors), henceforth called ``trade-informed priors''. By accurately calculating the marginal likelihood of each trade-informed prior we can gain insight into the importance of each predictor on viral spread \cite{Carvalho2012,Nelson2011}. The results of this analyses, presented in tables ~\ref{tab:prootA} and ~\ref{tab:prootO}, showed that  {{\bf MORE [on trade + viral flow]}}
+\begin{center}
+ [/THIS SECTION IS UNDER MAJOR REVIEW]
+\end{center}
 
-To further explore the spatial behavior of FMDV we employ the so-called ``Markov jump'' counts \cite{Minin2008} of the expected number of location state transitions along the  branches of the phylogeny, which  provide a quantitative measure of gene flow between countries, representing successful viral introductions from one region to another.
+We used data from the detailed trade matrix available from the Food and Agriculture Organization (FAO) to elicit CMTC rate matrix priors (predictors), henceforth called ``trade-informed priors''. By accurately calculating the marginal likelihood of each trade-informed prior we can gain insight into the importance of each predictor on viral spread \cite{Carvalho2012,Nelson2011}. The results of this analyses, presented in tables ~\ref{tab:prootA} and ~\ref{tab:prootO}, showed that ...
+
+{{\bf MORE [on trade + viral flow]}}
+
+\begin{center}
+ [THIS SECTION IS UNDER MAJOR REVIEW]
+\end{center}
+
+To further explore the spatial behavior of FMDV we employ the so-called ``Markov jump'' counts \cite{Minin2008} of the expected number of location state transitions along the  branches of the phylogeny, which  provide a quantitative measure of gene flow between countries, representing successful viral introductions from one region to another. In addition to this analysis we set up a Bayesian Stochastic Search Variable Selection (BSVSS) procedure to search for the most parsimonious set of migration routes (network edges) needed to explain the diffusion process (see Methods). BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path. The results of this analysis are presented in Figures ~\ref{fig:mj&BFs}a and show that supported migration routes differ for each serotype, with some overlapping in the routes connecting Venezuela, Colombia and Ecuador. 
+
+Also we compared the counts between countries that share borders and those which do not. The results show ... % TODO: actually do this analysis
 \begin{itemize}
  \item MJ and BSSVS
  \item shared vs separated
 \end{itemize}
 
+One may ask if both serotypes present different spatial spread patterns. To assess this we used PS/SS to 
 
 \subsection*{Sampling Bias Assessment}
 % BSSVS across samples
@@ -166,6 +179,8 @@ In order to strenghten epidemiological inference, it may be interesting to compa
 
 Using animal trade data as predictors can be a valuable tool to understand the role of livestock commerce in the spread of animal and zoonotic diseases \cite{Nelson2011}.
 
+
+We found significant well supported migration paths between Venezuela, Colombia and Ecuador for both serotypes and this may indicate...???% TODO: 
 % the relationship between MJ borders inference and source-sink dynamics
 % %REMEMBER TO DISCUSS SHARED VERSUS SEPARATED ANALYSES. shared vs separated reveal that spatial spread is quite the same
 %Informing the rates with livestock trade contributes to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated \cite{Faria2012}. Moreover, our results suggest that \ldots
@@ -265,7 +280,7 @@ The stepping stone (SS) and path sampling (PS) approaches, as implemented in BEA
 Note that these approaches accommodate phylogenetic uncertainty.
 PS and SS calculations were run using 64 power posteriors, each running for 500.000 iterations, taking up to 3 weeks of computation for each model under evaluation.
 
-% Do NOT remove this, even if you are not including acknowledgments
+
 
 
 \subsection*{Assessing the effect of sampling}
@@ -284,7 +299,7 @@ In order to assess the relevance (impact) of the sampling scheme on the inferenc
  m_{ij}=C\frac{|n_i-n_j|}{\sum_i|n_i-n_j|}
 \end{equation}
 where $C$ is an arbitrary constant, chosen such that $E[m_{ij}]=1$. To analyze experiment iii, we used BSSVS to estimate Bayes Factors and compared BFs obtained with different sub-samples. Additionally, we computed Kullback-Leibler divergence \cite{KL,roots} of the root state distributions using a discrete uniform distribution as reference. 
-
+% Do NOT remove this, even if you are not including acknowledgments
 
 \section*{Acknowledgments}
 The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Professor Marc Suchard (UCLA) for insightful contributions and Miguel Carvalho for operational support.
