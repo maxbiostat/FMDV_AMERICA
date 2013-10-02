@@ -19,7 +19,7 @@
 \usepackage{indentfirst} %% LM: in order to indent the first paragraph of each section
 \usepackage{url} %% LM: in order to include nice urls
 \usepackage{booktabs} %% LM: nice tables...
-\usepackage{subfigure}
+\usepackage{subfigure} % LM: panels
 % Use doublespacing - comment out for single spacing
 %\usepackage{setspace}
 %\doublespacing
@@ -179,15 +179,33 @@ As an overall result, our datasets presented high degree of spatial signal, what
 
 Fist, we employ an asymmetric continuous-time Markov chain (CTMC) phylogeographic model \cite{roots} to gain insight into the spatio-temporal process of FMDV spread.
 The results are presented in Figure ~\ref{fig:migration} and show that Brazil and Colombia were the most probable origins for serotypes A and O respectively.
+
 We can notice that for serotype A mainly long-range migration routes were inferred for the period before 1945.
 This results may be due to sparsity of information before 1970, which precludes accurate inference about periods further back in time. 
 Also, there is a major expansion in spatial spread from 1945 to 1965, characterized by Brazil as a source of virus for the rest of the continent.
 In the period 1965-1980, we notice slower spread, mainly through short range routes.
 The 1980-2008 window is characterized by the introduction of FMDV serotype A in Peru and Paraguay and the increase of intra-country diversity (depicted by the radius of the displayed circles).   
 
-% More on expansions and expansion bursts 
-On the other hand, for serotype O expansion seems to have occured in the end of 1980's...    
+On the other hand, for serotype O expansion seems to have occured by the middle of the 1990 decade.
+Up to 1995, Colombia and Brazil seem to have acted as primary and secondary viral sources, respectively.
+From 1995 to 2000, whilst Colombia acted as main source for the northern/andean regions of the continent, spread in the Southern Cone seems to originate in Brazil.
+The period 2000-2010 is characterized by a decrease in viral flow (almost no new edges added to the network) and the main feature is the increase in viral diversity within countries, specially Ecuador, Colombia and Brazil.
+	
+To further explore the spatial behavior of FMDV we employ the so-called ``Markov jump'' counts \cite{Minin2008} of the expected number of location state transitions along the  branches of the phylogeny, which  provide a quantitative measure of gene flow between countries, representing successful viral introductions from one region to another.
+
+Coupled to this analysis we set up a Bayesian Stochastic Search Variable Selection (BSVSS) procedure to search for the most parsimonious set of migration routes (network edges) needed to explain the diffusion process (see Methods).
+BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path.
+The results of this analysis are presented in Figures ~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping in the routes connecting Venezuela, Colombia and Ecuador.
+
 Notably, Venezuela, Colombia and Ecuador form a densely connected sub-network for both serotypes.
+% Lots of short range routes are supported for both serotypes 
+To further study this pattern, we compared the counts between countries that share borders and those which do not. The results show ... % TODO: actually do this analysis
+
+One may ask if both serotypes present different spatial spread patterns.
+To assess this we used PS/SS to calculate marginal likelhihoods for two different models, henceforth  called ``shared'' and ``separate''.
+In the ``shared'' model we used trait (location) and sequence data  from both serotypes to make inference about one CTMC rate matrix, whilst in the ``separate'' model we allow both serotypes to have each one CTMC rate matrix, while using the combined data from both serotypes.
+Both models allow serotypes to have different spatial diffusion rates.
+
 
 \begin{center}
  [THIS SECTION IS UNDER MAJOR REVIEW]
@@ -202,18 +220,6 @@ The results of this analyses, presented in tables ~\ref{tab:prootA} and ~\ref{ta
 \begin{center}
  [/THIS SECTION IS UNDER MAJOR REVIEW]
 \end{center}
-
-To further explore the spatial behavior of FMDV we employ the so-called ``Markov jump'' counts \cite{Minin2008} of the expected number of location state transitions along the  branches of the phylogeny, which  provide a quantitative measure of gene flow between countries, representing successful viral introductions from one region to another.
-
-Coupled to this analysis we set up a Bayesian Stochastic Search Variable Selection (BSVSS) procedure to search for the most parsimonious set of migration routes (network edges) needed to explain the diffusion process (see Methods).
-BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path.
-The results of this analysis are presented in Figures ~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping in the routes connecting Venezuela, Colombia and Ecuador.
-
-Also we compared the counts between countries that share borders and those which do not. The results show ... % TODO: actually do this analysis
-
-One may ask if both serotypes present different spatial spread patterns.
-To assess this we used PS/SS to calculate marginal likelhihoods for two different models, henceforth  called ``shared'' and ``separate''.
-In the ``shared'' model we used trait (location) and sequence data  from both serotypes to make inference about one CTMC rate matrix, whilst in the ``separate'' model we allow both serotypes to have each one CTMC rate matrix, while using the combined data from both serotypes.
 
 \subsection*{Sampling Bias Assessment}
 % BSSVS across samples
@@ -243,9 +249,11 @@ We found significant well supported migration paths between Venezuela, Colombia 
 % These results help to shed light into the main determinants of viral flow in the continent.
 % While serotype A seems to have spread in a period of less stringent control, results for serotype O indicate that... % TODO Andres could help A LOT here! 
 % the relationship between MJ borders inference and source-sink dynamics
+% For serotype O, Colombia is north, Brazil is south.
 % REMEMBER TO DISCUSS SHARED VERSUS SEPARATED ANALYSES. shared vs separated reveal that spatial spread is quite the same
-% Informing the rates with livestock trade contributes to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated \cite{Faria2012}. Moreover, our results suggest that \ldots
-
+% Informing the rates with livestock trade contributes to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated \cite{Faria2012}.
+% Moreover, our results suggest that \ldots
+% As discussed by Cottam et al (2007) \cite{cottam2007}, phylogenetic methods can be used to unravel undetected transmission.
 %\textcolor{red}{Skygrid is specially suited to detect slight but meaningful variation in population effective sizes, allowing for more precise epidemiological inference}.\\
 
 
