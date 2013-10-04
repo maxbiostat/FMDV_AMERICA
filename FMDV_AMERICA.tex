@@ -16,7 +16,7 @@
 % cite package, to clean up citations in the main text. Do not remove.
 \usepackage{cite}
 \usepackage{color}
-\usepackage{indentfirst} %% LM: in order to indent the first paragraph of each section
+\usepackage{multicol}
 \usepackage{url} %% LM: in order to include nice urls
 \usepackage{booktabs} %% LM: nice tables...
 \usepackage{subfigure} % LM: panels
@@ -195,7 +195,7 @@ To further explore the spatial behavior of FMDV we employ the so-called ``Markov
 
 Coupled to this analysis we set up a Bayesian Stochastic Search Variable Selection (BSVSS) procedure to search for the most parsimonious set of migration routes (network edges) needed to explain the diffusion process (see Methods).
 BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path.
-The results of this analysis are presented in Figures ~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping in the routes connecting Venezuela, Colombia and Ecuador.
+The results of this analysis are presented in Figure ~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping in the routes connecting Venezuela, Colombia and Ecuador.
 
 Notably, Venezuela, Colombia and Ecuador form a densely connected sub-network for both serotypes.
 % Lots of short range routes are supported for both serotypes 
@@ -592,25 +592,19 @@ Pig-Freq	&15604.59	&-8308.37	&-8315.31	&Col	&0.57\\
 \newpage
 \begin{table}[!ht]
 \caption*{\textbf{Table S1. Model selection for tree (coalescent) model and clock for both serotypes.}  ULN= uncorrelated log-normal; UCED = uncorrelated exponential . Best fitting models (highest log-likelihood) are highlighted in bold.}
-\begin{tabular}{cccccc}
-\toprule
-Serotype	&Coalescent	&Clock	&Log-Likelihood$^{1}$\\
+\begin{tabular}{ccccccc}
+	\toprule
+        &\multicolumn{2}{c}{SHARED} & \multicolumn{2}{c}{SEPARATE} & & \\
+Chain length	&PS	&SS	&PS	&SS	&BF -- PS	&BF -- SS\\
 \midrule
-A	&Constant	&ULN	&-12285\\
-A	&Skyride 	&ULN	&\textbf{-12274}\\
-A	&Constant	&UCED	&-12316\\
-A	&Skyride 	&UCED	&-12307\\
-A       &Skyride       &STRICT &-12308\\
-O	&Constant	&ULN	&-8087\\
-O	&Skyride 	&ULN	&-8082\\
-O	&Constant	&UCED	&-8090\\
-O	&Skyride 	&UCED	&\textbf{-8069}\\
-O       &Skyride       &STRICT &-8125\\
+250k	&-21420	&-21437	&-21436	&-21454	&15.37	&17.26\\
+500k	&-21442	&-21456	&-21450	&-21467	&8	&11.01\\
+1M	&-21462	&-21470	&-21471	&-21483	&9.43	&13.05\\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
 \end{flushleft}
-\label{stab:treeclockselection}
+\label{tab:sharedsep}
  \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
