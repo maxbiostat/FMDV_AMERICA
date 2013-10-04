@@ -33,7 +33,9 @@ KL root for each subsample
 \section{Bayesian Stochastic Search Variable Selection}
 % TODO: put in the BSSVS plots !!!
 \section{Parameter estimation without the overrepresented locations}
-Additionally, we assessed the robustness of our temporal reconstruction by using only sequences from 2000 to present. For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior on coalescent times, also known as 'skyride' model. These results are presented in Figure~\ref{fig:only2000sky}.
+Additionally, we assessed the robustness of our temporal reconstruction by using only sequences from 2000 to present.
+For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior on coalescent times, also known as 'skyride' model.
+These results are presented in Figure~\ref{fig:only2000sky}.
 % TODO: more discussion on this 
 
  \begin{figure}[h]
@@ -52,18 +54,27 @@ Additionally, we assessed the robustness of our temporal reconstruction by using
 \section{Results and Discussion}
 \newpage
 \section*{Table Legends}
-\textbf{Table~\ref{tab:SB_A}. Parameter estimation using the complete and without Argentina data sets for serotype A} To assess the impact of the overrepresentation of Argentina in our sample we removed all sequence from this location and reestimated parameters. 1- All 131 sequences were used. 2- Time to most recent common ancestor. 3- Codon positions $1$, $2$ and $3$.
+\textbf{Table~\ref{tab:SB_A}. Parameter estimation using the complete and without Argentina data sets for serotype A.}
+To assess the impact of the overrepresentation of Argentina in our sample we removed all sequence from this location and reestimated parameters.
+1- All 131 sequences were used. 2- Time to most recent common ancestor. 3- Codon positions $1$, $2$ and $3$.
 
-\textbf{Table~\ref{tab:SB_O}. Parameter estimation using the complete and without Ecuador data sets for serotype O} To assess the impact of the overrepresentation of Ecuador (90 sequences) our sample we removed all sequence from this location and reestimated parameters. 1- All 167 sequences were used. 2- Time to most recent common ancestor. 3- Codon positions $1$, $2$ and $3$.
+\textbf{Table~\ref{tab:SB_O}. Parameter estimation using the complete and without Ecuador data sets for serotype O.}
+To assess the impact of the overrepresentation of Ecuador (90 sequences) our sample we removed all sequence from this location and reestimated parameters.
+1- All 167 sequences were used. 2- Time to most recent common ancestor. 3- Codon positions $1$, $2$ and $3$.
 
-\textbf{Table~\ref{tab:ED_A}. 'Equal downsampling' experiment for serotype A} Five random downsampled subsamples were obtained and used for parameter inference. 1-- $\times 10^{-3}$. 2 -- $\times 10^{-2}$. 3-- Probabily at root node. 
+\textbf{Table~\ref{tab:ED_A}. 'Equal downsampling' experiment for serotype A.}
+Five random downsampled subsamples were obtained and used for parameter inference.
+1-- $\times 10^{-3}$. 2 -- $\times 10^{-2}$. 3-- Probabily at root node. 
 
-\textbf{Table~\ref{tab:ED_O}. 'Equal downsampling' experiment for serotype O} Five random downsampled subsamples were obtained and used for parameter inference. 1-- $\times 10^{-2}$. 2--  Probabily at root node.
+\textbf{Table~\ref{tab:ED_O}. 'Equal downsampling' experiment for serotype O.}
+Five random downsampled subsamples were obtained and used for parameter inference.
+1-- $\times 10^{-2}$. 2--  Probabily at root node.
 
 \newpage
 \section*{Figure Legends}
 
-\textbf{Figure~\ref{fig:only2000sky}. Skyride coalescent reconstructions using sequences from 2000 to present only for both serotypes. As in the main text, disease cases and vaccination in doses per head are overlaid to the demographic reconstructions.} 
+\textbf{Figure~\ref{fig:only2000sky}. Skyride coalescent reconstructions using sequences from 2000 to present only for both serotypes.}
+As in the main text, disease cases and vaccination in doses per head are overlaid to the demographic reconstructions.
 
 \newpage
 \bibliography{Text_S2}
@@ -155,4 +166,28 @@ Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration 
 \end{center}
 \end{minipage}
 \end{sidewaystable}
+%%%%
+%%%%
+\begin{table}[!ht]
+\caption*{\textbf{Table S1. Model selection for tree (coalescent) model and clock for both serotypes.}  ULN= uncorrelated log-normal; UCED = uncorrelated exponential . Best fitting models (highest log-likelihood) are highlighted in bold.}
+\begin{tabular}{cccccc}
+\toprule
+Serotype	&Coalescent	&Clock	&Log-Likelihood$^{1}$\\
+\midrule
+A	&Constant	&ULN	&-12285\\
+A	&Skyride 	&ULN	&\textbf{-12274}\\
+A	&Constant	&UCED	&-12316\\
+A	&Skyride 	&UCED	&-12307\\
+A       &Skyride       &STRICT &-12308\\
+O	&Constant	&ULN	&-8087\\
+O	&Skyride 	&ULN	&-8082\\
+O	&Constant	&UCED	&-8090\\
+O	&Skyride 	&UCED	&\textbf{-8069}\\
+O       &Skyride       &STRICT &-8125\\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\end{flushleft}
+\label{stab:treeclockselection}
+ \end{table}
 \end{document}
