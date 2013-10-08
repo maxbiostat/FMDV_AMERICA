@@ -220,7 +220,7 @@ The ability to incorporate multiple sources of information like temporal and spa
 
 We used data from the detailed trade matrix available from the Food and Agriculture Organization (FAO) to elicit CMTC rate matrix priors (predictors), henceforth called here "trade-informed priors''.
 By accurately calculating the marginal likelihood of each trade-informed prior we can gain insight into the importance of each predictor on viral spread \cite{Carvalho2012,Nelson2011}.
-The results of this analyses, presented in tables ~\ref{tab:prootA} and ~\ref{tab:prootO}, showed that ... % I'm sure Guy has something to add here ;)
+The results of this analyses, presented in tables ~\ref{tab:predA} and ~\ref{tab:predO}, showed that ... % I'm sure Guy has something to add here ;)
 
 %NRF Do have any results for the analyses combining the rate matrices of O and A? What was the best fitting predictor  in this case?
 
@@ -581,7 +581,7 @@ Uniform	&24157.43	&-12562.42	&-12567.60\\
 \end{tabular}
 \begin{flushleft}
 \end{flushleft}
-\label{tab:prootA}
+\label{tab:predA}
  \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -604,8 +604,33 @@ Uniform	&15572.63	&-8299.04	&-8306.21\\
 \end{tabular}
 \begin{flushleft}
 \end{flushleft}
-\label{tab:prootO}
+\label{tab:predO}
  \end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[!ht]
+\caption{
+\textbf{Inferred root locations for each predictor for both serotypes.} We present most probable country of origin inferred using each predictor, with associated probabilities inside parentheses. 1- Uniform, all rates equal prior.
+}
+\begin{tabular}{lcc}
+\toprule
+Model & Serotype A & Serotype O \\
+\midrule
+Distance & Peru (0.94) & Colombia (0.92)\\
+Sheep    & Brazil (0.83) &Colombia (0.98)\\
+Pig      & Colombia (0.99) &Colombia (0.52)\\
+Uniform$^1$  & Peru (0.94) &Colombia (0.92)\\
+Cattle   & Peru (0.92) &Colombia (0.95)\\
+Sheep-Freq & Peru (0.90)&Colombia (0.86)\\
+Pig-Freq & Colombia (0.51) &Colombia (0.57)\\
+Cattle-Freq & Peru (0.89)& Colombia (0.97)\\
+ \bottomrule
+\end{tabular}
+\begin{flushleft}
+\end{flushleft}
+\label{tab:roots}
+ \end{table}
+ % TODO: check these results again with the new runs
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
