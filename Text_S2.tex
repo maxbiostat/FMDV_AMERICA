@@ -4,6 +4,7 @@
 \usepackage{booktabs}
 \usepackage{rotating}
 \usepackage{subfigure}
+\usepackage{caption}
 \bibliographystyle{plos2009}%
 %opening
 \title{Text S2 -- Assessing the impact of taxon sampling on phylogeographic reconstruction} % aargh, lousy name
@@ -32,19 +33,55 @@ We thank Professor Marc A. Suchard (UCLA) for advice on this topic.\\
 KL root for each subsample
 \section{Bayesian Stochastic Search Variable Selection}
 % TODO: put in the BSSVS plots !!!
+\newpage
+\begin{figure}[!ht]
+\begin{center}
+\subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss1.jpeg}}
+\subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss2.jpeg}}%\\
+\subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss3.jpeg}}
+\subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss4.jpeg}}%\\
+\subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss5.jpeg}}
+\end{center}
+\caption{}
+\label{sfig:bssvsA}
+\end{figure}
+\newpage
+\newpage
+\begin{figure}[!ht]
+\begin{center}
+\subfigure[]{\includegraphics[scale=.450]{FIGURES/O_ss1.jpeg}}
+\subfigure[]{\includegraphics[scale=.450]{FIGURES/O_ss2.jpeg}}%\\
+\subfigure[]{\includegraphics[scale=.450]{FIGURES/O_ss3.jpeg}}
+\subfigure[]{\includegraphics[scale=.450]{FIGURES/O_ss4.jpeg}}%\\
+\subfigure[]{\includegraphics[scale=.450]{FIGURES/O_ss5.jpeg}}
+\end{center}
+\caption{}
+\label{sfig:bssvsO}
+\end{figure}
+\newpage
 \section{Parameter estimation without the overrepresented locations}
 Additionally, we assessed the robustness of our temporal reconstruction by using only sequences from 2000 to present.
 For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior on coalescent times, also known as 'skyride' model.
-These results are presented in Figure~\ref{fig:only2000sky}.
+These results are presented in Figure~\ref{sfig:only2000sky}.
 % TODO: more discussion on this 
-
- \begin{figure}[h]
+%%%%%
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[scale=.5]{FIGURES/trade_info.jpeg}
+\end{center}
+\caption{}
+\label{sfig:tradeinfo}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%
+\begin{figure}[!ht]
 \begin{center}
 \subfigure[A]{\includegraphics[width=\textwidth]{FIGURES/SFig_A2000sky.jpeg}}
 \subfigure[O]{\includegraphics[width=\textwidth]{FIGURES/SFig_O2000sky.jpeg}}\\
 \end{center}
 \caption{}
-\label{fig:only2000sky}
+\label{sfig:only2000sky}
 \end{figure}
 
 \section{Parameter estimation with downsampling}
@@ -73,7 +110,7 @@ Five random downsampled subsamples were obtained and used for parameter inferenc
 \newpage
 \section*{Figure Legends}
 
-\textbf{Figure~\ref{fig:only2000sky}. Skyride coalescent reconstructions using sequences from 2000 to present only for both serotypes.}
+\textbf{Figure~\ref{sfig:only2000sky}. Skyride coalescent reconstructions using sequences from 2000 to present only for both serotypes.}
 As in the main text, disease cases and vaccination in doses per head are overlaid to the demographic reconstructions.
 
 \newpage

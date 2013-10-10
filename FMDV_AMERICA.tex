@@ -267,7 +267,7 @@ We found significant well supported migration paths between Venezuela, Colombia 
 % While serotype A seems to have spread in a period of less stringent control, results for serotype O indicate that... % TODO Andres could help A LOT here! 
 % the relationship between MJ borders inference and source-sink dynamics
 % For serotype O, Colombia is north, Brazil is south.
-% REMEMBER TO DISCUSS SHARED VERSUS SEPARATED ANALYSES. shared vs separated reveal that spatial spread is quite the same
+% REMEMBER TO DISCUSS SHARED VERSUS SEPARATE ANALYSES. shared vs separate reveal that spatial spread is quite the same
 % Informing the rates with livestock trade contributes to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated \cite{Faria2012}.
 % Moreover, our results suggest that \ldots
 % As discussed by Cottam et al (2007) \cite{cottam2007}, phylogenetic methods can be used to unravel undetected transmission.
@@ -435,7 +435,7 @@ We acknowledge the support of the National Evolutionary Synthesis Center (NESCen
 {\bf Figure~\ref{fig:migration}. Spatiotemporal dynamics of FMDV in South America} Using an asymmetric diffusion model, we reconstructed the spatial spread of FMDV serotypes A and O throughout the South American continent during the XX century. Circle radius's are proportional to lineage diversity. Illustrations produced using data annotated from SPREAD \cite{spread} and vizualized using Google Earth (\url{http://www.google.com/earth/index.
 html}).
 
-{\bf SFigure~\ref{sfig:tradeinfo}. Kernel density estimation for the trade-informed priors used in this study}. Information on cattle, sheep and pigs trade was retrieved from FAO and used to create trade-informed prior distributions for the CTMC infinitesimal rate matrix. Each prior was evaluated for prior predictive probability (marginal likelihood) using the PS and SS algorithms.
+{\bf SFigure 1. Kernel density estimation for the trade-informed priors used in this study}. Information on cattle, sheep and pigs trade was retrieved from FAO and used to create trade-informed prior distributions for the CTMC infinitesimal rate matrix. Each prior was evaluated for prior predictive probability (marginal likelihood) using the PS and SS algorithms.
 
 \newpage
 \section{Figures}
@@ -498,21 +498,21 @@ html}).
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\setcounter{figure}{0}
-\begin{figure}[!ht]
-\begin{center}
-\includegraphics[scale=.5]{FIGURES/trade_info.jpeg}
-\end{center}
-\caption{}
-\label{sfig:tradeinfo}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
 \section*{Tables}
 
-
+\begin{table}[!ht]
+\caption{{\bf Comparison of combined and separate models for CTMC rate matrix} We calculated marginal likelhihoods for ``Shared'' and ``Separate'' models (see Methods). We present results obtaining by collecting different numbers of sample per ``step'' in Path Sampling (PS) and Stepping Stone Sampling (SS) algorithms.}
+ \begin{tabular}{ccccccc}
+ \toprule
+ &\multicolumn{2}{c}{Shared}& \multicolumn{2}{c}{Separate} & \multicolumn{2}{c}{Bayes Factors}\\
+ \midrule
+Chain length&PS&SS&PS&SS&BF -- PS&BF -- SS\\
+250k&-21420&-21437&-21436&-21454&15.36&17.25\\
+500k&-21442&-21456&-21450&-21467&8.00&11.00\\
+1M&-21462&-21470&-21471&-21483&9.43&13.04\\
+\bottomrule
+ \end{tabular}
+\end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[!ht]
