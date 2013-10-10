@@ -112,10 +112,10 @@ The increased availability of geo-referenced time-stamped genetic data has foste
 However, and as pointed out by Di Nardo, Knowles \&  Paton (2011) \cite{combining}, this joint evaluation of information from different sources is usually done outside of a unified quantitative framework, and in a qualitative fashion. In this context, Bayesian phylogeography offers a statistical framework to jointly combine multiple sources of information in order to understand the spatio-temporal dynamics of FMDV and perform evolutionary hypothesis testing. Such framework recently proven useful when investigating the patterns of FMDV spread and trace the spatial origins of FMD epidemics \cite{Carvalho2012,bulgaria,phymal}.
 
 In this study we apply state-of-art Bayesian phylogeographic methods
-%N implemented within the BEAST \cite{BEAST} package,
+%NRF implemented within the BEAST \cite{BEAST} package,
 to investigate the evolutionary dynamics of serotypes A and O in South America, both in a spatial and temporal perspective. The probabilistic framework used here allows for the incorporation of multiple sources of information to test hypothesis about viral dispersal, while naturally accommodating uncertainty \cite{roots,towards}.
 We use BEAST \cite{beast2012} 
-%N citing here the most recent BEAST version instead
+%NRF citing here the most recent BEAST version instead
 to build time-structured phylogenies and a recent demographic growth model \cite{skygrid} to reconstruct past population dynamics, to which we overlay with vaccination and serotype-specific notification data.
 Moreover, we use data on livestock trade and geographical distances as predictors for viral spatial diffusion and use recently developed methods to accurately calculate marginal likelihoods for each predictor.
 Finally, we offer an appreciation of the statistical hurdles that may be caused by biased geographic sampling, and propose ways to ameliorate their effects.
@@ -137,7 +137,7 @@ In this study, we analyzed all publicly available VP1 (1D) sequences for serotyp
 
 First, jModelTest selection analysis yielded the general time reversible (GTR) model with a discretized gamma distributed across-site rate variation and a proportion of invariant sites (GTR+I+$\Gamma_{4}$) model as the best fit nucleotide substitution model for both FMDV data sets. Next, we performed a stringent model selection analysis to chose the best-fit demographic growth model and molecular clock model. Our results indicate that the constant population assumption is decisevely rejected (A: BF=$11$; O: BF= $21$) in favour of a model that allows fluctuations in demographic growth over time. 
 
-After, we estimated that both sertoypes A and O rapid evolution better fits a relaxed than strict molecular clock model. Particularly, the exponential relaxed molecular clock provided a better fit for serotype O data (BF=$21$) while the lognormal relaxed molecular clock model provided a better fit to serotype A (BF=$11$) (see Table S1 for details). The coefficient of variation for the relaxed molecular clock models was estimated at xx (95\% BCI: xx) and xx (95\% BCI: xx) respectively for serotype A and O, indicating substantial rate heterogeneity among lineages in the phylogeny. 
+After, we estimated that both serotypes A and O rapid evolution better fits a relaxed than strict molecular clock model. Particularly, the exponential relaxed molecular clock provided a better fit for serotype O data (BF=$21$) while the lognormal relaxed molecular clock model provided a better fit to serotype A (BF=$11$) (see Table S1 for details). The coefficient of variation for the relaxed molecular clock models was estimated at xx (95\% BCI: xx) and xx (95\% BCI: xx) respectively for serotype A and O, indicating substantial rate heterogeneity among lineages in the phylogeny. 
 
 We also performed a 'temporal signal' test to evaluate the degree to which genetic divergence accumulates over time (described in \cite{Faria2012}). This confirmed significant temporal signal for both serotypes (A: BF=$310$; O: BF=$348$), showing that both FMDV data sets analysed here are measurably evolving populations. Overall, these results show that sufficient temporal information is embedded in sequence data of both serotypes under investigation, which is central for the estimation of times of divergence and to reconstruct the population dynamics in natural time units \cite{MEP}.
 
@@ -172,6 +172,7 @@ Using the best fitting demographic and molecular clock model combination for eac
 \subsection*{Spatial Dynamics of FMDV in South America}
 
 % in the table (I'd merge Tables 1 and 2 into 1 single Table), include a note mentioning that you are only showing the MC statistics for the countries for which there were at least 3(5?) sequences. It is a bit odd that for serotype A, Peru and Ecuador do not have a significant p-value, but that serotype O has significant structure in Ecuador - this is clearly reflecting the fact that for O there is only 1 sequence for Ecuador. Should we have more data from Ecuardor and we 'd probably find structure of O there as well.
+%LM: In fact we have a lot of sequences for Ecuador, these results are utterly odd...
 
 To assess the spatial pattern of FMDV spread within South America, we performed Bayesian phylogeographic analysis, also using the models available in BEAST \cite{roots}.
 We began by evaluating the spatial signal contained in our sequences using Bayesian tip-association tests \cite{bats} to determine the amount of spatial signal in our reconstructed phylogenies.
@@ -222,7 +223,7 @@ We used data from the detailed trade matrix available from the Food and Agricult
 By accurately calculating the marginal likelihood of each trade-informed prior we can gain insight into the importance of each predictor on viral spread \cite{Carvalho2012,Nelson2011}.
 The results of this analyses, presented in tables ~\ref{tab:predA} and ~\ref{tab:predO}, showed that ... % I'm sure Guy has something to add here ;)
 
-%NRF Do have any results for the analyses combining the rate matrices of O and A? What was the best fitting predictor  in this case?
+%NRF Do have any results for the analyses combining the rate matrices of O and A? What was the best fitting predictor in this case?
 
 \subsection*{Sampling bias assessment in the phylogeographic analysis}
 % BSSVS across samples
@@ -407,10 +408,9 @@ In order to assess the relevance (impact) of the sampling scheme on the inferenc
 where $C$ is an arbitrary constant, chosen such that $E[m_{ij}]=1$.
 To analyze experiment iii, we used BSSVS to estimate Bayes Factors and compared BFs obtained with different sub-samples.
 Additionally, we computed Kullback-Leibler divergence \cite{KL,roots} of the root state distributions using a discrete uniform distribution as reference. 
-% Do NOT remove this, even if you are not including acknowledgments
 
 \section*{Acknowledgments}
-The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Professor Marc Suchard (UCLA) for insightful contributions and Miguel Carvalho for operational support.
+The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Professors Marc Suchard (UCLA) and OLiver Pybus (Oxford) for insightful contributions and Miguel Carvalho for operational support.
 We acknowledge the support of the National Evolutionary Synthesis Center (NESCent) through a working group (Software for Bayesian Evolutionary Analysis).
 
 \emph{Funding:} The research leading to these results has received funding from the European Union Seventh Framework Programme [FP7/2007-2013] under Grant Agreement no. 278433-PREDEMICS and ERC Grant agreement no. 260864.
@@ -508,58 +508,11 @@ html}).
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-% TODO: These tables are really shitty... BaTS results are strange, at least...
+
 \newpage
 \section*{Tables}
-\begin{table}[!ht]
-\caption{
-\textbf{Spatial signal for serotype A.} 1-AI = association index; 2-PS = parsimony score; 3- Monophyletic clade size}
-\begin{tabular}{cccc}
-\toprule
-Statistic &	Observed mean ( 95\% CI)&	Null mean ( 95\% CI)&	p-value\\
-\midrule
-AI$^1$	&1.56 (1.10, 2.01)& 10.75 (9.67, 11.83) &0.000\\
-PS$^2$	&22.88 (22.00, 24.00)	&66.78	(63.06, 70.01)	&0.000\\
-Argentina &12.31 (12.00, 14.00)	&3.45	(2.22, 5.11)	&0.001\\
-MC$^3$ Brazil &10.27	(10.00, 11.00)	&2.02 (1.25, 3.00) &0.001\\
-Bolivia &6.00 (6.00, 6.00)	&1.39 (1.00, 2.00)	&0.001\\
-Colombia &5.11 (5.00, 6.00)	&1.10  (1.00, 1.99)	&0.001\\
-Ecuador &1.00 (1.00, 1.00)	&1.00 (1.00, 1.00)	&1.000\\
-Peru&1.00 (1.00, 1.00)	&1.02 (1.00, 1.00)	&1.000\\
-Uruguay &5.11 (5.00, 7.00)	&1.50	(1.00, 2.03)	&0.001\\
-Venezuela&1.82 (1.00, 2.00)	&1.02 (1.00, 1.08)	&0.010\\
-\bottomrule
-\end{tabular}
-\begin{flushleft}
-\end{flushleft}
-\label{tab:BaTSA}
- \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[!ht]
-\caption{
-\textbf{Spatial signal for serotype O. } 1-AI = association index; 2-PS = parsimony score; 3- Monophiletic clade size}
-\begin{tabular}{cccc}
-\toprule
-Statistic &	Observed mean ( 95\% CI)&	Null mean ( 95\% CI)&	p-value\\
-\midrule
-AI$^1$ &	0.87 (0.59, 1.19)&	11.58 (10.52, 12.67)&	0.000\\
-PS$^2$ &	16.23 (15.00, 17.00)&	71.23 (68.17, 73.97)&	0.000\\
-MC$^3$ Ecuador& 13.00 (13.00, 13.00)&	1.34 (1.00, 2.00)&	0.001\\
-Peru&	1.00 (1.00, 1.00)&	1.01 (1.00, 1.00)&	1.000\\
-Colombia&	1.00 (1.00, 1.00)&	1.00 (1.00, 1.00)&	1.000\\
-Venezuela&	6.00 (6.00, 6.00)&	1.28 (1.00, 2.00)&	0.001\\
-Bolivia &	1.00 (1.00, 1.00)&	1.00 (1.00, 1.00)&	1.000\\
-Brazil&	19.00 (19.00, 19.00)&	2.19 (1.66, 3.03)&	0.001\\
-Paraguay&	39.40 (31.00, 58.00)&	4.67 (3.43, 6.39)&	0.001\\
-Argentina&	1.00 (1.00, 1.00)&	1.00 (1.00, 1.00)&	1.000\\
-Uruguay&	4.00 (4.00, 4.00)&	1.06 (1.00, 1.32)&	0.001\\
-\bottomrule
-\end{tabular}
-\begin{flushleft}
-\end{flushleft}
-\label{tab:BaTSO}
- \end{table}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[!ht]
@@ -593,7 +546,7 @@ Uniform	&24157.43	&-12562.42	&-12567.60\\
 Model	&AICM	&PS	&SS\\
 \midrule
 Cattle	&15581.07	&{{ \bf -8293.99}}	&-8300.01\\
-Cattle-Freq$^1$	&15557.28	&-8301.17	&-8306.27\\ % Is this right? I mean Freq stands for sampling-corrected  
+Cattle-Freq$^{1}$	&15557.28	&-8301.17	&-8306.27\\ % TODO: Is this right? I mean Freq stands for sampling-corrected  
 Distance	& {{\bf 15562.60 }}	&-8294.19	& {{ \bf -8298.52}} \\
 Pig	&15593.10	&-8308.99	&-8312.37\\
 Pig-Freq	&15600.41	&-8327.04	&-8334.30\\
