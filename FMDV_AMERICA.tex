@@ -167,17 +167,16 @@ Using the best fitting demographic and molecular clock model combination for eac
 \end{center}
 
 %NRF Just a suggestion: we could also show Figure 1 and 2 as Figure 1 panels A and B, side by side, with a single shared legend
-%NRF I am also wondering if we should also add some posterior values to the trees (and to the text)
+%NRF I am also wondering if we should also add some posterior values to the trees (and to the text) <- LM that may be a nice idea
 
 \subsection*{Spatial Dynamics of FMDV in South America}
 
-% in the table (I'd merge Tables 1 and 2 into 1 single Table), include a note mentioning that you are only showing the MC statistics for the countries for which there were at least 3(5?) sequences. It is a bit odd that for serotype A, Peru and Ecuador do not have a significant p-value, but that serotype O has significant structure in Ecuador - this is clearly reflecting the fact that for O there is only 1 sequence for Ecuador. Should we have more data from Ecuardor and we 'd probably find structure of O there as well.
+% in the table (I'd merge Tables 1 and 2 into 1 single Table), include a note mentioning that you are only showing the MC statistics for the countries for which there were at least 3(5?) sequences. It is a bit odd that for serotype A, Peru and Ecuador do not have a significant p-value, but that serotype O has significant structure in Ecuador - this is clearly reflecting the fact that for O there is only 1 sequence for Ecuador. Should we have more data from Ecuador and we 'd probably find structure of O there as well.
 %LM: In fact we have a lot of sequences for Ecuador, these results are utterly odd...
 
 To assess the spatial pattern of FMDV spread within South America, we performed Bayesian phylogeographic analysis, also using the models available in BEAST \cite{roots}.
 We began by evaluating the spatial signal contained in our sequences using Bayesian tip-association tests \cite{bats} to determine the amount of spatial signal in our reconstructed phylogenies.
-To gain insight into the amount of association for each location, we computed the maximum clade (MC) statistic.
-The results for serotype A are presented in Table~\ref{tab:BaTSA} and results for serotype O can be found in Table~\ref{tab:BaTSO}.
+To gain insight into the amount of association for each location, we computed the maximum clade (MC) statistic. The results can be found in STable 1.%TODO: check this numbering in the end.
 For both serotypes, we observed significant location-tip association.
 MC statistics were different for each country in each dataset, showing different geographic structures for each serotype.
 As an overall result, our datasets presented high degree of spatial signal, what justifies more complex phylogeographic analyses to study the transmission network of FMDV in the continent.
@@ -228,8 +227,8 @@ The results of this analyses, presented in tables ~\ref{tab:predA} and ~\ref{tab
 \subsection*{Sampling bias assessment in the phylogeographic analysis}
 % BSSVS across samples
 % KL divergence across samples
+% L1 and L2 norms across samples
 % phylogenetic parameter estimates
-
 \subsection*{Demographic reconstruction of FMDV dynamics}
 
 The results from the Skygrid reconstruction show strikingly different dynamical behaviors for the two serotypes, with serotype O exhibiting considerable more oscillation over time, and a diversity peak occurring in late years of the 1990 decade.
@@ -252,7 +251,8 @@ It can be noticed from both serotypes that over time, with the increase of vacci
 This drop is also present in FMD notifications, what may suggest the role of epidemics in viral diversity.
 These results draw an interesting picture: over the years vaccination seems to be disrupting viral diversity, supposedly by precluding spread over large spatial extents, inducing a state of focalized transmission [NEED A REF HERE].
 
-In order to strenghten epidemiological inference, it may be interesting to compare the results obtained for both serotypes. Serotype O presents more estable temporal behavior, whereas serotype A is more fluctuating.
+In order to strenghten epidemiological inference, it may be interesting to compare the results obtained for both serotypes.
+Serotype O presents more estable temporal behavior, whereas serotype A is more fluctuating.
 Previous studies have shown that occurences caused by serotype A present longer cycles and wider epidemics, while serotype O is more prevalent with shorter disease cycles \cite{colombiatime}.
 These epidemiological features are reflected at the temporal variation observed for viral $Ne$ in both serotypes, a result obtained for other viruses as well \cite{Bennett2010,Pybus2003}. 
 Since our results reinforce the notion that these two serotypes present different evolutionary dynamics, the overall decrease in viral diversity for both serotypes points towards a progressive success of the eradication programme in slowly reducing transmission and controlling epidemics.
@@ -272,7 +272,7 @@ We found significant well supported migration paths between Venezuela, Colombia 
 % Moreover, our results suggest that \ldots
 % As discussed by Cottam et al (2007) \cite{cottam2007}, phylogenetic methods can be used to unravel undetected transmission.
 %\textcolor{red}{Skygrid is specially suited to detect slight but meaningful variation in population effective sizes, allowing for more precise epidemiological inference}.\\
-
+% in the future skygrid reconstructions can be coupled to mathematical models to help explain the pattern of emergence of FMD
 
 
 \section*{Conclusions}
