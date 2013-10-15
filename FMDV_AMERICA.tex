@@ -179,19 +179,19 @@ Using the best fitting demographic and molecular clock model combination for eac
 
 To assess the spatial pattern of FMDV spread within South America, we performed Bayesian phylogeographic analysis, also using the models available in BEAST \cite{roots}.
 We began by evaluating the spatial signal contained in our sequences using Bayesian tip-association tests \cite{bats} to determine the amount of spatial signal in our reconstructed phylogenies.
-To gain insight into the amount of association for each location, we computed the maximum clade (MC) statistic. The results can be found in STable 1.%TODO: check this numbering in the end.
-For both serotypes, we observed significant location-tip association.
+To gain insight into the amount of association for each location, we computed the maximum clade (MC) statistic. The results can be found in STable 1 and show significant location-tip association for both serotypes.
+%TODO: check this numbering in the end.
 MC statistics were different for each country in each dataset, showing different geographic structures for each serotype.
 As an overall result, our datasets presented high degree of spatial signal, what justifies more complex phylogeographic analyses to study the transmission network of FMDV in the continent.
 
 Fist, we employ an asymmetric continuous-time Markov chain (CTMC) phylogeographic model \cite{roots} to gain insight into the spatio-temporal process of FMDV spread.
-The results are presented in Figure ~\ref{fig:migration} and show that Brazil and Colombia were the most probable origins for serotypes A and O respectively.
+The results are presented in Figure~\ref{fig:migration} and show that Brazil and Colombia were the most probable origins for serotypes A and O respectively.
 
 We can notice that for serotype A mainly long-range migration routes were inferred for the period before 1945.
 This results may be due to sparsity of information before 1970, which precludes accurate inference about periods further back in time. 
 Also, there is a major expansion in spatial spread from 1945 to 1965, characterized by Brazil as a source of virus for the rest of the continent.
 In the period 1965-1980, we notice slower spread, mainly through short range routes.
-The 1980-2008 window is characterized by the introduction of FMDV serotype A in Peru and Paraguay and the increase of intra-country diversity (depicted by the radius of the displayed circles).   
+The 1980-2008 window is characterized by the introduction of FMDV serotype A in Peru and Paraguay and the increase of intra-country diversity (depicted by the radius of the displayed circles). % TODO: LM: is the word 'introduction' correctly placed here??   
 
 On the other hand, for serotype O expansion seems to have occured by the middle of the 1990 decade.
 Up to 1995, Colombia and Brazil seem to have acted as primary and secondary viral sources, respectively.
@@ -206,13 +206,16 @@ The results of this analysis are presented in Figures ~\ref{fig:mj&BFs} and show
 
 Notably, Venezuela, Colombia and Ecuador form a densely connected sub-network for both serotypes.
 % Lots of short range routes are supported for both serotypes 
-To further study this pattern, we compared the counts between countries that share borders and those which do not. The results show ... % TODO: actually do this analysis
+
+To further study this pattern, we compared the counts between countries that share borders and those which do not.
+The results show that for serotype A the median transition count between neighbor countries was $0.02$ (95 \% BCI: $0.00$ -- $4.29$), while ``non-border'' transitions had median $0.05$ (95 \% BCI: $0.00$ --  $3.39$).
+For serotype O, similar results were observed, with $0.04$ ($0.00$ -- $1.99$) and $0.09$ ($0.00$ -- $1.25$) being observed for neighboring and non-neighboring countries, respectively.
+Since the difference in medians is substantial but quantiles widely overlap, we set up a Monte Carlo resampling experiment to calculate the probability that a randomly chosen ``border'' ($B$) transition is larger than a randomly chosen ``non-border'' ($NB$) one. For each data vector we obtained $10,000$ random draws and counted the number of times the above described event happened. From this experiment we found $Pr(B>NB)$  to be $0.39$ for serotype A and $0.36$ for serotype O.
 
 One may ask if both serotypes present different spatial spread patterns.
 To assess this we used PS/SS to calculate marginal likelhihoods for two different models, henceforth  called "shared'' and "separate''.
 In the "shared'' model we used trait (location) and sequence data  from both serotypes to make inference about one CTMC rate matrix, whilst in the "separate'' model we allow both serotypes to have each one CTMC rate matrix, while using the combined data from both serotypes.
 Both models allow serotypes to have different spatial diffusion rates.
-
 
 \begin{center}
  [THIS SECTION IS UNDER MAJOR REVIEW]
@@ -269,6 +272,7 @@ We found significant well supported migration paths between Venezuela, Colombia 
 % These results help to shed light into the main determinants of viral flow in the continent.
 % While serotype A seems to have spread in a period of less stringent control, results for serotype O indicate that... % TODO Andres could help A LOT here! 
 % the relationship between MJ borders inference and source-sink dynamics
+% Border vs non-border suggests long-range stuff may be important as well.
 % For serotype O, Colombia is north, Brazil is south.
 % REMEMBER TO DISCUSS SHARED VERSUS SEPARATE ANALYSES. shared vs separate reveal that spatial spread is quite the same
 % Informing the rates with livestock trade contributes to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated \cite{Faria2012}.
