@@ -513,6 +513,7 @@ Each prior was evaluated for prior predictive probability (marginal likelihood) 
 
 \begin{table}[!ht]
 \caption{{\bf Comparison of combined and separate models for CTMC rate matrix} We calculated marginal likelhihoods for ``Shared'' and ``Separate'' models (see Methods). We present results obtaining by collecting different numbers of sample per ``step'' in Path Sampling (PS) and Stepping Stone Sampling (SS) algorithms.}
+ \begin{center}
  \begin{tabular}{ccccccc}
  \toprule
  &\multicolumn{2}{c}{Shared}& \multicolumn{2}{c}{Separate} & \multicolumn{2}{c}{Bayes Factors}\\
@@ -523,12 +524,14 @@ Chain length&PS&SS&PS&SS&BF -- PS&BF -- SS\\
 1M&-21462&-21470&-21471&-21483&9.43&13.04\\
 \bottomrule
  \end{tabular}
+ \end{center}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[!ht]
 \caption{
 \textbf{Spatial model selection results for serotype A. } GUY's SHARE.}
+\begin{center}
 \begin{tabular}{cccccc}
 \toprule
 Model & AICM  & PS    & SS\\
@@ -543,6 +546,7 @@ Sheep-Freq	&24187.00	&-12580.01	&-12584.59\\
 Uniform	&24157.43	&-12562.42	&-12567.60\\
 \bottomrule
 \end{tabular}
+\end{center}
 \begin{flushleft}
 \end{flushleft}
 \label{tab:predA}
@@ -552,6 +556,7 @@ Uniform	&24157.43	&-12562.42	&-12567.60\\
 \begin{table}[!ht]
 \caption{
 \textbf{Spatial model selection results for serotype O. } GUY's SHARE. 1-Base frequencies for each state set at the relative representations in the data set. }
+\begin{center}
 \begin{tabular}{cccc}
 \toprule
 Model	&AICM	&PS	&SS\\
@@ -566,6 +571,7 @@ Sheep-Freq	&15578.06	&-8308.06	&-8313.53\\
 Uniform	&15572.63	&-8299.04	&-8306.21\\
 \bottomrule
 \end{tabular}
+\end{center}
 \begin{flushleft}
 \end{flushleft}
 \label{tab:predO}
@@ -576,6 +582,7 @@ Uniform	&15572.63	&-8299.04	&-8306.21\\
 \caption{
 \textbf{Inferred root locations for each predictor for both serotypes.} We present most probable country of origin inferred using each predictor, with associated probabilities inside parentheses. 1- Uniform, all rates equal prior.
 }
+\begin{center}
 \begin{tabular}{lcc}
 \toprule
 Model & Serotype A & Serotype O \\
@@ -590,6 +597,7 @@ Pig-Freq & Colombia (0.72) &Colombia (0.71)\\
 Cattle-Freq & Peru (0.92)& Colombia (0.97)\\
  \bottomrule
 \end{tabular}
+\end{center}
 \begin{flushleft}
 \end{flushleft}
 \label{tab:roots}
