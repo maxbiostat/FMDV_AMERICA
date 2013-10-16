@@ -117,7 +117,7 @@ In this study we apply state-of-art Bayesian phylogeographic methods
 to investigate the evolutionary dynamics of serotypes A and O in South America, both in a spatial and temporal perspective. The probabilistic framework used here allows for the incorporation of multiple sources of information to test hypothesis about viral dispersal, while naturally accommodating uncertainty \cite{roots,towards}.
 We use BEAST \cite{beast2012} 
 %NRF citing here the most recent BEAST version instead
-to build time-structured phylogenies and a recent demographic growth model \cite{skygrid} to reconstruct past population dynamics, to which we overlay with vaccination and serotype-specific notification data.
+to build time-structured phylogenies and a recent demographic growth model \cite{skyride} to reconstruct past population dynamics, to which we overlay with vaccination and serotype-specific notification data.
 Moreover, we use data on livestock trade and geographical distances as predictors for viral spatial diffusion and use recently developed methods to accurately calculate marginal likelihoods for each predictor.
 Finally, we offer an appreciation of the statistical hurdles that may be caused by biased geographic sampling, and propose ways to ameliorate their effects.
 
@@ -141,25 +141,18 @@ This confirmed significant temporal signal for both serotypes (A: BF=$310$; O: B
 Overall, these results show that sufficient temporal information is embedded in sequence data of both serotypes under investigation, which is central for the estimation of times of divergence and to reconstruct the population dynamics in natural time units \cite{MEP}.
 
 \subsection*{Dating the divergence of FMDV in South America}
-
 %NRF Changed mutation to evolutionary rate since mutation rate (rate at which errors are incorporated in the genome, estimated in wet lab) is different from evolutionary or substitution rate (rate at which mutations spread and become fixed in a population, estimated from seq data). Do the 'mutation rates' that you cited in the 'review' paper for serotype O correspond to evolutionary rates? (mutation rate is generally > evolutionary rate).
 
 To build time-structured phylogenies for each FMDV serotype, we performed Bayesian MCMC analysis using BEAST, under the corresponding best-fit combination of nucleotide subsitution, demographic and molecular clock models.
 
-The maximum clade credibility (MCC) tree estimated for serotype A (Figure~\ref{fig:Atree}) 
-%shows a time to most common recent ancestor (TMRCA) of around 75 years, 
-places the origin of the circulating strains in or around the early years of the 1920's decade.
+The maximum clade credibility (MCC) tree estimated for serotype A (Figure~\ref{fig:trees}A) places the origin of the circulating strains in or around the early years of the 1920's decade.
 This result is surprising, since it reveals a longer-term maintenance of FMDV serotype A in the continent than previously suspected.
 %NRF Not so sure if this is very updated... check Tuly and Fares, Virology, 2008
-Figure~\ref{fig:Atree} shows that sequences from the same country tend to cluster in small clades although the Bayesian phylogenies for both serotypes also shows considerable interspersing of lineages indicating trans-border FMDV migration.
-For example, for serotype A sequences from Argentina are grouped in 2 clades that either comprised only Argentinian isolates or include sequences from Brazil and Uruguay (Figure~\ref{fig:Atree}).
+Figure~\ref{fig:trees}A shows that sequences from the same country tend to cluster in small clades although the Bayesian phylogenies for both serotypes also shows considerable interspersing of lineages indicating trans-border FMDV migration.
+For example, for serotype A sequences from Argentina are grouped in 2 clades that either comprised only Argentinian isolates or include sequences from Brazil and Uruguay (Figure~\ref{fig:trees}A).
 Interestingly, the great majority of the isolates from Venezuela and Colombia fall together within 2 distinct clades. 
 
-\begin{center}
- [Figure 1 about here]
-\end{center}
-
-Figure~\ref{fig:Otree} presents the estimated MCC tree for serotype O.
+Figure~\ref{fig:trees}B presents the estimated MCC tree for serotype O.
 The same interspersing trend can be noticed, with Ecuador and Colombia showing several interleaved clades.
 The TMRCA for serotype O was estimated in around 20 years, showing a more recent origin.
 Here, a smaller clade of Colombian isolates are found interspersed within from Venezuelan isolates. In addition, isolates from Ecuador are found interspersed with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
@@ -168,10 +161,10 @@ Overall, the Bayesian phylogenies suggest that most FMDV flow within South Ameri
 Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated around $4 \times 10^{-3}$ substitutions/site/year. In addition, the estimated evoltutionary rate for serotype O was aproximately 2.5 times faster than serotype A, i.e. at $1 \times 10^{-2}$, consistent with previous studies \cite{review,Carvalho2012}. 
 
 \begin{center}
- [Figure 2 about here]
+ [Figure~\ref{fig:trees} about here]
 \end{center}
 
-%NRF Just a suggestion: we could also show Figure 1 and 2 as Figure 1 panels A and B, side by side, with a single shared legend
+%NRF Just a suggestion: we could also show Figure 1 and 2 as Figure 1 panels A and B, side by side, with a single shared legend <- LM: done
 %NRF I am also wondering if we should also add some posterior values to the trees (and to the text) <- LM that may be a nice idea
 
 \subsection*{Spatial Dynamics of FMDV in South America}
@@ -200,7 +193,11 @@ On the other hand, for serotype O expansion seems to have occured by the middle 
 Up to 1995, Colombia and Brazil seem to have acted as primary and secondary viral sources, respectively.
 From 1995 to 2000, whilst Colombia acted as main source for the northern/andean regions of the continent, spread in the Southern Cone seems to originate in Brazil.
 The period 2000-2010 is characterized by a decrease in viral flow (almost no new edges added to the network) and the main feature is the increase in viral diversity within countries, specially Ecuador, Colombia and Brazil.
-	
+
+\begin{center}
+ [Figure~\ref{fig:migration} about here]
+\end{center}
+
 To further explore the spatial behavior of FMDV we employ the so-called ``Markov jump'' counts \cite{Minin2008} of the expected number of location state transitions along the  branches of the phylogeny, which  provide a quantitative measure of gene flow between countries, representing successful viral introductions from one region to another.
 
 Coupled to this analysis we set up a Bayesian Stochastic Search Variable Selection (BSVSS) procedure to search for the most parsimonious set of migration routes (network edges) needed to explain the diffusion process (see Methods).
@@ -214,6 +211,10 @@ To further study this pattern, we compared the counts between countries that sha
 The results show that for serotype A the median transition count between neighbor countries was $0.02$ (95 \% BCI: $0.00$ -- $4.29$), while ``non-border'' transitions had median $0.05$ (95 \% BCI: $0.00$ --  $3.39$).
 For serotype O, similar results were observed, with $0.04$ ($0.00$ -- $1.99$) and $0.09$ ($0.00$ -- $1.25$) being observed for neighboring and non-neighboring countries, respectively.
 Since the difference in medians is substantial but quantiles widely overlap, we set up a Monte Carlo resampling experiment to calculate the probability that a randomly chosen ``border'' ($B$) transition is larger than a randomly chosen ``non-border'' ($NB$) one. For each data vector we obtained $10,000$ random draws and counted the number of times the above described event happened. From this experiment we found $Pr(B>NB)$  to be $0.41$ for serotype A and $0.36$ for serotype O.
+
+\begin{center}
+ [Figure~\ref{fig:mj&BFs} about here]
+\end{center}
 
 One may ask if both serotypes present different spatial spread patterns.
 To assess this we used PS/SS to calculate marginal likelhihoods for two different models, henceforth  called "shared'' and "separate''.
@@ -240,14 +241,14 @@ The results of this analyses, presented in tables ~\ref{tab:predA} and ~\ref{tab
 % phylogenetic parameter estimates
 \subsection*{Demographic reconstruction of FMDV dynamics}
 
-The results from the Skygrid reconstruction show strikingly different dynamical behaviors for the two serotypes, with serotype O exhibiting considerable more oscillation over time, and a diversity peak occurring in late years of the 1990 decade.
+The results from the Skyride coalescent reconstruction show strikingly different dynamical behaviors for the two serotypes, with serotype O exhibiting considerable more oscillation over time, and a diversity peak occurring in late years of the 1990 decade.
 Serotype A exhibits a more stable behavior over most of the 20th century, with most variation occurring within the temporal sampling interval, mainly in the last years of the 2000 decade.
-To better understand the relationship between vaccination and viral diversity, we overlaid vaccination data to our skygrid plots presented in Figure~\ref{fig:skygrid}.
+To better understand the relationship between vaccination and viral diversity, we overlaid vaccination data to our skyride plots presented in Figure~\ref{fig:skyride}.
 These data were expressed as doses per head, which we consider to be a more accurate measure of vaccination coverage, since it corrects for population size increase/decrease over time (see SFigure 1 for livestock population and trade time series). %TODO: check this numbering in the end
 Also, serotype-specific disease notification data was collected and plotted as an overlaid time series to the reconstruction. 
-% TODO: Modify this section to describe skyride
+
 \begin{center}
- [Figure 3 about here]
+ [Figure~\ref{fig:skyride} about here]
 \end{center}
 
 
@@ -291,8 +292,7 @@ We found significant well supported migration paths between Venezuela, Colombia 
 % Informing the rates with livestock trade contributes to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated \cite{Faria2012}.
 % Moreover, our results suggest that \ldots
 % As discussed by Cottam et al (2007) \cite{cottam2007}, phylogenetic methods can be used to unravel undetected transmission.
-%\textcolor{red}{Skygrid is specially suited to detect slight but meaningful variation in population effective sizes, allowing for more precise epidemiological inference}.\\
-% in the future skygrid reconstructions can be coupled to mathematical models to help explain the pattern of emergence of FMD
+% in the future skyride reconstructions can be coupled to mathematical models to help explain the pattern of emergence of FMD
 
 \section*{Conclusions}
 %better methods yield more complete analyses
@@ -328,7 +328,7 @@ Further, it has been shown that the use of proper priors is essential when perfo
 %GB: Why did we not compare the UCED and UCLD to the STRICT clock? Should we still do that? <-LM: we did, indeed. updated
 
 Using PS and SS, we have estimated the (log) marginal likelihood for several combinations of tree priors and molecular clocks, and this for each data set.
-We compared the Skyride model, i.e. a Bayesian nonparametric model that parameterizes the effective population size as a piecewise constant function and employs a GMRF prior to smooth the trajectory \cite{skygrid}, to a constant population size model.
+We compared the Skyride model, i.e. a Bayesian nonparametric model that parameterizes the effective population size as a piecewise constant function and employs a GMRF prior to smooth the trajectory \cite{skyride}, to a constant population size model.
 Further, we combined each of these demographic models with a relaxed molecular clock model, assuming either a lognormal or an exponential distribution to parameterize the rate distribution.
 The results of these model comparisons can be found in Table S1.
 
@@ -350,15 +350,9 @@ Additionally, we computed the so-called monophyletic clade (MC) size for each st
 
 \subsection*{Temporal Dynamics}
 
-We apply the recently developed Skygrid coalescent model \cite{skygrid} in order to reconstruct the past population dynamics for both serotypes. Skygrid is a nonparametric coalescent-based method that uses a Gaussian Markov Random Field (GMRF) prior to obtain smooth estimates for effective population size trajectories over time \ldots 
-
-and then overlay the results to serotype-specific outbreak notifications.
-
-
-\begin{center}
- [NUNO'S SHARE]
-\end{center}
-
+We apply the so-called Skyride model \cite{skyride} in order to reconstruct the past population dynamics for both serotypes. Skyride is a nonparametric coalescent-based method that uses a Gaussian Markov Random Field (GMRF) prior to obtain smooth estimates for effective population size trajectories over time. We choose a time-aware GMRF prior, such that estimates are as smooth as possible.
+To gain insight into the mechanisms driving viral dynamics, we overlay the demographic reconstructions to serotype-specific outbreak and vaccination (doses per head) time series.
+% TODO: Dr. NRF has to revise this section :0)
 
 \subsection*{Spatial Analysis}
 
@@ -424,7 +418,7 @@ To analyze experiment iii, we used BSSVS to estimate Bayes Factors and compared 
 Additionally, we computed Kullback-Leibler divergence \cite{KL,roots} of the root state distributions using a discrete uniform distribution as reference. 
 
 \section*{Acknowledgments}
-The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Professors Marc Suchard (UCLA) and Oliver Pybus (Oxford) for insightful contributions and Miguel Carvalho for operational support.
+The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Professors Marc Suchard (UCLA) and Oliver Pybus (Oxford) for insightful contributions and Miguel Carvalho and Mauricio Oliveira (UFRJ) for operational support.
 We acknowledge the support of the National Evolutionary Synthesis Center (NESCent) through a working group (Software for Bayesian Evolutionary Analysis).
 
 \emph{Funding:} The research leading to these results has received funding from the European Union Seventh Framework Programme [FP7/2007-2013] under Grant Agreement no. 278433-PREDEMICS and ERC Grant agreement no. 260864.
@@ -438,7 +432,7 @@ We acknowledge the support of the National Evolutionary Synthesis Center (NESCen
 \newpage
 \section*{Figure Legends}
 
-{\bf Figure~\ref{fig:trees}. Phylogenetic relationships of serotypes A and O FMDV isolates from South America.} Time-scaled phylogenetic maximum clade credibility (MCC) trees for FMDV VP1 sequences from eight countries in the period 1955-2010 for serotype A and nine countries 1994-2010 for serotype O.
+{\bf Figure~\ref{fig:trees}. Phylogenetic relationships of serotypes A and O FMDV isolates from South America.} Time-scaled phylogenetic maximum clade credibility (MCC) trees for FMDV VP1 sequences from eight countries in the period 1955-2010 for serotype A (Panel A) and nine countries 1994-2010 for serotype O (Panel B).
 Tips were collapsed for clarity and colored according to geographic origin.
 Diamonds sizes are proportional to posterior probabilities.
 
@@ -474,10 +468,17 @@ Each prior was evaluated for prior predictive probability (marginal likelihood) 
 \newpage
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[scale=1.0]{FIGURES/skyride.pdf}
+\subfigure[A --1945 ]{\includegraphics[scale=.20]{FIGURES/A_1945.jpg}}
+\subfigure[O --1995 ]{\includegraphics[scale=.20]{FIGURES/O_1995.jpg}}\\
+\subfigure[A --1965 ]{\includegraphics[scale=.20]{FIGURES/A_1965.jpg}}
+\subfigure[O --2000 ]{\includegraphics[scale=.20]{FIGURES/O_2000.jpg}}\\
+\subfigure[A --1980 ]{\includegraphics[scale=.20]{FIGURES/A_1980.jpg}}
+\subfigure[O --2005 ]{\includegraphics[scale=.20]{FIGURES/O_2005.jpg}}\\
+\subfigure[A --2008 ]{\includegraphics[scale=.20]{FIGURES/A_2008.jpg}}
+\subfigure[O --2010 ]{\includegraphics[scale=.20]{FIGURES/O_2010.jpg}}
 \end{center}
 \caption{}
-\label{fig:skyride}
+\label{fig:migration}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -494,17 +495,10 @@ Each prior was evaluated for prior predictive probability (marginal likelihood) 
 \newpage
 \begin{figure}[!ht]
 \begin{center}
-\subfigure[A --1945 ]{\includegraphics[scale=.20]{FIGURES/A_1945.jpg}}
-\subfigure[O --1995 ]{\includegraphics[scale=.20]{FIGURES/O_1995.jpg}}\\
-\subfigure[A --1965 ]{\includegraphics[scale=.20]{FIGURES/A_1965.jpg}}
-\subfigure[O --2000 ]{\includegraphics[scale=.20]{FIGURES/O_2000.jpg}}\\
-\subfigure[A --1980 ]{\includegraphics[scale=.20]{FIGURES/A_1980.jpg}}
-\subfigure[O --2005 ]{\includegraphics[scale=.20]{FIGURES/O_2005.jpg}}\\
-\subfigure[A --2008 ]{\includegraphics[scale=.20]{FIGURES/A_2008.jpg}}
-\subfigure[O --2010 ]{\includegraphics[scale=.20]{FIGURES/O_2010.jpg}}
+\includegraphics[scale=1.0]{FIGURES/skyride.pdf}
 \end{center}
 \caption{}
-\label{fig:migration}
+\label{fig:skyride}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
