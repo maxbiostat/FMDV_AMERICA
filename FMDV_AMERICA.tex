@@ -202,10 +202,11 @@ To further explore the spatial behavior of FMDV we employ the so-called ``Markov
 
 Coupled to this analysis we set up a Bayesian Stochastic Search Variable Selection (BSVSS) procedure to search for the most parsimonious set of migration routes (network edges) needed to explain the diffusion process (see Methods).
 BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path.
-The results of this analysis are presented in Figures ~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping in the routes connecting Venezuela, Colombia and Ecuador.
+The results of this analysis are presented in Figure~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping in the routes connecting Venezuela, Colombia and Ecuador.
 
 Notably, Venezuela, Colombia and Ecuador form a densely connected sub-network for both serotypes.
-% Lots of short range routes are supported for both serotypes 
+% Lots of short range routes are supported for both serotypes
+% How to reconcile these results with the border vs non-border results below
 
 To further study this pattern, we compared the counts between countries that share borders and those which do not.
 The results show that for serotype A the median transition count between neighbor countries was $0.02$ (95 \% BCI: $0.00$ -- $4.29$), while ``non-border'' transitions had median $0.05$ (95 \% BCI: $0.00$ --  $3.39$).
@@ -220,6 +221,10 @@ One may ask if both serotypes present different spatial spread patterns.
 To assess this we used PS/SS to calculate marginal likelhihoods for two different models, henceforth  called "shared'' and "separate''.
 In the "shared'' model we used trait (location) and sequence data  from both serotypes to make inference about one CTMC rate matrix, whilst in the "separate'' model we allow both serotypes to have each one CTMC rate matrix, while using the combined data from both serotypes.
 Both models allow serotypes to have different spatial diffusion rates.
+
+\begin{center}
+ [Table~\ref{tab:sharedsep} about here]
+\end{center}
 
 \begin{center}
  [THIS SECTION IS UNDER MAJOR REVIEW]
@@ -257,6 +262,7 @@ Also, serotype-specific disease notification data was collected and plotted as a
 % PHYLOGENETIC ANALYSIS
 %%%%
 Bayesian phylogenetics provides a framework for rigorously testing evolutionary hypotheses without conditioning on a single tree topology. Hence, this approach naturally accommodates phylogenetic uncertainty and, combined with accurate methods for marginal likelihood calculation, perform Bayesian model selection \cite{Baele2012,Baele2013a,Baele2013b}.
+
 %  Interestingly, best fit branch substitution models (molecular clock) were different for both serotypes (Table S1) suggesting different evolutionary dynamics
 Thus, while for serotype A a more restrictive exponential molecular clock and a slower mutation rate were found, for serotype O our results point out a more diffuse distribution of branch-specific substitutions (lognormal) and a faster evolutionary rate.
 The differences in evolutionary rates, when taken together with the results from molecular clock model selection, suggest that, although the two serotypes share the same host and infection routes, they present rather different evolutionary dynamics. 
@@ -266,6 +272,7 @@ The differences in evolutionary rates, when taken together with the results from
 It can be noticed from both serotypes that over time, with the increase of vaccination coverage, viral effective population size ($Ne$) decreases dramatically.
 This drop is also present in FMD notifications, what may suggest the role of epidemics in viral diversity.
 These results draw an interesting picture: over the years vaccination seems to be disrupting viral diversity, supposedly by precluding spread over large spatial extents, inducing a state of focalized transmission [NEED A REF HERE].
+
 In order to strenghten epidemiological inference, it may be interesting to compare the results obtained for both serotypes.
 Serotype O presents more estable temporal behavior, whereas serotype A is more fluctuating.
 Previous studies have shown that occurences caused by serotype A present longer cycles and wider epidemics, while serotype O is more prevalent with shorter disease cycles \cite{colombiatime}.
@@ -394,7 +401,7 @@ Accurate estimation of (log) marginal likelihoods are crucial to correctly ident
 Using these (log) marginal likelihoods, it is possible to calculate Bayes Factors, which give a measure of the relative performance of each model. 
 The stepping stone (SS) and path sampling (PS) approaches, as implemented in BEAST, were used  to calculate all marginal likelihoods reported in this paper.
 Note that these approaches accommodate phylogenetic uncertainty.
-PS and SS calculations were run using 64 power posteriors, each running for $500,000$ iterations, taking up to 3 weeks of computation for each model under evaluation.
+PS and SS calculations were run using 64 power posteriors, each running for $250,000$, $500,000$ and 1 million iterations, taking up to 3 weeks of computation for each model under evaluation.
 
 \subsection*{Assessing the effect of sampling}
 
@@ -504,7 +511,6 @@ Each prior was evaluated for prior predictive probability (marginal likelihood) 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section*{Tables}
-
 \begin{table}[!ht]
 \caption{{\bf Comparison of combined and separate models for CTMC rate matrix} We calculated marginal likelhihoods for ``Shared'' and ``Separate'' models (see Methods). We present results obtaining by collecting different numbers of sample per ``step'' in Path Sampling (PS) and Stepping Stone Sampling (SS) algorithms.}
  \begin{center}
@@ -519,6 +525,9 @@ Chain length&PS&SS&PS&SS&BF -- PS&BF -- SS\\
 \bottomrule
  \end{tabular}
  \end{center}
+ \begin{flushleft}
+\end{flushleft}
+\label{tab:sharedsep}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
