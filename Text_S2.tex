@@ -23,6 +23,7 @@ Luiz Max de Carvalho \\
 
 \section{Background}
 The data sets used in this study presented preferential sampling, with some countries being overrepresented.
+Sampling bias constitutes an important concern \cite{Faria2012,Lemey2013,polar}
 % A possibility, unexplored in this paper, is to sample each location with probability proportional to its disease prevalence
 % In theory, a Bayesian approach should offer a certain degree of protection against model mispecification and sampling bias by bla bla...
 \section{Comparing rate matrices}
@@ -30,24 +31,22 @@ Sometimes \\
 L1 and L2 norms
 We thank Professor Marc A. Suchard (UCLA) for advice on this topic.\\
 \section{Quantifying spatial signal extraction}
-KL root for each subsample
+KL root for each subsample \cite{KL}
 \section{Bayesian Stochastic Search Variable Selection}
-% TODO: put in the BSSVS plots !!!
 \newpage
-\begin{figure}[!ht]
 \begin{center}
+\begin{figure}[H]
 \subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss1.jpeg}}
 \subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss2.jpeg}}%\\
 \subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss3.jpeg}}
 \subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss4.jpeg}}%\\
 \subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss5.jpeg}}
-\end{center}
 \caption{}
 \label{sfig:bssvsA}
 \end{figure}
+\end{center}
 \newpage
-\newpage
-\begin{figure}[!ht]
+\begin{figure}[H]
 \begin{center}
 \subfigure[]{\includegraphics[scale=.450]{FIGURES/O_ss1.jpeg}}
 \subfigure[]{\includegraphics[scale=.450]{FIGURES/O_ss2.jpeg}}%\\
@@ -73,6 +72,14 @@ These results are presented in Figure~\ref{sfig:only2000sky}.
 \label{sfig:tradeinfo}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[scale=.5]{FIGURES/A_vs_O_symmetric.jpeg}
+\end{center}
+\caption{}
+\label{sfig:tradeinfo}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%
 \begin{figure}[!ht]
@@ -89,33 +96,43 @@ These results are presented in Figure~\ref{sfig:only2000sky}.
 \section{``Representation-informed'' priors}
 \section{Simulating from the null}
 \section{Results and Discussion}
-\newpage
-\section*{Table Legends}
-\textbf{Table~\ref{tab:SB_A}. Parameter estimation using the complete and without Argentina data sets for serotype A.}
-To assess the impact of the overrepresentation of Argentina in our sample we removed all sequence from this location and reestimated parameters.
-1- All 131 sequences were used. 2- Time to most recent common ancestor. 3- Codon positions $1$, $2$ and $3$.
-
-\textbf{Table~\ref{tab:SB_O}. Parameter estimation using the complete and without Ecuador data sets for serotype O.}
-To assess the impact of the overrepresentation of Ecuador (90 sequences) our sample we removed all sequence from this location and reestimated parameters.
-1- All 167 sequences were used. 2- Time to most recent common ancestor. 3- Codon positions $1$, $2$ and $3$.
-
-\textbf{Table~\ref{tab:ED_A}. 'Equal downsampling' experiment for serotype A.}
-Five random downsampled subsamples were obtained and used for parameter inference.
-1-- $\times 10^{-3}$. 2 -- $\times 10^{-2}$. 3-- Probabily at root node. 
-
-\textbf{Table~\ref{tab:ED_O}. 'Equal downsampling' experiment for serotype O.}
-Five random downsampled subsamples were obtained and used for parameter inference.
-1-- $\times 10^{-2}$. 2--  Probabily at root node.
-
-\newpage
+%\newpage
 \section*{Figure Legends}
-
-\textbf{Figure~\ref{sfig:only2000sky}. Skyride coalescent reconstructions using sequences from 2000 to present only for both serotypes.}
+\textbf{Figure S~\ref{sfig:only2000sky}. Skyride coalescent reconstructions using sequences from 2000 to present only for both serotypes.}
 As in the main text, disease cases and vaccination in doses per head are overlaid to the demographic reconstructions.
-
+\textbf{Figure S~\ref{sfig:bssvsA}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype A sequences} We performed the BSSVS analysis on 
+\textbf{Figure S~\ref{sfig:bssvsO}.   }
 \newpage
 \bibliography{Text_S2}
-\newpage 
+\newpage\begin{table}[!ht]
+\caption*{\textbf{Table S1. Model selection for tree (coalescent) model and clock for both serotypes.}
+ULN= uncorrelated log-normal; UCED = uncorrelated exponential .
+Best fitting models (highest log-likelihood) are highlighted in bold.
+1- Log-likelihood estimated using Stepping-Stone sampling (SS).}
+\begin{center}
+\begin{tabular}{cccccc}
+\toprule
+Serotype	&Coalescent	&Clock	&Log-Likelihood$^{1}$\\
+\midrule
+A	&Constant	&ULN	&-12285\\
+A	&Skyride 	&ULN	&\textbf{-12274}\\
+A	&Constant	&UCED	&-12316\\
+A	&Skyride 	&UCED	&-12307\\
+A       &Skyride       &STRICT &-12308\\
+O	&Constant	&ULN	&-8087\\
+O	&Skyride 	&ULN	&-8082\\
+O	&Constant	&UCED	&-8090\\
+O	&Skyride 	&UCED	&\textbf{-8069}\\
+O       &Skyride       &STRICT &-8125\\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{flushleft}
+\end{flushleft}
+\label{stab:treeclockselection}
+ \end{table}
+ %%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%
 \begin{sidewaystable}[h]
 \caption{
 \textbf{Spatial signal for FMDV serotypes A and O data sets.} We used Bayesian tip-association significance testing (BaTS) to assess the degree of spatial signal contained in the alignments for both serotypes. 1-Monophyletic clade size}
@@ -140,9 +157,11 @@ Venezuela&1.82 (1.00, 2.00)	&1.02 (1.00, 1.08)	&0.010&6.00 (6.00, 6.00)&	1.28 (1
 \label{tab:BaTS}
 \end{sidewaystable}
 %%%%%%%%%%%%
-\begin{center}
+
 \begin{table}[h]
-\caption{}
+\caption*{ {{\bf Table S2 Parameter estimation using the complete and without Argentina data sets for serotype A.}} To assess the impact of the overrepresentation of Argentina in our sample we removed all sequence from this location and reestimated parameters.
+1- All 131 sequences were used. 2- Time to most recent common ancestor. 3- Codon positions $1$, $2$ and $3$. }
+\begin{center}
 \begin{tabular}{ccc}
 \toprule
 Parameter	&Complete$^{1}$	&Without Argentina\\
@@ -154,15 +173,18 @@ CP3	&1.87 (1.74-2.00)	& 1.95 (1.81 -2.09)\\
 Rate ($\times 10^{-3}$)	&4.14 (3.39-4.98)	&3.46 (2.82-4.11)\\
 \bottomrule
 \end{tabular}
+\end{center}
 \label{tab:SB_A}
  \end{table}
-\end{center}
+
 
 %%%%%%%%%
 %%%%%%%%%
-\begin{center}
 \begin{table}[h]
-\caption{}
+\caption{ {{\bf Parameter estimation using the complete and without Ecuador data sets for serotype O.}} To assess the impact of the overrepresentation of Ecuador (90 sequences) our sample we removed all sequence from this location and reestimated parameters.
+1- All 167 sequences were used. 2- Time to most recent common ancestor. 3- Codon positions $1$, $2$ and $3$.
+}
+\begin{center}
 \begin{tabular}{ccc}
 \toprule
 Parameter	&Complete$^{1}$	&Without Ecuador\\
@@ -174,9 +196,9 @@ CP3	&1.94 (1.78-2.10)	& 2.05 (1.87 -2.21)\\
 Rate ($\times 10^{-2}$)	&1.11 (0.91-1.32)	&0.91 (0.63-1.21)\\
 \bottomrule
 \end{tabular}
+\end{center}
 \label{tab:SB_O}
  \end{table}
-\end{center}
 
 %%%%
 %%%%
@@ -185,7 +207,9 @@ Rate ($\times 10^{-2}$)	&1.11 (0.91-1.32)	&0.91 (0.63-1.21)\\
 \medskip
 \begin{minipage}{\textwidth} 
 \begin{center}
-\caption{}
+\caption{ {{\bf 'Equal downsampling' experiment for serotype A.}} 
+Five random downsampled subsamples were obtained and used for parameter inference.
+1-- $\times 10^{-3}$. 2 -- $\times 10^{-2}$. 3-- Probabily at root node.}
 \begin{tabular}{ccccc}
 \toprule
 Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration rate$^{2}$  (95 \% BCI)	&Root (Pr$^{3}$)\\
@@ -207,9 +231,10 @@ Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration 
 \newpage
 \begin{sidewaystable}[!ht]
 \medskip
-\begin{minipage}{\textwidth} 
+\begin{minipage}{\textwidth}
 \begin{center}
-\caption{}
+ \caption{ {{\bf 'Equal downsampling' experiment for serotype O.}} Five random downsampled subsamples were obtained and used for parameter inference.
+1-- $\times 10^{-2}$. 2--  Probabily at root node.}
 \begin{tabular}{ccccc}
 \toprule
 Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration rate$^{1}$ (95 \% BCI)	&Root (Pr$^{2}$)\\
@@ -228,26 +253,4 @@ Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration 
 \end{sidewaystable}
 %%%%
 %%%%
-\begin{table}[!ht]
-\caption*{\textbf{Table S1. Model selection for tree (coalescent) model and clock for both serotypes.}  ULN= uncorrelated log-normal; UCED = uncorrelated exponential . Best fitting models (highest log-likelihood) are highlighted in bold.}
-\begin{tabular}{cccccc}
-\toprule
-Serotype	&Coalescent	&Clock	&Log-Likelihood$^{1}$\\
-\midrule
-A	&Constant	&ULN	&-12285\\
-A	&Skyride 	&ULN	&\textbf{-12274}\\
-A	&Constant	&UCED	&-12316\\
-A	&Skyride 	&UCED	&-12307\\
-A       &Skyride       &STRICT &-12308\\
-O	&Constant	&ULN	&-8087\\
-O	&Skyride 	&ULN	&-8082\\
-O	&Constant	&UCED	&-8090\\
-O	&Skyride 	&UCED	&\textbf{-8069}\\
-O       &Skyride       &STRICT &-8125\\
-\bottomrule
-\end{tabular}
-\begin{flushleft}
-\end{flushleft}
-\label{stab:treeclockselection}
- \end{table}
 \end{document}
