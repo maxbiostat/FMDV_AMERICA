@@ -26,6 +26,44 @@ The data sets used in this study presented preferential sampling, with some coun
 Sampling bias constitutes an important concern \cite{Faria2012,Lemey2013,polar}
 % A possibility, unexplored in this paper, is to sample each location with probability proportional to its disease prevalence
 % In theory, a Bayesian approach should offer a certain degree of protection against model mispecification and sampling bias by bla bla...
+\section{Comparing rate matrices}
+Sometimes \\
+L1 and L2 norms
+We thank Professor Marc A. Suchard (UCLA) for advice on this topic.\\
+\section{Quantifying spatial signal extraction}
+KL root for each subsample \cite{KL}
+\section{Bayesian Stochastic Search Variable Selection}
+See Figures S\ref{sfig:bssvsA} and S\ref{sfig:bssvsO}. 
+\section{Parameter estimation and demographic reconstruction without the overrepresented locations}
+Additionally, we assessed the robustness of our temporal reconstruction by using only sequences from 2000 to present.
+For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior on coalescent times, also known as 'skyride' model.
+These results are presented in Figure~\ref{sfig:only2000sky}.
+% TODO: more discussion on this 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Parameter estimation with downsampling}
+% For our experiments, we obtained five downsampled data sets for each serotype
+\section{``Representation-informed'' priors}
+\section{Results and Discussion}
+%\newpage
+\section*{Figure Legends}
+\textbf{Figure S\ref{sfig:trade}. Exportation, importation and production time series for pigs, cattle and sheep in South america.} Panel A shows exportations in log(\# of heads) of live animals for pigs, sheep and cattle.
+Panels B and C show importation and overall production (population increase), respectively.
+
+\textbf{Figure S\ref{sfig:tradeinfo}. Kernel density estimation for the trade-informed priors used in this study.} Information on cattle, sheep and pigs trade was retrieved from FAO and used to create trade-informed prior distributions for the CTMC infinitesimal rate matrix.
+Each prior was evaluated for prior predictive probability (marginal likelihood) using the PS and SS algorithms. 
+
+\textbf{Figure S\ref{sfig:AvsO}. Scatterplot of estimated rate matrices for serotypes A and O} We plotted all overllaping rates (Serotype O without Paraguay) estimated using a symmetric CTMC model for both serotypes, to investigate whether the two serotypes have different spatial patterns.
+
+\textbf{Figure S\ref{sfig:bssvsA}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype A sequences} We performed the BSSVS analysis on five downsampled data sets (reduced Argentina representation) and plotted the results as in Figure 3 in the main text.
+
+\textbf{Figure S\ref{sfig:bssvsO}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype O sequences} We performed the BSSVS analysis on five downsampled (equal numbers of Ecuadorian and Colombian sequences) data sets and plotted the results as in Figure 3 in the main text.
+
+\textbf{Figure S\ref{sfig:only2000sky}. Skyride coalescent reconstructions using sequences from 2000 to present only for both serotypes.}
+As in the main text, disease cases and vaccination in doses per head are overlaid to the demographic reconstructions.
+
+
+\newpage
+\bibliography{Text_S2}
 \newpage
 \begin{center}
 \begin{figure}[ht]
@@ -35,16 +73,25 @@ Sampling bias constitutes an important concern \cite{Faria2012,Lemey2013,polar}
 \subfigure[C]{\includegraphics[scale=.250]{FIGURES/production.pdf}}
 \end{center}
 \caption{}
-\label{sfig:bssvsA}
+\label{sfig:trade}
 \end{figure}
 \end{center}
-\section{Comparing rate matrices}
-Sometimes \\
-L1 and L2 norms
-We thank Professor Marc A. Suchard (UCLA) for advice on this topic.\\
-\section{Quantifying spatial signal extraction}
-KL root for each subsample \cite{KL}
-\section{Bayesian Stochastic Search Variable Selection}
+\newpage
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=.5]{FIGURES/trade_info.jpeg}
+\end{center}
+\caption{}
+\label{sfig:tradeinfo}
+\end{figure}
+\newpage
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=.5]{FIGURES/A_vs_O_symmetric.jpeg}
+\end{center}
+\caption{}
+\label{sfig:AvsO}
+\end{figure}
 \newpage
 \begin{center}
 \begin{figure}[ht]
@@ -70,53 +117,16 @@ KL root for each subsample \cite{KL}
 \label{sfig:bssvsO}
 \end{figure}
 \newpage
-\section{Parameter estimation without the overrepresented locations}
-Additionally, we assessed the robustness of our temporal reconstruction by using only sequences from 2000 to present.
-For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior on coalescent times, also known as 'skyride' model.
-These results are presented in Figure~\ref{sfig:only2000sky}.
-% TODO: more discussion on this 
-%%%%%
-\begin{figure}[ht]
-\begin{center}
-\includegraphics[scale=.5]{FIGURES/trade_info.jpeg}
-\end{center}
-\caption{}
-\label{sfig:tradeinfo}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-\begin{center}
-\includegraphics[scale=.5]{FIGURES/A_vs_O_symmetric.jpeg}
-\end{center}
-\caption{}
-\label{sfig:tradeinfo}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%
 \begin{figure}[ht]
 \begin{center}
 \subfigure[A]{\includegraphics[width=\textwidth]{FIGURES/SFig_A2000sky.jpeg}}
-\subfigure[O]{\includegraphics[width=\textwidth]{FIGURES/SFig_O2000sky.jpeg}}\\
+\subfigure[B]{\includegraphics[width=\textwidth]{FIGURES/SFig_O2000sky.jpeg}}\\
 \end{center}
 \caption{}
 \label{sfig:only2000sky}
 \end{figure}
-
-\section{Parameter estimation with downsampling}
-% For our experiments, we obtained five downsampled data sets for each serotype
-\section{``Representation-informed'' priors}
-\section{Results and Discussion}
-%\newpage
-\section*{Figure Legends}
-% TODO: Put the time series for livestock trade here
-\textbf{Figure S~\ref{sfig:only2000sky}. Skyride coalescent reconstructions using sequences from 2000 to present only for both serotypes.}
-As in the main text, disease cases and vaccination in doses per head are overlaid to the demographic reconstructions.
-\textbf{Figure S~\ref{sfig:bssvsA}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype A sequences} We performed the BSSVS analysis on 
-\textbf{Figure S~\ref{sfig:bssvsO}.   }
 \newpage
-\bibliography{Text_S2}
-\newpage\begin{table}[ht]
+\begin{table}[ht]
 \caption*{\textbf{Table S1. Model selection for tree (coalescent) model and clock for both serotypes.}
 ULN= uncorrelated log-normal; UCED = uncorrelated exponential .
 Best fitting models (highest log-likelihood) are highlighted in bold.
