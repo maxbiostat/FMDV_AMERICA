@@ -135,12 +135,10 @@ This confirmed significant temporal signal for both serotypes (A: BF=$310$; O: B
 Overall, these results show that sufficient temporal information is embedded in sequence data of both serotypes under investigation, which is central for the estimation of times of divergence and to reconstruct the population dynamics in natural time units \cite{MEP}.
 
 \subsection*{Dating the divergence of FMDV in South America}
-%NRF Changed mutation to evolutionary rate since mutation rate (rate at which errors are incorporated in the genome, estimated in wet lab) is different from evolutionary or substitution rate (rate at which mutations spread and become fixed in a population, estimated from seq data). Do the 'mutation rates' that you cited in the 'review' paper for serotype O correspond to evolutionary rates? (mutation rate is generally > evolutionary rate).
+
 To build time-structured phylogenies for each FMDV serotype, we performed Bayesian MCMC analysis using BEAST, under the corresponding best-fit combination of nucleotide subsitution, demographic and molecular clock models.
 The maximum clade credibility (MCC) tree estimated for serotype A (Figure~\ref{fig:trees}A) places the origin of the circulating strains in or around the early years of the 1920's decade.
-This result is surprising, since it reveals a longer-term maintenance of FMDV serotype A in the continent than previously suspected.
-%TODO: check with Andres whether this shit holds
-%NRF Not so sure if this is very updated... check Tuly and Fares, Virology, 2008
+
 Figure~\ref{fig:trees}A shows that sequences from the same country tend to cluster in small clades although the Bayesian phylogenies for both serotypes also shows considerable interspersing of lineages indicating trans-border FMDV migration.
 For example, for serotype A sequences from Argentina are grouped in 2 clades that either comprised only Argentinian isolates or include sequences from Brazil and Uruguay (Figure~\ref{fig:trees}A).
 Interestingly, the great majority of the isolates from Venezuela and Colombia fall together within 2 distinct clades. 
@@ -151,19 +149,13 @@ The TMRCA for serotype O was estimated in around 20 years, showing a more recent
 Here, a smaller clade of Colombian isolates are found interspersed within from Venezuelan isolates. In addition, isolates from Ecuador are found interspersed with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
 Overall, the Bayesian phylogenies suggest that most FMDV flow within South America occured between neighboring countries. 
 
-Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated around $4 \times 10^{-3}$ substitutions/site/year. In addition, the estimated evoltutionary rate for serotype O was aproximately 2.5 times faster than serotype A, i.e. at $1 \times 10^{-2}$, consistent with previous studies \cite{review,Carvalho2012}. 
+Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated around $4 \times 10^{-3}$ substitutions/site/year. In addition, the estimated evoltutionary rate for serotype O was aproximately 2.5 times faster than serotype A, i.e. at $1 \times 10^{-2}$, consistent with previous studies \cite{tully,Carvalho2012}. 
 
 \begin{center}
  [Figure~\ref{fig:trees} about here]
 \end{center}
 
-%NRF Just a suggestion: we could also show Figure 1 and 2 as Figure 1 panels A and B, side by side, with a single shared legend <- LM: done
-%NRF I am also wondering if we should also add some posterior values to the trees (and to the text) <- LM that may be a nice idea
-
 \subsection*{Spatial Dynamics of FMDV in South America}
-
-% in the table (I'd merge Tables 1 and 2 into 1 single Table), include a note mentioning that you are only showing the MC statistics for the countries for which there were at least 3(5?) sequences. It is a bit odd that for serotype A, Peru and Ecuador do not have a significant p-value, but that serotype O has significant structure in Ecuador - this is clearly reflecting the fact that for O there is only 1 sequence for Ecuador. Should we have more data from Ecuador and we 'd probably find structure of O there as well.
-%LM: In fact we have a lot of sequences for Ecuador, these results are utterly odd...
 
 To assess the spatial pattern of FMDV spread within South America, we performed Bayesian phylogeographic analysis, also using the models available in BEAST \cite{roots}.
 We began by evaluating the spatial signal contained in our sequences using Bayesian tip-association tests \cite{bats} to determine the amount of spatial signal in our reconstructed phylogenies.
@@ -214,6 +206,7 @@ One may ask if both serotypes present different spatial spread patterns.
 To assess this we used PS/SS to calculate marginal likelhihoods for two different models, henceforth  called "shared'' and "separate''.
 In the "shared'' model we used trait (location) and sequence data  from both serotypes to make inference about one CTMC rate matrix, whilst in the "separate'' model we allow both serotypes to have each one CTMC rate matrix, while using the combined data from both serotypes.
 Both models allow serotypes to have different spatial diffusion rates.
+% TODO: refer to figure S3
 % TODO: are the shared runs more statistically efficient? 
 \begin{center}
  [Table~\ref{tab:sharedsep} about here]
@@ -242,15 +235,16 @@ The results of this analyses, presented in tables ~\ref{tab:predA} and ~\ref{tab
 The results from the Skyride coalescent reconstruction show strikingly different dynamical behaviors for the two serotypes, with serotype O exhibiting considerable more oscillation over time, and a diversity peak occurring in late years of the 1990 decade.
 Serotype A exhibits a more stable behavior over most of the 20th century, with most variation occurring within the temporal sampling interval, mainly in the last years of the 2000 decade.
 To better understand the relationship between vaccination and viral diversity, we overlaid vaccination data to our skyride plots presented in Figure~\ref{fig:skyride}.
-These data were expressed as doses per head, which we consider to be a more accurate measure of vaccination coverage, since it corrects for population size increase/decrease over time (see Figure S1 for livestock population and trade time series). %TODO: check this numbering in the end; DO THIS DAMN FIGUREo
+These data were expressed as doses per head, which we consider to be a more accurate measure of vaccination coverage, since it corrects for population size increase/decrease over time (see Figure S1 for livestock population and trade time series). %TODO: check this numbering in the end
 Also, serotype-specific disease notification data was collected and plotted as an overlaid time series to the reconstruction. 
 
-To assess the robustness of our reconstructions we performed skyride reconstructions using only recent (sampling date $>2000$) sequences (see Text S2, Figures SXX and SYY). We also performed reconstructions in datasets without the over-represented locations (data not shown). All these analyses gave roughly similar results to those presented in Figure~\ref{fig:skyride}. The only exception was the reconstruction for serotype A without Argentinian sequences, for which it is not possible to see the marked drop near 2001 that is clear in Figure~\ref{fig:skyride}. 
-% TODO: put on the numbering
+To assess the robustness of our reconstructions we performed skyride reconstructions using only recent (sampling date $>2000$) sequences (see Text S2, Figure S6).
+%TODO: Check this numbering in the end
+We also performed reconstructions in datasets without the over-represented locations (data not shown). All these analyses gave roughly similar results to those presented in Figure~\ref{fig:skyride}. The only exception was the reconstruction for serotype A without Argentinian sequences, for which it is not possible to see the marked drop near 2001 that is clear in Figure~\ref{fig:skyride}. 
+
 \begin{center}
  [Figure~\ref{fig:skyride} about here]
 \end{center}
-
 
 \section*{Discussion}
 %%%%
@@ -384,8 +378,8 @@ This option is justifiable, since the two serotypes present different TMRCAs and
 Another important aspect is the influence of different variables, such as population size and density, presence of airlines and roads and disease incidence on viral diffusion through space. 
 The framework adopted here allows for the incorporation of such information into the inference process, by the suitable formulation of prior distributions to inform the entries of the rate matrix. 
 To assess this, prior distributions were formulated using the following variables: trade of live cattle, pigs and sheep, as well as great-circle distances between each pair of countries. 
-These variables were normalized such that their expectation was one with unit variance. See Figure S1 for kernel density smoothing of these prior distributions.
-
+These variables were normalized such that their expectation was one with unit variance. See Figure S2 for kernel density smoothing of these prior distributions.
+% TODO: check this numbering in the end
 In this study, we exploit recent developments in Bayesian model selection \cite{Baele2012}, as implemented in the BEAST software program \cite{BEAST}.
 Phylogenetics has adopted two main methods of potentially general applicability, such as importance sampling estimators (such as the HME and sHME) and path sampling estimators (such as PS and SS) to compute marginal likelihoods of competing models.
 These approaches allow for an overall ranking of competing models to be constructed, from which the top-performing model can easily be determined.
@@ -447,9 +441,6 @@ Coroplethic maps show the net migration rates for each country, for both serotyp
 Circle radius are proportional to lineage diversity.
 Illustrations produced using data annotated from SPREAD \cite{spread} and vizualized using Google Earth (\url{http://www.google.com/earth/index.
 html}).
-
-{\bf SFigure 1. Kernel density estimation for the trade-informed priors used in this study}. Information on cattle, sheep and pigs trade was retrieved from FAO and used to create trade-informed prior distributions for the CTMC infinitesimal rate matrix.
-Each prior was evaluated for prior predictive probability (marginal likelihood) using the PS and SS algorithms.
 
 \newpage
 \section{Figures}
