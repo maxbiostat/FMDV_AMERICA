@@ -188,8 +188,11 @@ To further explore the spatial behavior of FMDV we employ the so-called ``Markov
 Coupled to this analysis we set up a Bayesian Stochastic Search Variable Selection (BSVSS) procedure to search for the most parsimonious set of migration routes (network edges) needed to explain the diffusion process (see Methods).
 BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path.
 The results of this analysis are presented in Figure~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping in the routes connecting Venezuela, Colombia and Ecuador.
-% TODO: put in the 3 highest BFs for each serotype
-Notably, Venezuela, Colombia and Ecuador form a densely connected sub-network for both serotypes.
+For serotype A, highest (BF $>800$) support was observed for viral flow between Venezuela and Colombia and between Argentina and Uruguay.
+Transitions between Brazil and Bolivia and Peru and Ecuador also received good statistical support (BF $>10$).
+For serotype O, overall Bayes factors were lower in magnitude, but supported similar routes.
+Highest support was found for transition between Ecuador and Peru and Colombia and Ecuador (BF $>100$). Signicant support was also observed for viral exchange between Venezuela and Colombia (BF $>20$). 
+
 % Lots of short range routes are supported for both serotypes
 % How to reconcile these results with the border vs non-border results below?
 
@@ -256,18 +259,6 @@ Bayesian phylogenetics provides a framework for rigorously testing evolutionary 
 Thus, while for serotype A a more restrictive exponential molecular clock and a slower mutation rate were found, for serotype O our results point out a more diffuse distribution of branch-specific substitutions (lognormal) and a faster evolutionary rate.
 The differences in evolutionary rates, when taken together with the results from molecular clock model selection, suggest that, although the two serotypes share the same host and infection routes, they present rather different evolutionary dynamics. 
 %%%%%
-% COALESCENT 
-%%%%%
-It can be noticed from both serotypes that over time, with the increase of vaccination coverage, viral effective population size ($Ne$) decreases dramatically.
-This drop is also present in FMD notifications, what may suggest the role of epidemics in viral diversity.
-These results draw an interesting picture: over the years vaccination seems to be disrupting viral diversity, supposedly by precluding spread over large spatial extents, inducing a state of focalized transmission [NEED A REF HERE].
-
-In order to strenghten epidemiological inference, it may be interesting to compare the results obtained for both serotypes.
-Serotype O presents more estable temporal behavior, whereas serotype A is more fluctuating.
-Previous studies have shown that occurences caused by serotype A present longer cycles and wider epidemics, while serotype O is more prevalent with shorter disease cycles \cite{colombiatime}.
-These epidemiological features are reflected at the temporal variation observed for viral $Ne$ in both serotypes, a result obtained for other viruses as well \cite{Bennett2010,Pybus2003}. 
-Since our results reinforce the notion that these two serotypes present different evolutionary dynamics, the overall decrease in viral diversity for both serotypes points towards a progressive success of the eradication programme in slowly reducing transmission and controlling epidemics.
-%%%%%
 % PREDICTORS
 %%%%%
 Using animal trade data as predictors can be a valuable tool to understand the role of livestock commerce in the spread of animal and zoonotic diseases \cite{Nelson2011}.
@@ -283,6 +274,8 @@ We found significant well supported migration paths between Venezuela, Colombia 
 % While serotype A seems to have spread in a period of less stringent control, results for serotype O indicate that... % TODO Andres could help A LOT here! 
 % the relationship between MJ borders inference and source-sink dynamics
 % Border vs non-border suggests long-range stuff may be important as well.
+% Ecuador is a BF star, key to the spread, endemic country
+% Notably, Venezuela, Colombia and Ecuador form a densely connected sub-network for both serotypes.
 % For serotype O, Colombia is north, Brazil is south.
 % REMEMBER TO DISCUSS SHARED VERSUS SEPARATE ANALYSES. shared vs separate reveal that spatial spread is quite the same
 % Informing the rates with livestock trade contributes to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated \cite{Faria2012}.
@@ -290,6 +283,18 @@ We found significant well supported migration paths between Venezuela, Colombia 
 % As discussed by Cottam et al (2007) \cite{cottam2007}, phylogenetic methods can be used to unravel undetected transmission.
 % in the future skyride reconstructions can be coupled to mathematical models to help explain the pattern of emergence of FMD
 % selection of clock and tree prior by PS/SS is cumbersome, but provides more accurate results. This calls for better methods, specially tailored for phylogeography % TODO: What does Guy think about this?
+%%%%%
+% COALESCENT 
+%%%%%
+It can be noticed from both serotypes that over time, with the increase of vaccination coverage, viral effective population size ($Ne$) decreases dramatically.
+This drop is also present in FMD notifications, what may suggest the role of epidemics in viral diversity.
+These results draw an interesting picture: over the years vaccination seems to be disrupting viral diversity, supposedly by precluding spread over large spatial extents, inducing a state of focalized transmission [NEED A REF HERE].
+
+In order to strenghten epidemiological inference, it may be interesting to compare the results obtained for both serotypes.
+Serotype O presents more estable temporal behavior, whereas serotype A is more fluctuating.
+Previous studies have shown that occurences caused by serotype A present longer cycles and wider epidemics, while serotype O is more prevalent with shorter disease cycles \cite{colombiatime}.
+These epidemiological features are reflected at the temporal variation observed for viral $Ne$ in both serotypes, a result obtained for other viruses as well \cite{Bennett2010,Pybus2003}. 
+Since our results reinforce the notion that these two serotypes present different evolutionary dynamics, the overall decrease in viral diversity for both serotypes points towards a progressive success of the eradication programme in slowly reducing transmission and controlling epidemics.
 \section*{Conclusions}
 %better methods yield more complete analyses
 %overall decrease in viral diversity
