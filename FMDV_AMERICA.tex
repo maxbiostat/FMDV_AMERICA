@@ -211,8 +211,11 @@ In the "shared'' model we used trait (location) and sequence data  from both ser
 Both models allow serotypes to have different spatial diffusion rates.
 
 We plotted the rates estimated from independent runs for both serotypes and they do not seem to correlate (Fig. S3). % TODO: check this numbering in the end
-Moreover, from the separate and shared rate matrix analysis we found that rates inferred for serotype A are more strongly correlated with the rates estimated under a shared rate matrix.
-However, Bayes factors assessment of the statistical support for the two hypotheses (shared or separate rate matrices), indicates that a shared model should be preferred to a model with separate rate matrices for each serotype (BF$>10$, see Table~\ref{tab:sharedsep}).
+Moreover, from the separate and shared rate matrix analysis we found that rates inferred for serotype A are more strongly correlated with the rates estimated under a shared rate matrix, with Pearson's linear correlation coefficients $r_A=0.55$ and $r_O=0.18$, respectively.
+For this analysis, the correlation between serotype A and O rate matrix estimates was $0.07$.
+In contrast to these results, the rate indicators in BSSVS for both serotypes were in better accordance ($r=0.54$).
+Again, we compared estimates using shared and separate models for the CMTC rate matrix, and found that indicators for serotype A had higher concordance to those in the shared model ($r_A=0.86$ and $r_O=0.77$).
+Bayes factors assessment of the statistical support for the two hypotheses (shared or separate rate matrices), indicating that a shared model should be preferred to a model with separate rate matrices for each serotype (BF$>10$, see Table~\ref{tab:sharedsep}).
 
 % TODO: are the shared runs more statistically efficient? 
 \begin{center}
@@ -283,6 +286,7 @@ We found significant well supported migration paths between Venezuela, Colombia 
 % For serotype O, Colombia is north, Brazil is south.
 % REMEMBER TO DISCUSS SHARED VERSUS SEPARATE ANALYSES. shared vs separate reveal that spatial spread is quite the same
 % Our results suggest that FMDV serotypes have different dispersal determinants,  (plots and all) <- conflicting information
+% when we analysed INDICATORs  much higher concordance
 % Informing the rates with livestock trade contributes to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated \cite{Faria2012}.
 % Moreover, our results suggest that \ldots
 % As discussed by Cottam et al (2007) \cite{cottam2007}, phylogenetic methods can be used to unravel undetected transmission.
@@ -384,6 +388,7 @@ These expectations can then be multplied by geographical distances to obtain the
 One of the main research questions in this study is whether or not the two serotypes share the same underlying dispersal determinant. 
 To test this hypothesis, we estimated one single CMTC rate matrix using data from both serotypes, while allowing each serotype to have its own dispersal rate. 
 This option is justifiable, since the two serotypes present different TMRCAs and mutation rates. 
+In this analysis, we removed the sequence from Paraguay in the serotype O data set to have equal geographic sampling between serotypes.
 %The marginal likelihood of this model was compared to that of one in which both serotypes were allowed to share data from both alignments but estimate two separate rate matrices.
 
 Another important aspect is the influence of different variables, such as population size and density, presence of airlines and roads and disease incidence on viral diffusion through space. 
