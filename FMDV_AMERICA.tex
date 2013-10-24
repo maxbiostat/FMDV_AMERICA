@@ -239,9 +239,14 @@ The results of this analyses, presented in tables ~\ref{tab:predA} and ~\ref{tab
 Since our data sets presented highly preferential sampling, we conducted a detailed sensitivity analysis to assess the effect of performing inference under highly unbalanced designs.
 First, we draw five subsamples for each serotype in which overrepresented were downsampled and performed BSSVS for each subsample.
 From BSSVS we calculated Bayes factors and observed good agreement between samples in terms of supported routes (see Figures S4 and S5). % TODO: check this numbering in the end    
-Another aspect of interest is the amount of information extracted  
-% KL divergence across samples
-% L1 and L2 norms across samples
+To further study this, we also computed the $L1$ and $L2$ matrix distance norms for across the estimated rate matrices for each subsample, and no aberrant samples were detected.
+
+Another aspect of interest is the amount of information extracted from each sample, which we measure by calculating Kullback-Leibler divergence between prior and posterior distribution of traits at root \cite{roots}.
+Tables S3 and S4 show that for all subsamples in both serotypes there was substantial information extraction, with highly concentrated posterior distributions at root.
+Inference about location of origin was consistent across samples, with Brazil and Colombia being the countries of origin for serotypes A and O respectively.
+Also, we observed stronger support for Colombia as root for serotype O when compared to Brazil as root for serotype A.
+While serotype O presented average $Pr(root=Colombia)=0.95$, $Pr(root=Brazil)$ for serotype A was $0.83$.
+% TODO: check this numbering in the end
 % phylogenetic parameter estimates
 \subsection*{Demographic reconstruction of FMDV dynamics}
 
@@ -311,7 +316,8 @@ Since our results reinforce the notion that these two serotypes present differen
 %better methods yield more complete analyses
 %overall decrease in viral diversity
 %spatial routes by proximity
-%sampling bias may be an important factor to consider 
+%sampling bias may be an important factor to consider
+% subsampling improved root estimation
 \section*{Methods}
 
 \subsection*{Genetic and epidemiological data}
