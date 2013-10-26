@@ -7,7 +7,7 @@
 \usepackage{caption}
 \bibliographystyle{plos2009}%
 %opening
-\title{Text S2 -- Assessing the impact of taxon sampling on phylogeographic reconstruction} % aargh, lousy name
+\title{Text S2 -- Assessing the impact of taxon sampling on phylogeographic and coalescent reconstruction} % aargh, lousy name
 \author{
 Luiz Max de Carvalho \\
 \and Nuno Faria \\
@@ -23,9 +23,37 @@ Luiz Max de Carvalho \\
 
 \section{Background}
 The data sets used in this study presented preferential sampling, with some countries being overrepresented.
-Sampling bias constitutes an important concern \cite{Faria2012,Lemey2013,polar}
-% A possibility, unexplored in this paper, is to sample each location with probability proportional to its disease prevalence
-% In theory, a Bayesian approach should offer a certain degree of protection against model mispecification and sampling bias by bla bla...
+Namely, $58$ of the $131$ sequences collected for serotype A were from Argentina, and $90$ of the $167$ sequences for serotype O came from Ecuadorian isolates.
+This unbalanced design may introduce bias on our phylogeography analysis, since under a null 'single rate' model, the more sequences are collected from a location, the higher the estimates to and from this location will be. % TODO: citation or formula here
+% To see this, let....
+Sampling bias constitutes an important concern in phylogeographic modeling and several studies have performed sensitivity analyses to determine how robust inference is to biased sampling \cite{Faria2012,Lemey2013,polar,fluPNAS} .
+In this study we provide a thorough assesment of the effects of sampling bias in the phylogeographic inference results. 
+\section{``Representation-informed'' priors}
+The first experiment to study the impact of sampling in our estimated was to use what we call a ``representation-informed'' prior.
+This prior is built by assuming that the average rate of flow between two locations is proportional to the difference in representation, i.e., the number of sequences from each location.
+We can mathematically express the above rationale as:
+\begin{equation}
+ m_{ij}=C\frac{|n_i-n_j|}{\sum_i|n_i-n_j|}
+\end{equation}
+where $n_i$ and $n_j$ are the number of sequences from locations $i$ and $j$ and $C$ is an arbitrary constant, chosen such that $E[m_{ij}]=1$ (see the Methods section in main text).
+For each serotype we calculated marginal likelihoods using path sampling (PS) and stepping stone (SS) for the ``representation-informed'' priors.
+These marginal likelihood were compared to the marginal likelihoods obtained using uniform prior distributions on the infinitesimal rate matrix.
+We found Bayes factors of $XX$ and $YY$ between these models and their uniform counterparts for serotypes A and O respectively. %TODO: fill in the crap
+These results show significant statistical support for the ``representation-informed'' priors.
+\section{Robustness of parameter estimation and demographic reconstruction}
+To quantify the impact of including very ancient sequences, which are not available for all locations, we assessed the robustness of our temporal reconstruction by using only sequences from 2000 to present.
+For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior on coalescent times, also known as 'skyride' model.
+These results are presented in Figure~\ref{sfig:only2000sky}.
+
+Also, we were interested in studying whether overrepresented locations could influence phylogenetic parameter estimation.
+To investigate that, we performed parameter estimation with and without these locations.
+Tables~\ref{tab:SB_A} and~\ref{tab:SB_O} show medians and $95 \%$ credible intervals for several parameters of interest with and without the overrepresented locations
+for both serotypes.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Parameter estimation with downsampling}
+To ameliorate the effect of biased sampling while using the information from over 
+% For our experiments, we obtained five downsampled data sets for each serotype
+not possible to perform equal downsampling, which would be an optimal sampling scheme. For large data sets \cite{fluPNAS}
 \section{Comparing rate matrices}
 Sometimes \\
 L1 and L2 norms
@@ -34,17 +62,11 @@ We thank Professor Marc A. Suchard (UCLA) for advice on this topic.\\
 KL root for each subsample \cite{KL}
 \section{Bayesian Stochastic Search Variable Selection}
 See Figures S\ref{sfig:bssvsA} and S\ref{sfig:bssvsO}. 
-\section{Parameter estimation and demographic reconstruction without the overrepresented locations}
-Additionally, we assessed the robustness of our temporal reconstruction by using only sequences from 2000 to present.
-For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior on coalescent times, also known as 'skyride' model.
-These results are presented in Figure~\ref{sfig:only2000sky}.
-% TODO: more discussion on this 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Parameter estimation with downsampling}
-% For our experiments, we obtained five downsampled data sets for each serotype
-\section{``Representation-informed'' priors}
-\section{Results and Discussion}
+\section{Discussion}
 %\newpage
+% A possibility, unexplored in this paper, is to sample each location with probability proportional to its disease prevalence
+% In theory, a Bayesian approach should offer a certain degree of protection against model mispecification and sampling bias by bla  bla...
+% robustness of skyride crap
 \section*{Figure Legends}
 \textbf{Figure S\ref{sfig:trade}. Exportation, importation and production time series for pigs, cattle and sheep in South america.} Panel A shows exportations in log(\# of heads) of live animals for pigs, sheep and cattle.
 Panels B and C show importation and overall production (population increase), respectively.
@@ -66,7 +88,7 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \bibliography{Text_S2}
 \newpage
 \begin{center}
-\begin{figure}[ht]
+\begin{figure}[H]
 \begin{center}
 \subfigure[A]{\includegraphics[scale=.250]{FIGURES/importation.pdf}}\\
 \subfigure[B]{\includegraphics[scale=.250]{FIGURES/exportation.pdf}}\\
@@ -77,7 +99,7 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \end{figure}
 \end{center}
 \newpage
-\begin{figure}[ht]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[scale=.5]{FIGURES/trade_info.jpeg}
 \end{center}
@@ -85,7 +107,7 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \label{sfig:tradeinfo}
 \end{figure}
 \newpage
-\begin{figure}[ht]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[scale=.5]{FIGURES/A_vs_O_symmetric.jpeg}
 \end{center}
@@ -94,30 +116,30 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \end{figure}
 \newpage
 \begin{center}
-\begin{figure}[ht]
-\subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss1.jpeg}}
-\subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss2.jpeg}}%\\
-\subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss3.jpeg}}
-\subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss4.jpeg}}%\\
-\subfigure[]{\includegraphics[scale=.450]{FIGURES/A_ss5.jpeg}}
+\begin{figure}[H]
+\subfigure[A]{\includegraphics[scale=.450]{FIGURES/A_ss1.jpeg}}
+\subfigure[B]{\includegraphics[scale=.450]{FIGURES/A_ss2.jpeg}}%\\
+\subfigure[C]{\includegraphics[scale=.450]{FIGURES/A_ss3.jpeg}}
+\subfigure[D]{\includegraphics[scale=.450]{FIGURES/A_ss4.jpeg}}%\\
+\subfigure[E]{\includegraphics[scale=.450]{FIGURES/A_ss5.jpeg}}
 \caption{}
 \label{sfig:bssvsA}
 \end{figure}
 \end{center}
 \newpage
-\begin{figure}[ht]
+\begin{figure}[H]
 \begin{center}
-\subfigure[]{\includegraphics[scale=.450]{FIGURES/O_ss1.jpeg}}
-\subfigure[]{\includegraphics[scale=.450]{FIGURES/O_ss2.jpeg}}%\\
-\subfigure[]{\includegraphics[scale=.450]{FIGURES/O_ss3.jpeg}}
-\subfigure[]{\includegraphics[scale=.450]{FIGURES/O_ss4.jpeg}}%\\
-\subfigure[]{\includegraphics[scale=.450]{FIGURES/O_ss5.jpeg}}
+\subfigure[A]{\includegraphics[scale=.450]{FIGURES/O_ss1.jpeg}}
+\subfigure[B]{\includegraphics[scale=.450]{FIGURES/O_ss2.jpeg}}%\\
+\subfigure[C]{\includegraphics[scale=.450]{FIGURES/O_ss3.jpeg}}
+\subfigure[D]{\includegraphics[scale=.450]{FIGURES/O_ss4.jpeg}}%\\
+\subfigure[E]{\includegraphics[scale=.450]{FIGURES/O_ss5.jpeg}}
 \end{center}
 \caption{}
 \label{sfig:bssvsO}
 \end{figure}
 \newpage
-\begin{figure}[ht]
+\begin{figure}[H]
 \begin{center}
 \subfigure[A]{\includegraphics[width=\textwidth]{FIGURES/SFig_A2000sky.jpeg}}
 \subfigure[B]{\includegraphics[width=\textwidth]{FIGURES/SFig_O2000sky.jpeg}}\\
@@ -126,8 +148,8 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \label{sfig:only2000sky}
 \end{figure}
 \newpage
-\begin{table}[ht]
-\caption*{\textbf{Table S1. Model selection for tree (coalescent) model and clock for both serotypes.}
+\begin{table}[H]
+\caption{\textbf{Model selection for tree (coalescent) model and clock for both serotypes.}
 ULN= uncorrelated log-normal; UCED = uncorrelated exponential .
 Best fitting models (highest log-likelihood) are highlighted in bold.
 1- Log-likelihood estimated using Stepping-Stone sampling (SS).}
@@ -181,7 +203,7 @@ Venezuela&1.82 (1.00, 2.00)	&1.02 (1.00, 1.08)	&0.010&6.00 (6.00, 6.00)&	1.28 (1
 %%%%%%%%%%%%
 
 \begin{table}[h]
-\caption*{ {{\bf Table S2 Parameter estimation using the complete and without Argentina data sets for serotype A.}} To assess the impact of the overrepresentation of Argentina in our sample we removed all sequence from this location and reestimated parameters.
+\caption{ {{\bf Parameter estimation using the complete and without Argentina data sets for serotype A.}} To assess the impact of the overrepresentation of Argentina in our sample we removed all sequence from this location and reestimated parameters.
 1- All 131 sequences were used. 2- Time to most recent common ancestor. 3- Codon positions $1$, $2$ and $3$. }
 \begin{center}
 \begin{tabular}{ccc}
@@ -225,7 +247,7 @@ Rate ($\times 10^{-2}$)	&1.11 (0.91-1.32)	&0.91 (0.63-1.21)\\
 %%%%
 %%%%
 \newpage
-\begin{sidewaystable}[ht]
+\begin{sidewaystable}[H]
 \medskip
 \begin{minipage}{\textwidth} 
 \begin{center}
@@ -251,7 +273,7 @@ Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration 
 %%%%
 %%%%
 \newpage
-\begin{sidewaystable}[ht]
+\begin{sidewaystable}[H]
 \medskip
 \begin{minipage}{\textwidth}
 \begin{center}

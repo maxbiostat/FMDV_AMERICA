@@ -172,7 +172,7 @@ We can notice that for serotype A mainly long-range migration routes were inferr
 This results may be due to sparsity of information before 1970, which precludes accurate inference about periods further back in time. 
 Also, there is a major expansion in spatial spread from 1945 to 1965, characterized by Brazil as a source of virus for the rest of the continent.
 In the period 1965-1980, we notice slower spread, mainly through short range routes.
-The 1980-2008 window is characterized by the introduction of FMDV serotype A in Peru and Paraguay and the increase of intra-country diversity (depicted by the radius of the displayed circles). % TODO: LM: is the word 'introduction' correctly placed here??   
+The 1980-2008 window is characterized by the introduction of FMDV serotype A in Peru and Paraguay and the increase of intra-country diversity (depicted by the radius of the displayed circles in Figure~\ref{fig:migration}). % TODO: LM: is the word 'introduction' correctly placed here??   
 
 On the other hand, for serotype O expansion seems to have occured by the middle of the 1990 decade.
 Up to 1995, Colombia and Brazil seem to have acted as primary and secondary viral sources, respectively.
@@ -237,6 +237,7 @@ The results of this analyses, presented in tables ~\ref{tab:predA} and ~\ref{tab
 
 \subsection*{Sampling bias assessment in the phylogeographic analysis}
 Since our data sets presented highly preferential sampling, we conducted a detailed sensitivity analysis to assess the effect of performing inference under highly unbalanced designs.
+% TODO: include the BF test using rep-informed priors
 First, we draw five subsamples for each serotype in which overrepresented were downsampled and performed BSSVS for each subsample.
 From BSSVS we calculated Bayes factors and observed good agreement between samples in terms of supported routes (see Figures S4 and S5). % TODO: check this numbering in the end    
 To further study this, we also computed the $L1$ and $L2$ matrix distance norms for across the estimated rate matrices for each subsample, and no aberrant samples were detected.
@@ -247,7 +248,6 @@ Inference about location of origin was consistent across samples, with Brazil an
 Also, we observed stronger support for Colombia as root for serotype O when compared to Brazil as root for serotype A.
 While serotype O presented average $Pr(root=Colombia)=0.95$, $Pr(root=Brazil)$ for serotype A was $0.83$.
 % TODO: check this numbering in the end
-% phylogenetic parameter estimates
 \subsection*{Demographic reconstruction of FMDV dynamics}
 
 The results from the Skyride coalescent reconstruction show strikingly different dynamical behaviors for the two serotypes, with serotype O exhibiting considerable more oscillation over time, and a diversity peak occurring in late years of the 1990 decade.
@@ -293,13 +293,14 @@ We found significant well supported migration paths between Venezuela, Colombia 
 % Notably, Venezuela, Colombia and Ecuador form a densely connected sub-network for both serotypes.
 % For serotype O, Colombia is north, Brazil is south.
 % REMEMBER TO DISCUSS SHARED VERSUS SEPARATE ANALYSES. shared vs separate reveal that spatial spread is quite the same
+% Relate sampling bias to SHARED analyses
 % Our results suggest that FMDV serotypes have different dispersal determinants,  (plots and all) <- conflicting information
 % when we analysed INDICATORs  much higher concordance
 % Informing the rates with livestock trade contributes to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated \cite{Faria2012}.
-% Moreover, our results suggest that \ldots
 % As discussed by Cottam et al (2007) \cite{cottam2007}, phylogenetic methods can be used to unravel undetected transmission.
 % in the future skyride reconstructions can be coupled to mathematical models to help explain the pattern of emergence of FMD
 % selection of clock and tree prior by PS/SS is cumbersome, but provides more accurate results. This calls for better methods, specially tailored for phylogeography % TODO: What does Guy think about this?
+% TODO: include polar bear citation and talk about sensitivity analysis
 %%%%%
 % COALESCENT 
 %%%%%
