@@ -189,7 +189,7 @@ The period 2000-2010 is characterized by a decrease in viral flow (almost no new
 \end{center}
 
 To further explore the spatial behavior of FMDV we employ the so-called ``Markov jump'' counts \cite{Minin2008} of the expected number of location state transitions along the  branches of the phylogeny, which  provide a quantitative measure of gene flow between countries, representing successful viral introductions from one region to another. For this analysis we also calculated BF's using BSSVS.
-The results of this analysis are presented in Figure~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping in the routes connecting Venezuela, Colombia and Ecuador.
+The results are presented in Figure~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping in the routes connecting Venezuela, Colombia and Ecuador.
 For serotype A, highest (BF $>800$) support was observed for viral flow between Venezuela and Colombia and between Argentina and Uruguay.
 Transitions between Brazil and Bolivia and Peru and Ecuador also received good statistical support (BF $>10$).
 For serotype O, overall Bayes factors were lower in magnitude, but supported similar routes.
@@ -217,7 +217,7 @@ Moreover, from the separate and shared rate matrix analysis we found that rates 
 For this analysis, the correlation between serotype A and O rate matrix estimates was $0.07$.
 In contrast to these results, the rate indicators in BSSVS for both serotypes were in better accordance ($r=0.54$).
 Again, we compared estimates using shared and separate models for the CMTC rate matrix, and found that indicators for serotype A had higher concordance to those in the shared model ($r_A=0.86$ and $r_O=0.77$).
-Bayes factors assessment of the statistical support for the two hypotheses (shared or separate rate matrices), indicating that a shared model should be preferred to a model with separate rate matrices for each serotype (BF$>10$, see Table~\ref{tab:sharedsep}).
+Bayes factors assessment of the statistical support for the two hypotheses (shared or separate rate matrices), indicated that a shared model should be preferred to a model with separate rate matrices for each serotype (BF$>10$, see Table~\ref{tab:sharedsep}).
 
 % TODO: are the shared runs more statistically efficient? 
 \begin{center}
@@ -226,11 +226,20 @@ Bayes factors assessment of the statistical support for the two hypotheses (shar
 
 \subsection*{Identifying potential predictors of FMDV spread in South America}
 
-We used data from the detailed trade matrix available from the Food and Agriculture Organization (FAO) to elicit CMTC rate matrix priors (predictors), henceforth called here ``trade-informed priors''.
-By accurately calculating the marginal likelihood of each trade-informed prior we can gain insight into the importance of each predictor on viral spread \cite{Carvalho2012,Nelson2011}.
-The results of this analyses, presented in Table~\ref{tab:preds}, showed that ... % I'm sure Guy has something to add here ;)
+We used data from the detailed trade matrix available from the Food and Agriculture Organization (FAO) to elicit CMTC rate matrix priors (predictors).
+By accurately calculating the marginal likelihood of each predictor we can gain insight into the importance of each predictor on viral spread \cite{Carvalho2012,Nelson2011}.
+We used data on trade of live cattle, pigs and sheep.
+For each predictor, we also performed a MCMC run using sampling-corrected base frequencies for each country.
+All predictors were compared to a spatially uniform vague prior using Bayes factors.
+
+Interestingly, the results of this analyses (Table~\ref{tab:preds}) show different best fitting predictors for each serotype.
+While for serotype A the best predictor was the trade of live sheep between countries (BF$=20$), the exchange of cattle was the best predictor for serotype O spread (BF$=6$).
+For serotype A we found moderate statistical support for geographic distances as predictors of viral spread (BF$=4$).
+Undecisive support (BF$=2$) was also observed for the trade of live pigs.
+
 
 %NRF Do have any results for the analyses combining the rate matrices of O and A? What was the best fitting predictor in this case?
+% LM Nope we don't, unfortunately :(
 \begin{center}
  [Table~\ref{tab:preds} about here]
 \end{center}
@@ -275,36 +284,37 @@ Thus, while for serotype A a more restrictive exponential molecular clock and a 
 The differences in evolutionary rates, when taken together with the results from molecular clock model selection, suggest that, although the two serotypes share the same host and infection routes, they present rather different evolutionary dynamics. 
 
 %%%%%
+%SPATIAL DYNAMICS
+%%%%
+% As discussed by Cottam et al (2007) \cite{cottam2007}, phylogenetic methods can be used to unravel undetected transmission.
+% We focus on a comparative approach, using information obtained from both serotypes to gain insight into the general process of FMDV spread in South America.
+%This continent wide-sampling allowed us to reconstruct the temporal and spatial dynamics of FMDV in the continent for both serotypes in greater detail than previous studies
+% Ecuador is a BF star, key to the spread, endemic country
+% For serotype O, Colombia is north, Brazil is south.
+% These countries share borders and have similar enviromental conditions 
+% TODO: do they?
+% serotype A expansion took place mostly in the early years of the 20th century and expansion for serotype O occured in the beggining of the 1990 decade.
+% Although both serotypes have different tempo, several spread routes were found in both migration networks. As an important difference...
+% the relationship between MJ borders inference and source-sink dynamics
+% Discrepancy between highest rates and highest BFs
+% Border vs non-border suggests long-range stuff may be important as well.
+% REMEMBER TO DISCUSS SHARED VERSUS SEPARATE ANALYSES. shared vs separate reveal that spatial spread is quite the same
+% Our results suggest that FMDV serotypes have same dispersal determinant
+% when we analyzed INDICATORs  much higher concordance
+% Notably, Venezuela, Colombia and Ecuador form a densely connected sub-network for both serotypes.
+%%%%%
 % PREDICTORS
 %%%%%
 The ability to incorporate multiple sources of information like temporal and spatial data is becoming increasingly important in molecular epidemiology studies that aim to understand the driving forces of pathogen evolution and spread \cite{towards,combining,MEP,roots}. 
 Using animal trade data as predictors can be a valuable tool to understand the role of livestock commerce in the spread of animal and zoonotic diseases \cite{Nelson2011}.
-We found significant well supported migration paths between Venezuela, Colombia and Ecuador for both serotypes and this may indicate...???
-% TODO: 
-% These countries share borders and have similar enviromental conditions 
-% TODO: do they?
-% serotype A expansion took place mostly in the early years of the 20th century and expansion for serotype O occured in the beggining of the 1990 decade.
-% We focus on a comparative approach, using information obtained from both serotypes to gain insight into the general process of FMDV spread in South America.
-%This continent wide-sampling allowed us to reconstruct the temporal and spatial dynamics of FMDV in the continent for both serotypes in greater detail than previous studies
-% Although both serotypes have different tempo, several spread routes were found in both migration networks. As an important difference...
+We found significant well supported migration paths between Venezuela, Colombia and Ecuador for both serotypes and this may indicate...??
+% differet predictors = different roots 
 % These results help to shed light into the main determinants of viral flow in the continent.
-% While serotype A seems to have spread in a period of less stringent control, results for serotype O indicate that... % TODO Andres could help A LOT here! 
-% the relationship between MJ borders inference and source-sink dynamics
-% Discrepancy between highest rates and highest BFs
-% Border vs non-border suggests long-range stuff may be important as well.
-% Ecuador is a BF star, key to the spread, endemic country
-% Notably, Venezuela, Colombia and Ecuador form a densely connected sub-network for both serotypes.
-% For serotype O, Colombia is north, Brazil is south.
-% REMEMBER TO DISCUSS SHARED VERSUS SEPARATE ANALYSES. shared vs separate reveal that spatial spread is quite the same
-% Relate sampling bias to SHARED analyses
-% Our results suggest that FMDV serotypes have different dispersal determinants,  (plots and all) <- conflicting information
-% when we analyzed INDICATORs  much higher concordance
-% Informing the rates with livestock trade contributes to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated \cite{Faria2012}.
-% As discussed by Cottam et al (2007) \cite{cottam2007}, phylogenetic methods can be used to unravel undetected transmission.
-% predictors bla bla
-% can be used to infer host jumps \cite{hall2013}
-% in the future skyride reconstructions can be coupled to mathematical models to help explain the pattern of emergence of FMD
 % selection of clock and tree prior by PS/SS is cumbersome, but provides more accurate results. This calls for better methods, specially tailored for phylogeography % TODO: What does Guy think about this?
+%%%%%
+% SAMPLING BIAS
+%%%%%
+% Informing the rates with livestock trade contributes to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated \cite{Faria2012}.
 % TODO: include polar bear citation and talk about sensitivity analysis
 %%%%%
 % COALESCENT 
@@ -318,7 +328,9 @@ Serotype O presents more estable temporal behavior, whereas serotype A is more f
 Previous studies have shown that occurences caused by serotype A present longer cycles and wider epidemics, while serotype O is more prevalent with shorter disease cycles \cite{colombiatime}.
 These epidemiological features are reflected at the temporal variation observed for viral $Ne$ in both serotypes, a result obtained for other viruses as well \cite{Bennett2010,Pybus2003}. 
 Since our results reinforce the notion that these two serotypes present different evolutionary dynamics, the overall decrease in viral diversity for both serotypes points towards a progressive success of the eradication programme in slowly reducing transmission and controlling epidemics.
+% in the future skyride reconstructions can be coupled to mathematical models to help explain the pattern of emergence of FMD
 \section*{Conclusions}
+% can be used to infer host jumps \cite{hall2013}
 %better methods yield more complete analyses
 %overall decrease in viral diversity
 %spatial routes by proximity
@@ -331,8 +343,7 @@ Since our results reinforce the notion that these two serotypes present differen
 To study the spatio-temporal spread dynamics of FMDV within South America we compiled the largest database of 1D (VP1) gene sequences to date for serotypes A and O.
 We retrieved all 1D (VP1) nucleotide sequences available from the National Center for Biotechnology Information (NCBI, \url{ http://www.ncbi.nlm.nih.gov/}) for which there was information on country and year of isolation.
 This resulted in 131 sequences (eight countries) for serotype A and 167 sequences (nine countries) for serotype O, covering time spans of 55 (1955-2008) and 16 (1994-2010) years, respectively (see Text S1 for details).
-Each dataset was aligned using the MUSCLE algorithm implemented in the MEGA5 \cite{MEGA} package.
-%NF cite also MUSCLE here 
+Each dataset was aligned using the MUSCLE \cite{muscle} algorithm implemented in the MEGA5 \cite{MEGA} package.
 
 Data on animal trade were obtained from the FAO database (\url{http://faostat.fao.org/}).
 We retrieved data on the detailed trade matrix for cattle, pigs and sheep (live animals) covering the period from 1986 to 2009, for each of the nine countries.
@@ -378,7 +389,6 @@ Additionally, we computed the so-called monophyletic clade (MC) size for each st
 We apply the so-called Skyride model \cite{skyride} in order to reconstruct the past population dynamics for both serotypes. Skyride is a nonparametric coalescent-based method that uses a Gaussian Markov Random Field (GMRF) prior to obtain smooth estimates for effective population size trajectories over time. We choose a time-aware GMRF prior, such that estimates are as smooth as possible.
 To gain insight into the mechanisms driving viral dynamics, we overlay the demographic reconstructions to serotype-specific outbreak and vaccination (doses per head) time series.
 % TODO: Dr. NRF has to revise this section :0)
-% I'll commit it anyways
 
 \subsection*{Spatial Analysis}
 
@@ -404,7 +414,7 @@ One of the main research questions in this study is whether or not the two serot
 To test this hypothesis, we estimated one single CMTC rate matrix using data from both serotypes, while allowing each serotype to have its own dispersal rate. 
 This option is justifiable, since the two serotypes present different TMRCAs and mutation rates. 
 In this analysis, we removed the sequence from Paraguay in the serotype O data set to have equal geographic sampling between serotypes.
-%The marginal likelihood of this model was compared to that of one in which both serotypes were allowed to share data from both alignments but estimate two separate rate matrices.
+The marginal likelihood of this model was compared to that of one in which both serotypes were allowed to share data from both alignments but had two separate rate matrices.
 
 Another important aspect is the influence of different variables, such as population size and density, presence of airlines and roads and disease incidence on viral diffusion through space. 
 The framework adopted here allows for the incorporation of such information into the inference process, by the suitable formulation of prior distributions to inform the entries of the rate matrix. 
@@ -420,7 +430,7 @@ Whereas PS methods represent very general estimators and can also be applied to 
 Accurate estimation of (log) marginal likelihoods are crucial to correctly identify models that best describe the observed data. 
 Using these (log) marginal likelihoods, it is possible to calculate Bayes Factors, which give a measure of the relative performance of each model. 
 The stepping stone (SS) and path sampling (PS) approaches, as implemented in BEAST, were used  to calculate all marginal likelihoods reported in this paper.
-Note that these approaches accommodate phylogenetic uncertainty.
+% Note that these approaches accommodate phylogenetic uncertainty.
 PS and SS calculations were run using 64 power posteriors, each running for $250,000$, $500,000$ and 1 million iterations, taking up to 3 weeks of computation for each model under evaluation.
 
 \subsection*{Assessing the effect of sampling}
@@ -450,7 +460,8 @@ We acknowledge the support of the National Evolutionary Synthesis Center (NESCen
 
 \emph{Funding:} The research leading to these results has received funding from the European Union Seventh Framework Programme [FP7/2007-2013] under Grant Agreement no. 278433-PREDEMICS and ERC Grant agreement no. 260864.
 
-\emph{Conflict of Interest:} LMC and WCS are former employees of the Pan American Health Organization (PAHO). For full disclosure, they would like to state that PAHO had no role in study design or decision to publish. Responsability for the statements made in this article is of the authors only.
+\emph{Conflict of Interest:} none declared
+%LMC and WCS are former employees of the Pan American Health Organization (PAHO). For full disclosure, they would like to state that PAHO had no role in study design or decision to publish. Responsability for the statements in this article is of the authors alone.
 
 \newpage
 \bibliography{FMDV_AMERICA}
@@ -558,10 +569,10 @@ Chain length&PS&SS&PS&SS&BF -- PS&BF -- SS\\
  \midrule
 Predictor &PS&SS&BF$^2$&PS&SS&BF\\
 Cattle&-12609&-12611&-17&\textbf{-8310}&\textbf{-8312}&6\\
-Cattle-Freq&-12661&-12663&-69&-8309&-8311&8\\
+Cattle-Freq&-12661&-12663&-69&\textbf{-8309}&\textbf{-8311}&8\\
 Distance&-12588&-12591&4&-8315&-8318&0\\
-Pig&-1259&-12592&2&-8330&-8332&-14\\
-Pig-Freq&-12645&-12646&-52&-8339&-8338&-20\\
+Pigs&-1259&-12592&2&-8330&-8332&-14\\
+Pigs-Freq&-12645&-12646&-52&-8339&-8338&-20\\
 Sheep&\textbf{-12572}&\textbf{-12574}&20&-8323&-8324&-5\\
 Sheep-Freq&-12593&-12594&0&-8329&-8331&-13\\
 Uniform&-12591&-12594&--&-8314&-8318& --\\
@@ -598,7 +609,6 @@ Cattle-Freq & Peru (0.92)& Colombia (0.97)\\
 \end{flushleft}
 \label{tab:roots}
  \end{table}
- % TODO: check these results again with the new runs
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
