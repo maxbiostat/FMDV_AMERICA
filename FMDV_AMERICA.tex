@@ -144,7 +144,7 @@ For example, for serotype A sequences from Argentina are grouped in 2 clades tha
 Interestingly, the great majority of the isolates from Venezuela and Colombia fall together within 2 distinct clades. 
 
 Figure~\ref{fig:trees}B presents the estimated MCC tree for serotype O.
-The same interspersing trend can be noticed, with Ecuador and Colombia showing several interleaved clades.
+The same interspersing pattern can be noticed, with Ecuador and Colombia showing several interleaved clades.
 The TMRCA for serotype O was estimated in around 20 years, showing a more recent origin.
 Here, a smaller clade of Colombian isolates are found interspersed within from Venezuelan isolates. In addition, isolates from Ecuador are found interspersed with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
 Overall, the Bayesian phylogenies suggest that most FMDV flow within South America occured between neighboring countries. 
@@ -208,8 +208,8 @@ Since the difference in medians is substantial but quantiles widely overlap, we 
 \end{center}
 
 One may ask if both serotypes present different spatial spread patterns.
-To assess this we used PS/SS to calculate marginal likelhihoods for two different models, henceforth  called "shared'' and "separate''.
-In the "shared'' model we used trait (location) and sequence data  from both serotypes to make inference about one CTMC rate matrix, whilst in the "separate'' model we allow both serotypes to have each one CTMC rate matrix, while using the combined data from both serotypes.
+To assess this we used PS/SS to calculate marginal likelhihoods for two different models, henceforth  called ``shared'' and ``separate''.
+In the ``shared'' model we used trait (location) and sequence data  from both serotypes to make inference about one CTMC rate matrix, whilst in the ``separate'' model we allow both serotypes to have each one CTMC rate matrix, while using the combined data from both serotypes.
 Both models allow serotypes to have different spatial diffusion rates.
 
 We plotted the rates estimated from independent runs for both serotypes and they do not seem to correlate (Fig. S3). % TODO: check this numbering in the end
@@ -228,15 +228,15 @@ Bayes factors assessment of the statistical support for the two hypotheses (shar
 
 We used data from the detailed trade matrix available from the Food and Agriculture Organization (FAO) to elicit CMTC rate matrix priors (predictors).
 By accurately calculating the marginal likelihood of each predictor we can gain insight into the importance of each predictor on viral spread \cite{Carvalho2012,Nelson2011}.
-We used data on trade of live cattle, pigs and sheep.
+We used data on geographic distances and on trade of live cattle, pigs and sheep.
 For each predictor, we also performed a MCMC run using sampling-corrected base frequencies for each country.
 All predictors were compared to a spatially uniform vague prior using Bayes factors.
 
 Interestingly, the results of this analyses (Table~\ref{tab:preds}) show different best fitting predictors for each serotype.
 While for serotype A the best predictor was the trade of live sheep between countries (BF$=20$), the exchange of cattle was the best predictor for serotype O spread (BF$=6$).
-For serotype A we found moderate statistical support for geographic distances as predictors of viral spread (BF$=4$).
 Undecisive support (BF$=2$) was also observed for the trade of live pigs.
-
+Also, while for serotype A we found moderate statistical support for geographic distances as predictors of viral spread (BF$=4$), this predictor was not identified for serotype O.
+%TODO: decide what to do with the freq runs
 
 %NRF Do have any results for the analyses combining the rate matrices of O and A? What was the best fitting predictor in this case?
 % LM Nope we don't, unfortunately :(
@@ -244,6 +244,16 @@ Undecisive support (BF$=2$) was also observed for the trade of live pigs.
  [Table~\ref{tab:preds} about here]
 \end{center}
 
+For each predictor we also assessed the state distribution at root, i.e., the probability of each country being the origin of the circulating strains.
+In Table~\ref{tab:roots} we show that for serotype A there was discordance between predictors about which country was the most probable source of FMDV in the continent.
+Peru was the most probable location of origin for most of the predictors, but notably not for the best fitting predictor (sheep trade), for which Brazil was estimated as the origin with high probability ($0.90$).
+For the pigs trade predictors, Colombia was found to be the spatial origin.
+
+For serotype O, showed much more concordance, and Colombia was pointed out as the spatial viral origin for all predictors with high probability (Table~\ref{tab:roots}).
+
+\begin{center}
+ [Table~\ref{tab:roots} about here]
+\end{center}
 \subsection*{Sampling bias assessment in the phylogeographic analysis}
 Since our data sets presented highly preferential sampling, we conducted a detailed sensitivity analysis to assess the effect of performing inference under highly unbalanced designs.
 % TODO: include the BF test using rep-informed priors
@@ -308,9 +318,10 @@ The differences in evolutionary rates, when taken together with the results from
 The ability to incorporate multiple sources of information like temporal and spatial data is becoming increasingly important in molecular epidemiology studies that aim to understand the driving forces of pathogen evolution and spread \cite{towards,combining,MEP,roots}. 
 Using animal trade data as predictors can be a valuable tool to understand the role of livestock commerce in the spread of animal and zoonotic diseases \cite{Nelson2011}.
 We found significant well supported migration paths between Venezuela, Colombia and Ecuador for both serotypes and this may indicate...??
-% differet predictors = different roots 
+% LM differet predictors = different roots <- What to do?
 % These results help to shed light into the main determinants of viral flow in the continent.
-% selection of clock and tree prior by PS/SS is cumbersome, but provides more accurate results. This calls for better methods, specially tailored for phylogeography % TODO: What does Guy think about this?
+% selection of clock and tree prior by PS/SS is cumbersome, but provides more accurate results. This calls for better methods, specially tailored for phylogeography 
+% TODO: LM What does Guy think about this?
 %%%%%
 % SAMPLING BIAS
 %%%%%
