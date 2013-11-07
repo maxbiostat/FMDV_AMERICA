@@ -554,10 +554,10 @@ Additionally, data on vaccination  (doses per head) and (log) FMD serotype-speci
  \toprule
  &\multicolumn{2}{c}{Shared}& \multicolumn{2}{c}{Separate} & \multicolumn{2}{c}{Bayes Factors}\\
  \midrule
-Chain length&PS&SS&PS&SS&BF -- PS&BF -- SS\\
-250k&-21420&-21437&-21436&-21454&15.36&17.25\\
-500k&-21442&-21456&-21450&-21467&8.00&11.00\\
-1M&-21462&-21470&-21471&-21483&9.43&13.04\\
+Chain length & PS & SS & PS & SS & BF -- PS & BF -- SS \\
+250k & -21420 & -21437 & -21436 & -21454 & 15.36 & 17.25 \\
+500k & -21442 & -21456 & -21450 & -21467 & 8.00 & 11.00 \\
+1M & -21462 & -21470 & -21471 & -21483 & 9.43 & 13.04 \\
 % New 500K runs with uniform prior on Q
 % SS-shared= -21431; SS-separate= -21449
 \bottomrule
@@ -574,19 +574,20 @@ Chain length&PS&SS&PS&SS&BF -- PS&BF -- SS\\
 \textbf{Spatial model selection results for livestock predictors. } We assessed the significance of livestock trade in FMDV spread in South America using importance sampling methods to calculate marginal likelihoods for each predictor using 1 million samples. GUY's SHARE. 1-Base frequencies for each state set at the relative representations in the data set. 2- Bayes Factors relative to the spatially uniform model, calculated using marginal likelhihoods from Stepping Stone sampling (SS).}
 % TODO: Is this right? I mean Freq stands for sampling-corrected 
 \begin{center}
-\begin{tabular}{ccccccc}
+\begin{tabular}{lrrrrrr}
 \toprule
  &\multicolumn{3}{c}{Serotype A}& \multicolumn{3}{c}{Serotype O}\\
  \midrule
-Predictor &PS&SS&BF$^2$&PS&SS&BF\\
-Cattle&-12609&-12611&-17&\textbf{-8310}&\textbf{-8312}&6\\
-Cattle-Freq&-12661&-12663&-69&\textbf{-8309}&\textbf{-8311}&8\\
-Distance&-12588&-12591&4&-8315&-8318&0\\
-Pigs&-1259&-12592&2&-8330&-8332&-14\\
-Pigs-Freq&-12645&-12646&-52&-8339&-8338&-20\\
-Sheep&\textbf{-12572}&\textbf{-12574}&20&-8323&-8324&-5\\
-Sheep-Freq&-12593&-12594&0&-8329&-8331&-13\\
-Uniform&-12591&-12594&--&-8314&-8318& --\\
+Predictor & PS & SS & BF$^2$ & PS & SS & BF \\
+\hline
+Cattle & -12608.72 & -12611.00 & -17 & \textbf{-8310.22} & \textbf{-8311.81} & 6 \\
+Cattle-Freq & -12661.11&-12663.11& -69 & \textbf{-8309.38} & \textbf{-8310.52} & 8 \\
+Distance & -12587.78 & -12590.61 & 4 & -8315.07 & -8318.48 & 0 \\
+Pigs & -12591.44 & -12591.64 & 2 & -8329.98 & -8332.00 & -14 \\
+Pigs-Freq & -12644.69 & -12645.95 & -52 & -8338.54 & -8338.16 & -20 \\
+Sheep & \textbf{-12572.09} & \textbf{-12573.78} & 20 & -8323.22 & -8323.68 & -5 \\
+Sheep-Freq & -12592.84 & -12594.05 & 0 & -8328.65 & -8330.90 & -13 \\
+Uniform & -12590.92 & -12594.11 & - & -8314.47 & -8318.25 & - \\
 \bottomrule
 \end{tabular}
 \end{center}
