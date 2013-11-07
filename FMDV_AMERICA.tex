@@ -571,25 +571,23 @@ Chain length & PS & SS & PS & SS & BF -- PS & BF -- SS \\
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[!ht]
 \caption{
-\textbf{Spatial model selection results for livestock predictors.} We assessed the significance of livestock trade in FMDV spread in South America using two importance sampling methods, i.e. path sampling (PS) and stepping-stone sampling (SS), to estimate (log) marginal likelihoods for each predictor using 64 path steps and 2 million iterations per path step. For each livestock predictor, we have tested equal location frequencies as well location frequencies equal to the proportion of that location's presence in the data set (denoted -Freq).
-%GUY's SHARE. 1-Base frequencies for each state set at the relative representations in the data set. 2- Bayes Factors relative to the spatially uniform model, calculated using marginal likelhihoods from Stepping Stone sampling (SS).
-}
-% TODO: Is this right? I mean Freq stands for sampling-corrected 
+\textbf{Spatial model selection results for livestock predictors.} We assessed the significance of livestock trade in FMDV spread in South America using two importance sampling methods, i.e. path sampling (PS) and stepping-stone sampling (SS), to estimate (log) marginal likelihoods for each predictor using 64 path steps and 2 million iterations per path step. For each livestock predictor, we have tested equal location frequencies as well location frequencies equal to the proportion of that location's presence in the data set. We also present the (log) marginal likelihood estimates for two location priors under which the location rates are estimated, rather than being fixed (as for the livestock predictors). We put these two scenarios in a separate part of the table to indicate that these estimates should not be compared to those of the livestock predictors.}
 \begin{center}
-\begin{tabular}{lrrrrrr}
+\begin{tabular}{llrrrrrr}
 \toprule
- &\multicolumn{3}{c}{Serotype A}& \multicolumn{3}{c}{Serotype O}\\
+ & & \multicolumn{3}{c}{Serotype A}& \multicolumn{3}{c}{Serotype O}\\
  \midrule
-Predictor & PS & SS & BF$^2$ & PS & SS & BF \\
+Predictor & Frequencies & PS & SS & BF$^2$ & PS & SS & BF \\
 \hline
-Cattle & -12608.72 & -12611.00 & -17 & \textbf{-8310.22} & \textbf{-8311.81} & 6 \\
-Cattle-Freq & -12661.11&-12663.11& -69 & \textbf{-8309.38} & \textbf{-8310.52} & 8 \\
-Distance & -12587.78 & -12590.61 & 4 & -8315.07 & -8318.48 & 0 \\
-Pigs & -12591.44 & -12591.64 & 2 & -8329.98 & -8332.00 & -14 \\
-Pigs-Freq & -12644.69 & -12645.95 & -52 & -8338.54 & -8338.16 & -20 \\
-Sheep & \textbf{-12572.09} & \textbf{-12573.78} & 20 & -8323.22 & -8323.68 & -5 \\
-Sheep-Freq & -12592.84 & -12594.05 & 0 & -8328.65 & -8330.90 & -13 \\
-Uniform & -12590.92 & -12594.11 & - & -8314.47 & -8318.25 & - \\
+Cattle & Equal & -12608.72 & -12611.00 & -17 & \textbf{-8310.22} & \textbf{-8311.81} & 6 \\
+Cattle & Sampling & -12661.11&-12663.11& -69 & \textbf{-8309.38} & \textbf{-8310.52} & 8 \\
+Pigs & Equal & -12591.44 & -12591.64 & 2 & -8329.98 & -8332.00 & -14 \\
+Pigs & Sampling & -12644.69 & -12645.95 & -52 & -8338.54 & -8338.16 & -20 \\
+Sheep & Equal & \textbf{-12572.09} & \textbf{-12573.78} & 20 & -8323.22 & -8323.68 & -5 \\
+Sheep & Sampling & -12592.84 & -12594.05 & 0 & -8328.65 & -8330.90 & -13 \\
+\hline
+Distance & Sampling & -12587.78 & -12590.61 & 4 & -8315.07 & -8318.48 & 0 \\
+Uniform & Sampling & -12590.92 & -12594.11 & - & -8314.47 & -8318.25 & - \\
 \bottomrule
 \end{tabular}
 \end{center}
