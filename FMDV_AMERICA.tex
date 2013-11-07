@@ -548,7 +548,7 @@ Additionally, data on vaccination  (doses per head) and (log) FMD serotype-speci
 \newpage
 \section*{Tables}
 \begin{table}[!ht]
-\caption{{\bf Comparison of combined and separate models for CTMC rate matrix} We calculated marginal likelhihoods for ``Shared'' and ``Separate'' models (see Methods). We present results obtaining by collecting different numbers of sample per ``step'' in Path Sampling (PS) and Stepping Stone Sampling (SS) algorithms.}
+\caption{{\bf Comparison of combined and separate models for CTMC rate matrix}. Using data from both serotypes jointly, we estimated marginal likelihoods for a model in which a single rate matrix was estimated (``Shared'') and one in which two separate matrices were estimated (``Separate''). We present results obtaining by collecting different numbers of samples per ``step'' in Path Sampling (PS) and Stepping Stone Sampling (SS) algorithms.}
  \begin{center}
  \begin{tabular}{ccccccc}
  \toprule
@@ -558,6 +558,7 @@ Chain length&PS&SS&PS&SS&BF -- PS&BF -- SS\\
 250k&-21420&-21437&-21436&-21454&15.36&17.25\\
 500k&-21442&-21456&-21450&-21467&8.00&11.00\\
 1M&-21462&-21470&-21471&-21483&9.43&13.04\\
+2M&&&&&&\\
 % New 500K runs with uniform prior on Q
 % SS-shared= -21431; SS-separate= -21449
 \bottomrule
