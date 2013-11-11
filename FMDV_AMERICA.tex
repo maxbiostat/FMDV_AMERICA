@@ -236,7 +236,7 @@ Interestingly, the results of this analyses (Table~\ref{tab:preds}) show differe
 While for serotype A the best predictor was the trade of live sheep between countries (BF$=20$), the exchange of cattle was the best predictor for serotype O spread (BF$=6$).
 Undecisive support (BF$=2$) was also observed for the trade of live pigs.
 Also, while for serotype A we found moderate statistical support for geographic distances as predictors of viral spread (BF$=4$), this predictor was not identified for serotype O.
-%TODO: decide what to do with the freq runs
+%TODO: decide what to do with the freq runs	
 
 %NRF Do have any results for the analyses combining the rate matrices of O and A? What was the best fitting predictor in this case?
 % LM Nope we don't, unfortunately :(
@@ -255,11 +255,16 @@ For serotype O, showed much more concordance, and Colombia was pointed out as th
  [Table~\ref{tab:roots} about here]
 \end{center}
 \subsection*{Sampling bias assessment in the phylogeographic analysis}
+
 Since our data sets presented highly preferential sampling, we conducted a detailed sensitivity analysis to assess the effect of performing inference under highly unbalanced designs.
-% TODO: include the BF test using rep-informed priors
-First, we draw five subsamples for each serotype in which overrepresented were downsampled and performed BSSVS for each subsample.
+
+To gain insight into the effect of sampling in our estimates, we devised ``representation-informed'' priors (predictors), using differences in representation (number of sequences) between countries to inform the rates of infinitesimal rate matrix.
+We then used path sampling and stepping stone sampling to calculate marginal likelhihoods for these predictors, obtaining significantly lower marginal (log) likelihoods (-12556 and -8290, for serotypes A and O respectively).
+These results indicated further investigation was important to assess the robustness of our phylogeographic inference to sampling.
+
+We then draw five subsamples for each serotype in which over-represented were downsampled and performed BSSVS for each subsample.
 From BSSVS we calculated Bayes factors and observed good agreement between samples in terms of supported routes (see Figures S4 and S5). % TODO: check this numbering in the end    
-To further study this, we also computed the $L1$ and $L2$ matrix distance norms for across the estimated rate matrices for each subsample, and no aberrant samples were detected.
+To further study this, we also computed the $L1$ and $L2$ matrix distance norms for across the estimated rate matrices for each subsample, and no aberrant samples were detected (see Text S2 for detailed results).
 
 Another aspect of interest is the amount of information extracted from each sample, which we measure by calculating Kullback-Leibler divergence between prior and posterior distribution of traits at root \cite{roots}.
 Tables S3 and S4 show that for all subsamples in both serotypes there was substantial information extraction, with highly concentrated posterior distributions at root.
@@ -554,18 +559,11 @@ Additionally, data on vaccination  (doses per head) and (log) FMD serotype-speci
  \toprule
  &\multicolumn{2}{c}{Shared}& \multicolumn{2}{c}{Separate} & \multicolumn{2}{c}{Bayes Factors}\\
  \midrule
-<<<<<<< HEAD
 Chain length&PS&SS&PS&SS&BF -- PS&BF -- SS\\
 250k&-21420&-21437&-21436&-21454&15.36&17.25\\
 500k&-21442&-21456&-21450&-21467&8.00&11.00\\
 1M&-21462&-21470&-21471&-21483&9.43&13.04\\
 2M&&&&&&\\
-=======
-Chain length & PS & SS & PS & SS & BF -- PS & BF -- SS \\
-250k & -21420 & -21437 & -21436 & -21454 & 15.36 & 17.25 \\
-500k & -21442 & -21456 & -21450 & -21467 & 8.00 & 11.00 \\
-1M & -21462 & -21470 & -21471 & -21483 & 9.43 & 13.04 \\
->>>>>>> 5c7cb81b7d80648d140a6d86ffa52bb5d302aac3
 % New 500K runs with uniform prior on Q
 % SS-shared= -21431; SS-separate= -21449
 \bottomrule
