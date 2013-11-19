@@ -4,14 +4,19 @@
 \usepackage{booktabs}
 \usepackage{rotating}
 \usepackage{subfigure}
-\usepackage{caption}
 \bibliographystyle{plos2009}%
+%%% Supp Mat modififcations
+%\usepackage[figurename=Figure\quad S]{caption} 
+%\usepackage[labelsep=endash]{caption}
+\renewcommand{\figurename}{Figure S}
+\renewcommand{\tablename}{Table S}
+%%%
 %opening
 \title{Text S2 -- Assessing the impact of taxon sampling on phylogeographic and coalescent reconstruction} % aargh, lousy name
 \author{
 Luiz Max de Carvalho \\
-\and Nuno Faria \\
 \and Guy Baele\\
+\and Nuno Faria \\
 \and Andres Perez \\
 \and Philippe Lemey \\
 \and Waldemir Silveira 
@@ -26,9 +31,10 @@ The data sets used in this study presented preferential sampling, with some coun
 Namely, $58$ of the $131$ ($44.2\%$) sequences collected for serotype A were from Argentina, and $90$ of the $167$ ($53.9\%$) sequences for serotype O came from Ecuadorian isolates.
 This unbalanced design may introduce bias on our phylogeography analysis, since under a null 'single rate' model, the more sequences are collected from a location, the higher the estimates to and from this location will be. % TODO: citation or formula here
 % To see this, let....
-Sampling bias constitutes an important concern in phylogeographic modeling and several studies have performed sensitivity analyses to determine how robust inference is to biased sampling \cite{Faria2012,Lemey2013,polar,fluPNAS} .
+Sampling bias constitutes an important concern in phylogeographic modeling and several studies have performed sensitivity analyses to determine how robust inference is to biased sampling \cite{Faria2012,Lemey2013,polar,fluPNAS}.
+Proposed approaches include using equally sampled data sets, for which each location contributes the same number of sequences \cite{fluPNAS} 
 In this study we provide a thorough assesment of the effects of sampling bias in the phylogeographic inference results. 
-\section{``Representation-informed'' priors}
+\section{``Representation-informed'' priors and Country base frequencies}
 The first experiment to study the impact of sampling in our estimated was to use what we call a ``representation-informed'' prior.
 This prior is built by assuming that the average rate of flow between two locations is proportional to the difference in representation, i.e., the number of sequences from each location.
 We can mathematically express the above rationale as:
@@ -40,6 +46,10 @@ For each serotype we calculated marginal likelihoods using path sampling (PS) an
 These marginal likelihood were compared to the marginal likelihoods obtained using uniform prior distributions on the infinitesimal rate matrix.
 We found Bayes factors of $200$ and $20$ between these models and their uniform counterparts for serotypes A and O respectively.
 These results show significant statistical support for the ``representation-informed'' priors.
+
+Also, we assessed the impact of fixed base frequencies for the locations, as follows: we allowed .
+The 'fixed frequencies' analyses yielded substantially lower marginal likelihoods (data not shown, see main text for discussion).
+Also estimated base frequencies significantly differred from their observed counterparts, as show in Figure~\ref{sfig:freqs}.
 \section{Robustness of parameter estimation and demographic reconstruction}
 To quantify the impact of including very ancient sequences, which are not available for all locations, we assessed the robustness of our temporal reconstruction by using only sequences from 2000 to present.
 For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior on coalescent times, also known as 'skyride' model.
@@ -67,7 +77,10 @@ See Figures S\ref{sfig:bssvsA} and S\ref{sfig:bssvsO}.
 % A possibility, unexplored in this paper, is to sample each location with probability proportional to its disease prevalence
 % In theory, a Bayesian approach should offer a certain degree of protection against model mispecification and sampling bias by bla  bla...
 % robustness of skyride crap
+\newpage
 \section*{Figure Legends}
+\textbf{Figure S\ref{sfig:freqs}.Estimated and observed trait (country) frequencies for both serotypes.} We estimated base frequencies using a discrete uniform prior and compared the obtained median values to the observed frequencies for each country in each data set (serotype). 
+
 \textbf{Figure S\ref{sfig:trade}. Exportation, importation and production time series for pigs, cattle and sheep in South america.} Panel A shows exportations in log(\# of heads) of live animals for pigs, sheep and cattle.
 Panels B and C show importation and overall production (population increase), respectively.
 
@@ -86,6 +99,17 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 
 \newpage
 \bibliography{Text_S2}
+
+\newpage
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=.35]{FIGURES/FMDV_frequencies_fixed.jpeg}
+\end{center}
+\caption{}
+\label{sfig:freqs}
+\end{figure}
+\end{center}
 \newpage
 \begin{center}
 \begin{figure}[H]
