@@ -333,6 +333,9 @@ The ability to incorporate multiple sources of information like temporal and spa
 % SAMPLING BIAS
 %%%%%
 % Informing the rates with livestock trade contributes to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated \cite{Faria2012}.
+% Also, when we fixed country frequencies at their observed values for each data set we noticed a substantial drop in marginal likelhihoods for all predictors.
+% This means the deliberately fixing frequencies may yield poor models.
+%
 % TODO: include polar bear citation and talk about sensitivity analysis
 %%%%%
 % COALESCENT 
@@ -581,21 +584,17 @@ Chain length&PS&SS&PS&SS&BF -- PS&BF -- SS\\
 \caption{
 \textbf{Spatial model selection results for livestock predictors.} We assessed the significance of livestock trade in FMDV spread in South America using two importance sampling methods, i.e. path sampling (PS) and stepping-stone sampling (SS), to estimate (log) marginal likelihoods for each predictor using 64 path steps and 2 million iterations per path step. For each livestock predictor, we have tested equal location frequencies as well location frequencies equal to the proportion of that location's presence in the data set. We also present the (log) marginal likelihood estimates for two location priors under which the location rates are estimated, rather than being fixed (as for the livestock predictors). We put these two scenarios in a separate part of the table to indicate that these estimates should not be compared to those of the livestock predictors.}
 \begin{center}
-\begin{tabular}{llrrrrrr}
+\begin{tabular}{lrrrrrr}
 \toprule
- & & \multicolumn{3}{c}{Serotype A}& \multicolumn{3}{c}{Serotype O}\\
+ & \multicolumn{3}{c}{Serotype A}& \multicolumn{3}{c}{Serotype O}\\
  \midrule
-Predictor & Frequencies & PS & SS & BF$^2$ & PS & SS & BF \\
-\hline
-Cattle & Equal & -12608.72 & -12611.00 & -17 & \textbf{-8310.22} & \textbf{-8311.81} & 6 \\
-Cattle & Sampling & -12661.11&-12663.11& -69 & \textbf{-8309.38} & \textbf{-8310.52} & 8 \\
-Pigs & Equal & -12591.44 & -12591.64 & 2 & -8329.98 & -8332.00 & -14 \\
-Pigs & Sampling & -12644.69 & -12645.95 & -52 & -8338.54 & -8338.16 & -20 \\
-Sheep & Equal & \textbf{-12572.09} & \textbf{-12573.78} & 20 & -8323.22 & -8323.68 & -5 \\
-Sheep & Sampling & -12592.84 & -12594.05 & 0 & -8328.65 & -8330.90 & -13 \\
-\hline
-Distance & Sampling & -12587.78 & -12590.61 & 4 & -8315.07 & -8318.48 & 0 \\
-Uniform & Sampling & -12590.92 & -12594.11 & - & -8314.47 & -8318.25 & - \\
+Predictor & PS & SS & BF$^2$ & PS & SS & BF \\
+%\hline
+Cattle&-12588.76&-12591.26&-27.70&-8308.94&-8311.21&13.49\\
+Distance&-12557.69&-12559.73&3.83&-8313.89&-8315.37&9.33\\
+Pig&-12589.33&-12590.94&-27.38&-8325.39&-8326.63&-1.93\\
+Sheep&-12570.67&-12572.56&-9.00&-8326.23&-8330.64&-5.94\\
+Uniform&-12561.98&-12563.56&--&-8321.49&-8324.70&--\\
 \bottomrule
 \end{tabular}
 \end{center}
