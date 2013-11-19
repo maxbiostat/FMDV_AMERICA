@@ -169,9 +169,9 @@ Fist, we employ an asymmetric continuous-time Markov chain (CTMC) phylogeographi
 BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path.
 The results are presented in Figure~\ref{fig:migration} and show that Brazil and Colombia were the most probable origins for serotypes A and O respectively.
 
-For serotype O the highest rates were estimated for transitions between Argentina and Peru, Argentina and Venezuela, Uruguay and Ecuador and Uruguay and Argentina. When we analyzed the obtained Bayes factors, the best supported (BF$>9$) routes were between Peru and Brazil, Bolivia and Colombia, Argentina and Venezuela, Uruguay and Argentina and Argentina and Peru. The route between Uruguay and Peru showed smaller but strong support (BF$>4$).
+For serotype O the highest rates were estimated for transitions between Argentina and Peru, Argentina and Venezuela, Uruguay and Ecuador and Uruguay and Argentina. When we analyzed the obtained (log) Bayes factors, the best supported (BF$>9$) routes were between Peru and Brazil, Bolivia and Colombia, Argentina and Venezuela, Uruguay and Argentina and Argentina and Peru. The route between Uruguay and Peru showed smaller but strong support (BF$>4$).
 
-The highest rates for serotype A were obtained for transitions between Brazil and Uruguay, Ecuador and Venezuela and Bolivia and Venezuela. When we looked at BF support we found the transitions between Argentina and Venezuela, Uruguay and Argentina, Argentina and Bolivia, Brazil and Argentina and Bolivia and Venezuela to have the highest Bayes factors (BF$>8$).
+The highest rates for serotype A were obtained for transitions between Brazil and Uruguay, Ecuador and Venezuela and Bolivia and Venezuela. When we looked at BF support we found the transitions between Argentina and Venezuela, Uruguay and Argentina, Argentina and Bolivia, Brazil and Argentina and Bolivia and Venezuela to have the highest (log) Bayes factors (BF$>8$).
 
 We can notice that for serotype A mainly long-range migration routes were inferred for the period before 1945.
 This results may be due to sparsity of information before 1970, which precludes accurate inference about periods further back in time. 
@@ -192,7 +192,7 @@ To further explore the spatial behavior of FMDV we employ the so-called ``Markov
 The results are presented in Figure~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping in the routes connecting Venezuela, Colombia and Ecuador.
 For serotype A, highest (BF $>800$) support was observed for viral flow between Venezuela and Colombia and between Argentina and Uruguay.
 Transitions between Brazil and Bolivia and Peru and Ecuador also received good statistical support (BF $>10$).
-For serotype O, overall Bayes factors were lower in magnitude, but supported similar routes.
+For serotype O, overall (log) Bayes factors were lower in magnitude, but supported similar routes.
 Highest support was found for transition between Ecuador and Peru and Colombia and Ecuador (BF $>100$). Signicant support was also observed for viral exchange between Venezuela and Colombia (BF $>20$). 
 
 % Lots of short range routes are supported for both serotypes
@@ -230,7 +230,7 @@ We used data from the detailed trade matrix available from the Food and Agricult
 By accurately calculating the marginal likelihood of each predictor we can gain insight into the importance of each predictor on viral spread \cite{Carvalho2012,Nelson2011}.
 We used data on geographic distances and on trade of live cattle, pigs and sheep.
 For each predictor, we also performed a MCMC run using sampling-corrected base frequencies for each country.
-All predictors were compared to a spatially uniform vague prior using Bayes factors.
+All predictors were compared to a spatially uniform vague prior using (log) Bayes factors.
 
 Interestingly, the results of this analyses (Table~\ref{tab:preds}) show different best fitting predictors for each serotype.
 While for serotype A the best predictor was the trade of live sheep between countries (BF$=20$), the exchange of cattle was the best predictor for serotype O spread (BF$=6$).
@@ -557,13 +557,13 @@ Additionally, data on vaccination  (doses per head) and (log) FMD serotype-speci
  \begin{center}
  \begin{tabular}{ccccccc}
  \toprule
- &\multicolumn{2}{c}{Shared}& \multicolumn{2}{c}{Separate} & \multicolumn{2}{c}{Bayes Factors}\\
+ &\multicolumn{2}{c}{Shared}& \multicolumn{2}{c}{Separate} & \multicolumn{2}{c}{(log) Bayes Factors}\\
  \midrule
 Chain length&PS&SS&PS&SS&BF -- PS&BF -- SS\\
 250k&-21420&-21437&-21436&-21454&16&17\\
 500k&-21442&-21456&-21450&-21467&8&11\\
 1M&-21462&-21470&-21471&-21483&9&13\\
-2M&-21478&-21488&-21482&-21438&4&-50\\
+2M&-21478&-21488&-21482&-21492&4&10\\
 % New 500K runs with uniform prior on Q
 % SS-shared= -21431; SS-separate= -21449
 \bottomrule
