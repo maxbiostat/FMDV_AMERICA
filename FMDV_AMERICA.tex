@@ -229,8 +229,12 @@ Bayes factors assessment of the statistical support for the two hypotheses (shar
 We used data from the detailed trade matrix available from the Food and Agriculture Organization (FAO) to elicit CMTC rate matrix priors (predictors).
 By accurately calculating the marginal likelihood of each predictor we can gain insight into the importance of each predictor on viral spread \cite{Carvalho2012,Nelson2011}.
 We used data on geographic distances and on trade of live cattle, pigs and sheep.
-For each predictor, we also performed a MCMC run using sampling-corrected base frequencies for each country.
-All predictors were compared to a spatially uniform vague prior using (log) Bayes factors.
+For each predictor, we performed MCMC runs using fixed base frequencies for each country, with frequencies set to their observed values.
+Moreover we performed analyses where base frequencies were estimated.
+The results of these later experiments are presented in Text S2, Figure S1. % TODO: check this numbering in the end
+We can observe that estimated frequencies considerably differ from their observed values.
+Moreover, the analyses with fixed frequencies yielded lower marginal likelhihoods for the predictors (data not shown).
+%All predictors were compared to a spatially uniform vague prior using (log) Bayes factors.
 
 Interestingly, the results of this analyses (Table~\ref{tab:preds}) show different best fitting predictors for each serotype.
 While for serotype A the best predictor was the trade of live sheep between countries (BF$=20$), the exchange of cattle was the best predictor for serotype O spread (BF$=6$).
@@ -334,7 +338,7 @@ The ability to incorporate multiple sources of information like temporal and spa
 %%%%%
 % Informing the rates with livestock trade contributes to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated \cite{Faria2012}.
 % Also, when we fixed country frequencies at their observed values for each data set we noticed a substantial drop in marginal likelhihoods for all predictors.
-% This means the deliberately fixing frequencies may yield poor models.
+% This means the deliberately fixing frequencies may lead to poor phylogeographic inference.
 %
 % TODO: include polar bear citation and talk about sensitivity analysis
 %%%%%
