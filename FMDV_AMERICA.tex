@@ -91,29 +91,28 @@ Key-words: Phylogeography, foot-and-mouth disease virus, South America, animal t
 \section*{Introduction}
 
 Foot-and-mouth disease virus (FMDV) is a rapidly evolving picornavirus, causative agent of the most important disease of domestic and wild cloven-hoofed animals, foot-and mouth disease (FMD) \cite{review}.
-FMD is endemic in several regions of South America, and in recent years, the circulation of three of the seven FMDV serotypes, namely serotypes C, A and O, has been reported in the continent, the later two being the most prevalent.
-%NRF perhaps you can drop here some references about serotype distribution in America
+In several regions of South America, the FMD is endemic and in recent years, there are records of circulation in the continent of three of the seven FMDV serotypes, namely serotypes C, A and O, the latter two being the most prevalent. 
 Serotypes A and O show different  geographic distribution, with O being more prevalent in endemic Andean areas \cite{andean} and A being responsible for sporadic outbreaks in the Southern cone \cite{Perez2001,Malirat2012}.
 %NRF emergences=outbreaks?
 FMDV has probably been introduced in South America in the late years of the 19th century, probably brought by European colonization \cite{tully}. 
 By the 1970's, FMD was widespread in South America, with occurrence of multiple subtypes in large-scale epidemics \cite{Saraiva2003}.
-As a consequence of the improving knowledge about disease ecosystems accumulated by the national programmes, the Hemispheric Plan for the Eradication of FMD (PHEFA) was launched in 1987.
-PHEFA was elaborated and signed by South American countries as a continent-wide programme to strengthen national infra-structures, control animal trade and improve diagnostic and epidemiological investigation capabilities \cite{review_eradication}.
-Its main objective is to create and maintain FMD-free areas, thus improving the availability of meat, milk and other economically important livestock products \cite{Saraiva2003,Saraiva2004,review_eradication,combining}. Considerable success has been achieved over the past years, with substantial reduction of FMD incidence in the late 1990's.
-Nevertheless, episodic outbreaks in 2001, 2005 and 2011 in previously free areas represented a serious setback to PHEFA, which was devised to fulfill its goals by 2010 \cite{Saraiva2003,Saraiva2004}.
 
-The generally accepted solution to the problem of FMD eradication involves the promotion of transnational massive vaccination programmes \cite{vaccinationSA}
-with the development of better veterinary surveillance systems. Phylogenetic analyses have already proved useful in the latter, particularly by recovering in real-time the transmission pathways from genetic data \cite{cottam2008} and providing insight into the processes that drive re-emergence \cite{combining}.
+In 1987, as a consequence of the improving knowledge about disease ecosystems accumulated by the national programmes, began the Hemispheric Plan for the Eradication of FMD (PHEFA), elaborated and signed by South American countries as a continent-wide programme to strengthen national infra-structures, control animal trade and improve diagnostic and epidemiological investigation capabilities\cite{review_eradication}.
+Its main objective is to create and maintain FMD-free areas, thus improving the availability of meat, milk and other economically important livestock products \cite{Saraiva2003,Saraiva2004,review_eradication,combining}. Considerable success has been achieved over the past years, with substantial reduction of FMD incidence in the late 1990's.
+Despite considerable success, with a significant reduction in the incidence of FMD in the late 1990s, episodic outbreaks in 2001, 2005 and 2011, in areas previously free represented a serious setback for PHEFA, compromising its goals by 2010 \cite{Saraiva2003,Saraiva2004}.
+
+The generally accepted solution to the problem of FMD eradication involves the promotion of transnational massive vaccination programmes \cite{vaccinationSA} together
+with the development of better veterinary surveillance systems. Phylogenetic analyses have already proved useful in the latter; particularly by recovering in real-time the transmission pathways from genetic data \cite{cottam2008} and providing insight into the processes that drive re-emergence \cite{combining}.
 In the South American ecotone, the molecular evolution of FMDV has been subject of several studies along the years \cite{Perez2001,Malirat2007,andean,Malirat2011,Maradei2013}.
 These studies have played an important role in understanding the (re-)emergence pattern of FMDV, allowing for inference on the origin and evolutionary history of emerging viral strains \cite{topotypes,Perez2001}. Together with vaccine matching and MAb profiling studies \cite{Maradei2011}, phylogenetic analyses are a powerful 
 tool to evaluate control programmes and guide vaccine formulation \cite{Maradei2011,Maradei2013}.
 
 The increased availability of geo-referenced time-stamped genetic data has fostered the development of new methods that integrate epidemiological and environmental data in order to reconstruct pathogen population dynamics and test evolutionary hypotheses \cite{MEP,grenfell}. 
-However, and as pointed out by Di Nardo, Knowles \&  Paton (2011) \cite{combining}, this joint evaluation of information from different sources is usually done outside of a unified quantitative framework, and in a qualitative fashion. In this context, Bayesian phylogeography offers a statistical framework to jointly combine multiple sources of information in order to understand the spatio-temporal dynamics of FMDV and perform evolutionary hypothesis testing. Such framework recently proven useful when investigating the patterns of FMDV spread and trace the spatial origins of FMD epidemics \cite{Carvalho2012,bulgaria,phymal,hall2013}.
+However, as pointed out by Di Nardo, Knowles \&  Paton (2011) \cite{combining}, this joint evaluation of information from different sources is usually done outside of a unified quantitative framework, in a qualitative fashion. In this context, Bayesian phylogeography offers a statistical framework to combine multiple sources of information in order to understand the spatio-temporal dynamics of FMDV and perform evolutionary hypothesis testing. Such framework has recently proven useful when investigating the patterns of FMDV spread and trace the spatial origins of FMD epidemics \cite{Carvalho2012,bulgaria,phymal,hall2013}.
 
 In this study we apply state-of-art Bayesian phylogeographic methods
 to investigate the evolutionary dynamics of serotypes A and O in South America, both in a spatial and temporal perspective. The probabilistic framework used here allows for the incorporation of multiple sources of information to test hypothesis about viral dispersal, while naturally accommodating uncertainty \cite{roots,towards}.
-We use BEAST \cite{beast2012} to build time-structured phylogenies and a recent demographic growth model \cite{skyride} to reconstruct past population dynamics, to which we overlay with vaccination and serotype-specific notification data.
+We use BEAST \cite{beast2012} to build time-structured phylogenies and a non-parametric demographic growth model \cite{skyride} to reconstruct past population dynamics, to which we overlay with vaccination and serotype-specific notification data.
 Moreover, we use data on livestock trade and geographical distances as predictors for viral spatial diffusion and use recently developed methods to accurately calculate marginal likelihoods for each predictor.
 Finally, we offer an appreciation of the statistical hurdles that may be caused by biased geographic sampling, and propose ways to ameliorate their effects.
 %TODO: decide whether or not this statement holds in the end
@@ -269,7 +268,7 @@ To gain insight into the effect of sampling in our estimates, we devised ``repre
 We then used path sampling and stepping stone sampling to calculate marginal likelihoods for these predictors, obtaining significantly lower marginal (log) likelihoods (-12556 and -8290, for serotypes A and O respectively).
 These results indicated further investigation was important to assess the robustness of our phylogeographic inference to sampling.
 
-We then draw five subsamples for each serotype in which over-represented were down-sampled and performed BSSVS for each subsample.
+We then draw five subsamples for each serotype in which over-represented were downsampled and performed BSSVS for each subsample.
 From BSSVS we calculated Bayes factors and observed good agreement between samples in terms of supported routes (see Figures S4 and S5). % TODO: check this numbering in the end    
 To further study this, we also computed the $L1$ and $L2$ matrix distance norms across the estimated rate matrices for each subsample, and no aberrant samples were detected (see Text S2 for detailed results).
 
@@ -485,7 +484,7 @@ In this study, both data sets analyzed presented highly preferential sampling, w
 To assess the impact of sampling in our estimates, we performed the following experiments:
 \begin{itemize}
  \item i. Parameter estimation without the over-represented locations;
- \item ii. Parameter estimation with over-represented locations down-sampled to the number of sequences of the second most represented location (Venezuela and Colombia, for serotypes A and O, respectively). For each serotype, we obtained five random subsamples using this approach;
+ \item ii. Parameter estimation with over-represented locations downsampled to the number of sequences of the second most represented location (Venezuela and Colombia, for serotypes A and O, respectively). For each serotype, we obtained five random subsamples using this approach;
  \item iii. Estimation of the marginal likelihood of a ``representation-informed'' prior distribution for the rates, detailed below.
 \end{itemize}
 
@@ -527,8 +526,9 @@ html}).
 
 {\bf Figure~\ref{fig:skyride}. Temporal dynamics of FMDV serotypes A and O in South America.} Population dynamics were reconstructed for both serotypes using the Gaussian Markov Random Field (Skyride) prior (see Methods).
 Additionally, data on vaccination  (doses per head) and (log) FMD serotype-specific notifications were superimposed on the demographic reconstruction, with 95 \% Bayesian Credible Intervals shaded in grey.
+
 \newpage
-\section{Figures}
+\section{Figures and Tables}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
@@ -578,8 +578,6 @@ Additionally, data on vaccination  (doses per head) and (log) FMD serotype-speci
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\section*{Tables}
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[H]
 \caption{
