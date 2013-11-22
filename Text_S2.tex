@@ -4,6 +4,7 @@
 \usepackage{booktabs}
 \usepackage{rotating}
 \usepackage{subfigure}
+\usepackage{indentfirst}
 \usepackage{float}
 \bibliographystyle{plos2009}%
 %%% Supp Mat modififcations
@@ -13,28 +14,36 @@
 \renewcommand{\tablename}{Table S}
 %%%
 %opening
-\title{Text S2 -- Assessing the impact of taxon sampling on phylogeographic and coalescent reconstruction} % aargh, lousy name
+\title{Text S2 -- Assessing the impact of taxon sampling on phylogeographic and coalescent reconstructions} % aargh, lousy name
 \author{
-Luiz Max de Carvalho \\
-\and Guy Baele\\
-\and Nuno Faria \\
-\and Andres Perez \\
-\and Philippe Lemey \\
-\and Waldemir Silveira 
-}
+Luiz Max Fagundes de Carvalho,
+Guy Baele,
+Nuno Rodrigues Faria,\\
+Andres M. Perez,
+Philippe Lemey and
+Waldemir de Castro Silveira
+\\}
 \date{}
 \begin{document}
 
 \maketitle
 
 \section{Background}
+
 The data sets used in this study presented preferential sampling, with some countries being overrepresented.
 Namely, $58$ of the $131$ ($44.2\%$) sequences collected for serotype A were from Argentina, and $90$ of the $167$ ($53.9\%$) sequences for serotype O came from Ecuadorian isolates.
 This unbalanced design may introduce bias on our phylogeography analysis, since under a null 'single rate' model, the more sequences are collected from a location, the higher the estimates to and from this location will be. % TODO: citation or formula here
 % To see this, let....
-Sampling bias constitutes an important concern in phylogeographic modeling and several studies have performed sensitivity analyses to determine how robust inference is to biased sampling \cite{Faria2012,Lemey2013,polar,fluPNAS}.
-Proposed approaches include using equally sampled data sets, for which each location contributes the same number of sequences \cite{fluPNAS} 
+
+Sampling bias constitutes an important concern in phylogeographic modeling, and several studies have performed sensitivity analyses to determine how robust inference is to biased sampling \cite{Faria2012,Lemey2013,polar,fluPNAS}.
+Proposed approaches include using equally sampled data sets, for which each location contributes the same number of sequences \cite{fluPNAS}.
+This approach is specially useful when a reasonable number of sequences is available.
+Another strategy is to devise prior distributions for the CTMC infinitesimal rate matrix ($\mathbf{Q}$) that explicitly counteract the effects of biased sampling \cite{Faria2012}.
+
+%TODO: talk about bias in skyride 
 In this study we provide a thorough assesment of the effects of sampling bias in the phylogeographic inference results. 
+First we propose a formal Bayesian test to gain insight into the effect of sampling bias, using the differences in representation as a predictor to viral spread.
+Secondly, a customized sampling scheme is used to downsample the original data sets and reduced representation bias.
 \section{``Representation-informed'' priors and Country base frequencies}
 The first experiment to study the impact of sampling in our estimated was to use what we call a ``representation-informed'' prior.
 This prior is built by assuming that the average rate of flow between two locations is proportional to the difference in representation, i.e., the number of sequences from each location.
@@ -45,15 +54,18 @@ We can mathematically express the above rationale as:
 where $n_i$ and $n_j$ are the number of sequences from locations $i$ and $j$ and $C$ is an arbitrary constant, chosen such that $E[m_{ij}]=1$ (see the Methods section in main text).
 For each serotype we calculated marginal likelihoods using path sampling (PS) and stepping stone (SS) for the ``representation-informed'' priors.
 These marginal likelihood were compared to the marginal likelihoods obtained using uniform prior distributions on the infinitesimal rate matrix.
+
 We found Bayes factors of $200$ and $20$ between these models and their uniform counterparts for serotypes A and O respectively.
 These results show significant statistical support for the ``representation-informed'' priors.
 
 Also, we assessed the impact of fixed base frequencies for the locations, as follows: we allowed .
 The 'fixed frequencies' analyses yielded substantially lower marginal likelihoods (data not shown, see main text for discussion).
-Also estimated base frequencies significantly differred from their observed counterparts, as show in Figure~\ref{sfig:freqs}.
+Also, estimated base frequencies significantly differred from their observed counterparts as shown in Figure~\ref{sfig:freqs}.
+
 \section{Robustness of parameter estimation and demographic reconstruction}
-To quantify the impact of including very ancient sequences, which are not available for all locations, we assessed the robustness of our temporal reconstruction by using only sequences from 2000 to present.
-For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior on coalescent times, also known as 'skyride' model.
+
+To quantify the impact of including older sequences, which are not available for all locations, we assessed the robustness of our temporal reconstruction by using only sequences from 2000 to present.
+For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior on coalescent times, also known as `skyride' model.
 These results are presented in Figure~\ref{sfig:only2000sky}.
 
 Also, we were interested in studying whether overrepresented locations could influence phylogenetic parameter estimation.
@@ -61,14 +73,43 @@ To investigate that, we performed parameter estimation with and without these lo
 Tables~\ref{tab:SB_A} and~\ref{tab:SB_O} show medians and $95 \%$ credible intervals for several parameters of interest with and without the overrepresented locations
 for both serotypes.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Parameter estimation with downsampling}
-To ameliorate the effect of biased sampling while using the information from over 
-% For our experiments, we obtained five downsampled data sets for each serotype
-not possible to perform equal downsampling, which would be an optimal sampling scheme. For large data sets \cite{fluPNAS}
+%\section{Parameter estimation with downsampling}
+
+For large data sets it is possible to perform equal downsampling, i.e., simple random stratified sampling \cite{fluPNAS}.
+However, this was not possible in the data sets analyzed in this study.
+The above experiments were performed by excluding all sequences from overrepresented locations.
+To assess the effect of biased sampling while still using the information from overrepresented locations, we used a downsampling scheme.
+We draw as many sequences from the most represented location as there are sequences from the second most represented location.
+For serotype A, the second most represented country was Venezuela ($27$ sequences) and for serotype O Colombia was the second location with more sequences ($36$).
+To compose the subsamples for serotype A we then randomly drew $27$ sequences from Argentina and combined them to the other sequences in the original data set.
+This procedure was performed five times to obtain five subsamples.
+Subsampling for serotype O proceeded analogously.
+
+Results of these experiments are presented in Tables~\ref{tab:ED_A} and~\ref{tab:ED_O}.
+For most parameters there was substantial overlap between posterior distributions obtained using different subsamples.
+Also, inference regarding the spatial origin (root) was consistent across subsamples for both serotypes.
+
 \section{Comparing rate matrices}
-Sometimes \\
-L1 and L2 norms
-We thank Professor Marc A. Suchard (UCLA) for advice on this topic.\\
+A point of interest is whether estimated of $\mathbf{Q}$ were consistent across subsamples.
+First we plotted the estimated rates across each subsample against each other for both serotypes.
+The results are shown in Figure~\ref{sfig:compz}A and~B and we can notice estimates are in agreement across subsamples.
+
+Another way of looking into this matter is to see $\mathbf{Q}$ as whole matrix (instead of entry-wise).
+To address this we calculated the $L_1$ and $L_2$ matrix distance norms for (each pair of) the estimates of $\mathbf{Q}$ obtained from each subsample.
+Let $\mathbf{X}$ and $\mathbf{Y}$ be two $K \times K$ square matrices.
+The $L_1$ matrix norm is defined as
+\begin{equation}
+ L_1 = \frac{1}{K^{2} (\sum_{i=1}^{K^2} |X_i-Y_i| ) }
+\end{equation}
+and the $L_2$ norm has the form
+\begin{equation}
+ L_2 = \sqrt{\frac{1}{K^{2} (\sum_{i=1}^{K^2} (X_i-Y_i)^2 )}}
+\end{equation}
+Since all entries in our matrices are non-negative, we they were log-transformed prior to computing distances.
+Calculations were performed using the \verb|norm()| in the \textbf{PET} package of the R statistical computing environment.
+Our calculations 
+The results of these analyses are presented in Figure~\ref{sfig:compz}C and~D.
+We thank Professor Marc A. Suchard (UCLA) for advice on this topic.
 \section{Quantifying spatial signal extraction}
 KL root for each subsample \cite{KL}
 \section{Bayesian Stochastic Search Variable Selection}
@@ -80,23 +121,33 @@ See Figures S\ref{sfig:bssvsA} and S\ref{sfig:bssvsO}.
 % robustness of skyride crap
 \newpage
 \section*{Figure Legends}
-\textbf{Figure S\ref{sfig:freqs}.Estimated and observed trait (country) frequencies for both serotypes.} We estimated base frequencies using a discrete uniform prior and compared the obtained median values to the observed frequencies for each country in each data set (serotype). 
+\textbf{Figure S\ref{sfig:freqs}. Estimated and observed trait (country) frequencies for both serotypes.}
+We estimated base frequencies using a discrete uniform prior and compared the obtained median values to the observed frequencies for each country in each data set (serotype). 
 
-\textbf{Figure S\ref{sfig:trade}. Exportation, importation and production time series for pigs, cattle and sheep in South america.} Panel A shows exportations in log(\# of heads) of live animals for pigs, sheep and cattle.
+\textbf{Figure S\ref{sfig:trade}. Exportation, importation and production time series for pigs, cattle and sheep in South america.}
+Panel A shows exportations in log~(~\# ~of heads) of live animals for pigs, sheep and cattle.
 Panels B and C show importation and overall production (population increase), respectively.
 
-\textbf{Figure S\ref{sfig:tradeinfo}. Kernel density estimation for the trade-informed priors used in this study.} Information on cattle, sheep and pigs trade was retrieved from FAO and used to create trade-informed prior distributions for the CTMC infinitesimal rate matrix.
+\textbf{Figure S\ref{sfig:tradeinfo}. Kernel density estimation for the trade-informed priors (predictors) used in this study.}
+Information on cattle, sheep and pigs trade was retrieved from FAO and used to create trade-informed prior distributions for the CTMC infinitesimal rate matrix.
 Each prior was evaluated for prior predictive probability (marginal likelihood) using the PS and SS algorithms. 
 
-\textbf{Figure S\ref{sfig:AvsO}. Scatterplot of estimated rate matrices for serotypes A and O} We plotted all overllaping rates (Serotype O without Paraguay) estimated using a symmetric CTMC model for both serotypes, to investigate whether the two serotypes have different spatial patterns.
+\textbf{Figure S\ref{sfig:AvsO}. Scatterplot of estimated rate matrices for serotypes A and O.}
+We plotted all overllaping rates (Serotype O without Paraguay) estimated using a symmetric CTMC model for both serotypes, to investigate whether the two serotypes have different spatial patterns.
 
-\textbf{Figure S\ref{sfig:bssvsA}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype A sequences} We performed the BSSVS analysis on five downsampled data sets (reduced Argentina representation) and plotted the results as in Figure 3 in the main text.
+\textbf{Figure S\ref{sfig:compz}. Comparison of of estimated rate matrices across subsamples}
+In panels A and B we show entry-wise scatterplots of the five subsamples for serotypes A and O respectively.
+Colors depict country of origin.
+Panels C and D show heat maps of the $5\times5$ matrices of $L_1$ norms comparing each subsample, for serotypes A and O, respectively.
 
-\textbf{Figure S\ref{sfig:bssvsO}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype O sequences} We performed the BSSVS analysis on five downsampled (equal numbers of Ecuadorian and Colombian sequences) data sets and plotted the results as in Figure 3 in the main text.
+\textbf{Figure S\ref{sfig:bssvsA}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype A sequences.}
+We performed the BSSVS analysis on five downsampled data sets (reduced Argentina representation) and plotted the results as in Figure 3 in the main text.
+
+\textbf{Figure S\ref{sfig:bssvsO}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype O sequences.}
+We performed the BSSVS analysis on five downsampled (equal numbers of Ecuadorian and Colombian sequences) data sets and plotted the results as in Figure 3 in the main text.
 
 \textbf{Figure S\ref{sfig:only2000sky}. Skyride coalescent reconstructions using sequences from 2000 to present only for both serotypes.}
 As in the main text, disease cases and vaccination in doses per head are overlaid to the demographic reconstructions.
-
 
 \newpage
 \bibliography{Text_S2}
@@ -112,6 +163,8 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \end{figure}
 \end{center}
 \newpage
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
 \begin{center}
 \begin{figure}[H]
 \begin{center}
@@ -124,6 +177,8 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \end{figure}
 \end{center}
 \newpage
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=.5]{FIGURES/trade_info.jpeg}
@@ -132,6 +187,8 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \label{sfig:tradeinfo}
 \end{figure}
 \newpage
+%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=.5]{FIGURES/A_vs_O_symmetric.jpeg}
@@ -140,6 +197,22 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \label{sfig:AvsO}
 \end{figure}
 \newpage
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+\begin{center}
+\subfigure[A]{\includegraphics[scale=.250]{FIGURES/rateplot_A.jpeg}}
+\subfigure[B]{\includegraphics[scale=.250]{FIGURES/rateplot_O.jpeg}}\\
+\subfigure[C]{\includegraphics[scale=.250]{FIGURES/normplot_A.jpeg}}
+\subfigure[D]{\includegraphics[scale=.250]{FIGURES/normplot_O.jpeg}}%\\
+\end{center}
+\caption{}
+\label{sfig:compz}
+\end{figure}
+\newpage
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
 \begin{center}
 \begin{figure}[H]
 \subfigure[A]{\includegraphics[scale=.450]{FIGURES/A_ss1.jpeg}}
@@ -152,6 +225,8 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \end{figure}
 \end{center}
 \newpage
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \begin{center}
 \subfigure[A]{\includegraphics[scale=.450]{FIGURES/O_ss1.jpeg}}
@@ -164,6 +239,8 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \label{sfig:bssvsO}
 \end{figure}
 \newpage
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \begin{center}
 \subfigure[A]{\includegraphics[width=\textwidth]{FIGURES/SFig_A2000sky.jpeg}}
@@ -173,6 +250,8 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \label{sfig:only2000sky}
 \end{figure}
 \newpage
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
 \begin{table}[H]
 \caption{\textbf{Model selection for tree (coalescent) model and clock for both serotypes.}
 ULN= uncorrelated log-normal; UCED = uncorrelated exponential .
@@ -225,8 +304,8 @@ Venezuela&1.82 (1.00, 2.00)	&1.02 (1.00, 1.08)	&0.010&6.00 (6.00, 6.00)&	1.28 (1
 \end{flushleft}
 \label{tab:BaTS}
 \end{sidewaystable}
-%%%%%%%%%%%%
-
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
 \begin{table}[h]
 \caption{ {{\bf Parameter estimation using the complete and without Argentina data sets for serotype A.}} To assess the impact of the overrepresentation of Argentina in our sample we removed all sequence from this location and reestimated parameters.
 1- All 131 sequences were used. 2- Time to most recent common ancestor. 3- Codon positions $1$, $2$ and $3$. }
@@ -245,8 +324,6 @@ Rate ($\times 10^{-3}$)	&4.14 (3.39-4.98)	&3.46 (2.82-4.11)\\
 \end{center}
 \label{tab:SB_A}
  \end{table}
-
-
 %%%%%%%%%
 %%%%%%%%%
 \begin{table}[h]
@@ -269,10 +346,10 @@ Rate ($\times 10^{-2}$)	&1.11 (0.91-1.32)	&0.91 (0.63-1.21)\\
 \label{tab:SB_O}
  \end{table}
 
-%%%%
-%%%%
+%%%%%%%%
+%%%%%%%%
 \newpage
-\begin{sidewaystable}[H]
+\begin{sidewaystable}
 \medskip
 \begin{minipage}{\textwidth} 
 \begin{center}
@@ -298,7 +375,7 @@ Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration 
 %%%%
 %%%%
 \newpage
-\begin{sidewaystable}[H]
+\begin{sidewaystable}
 \medskip
 \begin{minipage}{\textwidth}
 \begin{center}
