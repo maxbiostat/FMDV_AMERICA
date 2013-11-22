@@ -41,6 +41,7 @@ This approach is specially useful when a reasonable number of sequences is avail
 Another strategy is to devise prior distributions for the CTMC infinitesimal rate matrix ($\mathbf{Q}$) that explicitly counteract the effects of biased sampling \cite{Faria2012}.
 
 %TODO: talk about bias in skyride 
+
 In this study we provide a thorough assesment of the effects of sampling bias in the phylogeographic inference results. 
 First we propose a formal Bayesian test to gain insight into the effect of sampling bias, using the differences in representation as a predictor to viral spread.
 Secondly, a customized sampling scheme is used to downsample the original data sets and reduced representation bias.
@@ -60,24 +61,25 @@ These results show significant statistical support for the ``representation-info
 
 Also, we assessed the impact of fixed base frequencies for the locations, as follows: we allowed .
 The 'fixed frequencies' analyses yielded substantially lower marginal likelihoods (data not shown, see main text for discussion).
-Also, estimated base frequencies significantly differred from their observed counterparts as shown in Figure~\ref{sfig:freqs}.
+Also, estimated base frequencies significantly differred from their observed counterparts as shown in Figure S\ref{sfig:freqs}.
 
 \section{Robustness of parameter estimation and demographic reconstruction}
 
 To quantify the impact of including older sequences, which are not available for all locations, we assessed the robustness of our temporal reconstruction by using only sequences from 2000 to present.
 For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior on coalescent times, also known as `skyride' model.
-These results are presented in Figure~\ref{sfig:only2000sky}.
+These results are presented in Figure S\ref{sfig:only2000sky}.
 
 Also, we were interested in studying whether overrepresented locations could influence phylogenetic parameter estimation.
 To investigate that, we performed parameter estimation with and without these locations.
-Tables~\ref{tab:SB_A} and~\ref{tab:SB_O} show medians and $95 \%$ credible intervals for several parameters of interest with and without the overrepresented locations
+Tables S\ref{tab:SB_A} and S\ref{tab:SB_O} show medians and $95 \%$ credible intervals for several parameters of interest with and without the overrepresented locations
 for both serotypes.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Parameter estimation with downsampling}
+\subsection{Parameter estimation with downsampling}
 
 For large data sets it is possible to perform equal downsampling, i.e., simple random stratified sampling \cite{fluPNAS}.
 However, this was not possible in the data sets analyzed in this study.
 The above experiments were performed by excluding all sequences from overrepresented locations.
+
 To assess the effect of biased sampling while still using the information from overrepresented locations, we used a downsampling scheme.
 We draw as many sequences from the most represented location as there are sequences from the second most represented location.
 For serotype A, the second most represented country was Venezuela ($27$ sequences) and for serotype O Colombia was the second location with more sequences ($36$).
@@ -85,17 +87,17 @@ To compose the subsamples for serotype A we then randomly drew $27$ sequences fr
 This procedure was performed five times to obtain five subsamples.
 Subsampling for serotype O proceeded analogously.
 
-Results of these experiments are presented in Tables~\ref{tab:ED_A} and~\ref{tab:ED_O}.
+Results of these experiments are presented in Tables S\ref{tab:ED_A} and S\ref{tab:ED_O}.
 For most parameters there was substantial overlap between posterior distributions obtained using different subsamples.
 Also, inference regarding the spatial origin (root) was consistent across subsamples for both serotypes.
 
-\section{Comparing rate matrices}
+\subsection{Comparing rate matrices}
 A point of interest is whether estimated of $\mathbf{Q}$ were consistent across subsamples.
 First we plotted the estimated rates across each subsample against each other for both serotypes.
-The results are shown in Figure~\ref{sfig:compz}A and~B and we can notice estimates are in agreement across subsamples.
+The results are shown in Figure S\ref{sfig:compz}A and~B and we can notice estimates are in agreement across subsamples.
 
-Another way of looking into this matter is to see $\mathbf{Q}$ as whole matrix (instead of entry-wise).
-To address this we calculated the $L_1$ and $L_2$ matrix distance norms for (each pair of) the estimates of $\mathbf{Q}$ obtained from each subsample.
+
+We also calculated the $L_1$ and $L_2$ matrix distance norms for (each pair of) the estimates of $\mathbf{Q}$ obtained from each subsample.
 Let $\mathbf{X}$ and $\mathbf{Y}$ be two $K \times K$ square matrices.
 The $L_1$ matrix norm is defined as
 \begin{equation}
@@ -107,12 +109,12 @@ and the $L_2$ norm has the form
 \end{equation}
 Since all entries in our matrices are non-negative, we they were log-transformed prior to computing distances.
 Calculations were performed using the \verb|norm()| in the \textbf{PET} package of the R statistical computing environment.
-Our calculations 
-The results of these analyses are presented in Figure~\ref{sfig:compz}C and~D.
+Our calculations were very similar for the two norms, hence only results from the $L_1$ norm will be presented.
+The results of these analyses are presented in Figure S\ref{sfig:compz}C and~D.
 We thank Professor Marc A. Suchard (UCLA) for advice on this topic.
-\section{Quantifying spatial signal extraction}
+\subsection{Quantifying spatial signal extraction}
 KL root for each subsample \cite{KL}
-\section{Bayesian Stochastic Search Variable Selection}
+\subsection{Bayesian Stochastic Search Variable Selection}
 See Figures S\ref{sfig:bssvsA} and S\ref{sfig:bssvsO}. 
 \section{Discussion}
 %\newpage
