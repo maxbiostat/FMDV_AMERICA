@@ -436,27 +436,38 @@ These expectations can then be multplied by geographical distances to obtain the
 \subsubsection*{Spatial Model Selection}
 
 One of the main research questions in this study is whether or not the two serotypes share the same underlying dispersal determinant. 
-To test this hypothesis, we estimated one single CMTC rate matrix using data from both serotypes, while allowing each serotype to have its own dispersal rate. 
-This option is justifiable, since the two serotypes present different TMRCAs and mutation rates. 
-In this analysis, we removed the sequence from Paraguay in the serotype O data set to have equal geographic sampling between serotypes.
-The marginal likelihood of this model was compared to that of one in which both serotypes were allowed to share data from both alignments but had two separate rate matrices.
+%GB: the way you phrase this may cause problems, it sounds like you first looked at your data and then decided you wanted to test this ...
+%To test this hypothesis, we estimated one single CMTC rate matrix using data from both serotypes, while allowing each serotype to have its own dispersal rate. 
+%This option is justifiable, since the two serotypes present different TMRCAs and mutation rates. 
+To test this hypothesis, we constrain both serotypes to the same CTMC rate matrix, which will be estimated using data from both serotypes, while still allowing for each serotype to have its own dispersal rate.
+To compare whether a separate geographic model is needed to accurately analyze location traits, we removed the sequence from Paraguay in the serotype O data set to have equal geographic sampling between serotypes.
+The marginal likelihood of such a model is compared to that of one in which both serotypes were allowed to have separate rate matrices.
 
-Another important aspect is the influence of different variables, such as population size and density, presence of airlines and roads and disease incidence on viral diffusion through space. 
-The framework adopted here allows for the incorporation of such information into the inference process, by the suitable formulation of prior distributions to inform the entries of the rate matrix. 
-To assess this, prior distributions were formulated using the following variables: trade of live cattle, pigs and sheep, as well as great-circle distances between each pair of countries. 
-These variables were normalized such that their expectation was one with unit variance. See Figure S2 for kernel density smoothing of these prior distributions.
+Another important aspect is the influence of different predictors, such as population size and density, presence of airlines, roads and disease incidence on viral diffusion through space. 
+The framework adopted here allows for the incorporation of such information into the inference process, by either providing predictor information directly into the CTMC rate matrix of the geographic model or by putting a distance-based or uniform prior on the estimated rates in the CTMC rate matrix. 
+The following predictors were used to parameterize the CTMC rate matrix: trade of live cattle, pigs and sheep; when the rates of that matrix are not fixed to these values but instead estimated from the data, we used the two aforementioned priors.
+%These variables were normalized such that their expectation was one with unit variance. 
+See Figure S2 for kernel density smoothing of these prior distributions.
 % TODO: check this numbering in the end
-In this study, we exploit recent developments in Bayesian model selection \cite{Baele2012}, as implemented in the BEAST software program \cite{BEAST}.
-Phylogenetics has adopted two main methods of potentially general applicability, such as importance sampling estimators (such as the HME and sHME) and path sampling estimators (such as PS and SS) to compute marginal likelihoods of competing models.
-These approaches allow for an overall ranking of competing models to be constructed, from which the top-performing model can easily be determined.
-Due to their ease of use and computational tractability, with collected likelihood samples from the standard MCMC run being re-used, the posterior-based (log) marginal likelihood estimators have received widespread adoption in the field of phylogenetics.
-Whereas PS methods represent very general estimators and can also be applied to any model for which MCMC samples can be obtained, they are computationally demanding and require additional analyses to collect the necessary likelihood samples needed to estimate the (log) marginal likelihood.
+%GB: you could automate this, right?
 
-Accurate estimation of (log) marginal likelihoods are crucial to correctly identify models that best describe the observed data. 
+In this study, we exploit recent developments in Bayesian model selection \cite{Baele2012,Baele2013a,Baele2013b}, as implemented in the BEAST software program \cite{BEAST}.
+For each parameterization of the CTMC rate matrix proposed above, we perform accurate estimation of the (log) marginal likelihood using path sampling (PS) and stepping-stone sampling (SS), accommodating phylogenetic uncertainty.
+These methods are computationally demanding and require additional analyses but provide much greater accuracy over the frequently used but erroneous class of harmonic mean estimators (HME and sHME).
+PS and SS allow for an overall ranking of competing models to be constructed, from which the top-performing model can easily be determined, i.e. the model with the highest (log) marginal likelihood.
 Using these (log) marginal likelihoods, it is possible to calculate Bayes Factors, which give a measure of the relative performance of each model. 
-The stepping stone (SS) and path sampling (PS) approaches, as implemented in BEAST, were used  to calculate all marginal likelihoods reported in this paper.
+All (log) marginal likelihood estimations were performed using 64 power posteriors, which were each run for 2 million iterations, taking up to 4 weeks of computation for each model under evaluation.
+By performing multiple runs with varying settings, we were able to assess convergence of the (log) marginal likelihood calculations for each of the tested predictors.
+
+%Phylogenetics has adopted two main methods of potentially general applicability, such as importance sampling estimators (such as the HME and sHME) and path sampling estimators (such as PS and SS) to compute marginal likelihoods of competing models.
+%These approaches allow for an overall ranking of competing models to be constructed, from which the top-performing model can easily be determined.
+%Due to their ease of use and computational tractability, with collected likelihood samples from the standard MCMC run being re-used, the posterior-based (log) marginal likelihood estimators have received widespread adoption in the field of phylogenetics.
+%Whereas PS methods represent very general estimators and can also be applied to any model for which MCMC samples can be obtained, they are computationally demanding and require additional analyses to collect the necessary likelihood samples needed to estimate the (log) marginal likelihood.
+
+%Accurate estimation of (log) marginal likelihoods are crucial to correctly identify models that best describe the observed data. 
+%The stepping stone (SS) and path sampling (PS) approaches, as implemented in BEAST, were used  to calculate all marginal likelihoods reported in this paper.
 % Note that these approaches accommodate phylogenetic uncertainty.
-PS and SS calculations were run using 64 power posteriors, each running for $250,000$, $500,000$ and 1 million iterations, taking up to 3 weeks of computation for each model under evaluation.
+%PS and SS calculations were run using 64 power posteriors, each running for $250,000$, $500,000$ and 1 million iterations, taking up to 3 weeks of computation for each model under evaluation.
 
 \subsection*{Assessing the effect of sampling}
 
