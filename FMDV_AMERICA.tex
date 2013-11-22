@@ -208,7 +208,7 @@ Since the difference in medians is substantial but quantiles widely overlap, we 
 \end{center}
 
 One may ask if both serotypes present different spatial spread patterns.
-To assess this we used PS/SS to calculate marginal likelhihoods for two different models, henceforth  called ``shared'' and ``separate''.
+Using data from both serotypes jointly, we estimated marginal likelihoods for a model in which a single rate matrix was estimated (``shared'') and one in which two separate matrices were estimated (``separate''). 
 In the ``shared'' model we used trait (location) and sequence data  from both serotypes to make inference about one CTMC rate matrix, whilst in the ``separate'' model we allow both serotypes to have each one CTMC rate matrix, while using the combined data from both serotypes.
 Both models allow serotypes to have different spatial diffusion rates.
 
@@ -217,12 +217,12 @@ Moreover, from the separate and shared rate matrix analysis we found that rates 
 For this analysis, the correlation between serotype A and O rate matrix estimates was $0.07$.
 In contrast to these results, the rate indicators in BSSVS for both serotypes were in better accordance ($r=0.54$).
 Again, we compared estimates using shared and separate models for the CMTC rate matrix, and found that indicators for serotype A had higher concordance to those in the shared model ($r_A=0.86$ and $r_O=0.77$).
-Bayes factors assessment of the statistical support for the two hypotheses (shared or separate rate matrices), indicated that a shared model should be preferred to a model with separate rate matrices for each serotype (BF$>10$, see Table~\ref{tab:sharedsep}).
+
+Using path sampling we obtained marginal likelihoods of $-21478$ and $-21482$ for the shared and separate models respectively.
+Results from stepping stone sampling were $-21488$ and $-21492$ respectively.
+Bayes factors assessment of the statistical support for the two hypotheses (shared or separate rate matrices), indicated that a shared model should be preferred to a model with separate rate matrices for each serotype (BFs $4$ and $10$ for PS and SS).
 
 % TODO: are the shared runs more statistically efficient? 
-\begin{center}
- [Table~\ref{tab:sharedsep} about here]
-\end{center}
 
 \subsection*{Identifying potential predictors of FMDV spread in South America}
 
@@ -234,9 +234,12 @@ Moreover we performed analyses where base frequencies were estimated.
 The results of these later experiments are presented in Text S2, Figure S1. % TODO: check this numbering in the end
 We can observe that estimated frequencies considerably differ from their observed values.
 Moreover, the analyses with fixed frequencies yielded lower marginal likelhihoods for the predictors (data not shown).
-%All predictors were compared to a spatially uniform vague prior using (log) Bayes factors.
+All predictors were compared to a spatially uniform vague prior using (log) Bayes factors.
 
 Interestingly, the results of this analyses (Table~\ref{tab:preds}) show different best fitting predictors for each serotype.
+For serotype A, distance and uniform outperform all the predictors tested, meaning that in itself, those predictors are not very 'predictive'.
+For serotype O, the cattle predictor is the only one to outperform the distance and uniform cases and can hence be considered a valuable predictor.
+
 While for serotype A the best predictor was the trade of live sheep between countries (BF$=20$), the exchange of cattle was the best predictor for serotype O spread (BF$=6$).
 Undecisive support (BF$=2$) was also observed for the trade of live pigs.
 Also, while for serotype A we found moderate statistical support for geographic distances as predictors of viral spread (BF$=4$), this predictor was not identified for serotype O.
@@ -268,7 +271,7 @@ These results indicated further investigation was important to assess the robust
 
 We then draw five subsamples for each serotype in which over-represented were downsampled and performed BSSVS for each subsample.
 From BSSVS we calculated Bayes factors and observed good agreement between samples in terms of supported routes (see Figures S4 and S5). % TODO: check this numbering in the end    
-To further study this, we also computed the $L1$ and $L2$ matrix distance norms for across the estimated rate matrices for each subsample, and no aberrant samples were detected (see Text S2 for detailed results).
+To further study this, we also computed the $L1$ and $L2$ matrix distance norms across the estimated rate matrices for each subsample, and no aberrant samples were detected (see Text S2 for detailed results).
 
 Another aspect of interest is the amount of information extracted from each sample, which we measure by calculating Kullback-Leibler divergence between prior and posterior distribution of traits at root \cite{roots}.
 Tables S3 and S4 show that for all subsamples in both serotypes there was substantial information extraction, with highly concentrated posterior distributions at root.
@@ -305,6 +308,7 @@ The differences in evolutionary rates, when taken together with the results from
 %%%%%
 %SPATIAL DYNAMICS
 %%%%
+
 % As discussed by Cottam et al (2007) \cite{cottam2007}, phylogenetic methods can be used to unravel undetected transmission.
 % We focus on a comparative approach, using information obtained from both serotypes to gain insight into the general process of FMDV spread in South America.
 %This continent wide-sampling allowed us to reconstruct the temporal and spatial dynamics of FMDV in the continent for both serotypes in greater detail than previous studies
@@ -329,10 +333,12 @@ Thus, using animal trade data as predictors can be a valuable tool to understand
 We found significant well supported migration paths between Venezuela, Colombia and Ecuador for both serotypes and this may indicate...??
 The ability to incorporate multiple sources of information like temporal and spatial data is becoming increasingly important in molecular epidemiology studies that aim to understand the driving forces of pathogen evolution and spread \cite{towards,combining,MEP,roots}. 
 
-% LM differet predictors = different roots <- What to do?
+% The model selection procedure presented here can be viewed as if, for each predictor, very strong (low variance) priors were placed on the infinitesimal rate matrix ($\mathbf{Q}$).
+% The uniform and distance priors in turn place less informative prior distributions on $\mathbf{Q}$.
+%If a predictor had close to optimal values, then it would outperform the distance and uniform priors since these priors are penalized for their higher variance \cite{Xie}.
+% LM different predictors = different roots <- What to do?
 % These results help to shed light into the main determinants of viral flow in the continent.
-% selection of clock and tree prior by PS/SS is cumbersome, but provides more accurate results. This calls for better methods, specially tailored for phylogeography 
-% TODO: LM What does Guy think about this?
+
 %%%%%
 % SAMPLING BIAS
 %%%%%
@@ -355,6 +361,8 @@ These epidemiological features are reflected at the temporal variation observed 
 Since our results reinforce the notion that these two serotypes present different evolutionary dynamics, the overall decrease in viral diversity for both serotypes points towards a progressive success of the eradication programme in slowly reducing transmission and controlling epidemics.
 % in the future skyride reconstructions can be coupled to mathematical models to help explain the pattern of emergence of FMD
 \section*{Conclusions}
+% selection of clock and tree prior by PS/SS is cumbersome, but provides more accurate results. This calls for better methods, specially tailored for phylogeography 
+% TODO: LM What does Guy think about this?
 % can be used to infer host jumps \cite{hall2013}
 %better methods yield more complete analyses
 %overall decrease in viral diversity
@@ -572,28 +580,6 @@ Additionally, data on vaccination  (doses per head) and (log) FMD serotype-speci
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section*{Tables}
-\begin{table}[!ht]
-\caption{{\bf Comparison of combined and separate models for CTMC rate matrix}. Using data from both serotypes jointly, we estimated marginal likelihoods for a model in which a single rate matrix was estimated (``Shared'') and one in which two separate matrices were estimated (``Separate''). We used path sampling (PS) and stepping-stone sampling (SS) to estimate (log) marginal likelihoods for each of these two models using 64 path steps and 2 million iterations per path step.}
- \begin{center}
- \begin{tabular}{ccccccc}
- \toprule
- &\multicolumn{2}{c}{Shared}& \multicolumn{2}{c}{Separate} & \multicolumn{2}{c}{(log) Bayes Factors}\\
- \midrule
-Chain length&PS&SS&PS&SS&BF -- PS&BF -- SS\\
-250k&-21420&-21437&-21436&-21454&16&17\\
-500k&-21442&-21456&-21450&-21467&8&11\\
-1M&-21462&-21470&-21471&-21483&9&13\\
-2M&-21478&-21488&-21482&-21492&4&10\\
-% New 500K runs with uniform prior on Q
-% SS-shared= -21431; SS-separate= -21449
-\bottomrule
- \end{tabular}
- \end{center}
- \begin{flushleft}
-\end{flushleft}
-\label{tab:sharedsep}
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[!ht]
 \caption{
@@ -605,8 +591,8 @@ Chain length&PS&SS&PS&SS&BF -- PS&BF -- SS\\
  \midrule
 Predictor & PS & SS & BF$^2$ & PS & SS & BF \\
 %\hline
-Cattle&-12588.76&-12591.26&-27.70&-8308.94&-8311.21&13.49\\
-Distance&-12557.69&-12559.73&3.83&-8313.89&-8315.37&9.33\\
+Cattle&-12588.76&-12591.26&-27.70&\textbf{-8308.94}&\textbf{-8311.21}& \textbf{13.49}\\
+Distance&\textbf{-12557.69}&\textbf{-12559.73}&\textbf{3.83}&-8313.89&-8315.37&9.33\\
 Pig&-12589.33&-12590.94&-27.38&-8325.39&-8326.63&-1.93\\
 Sheep&-12570.67&-12572.56&-9.00&-8326.23&-8330.64&-5.94\\
 Uniform&-12561.98&-12563.56&--&-8321.49&-8324.70&--\\
