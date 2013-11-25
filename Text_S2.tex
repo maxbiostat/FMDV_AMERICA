@@ -92,10 +92,10 @@ For most parameters there was substantial overlap between posterior distribution
 Also, inference regarding the spatial origin (root) was consistent across subsamples for both serotypes.
 
 \subsection{Comparing rate matrices}
-A point of interest is whether estimated of $\mathbf{Q}$ were consistent across subsamples.
+
+A point of interest is whether the estimates for $\mathbf{Q}$ were consistent across subsamples.
 First we plotted the estimated rates across each subsample against each other for both serotypes.
 The results are shown in Figure S\ref{sfig:compz}A and~B and we can notice estimates are in agreement across subsamples.
-
 
 We also calculated the $L_1$ matrix distance norm for (each pair of) the estimates of $\mathbf{Q}$ obtained from each subsample.
 Let $\mathbf{X}$ and $\mathbf{Y}$ be two $K \times K$ square matrices.
@@ -109,8 +109,9 @@ Calculations were performed using the \verb|norm()| in the \textbf{PET} package 
 The results of these analyses are presented in Figure S\ref{sfig:compz}C and~D.
 We thank Professor Marc A. Suchard (UCLA) for advice on this topic.
 
-KL root for each subsample \cite{KL}
-\subsection{Bayesian Stochastic Search Variable Selection}
+\subsection{Spatial Bayesian Stochastic Search Variable Selection}
+To gain further insight into the impact of downsampling in our phylogeographic inference, we conducted a Bayesian Stochastic Search Variable Selection to seach for the most parsimonious set of routes needed to explain data variation.
+
 See Figures S\ref{sfig:bssvsA} and S\ref{sfig:bssvsO}. 
 \section{Discussion}
 %\newpage
@@ -353,16 +354,16 @@ Rate ($\times 10^{-2}$)	&1.11 (0.91-1.32)	&0.91 (0.63-1.21)\\
 \begin{center}
 \caption{ {{\bf 'Equal downsampling' experiment for serotype A.}} 
 Five random downsampled subsamples were obtained and used for parameter inference.
-1-- $\times 10^{-3}$. 2 -- $\times 10^{-2}$. 3-- Probabily at root node.}
-\begin{tabular}{ccccc}
+1-- $\times 10^{-3}$; 2 -- $\times 10^{-2}$; 3-- Probability distribution at root node; 4-- Kullback-Liebler Divergence (see Text) }
+\begin{tabular}{cccccc}
 \toprule
-Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration rate$^{2}$  (95 \% BCI)	&Root (Pr$^{3}$)\\
+Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration rate$^{2}$  (95 \% BCI)	&Root (Pr$^{3}$)& KL$^4$\\
 \midrule
-1	&4.21 (3.43-5.05)	&78.97 (71.21-86.82)	&2.63 (1.34-4.08)	&Brazil (0.78)\\
-2	&4.25 (3.44-5.07)	&79.64 (71.49-88.04)	&2.54 (1.28-3.98)	&Brazil (0.79)\\
-3	&4.12 (3.38-4.94)	&77.74 (70.26-85-86)	&2.49 (1.27-3.88)	&Brazil (0.81)\\
-4	&4.12 (3.41-4.82)	&77.60 (69.41-85.88)	&2.44 (1.21-3.85)	&Brazil (0.87)\\
-5	&4.19 (3.49-4.93)	&78.28 (70.23-86.96)	&2.66 (1.31-4.11)	&Brazil (0.82)\\
+1	&4.21 (3.43-5.05)	&78.97 (71.21-86.82)	&2.63 (1.34-4.08)	&Argentina (0.41)& 1.76\\
+2	&4.25 (3.44-5.07)	&79.64 (71.49-88.04)	&2.54 (1.28-3.98)	&Brazil (0.40)& 1.41\\
+3	&4.12 (3.38-4.94)	&77.74 (70.26-85-86)	&2.49 (1.27-3.88)	&Brazil (0.57)&1.47\\
+4	&4.12 (3.41-4.82)	&77.60 (69.41-85.88)	&2.44 (1.21-3.85)	&Brazil (0.61)&0.98\\
+5	&4.19 (3.49-4.93)	&78.28 (70.23-86.96)	&2.66 (1.31-4.11)	&Brazil (0.45)& 1.00\\
 \bottomrule
 \end{tabular}
 \label{tab:ED_A}
@@ -378,16 +379,16 @@ Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration 
 \begin{minipage}{\textwidth}
 \begin{center}
  \caption{ {{\bf 'Equal downsampling' experiment for serotype O.}} Five random downsampled subsamples were obtained and used for parameter inference.
-1-- $\times 10^{-2}$. 2--  Probabily at root node.}
-\begin{tabular}{ccccc}
+1-- $\times 10^{-3}$; 2--  Probability at root node; 3-- Kullback-Liebler Divergence (see Text).}
+\begin{tabular}{cccccc}
 \toprule
-Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration rate$^{1}$ (95 \% BCI)	&Root (Pr$^{2}$)\\
+Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration rate$^{1}$ (95 \% BCI)	&Root (Pr$^{2}$) & KL$^3$\\
 \midrule
-1	&1.11 (0.86-1.37)	&20.27 (18.45-21.95)	&8.48 (3.91-13.59)	&Colombia (0.98)\\
-2	&0.865 (0.62-1.11)	&22.40 (19.78-25.31)	&8.74 (3.84-14.28)	&Colombia (0.93)\\
-3	&0.94 (0.68-1.21)	&21.91 (19.46-24.56)	&8.72 (4.03-14.17)	&Colombia (0.93)\\
-4	&0.84 (0.62-1.18)	&22.54 (19.80-25.45)	&8.43 (3.77-13.67)	&Colombia (0.99)\\
-5	&0.88 (0.63-1.13)	&22.33 (19.55-25.26)	&8.58 (3.89-13.18)	&Colombia (0.92)\\
+1	&1.11 (0.86-1.37)	&20.27 (18.45-21.95)	&8.48 (3.91-13.59)	&Venezuela (0.45)& 1.24\\
+2	&0.865 (0.62-1.11)	&22.40 (19.78-25.31)	&8.74 (3.84-14.28)	&Venezuela (0.46)&1.04\\
+3	&0.94 (0.68-1.21)	&21.91 (19.46-24.56)	&8.72 (4.03-14.17)	&Venezuela (0.51)&1.52\\
+4	&0.84 (0.62-1.18)	&22.54 (19.80-25.45)	&8.43 (3.77-13.67)	&Venezuela (0.49)&1.00\\
+5	&0.88 (0.63-1.13)	&22.33 (19.55-25.26)	&8.58 (3.89-13.18)	&Venezuela (0.44)&1.23\\
 
 \bottomrule
 \end{tabular}
