@@ -97,22 +97,18 @@ First we plotted the estimated rates across each subsample against each other fo
 The results are shown in Figure S\ref{sfig:compz}A and~B and we can notice estimates are in agreement across subsamples.
 
 
-We also calculated the $L_1$ and $L_2$ matrix distance norms for (each pair of) the estimates of $\mathbf{Q}$ obtained from each subsample.
+We also calculated the $L_1$ matrix distance norm for (each pair of) the estimates of $\mathbf{Q}$ obtained from each subsample.
 Let $\mathbf{X}$ and $\mathbf{Y}$ be two $K \times K$ square matrices.
 The $L_1$ matrix norm is defined as
 \begin{equation}
  L_1 = \frac{1}{K^{2} (\sum_{i=1}^{K^2} |X_i-Y_i| ) }
 \end{equation}
-and the $L_2$ norm has the form
-\begin{equation}
- L_2 = \sqrt{\frac{1}{K^{2} (\sum_{i=1}^{K^2} (X_i-Y_i)^2 )}}
-\end{equation}
+
 Since all entries in our matrices are non-negative, we they were log-transformed prior to computing distances.
 Calculations were performed using the \verb|norm()| in the \textbf{PET} package of the R statistical computing environment.
-Our calculations were very similar for the two norms, hence only results from the $L_1$ norm will be presented.
 The results of these analyses are presented in Figure S\ref{sfig:compz}C and~D.
 We thank Professor Marc A. Suchard (UCLA) for advice on this topic.
-\subsection{Quantifying spatial signal extraction}
+
 KL root for each subsample \cite{KL}
 \subsection{Bayesian Stochastic Search Variable Selection}
 See Figures S\ref{sfig:bssvsA} and S\ref{sfig:bssvsO}. 
@@ -140,7 +136,7 @@ We plotted all overllaping rates (Serotype O without Paraguay) estimated using a
 \textbf{Figure S\ref{sfig:compz}. Comparison of of estimated rate matrices across subsamples}
 In panels A and B we show entry-wise scatterplots of the five subsamples for serotypes A and O respectively.
 Colors depict country of origin.
-Panels C and D show heat maps of the $5\times5$ matrices of $L_1$ norms comparing each subsample, for serotypes A and O, respectively.
+Panel C and D shows heat maps of the $5\times5$ matrices of $L_1$ norms comparing each subsample, for serotypes A and O, respectively.
 
 \textbf{Figure S\ref{sfig:bssvsA}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype A sequences.}
 We performed the BSSVS analysis on five downsampled data sets (reduced Argentina representation) and plotted the results as in Figure 3 in the main text.
