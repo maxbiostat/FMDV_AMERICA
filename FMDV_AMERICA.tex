@@ -20,6 +20,8 @@
 \usepackage{url} %% LM: in order to include nice urls
 \usepackage{booktabs} %% LM: nice tables...
 \usepackage{subfigure} % LM: panels
+\usepackage{xr} % automatic cross-referencing
+\externaldocument{Text_S2}
 % Use doublespacing - comment out for single spacing
 %\usepackage{setspace}
 %\doublespacing
@@ -127,8 +129,8 @@ Next, we performed a stringent model selection analysis to chose the best-fit de
 Our results indicate that the constant population assumption is decisively rejected (A: BF=$11$; O: BF= $21$) in favor of a model that allows fluctuations in demographic growth over time. 
 
 After, we found that both serotypes A and O rapid evolution better fits a relaxed than strict molecular clock model.
-Particularly, the exponential relaxed molecular clock provided a better fit for serotype O data (BF=$21$) while the log-normal relaxed molecular clock model provided a better fit to serotype A (BF=$11$) (see Table S1 for details).
-% TODO: check this numbering
+Particularly, the exponential relaxed molecular clock provided a better fit for serotype O data (BF=$21$) while the log-normal relaxed molecular clock model provided a better fit to serotype A (BF=$11$) (see Table S\ref{stab:treeclockselection} for details).
+
 The coefficient of variation for the relaxed molecular clock models was estimated at $0.32$ (95\% BCI: $ 0.21$--$0.43$) and $0.99$ (95\% BCI: $0.90$--$1.08$) respectively for serotype A and O, indicating substantial rate heterogeneity among lineages in the phylogeny. 
 
 We also performed a `temporal signal' test to evaluate the degree to which genetic divergence accumulates over time (described in \cite{Faria2012}).
@@ -161,8 +163,7 @@ Using the best fitting demographic and molecular clock model combination for eac
 To assess the spatial pattern of FMDV spread within South America, we performed Bayesian phylogeographic analysis, also using the models available in BEAST \cite{roots}.
 We began by evaluating the spatial signal contained in our sequences using Bayesian tip-association tests \cite{bats} to determine the amount of spatial signal in our reconstructed phylogenies.
 To gain insight into the amount of association for each location, we computed the maximum clade (MC) statistic.
-The results can be found in Table S2 and show significant location-tip association for both serotypes.
-%TODO: check this numbering in the end.
+The results can be found in Table S\ref{stab:BaTS} and show significant location-tip association for both serotypes.
 MC statistics were different for each country in each dataset, showing different geographic structures for each serotype.
 As an overall result, our datasets presented high degree of spatial signal, what justifies more complex phylogeographic analyses to study the transmission network of FMDV in the continent.
 
@@ -213,7 +214,7 @@ Using data from both serotypes jointly, we estimated marginal likelihoods for a 
 In the ``shared'' model we used trait (location) and sequence data  from both serotypes to make inference about one CTMC rate matrix, whilst in the ``separate'' model we allow both serotypes to have each one CTMC rate matrix, while using the combined data from both serotypes.
 Both models allow serotypes to have different spatial diffusion rates.
 
-We plotted the rates estimated from independent runs for both serotypes and they do not seem to correlate (Fig. S3). % TODO: check this numbering in the end
+We plotted the rates estimated from independent runs for both serotypes and they do not seem to correlate (Fig. S\ref{sfig:AvsO}).
 Moreover, from the separate and shared rate matrix analysis we found that rates inferred for serotype A are more strongly correlated with the rates estimated under a shared rate matrix, with Pearson's linear correlation coefficients $r_A=0.55$ and $r_O=0.18$, respectively.
 For this analysis, the correlation between serotype A and O rate matrix estimates was $0.07$.
 In contrast to these results, the rate indicators in BSSVS for both serotypes were in better accordance ($r=0.54$).
@@ -232,7 +233,7 @@ By accurately calculating the marginal likelihood of each predictor we can gain 
 We used data on geographic distances and on trade of live cattle, pigs and sheep.
 For each predictor, we performed MCMC runs using fixed base frequencies for each country, with frequencies set to their observed values.
 Moreover we performed analyses where base frequencies were estimated.
-The results of these later experiments are presented in Text S2, Figure S1. % TODO: check this numbering in the end
+The results of these later experiments are presented in Text S2, Figure S\ref{sfig:freqs}.
 We can observe that estimated frequencies considerably differ from their observed values.
 Moreover, the analyses with fixed frequencies yielded lower marginal likelihoods for the predictors (data not shown).
 All predictors were compared to a spatially uniform vague prior using (log) Bayes factors.
@@ -269,11 +270,11 @@ We then used path sampling and stepping stone sampling to calculate marginal lik
 These results indicated further investigation was important to assess the robustness of our phylogeographic inference to sampling.
 
 We then draw five subsamples for each serotype in which over-represented were downsampled and performed BSSVS for each subsample.
-From BSSVS we calculated Bayes factors and observed good agreement between samples in terms of supported routes (see Figures S4 and S5). % TODO: check this numbering in the end    
-To further study this, we also computed the $L_1$ and $L_2$ matrix distance norms across the estimated rate matrices for each subsample, and no aberrant samples were detected (see Text S2 for detailed results).
+From BSSVS we calculated Bayes factors and observed good agreement between samples in terms of supported routes (see Figures S\ref{sfig:bssvsA} and S\ref{sfig:bssvsO}).
+To further study this, we also computed the $L_1$ matrix distance norm across the estimated rate matrices for each subsample, and no aberrant samples were detected (see Text S2 for detailed results).
 
 Another aspect of interest is the amount of information extracted from each sample, which we measure by calculating Kullback-Leibler divergence between prior and posterior distribution of traits at root \cite{roots}.
-Tables S3 and S4 show that for all subsamples in both serotypes there was lower information extraction, with moderately concentrated posterior distributions at root.% TODO: check this numbering in the end
+Tables S\ref{stab:ED_A} and S\ref{stab:ED_O} show that for all subsamples in both serotypes there was lower information extraction, with moderately concentrated posterior distributions at root.
 For serotype O inference about location of origin was consistent across samples, with Venezuela being the most probable country of origin.
 In the case of serotype A, however, there was some uncertainty about the most probable root state, with Argentina being pointed as root by one of the subsamples.
 Also, we observed a slightly stronger support for Venezuela as root for serotype O when compared to Brazil as root for serotype A.
@@ -284,11 +285,10 @@ While serotype O presented average $Pr(\text{root=Venezuela})=0.47$, $Pr(\text{r
 The results from the Skyride coalescent reconstruction show strikingly different dynamical behaviors for the two serotypes, with serotype O exhibiting considerable more oscillation over time, and a diversity peak occurring in late years of the 1990 decade.
 Serotype A exhibits a more stable behavior over most of the 20th century, with most variation occurring within the temporal sampling interval, mainly in the last years of the 2000 decade.
 To better understand the relationship between vaccination and viral diversity, we overlaid vaccination data to our skyride plots presented in Figure~\ref{fig:skyride}.
-These data were expressed as doses per head, which we consider to be a more accurate measure of vaccination coverage, since it corrects for population size increase/decrease over time (see Figure S1 for livestock population and trade time series). %TODO: check this numbering in the end
+These data were expressed as doses per head, which we consider to be a more accurate measure of vaccination coverage, since it corrects for population size increase/decrease over time (see Figure S\ref{sfig:trade} for livestock population and trade time series). 
 Also, serotype-specific disease notification data was collected and plotted as an overlaid time series to the reconstruction. 
 
-To assess the robustness of our reconstructions we performed skyride reconstructions using only recent (sampling date $>2000$) sequences (see Text S2, Figure S6).
-%TODO: Check this numbering in the end
+To assess the robustness of our reconstructions we performed skyride reconstructions using only recent (sampling date $>2000$) sequences (see Text S2, Figure S\ref{sfig:only2000sky}).
 We also performed reconstructions in datasets without the over-represented locations (data not shown). All these analyses gave roughly similar results to those presented in Figure~\ref{fig:skyride}. The only exception was the reconstruction for serotype A without Argentinian sequences, for which it is not possible to see the marked drop near 2001 that is clear in Figure~\ref{fig:skyride}. 
 
 \begin{center}
@@ -386,7 +386,7 @@ Serotype-specific outbreak notifications were obtained from FMD Bioportal (\url{
 
 First, we checked both data sets for recombination using the tools (SBP and GARD \cite{sbpgard}) available from the Datamonkey facility (\url{http://www.datamonkey.org/}), and no recombination was found.
 We then used hierarchical likelihood model selection, as implemented in the package jModeltest 0.1.1 \cite{jmodel}, to select the best nucleotide substitution model for each data set.
-
+  
 We performed Bayesian model selection to assess the performance of different demographic and molecular clock models.
 To this end, we used state-of-the-art marginal likelihood estimators, such as path sampling (PS) \cite{LartillotPhilippe} and stepping-stone sampling (SS) \cite{Xie}, which have only recently been introduced in the field of phylogenetics.
 Both PS and SS have been previously shown to outperform traditional posterior-based marginal likelihood estimators, such as the harmonic mean estimator (HME) and its stabilized version (sHME) \cite{LartillotPhilippe,Xie,Baele2012,Baele2013a,Baele2013b}.
@@ -409,7 +409,7 @@ We use this approach to determine the time to most recent common ancestor (TMRCA
 \subsection*{Quantifying temporal and spatial signal} 
 
 To assess the "temporal signal'' for each serotype, we took the approach of Faria et al (2012) \cite{Faria2012} and compared the marginal likelihoods of a "dated tips'' model and a contemporaneous tips model by calculating Bayes factors (BF) \cite{Suchard2001,KassRaftery1995} (see Spatial Model Selection for details).
-We followed Kass and Raftery (1995) \cite{KassRaftery1995} and considered BF$>3$ to be indicator of decisive support for the hypothesis of temporal structure.
+We followed Kass and Raftery (1995) \cite{KassRaftery1995} and considered BF$>$3 to be indicator of decisive support for the hypothesis of temporal structure.
 
 Spatial signal was quantified using Bayesian tip-association tests, implemented through the BaTS software package\cite{bats}.
 Each sequence was assigned to its country of origin and we computed association index (AI) and parsimony score (PI).
@@ -455,9 +455,9 @@ Another important aspect is the influence of different predictors, such as popul
 The framework adopted here allows for the incorporation of such information into the inference process, by either providing predictor information directly into the CTMC rate matrix of the geographic model or by putting a distance-based or uniform prior on the estimated rates in the CTMC rate matrix. 
 The following predictors were used to parameterize the CTMC rate matrix: trade of live cattle, pigs and sheep; when the rates of that matrix are not fixed to these values but instead estimated from the data, we used the two aforementioned priors.
 %These variables were normalized such that their expectation was one with unit variance. 
-See Figure S2 for kernel density smoothing of these prior distributions.
-% TODO: check this numbering in the end
-%GB: you could automate this, right?
+See Figure S\ref{sfig:tradeinfo} for kernel density smoothing of these prior distributions.
+%GB: you could automate this, right? -> Done :)
+
 
 In this study, we exploit recent developments in Bayesian model selection \cite{Baele2012,Baele2013a,Baele2013b}, as implemented in the BEAST software program \cite{BEAST}.
 For each parameterization of the CTMC rate matrix proposed above, we perform accurate estimation of the (log) marginal likelihood using path sampling (PS) and stepping-stone sampling (SS), accommodating phylogenetic uncertainty.
@@ -595,7 +595,7 @@ Predictor & PS & SS & BF$^2$ & PS & SS & BF \\
 %\hline
 Cattle&-12588.76&-12591.26&-27.70&\textbf{-8308.94}&\textbf{-8311.21}& \textbf{13.49}\\
 Distance&\textbf{-12557.69}&\textbf{-12559.73}&\textbf{3.83}&-8313.89&-8315.37&9.33\\
-Pig&-12589.33&-12590.94&-27.38&-8325.39&-8326.63&-1.93\\
+Pigs&-12589.33&-12590.94&-27.38&-8325.39&-8326.63&-1.93\\
 Sheep&-12570.67&-12572.56&-9.00&-8326.23&-8330.64&-5.94\\
 Uniform&-12561.98&-12563.56&--&-8321.49&-8324.70&--\\
 \bottomrule
@@ -609,21 +609,19 @@ Uniform&-12561.98&-12563.56&--&-8321.49&-8324.70&--\\
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[H]
 \caption{
-\textbf{Inferred root locations for each predictor for both serotypes.} We present most probable country of origin inferred using each predictor, with associated probabilities inside parentheses. 1- Uniform, all rates equal prior.
+\textbf{Inferred root locations for each predictor for both serotypes.} We present most probable country of origin inferred using each predictor, with associated probabilities inside parentheses. 1-- Uniform, all rates equal prior; 2-- Probability of being the root; 3-- Kullback-Leibler Divergence.
 }
 \begin{center}
-\begin{tabular}{lcc}
+\begin{tabular}{lcccc}
 \toprule
-Model & Serotype A & Serotype O \\
+& \multicolumn{2}{c}{Serotype A}&\multicolumn{2}{c}{Serotype O}\\
+Predictor& Origin ($Pr$(root)$^2$)& KL$^3$&Origin ($Pr$(root))& KL\\
 \midrule
-Distance & Peru (0.96)& Colombia (0.92)\\
-Sheep    & Brazil (0.90) & Colombia (0.98)\\
-Pig      & Colombia (0.99) &Colombia (0.52)\\
-Uniform$^1$  & Peru (0.96) &Colombia (0.92)\\
-Cattle   & Peru (0.94) &Colombia (0.95)\\
-Sheep-Freq & Peru (0.84)&Colombia (0.86)\\
-Pig-Freq & Colombia (0.72) &Colombia (0.71)\\
-Cattle-Freq & Peru (0.92)& Colombia (0.97)\\
+Distance & Argentina (0.75)&3.86& Colombia (0.96)&3.76\\
+Sheep    & Brazil (0.89) &3.52 & Colombia (0.99)&5.91\\
+Pigs      & Colombia (0.99)& 5.98&Colombia (0.91)&4.73\\
+Uniform$^1$  & Argentina (0.84)& 3.78&Colombia (0.96)&3.20\\
+Cattle   & Peru (0.93)& 5.17 &Colombia (0.95)&3.81\\
  \bottomrule
 \end{tabular}
 \end{center}
@@ -631,6 +629,5 @@ Cattle-Freq & Peru (0.92)& Colombia (0.97)\\
 \end{flushleft}
 \label{tab:roots}
  \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
