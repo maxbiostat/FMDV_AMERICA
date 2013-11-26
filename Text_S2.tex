@@ -8,7 +8,7 @@
 \usepackage{float}
 \usepackage{amsmath}
 \bibliographystyle{plos2009}%
-%%% Supp Mat modififcations
+%%% Supp Mat modifications
 \renewcommand{\thetable}{S\arabic{table}}   
 \renewcommand{\thefigure}{S\arabic{figure}}
 %%%
@@ -41,9 +41,9 @@ Another strategy is to devise prior distributions for the CTMC infinitesimal rat
 
 %TODO: talk about bias in skyride 
 
-In this study we provide a thorough assesment of the effects of sampling bias in the phylogeographic inference results. 
+In this study we provide a thorough assessment of the effects of sampling bias in the phylogeographic inference results. 
 First we propose a formal Bayesian test to gain insight into the effect of sampling bias, using the differences in representation as a predictor to viral spread.
-Secondly, a customized sampling scheme is used to downsample the original data sets and reduced representation bias.
+Secondly, a customized sampling scheme is used to down-sample the original data sets and reduced representation bias.
 
 \section{``Representation-informed'' priors and Country base frequencies}
 The first experiment to study the impact of sampling in our estimated was to use what we call a ``representation-informed'' prior.
@@ -62,7 +62,7 @@ These results show significant statistical support for the ``representation-info
 
 Also, we assessed the impact of fixed base frequencies for the locations, as follows: we allowed .
 The 'fixed frequencies' analyses yielded substantially lower marginal likelihoods (data not shown, see main text for discussion).
-Also, estimated base frequencies significantly differred from their observed counterparts as shown in Figure~\ref{sfig:freqs}.
+Also, estimated base frequencies significantly differed from their observed counterparts as shown in Figure~\ref{sfig:freqs}.
 
 \section{Robustness of parameter estimation and demographic reconstruction}
 
@@ -75,18 +75,18 @@ To investigate that, we performed parameter estimation with and without these lo
 Tables~\ref{stab:SB_A} and~\ref{stab:SB_O} show medians and $95 \%$ credible intervals for several parameters of interest with and without the overrepresented locations
 for both serotypes.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Parameter estimation with downsampling}
+\subsection{Parameter estimation with down-sampling}
 
-For large data sets it is possible to perform equal downsampling, i.e., simple random stratified sampling \cite{fluPNAS}.
+For large data sets it is possible to perform equal down-sampling, i.e., simple random stratified sampling \cite{fluPNAS}.
 However, this was not possible in the data sets analyzed in this study.
 The above experiments were performed by excluding all sequences from overrepresented locations.
 
-To assess the effect of biased sampling while still using the information from overrepresented locations, we used a downsampling scheme.
+To assess the effect of biased sampling while still using the information from overrepresented locations, we used a down-sampling scheme.
 We draw as many sequences from the most represented location as there are sequences from the second most represented location.
 For serotype A, the second most represented country was Venezuela ($27$ sequences) and for serotype O Colombia was the second location with more sequences ($36$).
 To compose the subsamples for serotype A we then randomly drew $27$ sequences from Argentina and combined them to the other sequences in the original data set.
 This procedure was performed five times to obtain five subsamples.
-Subsampling for serotype O proceeded analogously.
+Sub-sampling for serotype O proceeded analogously.
 
 Results of these experiments are presented in Tables~\ref{stab:ED_A} and~\ref{stab:ED_O}.
 For most parameters there was substantial overlap between posterior distributions obtained using different subsamples.
@@ -132,7 +132,7 @@ The Kullback-Leibler divergence is given by:
 The higher the divergence, the more the posterior distribution is far away from its prior expectation, hence more signal is extracted from data.
 We calculated equation~\ref{seq:KL} for the root state distributions for all subsamples (presented in Tables~\ref{stab:ED_A} and \ref{stab:ED_O}) and all predictors (see main text).
 \subsection{Spatial Bayesian Stochastic Search Variable Selection across subsamples}
-To gain further insight into the impact of downsampling in our phylogeographic inference, we conducted a Bayesian Stochastic Search Variable Selection (BSSVS) to seach for the most parsimonious set of routes needed to explain data variation in each subsample.
+To gain further insight into the impact of down-sampling in our phylogeographic inference, we conducted a Bayesian Stochastic Search Variable Selection (BSSVS) to search for the most parsimonious set of routes needed to explain data variation in each subsample.
 As stated in the main text and in \cite{roots}, this strategy naturally allows for the analytical calculation of Bayes factors for each migration route (i.e. graph edge).
 BFs were then calculated for each subsample and plotted accordingly.
 In Figure~\ref{sfig:bssvsA} we present the results for serotype A.
@@ -146,14 +146,14 @@ Also, root probability distributions seem to be more consistent for serotype A t
 \section{Discussion}
 %\newpage
 % A possibility, unexplored in this paper, is to sample each location with probability proportional to its disease prevalence
-% In theory, a Bayesian approach should offer a certain degree of protection against model mispecification and sampling bias by bla  bla...
+% In theory, a Bayesian approach should offer a certain degree of protection against model misspecification and sampling bias by bla  bla...
 % robustness of skyride crap
 \newpage
 \section*{Figure Legends}
 \textbf{Figure~\ref{sfig:freqs}. Estimated and observed trait (country) frequencies for both serotypes.}
 We estimated base frequencies using a discrete uniform prior and compared the obtained median values to the observed frequencies for each country in each data set (serotype). 
 
-\textbf{Figure~\ref{sfig:trade}. Exportation, importation and production time series for pigs, cattle and sheep in South america.}
+\textbf{Figure~\ref{sfig:trade}. Exportation, importation and production time series for pigs, cattle and sheep in South America.}
 Panel A shows exportations in log~(~\# ~of heads) of live animals for pigs, sheep and cattle.
 Panels B and C show importation and overall production (population increase), respectively.
 
@@ -162,19 +162,19 @@ Information on cattle, sheep and pigs trade was retrieved from FAO and used to c
 Each prior was evaluated for prior predictive probability (marginal likelihood) using the PS and SS algorithms. 
 
 \textbf{Figure~\ref{sfig:AvsO}. Scatterplot of estimated rate matrices for serotypes A and O.}
-We plotted all overllaping rates (Serotype O without Paraguay) estimated using a symmetric CTMC model for both serotypes, to investigate whether the two serotypes have different spatial patterns.
+We plotted all overlapping rates (Serotype O without Paraguay) estimated using a symmetric CTMC model for both serotypes, to investigate whether the two serotypes have different spatial patterns.
 
 \textbf{Figure~\ref{sfig:compz}. Comparison of of estimated rate matrices across subsamples}
 In panels A and B we show entry-wise scatterplots of the five subsamples for serotypes A and O respectively.
 Colors depict country of origin.
 Panel C and D shows heat maps of the $5\times5$ matrices of $L_1$ norms comparing each subsample, for serotypes A and O, respectively.
 
-\textbf{Figure~\ref{sfig:bssvsA}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype A sequences.}
-We performed the BSSVS analysis on five downsampled data sets (reduced Argentina representation) and plotted the resulting Bayes factors.
+\textbf{Figure~\ref{sfig:bssvsA}. Bayesian Stochastic Search Variable Selection for five down-sampled subsamples of serotype A sequences.}
+We performed the BSSVS analysis on five down-sampled data sets (reduced Argentina representation) and plotted the resulting Bayes factors.
 Arrow thickness is proportional to Bayes factor magnitude and colors depict the probability of being root for each country.
 
-\textbf{Figure~\ref{sfig:bssvsO}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype O sequences.}
-We performed the BSSVS analysis on five downsampled (equal numbers of Ecuadorian and Colombian sequences) data sets and  plotted the resulting Bayes factors.
+\textbf{Figure~\ref{sfig:bssvsO}. Bayesian Stochastic Search Variable Selection for five down-sampled subsamples of serotype O sequences.}
+We performed the BSSVS analysis on five down-sampled (equal numbers of Ecuadorian and Colombian sequences) data sets and  plotted the resulting Bayes factors.
 Arrow thickness is proportional to Bayes factor magnitude and colors depict the probability of being root for each country.
 
 \textbf{Figure~\ref{sfig:only2000sky}. Skyride coalescent reconstructions using sequences from 2000 to present only for both serotypes.}
@@ -384,8 +384,8 @@ Rate ($\times 10^{-2}$)	&1.11 (0.91-1.32)	&0.91 (0.63-1.21)\\
 \medskip
 \begin{minipage}{\textwidth} 
 \begin{center}
-\caption{ {{\bf 'Equal downsampling' experiment for serotype A.}} 
-Five random downsampled subsamples were obtained and used for parameter inference.
+\caption{ {{\bf 'Equal down-sampling' experiment for serotype A.}} 
+Five random down-sampled subsamples were obtained and used for parameter inference.
 1-- $\times 10^{-3}$; 2 -- $\times 10^{-2}$; 3-- Probability distribution at root node; 4-- Kullback-Leibler Divergence (see Text) }
 \begin{tabular}{cccccc}
 \toprule
@@ -410,7 +410,7 @@ Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration 
 \medskip
 \begin{minipage}{\textwidth}
 \begin{center}
- \caption{ {{\bf 'Equal downsampling' experiment for serotype O.}} Five random downsampled subsamples were obtained and used for parameter inference.
+ \caption{ {{\bf 'Equal down-sampling' experiment for serotype O.}} Five random down-sampled subsamples were obtained and used for parameter inference.
 1-- $\times 10^{-3}$; 2--  Probability at root node; 3-- Kullback-Leibler Divergence (see Text).}
 \begin{tabular}{cccccc}
 \toprule
