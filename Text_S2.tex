@@ -6,12 +6,11 @@
 \usepackage{subfigure}
 \usepackage{indentfirst}
 \usepackage{float}
+\usepackage{amsmath}
 \bibliographystyle{plos2009}%
 %%% Supp Mat modififcations
-%\usepackage[figurename=Figure\quad S]{caption} 
-%\usepackage[labelsep=endash]{caption}
-\renewcommand{\figurename}{Figure S}
-\renewcommand{\tablename}{Table S}
+\renewcommand{\thetable}{S\arabic{table}}   
+\renewcommand{\thefigure}{S\arabic{figure}}
 %%%
 %opening
 \title{Text S2 -- Assessing the impact of taxon sampling on phylogeographic and coalescent reconstructions} % aargh, lousy name
@@ -45,11 +44,13 @@ Another strategy is to devise prior distributions for the CTMC infinitesimal rat
 In this study we provide a thorough assesment of the effects of sampling bias in the phylogeographic inference results. 
 First we propose a formal Bayesian test to gain insight into the effect of sampling bias, using the differences in representation as a predictor to viral spread.
 Secondly, a customized sampling scheme is used to downsample the original data sets and reduced representation bias.
+
 \section{``Representation-informed'' priors and Country base frequencies}
 The first experiment to study the impact of sampling in our estimated was to use what we call a ``representation-informed'' prior.
 This prior is built by assuming that the average rate of flow between two locations is proportional to the difference in representation, i.e., the number of sequences from each location.
 We can mathematically express the above rationale as:
 \begin{equation}
+\label{seq:repprior}
  m_{ij}=C\frac{|n_i-n_j|}{\sum_i|n_i-n_j|}
 \end{equation}
 where $n_i$ and $n_j$ are the number of sequences from locations $i$ and $j$ and $C$ is an arbitrary constant, chosen such that $E[m_{ij}]=1$ (see the Methods section in main text).
@@ -61,17 +62,17 @@ These results show significant statistical support for the ``representation-info
 
 Also, we assessed the impact of fixed base frequencies for the locations, as follows: we allowed .
 The 'fixed frequencies' analyses yielded substantially lower marginal likelihoods (data not shown, see main text for discussion).
-Also, estimated base frequencies significantly differred from their observed counterparts as shown in Figure S\ref{sfig:freqs}.
+Also, estimated base frequencies significantly differred from their observed counterparts as shown in Figure~\ref{sfig:freqs}.
 
 \section{Robustness of parameter estimation and demographic reconstruction}
 
 To quantify the impact of including older sequences, which are not available for all locations, we assessed the robustness of our temporal reconstruction by using only sequences from 2000 to present.
 For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior on coalescent times, also known as `skyride' model.
-These results are presented in Figure S\ref{sfig:only2000sky}.
+These results are presented in Figure~\ref{sfig:only2000sky}.
 
 Also, we were interested in studying whether overrepresented locations could influence phylogenetic parameter estimation.
 To investigate that, we performed parameter estimation with and without these locations.
-Tables S\ref{tab:SB_A} and S\ref{tab:SB_O} show medians and $95 \%$ credible intervals for several parameters of interest with and without the overrepresented locations
+Tables~\ref{stab:SB_A} and~\ref{stab:SB_O} show medians and $95 \%$ credible intervals for several parameters of interest with and without the overrepresented locations
 for both serotypes.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Parameter estimation with downsampling}
@@ -87,7 +88,7 @@ To compose the subsamples for serotype A we then randomly drew $27$ sequences fr
 This procedure was performed five times to obtain five subsamples.
 Subsampling for serotype O proceeded analogously.
 
-Results of these experiments are presented in Tables S\ref{stab:ED_A} and S\ref{stab:ED_O}.
+Results of these experiments are presented in Tables~\ref{stab:ED_A} and~\ref{stab:ED_O}.
 For most parameters there was substantial overlap between posterior distributions obtained using different subsamples.
 Also, inference regarding the spatial origin (root) was consistent across subsamples for both serotypes.
 
@@ -95,24 +96,53 @@ Also, inference regarding the spatial origin (root) was consistent across subsam
 
 A point of interest is whether the estimates for $\mathbf{Q}$ were consistent across subsamples.
 First we plotted the estimated rates across each subsample against each other for both serotypes.
-The results are shown in Figure S\ref{sfig:compz}A and~B and we can notice estimates are in agreement across subsamples.
+The results are shown in Figure~\ref{sfig:compz}A and~B and we can notice estimates are in agreement across subsamples.
 
 We also calculated the $L_1$ matrix distance norm for (each pair of) the estimates of $\mathbf{Q}$ obtained from each subsample.
 Let $\mathbf{X}$ and $\mathbf{Y}$ be two $K \times K$ square matrices.
 The $L_1$ matrix norm is defined as
+
 \begin{equation}
+\label{seq:L1}
  L_1 = \frac{1}{K^{2} (\sum_{i=1}^{K^2} |X_i-Y_i| ) }
 \end{equation}
 
 Since all entries in our matrices are non-negative, we they were log-transformed prior to computing distances.
 Calculations were performed using the \verb|norm()| in the \textbf{PET} package of the R statistical computing environment.
-The results of these analyses are presented in Figure S\ref{sfig:compz}C and~D.
+The results of these analyses are presented in Figure~\ref{sfig:compz}C and~D.
 We thank Professor Marc A. Suchard (UCLA) for advice on this topic.
 
-\subsection{Spatial Bayesian Stochastic Search Variable Selection}
-To gain further insight into the impact of downsampling in our phylogeographic inference, we conducted a Bayesian Stochastic Search Variable Selection to seach for the most parsimonious set of routes needed to explain data variation.
+\subsection{Quantifying spatial signal extraction}
+ In a Bayesian context, it is sometimes desirable to quantify how much information we gain from updating our prior information using the available data.
+ A common measure of this signal extraction is the Kullback-Leibler (KL) divergence between prior and posterior distributions \cite{KL}.
+ In a phylogeographic setting, Lemey et al (2009) \cite{roots} propose to calculate the KL divergence between the posterior distribution for the states at root and a uniform discrete prior.
+ Let $K$ be the number of discrete states (e.g. locations) and $\boldsymbol\theta$ be the $K$-dimensional vector of state probabilities.
+ Then the prior density is
+ \begin{equation}
+ \label{seq:prior}
+  \pi(\boldsymbol\theta_i) = \frac{1}{K} \quad \forall i \in \{1,..,K\} 
+ \end{equation}
+Next, let the trait data be denoted by $D$.
+The posterior distribution of $\boldsymbol\theta$ is $p(\boldsymbol\theta|D)$.
+The Kullback-Leibler divergence is given by:
+\begin{equation}
+ \label{seq:KL}
+ \int p(\boldsymbol\theta|D)log\frac{p(\boldsymbol\theta|D)}{\pi(\boldsymbol\theta)}
+\end{equation}
+The higher the divergence, the more the posterior distribution is far away from its prior expectation, hence more signal is extracted from data.
+We calculated equation~\ref{seq:KL} for the root state distributions for all subsamples (presented in Tables~\ref{stab:ED_A} and \ref{stab:ED_O}) and all predictors (see main text).
+\subsection{Spatial Bayesian Stochastic Search Variable Selection across subsamples}
+To gain further insight into the impact of downsampling in our phylogeographic inference, we conducted a Bayesian Stochastic Search Variable Selection (BSSVS) to seach for the most parsimonious set of routes needed to explain data variation in each subsample.
+As stated in the main text and in \cite{roots}, this strategy naturally allows for the analytical calculation of Bayes factors for each migration route (i.e. graph edge).
+BFs were then calculated for each subsample and plotted accordingly.
+In Figure~\ref{sfig:bssvsA} we present the results for serotype A.
+Results for serotype O are presented in Figure~\ref{sfig:bssvsO}.
+For both serotypes a high degree of agreement between inferred significant routes between subsamples.
+However, the distribution of states at root varies across subsamples.
 
-See Figures S\ref{sfig:bssvsA} and S\ref{sfig:bssvsO}. 
+For both serotypes the migration networks present two components; one connecting Venezuela, Colombia and Ecuador and another connecting southern cone countries, namely Brazil, Argentina and Uruguay.
+Particularly, for serotype A we observe a supported migration routes between Venezuela and Brazil, which is absent from serotype O results.
+Also, root probability distributions seem to be more consistent for serotype A than for serotype O.
 \section{Discussion}
 %\newpage
 % A possibility, unexplored in this paper, is to sample each location with probability proportional to its disease prevalence
@@ -120,36 +150,38 @@ See Figures S\ref{sfig:bssvsA} and S\ref{sfig:bssvsO}.
 % robustness of skyride crap
 \newpage
 \section*{Figure Legends}
-\textbf{Figure S\ref{sfig:freqs}. Estimated and observed trait (country) frequencies for both serotypes.}
+\textbf{Figure~\ref{sfig:freqs}. Estimated and observed trait (country) frequencies for both serotypes.}
 We estimated base frequencies using a discrete uniform prior and compared the obtained median values to the observed frequencies for each country in each data set (serotype). 
 
-\textbf{Figure S\ref{sfig:trade}. Exportation, importation and production time series for pigs, cattle and sheep in South america.}
+\textbf{Figure~\ref{sfig:trade}. Exportation, importation and production time series for pigs, cattle and sheep in South america.}
 Panel A shows exportations in log~(~\# ~of heads) of live animals for pigs, sheep and cattle.
 Panels B and C show importation and overall production (population increase), respectively.
 
-\textbf{Figure S\ref{sfig:tradeinfo}. Kernel density estimation for the trade-informed priors (predictors) used in this study.}
+\textbf{Figure~\ref{sfig:tradeinfo}. Kernel density estimation for the trade-informed priors (predictors) used in this study.}
 Information on cattle, sheep and pigs trade was retrieved from FAO and used to create trade-informed prior distributions for the CTMC infinitesimal rate matrix.
 Each prior was evaluated for prior predictive probability (marginal likelihood) using the PS and SS algorithms. 
 
-\textbf{Figure S\ref{sfig:AvsO}. Scatterplot of estimated rate matrices for serotypes A and O.}
+\textbf{Figure~\ref{sfig:AvsO}. Scatterplot of estimated rate matrices for serotypes A and O.}
 We plotted all overllaping rates (Serotype O without Paraguay) estimated using a symmetric CTMC model for both serotypes, to investigate whether the two serotypes have different spatial patterns.
 
-\textbf{Figure S\ref{sfig:compz}. Comparison of of estimated rate matrices across subsamples}
+\textbf{Figure~\ref{sfig:compz}. Comparison of of estimated rate matrices across subsamples}
 In panels A and B we show entry-wise scatterplots of the five subsamples for serotypes A and O respectively.
 Colors depict country of origin.
 Panel C and D shows heat maps of the $5\times5$ matrices of $L_1$ norms comparing each subsample, for serotypes A and O, respectively.
 
-\textbf{Figure S\ref{sfig:bssvsA}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype A sequences.}
-We performed the BSSVS analysis on five downsampled data sets (reduced Argentina representation) and plotted the results as in Figure 3 in the main text.
+\textbf{Figure~\ref{sfig:bssvsA}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype A sequences.}
+We performed the BSSVS analysis on five downsampled data sets (reduced Argentina representation) and plotted the resulting Bayes factors.
+Arrow thickness is proportional to Bayes factor magnitude and colors depict the probability of being root for each country.
 
-\textbf{Figure S\ref{sfig:bssvsO}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype O sequences.}
-We performed the BSSVS analysis on five downsampled (equal numbers of Ecuadorian and Colombian sequences) data sets and plotted the results as in Figure 3 in the main text.
+\textbf{Figure~\ref{sfig:bssvsO}. Bayesian Stochastic Search Variable Selection for five downsampled subsamples of serotype O sequences.}
+We performed the BSSVS analysis on five downsampled (equal numbers of Ecuadorian and Colombian sequences) data sets and  plotted the resulting Bayes factors.
+Arrow thickness is proportional to Bayes factor magnitude and colors depict the probability of being root for each country.
 
-\textbf{Figure S\ref{sfig:only2000sky}. Skyride coalescent reconstructions using sequences from 2000 to present only for both serotypes.}
+\textbf{Figure~\ref{sfig:only2000sky}. Skyride coalescent reconstructions using sequences from 2000 to present only for both serotypes.}
 As in the main text, disease cases and vaccination in doses per head are overlaid to the demographic reconstructions.
 
 \newpage
-\bibliography{Text_S2}
+\bibliography{FMDV_AMERICA}
 
 \newpage
 \begin{center}
@@ -214,11 +246,11 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 %%%%%%%%%%%%%%%%
 \begin{center}
 \begin{figure}[H]
-\subfigure[A]{\includegraphics[scale=.450]{FIGURES/A_ss1.jpeg}}
-\subfigure[B]{\includegraphics[scale=.450]{FIGURES/A_ss2.jpeg}}%\\
-\subfigure[C]{\includegraphics[scale=.450]{FIGURES/A_ss3.jpeg}}
-\subfigure[D]{\includegraphics[scale=.450]{FIGURES/A_ss4.jpeg}}%\\
-\subfigure[E]{\includegraphics[scale=.450]{FIGURES/A_ss5.jpeg}}
+\subfigure[A]{\includegraphics[scale=.350]{FIGURES/A_ss1.jpeg}}
+\subfigure[B]{\includegraphics[scale=.350]{FIGURES/A_ss2.jpeg}}\\
+\subfigure[C]{\includegraphics[scale=.350]{FIGURES/A_ss3.jpeg}}
+\subfigure[D]{\includegraphics[scale=.350]{FIGURES/A_ss4.jpeg}}\\
+\subfigure[E]{\includegraphics[scale=.350]{FIGURES/A_ss5.jpeg}}
 \caption{}
 \label{sfig:bssvsA}
 \end{figure}
@@ -228,11 +260,11 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 %%%%%%%%%%%%%%%
 \begin{figure}[H]
 \begin{center}
-\subfigure[A]{\includegraphics[scale=.450]{FIGURES/O_ss1.jpeg}}
-\subfigure[B]{\includegraphics[scale=.450]{FIGURES/O_ss2.jpeg}}%\\
-\subfigure[C]{\includegraphics[scale=.450]{FIGURES/O_ss3.jpeg}}
-\subfigure[D]{\includegraphics[scale=.450]{FIGURES/O_ss4.jpeg}}%\\
-\subfigure[E]{\includegraphics[scale=.450]{FIGURES/O_ss5.jpeg}}
+\subfigure[A]{\includegraphics[scale=.250]{FIGURES/O_ss1.jpeg}}
+\subfigure[B]{\includegraphics[scale=.250]{FIGURES/O_ss2.jpeg}}\\
+\subfigure[C]{\includegraphics[scale=.250]{FIGURES/O_ss3.jpeg}}
+\subfigure[D]{\includegraphics[scale=.250]{FIGURES/O_ss4.jpeg}}\\
+\subfigure[E]{\includegraphics[scale=.250]{FIGURES/O_ss5.jpeg}}
 \end{center}
 \caption{}
 \label{sfig:bssvsO}
@@ -321,7 +353,7 @@ Rate ($\times 10^{-3}$)	&4.14 (3.39-4.98)	&3.46 (2.82-4.11)\\
 \bottomrule
 \end{tabular}
 \end{center}
-\label{tab:SB_A}
+\label{stab:SB_A}
  \end{table}
 %%%%%%%%%
 %%%%%%%%%
@@ -342,7 +374,7 @@ Rate ($\times 10^{-2}$)	&1.11 (0.91-1.32)	&0.91 (0.63-1.21)\\
 \bottomrule
 \end{tabular}
 \end{center}
-\label{tab:SB_O}
+\label{stab:SB_O}
  \end{table}
 
 %%%%%%%%
