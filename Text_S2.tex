@@ -118,7 +118,7 @@ We thank Professor Marc A. Suchard (UCLA) for advice on this topic.
 \subsection{Quantifying spatial signal extraction}
  In a Bayesian context, it is sometimes desirable to quantify how much information we gain from updating our prior information using the available data.
  A common measure of this signal extraction is the Kullback-Leibler (KL) divergence between prior and posterior distributions \cite{M-KL}.
- In a phylogeographic setting, Lemey et al (2009) \cite{M-roots} propose to calculate the KL divergence between the posterior distribution for the states at root and a uniform discrete prior.
+ In a phylogeographic setting, Lemey et al. (2009) \cite{M-roots} propose to calculate the KL divergence between the posterior distribution for the states at root and a uniform discrete prior.
  Let $K$ be the number of discrete states (e.g. locations) and $\boldsymbol\theta$ be the $K$-dimensional vector of state probabilities.
  Then the prior density is
  \begin{equation}
@@ -133,10 +133,17 @@ The Kullback-Leibler divergence is given by:
  \int p(\boldsymbol\theta|D)log\frac{p(\boldsymbol\theta|D)}{\pi(\boldsymbol\theta)}
 \end{equation}
 The higher the divergence, the more the posterior distribution is far away from its prior expectation, hence more signal is extracted from data.
-We calculated equation~\ref{seq:KL} for the root state distributions for all subsamples (presented in Tables~\ref{stab:ED_A} and \ref{stab:ED_O}) and all predictors (see main text).
+We calculated equation~\ref{seq:KL} for the root state distributions for all subsamples (presented in Tables~\ref{stab:ED_A} and~\ref{stab:ED_O}) and all predictors (see main text).
 \subsection{Spatial Bayesian Stochastic Search Variable Selection across subsamples}
+
+In a phylogeographic setting, even for moderate numbers of locations we are usually left with the task of estimating a potentially large number of parameters. 
+BSSVS seeks to select a parsimonious set of rates that sufficiently explain data variation.
+By transforming each entry of the infinitesimal rate matrix $\mathbf{Q}$ into a vertex of the graph $\mathcal{G}$, the algorithm then searches the whole graph space, assigning an indicator variable $\delta_{ij}$ to each vertex.
+Assuming each $\delta_{ij}$ is Bernoulli distributed with parameter $p_{ij}$, we can select only those entries with high probability of being included by BSSVS.
+Using the fact that $\sum\delta_{ij}$ converges to a truncated Poisson distribution if the success probability is sufficiently small, we can can analytically compute Bayes factors using Equation 6 in Lemey et al. (2009).
+
 To gain further insight into the impact of down-sampling in our phylogeographic inference, we conducted a Bayesian Stochastic Search Variable Selection (BSSVS) to search for the most parsimonious set of routes needed to explain data variation in each subsample.
-As stated in the main text and in Lemey et al (2009) \cite{M-roots}, this strategy naturally allows for the analytical calculation of Bayes factors for each migration route (i.e. graph edge).
+As stated in the main text and in Lemey et al. (2009) \cite{M-roots}, this strategy naturally allows for the analytical calculation of Bayes factors for each migration route (i.e. graph edge).
 BFs were then calculated for each subsample and plotted accordingly.
 In Figure~\ref{sfig:bssvsA} we present the results for serotype A.
 Results for serotype O are presented in Figure~\ref{sfig:bssvsO}.
