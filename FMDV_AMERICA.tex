@@ -190,7 +190,7 @@ The period 2000-2010 is characterized by a decrease in viral flow (almost no new
  [Figure~\ref{fig:migration} about here]
 \end{center}
 
-To further explore the spatial behavior of FMDV we employ the so-called ``Markov jump'' counts \cite{Minin2008} of the expected number of location state transitions along the  branches of the phylogeny, which  provide a quantitative measure of gene flow between countries, representing successful viral introductions from one region to another. For this analysis we also calculated BF's using BSSVS.
+To further explore the spatial behavior of FMDV we employ the so-called ``Markov jump'' counts \cite{Minin2008} of the expected number of location state transitions along the  branches of the phylogeny, which  provide a quantitative measure of gene flow between countries, representing successful viral introductions from one region to another. For this analysis we also calculated BFs using BSSVS.
 The results are presented in Figure~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping in the routes connecting Venezuela, Colombia and Ecuador.
 For serotype A, highest (BF $>800$) support was observed for viral flow between Venezuela and Colombia and between Argentina and Uruguay.
 Transitions between Brazil and Bolivia and Peru and Ecuador also received good statistical support (BF $>10$).
@@ -214,7 +214,7 @@ Using data from both serotypes jointly, we estimated marginal likelihoods for a 
 In the ``shared'' model we used trait (location) and sequence data  from both serotypes to make inference about one CTMC rate matrix, whilst in the ``separate'' model we allow both serotypes to have each one CTMC rate matrix, while using the combined data from both serotypes.
 Both models allow serotypes to have different spatial diffusion rates.
 
-We plotted the rates estimated from independent runs for both serotypes and they do not seem to correlate (Fig. ~\ref{sfig:AvsO}).
+We plotted the rates estimated from independent runs for both serotypes and they do not seem to correlate (Figure~\ref{sfig:AvsO}).
 Moreover, from the separate and shared rate matrix analysis we found that rates inferred for serotype A are more strongly correlated with the rates estimated under a shared rate matrix, with Pearson's linear correlation coefficients $r_A=0.55$ and $r_O=0.18$, respectively.
 For this analysis, the correlation between serotype A and O rate matrix estimates was $0.07$.
 In contrast to these results, the rate indicators in BSSVS for both serotypes were in better accordance ($r=0.54$).
@@ -224,7 +224,15 @@ Using path sampling we obtained (log) marginal likelihoods of $-21478$ and $-214
 Results from stepping stone sampling were $-21488$ and $-21492$ respectively.
 Bayes factors assessment of the statistical support for the two hypotheses (shared or separate rate matrices), indicated that a shared model should be preferred to a model with separate rate matrices for each serotype (BFs $4$ and $10$ for PS and SS).
 
-% TODO: are the shared runs more statistically efficient? 
+Interestingly,for both serotypes shared and separate models yielded different most probable roots.
+For serotype A the separate model yielded Argentina as the spatial origin ($Pr(\text{root})=0.52$, while the shared matrix model pointed Brazil as the root with probability of $0.57$.
+allowing two separate rate matrices Venezuela was pointed as most probable origin with probability $0.44$ and the model with a shared rate matrix pointed Colombia as root ($Pr(\text{root})=0.51$.
+
+Regarding signal extraction, analyses for serotype A yielded KL divergences of $2.78$ and $1.93$ for shared and separate models, respectively.
+
+In contrast, KL divergences found for serotype O were very similar for both models ($1.45$ and $1.50$). 
+
+Overall, these analyses were slightly more efficient for serotype A in comparison with serotype O.
 
 \subsection*{Identifying potential predictors of FMDV spread in South America}
 
@@ -313,7 +321,7 @@ The differences in evolutionary rates, when taken together with the results from
 %SPATIAL DYNAMICS
 %%%%
 
-% As discussed by Cottam et al (2007) \cite{cottam2007}, phylogenetic methods can be used to unravel undetected transmission.
+% As discussed by Cottam et al. (2007) \cite{cottam2007}, phylogenetic methods can be used to unravel undetected transmission.
 % We focus on a comparative approach, using information obtained from both serotypes to gain insight into the general process of FMDV spread in South America.
 %This continent wide-sampling allowed us to reconstruct the temporal and spatial dynamics of FMDV in the continent for both serotypes in greater detail than previous studies
 % Ecuador is a BF star, key to the spread, endemic country
@@ -412,7 +420,7 @@ We use this approach to determine the time to most recent common ancestor (TMRCA
 
 \subsection*{Quantifying temporal and spatial signal} 
 
-To assess the "temporal signal'' for each serotype, we took the approach of Faria et al (2012) \cite{Faria2012} and compared the marginal likelihoods of a "dated tips'' model and a contemporaneous tips model by calculating Bayes factors (BF) \cite{Suchard2001,KassRaftery1995} (see Spatial Model Selection for details).
+To assess the "temporal signal'' for each serotype, we took the approach of Faria et al. (2012) \cite{Faria2012} and compared the marginal likelihoods of a "dated tips'' model and a contemporaneous tips model by calculating Bayes factors (BF) \cite{Suchard2001,KassRaftery1995} (see Spatial Model Selection for details).
 We followed Kass and Raftery (1995) \cite{KassRaftery1995} and considered BF$>$3 to be indicator of decisive support for the hypothesis of temporal structure.
 
 Spatial signal was quantified using Bayesian tip-association tests, implemented through the BaTS software package\cite{bats}.
