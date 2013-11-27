@@ -6,11 +6,14 @@
 \usepackage{subfigure}
 \usepackage{indentfirst}
 \usepackage{float}
+\usepackage{cite}
+\usepackage{xcite} % Cite stuff from the main text
 \usepackage{amsmath}
 \bibliographystyle{plos2009}%
 %%% Supp Mat modifications
 \renewcommand{\thetable}{S\arabic{table}}   
 \renewcommand{\thefigure}{S\arabic{figure}}
+\externalcitedocument[M-]{FMDV_AMERICA}
 %%%
 %opening
 \title{Text S2 -- Assessing the impact of taxon sampling on phylogeographic and coalescent reconstructions} % aargh, lousy name
@@ -34,10 +37,10 @@ Namely, $58$ of the $131$ ($44.2\%$) sequences collected for serotype A were fro
 This unbalanced design may introduce bias on our phylogeography analysis, since under a null 'single rate' model, the more sequences are collected from a location, the higher the estimates to and from this location will be. % TODO: citation or formula here
 % To see this, let....
 
-Sampling bias constitutes an important concern in phylogeographic modeling, and several studies have performed sensitivity analyses to determine how robust inference is to biased sampling \cite{Faria2012,Lemey2013,polar,fluPNAS}.
-Proposed approaches include using equally sampled data sets, for which each location contributes the same number of sequences \cite{fluPNAS}.
+Sampling bias constitutes an important concern in phylogeographic modeling, and several studies have performed sensitivity analyses to determine how robust inference is to biased sampling \cite{M-Faria2012,M-Lemey2013,M-polar,M-fluPNAS}.
+Proposed approaches include using equally sampled data sets, for which each location contributes the same number of sequences \cite{M-fluPNAS}.
 This approach is specially useful when a reasonable number of sequences is available.
-Another strategy is to devise prior distributions for the CTMC infinitesimal rate matrix ($\mathbf{Q}$) that explicitly counteract the effects of biased sampling \cite{Faria2012}.
+Another strategy is to devise prior distributions for the CTMC infinitesimal rate matrix ($\mathbf{Q}$) that explicitly counteract the effects of biased sampling \cite{M-Faria2012}.
 
 %TODO: talk about bias in skyride 
 
@@ -77,7 +80,7 @@ for both serotypes.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Parameter estimation with down-sampling}
 
-For large data sets it is possible to perform equal down-sampling, i.e., simple random stratified sampling \cite{fluPNAS}.
+For large data sets it is possible to perform equal down-sampling, i.e., simple random stratified sampling \cite{M-fluPNAS}.
 However, this was not possible in the data sets analyzed in this study.
 The above experiments were performed by excluding all sequences from overrepresented locations.
 
@@ -114,8 +117,8 @@ We thank Professor Marc A. Suchard (UCLA) for advice on this topic.
 
 \subsection{Quantifying spatial signal extraction}
  In a Bayesian context, it is sometimes desirable to quantify how much information we gain from updating our prior information using the available data.
- A common measure of this signal extraction is the Kullback-Leibler (KL) divergence between prior and posterior distributions \cite{KL}.
- In a phylogeographic setting, Lemey et al (2009) \cite{roots} propose to calculate the KL divergence between the posterior distribution for the states at root and a uniform discrete prior.
+ A common measure of this signal extraction is the Kullback-Leibler (KL) divergence between prior and posterior distributions \cite{M-KL}.
+ In a phylogeographic setting, Lemey et al (2009) \cite{M-roots} propose to calculate the KL divergence between the posterior distribution for the states at root and a uniform discrete prior.
  Let $K$ be the number of discrete states (e.g. locations) and $\boldsymbol\theta$ be the $K$-dimensional vector of state probabilities.
  Then the prior density is
  \begin{equation}
@@ -133,7 +136,7 @@ The higher the divergence, the more the posterior distribution is far away from 
 We calculated equation~\ref{seq:KL} for the root state distributions for all subsamples (presented in Tables~\ref{stab:ED_A} and \ref{stab:ED_O}) and all predictors (see main text).
 \subsection{Spatial Bayesian Stochastic Search Variable Selection across subsamples}
 To gain further insight into the impact of down-sampling in our phylogeographic inference, we conducted a Bayesian Stochastic Search Variable Selection (BSSVS) to search for the most parsimonious set of routes needed to explain data variation in each subsample.
-As stated in the main text and in \cite{roots}, this strategy naturally allows for the analytical calculation of Bayes factors for each migration route (i.e. graph edge).
+As stated in the main text and in Lemey et al (2009) \cite{M-roots}, this strategy naturally allows for the analytical calculation of Bayes factors for each migration route (i.e. graph edge).
 BFs were then calculated for each subsample and plotted accordingly.
 In Figure~\ref{sfig:bssvsA} we present the results for serotype A.
 Results for serotype O are presented in Figure~\ref{sfig:bssvsO}.
@@ -179,9 +182,6 @@ Arrow thickness is proportional to Bayes factor magnitude and colors depict the 
 
 \textbf{Figure~\ref{sfig:only2000sky}. Skyride coalescent reconstructions using sequences from 2000 to present only for both serotypes.}
 As in the main text, disease cases and vaccination in doses per head are overlaid to the demographic reconstructions.
-
-\newpage
-\bibliography{FMDV_AMERICA}
 
 \newpage
 \begin{center}
