@@ -101,10 +101,11 @@ Serotype A has been being responsible for epidemics that are typically larger an
 FMDV has probably been introduced in South America in the late years of the 19th century, probably brought by European colonization \cite{tully}. 
 By the 1970's, FMD was widespread in South America, with occurrence of multiple subtypes in large-scale epidemics \cite{Saraiva2003}.
 
-% LMF either put this paragraph above or get rid of it once and for all
+% LM  Andres suggestion: either move the following paragraph above or get rid of it once and for all
 % In 1987, as a consequence of the improving knowledge about disease ecosystems accumulated by the national programmes, began the Hemispheric Plan for the Eradication of FMD (PHEFA), elaborated and signed by South American countries as a continent-wide programme to strengthen national infra-structures, control animal trade and improve diagnostic and epidemiological investigation capabilities\cite{review_eradication}.
 % Its main objective is to create and maintain FMD-free areas, thus improving the availability of meat, milk and other economically important livestock products \cite{Saraiva2003,Saraiva2004,review_eradication,combining}. Considerable success has been achieved over the past years, with substantial reduction of FMD incidence in the late 1990's.
 % Despite considerable success, with a significant reduction in the incidence of FMD in the late 1990s, episodic outbreaks in 2001, 2005 and 2011, in areas previously free represented a serious setback for PHEFA, compromising its goals by 2010 \cite{Saraiva2003,Saraiva2004}.
+
 In South America, FMD control and eradication has traditionally been pursued using a combination of mass vaccination programs \cite{vaccinationSA} along with control of movements from areas in which FMDV infection was suspected and passive and active surveillance programs that, with heterogeneous success, were intended to early detect the FMDV.
 Phylogenetic analyses have already proved useful in the latter; particularly by recovering in real-time the transmission pathways from genetic data \cite{cottam2008} and providing insight into the processes that drive re-emergence \cite{combining}.
 In recent years, molecular epidemiology tools have been applied to understanding the (re-)emergence pattern of FMDV, allowing for inference on the origin and evolutionary history of emerging viruses \cite{Perez2001,Malirat2007,andean,Malirat2011,Maradei2013}.
@@ -115,7 +116,7 @@ tool to evaluate control programmes and guide vaccine formulation \cite{Maradei2
 The increased availability of geo-referenced time-stamped genetic data has fostered the development of new methods that integrate epidemiological and environmental data in order to reconstruct pathogen population dynamics and test evolutionary hypotheses \cite{MEP,grenfell}. 
 However, as pointed out by Di Nardo, Knowles \&  Paton (2011) \cite{combining}, this joint evaluation of information from different sources is usually done outside of a unified quantitative framework, in a qualitative fashion. In this context, Bayesian phylogeography offers a statistical framework to combine multiple sources of information in order to understand the spatio-temporal dynamics of FMDV and perform evolutionary hypothesis testing. Such framework has recently proven useful when investigating the patterns of FMDV spread and trace the spatial origins of FMD epidemics \cite{Carvalho2013,bulgaria,phymal,hall2013}.
 
-% LMF Andres comments : ''One may argue that in our early paper (3 in your reference list) we have alreay assessed time-space variation in relation to genetic variation in south America. There may also be other examples. I would use an alternative reasoning here. You are trying to assess the molecular epi of FMD at a continental level. This was done in the past (I believe Ingrid Bergmann and Viviana Malirat have published some work), but what never has been done is to reconstruct the history of evolution of the virus, and in relation to vaccination data, host-population dynamics, and time-space location. Make your case to demonstrate your originality.''
+% LM Andres comments : ''One may argue that in our early paper (3 in your reference list) we have alreay assessed time-space variation in relation to genetic variation in south America. There may also be other examples. I would use an alternative reasoning here. You are trying to assess the molecular epi of FMD at a continental level. This was done in the past (I believe Ingrid Bergmann and Viviana Malirat have published some work), but what never has been done is to reconstruct the history of evolution of the virus, and in relation to vaccination data, host-population dynamics, and time-space location. Make your case to demonstrate your originality.''
 % TODO: whilst I disagree, I'd like to hear more from you boyz.
 
 
@@ -129,7 +130,9 @@ Finally, we offer an appreciation of the statistical hurdles that may be caused 
 
 \subsection*{South American FMDV serotypes A and O exhibit rate variation among lineages and evolve measurably}
 
-In this study, we analyzed all publicly available VP1 (1D) sequences for serotypes A and O in South America (131 and 167 sequences, respectively) using a Bayesian phylogeographic approach. Our data sets spanned over a large period (1955-2010 for serotype A and 1994-2010 for serotype O)  and covered nearly all South American countries affected by FMD.
+% In this study, we analyzed all publicly available VP1 (1D) sequences for serotypes A and O in South America (131 and 167 sequences, respectively) using a Bayesian phylogeographic approach. Our data sets spanned over a large period (1955-2010 for serotype A and 1994-2010 for serotype O)  and covered nearly all South American countries affected by FMD.
+%LM  Andres thinks this is not results. Although I strongly agree, one has to keep in mind the methods section is just in the end, so MAYBE this sentence would fit in here afterall.
+% Check related issue #29.
 
 First, jModelTest selection analysis yielded the general time reversible (GTR) model with a discretized gamma distributed across-site rate variation and a proportion of invariant sites (GTR+I+$\Gamma_{4}$) model as the best fit nucleotide substitution model for both FMDV data sets.
 Next, we performed a stringent model selection analysis to chose the best-fit demographic growth model and molecular clock model.
@@ -139,8 +142,7 @@ After, we found that both serotypes A and O rapid evolution better fits a relaxe
 Particularly, the exponential relaxed molecular clock provided a better fit for serotype O data (BF=$21$) while the log-normal relaxed molecular clock model provided a better fit to serotype A (BF=$11$) (see Table ~\ref{stab:treeclockselection} for details). 
 The coefficient of variation for the relaxed molecular clock models was estimated at $0.32$ (95\% BCI: $ 0.21$--$0.43$) and $0.99$ (95\% BCI: $0.90$--$1.08$) respectively for serotype A and O, indicating substantial rate heterogeneity among lineages in the phylogeny. 
 
-We also performed a `temporal signal' test to evaluate the degree to which genetic divergence accumulates over time (described in \cite{Faria2012}).
-This confirmed significant temporal signal for both serotypes (A: BF=$310$; O: BF=$348$), showing that both FMDV data sets analyzed here are measurably evolving populations.
+The  `temporal signal' test \cite{Faria2012} (see Methods) indicated significant temporal signal for both serotypes (A: BF=$310$; O: BF=$348$), showing that both FMDV data sets analyzed here are measurably evolving populations.
 Overall, these results show that sufficient temporal information is embedded in sequence data of both serotypes under investigation, which is central for the estimation of times of divergence and to reconstruct the population dynamics in natural time units \cite{MEP}.
 
 \subsection*{Dating the divergence of FMDV in South America}
@@ -159,7 +161,7 @@ Here, a smaller clade of Colombian isolates are found interspersed within from V
 Overall, the Bayesian phylogenies suggest that most FMDV flow within South America occurred between neighboring countries. 
 
 Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated around $4 \times 10^{-3}$ substitutions/site/year. In addition, the estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e. at $1 \times 10^{-2}$, consistent with previous studies \cite{tully,Carvalho2013}. 
-
+% TODO: LM Andres claims that, for FMDV, we should only detect 'clockness' for data spanning over large periods. Whether this hold or not I don't know. The point is: we may include it into the discussion, but I don't think it jeopardizes any of the results of this section. Check related issue #32.
 \begin{center}
  [Figure~\ref{fig:trees} about here]
 \end{center}
