@@ -428,8 +428,8 @@ Further, we combined each of these demographic models with a relaxed molecular c
 The results of these model comparisons can be found in Table S1.
 
 Next, we employ Bayesian coalescent-based methods to build time-structured phylogenies for the two serotypes to gain insight into the past population dynamics of the virus.
-We use this approach to determine the time to most recent common ancestor (TMRCA) for each data set using the BEAST \cite{BEAST} software package.
- Given the computational demands of these approaches, we use BEAST \cite{BEAST} in combination with BEAGLE \cite{BEAGLE} to increase computational efficiency.
+We use this approach to determine the time to most recent common ancestor (TMRCA) for each data set using the BEAST \cite{beast2012} software package.
+ Given the computational demands of these approaches, we use BEAST \cite{beast2012} in combination with BEAGLE \cite{BEAGLE} to increase computational efficiency.
 
 
 \subsection*{Quantifying temporal and spatial signal} 
@@ -451,7 +451,7 @@ To gain insight into the mechanisms driving viral dynamics, we overlay the demog
 
 \subsection*{Spatial Analysis}
 
-BEAST \cite{BEAST} implements a set of diffusion models for spatial spread, both for discrete and continuous data.
+BEAST \cite{beast2012} implements a set of diffusion models for spatial spread, both for discrete and continuous data.
 In this paper, we focus on the discrete case and model the diffusion process as a continuous-time Markov chain (CTMC) \cite{roots}, treating the country of sampling of each sequence as a discrete state.
 To gain insight into the transmission network of FMDV in South America we apply an asymmetric non-reversible discrete phylogeography model to both data sets, with each country used as a discrete state.
 For statistical efficiency, we employ Bayesian stochastic search variable selection (BSSVS) in order to choose the minimal set of rates that sufficiently explain the observed data.
@@ -485,7 +485,7 @@ See Figure ~\ref{sfig:tradeinfo} for kernel density smoothing of these prior dis
 %GB: you could automate this, right? -> Done :)
 
 
-In this study, we exploit recent developments in Bayesian model selection \cite{Baele2012,Baele2013a,Baele2013b}, as implemented in the BEAST software program \cite{BEAST}.
+In this study, we exploit recent developments in Bayesian model selection \cite{Baele2012,Baele2013a,Baele2013b}, as implemented in the BEAST software program \cite{beast2012}.
 For each parameterization of the CTMC rate matrix proposed above, we perform accurate estimation of the (log) marginal likelihood using path sampling (PS) and stepping-stone sampling (SS), accommodating phylogenetic uncertainty.
 These methods are computationally demanding and require additional analyses but provide much greater accuracy over the frequently used but erroneous class of harmonic mean estimators (HME and sHME).
 PS and SS allow for an overall ranking of competing models to be constructed, from which the top-performing model can easily be determined, i.e. the model with the highest (log) marginal likelihood.
