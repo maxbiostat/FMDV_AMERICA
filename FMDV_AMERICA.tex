@@ -67,6 +67,7 @@ Luiz Max Fagundes de Carvalho$^{1,2\ast}$,
 Guy Baele$^{3}$,
 Nuno Rodrigues Faria$^{3,4}$,
 Andres M. Perez$^{5}$,
+Marc Suchard$^{6,7}$
 Philippe Lemey$^{3}$,
 Waldemir de Castro Silveira$^{1}$
 \\
@@ -76,16 +77,19 @@ Waldemir de Castro Silveira$^{1}$
 \\
 \bf{3} Department of Microbiology and Immunology, Rega Institute, KU Leuven, Belgium
 \\
-\bf{4} Department of Zoology, University of Oxford, Oxford OX1 3PS, UK
+\bf{4} Department of Zoology, University of Oxford, Oxford, United Kingdon
 \\
 \bf{5} Center for Animal Disease Modeling and Surveillance, University of California at Davis, Davis, United States of America
+\\
+\bf{6} Departments of Biomathematics and Human Genetics, David Geffen School of Medicine at UCLA, University of California, Los Angeles,  United States of America\\
+\bf{7} Department of Biostatistics, UCLA Fielding School of Public Health, University of California, Los Angeles,  United States of America
 \\
 $\ast$ E-mail: lmax.procc@gmail.com
 \end{flushleft}
 
 % Please keep the abstract between 250 and 300 words
 \section*{Abstract}
-Although Foot-and-mouth disease virus (FMDV) occurrence has dropped over the years, the virus circulates in certain areas of South America and the risk of re-emergence in previously free areas is a constant threat.
+Although Foot-and-mouth disease virus (FMDV) occurrence has disminished over the years, the virus still circulates in certain areas of South America and the risk of re-emergence in previously free areas is a constant threat.
 While the molecular epidemiology of FMDV in South America has been subject of several studies in the last years, an integrated quantitative approach to incorporate environmental and epidemiological data into the analyses is still lacking.
 In this study, we apply state-of-art Bayesian phylogenetics to the most comprehensive data sets of VP1 (1D) sequences from serotypes A and O collected in South America to date taking advantage of the BEAST framework to study the temporal and spatial variation of FMDV and test evolutionary hypotheses.
 We found that South American FMDV serotypes A and O exhibit rate variation among lineages and evolve measurably, while being best fitted by different relaxed molecular clock models (A: log-normal; O: exponential).
@@ -114,26 +118,28 @@ By the 1970's, FMD was widespread in South America, with occurrence of multiple 
 
 In South America, FMD control and eradication has traditionally been pursued using a combination of mass vaccination programs \cite{vaccinationSA} along with control of movements from areas in which FMDV infection was suspected and passive and active surveillance programs that, with heterogeneous success, were intended to early detect the FMDV.
 Phylogenetic analyses have already proved useful in the latter; particularly by recovering in real-time the transmission pathways from genetic data \cite{cottam2007,cottam2008} and providing insight into the processes that drive re-emergence \cite{combining}.
-In recent years, molecular epidemiology tools have been applied to understanding the (re-)emergence pattern of FMDV, allowing for inference on the origin and evolutionary history of emerging viruses \cite{Perez2001,Malirat2007,andean,Malirat2011,Maradei2013}.
+% In recent years, molecular epidemiology tools have been applied to understanding the (re-)emergence pattern of FMDV, allowing for inference on the origin and evolutionary history of emerging viruses \cite{Perez2001,Malirat2007,andean,Malirat2011,Maradei2013}.
 % These studies have played an important role in understanding the (re-)emergence pattern of FMDV, allowing for inference on the origin and evolutionary history of emerging viral strains \cite{topotypes,Perez2001}.
-Together with vaccine matching and MAb profiling studies \cite{Maradei2011}, phylogenetic analyses are a powerful 
-tool to evaluate control programmes and guide vaccine formulation \cite{Maradei2011,Maradei2013}.
+% Together with vaccine matching and MAb profiling studies \cite{Maradei2011}, phylogenetic analyses are a powerful 
+% tool to evaluate control programmes and guide vaccine formulation \cite{Maradei2011,Maradei2013}.
 
-The increased availability of geo-referenced time-stamped genetic data has fostered the development of new methods that integrate epidemiological and environmental data in order to reconstruct pathogen population dynamics and test evolutionary hypotheses \cite{MEP,grenfell}. 
-However, as pointed out by Di Nardo, Knowles \&  Paton (2011) \cite{combining}, this joint evaluation of information from different sources is usually done outside of a unified quantitative framework, in a qualitative fashion.
-In thi the s( cont)ext, Bayesian phylogeography offers a statistical framework to combine multiple sources of information in order to understand the spatio-temporal dynamics of FMDV and perform evolutionary hypothesis testing.
-Such framework has recently proven useful when investigating the patterns of FMDV spread and trace the spatial origins of FMD epidemics \cite{Carvalho2013,bulgaria,phymal,hall2013}.
+% The increased availability of geo-referenced time-stamped genetic data has fostered the development of new methods that integrate epidemiological and environmental data in order to reconstruct pathogen population dynamics and test evolutionary hypotheses \cite{MEP,grenfell}. 
+In recent years, molecular epidemiology tools have been applied to understanding the (re-)emergence pattern of FMDV, allowing for inference on the origin and evolutionary history of emerging strains \cite{Perez2001,Malirat2007,andean,Malirat2011,Maradei2013}.
+However, as pointed out by Di Nardo, Knowles \&  Paton (2011) \cite{combining}, a joint evaluation of epidemiological and environmental data is usually done outside of an unified quantitative framework, in a qualitative fashion.
+In this the context, Bayesian phylogeography offers a statistical framework to combine multiple sources of information in order to understand the spatio-temporal dynamics of FMDV and perform evolutionary hypothesis testing.
+This framework has recently proven useful when investigating the patterns of FMDV spread and trace the spatial origins of FMD epidemics \cite{Carvalho2013,bulgaria,phymal,hall2013}.
 
-% LM Andres comments : ''One may argue that in our early paper (3 in your reference list) we have alreay assessed time-space variation in relation to genetic variation in south America. There may also be other examples. I would use an alternative reasoning here. You are trying to assess the molecular epi of FMD at a continental level. This was done in the past (I believe Ingrid Bergmann and Viviana Malirat have published some work), but what never has been done is to reconstruct the history of evolution of the virus, and in relation to vaccination data, host-population dynamics, and time-space location. Make your case to demonstrate your originality.''
+% LM Andres comments : ''One may argue that in our early paper (3 in your reference list) we have already assessed time-space variation in relation to genetic variation in south America. There may also be other examples. I would use an alternative reasoning here. You are trying to assess the molecular epi of FMD at a continental level. This was done in the past (I believe Ingrid Bergmann and Viviana Malirat have published some work), but what never has been done is to reconstruct the history of evolution of the virus, and in relation to vaccination data, host-population dynamics, and time-space location. Make your case to demonstrate your originality.''
 % TODO: whilst I disagree, I'd like to hear more from you boyz.
 
 
 In this study we apply state-of-art Bayesian phylogeographic methods to investigate the evolutionary dynamics of serotypes A and O in South America, both in a spatial and temporal perspective.
-The probabilistic framework used here allows for the incorporation of multiple sources of information to test hypothesis about viral dispersal, while naturally accommodating uncertainty \cite{roots,towards}.
+The probabilistic framework used here allows for the incorporation of multiple sources of information to test hypotheses about viral dispersal, while naturally accommodating uncertainty \cite{roots,towards}.
 We use the Bayesian Evolutionary Analysis by Sampling Trees (BEAST) framework \cite{beast2012} to build time-structured phylogenies and a non-parametric demographic growth model \cite{skyride} to reconstruct past population dynamics, to which we overlay with vaccination and serotype-specific notification data.
 Moreover, we use data on livestock trade and geographical distances as predictors for viral spatial diffusion and use recently developed methods to accurately calculate marginal likelihoods for each predictor.
-Finally, we offer an appreciation of the statistical hurdles that may be caused by biased geographic sampling, and propose ways to ameliorate their effects.
-%TODO: decide whether or not this statement holds in the end
+
+% Finally, we offer an appreciation of the statistical hurdles that may be caused by biased geographic sampling, and propose ways to ameliorate their effects.
+%TODO: decide whether or not this statement holds in the end; I think it's more of a referee thing, to preclude them from trashing our work
 \section*{Results}
 
 \subsection*{South American FMDV serotypes A and O exhibit rate variation among lineages and evolve measurably}
@@ -168,7 +174,7 @@ The TMRCA for serotype O was estimated in around 20 years, showing a more recent
 Here, a smaller clade of Colombian isolates are found interspersed within from Venezuelan isolates. In addition, isolates from Ecuador are found interspersed with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
 Overall, the Bayesian phylogenies suggest that most FMDV flow within South America occurred between neighboring countries. 
 
-Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated around $4 \times 10^{-3}$ substitutions/site/year. In addition, the estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e. at $1 \times 10^{-2}$, consistent with previous studies \cite{tully,Carvalho2013}. 
+Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated around $4 \times 10^{-3}$ substitutions/site/year. In addition, the estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e. at $1 \times 10^{-2}$, consistent with previous studies \cite{tully,Carvalho2013,Muellner2011}. 
 % TODO: LM Andres claims that, for FMDV, we should only detect 'clockness' for data spanning over large periods. Whether this hold or not I don't know. The point is: we may include it into the discussion, but I don't think it jeopardizes any of the results of this section. Check related issue #32.
 \begin{center}
  [Figure~\ref{fig:trees} about here]
@@ -180,7 +186,6 @@ To assess the spatial pattern of FMDV spread within South America, we performed 
 We began by evaluating the spatial signal contained in our sequences using Bayesian tip-association tests \cite{bats} to determine the amount of spatial signal in our reconstructed phylogenies.
 To gain insight into the amount of association for each location, we computed the maximum clade (MC) statistic.
 The results can be found in Table ~\ref{stab:BaTS} and show significant location-tip association for both serotypes.
-MC statistics were different for each country in each dataset, showing different geographic structures for each serotype.
 As an overall result, our datasets presented high degree of spatial signal, what justifies more complex phylogeographic analyses to study the transmission network of FMDV in the continent.
 
 Fist, we employ an asymmetric continuous-time Markov chain (CTMC) phylogeographic model \cite{roots} to gain insight into the spatio-temporal process of FMDV spread. Coupled to this analysis we set up a Bayesian Stochastic Search Variable Selection (BSVSS) procedure to search for the most parsimonious set of migration routes (network edges) needed to explain the diffusion process (see Methods).
@@ -525,7 +530,7 @@ To analyze experiment iii, we used BSSVS to estimate Bayes Factors and compared 
 Additionally, we computed Kullback-Leibler divergence \cite{KL,roots} of the root state distributions using a discrete uniform distribution as reference. 
 
 \section*{Acknowledgments}
-The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Professors Marc Suchard (UCLA) and Oliver Pybus (Oxford) for insightful contributions and Miguel Carvalho, Felipe Figueiredo (PROCC) and Mauricio Oliveira (UFRJ) for operational support.
+The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Professor Oliver Pybus (Oxford) for insightful contributions and Miguel Carvalho, Felipe Figueiredo (PROCC) and Mauricio Oliveira (UFRJ) for operational support.
 We acknowledge the support of the National Evolutionary Synthesis Center (NESCent) through a working group (Software for Bayesian Evolutionary Analysis).
 
 \emph{Funding:} The research leading to these results has received funding from the European Union Seventh Framework Programme [FP7/2007-2013] under Grant Agreement no. 278433-PREDEMICS and ERC Grant agreement no. 260864.

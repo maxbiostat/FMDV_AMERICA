@@ -6,8 +6,8 @@
 \usepackage{subfigure}
 \usepackage{indentfirst}
 \usepackage{float}
-\usepackage{cite}
-\usepackage{xcite} % Cite stuff from the main text
+\us	epackage{cite}
+\usepackage{/home/max/Dropbox/FMDV_AMERICA/PAPER/xcite} % Cite stuff from the main text
 \usepackage{amsmath}
 \bibliographystyle{plos2009}%
 %%% Supp Mat modifications
@@ -22,10 +22,12 @@ Luiz Max Fagundes de Carvalho,
 Guy Baele,
 Nuno Rodrigues Faria,\\
 Andres M. Perez,
+Marc Suchard,
 Philippe Lemey and
 Waldemir de Castro Silveira
 \\}
 \date{}
+
 \begin{document}
 
 \maketitle
@@ -113,7 +115,6 @@ The $L_1$ matrix norm is defined as
 Since all entries in our matrices are non-negative, we they were log-transformed prior to computing distances.
 Calculations were performed using the \verb|norm()| in the \textbf{PET} package of the R statistical computing environment.
 The results of these analyses are presented in Figure~\ref{sfig:compz}C and~D.
-We thank Professor Marc A. Suchard (UCLA) for advice on this topic.
 
 \subsection{Quantifying spatial signal extraction}
  In a Bayesian context, it is sometimes desirable to quantify how much information we gain from updating our prior information using the available data.
@@ -134,6 +135,7 @@ The Kullback-Leibler divergence is given by:
 \end{equation}
 The higher the divergence, the more the posterior distribution is far away from its prior expectation, hence more signal is extracted from data.
 We calculated equation~\ref{seq:KL} for the root state distributions for all subsamples (presented in Tables~\ref{stab:ED_A} and~\ref{stab:ED_O}) and all predictors (see main text).
+
 \subsection{Spatial Bayesian Stochastic Search Variable Selection across subsamples}
 
 In a phylogeographic setting, even for moderate numbers of locations we are usually left with the task of estimating a potentially large number of parameters. 
