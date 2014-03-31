@@ -36,7 +36,6 @@
 
 \bibliographystyle{plos2009}% 
 
-
 \makeatletter
 \renewcommand{\@biblabel}[1]{\quad#1.}
 \makeatother
@@ -145,7 +144,7 @@ Moreover, we use data on livestock trade and geographical distances as predictor
 \subsection*{South American FMDV serotypes A and O exhibit rate variation among lineages and evolve measurably}
 
 % In this study, we analyzed all publicly available VP1 (1D) sequences for serotypes A and O in South America (131 and 167 sequences, respectively) using a Bayesian phylogeographic approach. Our data sets spanned over a large period (1955-2010 for serotype A and 1994-2010 for serotype O)  and covered nearly all South American countries affected by FMD.
-%LM  Andres thinks this is not results. Although I strongly agree, one has to keep in mind the methods section is just in the end, so MAYBE this sentence would fit in here afterall.
+%LM: TODO:  Andres thinks this is not results. Although I strongly agree, one has to keep in mind the methods section is just in the end, so MAYBE this sentence would fit in here afterall.
 % Check related issue #29.
 
 First, jModelTest selection analysis yielded the general time reversible (GTR) model with a discretized gamma distributed across-site rate variation and a proportion of invariant sites (GTR+I+$\Gamma_{4}$) model as the best fit nucleotide substitution model for both FMDV data sets.
@@ -156,8 +155,9 @@ After, we found that both serotypes A and O rapid evolution better fits a relaxe
 Particularly, the exponential relaxed molecular clock provided a better fit for serotype O data (BF=$21$) while the log-normal relaxed molecular clock model provided a better fit to serotype A (BF=$11$) (see Table ~\ref{stab:treeclockselection} for details). 
 The coefficient of variation for the log-normal relaxed molecular clock model was estimated at $0.32$ (95\% BCI: $ 0.21$--$0.43$) indicating substantial rate heterogeneity among lineages in the phylogeny. 
 
-The  `temporal signal' test \cite{Faria2012} (see Methods) indicated significant temporal signal for both serotypes (A: BF=$310$; O: BF=$348$), showing that both FMDV data sets analyzed here are measurably evolving populations.
-Overall, these results show that sufficient temporal information is embedded in sequence data of both serotypes under investigation, which is central for the estimation of times of divergence and to reconstruct the population dynamics in natural time units \cite{MEP}.
+The  `temporal signal' test \cite{Faria2012} (see Methods) indicated significant temporal signal for both serotypes (A: BF=$310$; O: BF=$348$), showing that both FMDV data sets analyzed here evolve measurably.
+This finding is consistent with the view that FMDV presents clock-like evolution only when large periods of time are considered, with short periods being dominated by quasispecies dynamics~\cite{Muellner2011}.
+Overall, these results show that sufficient temporal information is embedded in sequence data of both serotypes under investigation, which is central for the estimation of times of divergence and to reconstruct the population dynamics in natural time units~\cite{MEP}.
 
 \subsection*{Dating the divergence of FMDV in South America}
 
@@ -174,7 +174,8 @@ The TMRCA for serotype O was estimated in around 20 years, showing a more recent
 Here, a smaller clade of Colombian isolates are found interspersed within from Venezuelan isolates. In addition, isolates from Ecuador are found interspersed with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
 Overall, the Bayesian phylogenies suggest that most FMDV flow within South America occurred between neighboring countries. 
 
-Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated around $4 \times 10^{-3}$ substitutions/site/year. In addition, the estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e. at $1 \times 10^{-2}$, consistent with previous studies \cite{tully,Carvalho2013,Muellner2011}. 
+Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated around $4 \times 10^{-3}$ substitutions/site/year.
+In addition, the estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e. at $1 \times 10^{-2}$, consistent with previous studies \cite{tully,Carvalho2013,Muellner2011}. 
 % TODO: LM Andres claims that, for FMDV, we should only detect 'clockness' for data spanning over large periods. Whether this hold or not I don't know. The point is: we may include it into the discussion, but I don't think it jeopardizes any of the results of this section. Check related issue #32.
 \begin{center}
  [Figure~\ref{fig:trees} about here]
@@ -284,7 +285,7 @@ For each predictor we also assessed the state distribution at root, i.e., the pr
 In Table~\ref{tab:roots} we show that for serotype A there was discordance between predictors about which country was the most probable source of FMDV in the continent.
 Peru was the most probable location of origin the `cattle' predictor, but notably not for the best fitting predictor (geographic distance), for which Argentina was estimated as the origin with moderate probability ($0.75$).
 Argentina was also the most probable root for the uniform prior model ($Pr(\text{root})=0.84$).
-For the pigs trade predictors, Colombia was found to be the spatial origin.s
+For the pigs trade predictors, Colombia was found to be the spatial origin.
 For serotype O, showed much more concordance, and Colombia was pointed out as the spatial viral origin for all predictors with high probability (Table~\ref{tab:roots}).
 
 % TODO talk about KLs
