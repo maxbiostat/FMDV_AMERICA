@@ -254,19 +254,20 @@ allowing two separate rate matrices Venezuela was pointed as most probable origi
 
 Regarding spatial signal extraction, analyses for serotype A yielded KL divergences of $2.78$ and $1.93$ for shared and separate models, respectively.
 In contrast, KL divergences found for serotype O were very similar for both models ($1.45$ and $1.50$). 
-Overall, these analyses were slightly more efficient for serotype A in comparison with serotype O.
+Overall, our analyses were slightly more efficient for serotype A in comparison with serotype O.
 
 \subsection*{Identifying potential predictors of FMDV spread in South America}
 
-We used data from the detailed trade matrix available from the Food and Agriculture Organization (FAO) to elicit CMTC rate matrix priors (predictors).
+We used data on geographic distances and on trade of live cattle, pigs and sheep obtained from the detailed trade matrix available from the Food and Agriculture Organization (FAO), to elicit CMTC rate matrix priors (predictors).
 By accurately calculating the marginal likelihood of each predictor we can gain insight into the importance of each predictor on viral spread~\cite{Carvalho2013,Nelson2011}.
-We used data on geographic distances and on trade of live cattle, pigs and sheep.
-For each predictor, we performed MCMC runs using fixed base frequencies for each country, with frequencies set to their observed values.
-Moreover we performed analyses where base frequencies were estimated.
-The results of these later experiments are presented in Text S2, Figure ~\ref{sfig:freqs}.
-We can observe that estimated frequencies considerably differ from their observed values.
-Moreover, the analyses with fixed frequencies yielded lower marginal likelihoods for the predictors (data not shown).
-All predictors were compared to a spatially uniform vague prior using (log) Bayes factors.
+%We used data on geographic distances and on trade of live cattle, pigs and sheep.
+%For each predictor, we performed MCMC runs using fixed root state frequencies for each country, with frequencies set to their observed values.
+%Moreover we performed analyses where root state frequencies were estimated.
+% LM : I'll restrict these remarks to Text S2 only
+%The results of these experiments are presented in Text S2, Figure ~\ref{sfig:freqs}.
+%We can observe that estimated frequencies considerably differ from their observed values.
+%Moreover, the analyses with fixed frequencies yielded lower marginal likelihoods for the predictors (data not shown).
+% All predictors were compared to a spatially uniform vague prior using (log) Bayes factors.% LM: this is methods, I'll move it there and better explain it
 
 Interestingly, the results of this analyses (Table~\ref{tab:preds}) show different best fitting predictors for each serotype.
 For serotype A, distance and uniform outperform all the predictors tested, obtaining higher (log) marginal likelihoods.
@@ -275,7 +276,7 @@ For serotype O, the trade of live cattle as a predictor is the only one to outpe
 While for serotype A the best predictor was the geographic between countries (BF$=3.83$), the exchange of cattle was the best predictor for serotype O spread (BF$\approx 13$).
 Also, while for serotype A we moderate found statistical support for geographic distances as predictors of viral spread, this predictor had higher statistical support for serotype O (BF$\approx 9$).
 
-%NRF Do have any results for the analyses combining the rate matrices of O and A? What was the best fitting predictor in this case?
+%NRF Do we have any results for the analyses combining the rate matrices of O and A? What was the best fitting predictor in this case?
 % LM Nope we don't, unfortunately :(
 \begin{center}
  [Table~\ref{tab:preds} about here]
@@ -297,8 +298,10 @@ For serotype O, showed much more concordance, and Colombia was pointed out as th
 When performing inference under highly unbalanced designs, it is useful to perform sensitivity analysis to assess the impact of preferential sampling in phylogeographic inference~\cite{Faria2012,polar,fluPNAS}. 
 Since our data sets presented highly , we conducted a detailed sensitivity analysis to assess the effect of performing inference under highly unbalanced designs.
 
-To gain insight into the effect of sampling in our estimates, we devised ``representation-informed'' priors (predictors), using differences in representation (number of sequences) between countries to inform the rates of infinitesimal rate matrix.
-We then used path sampling and stepping stone sampling to calculate marginal likelihoods for these predictors, obtaining significantly lower marginal (log) likelihoods (-12556 and -8290, for serotypes A and O respectively).
+When we compared the (log) marginal likelihoods obtained by estimating root state frequencies instead of fixing them to their observed values, we found that this last approach yielded consistently lower marginal likelihoods.
+%To gain insight into the effect of sampling in our estimates, we devised ``representation-informed'' priors (predictors), using differences in representation (number of sequences) between countries to inform the rates of infinitesimal rate matrix.
+%We then used path sampling and stepping stone sampling to calculate marginal likelihoods for these predictors, obtaining significantly lower marginal (log) likelihoods (-12556 and -8290, for serotypes A and O respectively).
+% LM TODO: See if these 'rep-informed' analyses are worth including
 These results indicated further investigation was important to assess the robustness of our phylogeographic inference to sampling.
 
 We then draw five subsamples for each serotype in which over-represented were downsampled and performed BSSVS for each subsample.
@@ -450,28 +453,26 @@ Using a subset of 1000 samples from the posterior distribution of topologies, we
 Additionally, we computed the so-called monophyletic clade (MC) size for each state (country), as a local indicator of phylogeny-trait association for each state.
 
 
-\subsection*{Temporal Dynamics}
+\subsection*{Spatiotemporal Dynamics}
 
 We apply the so-called Skyride model~\cite{skyride} in order to reconstruct the past population dynamics for both serotypes. Skyride is a nonparametric coalescent-based method that uses a Gaussian Markov Random Field (GMRF) prior to obtain smooth estimates for effective population size trajectories over time. We choose a time-aware GMRF prior, such that estimates are as smooth as possible.
 To gain insight into the mechanisms driving viral dynamics, we overlay the demographic reconstructions to serotype-specific outbreak and vaccination (doses per head) time series.
 % TODO: Dr. NRF has to revise this section :0)
 
-\subsection*{Spatial Analysis}
-
 BEAST~\cite{beast2012} implements a set of diffusion models for spatial spread, both for discrete and continuous data.
 In this paper, we focus on the discrete case and model the diffusion process as a continuous-time Markov chain (CTMC)~\cite{roots}, treating the country of sampling of each sequence as a discrete state.
 To gain insight into the transmission network of FMDV in South America we apply an asymmetric non-reversible discrete phylogeography model to both data sets, with each country used as a discrete state.
+% LM: below is a brief statement about the root state frequencies
+To assess the effect of sampling we conducted analyses where the distribution of root states was fixed at its observed values (each country's proportion in the data set) and where the root frequencies were estimated.
 For statistical efficiency, we employ Bayesian stochastic search variable selection (BSSVS) in order to choose the minimal set of rates that sufficiently explain the observed data.
 BSSVS naturally allows for assessing the significance of each migration route, by calculating Bayes factors.
-We used the SPREAD~\cite{spread} package to annotate the results of all the spatial analyses presented in this paper, generating KML files (visualized using Google Earth, \url{http://www.google.com/earth/index.
-html}) and calculate the BFs from BSSVS.
+We used the SPREAD~\cite{spread} package to annotate the results of all the spatial analyses presented in this paper, generating KML files (visualized using Google Earth, \url{http://www.google.com/earth/index.html}) and calculate the BFs from BSSVS.
 
-Taking advantage of the probabilistic nature of this framework, we also estimated net rates of migration and also tested the statistical fit of several predictors for viral spread (see Spatial Model Selection).
+% Taking advantage of the probabilistic nature of this framework, we also estimated net rates of migration and also tested the statistical fit of several predictors for viral spread (see Spatial Model Selection).
 
-To estimate the rate of viral flow between countries, we used the Markov Jumps~\cite{Minin2008} approach.
-Estimation is done by keeping track of (counting) labeled transitions along each branch of the phylogeny.
+To estimate the rate of viral flow between countries, we used the Markov Jumps~\cite{Minin2008} approach where estimation is done by keeping track of (counting) labeled transitions along each branch of the phylogeny.
 This way, we can compute the expected number of transitions between each pair of locations conditional on the observed data.
-These expectations can then be multiplied by geographical distances to obtain the expected distance traveled within the time elapsed on each branch~\cite{zoonotic}.
+% These expectations can then be multiplied by geographical distances to obtain the expected distance traveled within the time elapsed on each branch~\cite{zoonotic}. % LM: we don't do it, so no reason to mention it
 
 
 \subsubsection*{Spatial Model Selection}
@@ -484,18 +485,20 @@ To test this hypothesis, we constrain both serotypes to the same CTMC rate matri
 To compare whether a separate geographic model is needed to accurately analyze location traits, we removed the sequence from Paraguay in the serotype O data set to have equal geographic sampling between serotypes.
 The marginal likelihood of such a model is compared to that of one in which both serotypes were allowed to have separate rate matrices.
 
-Another important aspect is the influence of different predictors, such as population size and density, presence of airlines, roads and disease incidence on viral diffusion through space. 
+% Another important aspect is the influence of different predictors, such as population size and density, presence of airlines, roads and disease incidence on viral diffusion through space. 
+Another important aspect is the influence of different predictors on viral diffusion through space.
 The framework adopted here allows for the incorporation of such information into the inference process, by either providing predictor information directly into the CTMC rate matrix of the geographic model or by putting a distance-based or uniform prior on the estimated rates in the CTMC rate matrix. 
 The following predictors were used to parameterize the CTMC rate matrix: trade of live cattle, pigs and sheep; when the rates of that matrix are not fixed to these values but instead estimated from the data, we used the two aforementioned priors.
 %These variables were normalized such that their expectation was one with unit variance. 
-See Figure ~\ref{sfig:tradeinfo} for kernel density smoothing of these prior distributions.
-%GB: you could automate this, right? -> Done :)
+See Figure ~\ref{sfig:tradeinfo} for a kernel density smoothing plot of these prior distributions.
+%GB: you could automate this, right? -> LM: Done :)
 
 
 In this study, we exploit recent developments in Bayesian model selection~\cite{Baele2012,Baele2013a,Baele2013b}, as implemented in the BEAST software program~\cite{beast2012}.
 For each parameterization of the CTMC rate matrix proposed above, we perform accurate estimation of the (log) marginal likelihood using path sampling (PS) and stepping-stone sampling (SS), accommodating phylogenetic uncertainty.
-These methods are computationally demanding and require additional analyses but provide much greater accuracy over the frequently used but erroneous class of harmonic mean estimators (HME and sHME).
-PS and SS allow for an overall ranking of competing models to be constructed, from which the top-performing model can easily be determined, i.e. the model with the highest (log) marginal likelihood.
+% These methods are computationally demanding and require additional analyses but provide much greater accuracy over the frequently used but erroneous class of harmonic mean estimators (HME and sHME).
+% PS and SS allow for an overall ranking of competing models to be constructed, from which the top-performing model can easily be determined, i.e. the model with the highest (log) marginal likelihood.
+% LM: It pains me to remove these, but our methods section is too big
 Using these (log) marginal likelihoods, it is possible to calculate Bayes Factors, which give a measure of the relative performance of each model. 
 All (log) marginal likelihood estimations were performed using 64 power posteriors, which were each run for 2 million iterations, taking up to 4 weeks of computation for each model under evaluation.
 By performing multiple runs with varying settings, we were able to assess convergence of the (log) marginal likelihood calculations for each of the tested predictors.
@@ -509,27 +512,27 @@ By performing multiple runs with varying settings, we were able to assess conver
 %The stepping stone (SS) and path sampling (PS) approaches, as implemented in BEAST, were used  to calculate all marginal likelihoods reported in this paper.
 % Note that these approaches accommodate phylogenetic uncertainty.
 %PS and SS calculations were run using 64 power posteriors, each running for $250,000$, $500,000$ and 1 million iterations, taking up to 3 weeks of computation for each model under evaluation.
-
-\subsection*{Assessing the effect of sampling}
-
-As already found in previous studies~\cite{Faria2012, Lemey2013}, unbalanced sampling can have an important impact on the inference of the spatial migration rates.
-In this study, both data sets analyzed presented highly preferential sampling, with Ecuadorian sequences representing about 50 \% of the serotype O data and about 45 \% of serotype A sequences being from Argentina (see Text S1 for details).
-
-To assess the impact of sampling in our estimates, we performed the following experiments:
-\begin{itemize}
- \item i. Parameter estimation without the over-represented locations;
- \item ii. Parameter estimation with over-represented locations downsampled to the number of sequences of the second most represented location (Venezuela and Colombia, for serotypes A and O, respectively). For each serotype, we obtained five random subsamples using this approach;
- \item iii. Estimation of the marginal likelihood of a ``representation-informed'' prior distribution for the rates, detailed below.
-\end{itemize}
-
-In order to assess the relevance (impact) of the sampling scheme on the inference of the rate matrix, we formulated a representation-informed prior distribution, as follows: let $n_i$ and $n_j$ be the numbers of sequences available for locations $i$ and $j$, respectively.
- The representation-informed prior is a multivariate gamma prior, with expectations given by
-\begin{equation}
- m_{ij}=C\frac{|n_i-n_j|}{\sum_i|n_i-n_j|}
-\end{equation}
-where $C$ is an arbitrary constant, chosen such that $E[m_{ij}]=1$.
-To analyze experiment iii, we used BSSVS to estimate Bayes Factors and compared BFs obtained with different sub-samples.
-Additionally, we computed Kullback-Leibler divergence~\cite{KL,roots} of the root state distributions using a discrete uniform distribution as reference. 
+% 
+% \subsection*{Assessing the effect of sampling}
+% 
+% As already found in previous studies~\cite{Faria2012, Lemey2013}, unbalanced sampling can have an important impact on the inference of the spatial migration rates.
+% In this study, both data sets analyzed presented highly preferential sampling, with Ecuadorian sequences representing about 50 \% of the serotype O data and about 45 \% of serotype A sequences being from Argentina (see Text S1 for details).
+% 
+% To assess the impact of sampling in our estimates, we performed the following experiments:
+% \begin{itemize}
+%  \item i. Parameter estimation without the over-represented locations;
+%  \item ii. Parameter estimation with over-represented locations downsampled to the number of sequences of the second most represented location (Venezuela and Colombia, for serotypes A and O, respectively). For each serotype, we obtained five random subsamples using this approach;
+%  \item iii. Estimation of the marginal likelihood of a ``representation-informed'' prior distribution for the rates, detailed below.
+% \end{itemize}
+% 
+% In order to assess the relevance (impact) of the sampling scheme on the inference of the rate matrix, we formulated a representation-informed prior distribution, as follows: let $n_i$ and $n_j$ be the numbers of sequences available for locations $i$ and $j$, respectively.
+%  The representation-informed prior is a multivariate gamma prior, with expectations given by
+% \begin{equation}
+%  m_{ij}=C\frac{|n_i-n_j|}{\sum_i|n_i-n_j|}
+% \end{equation}
+% where $C$ is an arbitrary constant, chosen such that $E[m_{ij}]=1$.
+% To analyze experiment iii, we used BSSVS to estimate Bayes Factors and compared BFs obtained with different sub-samples.
+% Additionally, we computed Kullback-Leibler divergence~\cite{KL,roots} of the root state distributions using a discrete uniform distribution as reference. 
 
 \section*{Acknowledgments}
 The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Professor Oliver Pybus (Oxford) for insightful contributions and Miguel Carvalho, Felipe Figueiredo (PROCC) and Mauricio Oliveira (UFRJ) for operational support.
@@ -551,8 +554,7 @@ Diamonds sizes are proportional to posterior probabilities.
 
 {\bf Figure~\ref{fig:migration}. Spatiotemporal dynamics of FMDV in South America} Using an asymmetric diffusion model, we reconstructed the spatial spread of FMDV serotypes A and O throughout the South American continent during the 20th century.
 Circle radius are proportional to lineage diversity.
-Illustrations produced using data annotated from SPREAD~\cite{spread} and visualized using Google Earth (\url{http://www.google.com/earth/index.
-html}).
+Illustrations produced using data annotated from SPREAD~\cite{spread} and visualized using Google Earth (\url{http://www.google.com/earth/index.html}).
 
 {\bf Figure~\ref{fig:mj&BFs}. Migration networks for FMDV serotypes A and O in South America.} We estimated the number of migration events between countries using Markov jumps.
 Bayesian Stochastic Variable Search Selection (BSVSS) was used to determine most significant migration routes and Bayes factors are depicted by arrows, with line thickness proportional to BF magnitude.
