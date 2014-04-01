@@ -128,7 +128,9 @@ However, as pointed out by Di Nardo, Knowles \&  Paton (2011)~\cite{combining}, 
 In this the context, Bayesian phylogeography offers a statistical framework to combine multiple sources of information in order to understand the spatio-temporal dynamics of FMDV and perform evolutionary hypothesis testing.
 This framework has recently proven useful when investigating the patterns of FMDV spread and trace the spatial origins of FMD epidemics~\cite{Carvalho2013,bulgaria,phymal,hall2013}.
 
-% LM Andres comments : ''One may argue that in our early paper (3 in your reference list) we have already assessed time-space variation in relation to genetic variation in south America. There may also be other examples. I would use an alternative reasoning here. You are trying to assess the molecular epi of FMD at a continental level. This was done in the past (I believe Ingrid Bergmann and Viviana Malirat have published some work), but what never has been done is to reconstruct the history of evolution of the virus, and in relation to vaccination data, host-population dynamics, and time-space location. Make your case to demonstrate your originality.''
+% LM Andres comments : ''One may argue that in our early paper (3 in your reference list) we have already assessed time-space variation in relation to genetic variation in south America.
+% There may also be other examples. I would use an alternative reasoning here. You are trying to assess the molecular epi of FMD at a continental level.
+% This was done in the past (I believe Ingrid Bergmann and Viviana Malirat have published some work), but what never has been done is to reconstruct the history of evolution of the virus, and in relation to vaccination data, host-population dynamics, and time-space location. Make your case to demonstrate your originality.''
 % TODO: whilst I disagree, I'd like to hear more from you boyz.
 
 
@@ -183,14 +185,15 @@ In addition, the estimated evolutionary rate for serotype O was approximately 2.
 
 \subsection*{Spatial Dynamics of FMDV in South America}
 
-To assess the spatial pattersn of FMDV spread within South America, we performed Bayesian phylogeographic analysis, also using the models available in BEAST~\cite{roots}.
-We began by evaluating the spatial signal contained in our sequences using Bayesian tip-association tests~\cite{bats} to determine the amount of spatial signal in our reconstructed phylogenies.
-To gain insight into the amount of association for each location, we computed the maximum clade (MC) statistic.
-The results can be found in Table ~\ref{stab:BaTS} and show significant location-tip association for both serotypes.
+%To assess the spatial pattern of FMDV spread within South America, we performed Bayesian phylogeographic analysis, also using the models available in BEAST~\cite{roots}.
+%We began by evaluating the spatial signal contained in our sequences using Bayesian tip-association tests~\cite{bats} to determine the amount of spatial signal in our reconstructed phylogenies.
+%To gain insight into the amount of association for each location, we computed the maximum clade (MC) statistic.
+The results of the spatial signal analysis using BaTS~\cite{bats} can be found in Table ~\ref{stab:BaTS} and show significant location-tip association for both serotypes.
 As an overall result, our datasets presented high degree of spatial signal, what justifies more complex phylogeographic analyses to study the transmission network of FMDV in the continent.
 
-Fist, we employ an asymmetric continuous-time Markov chain (CTMC) phylogeographic model~\cite{roots} to gain insight into the spatio-temporal process of FMDV spread. Coupled to this analysis we set up a Bayesian Stochastic Search Variable Selection (BSVSS) procedure to search for the most parsimonious set of migration routes (network edges) needed to explain the diffusion process (see Methods).
-BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path.
+We employed an asymmetric continuous-time Markov chain (CTMC) phylogeographic model~\cite{roots} available in BEAST~\cite{beast2012} to gain insight into the spatio-temporal process of FMDV spread.
+Coupled to this analysis we set up a Bayesian Stochastic Search Variable Selection (BSVSS) procedure to search for the most parsimonious set of migration routes (network edges) needed to explain the diffusion process (see Methods) and assess the importance/significance of each migration path.
+%BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path.
 The results are presented in Figure~\ref{fig:migration} and show that Brazil and Colombia were the most probable origins for serotypes A and O respectively.
 
 For serotype O the highest rates were estimated for transitions between Argentina and Peru, Argentina and Venezuela, Uruguay and Ecuador and Uruguay and Argentina.
@@ -214,8 +217,9 @@ The period 2000-2010 is characterized by a decrease in viral flow (almost no new
  [Figure~\ref{fig:migration} about here]
 \end{center}
 
-To further explore the spatial behavior of FMDV we employ the so-called ``Markov jump'' counts~\cite{Minin2008} of the expected number of location state transitions along the  branches of the phylogeny, which  provide a quantitative measure of gene flow between countries, representing successful viral introductions from one region to another. For this analysis we also calculated BFs using BSSVS.
-The results are presented in Figure~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping in the routes connecting Venezuela, Colombia and Ecuador.
+To further explore the spatial behavior of FMDV we employ the so-called ``Markov jump'' counts~\cite{Minin2008} of the expected number of location state transitions along the  branches of the phylogeny, which  provide a quantitative measure of gene flow between countries, representing successful viral introductions from one region to another.
+%For this analysis we also calculated BFs using BSSVS.
+The results, along with the Bayes factors from BSSVS are presented in Figure~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping of the routes connecting Venezuela, Colombia and Ecuador.
 For serotype A, highest (BF $>800$) support was observed for viral flow between Venezuela and Colombia and between Argentina and Uruguay.
 Transitions between Brazil and Bolivia and Peru and Ecuador also received good statistical support (BF $>10$).
 For serotype O, overall (log) Bayes factors were lower in magnitude, but supported similar routes.
@@ -271,8 +275,8 @@ By accurately calculating the marginal likelihood of each predictor we can gain 
 % All predictors were compared to a spatially uniform vague prior using (log) Bayes factors.% LM: this is methods, I'll move it there and better explain it
 
 Interestingly, the results of this analyses (Table~\ref{tab:preds}) show different best fitting predictors for each serotype.
-For serotype A, distance and uniform outperform all the predictors tested, obtaining higher (log) marginal likelihoods.
-For serotype O, the trade of live cattle as a predictor is the only one to outperform the distance and uniform priors.
+For serotype A, distance and vague outperform all the predictors tested, obtaining higher (log) marginal likelihoods.
+For serotype O, the trade of live cattle as a predictor is the only one to outperform the distance and vague priors.
 
 While for serotype A the best predictor was the geographic between countries (BF$=3.83$), the exchange of cattle was the best predictor for serotype O spread (BF$\approx 13$).
 Also, while for serotype A we moderate found statistical support for geographic distances as predictors of viral spread, this predictor had higher statistical support for serotype O (BF$\approx 9$).
@@ -286,7 +290,7 @@ Also, while for serotype A we moderate found statistical support for geographic 
 For each predictor we also assessed the state distribution at root, i.e., the probability of each country being the origin of the circulating strains.
 In Table~\ref{tab:roots} we show that for serotype A there was discordance between predictors about which country was the most probable source of FMDV in the continent.
 Peru was the most probable location of origin the `cattle' predictor, but notably not for the best fitting predictor (geographic distance), for which Argentina was estimated as the origin with moderate probability ($0.75$).
-Argentina was also the most probable root for the uniform prior model ($Pr(\text{root})=0.84$).
+Argentina was also the most probable root for the vague gamma prior model ($Pr(\text{root})=0.84$).
 For the pigs trade predictors, Colombia was found to be the spatial origin.
 For serotype O, showed much more concordance, and Colombia was pointed out as the spatial viral origin for all predictors with high probability (Table~\ref{tab:roots}).
 
@@ -295,7 +299,7 @@ For serotype O, showed much more concordance, and Colombia was pointed out as th
 \begin{center}
  [Table~\ref{tab:roots} about here]
 \end{center}
-\subsection*{Sampling bias assessment in the phylogeographic analysis}
+\subsection*{ Sensistivity of the phylogeographic analysis to sampling bias}
 When performing inference under highly unbalanced designs, it is useful to perform sensitivity analysis to assess the impact of preferential sampling in phylogeographic inference~\cite{Faria2012,polar,fluPNAS}. 
 Since our data sets presented highly , we conducted a detailed sensitivity analysis to assess the effect of performing inference under highly unbalanced designs.
 
@@ -486,7 +490,7 @@ The marginal likelihood of such a model is compared to that of one in which both
 
 % Another important aspect is the influence of different predictors, such as population size and density, presence of airlines, roads and disease incidence on viral diffusion through space. 
 Another important aspect is the influence of different predictors on viral diffusion through space.
-The framework adopted here allows for the incorporation of such information into the inference process, by either providing predictor information directly into the CTMC rate matrix of the geographic model or by putting a distance-based or uniform prior on the estimated rates in the CTMC rate matrix. 
+The framework adopted here allows for the incorporation of such information into the inference process, by either providing predictor information directly into the CTMC rate matrix of the geographic model or by putting a distance-based or vague gamma prior on the estimated rates in the CTMC rate matrix. 
 The following predictors were used to parameterize the CTMC rate matrix: trade of live cattle, pigs and sheep; when the rates of that matrix are not fixed to these values but instead estimated from the data, we used the two aforementioned priors.
 %These variables were normalized such that their expectation was one with unit variance. 
 See Figure ~\ref{sfig:tradeinfo} for a kernel density smoothing plot of these prior distributions.
@@ -619,7 +623,8 @@ Additionally, data on vaccination  (doses per head) and (log) FMD serotype-speci
 \textbf{Spatial model selection results for livestock predictors.}
 We assessed the significance of livestock trade in FMDV spread in South America using two importance sampling methods, i.e. path sampling (PS) and stepping-stone sampling (SS), to estimate (log) marginal likelihoods for each predictor using 64 path steps and 2 million iterations per path step.
 We also present the (log) marginal likelihood estimates for two location priors under which the location rates are estimated, rather than being fixed (as for the livestock predictors).
-We put these two scenarios in a separate part of the table to indicate that these estimates should not be compared to those of the livestock predictors.}
+We put these two scenarios in a separate part of the table to indicate that these estimates should not be compared to those of the livestock predictors.
+}
 \begin{center}
 \begin{tabular}{lrrrrrr}
 \toprule
