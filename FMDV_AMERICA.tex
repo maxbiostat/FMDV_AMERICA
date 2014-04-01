@@ -70,18 +70,18 @@ Marc Suchard$^{6,7}$
 Philippe Lemey$^{3}$,
 Waldemir de Castro Silveira$^{1}$
 \\
-\bf{1} Pan American Center for Foot-and-Mouth Disease (PAHO/WHO), Duque de Caxias, Rio de Janeiro, Brazil
+\bf{1} Pan American Center for Foot-and-Mouth Disease (PAHO/WHO), Duque de Caxias, Rio de Janeiro, Brazil.
 \\
 \bf{2} Program for Scientific Computing (PROCC), Oswaldo Cruz Foundation, Rio de Janeiro, Rio de Janeiro, Brazil.
 \\
-\bf{3} Department of Microbiology and Immunology, Rega Institute, KU Leuven, Belgium
+\bf{3} Department of Microbiology and Immunology, Rega Institute -- KU Leuven, Leuven, Belgium.
 \\
 \bf{4} Department of Zoology, University of Oxford, Oxford, United Kingdon
 \\
-\bf{5} Department of Veterinary Population Medicine, University of Minnesota, St. Paul, United States of America
+\bf{5} Department of Veterinary Population Medicine, University of Minnesota, St. Paul, United States of America.
 \\
-\bf{6} Departments of Biomathematics and Human Genetics, David Geffen School of Medicine at UCLA, University of California, Los Angeles,  United States of America\\
-\bf{7} Department of Biostatistics, UCLA Fielding School of Public Health, University of California, Los Angeles,  United States of America
+\bf{6} Departments of Biomathematics and Human Genetics, David Geffen School of Medicine at UCLA, University of California, Los Angeles,  United States of America.\\
+\bf{7} Department of Biostatistics, UCLA Fielding School of Public Health, University of California, Los Angeles,  United States of America.
 \\
 $\ast$ E-mail: lmax.procc@gmail.com
 \end{flushleft}
@@ -234,11 +234,12 @@ Since the difference in medians is substantial but quantiles widely overlap, we 
 \end{center}
 
 One may ask if both serotypes present different spatial spread patterns.
-Using data from both serotypes jointly, we estimated marginal likelihoods for a model in which a single rate matrix was estimated (``shared'') and one in which two separate matrices were estimated (``separate''). 
-In the ``shared'' model we used trait (location) and sequence data  from both serotypes to make inference about one CTMC rate matrix, whilst in the ``separate'' model we allow both serotypes to have each one CTMC rate matrix, while using the combined data from both serotypes.
-Both models allow serotypes to have different spatial diffusion rates.
+% LM: methodological shit
+%Using data from both serotypes jointly, we estimated marginal likelihoods for a model in which a single rate matrix was estimated (``shared'') and one in which two separate matrices were estimated (``separate''). 
+%In the ``shared'' model we used trait (location) and sequence data  from both serotypes to make inference about one CTMC rate matrix, whilst in the ``separate'' model we allow both serotypes to have each one CTMC rate matrix, while using the combined data from both serotypes.
+%Both models allow serotypes to have different spatial diffusion rates.
 
-We plotted the rates estimated from independent runs for both serotypes and they do not seem to correlate (Figure~\ref{sfig:AvsO}).
+To address this question, we plotted the rates estimated from independent runs for both serotypes and they do not seem to correlate (Figure~\ref{sfig:AvsO}).
 Moreover, from the separate and shared rate matrix analysis we found that rates inferred for serotype A are more strongly correlated with the rates estimated under a shared rate matrix, with Pearson's linear correlation coefficients $r_A=0.55$ and $r_O=0.18$, respectively.
 For this analysis, the correlation between serotype A and O rate matrix estimates was $0.07$.
 In contrast to these results, the rate indicators in BSSVS for both serotypes were in better accordance ($r=0.54$).
@@ -421,26 +422,24 @@ Serotype-specific outbreak notifications were obtained from FMD Bioportal (\url{
 
 First, we checked both data sets for recombination using the tools (SBP and GARD~\cite{sbpgard}) available from the Datamonkey facility (\url{http://www.datamonkey.org/}), and no recombination was found.
 We then used hierarchical likelihood model selection, as implemented in the package jModeltest 0.1.1~\cite{jmodel}, to select the best nucleotide substitution model for each data set.
-  
-We performed Bayesian model selection to assess the performance of different demographic and molecular clock models.
+
+Next, we used the Bayesian Evolutionary Analysis by Sampling Trees (BEAST)~\cite{beast2012} framework to build time-structured phylogenies for the two serotypes taking advantage of the  BEAGLE~\cite{BEAGLE} library to gain computational efficiency.
+%to gain insight into the past population dynamics of the virus.
+%We use this approach to determine the time to most recent common ancestor (TMRCA) for each data set using the BEAST~\cite{beast2012} software package.
+%Given the computational demands of these approaches, we use BEAST~\cite{beast2012} in combination with BEAGLE~\cite{BEAGLE} to increase computational efficiency.
+
+Using the methods available in BEAST, we performed Bayesian model selection to assess the performance of several combinations of tree priors and molecular clocks for each data set.
 To this end, we used state-of-the-art marginal likelihood estimators, such as path sampling (PS)~\cite{LartillotPhilippe} and stepping-stone sampling (SS)~\cite{Xie}, which have only recently been introduced in the field of phylogenetics~\cite{LartillotPhilippe,Xie,Baele2012,Baele2013a,Baele2013b}.
 %Both PS and SS have been previously shown to outperform traditional posterior-based marginal likelihood estimators, such as the harmonic mean estimator (HME) and its stabilized version (sHME)~\cite{LartillotPhilippe,Xie,Baele2012,Baele2013a,Baele2013b}.
 % Further, it has been shown that the use of proper priors is essential when performing Bayesian model selection~\cite{Baele2013a}, and by extension, when conducting Bayesian inference through Markov chain Monte Carlo (MCMC).
-% LM: TODO: I commented this out to reduce length, we can put it into TextS2
-                                                                       
+% LM: TODO: I commented this out to reduce length, we can put it into TextS2                                                                       
 %GB: Did we estimate marginal likelihoods for the skyride or for the skygrid? <- LM: skyride...
 %NF: Would it be time consuming if we tested for the skygrid? 
 %GB: Why did we not compare the UCED and UCLD to the STRICT clock? Should we still do that? <-LM: we did, indeed. updated
-
-Using PS and SS, we have estimated the (log) marginal likelihood for several combinations of tree priors and molecular clocks, and this for each data set.
-We compared the Skyride model, i.e. a Bayesian nonparametric model that parameterizes the effective population size as a piecewise constant function and employs a GMRF prior to smooth the trajectory~\cite{skyride}, to a constant population size model.
-Further, we combined each of these demographic models with a relaxed molecular clock model, assuming either a log-normal or an exponential distribution to parameterize the rate distribution.
+% Using PS and SS, we have estimated the (log) marginal likelihood for several combinations of tree priors and molecular clocks, and this for each data set.
+%We compared the Skyride model, i.e. a Bayesian nonparametric model that parameterizes the effective population size as a piecewise constant function and employs a GMRF prior to smooth the trajectory~\cite{skyride}, to a constant population size model.
+%Further, we combined each of these demographic models with a relaxed molecular clock model, assuming either a log-normal or an exponential distribution to parameterize the rate distribution.
 The results of these model comparisons can be found in Table S1.
-
-Next, we employ Bayesian coalescent-based methods to build time-structured phylogenies for the two serotypes to gain insight into the past population dynamics of the virus.
-We use this approach to determine the time to most recent common ancestor (TMRCA) for each data set using the BEAST~\cite{beast2012} software package.
- Given the computational demands of these approaches, we use BEAST~\cite{beast2012} in combination with BEAGLE~\cite{BEAGLE} to increase computational efficiency.
-
 
 \subsection*{Quantifying temporal and spatial signal} 
 
@@ -459,9 +458,9 @@ We apply the so-called Skyride model~\cite{skyride} in order to reconstruct the 
 To gain insight into the mechanisms driving viral dynamics, we overlay the demographic reconstructions to serotype-specific outbreak and vaccination (doses per head) time series.
 % TODO: Dr. NRF has to revise this section :0)
 
-BEAST~\cite{beast2012} implements a set of diffusion models for spatial spread, both for discrete and continuous data.
-In this paper, we focus on the discrete case and model the diffusion process as a continuous-time Markov chain (CTMC)~\cite{roots}, treating the country of sampling of each sequence as a discrete state.
-To gain insight into the transmission network of FMDV in South America we apply an asymmetric non-reversible discrete phylogeography model to both data sets, with each country used as a discrete state.
+%BEAST~\cite{beast2012} implements a set of diffusion models for spatial spread, both for discrete and continuous data.
+Phylogeographic analysis of FMDV in South America was done using the methods presented in Lemey et al. (2009)~\cite{roots}, available in BEAST. 
+An asymmetric non-reversible discrete phylogeography model was applied to both data sets, with each country used as a discrete state.
 % LM: below is a brief statement about the root state frequencies
 To assess the effect of sampling we conducted analyses where the distribution of root states was fixed at its observed values (each country's proportion in the data set) and where the root frequencies were estimated.
 For statistical efficiency, we employ Bayesian stochastic search variable selection (BSSVS) in order to choose the minimal set of rates that sufficiently explain the observed data.
@@ -493,7 +492,6 @@ The following predictors were used to parameterize the CTMC rate matrix: trade o
 See Figure ~\ref{sfig:tradeinfo} for a kernel density smoothing plot of these prior distributions.
 %GB: you could automate this, right? -> LM: Done :)
 
-
 In this study, we exploit recent developments in Bayesian model selection~\cite{Baele2012,Baele2013a,Baele2013b}, as implemented in the BEAST software program~\cite{beast2012}.
 For each parameterization of the CTMC rate matrix proposed above, we perform accurate estimation of the (log) marginal likelihood using path sampling (PS) and stepping-stone sampling (SS), accommodating phylogenetic uncertainty.
 % These methods are computationally demanding and require additional analyses but provide much greater accuracy over the frequently used but erroneous class of harmonic mean estimators (HME and sHME).
@@ -515,8 +513,9 @@ By performing multiple runs with varying settings, we were able to assess conver
 % 
 % \subsection*{Assessing the effect of sampling}
 % 
-% As already found in previous studies~\cite{Faria2012, Lemey2013}, unbalanced sampling can have an important impact on the inference of the spatial migration rates.
-% In this study, both data sets analyzed presented highly preferential sampling, with Ecuadorian sequences representing about 50 \% of the serotype O data and about 45 \% of serotype A sequences being from Argentina (see Text S1 for details).
+As already found in previous studies~\cite{Faria2012, Lemey2013}, unbalanced sampling can have an important impact on the inference of the spatial migration rates.
+In this study, both data sets analyzed presented highly preferential sampling, with Ecuadorian sequences representing about 50 \% of the serotype O data and about 45 \% of serotype A sequences being from Argentina (see Text S1 for details).
+We conducted an extensive sensitivity analysis, exploring various sampling schemes and comparing parameter estimates (see Text S2 for a complete description).
 % 
 % To assess the impact of sampling in our estimates, we performed the following experiments:
 % \begin{itemize}
@@ -561,7 +560,7 @@ Bayesian Stochastic Variable Search Selection (BSVSS) was used to determine most
 Coroplethic maps show the net migration rates for each country, for both serotypes.
 
 {\bf Figure~\ref{fig:skyride}. Temporal dynamics of FMDV serotypes A and O in South America.} Population dynamics were reconstructed for both serotypes using the Gaussian Markov Random Field (Skyride) prior (see Methods).
-Additionally, data on vaccination  (doses per head) and (log) FMD serotype-specific notifications were superimposed on the demographic reconstruction, with 95 \% Bayesian Credible Intervals shaded in grey.
+Additionally, data on vaccination  (doses per head) and (log) FMD serotype-specific notifications were superimposed on the demographic reconstruction, with 95 \% Bayesian credible intervals shaded in grey.
 
 \newpage
 \section{Figures and Tables}
