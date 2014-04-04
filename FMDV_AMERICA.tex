@@ -169,14 +169,15 @@ Overall, these results show that sufficient temporal information is embedded in 
 We performed Bayesian MCMC analysis using BEAST to build time-structured phylogenies for each FMDV serotype, using the corresponding best-fit combination of nucleotide substitution, demographic and molecular clock models.
 The maximum clade credibility (MCC) tree estimated for serotype A (Figure~\ref{fig:trees}A) places the origin of the circulating strains in or around the early years of the 1920's decade.
 
-Figure~\ref{fig:trees}A shows that sequences from the same country tend to cluster in small clades although the Bayesian phylogenies for both serotypes also shows considerable interspersing of lineages indicating transborder FMDV migration.
-For example, Argentinian serotype A sequences were grouped in two clades that either comprised only Argentinian isolates or included sequences from Brazil and Uruguay (Figure~\ref{fig:trees}A).
+Figure~\ref{fig:trees}A shows that sequences from the same country tend to cluster in small clades, although the Bayesian phylogenies for both serotypes also show considerable interspersing of lineages, indicating transborder FMDV spread.
+For example, Argentinian serotype A sequences were grouped in two clades, that either comprised only Argentinian isolates or included sequences from Brazil and Uruguay (Figure~\ref{fig:trees}A).
 Interestingly, the majority of the isolates from Venezuela and Colombia fall together within two distinct clades. 
 
 Figure~\ref{fig:trees}B presents the estimated MCC tree for serotype O.
 The same interspersing pattern can be noticed, with Ecuador and Colombia showing several interleaved clades.
-The TMRCA for serotype O was estimated in around 20 years, showing a more recent origin.
-Here, a smaller clade of Colombian isolates are found interspersed within from Venezuelan isolates. In addition, isolates from Ecuador are found interspersed with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
+The tMRCA for serotype O was estimated around 20 years, showing a more recent origin.
+Here, a smaller clade of Colombian isolates are found interspersed within from Venezuelan isolates.
+In addition, isolates from Ecuador are found interspersed with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
 Overall, the Bayesian phylogenies suggest that most FMDV flow within South America occurred between neighboring countries. 
 
 Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated around $4 \times 10^{-3}$ substitutions/site/year.
@@ -199,7 +200,7 @@ Coupled to this analysis we set up a Bayesian Stochastic Search Variable Selecti
 %BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path.
 The results are presented in Figure~\ref{fig:migration} and show that Brazil and Colombia were the most probable origins for serotypes A and O respectively.
 
-For serotype O the highest rates were estimated for transitions between Argentina and Peru, Argentina and Venezuela, Uruguay and Ecuador and Uruguay and Argentina.
+The highest rates for serotype O were estimated for transitions between Argentina and Peru, Argentina and Venezuela, Uruguay and Ecuador and Uruguay and Argentina.
 When we analysed the obtained (log) Bayes factors, the best supported (BF$>9$) routes were between Peru and Brazil, Bolivia and Colombia, Argentina and Venezuela, Uruguay and Argentina and Argentina and Peru. The route between Uruguay and Peru showed smaller but strong support (BF$>4$).
 
 The highest rates for serotype A were obtained for transitions between Brazil and Uruguay, Ecuador and Venezuela and Bolivia and Venezuela.
@@ -222,7 +223,7 @@ The period 2000-2010 is characterized by a decrease in viral flow (almost no new
 
 To further explore the spatial behavior of FMDV we employ the so-called ``Markov jump'' (MJ) counts~\cite{Minin2008} of the expected number of location state transitions along the  branches of the phylogeny, which  provide a quantitative measure of gene flow between countries, representing successful viral introductions from one region to another.
 %For this analysis we also calculated BFs using BSSVS.
-The results of the MJ analysis, along with the Bayes factors from BSSVS are presented in Figure~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping of the routes connecting Venezuela, Colombia and Ecuador.
+The results of the MJ analysis, along with the Bayes factors from BSSVS are presented in Figure~\ref{fig:mj&BFs} and show that supported migration routes differ for each serotype, with some overlapping routes connecting Venezuela, Colombia and Ecuador.
 For serotype A, highest (BF $>800$) support was observed for viral flow between Venezuela and Colombia and between Argentina and Uruguay.
 Transitions between Brazil and Bolivia and Peru and Ecuador also received good statistical support (BF $>10$).
 For serotype O, overall (log) Bayes factors were lower in magnitude, but supported similar routes.
@@ -256,7 +257,7 @@ Using path sampling we obtained (log) marginal likelihoods of $-21478$ and $-214
 Results from stepping stone sampling were $-21488$ and $-21492$ respectively.
 Bayes factors assessment of the statistical support for the two hypotheses (shared or separate rate matrices), indicated that a shared model should be preferred to a model with separate rate matrices for each serotype (BFs $4$ and $10$ for PS and SS).
 
-Interestingly,for both serotypes shared and separate models yielded different most probable roots.
+Interestingly, shared and separate models yielded different most probable root locations for both serotypes.
 For serotype A the separate model yielded Argentina as the spatial origin ($Pr(\text{root})=0.52$, while the shared matrix model pointed Brazil as the root with probability of $0.57$.
 allowing two separate rate matrices Venezuela was pointed as most probable origin with probability $0.44$ and the model with a shared rate matrix pointed Colombia as root ($Pr(\text{root})=0.51$.
 
@@ -347,8 +348,8 @@ We also performed reconstructions in datasets without the over-represented locat
 Bayesian phylogenetics provides a framework for rigorously testing evolutionary hypotheses without conditioning on a single tree topology. Hence, this approach naturally accommodates phylogenetic uncertainty and, combined with accurate methods for marginal likelihood calculation, perform Bayesian model selection~\cite{Baele2012,Baele2013a,Baele2013b}.
 
 %  Interestingly, best fit branch substitution models (molecular clock) were different for both serotypes (Table S1) suggesting different evolutionary dynamics
-Thus, while for serotype A a more restrictive exponential molecular clock and a slower mutation rate were found, for serotype O our results point out a more diffuse distribution of branch-specific substitutions (log-normal) and a faster evolutionary rate.
-The differences in evolutionary rates, when taken together with the results from molecular clock model selection, suggest that, although the two serotypes share the same host and infection routes, they present rather different evolutionary dynamics. 
+While for serotype A a more restrictive exponential molecular clock and a slower mutation rate were found, for serotype O our results point out a more diffuse distribution of branch-specific substitutions (log-normal) and a faster evolutionary rate.
+The differences in evolutionary rates, taken together with the results from molecular clock model selection, suggest that, although the two serotypes share the same host and infection routes, they present rather different evolutionary dynamics. 
 
 %%%%%
 %SPATIAL DYNAMICS
@@ -435,7 +436,7 @@ We then used hierarchical likelihood model selection, as implemented in the pack
 
 Next, we used the Bayesian Evolutionary Analysis by Sampling Trees (BEAST)~\cite{beast2012} framework to build time-structured phylogenies for the two serotypes taking advantage of the  BEAGLE~\cite{BEAGLE} library to gain computational efficiency.
 %to gain insight into the past population dynamics of the virus.
-%We use this approach to determine the time to most recent common ancestor (TMRCA) for each data set using the BEAST~\cite{beast2012} software package.
+%We use this approach to determine the time to most recent common ancestor (tMRCA) for each data set using the BEAST~\cite{beast2012} software package.
 %Given the computational demands of these approaches, we use BEAST~\cite{beast2012} in combination with BEAGLE~\cite{BEAGLE} to increase computational efficiency.
 
 Using the methods available in BEAST, we performed Bayesian model selection to assess the performance of several combinations of tree priors and molecular clocks for each data set.
@@ -489,7 +490,7 @@ This way, we can compute the expected number of transitions between each pair of
 One of the main research questions in this study is whether or not the two serotypes share the same underlying dispersal determinant. 
 %GB: the way you phrase this may cause problems, it sounds like you first looked at your data and then decided you wanted to test this ...
 %To test this hypothesis, we estimated one single CMTC rate matrix using data from both serotypes, while allowing each serotype to have its own dispersal rate. 
-%This option is justifiable, since the two serotypes present different TMRCAs and mutation rates. etano
+%This option is justifiable, since the two serotypes present different tMRCAs and mutation rates. etano
 To test this hypothesis, we constrain both serotypes to the same CTMC rate matrix, which will be estimated using data from both serotypes, while still allowing for each serotype to have its own dispersal rate.
 To compare whether a separate geographic model is needed to accurately analyze location traits, we removed the sequence from Paraguay in the serotype O data set to have equal geographic sampling between serotypes.
 The marginal likelihood of such a model is compared to that of one in which both serotypes were allowed to have separate rate matrices.
