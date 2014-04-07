@@ -99,7 +99,14 @@ Using data on livestock (cattle, sheep and pigs) trade and geographic distance a
 
 Key-words: Phylogeography, foot-and-mouth disease virus, South America, animal trade, BEAST.
 \section*{Author Summary} % 150--200 words
-
+Foot-and-Mouth Diseases Virus is a highly mutant and infectious livestock pathogen.
+In South America, although some molecular epidemiology studies are available, little is known about the virus phylodynamics in the continent.
+In this paper we analyse all available VP1 sequences of serotypes A and O isolated in South America to unravel the spatial and temporal dynamics of the virus in the continent.
+We show that both serotypes evolve measurably in South America and identify tMRCAs of $\approx 70$ and $\approx 20$ years for serotypes A and O, respectively. 
+Serotype O presents a dispersal rate four times bigger than serotype A.
+Additionally, there are important differences in spatial behaviour, for instance Brazil is a hub for serotype A spread but not for serotype O.
+In constrast, Venezuela, Colombia and Ecuador seem to be more important for serotype O dispersal in the continent.
+Taken together, these results suggest %FMDV spreads mainly through short migration routes, although a few intense long-range migrations   
 \section*{Introduction}
 
 Foot-and-mouth disease virus (FMDV) is a rapidly evolving picornavirus, causative agent of the most important disease of domestic and wild cloven-hoofed animals, referred to as foot-and mouth disease (FMD)~\cite{review}.
@@ -177,7 +184,7 @@ Here, a smaller clade of Colombian isolates are found interspersed within from V
 In addition, isolates from Ecuador are found interspersed with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
 Overall, the Bayesian phylogenies suggest that most FMDV flow within South America occurred between neighboring countries. 
 
-Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated around $4 \times 10^{-3}$ substitutions/site/year.
+Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated in  $\approx 4 \times 10^{-3}$ substitutions/site/year.
 In addition, the estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e. at $1 \times 10^{-2}$, consistent with previous studies~\cite{tully,Carvalho2013,Muellner2011}. 
 % TODO: LM Andres claims that, for FMDV, we should only detect 'clockness' for data spanning over large periods. Whether this hold or not I don't know. The point is: we may include it into the discussion, but I don't think it jeopardizes any of the results of this section. Check related issue #32.
 \begin{center}
@@ -229,9 +236,9 @@ Highest support was found for transition between Ecuador and Peru and Colombia a
 % How to reconcile these results with the border vs non-border results below?
 
 In order to study this pattern, we compared the counts between countries that share borders and those which do not.
-The results show that for serotype A the median transition count between neighbor countries was $0.02$ (95 \% BCI: $0.00$ -- $4.29$), while ``non-border'' transitions had median $0.05$ (95 \% BCI: $0.00$ --  $3.39$).
+The results show that for serotype A the median transition count between neighbour countries was $0.02$ (95 \% BCI: $0.00$ -- $4.29$), while ``non-border'' transitions had median $0.05$ (95 \% BCI: $0.00$ --  $3.39$).
 For serotype O, similar results were observed, with $0.04$ ($0.00$ -- $1.99$) and $0.09$ ($0.00$ -- $1.25$) being observed for neighboring and non-neighboring countries, respectively.
-Since the difference in medians is substantial but quantiles widely overlap, we set up a Monte Carlo re-sampling experiment to calculate the probability that a randomly chosen ``border'' ($B$) transition is larger than a randomly chosen ``non-border'' ($NB$) one. For each data vector we obtained $10,000$ random draws and counted the number of times the above described event happened. From this experiment we found $Pr(B>NB)$  to be $0.41$ for serotype A and $0.36$ for serotype O.
+Since the difference in medians is substantial but quantiles widely overlap, we set up a Monte Carlo re-sampling experiment to calculate the probability that a randomly chosen ``border'' ($B$) transition is larger than a randomly chosen ``non-border'' (NB) one. For each data vector we obtained $100,000$ random draws and counted the number of times the above described event happened. From this experiment we found $Pr(B>NB)1$  to be $0.61$ for serotype A and $0.43$ for serotype O.
 
 \begin{center}
  [Figure~\ref{fig:mj&BFs} about here]
@@ -249,16 +256,15 @@ For this analysis, the correlation between serotype A and O rate matrix estimate
 In contrast, the rate indicators in BSSVS for both serotypes were in better accordance ($r=0.54$).
 Again, we compared estimates using shared and separate models for the CMTC rate matrix, and found that indicators for serotype A had higher concordance to those in the shared model ($r_A=0.86$ and $r_O=0.77$).
 
-Using path sampling we obtained (log) marginal likelihoods of $-21478$ and $-21482$ for the shared and separate models respectively.
-Results from stepping stone sampling were $-21488$ and $-21492$ respectively.
-Bayes factors assessment of the statistical support for the two hypotheses (shared or separate rate matrices), indicated that a shared model should be preferred to a model with separate rate matrices for each serotype (BFs~$4$ and $10$ for PS and SS).
+%Using path sampling we obtained (log) marginal likelihoods of $-21478$ and $-21482$ for the shared and separate models respectively.
+%Results from stepping stone sampling were $-21488$ and $-21492$ respectively.
+%Bayes factors assessment of the statistical support for the two hypotheses (shared or separate rate matrices), indicated that a shared model should be preferred to a model with separate rate matrices for each serotype (BFs~$4$ and $10$ for PS and SS).
 
-Interestingly, shared and separate models yielded different most probable root locations for both serotypes.
-For serotype A the separate model yielded Argentina as the spatial origin ($Pr(\text{root})=0.52$, while the shared matrix model pointed Brazil as the root with probability of $0.57$.
-allowing two separate rate matrices Venezuela was pointed as most probable origin with probability $0.44$ and the model with a shared rate matrix pointed Colombia as root ($Pr(\text{root})=0.51$.
+%Interestingly, shared and separate models yielded different most probable root locations for both serotypes.
+%For serotype A the separate model yielded Argentina as the spatial origin ($Pr(\text{root})=0.52$, while the shared matrix model pointed Brazil as the root with probability of $0.57$.
+%allowing two separate rate matrices Venezuela was pointed as most probable origin with probability $0.44$ and the model with a shared rate matrix pointed Colombia as root ($Pr(\text{root})=0.51$.
 
-Regarding spatial signal extraction, analyses for serotype A yielded KL divergences of $2.78$ and $1.93$ for shared and separate models, respectively.
-In contrast, KL divergences found for serotype O were very similar for both models ($1.45$ and $1.50$). 
+Regarding spatial signal extraction, analyses for serotypes  A and O yielded KL divergences of $1.93$ and $1.50$ respectively.
 Overall, our analyses were slightly more efficient for serotype A in comparison with serotype O.
 
 \subsection*{Identifying potential predictors of FMDV spread in South America}
@@ -272,11 +278,11 @@ By accurately calculating the marginal likelihood of each predictor we can gain 
 %The results of these experiments are presented in Text S2, Figure ~\ref{sfig:freqs}.
 %We can observe that estimated frequencies considerably differ from their observed values.
 %Moreover, the analyses with fixed frequencies yielded lower marginal likelihoods for the predictors (data not shown).
-% All predictors were compared to a spatially uniform uninformed prior using (log) Bayes factors.% LM: this is methods, I'll move it there and better explain it
+% All predictors were compared to a spatially uniform equal-rates prior using (log) Bayes factors.% LM: this is methods, I'll move it there and better explain it
 
 Interestingly, the results of this analyses (Table~\ref{tab:preds}) show different best fitting predictors for each serotype.
-For serotype A, distance and uninformed outperform all the predictors tested, obtaining higher (log) marginal likelihoods.
-For serotype O, the trade of live cattle as a predictor is the only one to outperform the distance-informed and uninformed (vague) priors.
+For serotype A, distance and equal-rates outperform all the predictors tested, obtaining higher (log) marginal likelihoods.
+For serotype O, the trade of live cattle as a predictor is the only one to outperform the distance-informed and equal-rates  priors.
 
 While for serotype A the best predictor was the geographic between countries (BF$=3.83$), the exchange of cattle was the best predictor for serotype O spread (BF$\approx 13$).
 Also, while for serotype A we moderate found statistical support for geographic distances as predictors of viral spread, this predictor had higher statistical support for serotype O (BF$\approx 9$).
@@ -290,7 +296,7 @@ Also, while for serotype A we moderate found statistical support for geographic 
 For each predictor we also assessed the state distribution at root, i.e., the probability of each country being the origin of the circulating strains.
 In Table~\ref{tab:roots} we show that for serotype A there was discordance between predictors about which country was the most probable source of FMDV in the continent.
 Peru was the most probable location of origin the `cattle' predictor, but notably not for the best fitting predictor (geographic distance), for which Argentina was estimated as the origin with moderate probability ($0.75$).
-Argentina was also the most probable root for the uninformed gamma prior model ($Pr(\text{root})=0.84$).
+Argentina was also the most probable root for the equal-rates gamma prior model ($Pr(\text{root})=0.84$).
 For the pigs trade predictors, Colombia was found to be the spatial origin.
 For serotype O, showed much more concordance, and Colombia was pointed out as the spatial viral origin for all predictors with high probability (Table~\ref{tab:roots}).
 
@@ -493,7 +499,7 @@ The marginal likelihood of such a model is then compared to that of one in which
 % Another important aspect is the influence of different predictors, such as population size and density, presence of airlines, roads and disease incidence on viral diffusion through space. 
 To test the influence of different epidemiological predictors on viral diffusion through space, we used trade of live cattle, pigs and sheep to parameterize priors for the CTMC rate matrix.
 % when the rates of that matrix are not fixed to these values but instead estimated from the data, we used the two aforementioned priors.
-We compared all these  predictors to an uninformed (vague) gamma prior, which basically represents a scenario where there is no preference over rates.
+We compared all these  predictors to an equal-rates  gamma prior, which basically represents a scenario where there is no preference over rates.
 %The framework adopted here allows for the incorporation of such information into the inference process, by either providing predictor information directly into the CTMC rate matrix of the geographic model or by putting a distance-informed prior on the estimated rates in the CTMC rate matrix.
 %These variables were normalized such that their expectation was one with unit variance. 
 Please see Figure ~\ref{sfig:tradeinfo} for a kernel density smoothing plot of these prior distributions.
@@ -553,7 +559,6 @@ We acknowledge the support of the National Evolutionary Synthesis Center (NESCen
 \bibliography{FMDV_AMERICA}
 \newpage
 \section*{Figure Legends}
-
 {\bf Figure~\ref{fig:trees}. Phylogenetic relationships of serotypes A and O FMDV isolates from South America.} Time-scaled phylogenetic maximum clade credibility (MCC) trees for FMDV VP1 sequences from eight countries in the period 1955-2010 for serotype A (Panel A) and nine countries 1994-2010 for serotype O (Panel B).
 Tips were collapsed for clarity and colored according to geographic origin.
 Diamonds sizes are proportional to posterior probabilities.
@@ -573,10 +578,10 @@ Additionally, data on vaccination  (doses per head) and (log) FMD serotype-speci
 \section{Figures and Tables}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
+\begin{figure}[!ht]
 \begin{center}
-\subfigure[A]{\includegraphics[scale=.4]{FIGURES/A.pdf}}\\
-\subfigure[O]{\includegraphics[scale=.3]{FIGURES/O.pdf}}
+\subfigure[A]{\includegraphics[scale=.45]{FIGURES/A.pdf}}\\
+\subfigure[O]{\includegraphics[scale=.30]{FIGURES/O.pdf}}
 \end{center}
 \caption{}
 \label{fig:trees}
