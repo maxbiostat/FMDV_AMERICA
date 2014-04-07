@@ -272,11 +272,11 @@ By accurately calculating the marginal likelihood of each predictor we can gain 
 %The results of these experiments are presented in Text S2, Figure ~\ref{sfig:freqs}.
 %We can observe that estimated frequencies considerably differ from their observed values.
 %Moreover, the analyses with fixed frequencies yielded lower marginal likelihoods for the predictors (data not shown).
-% All predictors were compared to a spatially uniform vague prior using (log) Bayes factors.% LM: this is methods, I'll move it there and better explain it
+% All predictors were compared to a spatially uniform uninformed prior using (log) Bayes factors.% LM: this is methods, I'll move it there and better explain it
 
 Interestingly, the results of this analyses (Table~\ref{tab:preds}) show different best fitting predictors for each serotype.
-For serotype A, distance and vague outperform all the predictors tested, obtaining higher (log) marginal likelihoods.
-For serotype O, the trade of live cattle as a predictor is the only one to outperform the distance and vague priors.
+For serotype A, distance and uninformed outperform all the predictors tested, obtaining higher (log) marginal likelihoods.
+For serotype O, the trade of live cattle as a predictor is the only one to outperform the distance-informed and uninformed (vague) priors.
 
 While for serotype A the best predictor was the geographic between countries (BF$=3.83$), the exchange of cattle was the best predictor for serotype O spread (BF$\approx 13$).
 Also, while for serotype A we moderate found statistical support for geographic distances as predictors of viral spread, this predictor had higher statistical support for serotype O (BF$\approx 9$).
@@ -290,7 +290,7 @@ Also, while for serotype A we moderate found statistical support for geographic 
 For each predictor we also assessed the state distribution at root, i.e., the probability of each country being the origin of the circulating strains.
 In Table~\ref{tab:roots} we show that for serotype A there was discordance between predictors about which country was the most probable source of FMDV in the continent.
 Peru was the most probable location of origin the `cattle' predictor, but notably not for the best fitting predictor (geographic distance), for which Argentina was estimated as the origin with moderate probability ($0.75$).
-Argentina was also the most probable root for the vague gamma prior model ($Pr(\text{root})=0.84$).
+Argentina was also the most probable root for the uninformed gamma prior model ($Pr(\text{root})=0.84$).
 For the pigs trade predictors, Colombia was found to be the spatial origin.
 For serotype O, showed much more concordance, and Colombia was pointed out as the spatial viral origin for all predictors with high probability (Table~\ref{tab:roots}).
 
@@ -493,7 +493,7 @@ The marginal likelihood of such a model is compared to that of one in which both
 
 % Another important aspect is the influence of different predictors, such as population size and density, presence of airlines, roads and disease incidence on viral diffusion through space. 
 Another important aspect is the influence of different predictors on viral diffusion through space.
-The framework adopted here allows for the incorporation of such information into the inference process, by either providing predictor information directly into the CTMC rate matrix of the geographic model or by putting a distance-based or vague gamma prior on the estimated rates in the CTMC rate matrix. 
+The framework adopted here allows for the incorporation of such information into the inference process, by either providing predictor information directly into the CTMC rate matrix of the geographic model or by putting a distance-informed or uninformed (vague) gamma prior on the estimated rates in the CTMC rate matrix. 
 The following predictors were used to parameterize the CTMC rate matrix: trade of live cattle, pigs and sheep; when the rates of that matrix are not fixed to these values but instead estimated from the data, we used the two aforementioned priors.
 %These variables were normalized such that their expectation was one with unit variance. 
 See Figure ~\ref{sfig:tradeinfo} for a kernel density smoothing plot of these prior distributions.
