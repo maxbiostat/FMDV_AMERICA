@@ -102,7 +102,7 @@ Key-words: Phylogeography, foot-and-mouth disease virus, South America, animal t
 Foot-and-Mouth Diseases Virus is a rapidly evolving and highly infectious livestock pathogen.
 In South America, although some molecular epidemiology studies are available, little is known about the virus phylodynamics.
 In this paper we analyse all available VP1 sequences of serotypes A and O isolated in South America to unravel the spatial and temporal dynamics of the virus in the continent.
-We show that both serotypes evolve measurably in South America and identify tMRCAs of $\approx~70$ and $\approx~20$ years for serotypes A and O, respectively. 
+We show that both serotypes evolve measurably in South America and identify tMRCAs of $\approx 70$ and $\approx 20$ years for serotypes A and O, respectively. 
 Serotype O presents a dispersal rate four times bigger than serotype A.
 Additionally, we found that Brazil is a hub for serotype A spread but not for serotype O, while Colombia and Ecuador seem to be more important for serotype O dispersal in the continent.
 We identified the trade of live cattle as the most important predictor of serotype O, while for serotype A geographic distances seem to best predict viral flow between South American countries.
@@ -136,7 +136,6 @@ In recent years, molecular epidemiology tools have been applied to understanding
 However, as pointed out by Di Nardo, Knowles \&  Paton (2011)~\cite{combining}, a joint evaluation of epidemiological and environmental data is usually done outside of an unified quantitative framework, in a qualitative fashion.
 In this the context, Bayesian phylogeography offers a statistical framework to combine multiple sources of information in order to understand the spatio-temporal dynamics of FMDV and perform evolutionary hypothesis testing.
 This framework has recently proven useful when investigating the patterns of FMDV spread and trace the spatial origins of FMD epidemics~\cite{Carvalho2013,bulgaria,phymal,hall2013}.
-
 % LM Andres comments : ''One may argue that in our early paper (3 in your reference list) we have already assessed time-space variation in relation to genetic variation in south America.
 % There may also be other examples. I would use an alternative reasoning here. You are trying to assess the molecular epi of FMD at a continental level.
 % This was done in the past (I believe Ingrid Bergmann and Viviana Malirat have published some work), but what never has been done is to reconstruct the history of evolution of the virus, and in relation to vaccination data, host-population dynamics, and time-space location. Make your case to demonstrate your originality.''
@@ -185,8 +184,8 @@ Here, a smaller clade of Colombian isolates are found interspersed within from V
 In addition, isolates from Ecuador are found interspersed with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
 Overall, the Bayesian phylogenies suggest that most FMDV flow within South America occurred between neighboring countries. 
 
-Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated in  $\approx~4 \times 10^{-3}$ substitutions/site/year.
-In addition, the estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e. at $\approx~1 \times 10^{-2}$, consistent with previous studies~\cite{tully,Carvalho2013,Muellner2011}. 
+Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated in  $\approx 4 \times 10^{-3}$ substitutions/site/year.
+In addition, the estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e. at $\approx 1 \times 10^{-2}$, consistent with previous studies~\cite{tully,Carvalho2013,Muellner2011}. 
 % TODO: LM Andres claims that, for FMDV, we should only detect 'clockness' for data spanning over large periods. Whether this hold or not I don't know. The point is: we may include it into the discussion, but I don't think it jeopardizes any of the results of this section. Check related issue #32.
 \begin{center}
  [Figure~\ref{fig:trees} about here]
@@ -283,8 +282,8 @@ Interestingly, the results of this analyses (Table~\ref{tab:preds}) show differe
 For serotype A, distance and equal-rates outperform all the predictors tested, obtaining higher (log) marginal likelihoods.
 For serotype O, the trade of live cattle as a predictor is the only one to outperform the distance-informed and equal-rates  priors.
 
-While for serotype A the best predictor was the geographic between countries (BF$=3.83$), the exchange of cattle was the best predictor for serotype O spread (BF$\approx~13$).
-Also, while for serotype A we moderate found statistical support for geographic distances as predictors of viral spread, this predictor had higher statistical support for serotype O (BF$\approx~9$).
+While for serotype A the best predictor was the geographic between countries (BF$=3.83$), the exchange of cattle was the best predictor for serotype O spread (BF$\approx 13$).
+Also, while for serotype A we moderate found statistical support for geographic distances as predictors of viral spread, this predictor had higher statistical support for serotype O (BF$\approx 9$).
 
 %NRF Do we have any results for the analyses combining the rate matrices of O and A? What was the best fitting predictor in this case?
 % LM Nope we don't, unfortunately :(
@@ -314,18 +313,18 @@ When we compared the (log) marginal likelihoods obtained by estimating root stat
 %To gain insight into the effect of sampling in our estimates, we devised ``representation-informed'' priors (predictors), using differences in representation (number of sequences) between countries to inform the rates of infinitesimal rate matrix.
 %We then used path sampling and stepping stone sampling to calculate marginal likelihoods for these predictors, obtaining significantly lower marginal (log) likelihoods (-12556 and -8290, for serotypes A and O respectively).
 % LM TODO: See if these 'rep-informed' analyses are worth including
-These results indicated further investigation was important to assess the robustness of our phylogeographic inference to sampling.
+These results indicated further investigation was important to assess the robustness of our phylogeographic inference to sampling. % TODO: LM: did they?
 
-We then draw five subsamples for each serotype in which over-represented were downsampled and performed BSSVS for each subsample.
-From BSSVS we calculated Bayes factors and observed good agreement between samples in terms of supported routes (see Figures ~\ref{sfig:bssvsA} and ~\ref{sfig:bssvsO}).
-To further study this, we also computed the $L_1$ matrix distance norm across the estimated rate matrices for each subsample, and no aberrant samples were detected (see Text S2 for detailed results).
+We then randomly draw five subsamples for each serotype in which over-represented were downsampled and performed BSSVS for each subsample.
+From BSSVS we calculated Bayes factors and observed good agreement between samples in terms of supported routes (see Figures~\ref{sfig:bssvsA} and~\ref{sfig:bssvsO}).
+To further investigate, we also computed the $L_1$ matrix distance norm across the estimated rate matrices for each subsample, and no aberrant samples were detected (see Text S2 for detailed results).
 
 Another aspect of interest is the amount of information extracted from each sample, which we measure by calculating Kullback-Leibler divergence between prior and posterior distribution of traits at root~\cite{roots}.
-Tables ~\ref{stab:ED_A} and ~\ref{stab:ED_O} show that for all subsamples in both serotypes there was lower information extraction, with moderately concentrated posterior distributions at root.
-For serotype O inference about location of origin was consistent across samples, with Venezuela being the most probable country of origin.
+Tables~\ref{stab:ED_A} and~\ref{stab:ED_O} show that for all subsamples in both serotypes there was lower information extraction when compared to the full analysis, with moderately concentrated posterior distributions at root.
+For serotype O, inference about location of origin was consistent across samples, with Colombia being the most probable country of origin.
 In the case of serotype A, however, there was some uncertainty about the most probable root state, with Argentina being pointed as root by one of the subsamples.
-Also, we observed a slightly stronger support for Venezuela as root for serotype O when compared to Brazil as root for serotype A.
-While serotype O presented average $Pr(\text{root=Venezuela})=0.47$, $Pr(\text{root=Brazil})$ for serotype A was $0.50$.
+Also, we observed a slightly stronger support for Colombia as root for serotype O when compared to Brazil as root for serotype A.
+While serotype O presented average $Pr(\text{root=Colombia})=0.47$, $Pr(\text{root=Brazil})$ for serotype A was $0.50$.
 
 \subsection*{Demographic reconstruction of FMDV}
 
