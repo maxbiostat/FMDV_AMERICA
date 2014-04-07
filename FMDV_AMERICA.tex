@@ -493,8 +493,10 @@ The marginal likelihood of such a model is compared to that of one in which both
 
 % Another important aspect is the influence of different predictors, such as population size and density, presence of airlines, roads and disease incidence on viral diffusion through space. 
 Another important aspect is the influence of different predictors on viral diffusion through space.
-The framework adopted here allows for the incorporation of such information into the inference process, by either providing predictor information directly into the CTMC rate matrix of the geographic model or by putting a distance-informed or uninformed (vague) gamma prior on the estimated rates in the CTMC rate matrix. 
+The framework adopted here allows for the incorporation of such information into the inference process, by either providing predictor information directly into the CTMC rate matrix of the geographic model or by putting a distance-informed prior on the estimated rates in the CTMC rate matrix.
+We compared all these  predictors to an uninformed (vague) gamma prior, which basically represents a scenario where there is no preference over rates.
 The following predictors were used to parameterize the CTMC rate matrix: trade of live cattle, pigs and sheep; when the rates of that matrix are not fixed to these values but instead estimated from the data, we used the two aforementioned priors.
+
 %These variables were normalized such that their expectation was one with unit variance. 
 See Figure ~\ref{sfig:tradeinfo} for a kernel density smoothing plot of these prior distributions.
 %GB: you could automate this, right? -> LM: Done :)
