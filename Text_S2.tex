@@ -35,7 +35,7 @@ Namely, $58$ of the $131$ ($44.2\%$) sequences collected for serotype A were fro
 This unbalanced design may introduce bias on our phylogeography analysis, since under a null 'single rate' model, the more sequences are collected from a location, the higher the estimates to and from this location will be. % TODO: citation or formula here
 % To see this, let....
 
-Sampling bias constitutes an important concern in phylogeographic modeling, and several studies have performed sensitivity analyses to determine how robust inference is to biased sampling \cite{M-Faria2012,M-Lemey2013,M-polar,M-fluPNAS}.
+Sampling bias constitutes an important concern in phylogeographic modeling, and several studies have performed sensitivity analyses to determine how robust inference is to biased sampling \cite{M-Faria2012,M-Lemey2014,M-polar,M-fluPNAS}.
 Proposed approaches include using equally sampled data sets, for which each location contributes the same number of sequences \cite{M-fluPNAS}.
 This approach is specially useful when a reasonable number of sequences is available.
 Another strategy is to devise prior distributions for the CTMC infinitesimal rate matrix ($\mathbf{Q}$) that explicitly counteract the effects of biased sampling \cite{M-Faria2012}.
@@ -114,7 +114,7 @@ The results of these analyses are presented in Figure~\ref{sfig:compz}C and~D.
 
 \subsection{Quantifying spatial signal extraction}
  In a Bayesian context, it is sometimes desirable to quantify how much information we gain from updating our prior information using the available data.
- A common measure of this signal extraction is the Kullback-Leibler (KL) divergence between prior and posterior distributions \cite{M-KL}.
+ A common measure of this signal extraction is the Kullback-Leibler (KL) divergence between prior and posterior distributions~\cite{M-KL}.
  In a phylogeographic setting, Lemey et al. (2009) \cite{M-roots} propose to calculate the KL divergence between the posterior distribution for the states at root and a uniform discrete prior.
  Let $K$ be the number of discrete states (e.g. locations) and $\boldsymbol\theta$ be the $K$-dimensional vector of state probabilities.
  Then the prior density is

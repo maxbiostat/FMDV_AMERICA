@@ -98,6 +98,7 @@ Using data on livestock (cattle, sheep and pigs) trade and geographic distance a
 % Maybe we should disclose some 'real' results here, like what was robust to sampling and what wasn't
 
 Key-words: Phylogeography, foot-and-mouth disease virus, South America, animal trade, BEAST.
+
 \section*{Author Summary} % 150--200 words
 Foot-and-Mouth Diseases Virus is a rapidly evolving and highly infectious livestock pathogen.
 In South America, although some molecular epidemiology studies are available, little is known about the virus phylodynamics.
@@ -319,7 +320,7 @@ We then randomly draw five subsamples for each serotype in which over-represente
 From BSSVS we calculated Bayes factors and observed good agreement between samples in terms of supported routes (see Figures~\ref{sfig:bssvsA} and~\ref{sfig:bssvsO}).
 To further investigate, we also computed the $L_1$ matrix distance norm across the estimated rate matrices for each subsample, and no aberrant samples were detected (see Text S2 for detailed results).
 
-Another aspect of interest is the amount of information extracted from each sample, which we measure by calculating Kullback-Leibler divergence between prior and posterior distribution of traits at root~\cite{roots}.
+Another aspect of interest is the amount of information extracted from each sample, which we measure by calculating Kullback-Leibler~\cite{KL} divergence between prior and posterior distribution of traits at root~\cite{roots}.
 Tables~\ref{stab:ED_A} and~\ref{stab:ED_O} show that for all subsamples in both serotypes there was lower information extraction when compared to the full analysis, with moderately concentrated posterior distributions at root.
 For serotype O, inference about location of origin was consistent across samples, with Colombia being the most probable country of origin.
 In the case of serotype A, however, there was some uncertainty about the most probable root state, with Argentina being pointed as root by one of the subsamples.
@@ -382,14 +383,17 @@ The ability to incorporate multiple sources of information like temporal and spa
 %If a predictor had close to optimal values, then it would outperform the distance and uniform priors since these priors are penalized for their higher variance~\cite{Xie}.
 % LM different predictors = different roots <- What to do?
 % These results help to shed light into the main determinants of viral flow in the continent.
+
 %%%%%
 % SAMPLING BIAS
 %%%%%
-% Informing the rates with livestock trade contributes to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated~\cite{Faria2012}.
+% Informing the rates with epidemiological predictors should in theory contribute to ameliorate the bias introduced by unbalanced sampling in the sense that it allows for an external source of information to be incorporated~\cite{Faria2012}.
 % Also, when we fixed country frequencies at their observed values for each data set we noticed a substantial drop in marginal likelihoods for all predictors.
 % This means the deliberately fixing frequencies may lead to poor phylogeographic inference.
-%
+%TODO: LM: is this a nice claim???
+
 % TODO: include polar bear citation and talk about sensitivity analysis
+
 %%%%%
 % COALESCENT 
 %%%%%
@@ -406,12 +410,23 @@ Since our results reinforce the notion that these two serotypes present differen
 % in the future skyride reconstructions can be coupled to mathematical models to help explain the pattern of emergence of FMD
 
 \section*{Conclusions}
+{\bf LM :Chip in, folks!}
+\begin{itemize}
+ \item selection of clock and tree prior by PS/SS is cumbersome, but provides more accurate results;
+ \item CMTC approach can be used to infer host jumps simultaneously~\cite{hall2013};
+ \item overall decrease in viral diversity;
+ \item spatial spread by proximity;
+ \item sampling bias may be an important factor to consider;
+ \item sub-sampling improved root estimation % TODO: LM: re-verify this claim
+ \item ???
+\end{itemize}
+
 % selection of clock and tree prior by PS/SS is cumbersome, but provides more accurate results. This calls for better methods, specially tailored for phylogeography 
 % TODO: LM What does Guy think about this?
 % can be used to infer host jumps simultaneously~\cite{hall2013}
-%better methods yield more complete analyses
+% better methods yield more complete analyses
 %overall decrease in viral diversity
-%spatial routes by proximity
+%spatial spread by proximity
 %sampling bias may be an important factor to consider
 % sub-sampling improved root estimation
 \section*{Methods}
