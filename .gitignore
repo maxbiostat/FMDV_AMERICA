@@ -17,9 +17,9 @@
 *.css
 *.dvi
 *.lg
-.tex~
-.bib~
-.gitignore~
+*.tex~
+*.bib~
+*.gitignore~
 FMDV_AMERICA.bib~
 FMDV_AMERICA.tex~
 FMDV_AMERICA.pdf
