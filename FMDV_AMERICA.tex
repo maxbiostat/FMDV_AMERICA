@@ -292,7 +292,7 @@ Interestingly, the results of this analysis (Table~\ref{tab:preds}) show differe
 For serotype A, distance and equal-rates outperform all the predictors tested, obtaining higher (log) marginal likelihoods.
 For serotype O, the trade of live cattle as a predictor is the only one to outperform the distance-informed and equal-rates  priors.
 
-While for serotype A the best predictor was the geographic between countries (log BF$=3.83$, compared to the equal-rates gamma prior), the exchange of cattle was the best predictor for serotype O spread (log BF$\approx 13$).
+While for serotype A the best predictor was the geographic between countries (log BF$\approx 4$, compared to the equal-rates gamma prior), the exchange of cattle was the best predictor for serotype O spread (log BF$\approx 13$).
 Also, while for serotype A we moderate found statistical support for geographic distances as predictors of viral spread, this predictor had higher statistical support for serotype O (log BF$\approx 9$).
 
 %NRF Do we have any results for the analyses combining the rate matrices of O and A? What was the best fitting predictor in this case?
@@ -488,7 +488,7 @@ Additionally, we computed the so-called monophyletic clade (MC) size for each st
 
 We apply the 
 % so-called 
-% MAS: Do you really think my approaches are that horrible?
+% MAS: Do you really think my approaches are that horrible? % LM: Nah, I don't GMRFs are quite a nice trick here, if you ask me. You can even use INLA with it...
 skyride model~\cite{skyride} in order to reconstruct the past population dynamics for both serotypes. Skyride is a nonparametric coalescent-based method that uses a Gaussian Markov Random Field (GMRF) prior to obtain smooth estimates for effective population size trajectories over time. We choose a time-aware GMRF prior, such that estimates are as smooth as possible.
 To gain insight into the mechanisms driving viral dynamics, we overlay the demographic reconstructions to serotype-specific outbreak and vaccination (doses per head) time series.
 % TODO: Dr. NRF has to revise this section :0)
