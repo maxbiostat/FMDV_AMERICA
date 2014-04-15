@@ -16,7 +16,7 @@
 \externalcitedocument[M-]{FMDV_AMERICA}
 %%%
 %opening
-\title{Text S2 -- Assessing the impact of taxon sampling on phylogeographic and coalescent reconstructions} % aargh, lousy name
+\title{Text S2 -- Supplementary analyses to `` ''} % aargh, lousy name
 \author{
 Luiz Max Fagundes de Carvalho, Guy Baele, Nuno Rodrigues Faria,\\
 Andres M. Perez, Marc Suchard,  Philippe Lemey\\
@@ -27,8 +27,24 @@ Waldemir de Castro Silveira
 \begin{document}
 
 \maketitle
+\section{Model Selection}
 
-\section{Background}
+In this section we provide some more detail on the model selection procedures used in this study.
+Phylogenetics has adopted two main methods of potentially general applicability, such as importance sampling estimators (such as the HME and sHME) and path sampling estimators (such as PS and SS) to compute marginal likelihoods of competing models.
+These approaches allow for an overall ranking of competing models to be constructed, from which the top-performing model can easily be determined.
+Due to their ease of use and computational tractability, with collected likelihood samples from the standard MCMC run being re-used, the posterior-based (log) marginal likelihood estimators have received widespread adoption in the field of phylogenetics.
+Whereas PS methods represent very general estimators and can also be applied to any model for which MCMC samples can be obtained, they are computationally demanding and require additional analyses to collect the necessary likelihood samples needed to estimate the (log) marginal likelihood.
+
+These methods are computationally demanding and require additional analyses but provide much greater accuracy over the frequently used but erroneous class of harmonic mean estimators (HME and sHME).
+PS and SS allow for an overall ranking of competing models to be constructed, from which the top-performing model can easily be determined, i.e. the model with the highest (log) marginal likelihood.
+By performing multiple runs with varying settings, we were able to assess convergence of the (log) marginal likelihood calculations for each of the tested predictors.
+Convergence of the (log) marginal likelihood calculations was assessed performing multiple runs with varying settings.
+Accurate estimation of (log) marginal likelihoods are crucial to correctly identify models that best describe the observed data. 
+The stepping stone (SS) and path sampling (PS) approaches, as implemented in BEAST, were used  to calculate all marginal likelihoods reported in this paper.
+Note that these approaches accommodate phylogenetic uncertainty.
+PS and SS calculations were run using 64 power posteriors, each running for $250,000$, $500,000$ and 1 million iterations, taking up to 3 weeks of computation for each model under evaluation.
+
+\section{Assessing the impact of taxon sampling on phylogeographic and coalescent reconstructions}
 
 The data sets used in this study presented preferential sampling, with some countries being overrepresented.
 Namely, $58$ of the $131$ ($44.2\%$) sequences collected for serotype A were from Argentina, and $90$ of the $167$ ($53.9\%$) sequences for serotype O came from Ecuadorian isolates.
@@ -39,14 +55,28 @@ Sampling bias constitutes an important concern in phylogeographic modeling, and 
 Proposed approaches include using equally sampled data sets, for which each location contributes the same number of sequences \cite{M-fluPNAS}.
 This approach is specially useful when a reasonable number of sequences is available.
 Another strategy is to devise prior distributions for the CTMC infinitesimal rate matrix ($\mathbf{Q}$) that explicitly counteract the effects of biased sampling \cite{M-Faria2012}.
-
 %TODO: talk about bias in skyride 
-
 In this study we provide a thorough assessment of the effects of sampling bias in the phylogeographic inference results. 
+% To assess the impact of sampling in our estimates, we performed the following experiments:
+% \begin{itemize}
+%  \item i. Parameter estimation without the over-represented locations;
+%  \item ii. Parameter estimation with over-represented locations downsampled to the number of sequences of the second most represented location (Venezuela and Colombia, for serotypes A and O, respectively). For each serotype, we obtained five random subsamples using this approach;
+%  \item iii. Estimation of the marginal likelihood of a ``representation-informed'' prior distribution for the rates, detailed below.
+% \end{itemize}
+% 
+% In order to assess the relevance (impact) of the sampling scheme on the inference of the rate matrix, we formulated a representation-informed prior distribution, as follows: let $n_i$ and $n_j$ be the numbers of sequences available for locations $i$ and $j$, respectively.
+%  The representation-informed prior is a multivariate gamma prior, with expectations given by
+% \begin{equation}
+%  m_{ij}=C\frac{|n_i-n_j|}{\sum_i|n_i-n_j|}
+% \end{equation}
+% where $C$ is an arbitrary constant, chosen such that $E[m_{ij}]=1$.
+% To analyze experiment iii, we used BSSVS to estimate Bayes Factors and compared BFs obtained with different sub-samples.
+% Additionally, we computed Kullback-Leibler divergence~\cite{KL,roots} of the root state distributions using a discrete uniform distribution as reference. 
 First we propose a formal Bayesian test to gain insight into the effect of sampling bias, using the differences in representation as a predictor to viral spread.
 Secondly, a customized sampling scheme is used to down-sample the original data sets and reduced representation bias.
 
-\section{``Representation-informed'' priors and Country base frequencies}
+\subsection{``Representation-informed'' priors and Country base frequencies}
+
 The first experiment to study the impact of sampling in our estimated was to use what we call a ``representation-informed'' prior.
 This prior is built by assuming that the average rate of flow between two locations is proportional to the difference in representation, i.e., the number of sequences from each location.
 We can mathematically express the above rationale as:
@@ -65,7 +95,7 @@ Also, we assessed the impact of fixed base frequencies for the locations, as fol
 The 'fixed frequencies' analyses yielded substantially lower marginal likelihoods (data not shown, see main text for discussion).
 Also, estimated base frequencies significantly differed from their observed counterparts as shown in Figure~\ref{sfig:freqs}.
 
-\section{Robustness of parameter estimation and demographic reconstruction}
+\subsection{Robustness of parameter estimation and demographic reconstruction}
 
 To quantify the impact of including older sequences, which are not available for all locations, we assessed the robustness of our temporal reconstruction by using only sequences from 2000 to present.
 For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior on coalescent times, also known as `skyride' model.
@@ -76,7 +106,7 @@ To investigate that, we performed parameter estimation with and without these lo
 Tables~\ref{stab:SB_A} and~\ref{stab:SB_O} show medians and $95 \%$ credible intervals for several parameters of interest with and without the overrepresented locations
 for both serotypes.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Parameter estimation with down-sampling}
+\subsubsection{Parameter estimation with down-sampling}
 
 For large data sets it is possible to perform equal down-sampling, i.e., simple random stratified sampling \cite{M-fluPNAS}.
 However, this was not possible in the data sets analyzed in this study.
@@ -93,7 +123,7 @@ Results of these experiments are presented in Tables~\ref{stab:ED_A} and~\ref{st
 For most parameters there was substantial overlap between posterior distributions obtained using different subsamples.
 Also, inference regarding the spatial origin (root) was consistent across subsamples for both serotypes.
 
-\subsection{Comparing rate matrices}
+\subsubsection{Comparing rate matrices}
 
 A point of interest is whether the estimates for $\mathbf{Q}$ were consistent across subsamples.
 First we plotted the estimated rates across each subsample against each other for both serotypes.
@@ -112,7 +142,7 @@ Since all entries in our matrices are non-negative, we they were log-transformed
 Calculations were performed using the \verb|norm()| in the \textbf{PET} package of the R statistical computing environment.
 The results of these analyses are presented in Figure~\ref{sfig:compz}C and~D.
 
-\subsection{Quantifying spatial signal extraction}
+\subsubsection{Quantifying spatial signal extraction}
  In a Bayesian context, it is sometimes desirable to quantify how much information we gain from updating our prior information using the available data.
  A common measure of this signal extraction is the Kullback-Leibler (KL) divergence between prior and posterior distributions~\cite{M-KL}.
  In a phylogeographic setting, Lemey et al. (2009) \cite{M-roots} propose to calculate the KL divergence between the posterior distribution for the states at root and a uniform discrete prior.
@@ -132,7 +162,7 @@ The Kullback-Leibler divergence is given by:
 The higher the divergence, the more the posterior distribution is far away from its prior expectation, hence more signal is extracted from data.
 We calculated equation~\ref{seq:KL} for the root state distributions for all subsamples (presented in Tables~\ref{stab:ED_A} and~\ref{stab:ED_O}) and all predictors (see main text).
 
-\subsection{Spatial Bayesian Stochastic Search Variable Selection across subsamples}
+\subsubsection{Spatial Bayesian Stochastic Search Variable Selection across subsamples}
 
 In a phylogeographic setting, even for moderate numbers of locations we are usually left with the task of estimating a potentially large number of parameters. 
 BSSVS seeks to select a parsimonious set of rates that sufficiently explain data variation.

@@ -62,7 +62,7 @@
 }
 % Insert Author names, affiliations and corresponding author email.
 \\
-Luiz Max Fagundes de Carvalho$^{1,2\ast}$,
+Luiz Max Carvalho$^{1,2\ast}$,
 Guy Baele$^{3}$,
 Nuno Rodrigues Faria$^{3,4}$,
 Andres M.~Perez$^{5}$,
@@ -489,7 +489,9 @@ Additionally, we computed the so-called monophyletic clade (MC) size for each st
 We apply the 
 % so-called 
 % MAS: Do you really think my approaches are that horrible? % LM: Nah, I don't GMRFs are quite a nice trick here, if you ask me. You can even use INLA with it...
-skyride model~\cite{skyride} in order to reconstruct the past population dynamics for both serotypes. Skyride is a nonparametric coalescent-based method that uses a Gaussian Markov Random Field (GMRF) prior to obtain smooth estimates for effective population size trajectories over time. We choose a time-aware GMRF prior, such that estimates are as smooth as possible.
+skyride model~\cite{skyride} in order to reconstruct the past population dynamics for both serotypes.
+Skyride is a nonparametric coalescent-based method that uses a Gaussian Markov Random Field (GMRF) prior to obtain smooth estimates for effective population size trajectories over time.
+We choose a time-aware GMRF prior, such that estimates are as smooth as possible.
 To gain insight into the mechanisms driving viral dynamics, we overlay the demographic reconstructions to serotype-specific outbreak and vaccination (doses per head) time series.
 % TODO: Dr. NRF has to revise this section :0)
 
@@ -512,7 +514,7 @@ One of the main research questions in this study is whether or not the two serot
 %To test this hypothesis, we estimated one single CMTC rate matrix using data from both serotypes, while allowing each serotype to have its own dispersal rate. 
 %This option is justifiable, since the two serotypes present different tMRCAs and mutation rates. etano
 To test this hypothesis, we constrain both serotypes to share the same relative CTMC rate matrix, which will be estimated using data from both serotypes,
-% MAS: The following does not make sense to me.  How can they both share the SAME rate matrix and have their OWN dispersal rate??? % LM: This is incorrect, and I recall removing it. PL, GB and I have agreed on stripping out any reference to a shared X separate analysis,since it lacks power due to the sparsity of the problem.
+% MAS: The following does not make sense to me.  How can they both share the SAME rate matrix and have their OWN dispersal rate??? % LM: This is incorrect, and I recall removing it. PL, GB and I have agreed on stripping out any reference to a shared X separate analysis, since it lacks power due to the sparsity of the problem.
 % TODO: we may want to keep this, and address the issue in the Discussion
 %
 %, while still allowing for each serotype to have its own dispersal rate.
@@ -531,46 +533,16 @@ Please see Figure ~\ref{sfig:tradeinfo} for a kernel density smoothing plot of t
 
 In this study, we exploit recent developments in Bayesian model selection~\cite{Baele2012,Baele2013a,Baele2013b}, as implemented in the BEAST software program~\cite{beast2012}.
 For each parameterization of the CTMC rate matrix proposed above, we perform accurate estimation of the (log) marginal likelihood using path sampling (PS) and stepping-stone sampling (SS), accommodating phylogenetic uncertainty.
-% These methods are computationally demanding and require additional analyses but provide much greater accuracy over the frequently used but erroneous class of harmonic mean estimators (HME and sHME).
-% PS and SS allow for an overall ranking of competing models to be constructed, from which the top-performing model can easily be determined, i.e. the model with the highest (log) marginal likelihood.
-% LM: It pains me to remove these, but our methods section is too big
 Using these (log) marginal likelihoods, it is possible to calculate Bayes Factors, which give a measure of the relative performance of each model. 
-All (log) marginal likelihood estimations were performed using 64 power posteriors, which were each run for 2 million iterations, taking up to 4 weeks of computation for each model under evaluation.
-% By performing multiple runs with varying settings, we were able to assess convergence of the (log) marginal likelihood calculations for each of the tested predictors.
-Convergence of the (log) marginal likelihood calculations was assessed performing multiple runs with varying settings.
-%Phylogenetics has adopted two main methods of potentially general applicability, such as importance sampling estimators (such as the HME and sHME) and path sampling estimators (such as PS and SS) to compute marginal likelihoods of competing models.
-%These approaches allow for an overall ranking of competing models to be constructed, from which the top-performing model can easily be determined.
-%Due to their ease of use and computational tractability, with collected likelihood samples from the standard MCMC run being re-used, the posterior-based (log) marginal likelihood estimators have received widespread adoption in the field of phylogenetics.
-%Whereas PS methods represent very general estimators and can also be applied to any model for which MCMC samples can be obtained, they are computationally demanding and require additional analyses to collect the necessary likelihood samples needed to estimate the (log) marginal likelihood.
+All (log) marginal likelihood estimations were performed using 64 power posteriors, which were each run for 2 million iterations, taking up to 4 weeks of computation for each model under evaluation. % LM : overall, computations took more than 4 weeks, i think we should increase this... XDD
+For more details on the model selection procedures please see Text S2.
 
-%Accurate estimation of (log) marginal likelihoods are crucial to correctly identify models that best describe the observed data. 
-%The stepping stone (SS) and path sampling (PS) approaches, as implemented in BEAST, were used  to calculate all marginal likelihoods reported in this paper.
-% Note that these approaches accommodate phylogenetic uncertainty.
-%PS and SS calculations were run using 64 power posteriors, each running for $250,000$, $500,000$ and 1 million iterations, taking up to 3 weeks of computation for each model under evaluation.
-% 
-% \subsection*{Assessing the effect of sampling}
-% 
 As already found in previous studies~\cite{Faria2012, Lemey2014}, unbalanced sampling can have an important impact on the inference of the spatial migration rates.
 In this study, both data sets analysed presented highly preferential sampling, with Ecuadorian sequences representing about 50 \% of the serotype O data and about 45 \% of serotype A sequences being from Argentina (see Text S1 for details).
 We conducted an extensive sensitivity analysis, exploring various sampling schemes and comparing the obtained parameter estimates (see Text S2 for a complete description).
-% 
-% To assess the impact of sampling in our estimates, we performed the following experiments:
-% \begin{itemize}
-%  \item i. Parameter estimation without the over-represented locations;
-%  \item ii. Parameter estimation with over-represented locations downsampled to the number of sequences of the second most represented location (Venezuela and Colombia, for serotypes A and O, respectively). For each serotype, we obtained five random subsamples using this approach;
-%  \item iii. Estimation of the marginal likelihood of a ``representation-informed'' prior distribution for the rates, detailed below.
-% \end{itemize}
-% 
-% In order to assess the relevance (impact) of the sampling scheme on the inference of the rate matrix, we formulated a representation-informed prior distribution, as follows: let $n_i$ and $n_j$ be the numbers of sequences available for locations $i$ and $j$, respectively.
-%  The representation-informed prior is a multivariate gamma prior, with expectations given by
-% \begin{equation}
-%  m_{ij}=C\frac{|n_i-n_j|}{\sum_i|n_i-n_j|}
-% \end{equation}
-% where $C$ is an arbitrary constant, chosen such that $E[m_{ij}]=1$.
-% To analyze experiment iii, we used BSSVS to estimate Bayes Factors and compared BFs obtained with different sub-samples.
-% Additionally, we computed Kullback-Leibler divergence~\cite{KL,roots} of the root state distributions using a discrete uniform distribution as reference. 
 
 \section*{Acknowledgments}
+
 The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Professor Oliver Pybus (Oxford) for insightful contributions and Miguel Carvalho, Felipe Figueiredo (PROCC) and Mauricio Oliveira (UFRJ) for operational support.
 We acknowledge the support of the National Evolutionary Synthesis Center (NESCent) through a working group (Software for Bayesian Evolutionary Analysis).
 
