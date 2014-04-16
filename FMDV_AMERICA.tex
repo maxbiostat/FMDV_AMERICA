@@ -212,15 +212,15 @@ To gain insight into the spatio-temporal process of FMDV spread, we employed an 
 %BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path.
 The results of the diffusion estimation are presented in Figure~\ref{fig:migration} and show that Brazil and Colombia were the most strongly connected regions (hubs) for both serotypes A and O.
 
-The highest dispersal rates for serotype O were estimated for transitions between Argentina and Peru, Argentina and Venezuela, Uruguay and Ecuador and Uruguay and Argentina.
-When we analysed support for various epidemiological linkage,
-the best supported (log BF$>9$) routes were between Peru and Brazil, Bolivia and Colombia, Argentina and Venezuela, Uruguay and Argentina and Argentina and Peru. The route between Uruguay and Peru showed smaller but strong support (log BF$>4$).
+The highest dispersal rates for serotype O were estimated for transitions between Colombia and Ecuador, Venezuela and Colombia and Uruguay and Argentina.
+When we analysed support for various epidemiological linkage, the best supported (log BF$>9$) routes were between Peru and Brazil, Bolivia and Colombia, Uruguay and Argentina and Argentina and Peru.
+The route between Uruguay and Peru showed smaller but strong support (log BF$>4$).
 
 The highest dispersal rates for serotype A were obtained for transitions between Brazil and Uruguay, Ecuador and Venezuela and Bolivia and Venezuela.
-When we looked at the epidemiological linkage, we found the transitions between Argentina and Venezuela, Uruguay and Argentina, Argentina and Bolivia, Brazil and Argentina and Bolivia and Venezuela to have the highest support (log BF$>8$).
+When we looked at the epidemiological linkage, we found the transitions between Uruguay and Argentina, Argentina and Bolivia, Brazil and Argentina and Bolivia and Venezuela to have the highest support (log BF$>8$).
 
-We notice that for serotype A mainly long-range migration routes were supported for the period before 1945.
-This result may be due to sparsity of information before 1970, that limits accurate inference about periods further back in time. 
+We notice that for serotype A mainly long-range migration routes were inferred for the period before 1945.
+This result may be due to sparsity of information before 1970, that limits accurate inference about periods further back in time (see {\bf Discussion}). 
 Also, there is a major expansion in spatial spread from 1945 to 1965, characterized by Brazil as a source of virus for the rest of the continent.
 In the period 1965-1980, we note slower spread, mainly through short range routes.
 The 1980-2008 window is characterized by FMDV serotype A flow into Peru and Paraguay and the increase of intra-country diversity (depicted by the radius of the displayed circles in Figure~\ref{fig:migration}).   
@@ -372,7 +372,7 @@ The differences in evolutionary rates, taken together with the results from mole
 % Ecuador is a BF star, key to the spread, endemic country
 % For serotype O, Colombia is north, Brazil is south.
 % These countries share borders and have similar environmental conditions 
-% TODO: do they?
+%TODO: do they?
 % serotype A expansion took place mostly in the early years of the 20th century and expansion for serotype O occurred in the beginning of the 1990 decade.
 % Although both serotypes have different tempo, several spread routes were found in both migration networks. As an important difference...
 % the relationship between MJ borders inference and source-sink dynamics
@@ -382,9 +382,15 @@ The differences in evolutionary rates, taken together with the results from mole
 % Our results suggest that FMDV serotypes have same dispersal determinant
 % when we analysed INDICATORs  much higher concordance
 % Notably, Venezuela, Colombia and Ecuador form a densely connected sub-network for both serotypes.
+%TODO: Discuss MJ results
+Looking at the results in Figure~\ref{fig:migration} we can notice that as we go back in time, some spurious links are inferred, for example the link between Venezuela and Argentina iferred for the period $1945--1965$ in the serotype A data set.
+These links are most likely an artifact created by the sparsity of the data in the period.
+BSSVS helps us protect ourselves from drawing spurious conclusions by choosing a minimal set of routes that better explain the diffusion process. 
+When we computed Bayes factors (Figure~\ref{fig:mj&BFs}) the supported routes made more epidemiological sense.
 %%%%%
 % PREDICTORS
 %%%%%
+
 Animal movements constitute a major threat to eradication programmes, being an important driving factor for reemergence~\cite{movements}.
 Thus, using animal trade data as predictors can be a valuable tool to understand the role of livestock commerce in the spread of animal and zoonotic diseases~\cite{Nelson2011}.
 We found significant well supported migration paths between Venezuela, Colombia and Ecuador for both serotypes  indicating an important spread pathway in the northern part of South America.
