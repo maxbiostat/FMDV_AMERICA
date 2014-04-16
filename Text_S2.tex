@@ -320,25 +320,24 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 \begin{table}[H]
-\caption{\textbf{Model selection for tree (coalescent) model and clock for both serotypes.}
-ULN= uncorrelated log-normal; UCED = uncorrelated exponential .
-Best fitting models (highest log-likelihood) are highlighted in bold.
-1- Log-likelihood estimated using Stepping-Stone sampling (SS).}
+\caption{\textbf{Model selection using path sampling (PS) and stepping-stone sampling (SS) to determine the tree prior (coalescent) model and clock for both serotypes.}
+UCLD = uncorrelated relaxed clock with an underlying log-normal distribution; UCED = uncorrelated relaxed clock with an underlying exponential distribution.
+Best fitting models (highest log marginal likelihood obtained using SS) are highlighted in bold.}
 \begin{center}
-\begin{tabular}{cccccc}
+\begin{tabular}{ccccccc}
 \toprule
-Serotype	&Coalescent	&Clock	&Log-Likelihood$^{1}$\\
+Serotype	&Coalescent	&Clock	& PS  & SS\\
 \midrule
-A	&Constant	&ULN	&-12285\\
-A	&Skyride 	&ULN	&\textbf{-12274}\\
-A	&Constant	&UCED	&-12316\\
-A	&Skyride 	&UCED	&-12307\\
-A       &Skyride       &STRICT &-12308\\
-O	&Constant	&ULN	&-8087\\
-O	&Skyride 	&ULN	&-8082\\
-O	&Constant	&UCED	&-8090\\
-O	&Skyride 	&UCED	&\textbf{-8069}\\
-O       &Skyride       &STRICT &-8125\\
+A	&Constant	&UCLD	& & -12285.xx\\
+A	&Skyride 	&UCLD	& & \textbf{-12274.xx}\\
+A	&Constant	&UCED	& & -12316.xx\\
+A	&Skyride 	&UCED	& & -12307.xx\\
+A       &Skyride       &STRICT & & -12308.xx\\
+O	&Constant	&UCLD	& & -8087.xx\\
+O	&Skyride 	&UCLD	& & -8082.xx\\
+O	&Constant	&UCED	& & -8090.xx\\
+O	&Skyride 	&UCED	& & \textbf{-8069.xx}\\
+O       &Skyride       &STRICT & & -8125.xx\\
 \bottomrule
 \end{tabular}
 \end{center}
