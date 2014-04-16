@@ -511,6 +511,7 @@ We used the Markov jumps~\cite{Minin2008} approach to estimate the rate of viral
 
 \subsubsection*{Spatial Model Selection}
 
+%GB: are we still keeping this in?
 One of the main research questions in this study is whether or not the two serotypes share the same underlying dispersal determinant. 
 %GB: the way you phrase this may cause problems, it sounds like you first looked at your data and then decided you wanted to test this ...
 %To test this hypothesis, we estimated one single CMTC rate matrix using data from both serotypes, while allowing each serotype to have its own dispersal rate. 
@@ -524,20 +525,21 @@ while still allowing each serotype to have its own absolute dispersal rate multi
 %To compare whether a separate geographic model is needed to accurately analyze location traits, we removed the sequence from Paraguay in the serotype O data set to have equal geographic sampling between serotypes.
 The marginal likelihood of such a model is then compared to that of one in which both serotypes were allowed to have separate rate matrices.
 
-% Another important aspect is the influence of different predictors, such as population size and density, presence of airlines, roads and disease incidence on viral diffusion through space. 
+In this study, we exploit recent developments in Bayesian model selection~\cite{Baele2012,Baele2013a,Baele2013b}, as implemented in the BEAST software program~\cite{beast2012}.%, to compare the different epidemiological predictors.
+%For each parameterization of the CTMC rate matrix proposed above, we perform accurate estimation of the (log) marginal likelihood using path sampling (PS) and stepping-stone sampling (SS), two computationally demanding approaches that yield accurate estimates of model fit while accommodating phylogenetic uncertainty.
+Specifically, we perform accurate estimation of the (log) marginal likelihood using path sampling (PS) \cite{LartillotPhilippe} and stepping-stone sampling (SS) \cite{Xie}, two computationally demanding approaches that yield accurate estimates of model fit while accommodating phylogenetic uncertainty.
+Using these (log) marginal likelihoods, it is possible to calculate Bayes Factors, which provide a measure of the relative performance of each model. 
+All (log) marginal likelihood estimations in this study were performed using 64 power posteriors, which were each run for 2 million iterations, taking up to 4 weeks of computation for each model under evaluation. % LM : overall, computations took more than 4 weeks, i think we should increase this... XDD
+Using PS and SS, we first compared different coalescent tree priors and clock models (see Supplementary Text S2) for both serotypes. 
+We found that the non-parametric 'Bayesian skyride' model yielded the highest model fit among the coalescent tree priors for both serotypes and that an uncorrelated relaxed clock with an underlying lognormal distribution was preferred for serotype A, whereas an uncorrelated relaxed clock with an underlying exponential distribution was preferred for serotype O.
+For more details on these model selection procedures please see Supplementary Text S2.
+
 To test the influence of different epidemiological predictors on viral diffusion through space, we used trade of live cattle, pigs and sheep to parameterize priors for the CTMC rate matrix.
-% when the rates of that matrix are not fixed to these values but instead estimated from the data, we used the two aforementioned priors.
-We compared all these  predictors to an equal-rates  gamma prior, which basically represents a scenario where there is no preference over rates.
+We compared these predictors to an equal-rates gamma prior, which basically represents a scenario where there is no preference over rates, and a distance-informed prior \cite{roots}.
 %The framework adopted here allows for the incorporation of such information into the inference process, by either providing predictor information directly into the CTMC rate matrix of the geographic model or by putting a distance-informed prior on the estimated rates in the CTMC rate matrix.
 %These variables were normalized such that their expectation was one with unit variance. 
 Please see Figure ~\ref{sfig:tradeinfo} for a kernel density smoothing plot of these prior distributions.
-%GB: you could automate this, right? -> LM: Done :)
-
-In this study, we exploit recent developments in Bayesian model selection~\cite{Baele2012,Baele2013a,Baele2013b}, as implemented in the BEAST software program~\cite{beast2012}.
-For each parameterization of the CTMC rate matrix proposed above, we perform accurate estimation of the (log) marginal likelihood using path sampling (PS) and stepping-stone sampling (SS), accommodating phylogenetic uncertainty.
-Using these (log) marginal likelihoods, it is possible to calculate Bayes Factors, which give a measure of the relative performance of each model. 
-All (log) marginal likelihood estimations were performed using 64 power posteriors, which were each run for 2 million iterations, taking up to 4 weeks of computation for each model under evaluation. % LM : overall, computations took more than 4 weeks, i think we should increase this... XDD
-For more details on the model selection procedures please see Text S2.
+For each parameterization of the CTMC rate matrix proposed here, we perform accurate estimation of the (log) marginal likelihood using path sampling (PS) and stepping-stone sampling (SS).
 
 As already found in previous studies~\cite{Faria2012, Lemey2014}, unbalanced sampling can have an important impact on the inference of the spatial migration rates.
 In this study, both data sets analysed presented highly preferential sampling, with Ecuadorian sequences representing about 50 \% of the serotype O data and about 45 \% of serotype A sequences being from Argentina (see Text S1 for details).
@@ -631,7 +633,7 @@ Additionally, data on vaccination  (doses per head) and (log) FMD serotype-speci
 \textbf{Spatial model selection results for epidemiological predictors.}
 We assessed the significance of livestock trade in FMDV spread in South America using two importance sampling methods,  path sampling (PS) and stepping-stone sampling (SS), to estimate (log) marginal likelihoods for each predictor using 64 path steps and 2 million iterations per path step, and corresponding Bayes factor (BF) comparisons.
 We also present the (log) marginal likelihood estimates for two location priors under which the location rates are estimated, rather than being fixed (as for the livestock predictors).
-We put these two scenarios in a separate part of the table to indicate that these estimates should not be compared to those of the livestock predictors.
+%We put these two scenarios in a separate part of the table to indicate that these estimates should not be compared to those of the livestock predictors.
 }
 \begin{center}
 \begin{tabular}{lrrrrrr}
