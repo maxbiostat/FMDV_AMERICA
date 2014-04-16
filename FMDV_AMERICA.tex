@@ -88,6 +88,7 @@ $\ast$ E-mail: lmax.procc@gmail.com
 
 % Please keep the abstract between 250 and 300 words
 \section*{Abstract}
+
 Although foot-and-mouth disease virus (FMDV) occurrence has disminished over the years, the virus still circulates in certain areas of South America and the risk of re-emergence in previously free areas is a constant threat.
 While the molecular epidemiology of FMDV in South America has been subject of several studies recently, an integrated quantitative approach to incorporate environmental and epidemiological data into the analyses is still lacking.
 In this study, we apply state-of-art Bayesian phylogeography to the most comprehensive data sets of VP1 (1D) sequences from FMDV serotypes A and O collected in South America to date, to study the temporal and spatial variation of FMDV and test evolutionary hypotheses.
@@ -100,7 +101,7 @@ Using data on livestock (cattle, sheep and pigs) trade and geographic distance a
 Key-words: Phylogeography, foot-and-mouth disease virus, South America, animal trade, BEAST.
 
 \section*{Author Summary} % 150--200 words
-Foot-and-mouth diseases virus (FMDV) % I assume the Author Summary can be read independently of the Abstract or Main Text, so I redefined this acronym
+Foot-and-mouth diseases virus (FMDV) % MAS: I assume the Author Summary can be read independently of the Abstract or Main Text, so I redefined this acronym
 is a rapidly evolving and highly infectious livestock pathogen.
 In South America, although some molecular epidemiology studies are available, little is known about the virus phylodynamics.
 In this paper we analyse all available VP1 sequences of FMDV serotypes A and O isolated in South America to unravel the spatial and temporal dynamics of the virus on the continent.
@@ -166,14 +167,15 @@ After, we found that both serotypes' rapid evolution better fits a relaxed than 
 Particularly, the exponential relaxed molecular clock provided a better fit for serotype O data (log BF=$56$) while the log-normal relaxed molecular clock model provided a better fit to serotype A (log BF=$34$) 
 % MAS: These numbers are very similar to those reported immediately above; I suspect an error. LM: somebody has an eagle eye... ;0) ; fixed
 (see Table ~\ref{stab:treeclockselection} for details). 
-The coefficient of variation for the log-normal relaxed molecular clock model was estimated to have a posterior mean of $0.32$ (95\% highest posterior density [HPD] interval: $ 0.21$--$0.43$) 
+The coefficient of variation for the log-normal relaxed molecular clock model had a posterior mean of $0.32$ (95\% highest posterior density [HPD] interval: $ 0.21$--$0.43$) 
 % MAS: Or do you mean "highest posterior density interval" HPD? LM: that depends. Tracer gives the tangent set, my bad, its HPD...
 indicating substantial rate heterogeneity among lineages in the phylogeny. 
 
-A  `temporal signal' test~\cite{Faria2012} (see Methods) indicated significant temporal signal for both serotypes (A: log BF=$310$; O: log BF=$348$), showing that both FMDV data sets analysed here evolve measurably, a result also found for FMDV SAT 1 in East Africa~\cite{sangula}.
+A  `temporal signal' test~\cite{Faria2012} (see Methods) indicated significant temporal structure for both serotypes (A: log BF=$310$; O: log BF=$348$), showing that both FMDV data sets analysed here evolve measurably, a result also found for FMDV SAT 1 in East Africa~\cite{sangula}.
 
 This finding is consistent with the view that FMDV presents clock-like evolution only when large periods of time are considered, with short periods being dominated by quasispecies dynamics~\cite{Muellner2011}.
 Overall, these results show that sufficient temporal information is embedded in sequence data of both serotypes under investigation, which is central for the estimation of times of divergence and to reconstruct the population dynamics in natural time units~\cite{MEP}.
+%TODO: Perhaps we should move this last paragraph to the Discussion?
 
 \subsection*{Dating the divergence of FMDV isolates}
 
@@ -192,7 +194,7 @@ In addition, isolates from Ecuador are found interspersed with isolates from Col
 Overall, the Bayesian phylogenies suggest that most FMDV flow within South America occurred between neighboring countries. 
 
 Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated at  $\approx 4 \times 10^{-3}$ substitutions/site/year.
-In addition, the estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e.~at $\approx 1 \times 10^{-2}$, consistent with previous studies~\cite{tully,Carvalho2013,Muellner2011}. 
+In addition, the estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e.~at $\approx 1 \times 10^{-2}$, consistent with previous studies~\cite{tully, Carvalho2013, Muellner2011}. 
 % TODO: LM Andres claims that, for FMDV, we should only detect 'clockness' for data spanning over large periods. Whether this hold or not I don't know. The point is: we may include it into the discussion, but I don't think it jeopardizes any of the results of this section. Check related issue #32.
 \begin{center}
  [Figure~\ref{fig:trees} about here]
@@ -204,7 +206,7 @@ In addition, the estimated evolutionary rate for serotype O was approximately 2.
 %We began by evaluating the spatial signal contained in our sequences using Bayesian tip-association tests~\cite{bats} to determine the amount of spatial signal in our reconstructed phylogenies.
 %To gain insight into the amount of association for each location, we computed the maximum clade (MC) statistic.
 The results of the spatial signal analysis using BaTS~\cite{bats} can be found in Table ~\ref{stab:BaTS} and show significant location-tip association for both serotypes.
-As an overall summary, our datasets presented high degree of spatial signal, justifying richer phylogeographic analyses to study the transmission network of FMDV on the continent.
+As an overall summary, our data sets presented high degree of spatial signal, justifying richer phylogeographic analyses to study the transmission network of FMDV on the continent.
 
 To gain insight into the spatio-temporal process of FMDV spread, we employed an asymmetric continuous-time Markov chain (CTMC) phylogeographic model~\cite{roots} available in BEAST~\cite{beast2012}, coupled with model averaging using Bayesian stochastic search variable selection (BSVSS) procedure (see Methods).
 %BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path.
@@ -243,7 +245,7 @@ For serotype O, overall support was lower in magnitude, but displaying similar r
 Highest support was found for transition between Ecuador and Peru and Colombia and Ecuador (log BF~$>100$). Significant support was also observed for viral exchange between Venezuela and Colombia (log BF~$>20$). 
 
 % Lots of short range routes are supported for both serotypes
-% How to reconcile these results with the border vs non-border results below?
+%TODO: How to reconcile these results with the border vs non-border results below?
 
 In order to study this pattern further, we compared the MJ counts between countries that share borders and those which do not.
 The results show that for serotype A the posterior median transition count between neighbour countries was $0.02$ (95 \% BCI: $0.00$ -- $4.29$), while ``non-border'' transitions had a posterior median of $0.05$ (95 \% BCI: $0.00$ --  $3.39$).
@@ -278,7 +280,7 @@ Overall, our analyses were slightly more efficient for serotype A in comparison 
 \subsection*{Identifying potential predictors of FMDV spread}
 
 We used data on geographic distances and on trade of live cattle, pigs and sheep obtained from the detailed trade matrix available from the Food and Agriculture Organization (FAO), to elicit CMTC rate matrix priors (predictors).
-By accurately calculating the marginal likelihood of a model involving each predictor, we gain insight into the importance of each predictor on viral spread~\cite{Carvalho2013,Nelson2011}.
+By accurately calculating the marginal likelihood of a model involving each predictor, we gain insight into the importance of each variable on viral spread~\cite{Carvalho2013, Nelson2011}.
 %We used data on geographic distances and on trade of live cattle, pigs and sheep.
 %For each predictor, we performed MCMC runs using fixed root state frequencies for each country, with frequencies set to their observed values.
 %Moreover we performed analyses where root state frequencies were estimated.
@@ -308,7 +310,7 @@ Argentina was also the most probable root for the equal-rates gamma prior model 
 For the pigs trade predictors, Colombia was found to be the spatial origin.
 For serotype O, showed much more concordance, and Colombia was pointed out as the spatial viral origin for all predictors with high probability (Table~\ref{tab:roots}).
 
-% TODO talk about KLs
+%TODO talk about KLs
 
 \begin{center}
  [Table~\ref{tab:roots} about here]
@@ -340,12 +342,12 @@ While serotype O presented average $\mbox{Pr}(\text{root=Colombia})=0.47$, $\mbo
 
 The results from the skyride non-parametric coalescent reconstruction show strikingly different dynamical behaviors for the two serotypes, with serotype O exhibiting considerable more oscillation over time, and a diversity peak occurring in the late years of the 1990's.
 Serotype A exhibits a more stable behavior over most of the 20th century, with most variation occurring within the temporal sampling interval, mainly in the last years of the 2000's.
-To better understand the relationship between vaccination and viral diversity, we overlaid vaccination prevalence to our skyride plots presented in Figure~\ref{fig:skyride}.
+To better understand the relationship between vaccination and viral diversity, we overlaid vaccination data to our skyride plots presented in Figure~\ref{fig:skyride}.
 These data were expressed as doses per head, which we consider to be a more accurate measure of vaccination coverage, since it corrects for population size increase/decrease over time (see Figure ~\ref{sfig:trade} for livestock population and trade time series). 
 Also, serotype-specific disease notification data was collected and plotted as an overlaid time series to the reconstruction. 
 
 To assess the robustness of our reconstructions we performed skyride reconstructions using only recent (sampling date $>2000$) sequences (see Text S2, Figure ~\ref{sfig:only2000sky}).
-We also performed reconstructions in datasets without the over-represented locations (data not shown). All these analyses gave roughly similar results to those presented in Figure~\ref{fig:skyride}. The only exception was the reconstruction for serotype A without Argentinian sequences, for which it is not possible to see the marked drop near 2001 that is clear in Figure~\ref{fig:skyride}. 
+We also performed reconstructions in data sets without the over-represented locations (data not shown). All these analyses gave roughly similar results to those presented in Figure~\ref{fig:skyride}. The only exception was the reconstruction for serotype A without Argentinian sequences, for which it is not possible to see the marked drop near 2001 that is clear in Figure~\ref{fig:skyride}. 
 
 \begin{center}
  [Figure~\ref{fig:skyride} about here]
@@ -386,7 +388,7 @@ The differences in evolutionary rates, taken together with the results from mole
 Animal movements constitute a major threat to eradication programmes, being an important driving factor for reemergence~\cite{movements}.
 Thus, using animal trade data as predictors can be a valuable tool to understand the role of livestock commerce in the spread of animal and zoonotic diseases~\cite{Nelson2011}.
 We found significant well supported migration paths between Venezuela, Colombia and Ecuador for both serotypes  indicating an important spread pathway in the northern part of South America.
-The ability to incorporate multiple sources of information like temporal and spatial data is becoming increasingly important in molecular epidemiology studies that aim to understand the driving forces of pathogen evolution and spread~\cite{towards,combining,MEP,roots}. 
+The ability to incorporate multiple sources of information like temporal and spatial data is becoming increasingly important in molecular epidemiology studies that aim to understand the driving forces of pathogen evolution and spread~\cite{towards, combining, MEP, roots}. 
 % The model selection procedure presented here can be viewed as if, for each predictor, very strong (low variance) priors were placed on the infinitesimal rate matrix ($\mathbf{Q}$).
 % The uniform and distance priors in turn place less informative prior distributions on $\mathbf{Q}$.
 %If a predictor had close to optimal values, then it would outperform the distance and uniform priors since these priors are penalized for their higher variance~\cite{Xie}.
@@ -401,7 +403,7 @@ The ability to incorporate multiple sources of information like temporal and spa
 % This means the deliberately fixing frequencies may lead to poor phylogeographic inference.
 %TODO: LM: is this a nice claim???
 
-% TODO: include polar bear citation and talk about sensitivity analysis
+%TODO: include polar bear citation and talk about sensitivity analysis
 
 %%%%%
 % COALESCENT 
@@ -431,7 +433,7 @@ Since our results reinforce the notion that these two serotypes present differen
 \end{itemize}
 
 % selection of clock and tree prior by PS/SS is cumbersome, but provides more accurate results. This calls for better methods, specially tailored for phylogeography 
-% TODO: LM What does Guy think about this?
+%TODO: LM What does Guy think about this?
 % can be used to infer host jumps simultaneously~\cite{hall2013}
 % better methods yield more complete analyses
 %overall decrease in viral diversity
@@ -462,7 +464,7 @@ Next, we used the Bayesian Evolutionary Analysis by Sampling Trees (BEAST)~\cite
 %Given the computational demands of these approaches, we use BEAST~\cite{beast2012} in combination with BEAGLE~\cite{BEAGLE} to increase computational efficiency.
 
 Using the methods available in BEAST, we performed Bayesian model selection to assess the performance of several combinations of tree priors and molecular clocks for each data set.
-To this end, we used state-of-the-art marginal likelihood estimators, such as path sampling (PS)~\cite{LartillotPhilippe} and stepping-stone sampling (SS)~\cite{Xie}, which have only recently been introduced in the field of phylogenetics~\cite{LartillotPhilippe,Xie,Baele2012,Baele2013a,Baele2013b}.
+To this end, we used state-of-the-art marginal likelihood estimators, such as path sampling (PS)~\cite{LartillotPhilippe} and stepping-stone sampling (SS)~\cite{Xie}, which have only recently been introduced in the field of phylogenetics~\cite{LartillotPhilippe, Xie, Baele2012, Baele2013a, Baele2013b}.
 %Both PS and SS have been previously shown to outperform traditional posterior-based marginal likelihood estimators, such as the harmonic mean estimator (HME) and its stabilized version (sHME)~\cite{LartillotPhilippe,Xie,Baele2012,Baele2013a,Baele2013b}.
 % Further, it has been shown that the use of proper priors is essential when performing Bayesian model selection~\cite{Baele2013a}, and by extension, when conducting Bayesian inference through Markov chain Monte Carlo (MCMC).
 % LM: TODO: I commented this out to reduce length, we can put it into TextS2                                                                       
@@ -488,7 +490,7 @@ Additionally, we computed the so-called monophyletic clade (MC) size for each st
 
 We apply the 
 % so-called 
-% MAS: Do you really think my approaches are that horrible? % LM: Nah, I don't GMRFs are quite a nice trick here, if you ask me. You can even use INLA with it...
+% MAS: Do you really think my approaches are that horrible? % LM: Nah, I don't GMRFs are quite a nice trick here, if you ask me. You can even use INLA with them...
 skyride model~\cite{skyride} in order to reconstruct the past population dynamics for both serotypes.
 Skyride is a nonparametric coalescent-based method that uses a Gaussian Markov Random Field (GMRF) prior to obtain smooth estimates for effective population size trajectories over time.
 We choose a time-aware GMRF prior, such that estimates are as smooth as possible.
@@ -515,7 +517,7 @@ One of the main research questions in this study is whether or not the two serot
 %This option is justifiable, since the two serotypes present different tMRCAs and mutation rates. etano
 To test this hypothesis, we constrain both serotypes to share the same relative CTMC rate matrix, which will be estimated using data from both serotypes,
 % MAS: The following does not make sense to me.  How can they both share the SAME rate matrix and have their OWN dispersal rate??? % LM: This is incorrect, and I recall removing it. PL, GB and I have agreed on stripping out any reference to a shared X separate analysis, since it lacks power due to the sparsity of the problem.
-% TODO: we may want to keep this, and address the issue in the Discussion
+%TODO: we may want to keep this, and address the issue in the Discussion
 %
 %, while still allowing for each serotype to have its own dispersal rate.
 while still allowing each serotype to have its own absolute dispersal rate multiplier.
