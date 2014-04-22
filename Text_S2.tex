@@ -29,20 +29,18 @@ Waldemir de Castro Silveira
 \maketitle
 \section{Model Selection}
 
-In this section we provide some more detail on the model selection procedures used in this study.
-Phylogenetics has adopted two main methods of potentially general applicability, such as importance sampling estimators (such as the HME and sHME) and path sampling estimators (such as PS and SS) to compute marginal likelihoods of competing models.
-These approaches allow for an overall ranking of competing models to be constructed, from which the top-performing model can easily be determined.
-Due to their ease of use and computational tractability, with collected likelihood samples from the standard MCMC run being re-used, the posterior-based (log) marginal likelihood estimators have received widespread adoption in the field of phylogenetics.
-Whereas PS methods represent very general estimators and can also be applied to any model for which MCMC samples can be obtained, they are computationally demanding and require additional analyses to collect the necessary likelihood samples needed to estimate the (log) marginal likelihood.
+In this section we provide more details on the model selection procedures used in this study.
 
-These methods are computationally demanding and require additional analyses but provide much greater accuracy over the frequently used but erroneous class of harmonic mean estimators (HME and sHME).
-PS and SS allow for an overall ranking of competing models to be constructed, from which the top-performing model can easily be determined, i.e. the model with the highest (log) marginal likelihood.
-By performing multiple runs with varying settings, we were able to assess convergence of the (log) marginal likelihood calculations for each of the tested predictors.
-Convergence of the (log) marginal likelihood calculations was assessed performing multiple runs with varying settings.
-Accurate estimation of (log) marginal likelihoods are crucial to correctly identify models that best describe the observed data. 
-The stepping stone (SS) and path sampling (PS) approaches, as implemented in BEAST, were used  to calculate all marginal likelihoods reported in this paper.
-Note that these approaches accommodate phylogenetic uncertainty.
-PS and SS calculations were run using 64 power posteriors, each running for $250,000$, $500,000$ and 1 million iterations, taking up to 3 weeks of computation for each model under evaluation.
+Arguably the best known methods are also the simplest by design, i.e. the so-called importance sampling (log) marginal likelihood estimators known as the harmonic mean estimator (HME) \cite{Newton} and the stabilized/smoothed harmonic mean estimator (sHME) \cite{suchard2005models}.
+While these estimators provide an estimate of the (log) marginal likelihood that can be directly calculated from the likelihood evaluations performed during inference, they have been shown to be inherently unreliable and their use may lead to false conclusions \cite{LartillotPhilippe,Xie,Baele2012,Baele2013a,Baele2013b}.
+Recently, path sampling estimators to compute (log) marginal likelihoods have been introduced into the field of phylogenetics \cite{LartillotPhilippe,Xie}.
+Both path sampling (PS) and stepping-stone sampling (SS) represent very general estimators, which can be applied to any model for which MCMC samples can be obtained.
+While these methods are computationally demanding and require additional analyses to collect the necessary likelihood samples needed to estimate the (log) marginal likelihood, they are far more reliable than importance sampling estimators.
+
+Here, we use both PS and SS to construct an overall ranking of competing models, by estimating the (log) marginal likelihood for each model, while accommodating phylogenetic uncertainty.
+In order to obtain sufficient reliability and check convergence of our (log) marginal likelihood estimators, we perform multiple independent runs with varying computational settings in BEAST \cite{beast2012}.
+PS and SS calculations were hence performed using 64 power posteriors, each running for $250,000$, $500,000$, 1 million and 2 million iterations, taking up to over 1 month of computation for each model under evaluation.
+
 
 \section{Assessing the impact of taxon sampling on phylogeographic and coalescent reconstructions}
 
@@ -465,4 +463,5 @@ Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration 
 \end{sidewaystable}
 %%%%
 %%%%
+\bibliography{FMDV_AMERICA}
 \end{document}
