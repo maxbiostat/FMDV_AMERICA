@@ -31,14 +31,14 @@ Waldemir de Castro Silveira
 
 In this section we provide more details on the model selection procedures used in this study.
 
-Arguably the best known methods are also the simplest by design, i.e. the so-called importance sampling (log) marginal likelihood estimators known as the harmonic mean estimator (HME) \cite{Newton} and the stabilized/smoothed harmonic mean estimator (sHME) \cite{suchard2005models}.
-While these estimators provide an estimate of the (log) marginal likelihood that can be directly calculated from the likelihood evaluations performed during inference, they have been shown to be inherently unreliable and their use may lead to false conclusions \cite{LartillotPhilippe,Xie,Baele2012,Baele2013a,Baele2013b}.
-Recently, path sampling estimators to compute (log) marginal likelihoods have been introduced into the field of phylogenetics \cite{LartillotPhilippe,Xie}.
+Arguably the best known methods are also the simplest by design, i.e. the so-called importance sampling (log) marginal likelihood estimators known as the harmonic mean estimator (HME) \cite{M-Newton} and the stabilized/smoothed harmonic mean estimator (sHME) \cite{M-suchard2005models}.
+While these estimators provide an estimate of the (log) marginal likelihood that can be directly calculated from the likelihood evaluations performed during inference, they have been shown to be inherently unreliable and their use may lead to false conclusions \cite{M-LartillotPhilippe, M-Xie, M-Baele2012, M-Baele2013a,M-Baele2013b}.
+Recently, path sampling estimators to compute (log) marginal likelihoods have been introduced into the field of phylogenetics \cite{M-LartillotPhilippe, M-Xie}.
 Both path sampling (PS) and stepping-stone sampling (SS) represent very general estimators, which can be applied to any model for which MCMC samples can be obtained.
 While these methods are computationally demanding and require additional analyses to collect the necessary likelihood samples needed to estimate the (log) marginal likelihood, they are far more reliable than importance sampling estimators.
 
 Here, we use both PS and SS to construct an overall ranking of competing models, by estimating the (log) marginal likelihood for each model, while accommodating phylogenetic uncertainty.
-In order to obtain sufficient reliability and check convergence of our (log) marginal likelihood estimators, we perform multiple independent runs with varying computational settings in BEAST \cite{beast2012}.
+In order to obtain sufficient reliability and check convergence of our (log) marginal likelihood estimators, we perform multiple independent runs with varying computational settings in BEAST \cite{M-beast2012}.
 PS and SS calculations were hence performed using 64 power posteriors, each running for $250,000$, $500,000$, 1 million and 2 million iterations, taking up to over 1 month of computation for each model under evaluation.
 
 
@@ -463,5 +463,5 @@ Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration 
 \end{sidewaystable}
 %%%%
 %%%%
-\bibliography{FMDV_AMERICA}
+%\bibliography{FMDV_AMERICA}
 \end{document}
