@@ -7,12 +7,14 @@
 \usepackage{indentfirst}
 \usepackage{float}
 \usepackage{cite}
+%\usepackage{multibbl} % to have separate bibliographies
 \usepackage{fix/xcite} % Cite stuff from the main text
 \usepackage{amsmath}
 \bibliographystyle{plos2009}%
 %%% Supp Mat modifications
 \renewcommand{\thetable}{S\arabic{table}}   
 \renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand\refname{Further References}
 \externalcitedocument[M-]{FMDV_AMERICA}
 %%%
 %opening
@@ -33,7 +35,7 @@ In this document we give more detail on the analyses presented at Carvalho et al
 \section{Bayesian Model Selection}
 
 In this section we provide more details on the model selection procedures used in this study.
-Arguably the best known methods are also the simplest by design, i.e. the so-called importance sampling (log) marginal likelihood estimators known as the harmonic mean estimator (HME) \cite{M-Newton} and the stabilized/smoothed harmonic mean estimator (sHME) \cite{M-suchard2005models}.
+Arguably the best known methods are also the simplest by design, i.e. the so-called importance sampling (log) marginal likelihood estimators known as the harmonic mean estimator (HME) \cite{Newton} and the stabilized/smoothed harmonic mean estimator (sHME) \cite{M-suchard2005models}.
 While these estimators provide an estimate of the (log) marginal likelihood that can be directly calculated from the likelihood evaluations performed during inference, they have been shown to be inherently unreliable and their use may lead to false conclusions \cite{M-LartillotPhilippe, M-Xie, M-Baele2012, M-Baele2013a,M-Baele2013b}.
 Recently, path sampling estimators to compute (log) marginal likelihoods have been introduced into the field of phylogenetics \cite{M-LartillotPhilippe, M-Xie}.
 Both path sampling (PS) and stepping-stone sampling (SS) represent very general estimators, which can be applied to any model for which MCMC samples can be obtained.
@@ -140,7 +142,7 @@ The $L_1$ matrix norm is defined as
 \end{equation}
 
 Since all entries in our matrices are non-negative, we they were log-transformed prior to computing distances.
-Calculations were performed using the \verb|norm()| in the \textbf{PET} package of the R statistical computing environment.
+Calculations were performed using the \verb|norm()| in the \textbf{PET} package~\cite{PET} of the R statistical computing environment.
 The results of these analyses are presented in Figure~\ref{sfig:compz}C and~D.
 
 \subsubsection{Quantifying spatial signal extraction}
@@ -189,7 +191,9 @@ Also, root probability distributions seem to be more consistent for serotype A t
 % In theory, a Bayesian approach should offer a certain degree of protection against model misspecification and sampling bias by bla  bla...
 % robustness of skyride crap
 \newpage
-
+%\newbibliography{s2}
+%\bibliographystyle{s2}{plos2009}
+\bibliography{TEXTS2}
 \section*{Figure Legends}
 \textbf{Figure~\ref{sfig:freqs}. Estimated and observed trait (country) frequencies for both serotypes.}
 We estimated base frequencies using a discrete uniform prior and compared the obtained median values to the observed frequencies for each country in each data set (serotype). 
