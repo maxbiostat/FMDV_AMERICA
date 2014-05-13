@@ -16,7 +16,13 @@
 \renewcommand{\thefigure}{S\arabic{figure}}
 \renewcommand\refname{Further References}
 \externalcitedocument[M-]{FMDV_AMERICA}
-%%%
+%%%%%
+\topmargin 0.0cm
+\oddsidemargin 0.5cm
+\evensidemargin 0.5cm
+\textwidth 16cm
+\textheight 21cm
+%%%%%
 %opening
 \title{Text S2 -- Supplementary analyses to ``Spatiotemporal Dynamics of Foot-and-Mouth Disease Virus in South America''} % aargh, lousy name
 \author{
@@ -30,7 +36,7 @@ Waldemir de Castro Silveira
 
 \maketitle
 
-In this document we give more detail on the analyses presented at Carvalho et al. (2014) and present some additional results ommited in the main text.
+In this document we give more detail on the analyses presented at Carvalho et al. (2014) and present some additional results omitted  from the main text.
 
 \section{Bayesian Model Selection}
 
@@ -92,9 +98,9 @@ In this study we provide a thorough assessment of the effects of sampling bias i
 % We found Bayes factors of $200$ and $20$ between these models and their uniform counterparts for serotypes A and O respectively.
 % These results show significant statistical support for the ``representation-informed'' priors.
 
-We assessed the impact of fixed base frequencies for the locations, as follows: we allowed 
-The 'fixed frequencies' analyses yielded substantially lower marginal likelihoods (data not shown, see main text for discussion).
-Also, estimated base frequencies significantly differed from their observed counterparts as shown in Figure~\ref{sfig:freqs}.
+% We assessed the impact of fixed base frequencies for the locations, as follows: we allowed 
+% The 'fixed frequencies' analyses yielded substantially lower marginal likelihoods (data not shown, see main text for discussion).
+% Also, estimated base frequencies significantly differed from their observed counterparts as shown in Figure~\ref{sfig:freqs}.
 
 \subsection{Robustness of parameter estimation and demographic reconstruction}
 
@@ -103,7 +109,7 @@ For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing pri
 These results are presented in Figure~\ref{sfig:only2000sky}.
 
 Also, we were interested in studying whether overrepresented locations could influence phylogenetic parameter estimation.
-To investigate that, we performed parameter estimation with and without these locations.
+To investigate this, we performed parameter estimation with and without these locations.
 Tables~\ref{stab:SB_A} and~\ref{stab:SB_O} show medians and $95 \%$ credible intervals for several parameters of interest with and without the overrepresented locations
 for both serotypes.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -137,7 +143,7 @@ The $L_1$ matrix norm is defined as
 
 \begin{equation}
 \label{seq:L1}
- L_1 = \frac{1}{K^{2} (\sum_{i=1}^{K^2} |X_i-Y_i| ) }
+ L_1 (\mathbf{X}, \mathbf{Y}) = \frac{1}{K^{2} (\sum_{i=1}^{K^2} |X_i-Y_i| ) }
 \end{equation}
 
 Since all entries in our matrices are non-negative, we they were log-transformed prior to computing distances.
@@ -180,11 +186,10 @@ Results for serotype O are presented in Figure~\ref{sfig:bssvsO}.
 For both serotypes a high degree of agreement between inferred significant routes between subsamples.
 However, the distribution of states at root varies across subsamples.
 
-For both serotypes the migration networks present two components; one connecting Venezuela, Colombia and Ecuador and another connecting southern cone countries, namely Brazil, Argentina and Uruguay.
-Particularly, for serotype A we observe a supported migration routes between Venezuela and Brazil, which is absent from serotype O results.
-Also, root probability distributions seem to be more consistent for serotype A than for serotype O.
 
-\section{Discussion}
+% Also, root probability distributions seem to be more consistent for serotype A than for serotype O.
+
+%\section{Discussion}
 %\newpage
 % A possibility, unexplored in this paper, is to sample each location with probability proportional to its disease prevalence
 % In theory, a Bayesian approach should offer a certain degree of protection against model misspecification and sampling bias by bla  bla...
@@ -198,6 +203,10 @@ Also, root probability distributions seem to be more consistent for serotype A t
 \textbf{Figure~\ref{sfig:trade}. Exportation, importation and production time series for pigs, cattle and sheep in South America.}
 Panel A shows exportations in log~(~\# ~of heads) of live animals for pigs, sheep and cattle.
 Panels B and C show importation and overall production (population increase), respectively.
+
+\textbf{Figure~\ref{sfig:tradenets}. Spatial networks of livestock trade in South America.}
+Colors represent total exports in number of live animals.
+Arrows connect countries if there was a non-zero number of exchanges between them.
 
 \textbf{Figure~\ref{sfig:tradeinfo}. Kernel density estimation for the trade-informed priors (predictors) used in this study.}
 Information on cattle, sheep and pigs trade was retrieved from FAO and used to create trade-informed prior distributions for the CTMC infinitesimal rate matrix.
@@ -235,6 +244,20 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \end{center}
 \caption{}
 \label{sfig:trade}
+\end{figure}
+\end{center}
+\newpage
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\subfigure[A]{\includegraphics[scale=.450]{FIGURES/cattle_trade_network.jpeg}}
+\subfigure[B]{\includegraphics[scale=.450]{FIGURES/pig_trade_network.jpeg}}\\
+\subfigure[C]{\includegraphics[scale=.450]{FIGURES/sheep_trade_network.jpeg}}
+\end{center}
+\caption{}
+\label{sfig:tradenets}
 \end{figure}
 \end{center}
 \newpage
