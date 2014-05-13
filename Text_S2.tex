@@ -74,26 +74,25 @@ In this study we provide a thorough assessment of the effects of sampling bias i
 % where $C$ is an arbitrary constant, chosen such that $E[m_{ij}]=1$.
 % To analyze experiment iii, we used BSSVS to estimate Bayes Factors and compared BFs obtained with different sub-samples.
 % Additionally, we computed Kullback-Leibler divergence~\cite{KL,roots} of the root state distributions using a discrete uniform distribution as reference. 
-First we propose a formal Bayesian test to gain insight into the effect of sampling bias, using the differences in representation as a predictor to viral spread.
-Secondly, a customized sampling scheme is used to down-sample the original data sets and reduced representation bias.
+%First we propose a formal Bayesian test to gain insight into the effect of sampling bias, using the differences in representation as a predictor to viral spread.
+%Secondly, a customized sampling scheme is used to down-sample the original data sets and reduced representation bias.
 
-\subsection{``Representation-informed'' priors and Country base frequencies}
+%\subsection{``Representation-informed'' priors and Country base frequencies}
+% The first experiment to study the impact of sampling in our estimated was to use what we call a ``representation-informed'' prior.
+% This prior is built by assuming that the average rate of flow between two locations is proportional to the difference in representation, i.e., the number of sequences from each location.
+% We can mathematically express the above rationale as:
+% \begin{equation}
+% \label{seq:repprior}
+%  m_{ij}=C\frac{|n_i-n_j|}{\sum_i|n_i-n_j|}
+% \end{equation}
+% where $n_i$ and $n_j$ are the number of sequences from locations $i$ and $j$ and $C$ is an arbitrary constant, chosen such that $E[m_{ij}]=1$ (see the Methods section in main text).
+% For each serotype we calculated marginal likelihoods using path sampling (PS) and stepping stone (SS) for the ``representation-informed'' priors.
+% These marginal likelihood were compared to the marginal likelihoods obtained using uniform prior distributions on the infinitesimal rate matrix.
+% 
+% We found Bayes factors of $200$ and $20$ between these models and their uniform counterparts for serotypes A and O respectively.
+% These results show significant statistical support for the ``representation-informed'' priors.
 
-The first experiment to study the impact of sampling in our estimated was to use what we call a ``representation-informed'' prior.
-This prior is built by assuming that the average rate of flow between two locations is proportional to the difference in representation, i.e., the number of sequences from each location.
-We can mathematically express the above rationale as:
-\begin{equation}
-\label{seq:repprior}
- m_{ij}=C\frac{|n_i-n_j|}{\sum_i|n_i-n_j|}
-\end{equation}
-where $n_i$ and $n_j$ are the number of sequences from locations $i$ and $j$ and $C$ is an arbitrary constant, chosen such that $E[m_{ij}]=1$ (see the Methods section in main text).
-For each serotype we calculated marginal likelihoods using path sampling (PS) and stepping stone (SS) for the ``representation-informed'' priors.
-These marginal likelihood were compared to the marginal likelihoods obtained using uniform prior distributions on the infinitesimal rate matrix.
-
-We found Bayes factors of $200$ and $20$ between these models and their uniform counterparts for serotypes A and O respectively.
-These results show significant statistical support for the ``representation-informed'' priors.
-
-Also, we assessed the impact of fixed base frequencies for the locations, as follows: we allowed 
+We assessed the impact of fixed base frequencies for the locations, as follows: we allowed 
 The 'fixed frequencies' analyses yielded substantially lower marginal likelihoods (data not shown, see main text for discussion).
 Also, estimated base frequencies significantly differed from their observed counterparts as shown in Figure~\ref{sfig:freqs}.
 
@@ -195,8 +194,6 @@ Also, root probability distributions seem to be more consistent for serotype A t
 %\bibliographystyle{s2}{plos2009}
 \bibliography{TEXTS2}
 \section*{Figure Legends}
-\textbf{Figure~\ref{sfig:freqs}. Estimated and observed trait (country) frequencies for both serotypes.}
-We estimated base frequencies using a discrete uniform prior and compared the obtained median values to the observed frequencies for each country in each data set (serotype). 
 
 \textbf{Figure~\ref{sfig:trade}. Exportation, importation and production time series for pigs, cattle and sheep in South America.}
 Panel A shows exportations in log~(~\# ~of heads) of live animals for pigs, sheep and cattle.
@@ -226,16 +223,6 @@ Arrow thickness is proportional to Bayes factor magnitude and colors depict the 
 As in the main text, disease cases and vaccination in doses per head are overlaid to the demographic reconstructions.
 %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%
-\newpage
-\begin{center}
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=.35]{FIGURES/FMDV_frequencies_fixed.jpeg}
-\end{center}
-\caption{}
-\label{sfig:freqs}
-\end{figure}
-\end{center}
 \newpage
 %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%
@@ -420,7 +407,8 @@ Rate ($\times 10^{-2}$)	&1.11 (0.91-1.32)	&0.91 (0.63-1.21)\\
  \end{table}
 
 %%%%%%%%
-%%%%%%%%
+%%%%%%%%\textbf{Figure~\ref{sfig:freqs}. Estimated and observed trait (country) frequencies for both serotypes.}
+We estimated base frequencies using a discrete uniform prior and compared the obtained median values to the observed frequencies for each country in each data set (serotype). 
 \newpage
 \begin{sidewaystable}
 \medskip
@@ -458,11 +446,11 @@ Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration 
 \toprule
 Subsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration rate$^{1}$ (95 \% BCI)	&Root (Pr$^{2}$) & KL$^3$\\
 \midrule
-1	&1.11 (0.86-1.37)	&20.27 (18.45-21.95)	&8.48 (3.91-13.59)	&Colombia  (0.45)& 1.24\\
-2	&0.865 (0.62-1.11)	&22.40 (19.78-25.31)	&8.74 (3.84-14.28)	&Colombia  (0.46)&1.04\\
-3	&0.94 (0.68-1.21)	&21.91 (19.46-24.56)	&8.72 (4.03-14.17)	&Colombia  (0.51)&1.52\\
-4	&0.84 (0.62-1.18)	&22.54 (19.80-25.45)	&8.43 (3.77-13.67)	&Colombia  (0.49)&1.00\\
-5	&0.88 (0.63-1.13)	&22.33 (19.55-25.26)	&8.58 (3.89-13.18)	&Colombia  (0.44)&1.23\\
+1	&1.11 (0.86-1.37)	&20.27 (18.45-21.95)	&8.48 (3.91-13.59)	&Venezuela  (0.45)& 1.24\\
+2	&0.865 (0.62-1.11)	&22.40 (19.78-25.31)	&8.74 (3.84-14.28)	&Venezuela  (0.46)&1.04\\
+3	&0.94 (0.68-1.21)	&21.91 (19.46-24.56)	&8.72 (4.03-14.17)	&Venezuela  (0.51)&1.52\\
+4	&0.84 (0.62-1.18)	&22.54 (19.80-25.45)	&8.43 (3.77-13.67)	&Venezuela  (0.49)&1.00\\
+5	&0.88 (0.63-1.13)	&22.33 (19.55-25.26)	&8.58 (3.89-13.18)	&Venezuela  (0.44)&1.23\\
 
 \bottomrule
 \end{tabular}
