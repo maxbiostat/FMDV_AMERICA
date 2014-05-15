@@ -86,7 +86,7 @@ Waldemir de Castro Silveira$^{1}$
 \\
 $\ast$ E-mail: lmax.procc@gmail.com
 \end{flushleft}
-
+\newpage
 % Please keep the abstract between 250 and 300 words
 \section*{Abstract}
 
@@ -160,10 +160,10 @@ Moreover, we use data on livestock trade and geographical distances as predictor
 
 \section*{Results}
 
-\subsection*{Evolutionary rate of FMDV serotypes A and O}
+\subsection*{Evolutionary rates and times of divergence of FMDV serotypes A and O}% TODO: LM: I appreciate if sb comes up with a better name for this section.
 
-Preliminary analysis using jModelTest suggested the general time reversible (GTR) model with a discretized gamma distributed across-site rate variation and a proportion of invariant sites (GTR+I+$\Gamma_{4}$) model as the best fit nucleotide substitution model for both FMDV data sets.
-Next, we performed a computationally intensive model selection using path-sampling (PS) and stepping-stone (SS) to chose the best fitting demographic growth model and molecular clock model.
+Preliminary analysis using jModelTest suggested the general time reversible (GTR) model with a discretized gamma distributed across-site rate variation and a proportion of invariant sites (GTR + I + $\Gamma_{4}$) model as the best fit nucleotide substitution model for both FMDV data sets.
+Next, we performed a computationally intensive model selection using path-sampling (PS) and stepping-stone (SS) to choose the best fitting demographic growth model and molecular clock model.
 
 Our results favour a skyride model that allows fluctuations in demographic growth through time  over to the constant population assumption (A: BF = $11$; O: BF = $21$).
 Using a similar approach, we  found decisive support for the relaxed in comparison to the strict molecular clock model.
@@ -173,31 +173,30 @@ The coefficient of variation for the log-normal relaxed molecular clock model ha
 The `temporal signal' test~\cite{Faria2012} (see Methods) also indicated significant temporal structure for both serotypes (A: log BF = $310$; O: log BF = $348$), showing that both FMDV data sets analysed here evolve measurably, a result also found for FMDV SAT 1 in East Africa~\cite{sangula}.
 Overall, these results show that sufficient temporal information is embedded in sequence data of both serotypes under investigation, which is central for the estimation of times of divergence and to reconstruct the population dynamics in natural time units~\cite{MEP}.
 
-\subsection*{Dating the divergence of FMDV isolates}
-
-We performed a Bayesian analysis using BEAST to infer time-structured phylogenies for each FMDV serotype, assuming the corresponding best-fit combination of nucleotide substitution, demographic and molecular clock models.
+We used BEAST to infer time-structured phylogenies for each FMDV serotype, assuming the best-fit combination of nucleotide substitution, demographic and molecular clock models.
 Figure~\ref{fig:trees}A shows the maximum clade credibility (MCC) tree estimated for serotype A.
-The estimated tMRCA of the circulating serotype A strains was 1932 ($95\%$ HPD: $1925 -- 1939$).
-
-Figure~\ref{fig:trees}A shows that sequences from the same country tend to cluster in small clades, although the inferred phylogenies for both serotypes also show considerable interspersing of lineages, indicating transborder FMDV spread.
-For example, Argentinian serotype A sequences were grouped in two clades, that either comprised only Argentinian isolates or included sequences from Brazil and Uruguay (Figure~\ref{fig:trees}A).
-Interestingly, the majority of the isolates from Venezuela and Colombia fall together within two distinct clades. 
-
+The estimated time to most recent common ancestor (tMRCA) of the circulating serotype A strains was 1932 ($95\%$ HPD: $1925$--$1939$).
 Figure~\ref{fig:trees}B presents the estimated MCC tree for serotype O.
-The same interspersing pattern can be noticed, with Ecuador and Colombia showing several interleaved clades.
-The time to most recent common ancestor (tMRCA) for serotype O was estimated around 20 years, showing a more recent origin.
-Here, a smaller clade of Colombian isolates are found interspersed within from Venezuelan isolates.
-In addition, isolates from Ecuador are found interspersed with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
-Overall, the Bayesian phylogenies suggest that most FMDV flow within South America occurred between neighboring countries. 
-
-Using the best fitting demographic and molecular clock model combination for each serotype, the evolutionary rate for serotype A was estimated at  $\approx 4 \times 10^{-3}$ substitutions/site/year.
-In addition, the estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e.~at $\approx 1 \times 10^{-2}$, consistent with previous studies~\cite{tully, Carvalho2013, Muellner2011}. 
+The tMRCA for serotype O was estimated around $20$ years ($1989$, $95\%$ HPD: $ 1986$--$1991$), showing a more recent origin. % (but see \textbf{Discussion}). %TODO: LM: should we put this ``but''? 
+Using the combination of best fitting demographic and molecular clock models for each serotype, the evolutionary rate for serotype A was estimated at $\approx 4 \times 10^{-3}$ substitutions/site/year.
+The estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e.~at $\approx 1 \times 10^{-2}$, consistent with previous studies~\cite{tully, Carvalho2013, Muellner2011}.
+See Text S2, Tables~\ref{stab:SB_O} and~\ref{stab:SB_A} for complete estimates.
 
 \begin{center}
  [Figure~\ref{fig:trees} about here]
 \end{center}
 
 \subsection*{Spatial Dynamics of FMDV in South America}
+
+Figure~\ref{fig:trees}A shows that sequences from the same country tend to cluster in small clades, although the inferred phylogenies for both serotypes also show considerable interspersing of lineages, indicating transborder FMDV spread.
+For example, Argentinian serotype A sequences were grouped in two clades, that either comprised only Argentinian isolates or included sequences from Brazil and Uruguay (Figure~\ref{fig:trees}A).
+Interestingly, the majority of the isolates from Venezuela and Colombia fall together within two distinct clades.
+
+For serotype O the same interspersing pattern can be noticed, with Ecuador and Colombia showing several interleaved clades (Figure~\ref{fig:trees}B).
+A smaller clade of Colombian isolates are found interspersed within from Venezuelan isolates.
+In addition, isolates from Ecuador were grouped with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
+Overall, the Bayesian phylogenies suggest that most FMDV flow within South America occurred between neighboring countries. 
+
 
 %To assess the spatial pattern of FMDV spread within South America, we performed Bayesian phylogeographic analysis, also using the models available in BEAST~\cite{roots}.
 %We began by evaluating the spatial signal contained in our sequences using Bayesian tip-association tests~\cite{bats} to determine the amount of spatial signal in our reconstructed phylogenies.
@@ -207,14 +206,14 @@ As an overall summary, our data sets presented high degree of spatial signal, ju
 
 To gain insight into the spatio-temporal process of FMDV spread, we employed an asymmetric continuous-time Markov chain (CTMC) phylogeographic model~\cite{roots} available in BEAST~\cite{beast2012}, coupled with model averaging using Bayesian stochastic search variable selection (BSVSS) procedure (see Methods).
 %BSSVS also naturally allows for the computation of Bayes factors, which are in turn used to assess the importance/significance of each migration path.
-The results of the diffusion estimation are presented in Figure~\ref{fig:migration} and show that Brazil and Colombia were the most strongly connected regions (hubs) for both serotypes A and O.
-
-The highest dispersal rates for serotype O were estimated for transitions between Colombia and Ecuador, Venezuela and Colombia and Uruguay and Argentina.
-When we analysed support for various epidemiological links, the best supported (log BF$>9$) routes were between Peru and Brazil, Bolivia and Colombia, Uruguay and Argentina and Argentina and Peru.
-The route between Uruguay and Peru showed smaller but strong support (log BF$>4$).
+The results of the diffusion estimation are presented in Figure~\ref{fig:migration} and show that Brazil and Colombia were the most strongly connected regions (hubs) for both serotypes A and O, respectively.
 
 The highest dispersal rates for serotype A were obtained for transitions between Brazil and Uruguay, Ecuador and Venezuela and Bolivia and Venezuela.
 When we looked at the epidemiological linkage, we found the transitions between Uruguay and Argentina, Argentina and Bolivia, Brazil and Argentina and Bolivia and Venezuela to have the highest support (log BF$>8$).
+
+On the other hand, the highest rates for serotype O were estimated for transitions between Colombia and Ecuador, Venezuela and Colombia and Uruguay and Argentina.
+When we analysed support for various epidemiological links, the best supported (log BF$>9$) routes were between Peru and Brazil, Bolivia and Colombia, Uruguay and Argentina. % and Argentina and Peru. % LM: spurious link :/
+%The route between Uruguay and Peru showed smaller support (log BF$>4$). % LM: this is spurious, for sure
 
 We notice that for serotype A mainly long-range migration routes were inferred for the period before 1945.
 This result may be due to sparsity of information before 1970, that limits accurate inference about periods further back in time (see {\bf Discussion}). 
@@ -274,7 +273,7 @@ To investigate whether the two serotypes presented different spatial spread patt
 Regarding spatial signal extraction, analyses for serotypes  A and O yielded KL divergences of $1.93$ and $1.50$ respectively.
 Overall, our analyses were slightly more efficient for serotype A in comparison with serotype O.
 
-\subsection*{Identifying potential predictors of FMDV spread}
+\subsubsection*{Identifying potential predictors of FMDV spread}
 
 We used data on geographic distances and on trade of live cattle, pigs and sheep obtained from the detailed trade matrix available from the Food and Agriculture Organization (FAO), to elicit CMTC rate matrix priors (predictors).
 By accurately calculating the marginal likelihood of a model involving each predictor, we gain insight into the importance of each variable on viral spread~\cite{Carvalho2013, Nelson2011}.
@@ -313,9 +312,9 @@ For serotype O, showed much more concordance, and Colombia was pointed out as th
  [Table~\ref{tab:roots} about here]
 \end{center}
 
-\subsection*{Sensitivity of the phylogeographic analysis to sampling bias}
+\subsubsection*{Sensitivity of the phylogeographic analysis to sampling bias}
 
-When performing inference under highly unbalanced designs, it is useful to perform sensitivity analysis to assess the impact of preferential sampling in phylogeographic inference~\cite{Faria2012,polar,fluPNAS}. 
+When performing inference under highly unbalanced designs, it is useful to perform sensitivity analysis to assess the impact of preferential sampling in phylogeographic inference~\cite{Faria2012, polar, fluPNAS}. 
 Since our data sets contain unbalanced geographic samples, we conducted a detailed sensitivity analysis to assess the effect of performing inference under highly unbalanced designs.
 
 % When we compared the (log) marginal likelihoods obtained by estimating root state frequencies instead of fixing them to their observed values, we found that this last approach yielded consistently lower marginal likelihoods. :LM: also gibberish.
@@ -627,8 +626,7 @@ Additionally, data on vaccination  (doses per head) and (log) FMD serotype-speci
 \label{fig:skyride}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%% overwritten with each new Beta distribution
+%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \newpage
 \begin{table}[H]
 \caption{
