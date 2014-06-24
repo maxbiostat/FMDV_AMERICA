@@ -209,13 +209,6 @@ We represent the total trade of live animals from 1986 to 2009.
 Arrows connect countries if there was a non-zero number of exchanges between them.
 Colors represent total exports in number of live animals.
 
-\textbf{Figure~\ref{sfig:tradeinfo}. Kernel density estimation for the trade-informed priors (predictors) used in this study.}
-Information on cattle, sheep and pigs trade was retrieved from FAO and used to create trade-informed prior distributions for the CTMC infinitesimal rate matrix.
-Each prior was evaluated for prior predictive probability (marginal likelihood) using the PS and SS algorithms. 
-
-\textbf{Figure~\ref{sfig:AvsO}. Scatterplot of estimated rate matrices for serotypes A and O.}
-We plotted all overlapping rates (Serotype O without Paraguay) estimated using a symmetric CTMC model for both serotypes, to investigate whether the two serotypes have different spatial patterns.
-
 \textbf{Figure~\ref{sfig:compz}. Comparison of of estimated rate matrices across subsamples}
 In panels A and B we show entry-wise scatterplots of the five subsamples for serotypes A and O respectively.
 Colors depict country of origin.
@@ -262,26 +255,7 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \end{figure}
 \end{center}
 \newpage
-%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=.5]{FIGURES/trade_info.jpeg}
-\end{center}
-\caption{}
-\label{sfig:tradeinfo}
-\end{figure}
-\newpage
-%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=.5]{FIGURES/A_vs_O_symmetric.jpeg}
-\end{center}
-\caption{}
-\label{sfig:AvsO}
-\end{figure}
-\newpage
+
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 
@@ -371,18 +345,18 @@ Best fitting models (highest log marginal likelihood obtained using SS) are high
 \begin{center}
 \begin{tabular}{ccccccc}
 \toprule
-Serotype	&Coalescent	&Clock	& PS  & SS\\
+Serotype	&Coalescent	&Clock	& PS  & SS\\             
 \midrule
-A	&Constant	&UCLD	& & -12285.02\\
-A	&Skyride 	&UCLD	& & \textbf{-12274.59}\\
-A	&Constant	&UCED	& & -12316.16\\
-A	&Skyride 	&UCED	& & -12307.87\\
-A       &Skyride       &STRICT & & -12308.19\\
-O	&Constant	&UCLD	& & -8087.76\\
-O	&Skyride 	&UCLD	& & -8082.64\\
-O	&Constant	&UCED	& & -8090.10\\
-O	&Skyride 	&UCED	& & \textbf{-8069.47}\\
-O       &Skyride       &STRICT & & -8125.31\\
+A	&Constant	&UCLD	& -12280.50& -12285.02\\
+A	&Skyride 	&UCLD	& \textbf{-12273.68} & \textbf{-12274.59}\\
+A	&Constant	&UCED	& -12320.36 & -12316.16\\
+A	&Skyride 	&UCED	& -12311.20 & -12307.87\\
+A       &Skyride       &STRICT & -12315.31 & -12308.19\\
+O	&Constant	&UCLD	& -8089.96& -8087.76\\
+O	&Skyride 	&UCLD	& -8078.77 & -8082.64\\
+O	&Constant	&UCED	&-8087.57 & -8090.10\\
+O	&Skyride 	&UCED	& \textbf{-8064.67}& \textbf{-8069.47}\\
+O       &Skyride       &STRICT & -8131.91& -8125.31\\
 \bottomrule
 \end{tabular}
 \end{center}
