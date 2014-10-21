@@ -12,6 +12,8 @@
 \usepackage{amsmath}
 \bibliographystyle{plos2009}%
 %%% Supp Mat modifications
+\usepackage{xr} % automatic cross-referencing
+\externaldocument{FMDV_AMERICA}
 \renewcommand{\thetable}{S\arabic{table}}   
 \renewcommand{\thefigure}{S\arabic{figure}}
 \renewcommand\refname{Further References}
@@ -30,7 +32,7 @@ Luiz Max Fagundes de Carvalho, Guy Baele, Nuno Rodrigues Faria,\\
 Andres M. Perez, Marc A. Suchard,  Philippe Lemey\\
 Waldemir de Castro Silveira
 }
-\date{June, 2014}
+\date{July, 2014}
 
 \begin{document}
 
@@ -51,93 +53,52 @@ Here, we use both PS and SS to construct an overall ranking of competing models,
 In order to obtain sufficient reliability and check convergence of our (log) marginal likelihood estimators, we perform multiple independent runs with varying computational settings in BEAST \cite{M-beast2012}.
 PS and SS calculations were hence performed using 64 power posteriors, each running for $250,000$, $500,000$, 1 million and 2 million iterations, taking up to over 1 month of computation for each model under evaluation.
 
+Table~\ref{stab:treeclockselection} shows the results of the model selection study to determine the best combination of demographic and molecular clock models for each serotype.
+Results indicate that while serotype A is best fitted by a log-normal molecular clock, serotype O best fits a more strict exponential relaxed molecular clock, pointing to different evolutionary dynamics between the two serotypes with respect to branch-specific rate variation. 
 
 \section{Assessing the impact of taxon sampling on phylogeographic and coalescent reconstructions}
 
-The data sets used in this study presented preferential sampling, with some countries being overrepresented.
+The data sets used in this study presented preferential sampling, with some countries being overrepresented (Table~\ref{stab:reps}).
 Namely, $58$ of the $131$ ($44.2\%$) sequences collected for serotype A were from Argentina, and $90$ of the $167$ ($53.9\%$) sequences for serotype O came from Ecuadorian isolates.
-This unbalanced design may introduce bias on our phylogeography analysis, since under a null 'single rate' model, the more sequences are collected from a location, the higher the estimates to and from this location will be. % TODO: citation or formula here
-% To see this, let....
-
-Sampling bias constitutes an important concern in phylogeographic modeling, and several studies have performed sensitivity analyses to determine how robust inference is to biased sampling \cite{M-Faria2012,M-Lemey2014,M-polar,M-fluPNAS}.
+This unbalanced design may introduce bias on our phylogeography analysis, since under a null 'single rate' model, the more sequences available from a location, the higher the estimates to and from this location will be.
+Sampling bias constitutes an important point of concern in phylogeographic modeling, and several studies have performed sensitivity analyses to determine how robust inference is to biased sampling \cite{M-Faria2012, M-Lemey2014, M-polar, M-fluPNAS}.
 Proposed approaches include using equally sampled data sets, for which each location contributes the same number of sequences \cite{M-fluPNAS}.
 This approach is specially useful when a reasonable number of sequences is available.
-Another strategy is to devise prior distributions for the CTMC infinitesimal rate matrix ($\mathbf{Q}$) that explicitly counteract the effects of biased sampling \cite{M-Faria2012}.
-%TODO: talk about bias in skyride 
-In this study we provide a thorough assessment of the effects of sampling bias in the phylogeographic inference results. 
-% To assess the impact of sampling in our estimates, we performed the following experiments:
-% \begin{itemize}
-%  \item i. Parameter estimation without the over-represented locations;
-%  \item ii. Parameter estimation with over-represented locations downsampled to the number of sequences of the second most represented location (Venezuela and Colombia, for serotypes A and O, respectively). For each serotype, we obtained five random subsamples using this approach;
-%  \item iii. Estimation of the marginal likelihood of a ``representation-informed'' prior distribution for the rates, detailed below.
-% \end{itemize}
-% 
-% In order to assess the relevance (impact) of the sampling scheme on the inference of the rate matrix, we formulated a representation-informed prior distribution, as follows: let $n_i$ and $n_j$ be the numbers of sequences available for locations $i$ and $j$, respectively.
-%  The representation-informed prior is a multivariate gamma prior, with expectations given by
-% \begin{equation}
-%  m_{ij}=C\frac{|n_i-n_j|}{\sum_i|n_i-n_j|}
-% \end{equation}
-% where $C$ is an arbitrary constant, chosen such that $E[m_{ij}]=1$.
-% To analyze experiment iii, we used BSSVS to estimate Bayes Factors and compared BFs obtained with different sub-samples.
-% Additionally, we computed Kullback-Leibler divergence~\cite{KL,roots} of the root state distributions using a discrete uniform distribution as reference. 
-%First we propose a formal Bayesian test to gain insight into the effect of sampling bias, using the differences in representation as a predictor to viral spread.
-%Secondly, a customized sampling scheme is used to down-sample the original data sets and reduced representation bias.
+Another strategy is to devise prior distributions for the CTMC infinitesimal rate matrix ($\mathbf{Q}$) that explicitly counteract the effects of biased sampling~\cite{M-Faria2012}.
+Also, coalescent-based demographic reconstruction methods usually assume random sampling from a large homogeneous population, which may not be met for our sampling design.
+We therefore also performed a sensitivity analysis of the skyride reconstructions presented in the paper.
+In this study we provide a thorough assessment of the effects of sampling bias in phylogeographic and demographic inference through sub-sampling. 
 
-%\subsection{``Representation-informed'' priors and Country base frequencies}
-% The first experiment to study the impact of sampling in our estimated was to use what we call a ``representation-informed'' prior.
-% This prior is built by assuming that the average rate of flow between two locations is proportional to the difference in representation, i.e., the number of sequences from each location.
-% We can mathematically express the above rationale as:
-% \begin{equation}
-% \label{seq:repprior}
-%  m_{ij}=C\frac{|n_i-n_j|}{\sum_i|n_i-n_j|}
-% \end{equation}
-% where $n_i$ and $n_j$ are the number of sequences from locations $i$ and $j$ and $C$ is an arbitrary constant, chosen such that $E[m_{ij}]=1$ (see the Methods section in main text).
-% For each serotype we calculated marginal likelihoods using path sampling (PS) and stepping stone (SS) for the ``representation-informed'' priors.
-% These marginal likelihood were compared to the marginal likelihoods obtained using uniform prior distributions on the infinitesimal rate matrix.
-% 
-% We found Bayes factors of $200$ and $20$ between these models and their uniform counterparts for serotypes A and O respectively.
-% These results show significant statistical support for the ``representation-informed'' priors.
+First, we assessed whether overrepresented locations could influence phylogenetic parameter estimation, by performing parameter estimation with and without these locations.
+Tables~\ref{stab:SB_A} and~\ref{stab:SB_O} show medians and $95 \%$ credible intervals for parameters of interest with and without the overrepresented locations for both serotypes.
+This analysis show that tMRCA estimates for serotype A were slightly affected by the removal of the sequences from Argentina, resulting in a difference of about 6 years in the estimates.
+On the other hand, tMRCA estimates with and without Ecuadorian sequences for serotype O showed substantial agreement.
+Estimates of relative codon position rates were consistent for both serotypes.
+Evolutionary rates estimates were lower with the removal of Argentinian sequences for serotype A, while the estimates for serotype O were consistent with and without sequences from Ecuador. 
+These results suggest Argentina is an important source of viral diversity, since sequences from this country contribute to higher rate estimates.
 
-% We assessed the impact of fixed base frequencies for the locations, as follows: we allowed 
-% The 'fixed frequencies' analyses yielded substantially lower marginal likelihoods (data not shown, see main text for discussion).
-% Also, estimated base frequencies significantly differed from their observed counterparts as shown in Figure~\ref{sfig:freqs}.
+To study the robustness of our demographic reconstructions and quantify the impact of including older sequences, which are not available for all locations, we performed temporal reconstruction by using only sequences from $2000$ to present.
+For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior \cite{M-skyride} on coalescent times, also known as the `skyride' model.
+These results are presented in Figure~\ref{sfig:only2000sky} and, compared to those presented in the main text (Figure~\ref{fig:skyride}), show the same temporal behaviour, with the exception of the absence of the marked drop in serotype A $N_e$ near 2001 that is present in Figure~\ref{fig:skyride}.
+% \subsubsection{Parameter estimation with down-sampling}
 
-\subsection{Robustness of parameter estimation and demographic reconstruction}
-
-To quantify the impact of including older sequences, which are not available for all locations, we assessed the robustness of our temporal reconstruction by using only sequences from 2000 to present.
-For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing prior on coalescent times, also known as the `skyride' model.
-These results are presented in Figure~\ref{sfig:only2000sky}.
-
-Also, we were interested in studying whether overrepresented locations could influence phylogenetic parameter estimation.
-To investigate this, we performed parameter estimation with and without these locations.
-Tables~\ref{stab:SB_A} and~\ref{stab:SB_O} show medians and $95 \%$ credible intervals for several parameters of interest with and without the overrepresented locations
-for both serotypes.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsubsection{Parameter estimation with down-sampling}
-
-For large data sets it is possible to perform equal down-sampling, i.e., simple random stratified sampling \cite{M-fluPNAS}.
+For large data sets it is possible to perform equal down-sampling, i.e., simple random stratified sampling~\cite{M-fluPNAS}.
 However, this was not possible in the data sets analyzed in this study.
-The above experiments were performed by excluding all sequences from overrepresented locations.
-
-To assess the effect of biased sampling while still using the information from overrepresented locations, we used a down-sampling scheme.
+To further assess the effect of biased sampling while still using the information from overrepresented locations, we used a down-sampling scheme.
 We draw as many sequences from the most represented location as there are sequences from the second most represented location.
 For serotype A, the second most represented country was Venezuela ($27$ sequences) and for serotype O Colombia was the second location with more sequences ($36$).
 To compose the subsamples for serotype A we then randomly drew $27$ sequences from Argentina and combined them to the other sequences in the original data set.
 This procedure was performed five times to obtain five subsamples.
-Sub-sampling for serotype O proceeded analogously.
-
-Results of these experiments are presented in Tables~\ref{stab:ED_A} and~\ref{stab:ED_O}.
-For most parameters there was substantial overlap between posterior distributions obtained using different subsamples.
+Sub-sampling for serotype O were carried out analogously.
+Results of these experiments are presented in Tables~\ref{stab:ED_A} and~\ref{stab:ED_O} and for most parameters there was substantial overlap between posterior distributions obtained using different subsamples.
 Also, inference regarding the spatial origin (root) was consistent across subsamples for both serotypes.
 
-\subsubsection{Comparing rate matrices}
+% \subsubsection{Comparing rate matrices}
 
 A point of interest is whether the estimates for $\mathbf{Q}$ were consistent across subsamples.
 First we plotted the estimated rates across each subsample against each other for both serotypes.
-The results are shown in Figure~\ref{sfig:compz}A and~B and we can notice estimates are in agreement across subsamples.
-
-We also calculated the $L_1$ matrix distance norm for (each pair of) the estimates of $\mathbf{Q}$ obtained from each subsample.
+Scatterplots of the estimated rates for each subsample are shown in Figure~\ref{sfig:compz}A and~B and we can notice estimates agree across subsamples.
+To explore this further, we also calculated the $L_1$ matrix distance norm -- defined below -- for (each pair of) estimates of $\mathbf{Q}$ obtained from each subsample.
 Let $\mathbf{X}$ and $\mathbf{Y}$ be two $K \times K$ square matrices.
 The $L_1$ matrix norm is defined as
 
@@ -149,34 +110,35 @@ The $L_1$ matrix norm is defined as
 Since all entries in our matrices are non-negative, we they were log-transformed prior to computing distances.
 Calculations were performed using the \verb|norm()| in the \textbf{PET} package~\cite{PET} of the R statistical computing environment.
 The results of these analyses are presented in Figure~\ref{sfig:compz}C and~D.
+From these we can see 
 
-\subsubsection{Quantifying spatial signal extraction}
- In a Bayesian context, it is sometimes desirable to quantify how much information we gain from updating our prior information using the available data.
- A common measure of this signal extraction is the Kullback-Leibler (KL) divergence between prior and posterior distributions~\cite{M-KL}.
- In a phylogeographic setting, Lemey et al. (2009) \cite{M-roots} propose to calculate the KL divergence between the posterior distribution for the states at root and a uniform discrete prior.
- Let $K$ be the number of discrete states (e.g. locations) and $\boldsymbol\theta$ be the $K$-dimensional vector of state probabilities.
- Then the prior density is
- \begin{equation}
- \label{seq:prior}
-  \pi(\boldsymbol\theta_i) = \frac{1}{K} \quad \forall i \in \{1,..,K\} 
- \end{equation}
+% \subsubsection{Quantifying spatial signal extraction}
+In a Bayesian context, it is sometimes desirable to quantify how much information we gain from updating our prior information using the available data.
+A common measure of this signal extraction is the Kullback-Leibler (KL) divergence between prior and posterior distributions~\cite{M-KL}.
+In a phylogeographic setting, Lemey et al. (2009) \cite{M-roots} propose to calculate the KL divergence between the posterior distribution for the states at root and a uniform discrete prior.
+Let $K$ be the number of discrete states (e.g. locations) and $\boldsymbol\theta$ be the $K$-dimensional vector of state probabilities.
+Then the prior density is
+\begin{equation}
+\label{seq:prior}
+\pi(\boldsymbol\theta_i) = \frac{1}{K} \quad \forall i \in \{1,..,K\} 
+\end{equation}
 Next, let the trait data be denoted by $D$.
 The posterior distribution of $\boldsymbol\theta$ is $p(\boldsymbol\theta|D)$.
 The Kullback-Leibler divergence is given by:
 \begin{equation}
- \label{seq:KL}
- \int p(\boldsymbol\theta|D)log\frac{p(\boldsymbol\theta|D)}{\pi(\boldsymbol\theta)}
+\label{seq:KL}
+\int p(\boldsymbol\theta|D)log\frac{p(\boldsymbol\theta|D)}{\pi(\boldsymbol\theta)}
 \end{equation}
 The higher the divergence, the more the posterior distribution is far away from its prior expectation, hence more signal is extracted from data.
-We calculated equation~\ref{seq:KL} for the root state distributions for all subsamples (presented in Tables~\ref{stab:ED_A} and~\ref{stab:ED_O}) and all predictors (see main text).
+We computed~(\ref{seq:KL}) for the root state distributions for all subsamples (presented in Tables~\ref{stab:ED_A} and~\ref{stab:ED_O}) and all predictors (see main text).
 
-\subsubsection{Spatial Bayesian Stochastic Search Variable Selection across subsamples}
+% \subsubsection{Spatial Bayesian Stochastic Search Variable Selection across subsamples}
 
 In a phylogeographic setting, even for moderate numbers of locations we are usually left with the task of estimating a potentially large number of parameters. 
 BSSVS seeks to select a parsimonious set of rates that sufficiently explain data variation.
 By transforming each entry of the infinitesimal rate matrix $\mathbf{Q}$ into a vertex of the graph $\mathcal{G}$, the algorithm then searches the whole graph space, assigning an indicator variable $\delta_{ij}$ to each vertex.
 Assuming each $\delta_{ij}$ is Bernoulli distributed with parameter $p_{ij}$, we can select only those entries with high probability of being included by BSSVS.
-Using the fact that $\sum\delta_{ij}$ converges to a truncated Poisson distribution if the success probability is sufficiently small, we can can analytically compute Bayes factors using Equation 6 in Lemey et al. (2009).
+Using the fact that $\sum\delta_{ij}$ converges to a truncated Poisson distribution if the success probability is sufficiently small, we can can compute Bayes factors analytically using Equation (6) in Lemey et al. (2009).
 
 To gain further insight into the impact of down-sampling in our phylogeographic inference, we conducted a Bayesian Stochastic Search Variable Selection (BSSVS) to search for the most parsimonious set of routes needed to explain data variation in each subsample.
 As stated in the main text and in Lemey et al. (2009) \cite{M-roots}, this strategy naturally allows for the analytical calculation of Bayes factors for each migration route (i.e. graph edge).
@@ -313,32 +275,6 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 %%%%%%%%%%%%%%%%
 \newpage
 \begin{table}[H]
- \caption{
- Representation of South American countries in the data sets analysed.
- Full details (and accession numbers) are given in Text S1.
- }
- \begin{tabular}{cccc}
- \toprule
-   \multicolumn{2}{c}{Serotype A}& \multicolumn{2}{c}{Serotype O}\\
- Country & number of sequences (time span)& number of sequences (time span) & \\ 
-  \midrule
-Argentina & $58$ ($1959$--$2001$)& $2$ ($2000$--$2006$)  \\
-Bolivia   & $7$ ($2000$--$2001$)& $14$ ($2000$--$2002$)  \\
-Brazil    & $16$ ($1955$--$2001$)& $15$ ($1998$--$2005$)  \\
-Colombia  & $14$ ($1967$--$2008$)& $36$ ($1994$--$2008$)  \\
-Ecuador   & $3$ ($1975$--$2002$)& $90$ ($2002$--$2010$)  \\
-Paraguay                    & --& $2$ ($2002$--$2003$)  \\
-Peru      & $4$ ($1969$--$2000$)& $1$ ($2004$)  \\
-Uruguay   & $2$ ($2001$)& $1$ ($2000$)  \\
-Venezuela & $27$ ($1962$--$2007$)& $6$ ($2003$--$2007$)  \\
-Total     & $131$ ($1955$--$2008$) & $167$ ($1994$--$2010$)\\
-  \bottomrule
- \end{tabular}
-\label{stab:reps}
-\end{table}
-%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%
-\begin{table}[H]
 \caption{\textbf{Model selection using path sampling (PS) and stepping-stone sampling (SS) to determine the tree prior (coalescent) model and clock for both serotypes.}
 UCLD = uncorrelated relaxed clock with an underlying log-normal distribution; UCED = uncorrelated relaxed clock with an underlying exponential distribution.
 Best fitting models (highest log marginal likelihood obtained using SS) are highlighted in bold.}
@@ -364,6 +300,33 @@ O       &Skyride       &STRICT & -8131.91& -8125.31\\
 \end{flushleft}
 \label{stab:treeclockselection}
  \end{table}
+
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
+\begin{table}[H]
+ \caption{
+ Representation of South American countries in the data sets analysed.
+ Full details (and accession numbers) are given in Text S1.
+ }
+ \begin{tabular}{cccc}
+ \toprule
+   \multicolumn{2}{c}{Serotype A}& \multicolumn{2}{c}{Serotype O}\\
+ Country & number of sequences (time span)& number of sequences (time span) & \\ 
+  \midrule
+Argentina & $58$ ($1959$--$2001$)& $2$ ($2000$--$2006$)  \\
+Bolivia   & $7$ ($2000$--$2001$)& $14$ ($2000$--$2002$)  \\
+Brazil    & $16$ ($1955$--$2001$)& $15$ ($1998$--$2005$)  \\
+Colombia  & $14$ ($1967$--$2008$)& $36$ ($1994$--$2008$)  \\
+Ecuador   & $3$ ($1975$--$2002$)& $90$ ($2002$--$2010$)  \\
+Paraguay                    & --& $2$ ($2002$--$2003$)  \\
+Peru      & $4$ ($1969$--$2000$)& $1$ ($2004$)  \\
+Uruguay   & $2$ ($2001$)& $1$ ($2000$)  \\
+Venezuela & $27$ ($1962$--$2007$)& $6$ ($2003$--$2007$)  \\
+Total     & $131$ ($1955$--$2008$) & $167$ ($1994$--$2010$)\\
+  \bottomrule
+ \end{tabular}
+\label{stab:reps}
+\end{table}
  %%%%%%%%%%%%%%%%%%
  %%%%%%%%%%%%%%%%%%
 \begin{sidewaystable}[h]
@@ -397,7 +360,7 @@ Venezuela&1.82 (1.00, 2.00)	&1.02 (1.00, 1.08)	&0.010&6.00 (6.00, 6.00)&	1.28 (1
 \begin{center}
 \begin{tabular}{ccc}
 \toprule
-Parameter	&Complete$^{1}$	&Without Argentina\\
+Parameter	&Complete$^{1}$	& Without Argentina\\
 \midrule
 TMRCA$^{2}$	&76.40 (69.48-83.65)	&82.31 (72.40-92.81)\\
 CP1$	^{3}$	&0.65 (0.54-0.76)	&0.62 (0.51-0.75)\\
