@@ -71,9 +71,9 @@ Marc A.~Suchard$^{6,7}$
 Philippe Lemey$^{3}$,
 Waldemir de Castro Silveira$^{1}$
 \\
-\bf{1} Pan American Center for Foot-and-Mouth Disease (PAHO/WHO), Duque de Caxias, Rio de Janeiro, Brazil.
+\bf{1} Institute of Evolutionary Biology, University of Edinburgh, Edinburgh, United Kingdom.
 \\
-\bf{2} Program for Scientific Computing (PROCC), Oswaldo Cruz Foundation, Rio de Janeiro, Rio de Janeiro, Brazil.
+\bf{2} Pan American Center for Foot-and-Mouth Disease (PAHO/WHO), Duque de Caxias, Rio de Janeiro, Brazil.
 \\
 \bf{3} Department of Microbiology and Immunology, Rega Institute -- KU Leuven, Leuven, Belgium.
 \\
@@ -89,7 +89,6 @@ $\ast$ E-mail: lmax.procc@gmail.com
 % Please keep the abstract between 250 and 300 words
 \section*{Abstract}
 
-%GB: is 'free' the term we want to be using here? %LM: Yes.
 Although foot-and-mouth disease virus (FMDV) occurrence has diminished over the years, the virus still circulates in certain areas of South America and the risk of re-emergence in previously free areas is a constant threat.
 While the molecular epidemiology of FMDV in South America has been subject of several studies recently, an integrated quantitative approach to incorporate environmental and epidemiological data into the analyses is still lacking.
 In this study, we apply state-of-the-art Bayesian phylogeography to the most comprehensive data sets of VP1 (1D) sequences from FMDV serotypes A and O collected in South America to date and analyse the temporal and spatial variation of FMDV and test evolutionary hypotheses.
@@ -114,36 +113,33 @@ Taken together, these results show that FMDV serotypes' different biology reflec
 \section*{Introduction}
 
 Foot-and-mouth disease virus (FMDV) is a rapidly evolving picornavirus and the causative agent of foot-and-mouth disease (FMD), the most important disease of domestic and wild cloven-hoofed animals~\cite{review}.
-Three of the seven FMDV serotypes (A, O, and C) circulate in certain areas of South America.
-Serotype A has been responsible for epidemics that are typically larger and more extensive than those caused by other serotypes and that, in recent years, have been limited to the 
-Southern cone of the continent~\cite{Perez2001, Malirat2012}.
-Although serotype O has historically been the most prevalent serotype on the continent, in recent years it has been limited to areas in the Andean region~\cite{andean}.
-Identification of serotype C in recent decades was limited to one case in the Brazilian Amazon.
+The virus has seven serotypes, three of which (A, O, and C) have circulated in South America.
+Serotype A has been responsible for epidemics that are typically larger (case numbers) and more extensive specially those occurred in the 
+Southern cone in recent years~\cite{Perez2001, Malirat2012}, while endemic circulation has been mostly limited to Venezuela~\cite{andean}.
+Although serotype O has historically been the most prevalent serotype on the continent, in recent years it has been limited to areas in the Andean region, Ecuador in particular~\cite{andean}.
+Identification of serotype C in recent decades was limited to one case in the Brazilian Amazons.
+
 Historical reports suggest that FMDV introduction in South America, in the late years of the 19th century, is  related to European colonization~\cite{tully}. 
 By the 1970's, FMD was widespread in South America, with occurrence of multiple subtypes in large-scale epidemics~\cite{Saraiva2003}.
-
 In South America, FMD control and eradication has traditionally been pursued using a combination of mass vaccination programs~\cite{vaccinationSA} and control of animal movements from areas in which FMDV infection was suspected.
 Over time, passive and active surveillance programs have, with heterogeneous success, succeeded to early detect FMDV.
-Phylogenetic analyses have already proved useful in veterinary public health both by recovering the transmission pathways from genetic data~\cite{cottam2007, cottam2008} and providing insight into the processes that drive re-emergence~\cite{combining}.
+In order to achieve complete erradication however, we need accurately characterize the strains involved in epidemics, specially those in previously free areas.
 
+Phylogenetic analyses have proved useful in veterinary public health both by recovering the transmission pathways from genetic data~\cite{cottam2007, cottam2008} and providing insight into the processes that drive re-emergence~\cite{combining}.
 More recently, molecular epidemiology tools have been utilized to infer the origin and evolutionary history of emerging strains~\cite{Perez2001, Malirat2007, andean, Malirat2011, Maradei2013}.
 However, as pointed out by Di Nardo, Knowles \& Paton (2011)~\cite{combining}, a joint evaluation of epidemiological, environmental and genetic data has usually been performed outside of an unified quantitative framework.
-In this context, Bayesian phylogeography offers a statistical framework to combine multiple sources of information in order to understand the spatio-temporal dynamics of FMDV and perform evolutionary hypothesis testing.
+In this context, Bayesian phylodynamics offers an attractive statistical framework to combine multiple sources of information in order to understand the spatio-temporal dynamics of FMDV and perform evolutionary hypothesis testing.
 
 Another important research goal is to gain insight into the main determinants of viral spread in the continent.
 Animal movements constitute a major threat to eradication programmes, being an important driving factor for re-emergence~\cite{movements}.
 Thus, using animal trade data as predictors can be a valuable tool to understand the role of livestock commerce in the spread of animal and zoonotic diseases~\cite{Nelson2011}.
 The ability to incorporate multiple sources of temporal and spatial information is becoming increasingly important in molecular epidemiology studies that aim to understand the driving forces of pathogen evolution and spread~\cite{towards, combining, MEP, roots}.
 
-Here, we investigate for the first time the phylodynamics of serotypes A and O in South America using all publicly available VP1 (1D) sequences for FMDV serotypes A and O in South America, with data sets spanning over a long time-period (1955-2010 for serotype A and 1994-2010 for serotype O) from nearly all south American countries affected by FMDV.
+Here, we investigate for the first time the phylodynamics of serotypes A and O in South America using all publicly available VP1 (1D) sequences for FMDV serotypes A and O in South America, with data sets spanning over a long time-period (1955-2010 for serotype A and 1994-2010 for serotype O) from nearly all south American countries affected by FMD.
 We apply state-of-the-art Bayesian phylogeographic methods to investigate the evolutionary dynamics of serotypes A and O in South America incorporating  genetic, spatial and epidemiological data such as livestock trade, geographic distances and vaccination coverage.
 This flexible Bayesian phylogeographic framework to test hypotheses on viral dispersal, while naturally accommodating phylogenetic uncertainty~\cite{roots, towards}.
-
-%GB: the paragraph below is both too general and too specific at the same time. It's too general because you mainly say: 'we used BEAST ...' without giving further justification or detail. And it's too specific because you already talk about non-parametric demographic growth models, which seems like something that would be put in the methods section.
-%LM: Fixed it. Justification is in the above paragraph. See if you agree.
 We use the Bayesian Evolutionary Analysis by Sampling Trees (BEAST) framework~\cite{beast2012} to infer time-structured phylogenies and reconstruct past population dynamics, to which we overlay vaccination and serotype-specific notification data.
 Moreover, we use data on livestock trade and geographical distances as predictors for viral spatial diffusion and accurately estimate marginal likelihoods of competing spatial dynamics models involving each predictor using recently developed methods.
-
 
 \section*{Results}
 
@@ -156,8 +152,6 @@ Using a similar approach, we  found decisive support for the relaxed clock over 
 Particularly, the exponential relaxed molecular clock provided a better fit for serotype O data (log BF = $56$) while the log-normal relaxed molecular clock model provided a better fit to serotype A (log BF = $34$) (see Table ~\ref{stab:treeclockselection} for details). 
 The coefficient of variation for the log-normal relaxed molecular clock model had a posterior mean of $0.32$ (95\% highest posterior density [HPD] interval: $0.21$--$0.43$) indicating substantial rate heterogeneity among lineages in the phylogeny.
 
-%GB: I don't know if we need the paragraph below ... (in line with my previous comments on the 'measurably evolving' statements)
-%LM: Ok, I'll fix this. Many of you have taken issue with this 'measurably evolving thing' so I assume referees will too. BUT it should be said that FMDV is not like the viruses you guys are used to studying. It's evo dynamics is dominated by quasispecies, so I think this finding is not as trivial as you guys think it is.
 The `temporal signal' test~\cite{Faria2012} (see Methods) also indicated significant temporal structure for both serotypes (A: log BF = $310$; O: log BF = $348$), showing that sufficient temporal information is embedded in sequence data of both serotypes under investigation, which is central for the estimation of times of divergence and to reconstruct the population dynamics in natural time units~\cite{MEP}.
 
 We used BEAST to infer time-structured phylogenies for each FMDV serotype, assuming the best-fit combination of nucleotide substitution, demographic and molecular clock models.
@@ -284,7 +278,9 @@ These data were expressed as doses per head, which we consider to be a more accu
 Also, serotype-specific disease notification data was collected and plotted as an overlaid time series to the reconstruction. 
 
 To assess the robustness of our reconstructions we performed skyride reconstructions using only recent (sampling date $>2000$) sequences (see Text S2, Figure ~\ref{sfig:only2000sky}).
-We also performed reconstructions in data sets without the over-represented locations (data not shown). All these analyses gave roughly similar results to those presented in Figure~\ref{fig:skyride}. The only exception was the reconstruction for serotype A without Argentinian sequences, for which it is not possible to see the marked drop near 2001 that is clear in Figure~\ref{fig:skyride}. 
+We also performed reconstructions in data sets without the over-represented locations (data not shown).
+All these analyses gave roughly similar results to those presented in Figure~\ref{fig:skyride}.
+The only exception was the reconstruction for serotype A, for which it is not possible to see the marked drop near 2001 that is clear in Figure~\ref{fig:skyride}. 
 
 \begin{center}
  [Figure~\ref{fig:skyride} about here]
