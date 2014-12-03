@@ -20,6 +20,7 @@
 *.tex~
 *.bib~
 *.gitignore~
+*.Rhistory
 FMDV_AMERICA.bib~
 FMDV_AMERICA.tex~
 FMDV_AMERICA.pdf
