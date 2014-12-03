@@ -1,0 +1,16 @@
+gi|332739419|gb|HQ695758.1|O_Cauca_Col_94_a_
+gi|332739423|gb|HQ695760.1|O_Narino_Col_94
+gi|332739425|gb|HQ695761.1|O_Cauca_Col_94__b_
+gi|332739427|gb|HQ695762.1|O_Casanare_Col_94
+gi|332739403|gb|HQ695750.1|O_Boyaca_Col_94__b_
+gi|332739407|gb|HQ695752.1|O_Valle_Col_94
+gi|332739399|gb|HQ695748.1|O_Santander_Col_94
+gi|332739401|gb|HQ695749.1|O_Boyaca_Col_94__a_
+gi|332739405|gb|HQ695751.1|O_Boyaca_Col_94__c_
+gi|332739397|gb|HQ695747.1|O_Cundinamarca_Col_94__a_
+gi|332739417|gb|HQ695757.1|O_Cundinamarca_Col_94__e_
+gi|332739421|gb|HQ695759.1|O_Cundinamarca_Col_94__f_
+gi|332739409|gb|HQ695753.1|O_Boyaca_Col_94__d_
+gi|332739411|gb|HQ695754.1|O_Cundinamarca_Col_94__b_
+gi|332739413|gb|HQ695755.1|O_Cundinamarca_Col_94__c_
+gi|332739415|gb|HQ695756.1|O_Cundinamarca_Col_94__d_
