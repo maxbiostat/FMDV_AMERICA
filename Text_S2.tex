@@ -120,14 +120,15 @@ Let $K$ be the number of discrete states (e.g. locations) and $\boldsymbol\theta
 Then the prior density is
 \begin{equation}
 \label{seq:prior}
-\pi(\boldsymbol\theta_i) = \frac{1}{K} \quad \forall i \in \{1,..,K\} 
+\pi(\boldsymbol\theta_i)  = \begin{cases}  \frac{1}{K} &\mbox{if } i \in \{1,..,K\}  \\ 
+0 & \mbox{otherwise} \end{cases}
 \end{equation}
 Next, let the trait data be denoted by $D$.
 The posterior distribution of $\boldsymbol\theta$ is $p(\boldsymbol\theta|D)$.
 The Kullback-Leibler divergence is given by:
 \begin{equation}
 \label{seq:KL}
-\int p(\boldsymbol\theta|D)log\frac{p(\boldsymbol\theta|D)}{\pi(\boldsymbol\theta)}
+\sum_{i}^{K} p(\boldsymbol\theta_i|D)log\frac{p(\boldsymbol\theta_i|D)}{\pi(\boldsymbol\theta_i)}
 \end{equation}
 The higher the divergence, the more the posterior distribution is far away from its prior expectation, hence more signal is extracted from data.
 We computed~(\ref{seq:KL}) for the root state distributions for all subsamples (presented in Tables~\ref{stab:ED_A} and~\ref{stab:ED_O}) and all predictors (see main text).
@@ -236,9 +237,9 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 \begin{center}
 \begin{figure}[H]
 \begin{center}
+\subfigure[]{\includegraphics[scale=.40]{FIGURES/Origins_A_Brazil_2001.pdf}}
+\subfigure[]{\includegraphics[scale=.40]{FIGURES/Origins_A_Uruguay_2001.pdf}}\\
 \subfigure[]{\includegraphics[scale=.40]{FIGURES/Origins_A_Bolivia_2001.pdf}}
-\subfigure[]{\includegraphics[scale=.40]{FIGURES/Origins_A_Brazil_2001.pdf}}\\
-\subfigure[]{\includegraphics[scale=.40]{FIGURES/Origins_A_Uruguay_2001.pdf}}
 \subfigure[]{\includegraphics[scale=.40]{FIGURES/Origins_A_Colombia_2008.pdf}}\\
 \subfigure[]{\includegraphics[scale=.40]{FIGURES/Origins_O_Ecuador_2002.pdf}}
 \subfigure[]{\includegraphics[scale=.40]{FIGURES/Origins_O_Peru_2004.pdf}}

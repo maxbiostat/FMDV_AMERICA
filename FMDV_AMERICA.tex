@@ -185,7 +185,7 @@ In the network for serotype A, Brazil is conected to Argentina, Uruguay, Venezue
 These results suggest different spatial patterns for the two serotypes.
 
 The highest dispersal rates for serotype A were obtained for transitions between Brazil and Uruguay, Ecuador and Venezuela and Bolivia and Venezuela.
-When we looked at the epidemiological linkage, we found the transitions between Uruguay and Argentina, Argentina and Bolivia, Brazil and Argentina and Bolivia and Venezuela to have the highest support (log BF$>8$).
+When we looked at the epidemiological linkage (as supported by Bayes factors), we found the transitions between Uruguay and Argentina, Argentina and Bolivia, Brazil and Argentina and Bolivia and Venezuela to have the highest support (log BF$>8$).
 On the other hand, the highest rates for serotype O were estimated for transitions between Colombia and Ecuador, Venezuela and Colombia and Uruguay and Argentina.
 When we analysed support for various epidemiological links, the best supported (log BF$>9$) routes were between Peru and Brazil, Bolivia and Colombia, Uruguay and Argentina.
 
@@ -232,16 +232,21 @@ Overall, our analyses were slightly more efficient for serotype A in comparison 
 
 
 Figure~\ref{fig:epidemictracing} shows the posterior distribution of the  location of origin for some epidemics of interest.
-[REVISE RESULTS]
-% The most probable origin of the strains isolated in Argentina $2001$ (Figure~\ref{fig:epidemictracing}A) Brazil (posterior probability = $0.76$) while Uruguay received $0.1$ posterior probability.
-% Results for the Brazilian strains of the same year point to Uruguay as most probable source as shown in Figure~\ref{fig:epidemictracing}B.
-% All trees in the posterior distribution analyzed showed multiple origins for the two sequences from  Uruguay in $2001$ (data not shown).
-% Interestingly, the origin of serotype O strains from Colombia in $1994$ was found to be the root of the phylogenies with high posterior probability ($0.76$).
-% The probability that the $1994$ strains were already circulating in Colombia was $~0.20$ suggesting this hypothesis should not be ruled out.
-% We trace the origins of the Venezuelan strains to Colombia (posterior probability $=0.61$) although the possibility of multiple sources also received non-negligible support.
-% The origins for serotype A in Bolivia $2001$ are most likely to lie in Bolivia itself, suggesting the virus was already circulating there at the time (Figure~\ref{sfig:epitrac}A).
-% Figure~\ref{sfig:epitrac}B shows the same pattern for serotype O in Venezuela $2003$, for which the most likely scenario was previous circulation. 
-% However we note that there is a non-negligible probability that Colombia is the origin of the $2003$ Venezuelan strains (posterior probability $=0.31$).
+The most probable origin of the strains isolated in Argentina $2001$ (Figure~\ref{fig:epidemictracing}A) was the root of the circulating strains (posterior probability = $0.72$) while Brazil received $0.28$ posterior probability.
+Results for the Brazilian strains of the same year point to  Argentina as the source with high probability, confirming the strong link between the two countries (Figure~\ref{sfig:epitrac}A).
+The two serotype A strains included from Uruguay $2001$ showed multiple origins with probability $~1$ (Figure~\ref{sfig:epitrac}B), indicating that multiple introductions may have ocurred, most likely from Brazil and Argentina.
+However, these results should be interpreted with caution due to the low number of sequences from Uruguay.
+Contrasting to the conectivity with Argentina, Bolivia $2001$ seems to have had an independent introduction from Peru, as shown in Figure~\ref{sfig:epitrac}C
+We provide evidence of Venezuela as a major viral source for serotype A in its region in Figure~\ref{fig:epidemictracing}B, where we show the origins of the Ecuadorian strain isolated in $2002$.
+This notion of Venezuela as a seeder is further strengthened by the fact that the Colombian $2008$ strain was most likely imported from Venezuela (posterior probability $~1$, shown in Figure~\ref{sfig:epitrac}D).
+
+Interestingly, the origin of serotype O strains from Colombia in $1994$ was found to be the root of the phylogenies with high posterior probability ($0.76$), as shown in Figure~\ref{fig:epidemictracing}C.
+This finding may be due to confounding since Colombia holds most of the diversity for serotype O, as well as some of the deep (older) sequences in the sampling.
+Also, the  possibility that the $1994$ strains were already circulating in Colombia should not be ruled out.
+Similar to what was found for Venezuela and serotype A, Colombia seems to be the source of most of the strains circulating on the northern part of South America.
+As with the introduction of serotype A in Colombia in $2008$, the strains from Venezuela $2003$ have high probability of being imported from Colombia (Figure~\ref{fig:epidemictracing}D).
+Consistent with that, Figures~\ref{sfig:epitrac}B and~\ref{sfig:epitrac}C we show that Colombia was the most probable origin of the strains in Ecuador ($2002$).
+The link between Venezuela and Colombia thus seems to be supported from data for both serotypes, although the main viral seeder varies for each serotype (see \textbf{Discussion}).
 
 \begin{center}
  [Figure~\ref{fig:epidemictracing} about here]
@@ -273,7 +278,7 @@ In general, KL divergences for these analyses ranged from $3.86$ to $5.91$, show
  [Table~\ref{tab:roots} about here]
 \end{center}
 
-Since our data sets contain unbalanced geographic samples (Table\ref{stab:reps}), we conducted a detailed sensitivity analysis to assess the effect of performing inference under highly unbalanced designs.
+Since our data sets contain unbalanced geographic samples (Table~\ref{stab:reps}), we conducted a detailed sensitivity analysis to assess the effect of performing inference under highly unbalanced designs.
 We randomly draw five viral sequence sub-samples for each serotype in which over-represented geographic regions were down-sampled and performed BSSVS for each sub-sample.
 From BSSVS we calculated log Bayes factors and observed good agreement between samples in terms of supported routes (see Figures~\ref{sfig:bssvsA} and~\ref{sfig:bssvsO}).
 To further investigate, we also computed the $L_1$ matrix distance norm across the estimated posterior mean rate matrices for each sub-sample, and no aberrant samples were detected (see Text S2 for detailed results).
@@ -287,14 +292,17 @@ While serotype O presented average $\mbox{Pr}(\text{root=Venezuela})=0.47$, $\mb
 
 \subsection*{Demographic reconstruction of FMDV}
 
-The results from the skyride non-parametric coalescent reconstruction show strikingly different dynamical behaviours for the two serotypes, with serotype O exhibiting considerable more oscillation over time, and a diversity peak occurring in the late years of the 1990's.
+The results from the skyride non-parametric coalescent reconstruction show strikingly different dynamical behaviours for the two serotypes (Figure~\ref{fig:skyride}).
+While serotype O exhibs a diversity peak occurring in the late years of the 1990's, diversity of serotype A has been slowly decreasing over the last $20$ years.
 Serotype A exhibits a more stable behaviour over most of the 20th century, with most variation occurring within the temporal sampling interval, mainly in the last years of the 2000's.
-To better understand the relationship between vaccination and viral diversity, we overlaid vaccination data to our skyride plots presented in Figure~\ref{fig:skyride}.
-These data were expressed as doses per head, which we consider to be a more accurate measure of vaccination coverage, since it corrects for population size increase/decrease over time (see Figure ~\ref{sfig:trade} for livestock population time series). 
-Also, serotype-specific disease notification data was collected and plotted as an overlaid time series to the reconstruction. 
-
-EXPAND THIS
-
+To gain insight the relationship between vaccination and viral diversity, we overlaid vaccination data to the skyride plots presented in the yellow line in Figure~\ref{fig:skyride}.
+These data were expressed as (log) doses per head, which we consider to be a more accurate measure of vaccination coverage, since it corrects for population size increase/decrease over time (see Figure ~\ref{sfig:trade} for livestock population time series). 
+Also, serotype-specific disease notification (number of cases) data was overlaid to the coalescent reconstruction to illustrate the relationship between viral diversity and the onset of epidemics. 
+For serotype A we observe a bottleneck of viral diversity around $2001$ (red ribbon), which is consistent with a single strain being rapidly replicated during the epidemic that affected several countries at a time in $2000-2002$.
+The effective population size for serotype O (blue ribbon) shows a different, more steady pattern over the years, with diversity reaching its lowest level by end of the years $2000$.
+This decrease trend in viral diversity is also present for serotype A.
+The number of vaccine doses shows a marked increase after $2001$ (please note that the Y-axis in Figure~\ref{fig:skyride} in natural log units), and the number of cases also declines for both serotypes, in particular for serotype A.
+Although we do not provide any formal association analysis, the general intuition is that increasing vaccination and taking other preventive measures decisevely decreased transmission and thus viral diversity (see \textbf{Discussion}).
 To assess the robustness of our reconstructions we performed skyride reconstructions using only recent (sampling date $>2000$) sequences (see Text S2, Figure ~\ref{sfig:only2000sky}).
 We also performed reconstructions in data sets without the over-represented locations (data not shown).
 All these analyses gave roughly similar results to those presented in Figure~\ref{fig:skyride}.
@@ -307,77 +315,91 @@ The only exception was the reconstruction for serotype A, for which it is not po
 
 \section*{Discussion}
 
-%%%%%%%%%%%%
-% PHYLOGENETIC ANALYSIS, DATING AND RATES
-%%%%%%%%%%%%
+[Colombia for serotype O and Venezuela for serotype A]
 
-In this study we apply state-of-the-art Bayesian phylogenetic methods to study the evolutionary dynamics of FMDV serotypes A and O in South America, reconstructing their spatial and temporal behaviour, paying special attention to the similarities and differences between serotypes in order to assess the impact of their different biology in their population dynamics.
-We first estimate rates of evolution and test whether our data sets support a strict or a relaxed molecular clock.
-Our findings suggest both serotypes best fit relaxed molecular clocks, suggesting different evolutionary dynamics.
+[O: Introduction from Colombia into Ecuador and maintenance of diversity [cite my paper], why?, connect with the skyride for O] 
+
+[Skyrides show we are controlling it]
+
+[LIMITATIONS]
+
+% %%%%%%%%%%%%
+% % PHYLOGENETIC ANALYSIS, DATING AND RATES
+% %%%%%%%%%%%%
+% 
+In this study we study the  spatiotemporal evolutionary dynamics of FMDV serotypes A and O in South America, using state-of-the-art Bayesian phylogenetic methods to uncover the similarities and differences between serotypes and assess the impact of their different biology in their population dynamics.
+We first estimate rates of evolution and test whether our data sets support a strict or a relaxed molecular clock and find that both serotypes best fit relaxed molecular clocks, suggesting different evolutionary dynamics.
 This finding is consistent with the view that FMDV presents clock-like evolution only when large periods of time are considered, with short periods being dominated by quasispecies dynamics~\cite{Muellner2011}.  
-While for serotype A a more restrictive exponential molecular clock and a slower mutation rate were found, for serotype O our results point out a more diffuse distribution of branch-specific substitutions (log-normal) and a faster evolutionary rate.
-The differences in evolutionary rates, taken together with the results from molecular clock model selection, suggest that, although the two serotypes share the same host range and infection routes, they present rather different evolutionary dynamics in the continent. 
-
+While for serotype A a slower mutation rate and a more diffuse distribution of branch-specific substitutions (log-normal) were found, for serotype O our results point to a faster evolutionary rate and exponentially distributed variation in rates between lineages.
+These differences in evolutionary rate magnitude and variability suggest that, although the two serotypes share the same host range and infection routes, they present rather different evolutionary dynamics in the continent, which may help explain the different emergence patterns (see Figure 3 in Naranjo \& Cosivi, 2010~\cite{Naranjo2013}). 
+%
 The spatial plots in Figure~\ref{fig:migration} show that Ecuador, Colombia and Brazil present the highest viral diversities in the continent for both serotypes.
-For serotype A the spread of the virus into  Brazil and Colombia and Venezuela seems to take place in the early decades of the 20th century while the introduction into Uruguay and Paraguay seems to take place much later.
-The spread of the serotype O strains  circulating  in South America begins in Colombia by $1994$ and quickly goes to neighbouring countries such as Ecuador and Venezuela.
-Specifically for serotype O it is possible to see a clear separation in two sub-networks.
-The link between these two sub-networks appears to be Bolivia, where viral introduction took place around $2000$. 
-However, as we go back in time, some spurious links are recovered, for example the link between Venezuela and Argentina inferred for the period $1945$--$1965$ in the serotype A data set does not seem to have any epidemiological explanation.
+It should be noted however that these plots are cumulative and therefore a country showing high viral diversity (wider circles) may not have active circulation in the present, as is the case with Brazil.
+As we go backwards in time, some spurious links are recovered, for example the link between Venezuela and Argentina inferred for the period $1945$--$1965$ in the serotype A data set does not seem to have any epidemiological explanation.
 These links are most likely an artefact created by the sparsity of the data in the period, a problem more severe for serotype A since its sampling spans a larger period (see Text S1 and Table~\ref{stab:reps} for details).
-A definitive statement about this topic would require the inclusion of sequences from other continents in order to determine whether the circulating strains are the result of sustained maintenance or result from multiple introductions, which may be an importanta avenue of future research.
+A definitive statement about this topic would require the inclusion of sequences from other continents in order to determine whether the circulating strains are the result of sustained maintenance or result from multiple introductions, which may be an important avenue of future research.
 
-Bayesian stochastic search variable selection (BSSVS) offers some protection against spurious routes by choosing a minimal parsimonious set of routes that better explain the diffusion process, thus optimizing the information extraction from data. 
-When we computed Bayes factors from BSSVS indicators (Lemey et al. 2009~\cite{roots}, equation 6), presented in Figure~\ref{fig:mj&BFs}, the supported routes made more epidemiological sense.
-Both serotypes presented migration networks with two components; one connecting Venezuela, Colombia and Ecuador and another one connecting southern cone countries, namely Brazil, Argentina and Uruguay.
-We found well supported migration paths between Venezuela, Colombia and Ecuador for both serotypes  indicating an important spread pathway in the northern part of South America.
-For serotype A in particular we obtained a supported migration route between Venezuela and Brazil, which was absent from serotype O reconstructions.
-On the epidemiological front these results suggest that FMDV dynamics in South America takes places in two ecological niches, one at the northern part of the continent and one at the southern cone. 
+For serotype A the spread of the virus into  Brazil, Colombia and Venezuela seems to take place in the early decades of the 20th century while the introduction into Uruguay and Paraguay seems to take place much later, suggesting the former as original viral reservoirs and the later as viral importers.
+The spread of the serotype O strains  circulating in South America begins in Colombia around $1994$ and quickly goes to neighbouring countries such as Ecuador and Venezuela, suggesting that the strains circulating during the $2000$'s may have been introduced from elsewhere.
+This hypothesis can be contrasted with the alternative that viral diversity has been maintained in the continent since much earlier. 
+The results of the epidemic tracing analysis (Figure~\ref{fig:epidemictracing}) however reinforce the belief that the strains isolated in Colombia in $1994$ are the root of the circulating serotype O strains in the continent, in special the Andean region.
+Interestingly, specially for serotype O the Markov jumps analysis show a clear separation in two sub-networks (Figure~\ref{fig:mj&BFs}), one comprising the Southern cone and the other comprising Andean countries.
+This separation suggests that viral transmission may follow different regimes in these two regions, which have different forms of livestock production~\ref{Saraiva2003, Naranjo2013}.
+The link between these two sub-networks appears to be Bolivia, where viral introduction took place around $2000$. 
+Further, we also estimate that the serotype A strain circulating in Bolivia $2001$ most likely came from Peru which provides some evidence for the hypothesis of Bolivia as a link.
+Since both Peru, Bolivia and Venezuela are considered to have achieved less than expected with regard to implementation of control measures~\cite{Naranjo2013}, a link passing through these countries is not unlikely.  
+%
 
-%%%%%
-% PREDICTORS
-%%%%%
-
-We conducted a computationally demanding Bayesian model selection study to assess the significance of various predictors to FMDV diffusion, and our results indicate different factors influence the spread of serotypes A and O.
-[SUBSTANTIAL IMPROVEMENT COMPARED TO Nelson2011]
-
-For serotype A we could not detect association of viral spread with any of the trade-informed predictors and geographic distances between countries was the predictor with the highest marginal likelihood, yielding a moderate Bayes factor to the equal-rates model (BF = $3.83$).
-The trade of cattle was the most significant predictor for serotype O spread, what is compatible with the notion that these hosts are the most important for FMDV maintenance and transmission, even though sheep population sizes are a par with those of cattle~\cite{Saraiva2003}.
-Interestingly, geographic distances also presented good statistical support for serotype O, suggesting that FMDV spread main depend primarily on short-range routes.
-Analysis of the probability that transitions between neighbour countries were more frequent ($Pr(B>NB)$) however suggested that spread between countries may not be strongly dependent on whether they share borders (for serotype O, non-border transitions were decisevely more frequent).  
-
-[THIS CALLS FOR...]
-
-%%%%%
-% SAMPLING BIAS
-%%%%%
-
+% Bayesian stochastic search variable selection (BSSVS) offers some protection against spurious routes by choosing a minimal parsimonious set of routes that better explain the diffusion process, thus optimizing the information extraction from data. 
+% When we computed Bayes factors from BSSVS indicators (Lemey et al. 2009~\cite{roots}, equation 6), presented in Figure~\ref{fig:mj&BFs}, the supported routes made more epidemiological sense.
+% Both serotypes presented migration networks with two components; one connecting Venezuela, Colombia and Ecuador and another one connecting southern cone countries, namely Brazil, Argentina and Uruguay.
+% We found well supported migration paths between Venezuela, Colombia and Ecuador for both serotypes  indicating an important spread pathway in the northern part of South America.
+% For serotype A in particular we obtained a supported migration route between Venezuela and Brazil, which was absent from serotype O reconstructions.
+% On the epidemiological front these results suggest that FMDV dynamics in South America takes places in two ecological niches, one at the northern part of the continent and one at the southern cone. 
+% 
+% %%%%%
+% % PREDICTORS
+% %%%%%
+% 
+% We conducted a computationally demanding Bayesian model selection study to assess the significance of various predictors to FMDV diffusion, and our results indicate different factors influence the spread of serotypes A and O.
+% [SUBSTANTIAL IMPROVEMENT COMPARED TO Nelson2011]
+% 
+% For serotype A we could not detect association of viral spread with any of the trade-informed predictors and geographic distances between countries was the predictor with the highest marginal likelihood, yielding a moderate Bayes factor to the equal-rates model (BF = $3.83$).
+% The trade of cattle was the most significant predictor for serotype O spread, what is compatible with the notion that these hosts are the most important for FMDV maintenance and transmission, even though sheep population sizes are a par with those of cattle~\cite{Saraiva2003}.
+% Interestingly, geographic distances also presented good statistical support for serotype O, suggesting that FMDV spread main depend primarily on short-range routes.
+% Analysis of the probability that transitions between neighbour countries were more frequent ($Pr(B>NB)$) however suggested that spread between countries may not be strongly dependent on whether they share borders (for serotype O, non-border transitions were decisevely more frequent).  
+% [THIS CALLS FOR...]
+% 
+% %%%%%
+% % SAMPLING BIAS
+% %%%%%
+% 
 When performing inference under highly unbalanced designs, it is useful to perform sensitivity analysis to assess the impact of the sampling scheme on phylogeographic inference~\cite{Faria2012, polar, fluPNAS}. 
-Our sensitivity analyses show that although well-supported routes of spread (as inferred from BSSVS) are robust to sampling and to prior choices for both serotypes, root estimation yielded inconsistent results across sub-samples and using different predictors.
-One should thus refrain from putting too much weight on the results of the state at root analyses. 
-More comprehensive sampling is needed in order to ascertain the spatial origins of FMDV in South America.
-
-%%%%%
-% COALESCENT 
-%%%%%
-
-From the temporal reconstructions for both serotypes it can be noticed that over time, with the increase of vaccination coverage, viral effective population size ($Ne$) decreases dramatically, a result previously obtained for Ecuador~\cite{Carvalho2013}.
-This drop is also present in FMD notifications, what may suggest the role of epidemics in viral diversity.
-These results draw an interesting picture: over the years vaccination seems to be disrupting viral diversity, likely by precluding spread over large spatial extents, inducing a state of focalized transmission.
-In order to strengthen epidemiological inference, it may be interesting to compare the results obtained for both serotypes.
-Serotype O presents more stable temporal behaviour, whereas serotype A is more fluctuating.
-Previous studies have shown that occurrences caused by serotype A present longer cycles and wider epidemics, while serotype O is more prevalent with shorter disease cycles~\cite{colombiatime}.
-These epidemiological features are reflected at the temporal variation observed for viral $Ne$ in both serotypes, a result obtained for other viruses as well~\cite{Bennett2010,Pybus2003}. 
-Since our results reinforce the notion that these two serotypes present different evolutionary dynamics, the overall decrease in viral diversity for both serotypes points towards a progressive success of the eradication programme in slowly reducing transmission and controlling epidemics.
-
+% Our sensitivity analyses show that although well-supported routes of spread (as inferred from BSSVS) are robust to sampling and to prior choices for both serotypes, root estimation yielded inconsistent results across sub-samples and using different predictors.
+% One should thus refrain from putting too much weight on the results of the state at root analyses. 
+% More comprehensive sampling is needed in order to ascertain the spatial origins of FMDV in South America.
+% 
+% %%%%%
+% % COALESCENT 
+% %%%%%
+% 
+% From the temporal reconstructions for both serotypes it can be noticed that over time, with the increase of vaccination coverage, viral effective population size ($Ne$) decreases dramatically, a result previously obtained for Ecuador~\cite{Carvalho2013}.
+% This drop is also present in FMD notifications, what may suggest the role of epidemics in viral diversity.
+% These results draw an interesting picture: over the years vaccination seems to be disrupting viral diversity, likely by precluding spread over large spatial extents, inducing a state of focalized transmission.
+% In order to strengthen epidemiological inference, it may be interesting to compare the results obtained for both serotypes.
+% Serotype O presents more stable temporal behaviour, whereas serotype A is more fluctuating.
+% Previous studies have shown that occurrences caused by serotype A present longer cycles and wider epidemics, while serotype O is more prevalent with shorter disease cycles~\cite{colombiatime}.
+% These epidemiological features are reflected at the temporal variation observed for viral $Ne$ in both serotypes, a result obtained for other viruses as well~\cite{Bennett2010,Pybus2003}. 
+% Since our results reinforce the notion that these two serotypes present different evolutionary dynamics, the overall decrease in viral diversity for both serotypes points towards a progressive success of the eradication programme in slowly reducing transmission and controlling epidemics.
+% This is yet another piece of evidence of transborder diffusion as a factor driving re-emergence in previously free areas, as were Argentina and Uruguay at the time, for example.
 
 \section*{Conclusions}
 
 Using the most comprehensive sampling of FMDV serotypes A and O genetic data to date we have shown that FMDV spread in the continent occurs in two sub-networks, one connecting Colombia, Ecuador and Venezuela and another comprising Southern cone countries.
 We also combine geographic distance, livestock trade and genetic data to show evidence that cattle trade is a major determinant of serotype O spread and that geographic distances are important for both serotypes, pointing towards the importance of short-range routes through neighbouring countries.
 Temporal reconstructions suggest an overall decrease in viral diversity over time, likely due to the success of vaccination programmes.
-Sensitivity analyses suggest that the supported routes reported in this study are robust to sampling, although reliable estimation of spatial origins was not possible, thus making sampling bias an important factor to consider.
-Future work should focus on obtaining more comprehensive sampling in order to fill in this gap in knowledge.
+Sensitivity analyses suggest that the supported routes reported in this study are robust to sampling, although reliable estimation of spatial origins at root was not possible, thus making sampling bias an important factor to consider.
+Future work should focus on obtaining more comprehensive sampling in order to fill in this gap.
 
 \section*{Methods}
 
@@ -418,7 +440,6 @@ Additionally, we computed the monophyletic clade (MC) size for each state (count
 We apply the non-parametric skyride model~\cite{skyride} in order to reconstruct the past population dynamics for both serotypes.
 Skyride uses a Gaussian Markov Random Field (GMRF) prior to obtain smooth estimates for effective population size trajectories over time.
 To gain insight into the mechanisms driving viral dynamics, we overlay the demographic reconstructions to serotype-specific outbreak and vaccination (doses per head) time series.
-
 
 Phylogeographic analysis of FMDV in South America was done using the methods presented in Lemey et al. (2009)~\cite{roots}, available in BEAST. 
 An asymmetric, non-reversible discrete phylogeography model was applied to both data sets, with each country used as a discrete state.
