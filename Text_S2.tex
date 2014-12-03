@@ -13,6 +13,7 @@
 \bibliographystyle{plos2009}%
 %%% Supp Mat modifications
 \usepackage{xr} % automatic cross-referencing
+\renewcommand{\thesubfigure}{(\Alph{subfigure})}
 \externaldocument{FMDV_AMERICA}
 \renewcommand{\thetable}{S\arabic{table}}   
 \renewcommand{\thefigure}{S\arabic{figure}}
@@ -26,13 +27,13 @@
 \textheight 21cm
 %%%%%
 %opening
-\title{Text S2 -- Supplementary analyses to ``Spatiotemporal Dynamics of Foot-and-Mouth Disease Virus in South America''} % aargh, lousy name
+\title{Text S2 -- Supplementary information to ``Spatiotemporal Dynamics of Foot-and-Mouth Disease Virus in South America''} % aargh, lousy name
 \author{
 Luiz Max Fagundes de Carvalho, Guy Baele, Nuno Rodrigues Faria,\\
 Andres M. Perez, Marc A. Suchard,  Philippe Lemey\\
 Waldemir de Castro Silveira
 }
-\date{July, 2014}
+\date{November, 2014}
 
 \begin{document}
 
@@ -71,7 +72,7 @@ In this study we provide a thorough assessment of the effects of sampling bias i
 
 First, we assessed whether overrepresented locations could influence phylogenetic parameter estimation, by performing parameter estimation with and without these locations.
 Tables~\ref{stab:SB_A} and~\ref{stab:SB_O} show medians and $95 \%$ credible intervals for parameters of interest with and without the overrepresented locations for both serotypes.
-This analysis show that tMRCA estimates for serotype A were slightly affected by the removal of the sequences from Argentina, resulting in a difference of about 6 years in the estimates.
+This analysis shows that tMRCA estimates for serotype A were slightly affected by the removal of the sequences from Argentina, resulting in a difference of about 6 years in the estimates.
 On the other hand, tMRCA estimates with and without Ecuadorian sequences for serotype O showed substantial agreement.
 Estimates of relative codon position rates were consistent for both serotypes.
 Evolutionary rates estimates were lower with the removal of Argentinian sequences for serotype A, while the estimates for serotype O were consistent with and without sequences from Ecuador. 
@@ -82,9 +83,8 @@ For this analysis, we used the Gaussian Markov Random Field (GMRF) smoothing pri
 These results are presented in Figure~\ref{sfig:only2000sky} and, compared to those presented in the main text (Figure~\ref{fig:skyride}), show the same temporal behaviour, with the exception of the absence of the marked drop in serotype A $N_e$ near 2001 that is present in Figure~\ref{fig:skyride}.
 % \subsubsection{Parameter estimation with down-sampling}
 
-For large data sets it is possible to perform equal down-sampling, i.e., simple random stratified sampling~\cite{M-fluPNAS}.
-However, this was not possible in the data sets analyzed in this study.
-To further assess the effect of biased sampling while still using the information from overrepresented locations, we used a down-sampling scheme.
+While for large data sets it is possible to perform equal down-sampling, i.e., simple random stratified sampling~\cite{M-fluPNAS}, this was not posssible  with the data sets analyzed in this study.
+Therefore, to further assess the effect of biased sampling while still using the information from overrepresented locations, we used the down-sampling scheme detailed below.
 We draw as many sequences from the most represented location as there are sequences from the second most represented location.
 For serotype A, the second most represented country was Venezuela ($27$ sequences) and for serotype O Colombia was the second location with more sequences ($36$).
 To compose the subsamples for serotype A we then randomly drew $27$ sequences from Argentina and combined them to the other sequences in the original data set.
@@ -94,23 +94,23 @@ Results of these experiments are presented in Tables~\ref{stab:ED_A} and~\ref{st
 Also, inference regarding the spatial origin (root) was consistent across subsamples for both serotypes.
 
 % \subsubsection{Comparing rate matrices}
-
-A point of interest is whether the estimates for $\mathbf{Q}$ were consistent across subsamples.
+Another point of interest is to assess whether the estimates of $\mathbf{Q}$ were consistent across subsamples.
 First we plotted the estimated rates across each subsample against each other for both serotypes.
 Scatterplots of the estimated rates for each subsample are shown in Figure~\ref{sfig:compz}A and~B and we can notice estimates agree across subsamples.
+[COMMENT ON PERCENTUAL DISCREPANCIES]
 To explore this further, we also calculated the $L_1$ matrix distance norm -- defined below -- for (each pair of) estimates of $\mathbf{Q}$ obtained from each subsample.
-Let $\mathbf{X}$ and $\mathbf{Y}$ be two $K \times K$ square matrices.
+Let $\mathbf{X}$ and $\mathbf{Y}$ be two $K \times K$ matrices.
 The $L_1$ matrix norm is defined as
 
 \begin{equation}
 \label{seq:L1}
- L_1 (\mathbf{X}, \mathbf{Y}) = \frac{1}{K^{2} (\sum_{i=1}^{K^2} |X_i-Y_i| ) }
+ L_1 (\mathbf{X}, \mathbf{Y}) = \frac{1}{K(K-1)} \sum_{i=1}^{K(K-1)} |X_i-Y_i|  
 \end{equation}
 
 Since all entries in our matrices are non-negative, we they were log-transformed prior to computing distances.
 Calculations were performed using the \verb|norm()| in the \textbf{PET} package~\cite{PET} of the R statistical computing environment.
 The results of these analyses are presented in Figure~\ref{sfig:compz}C and~D.
-From these we can see 
+From these we can see that divergence between subsamples was ver
 
 % \subsubsection{Quantifying spatial signal extraction}
 In a Bayesian context, it is sometimes desirable to quantify how much information we gain from updating our prior information using the available data.
@@ -160,14 +160,14 @@ However, the distribution of states at root varies across subsamples.
 %\newbibliography{s2}
 %\bibliographystyle{s2}{plos2009}
 \bibliography{TEXTS2}
+
 \section*{Figure Legends}
 
-\textbf{Figure~\ref{sfig:trade}. Exportation, importation and production time series for pigs, cattle and sheep in South America.}
-Panel A shows exportations in log~(~\# ~of heads) of live animals for pigs, sheep and cattle.
-Panels B and C show importation and overall production (population increase), respectively.
+\textbf{Figure~\ref{sfig:trade}. Production time series for pigs, cattle and sheep in South America.}
+We show og~(~\#~of heads) of live animals for pigs, sheep and cattle.
 
 \textbf{Figure~\ref{sfig:tradenets}. Spatial networks of livestock trade in South America.}
-We represent the total trade of live animals from 1986 to 2009.
+We represent the total trade of live animals from $1986$ to $2009$.
 Arrows connect countries if there was a non-zero number of exchanges between them.
 Colors represent total exports in number of live animals.
 
@@ -176,6 +176,10 @@ In panels A and B we show entry-wise scatterplots of the five subsamples for ser
 Colors depict country of origin.
 Panel C and D shows heat maps of the $5\times5$ matrices of $L_1$ norms comparing each subsample, for serotypes A and O, respectively.
 
+\textbf{Figure~\ref{sfig:epitrac}. Posterior distribution of the origins of several strains/epidemics of interest for serotypes A and O.}
+We show the origins of serotype A strains in Bolivia (A) and Brazil (B) and Uruguay (C) in $2001$ and Colombia in $2008$ (D).
+For serotype O, the most probable origins of the strains in Ecuador $2002$ (E) and Peru $2004$ (F).
+ 
 \textbf{Figure~\ref{sfig:bssvsA}. Bayesian Stochastic Search Variable Selection for five down-sampled subsamples of serotype A sequences.}
 We performed the BSSVS analysis on five down-sampled data sets (reduced Argentina representation) and plotted the resulting Bayes factors.
 Arrow thickness is proportional to Bayes factor magnitude and colors depict the probability of being root for each country.
@@ -184,93 +188,104 @@ Arrow thickness is proportional to Bayes factor magnitude and colors depict the 
 We performed the BSSVS analysis on five down-sampled (equal numbers of Ecuadorian and Colombian sequences) data sets and  plotted the resulting Bayes factors.
 Arrow thickness is proportional to Bayes factor magnitude and colors depict the probability of being root for each country.
 
-\textbf{Figure~\ref{sfig:only2000sky}. Skyride coalescent reconstructions using sequences from 2000 to present only for both serotypes.}
+\textbf{Figure~\ref{sfig:only2000sky}. Skyride coalescent reconstructions using sequences from $2000$ to present only for both serotypes.}
+[SOME MORE INFO HERE]
 As in the main text, disease cases and vaccination in doses per head are overlaid to the demographic reconstructions.
 %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%
 \newpage
-%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%
 \begin{center}
 \begin{figure}[H]
 \begin{center}
-\subfigure[A]{\includegraphics[scale=.250]{FIGURES/importation.pdf}}\\
-\subfigure[B]{\includegraphics[scale=.250]{FIGURES/exportation.pdf}}\\
-\subfigure[C]{\includegraphics[scale=.250]{FIGURES/production.pdf}}
+\includegraphics[scale=.80]{FIGURES/production.pdf}
 \end{center}
 \caption{}
 \label{sfig:trade}
 \end{figure}
 \end{center}
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
 \newpage
-%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%
 \begin{center}
 \begin{figure}[H]
 \begin{center}
-\subfigure[A]{\includegraphics[scale=.450]{FIGURES/cattle_trade_network.jpeg}}
-\subfigure[B]{\includegraphics[scale=.450]{FIGURES/pig_trade_network.jpeg}}\\
-\subfigure[C]{\includegraphics[scale=.450]{FIGURES/sheep_trade_network.jpeg}}
+\subfigure[]{\includegraphics[scale=.400]{FIGURES/tradenets_cattle_s=0.pdf}}
+\subfigure[]{\includegraphics[scale=.400]{FIGURES/tradenets_pig_s=0.pdf}} \\
+\subfigure[]{\includegraphics[scale=.400]{FIGURES/tradenets_sheep_s=0.pdf}}
 \end{center}
 \caption{}
 \label{sfig:tradenets}
 \end{figure}
 \end{center}
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
 \newpage
-
-%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%
-
 \begin{figure}[H]
 \begin{center}
-\subfigure[A]{\includegraphics[scale=.250]{FIGURES/rateplot_A.jpeg}}
-\subfigure[B]{\includegraphics[scale=.250]{FIGURES/rateplot_O.jpeg}}\\
-\subfigure[C]{\includegraphics[scale=.250]{FIGURES/normplot_A.jpeg}}
-\subfigure[D]{\includegraphics[scale=.250]{FIGURES/normplot_O.jpeg}}%\\
+\subfigure[]{\includegraphics[scale=.400]{FIGURES/rateplotA.pdf}}
+\subfigure[]{\includegraphics[scale=.400]{FIGURES/rateplotO.pdf}}\\
+\subfigure[]{\includegraphics[scale=.400]{FIGURES/normplotA.pdf}}
+\subfigure[]{\includegraphics[scale=.400]{FIGURES/normplotO.pdf}}
 \end{center}
 \caption{}
 \label{sfig:compz}
 \end{figure}
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
 \newpage
-%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%
 \begin{center}
 \begin{figure}[H]
-\subfigure[A]{\includegraphics[scale=.350]{FIGURES/A_ss1.jpeg}}
-\subfigure[B]{\includegraphics[scale=.350]{FIGURES/A_ss2.jpeg}}\\
-\subfigure[C]{\includegraphics[scale=.350]{FIGURES/A_ss3.jpeg}}
-\subfigure[D]{\includegraphics[scale=.350]{FIGURES/A_ss4.jpeg}}\\
-\subfigure[E]{\includegraphics[scale=.350]{FIGURES/A_ss5.jpeg}}
+\begin{center}
+\subfigure[]{\includegraphics[scale=.40]{FIGURES/Origins_A_Bolivia_2001.pdf}}
+\subfigure[]{\includegraphics[scale=.40]{FIGURES/Origins_A_Brazil_2001.pdf}}\\
+\subfigure[]{\includegraphics[scale=.40]{FIGURES/Origins_A_Uruguay_2001.pdf}}
+\subfigure[]{\includegraphics[scale=.40]{FIGURES/Origins_A_Colombia_2008.pdf}}\\
+\subfigure[]{\includegraphics[scale=.40]{FIGURES/Origins_O_Ecuador_2002.pdf}}
+\subfigure[]{\includegraphics[scale=.40]{FIGURES/Origins_O_Peru_2004.pdf}}
+\end{center}
 \caption{}
-\label{sfig:bssvsA}
+\label{sfig:epitrac}
 \end{figure}
 \end{center}
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
 \newpage
-%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \begin{center}
-\subfigure[A]{\includegraphics[scale=.250]{FIGURES/O_ss1.jpeg}}
-\subfigure[B]{\includegraphics[scale=.250]{FIGURES/O_ss2.jpeg}}\\
-\subfigure[C]{\includegraphics[scale=.250]{FIGURES/O_ss3.jpeg}}
-\subfigure[D]{\includegraphics[scale=.250]{FIGURES/O_ss4.jpeg}}\\
-\subfigure[E]{\includegraphics[scale=.250]{FIGURES/O_ss5.jpeg}}
+\subfigure[]{\includegraphics[scale=.350]{FIGURES/A_ss1.pdf}}
+\subfigure[]{\includegraphics[scale=.350]{FIGURES/A_ss2.pdf}}\\
+\subfigure[]{\includegraphics[scale=.350]{FIGURES/A_ss3.pdf}}
+\subfigure[]{\includegraphics[scale=.350]{FIGURES/A_ss4.pdf}}\\
+\subfigure[]{\includegraphics[scale=.350]{FIGURES/A_ss5.pdf}}
+\caption{}
+\label{sfig:bssvsA}
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+\newpage
+\begin{figure}[H]
+\begin{center}
+\subfigure[]{\includegraphics[scale=.350]{FIGURES/O_ss1.pdf}}
+\subfigure[]{\includegraphics[scale=.350]{FIGURES/O_ss2.pdf}}\\
+\subfigure[]{\includegraphics[scale=.350]{FIGURES/O_ss3.pdf}}
+\subfigure[]{\includegraphics[scale=.350]{FIGURES/O_ss4.pdf}}\\
+\subfigure[]{\includegraphics[scale=.350]{FIGURES/O_ss5.pdf}}
 \end{center}
 \caption{}
 \label{sfig:bssvsO}
 \end{figure}
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
 \newpage
-%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \begin{center}
-\subfigure[A]{\includegraphics[width=\textwidth]{FIGURES/SFig_A2000sky.jpeg}}
-\subfigure[B]{\includegraphics[width=\textwidth]{FIGURES/SFig_O2000sky.jpeg}}\\
+\subfigure[]{\includegraphics[scale=.60]{FIGURES/SFig_A2000sky.pdf}}\\
+\subfigure[]{\includegraphics[scale=.60]{FIGURES/SFig_O2000sky.pdf}}
 \end{center}
 \caption{}
 \label{sfig:only2000sky}
 \end{figure}
-\newpage
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 \newpage
@@ -308,6 +323,7 @@ O       &Skyride       &STRICT & -8131.91& -8125.31\\
  Representation of South American countries in the data sets analysed.
  Full details (and accession numbers) are given in Text S1.
  }
+ \begin{center}
  \begin{tabular}{cccc}
  \toprule
    \multicolumn{2}{c}{Serotype A}& \multicolumn{2}{c}{Serotype O}\\
@@ -325,6 +341,7 @@ Venezuela & $27$ ($1962$--$2007$)& $6$ ($2003$--$2007$)  \\
 Total     & $131$ ($1955$--$2008$) & $167$ ($1994$--$2010$)\\
   \bottomrule
  \end{tabular}
+ \end{center}
 \label{stab:reps}
 \end{table}
  %%%%%%%%%%%%%%%%%%
@@ -383,11 +400,11 @@ Rate ($\times 10^{-3}$)	&4.14 (3.39-4.98)	&3.46 (2.82-4.11)\\
 \toprule
 Parameter	&Complete$^{1}$	&Without Ecuador\\
 \midrule
-TMRCA$^{2}$	&21.25 (19.20-23.60)	&22.65 (17.6-29.5)\\
-CP1$^{3}$	&0.51 (0.39-0.63)	&0.51 (0.39-0.64)\\
-CP2	&0.53 (0.39-0.69)	&0.42 (0.29-0.59)\\
-CP3	&1.94 (1.78-2.10)	& 2.05 (1.87 -2.21)\\
-Rate ($\times 10^{-2}$)	&1.11 (0.91-1.32)	&0.91 (0.63-1.21)\\
+TMRCA$^{2}$ & 21.25 (19.20-23.60) &22.65 (17.6-29.5)\\
+CP1$^{3}$ & 0.51 (0.39-0.63) &0.51 (0.39-0.64)\\
+CP2  &0.53 (0.39-0.69) & 0.42 (0.29-0.59)\\
+CP3 &1.94 (1.78-2.10) & 2.05 (1.87 -2.21)\\
+Rate ($\times 10^{-2}$)	&1.11 (0.91-1.32)&0.91 (0.63-1.21)\\
 \bottomrule
 \end{tabular}
 \end{center}
