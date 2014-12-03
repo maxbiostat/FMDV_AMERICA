@@ -1,0 +1,912 @@
+# BLASTN 2.2.28+
+# Query: A/Venceslau/Bra/76
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Venceslau/Bra/76	gi|210322|gb|K03344.1|APHA76	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Alem/Arg/81
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Alem/Arg/81	gi|12583551|emb|AJ306219.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Arg/87
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Arg/87	gi|12583553|emb|AJ306220.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Utracan/Arg/87
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Utracan/Arg/87	gi|12583555|emb|AJ306221.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Castellanos/Arg/87
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Castellanos/Arg/87	gi|12583557|emb|AJ306222.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Arg/76
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Arg/76	gi|13399191|emb|AJ409219.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Arg/68
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Arg/68	gi|15130853|emb|AJ308694.1|	100.00	639	0	0	1	639	1	639	0.0	1166
+# BLASTN 2.2.28+
+# Query: A/Bahia_Blanca/Arg/71
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Bahia_Blanca/Arg/71	gi|15130855|emb|AJ308695.1|	100.00	639	0	0	1	639	1	639	0.0	1173
+# BLASTN 2.2.28+
+# Query: A/Ayacucho/Arg/90
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Ayacucho/Arg/90	gi|15130857|emb|AJ308696.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Cordoba/Arg/90
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Cordoba/Arg/90	gi|15130859|emb|AJ308697.1|	100.00	639	0	0	1	639	1	639	0.0	1173
+# BLASTN 2.2.28+
+# Query: A/San_Ignacio/Arg/90
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/San_Ignacio/Arg/90	gi|15130861|emb|AJ308698.1|	100.00	639	0	0	1	639	1	639	0.0	1173
+# BLASTN 2.2.28+
+# Query: A/Rivadavia/Arg/91
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Rivadavia/Arg/91	gi|15130863|emb|AJ308699.1|	100.00	639	0	0	1	639	1	639	0.0	1177
+# BLASTN 2.2.28+
+# Query: A/Cordoba/Arg/92
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Cordoba/Arg/92	gi|15130865|emb|AJ308700.1|	100.00	639	0	0	1	639	1	639	0.0	1162
+# BLASTN 2.2.28+
+# Query: A/Corrrientes/Arg/92
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Corrrientes/Arg/92	gi|15130867|emb|AJ308701.1|	100.00	633	0	0	1	633	1	633	0.0	1155
+# BLASTN 2.2.28+
+# Query: A/Pehuajo/Arg/92
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Pehuajo/Arg/92	gi|15130869|emb|AJ308702.1|	100.00	639	0	0	1	639	1	639	0.0	1177
+# BLASTN 2.2.28+
+# Query: A/Craik/Arg/00
+# RID: 5VTVJMF5013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Craik/Arg/00	gi|119391685|emb|AM179988.1|	100.00	639	0	0	1	639	1	639	0.0	1170
+# BLASTN 2.2.28+
+# Query: A(x)/GVillegas/Arg/00
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(x)/GVillegas/Arg/00	gi|119391687|emb|AM179989.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/BuenosAires/Arg/00
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/BuenosAires/Arg/00	gi|119391689|emb|AM179990.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/RSegundo/Arg/00
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/RSegundo/Arg/00	gi|119391691|emb|AM179991.1|	100.00	639	0	0	1	639	1	639	0.0	1170
+# BLASTN 2.2.28+
+# Query: A/GVillegas/Arg/00
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/GVillegas/Arg/00	gi|119391693|emb|AM179992.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Chapaleu/Arg/00
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Chapaleu/Arg/00	gi|119391695|emb|AM179993.1|	100.00	639	0	0	1	639	1	639	0.0	1155
+# BLASTN 2.2.28+
+# Query: A/SJusto/Arg/00
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/SJusto/Arg/00	gi|119391697|emb|AM179994.1|	100.00	639	0	0	1	639	1	639	0.0	1166
+# BLASTN 2.2.28+
+# Query: A(b)/BuenosAires/Arg/00
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(b)/BuenosAires/Arg/00	gi|119391699|emb|AM179995.1|	100.00	639	0	0	1	639	1	639	0.0	1170
+# BLASTN 2.2.28+
+# Query: A/CTejedor/Arg/00
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/CTejedor/Arg/00	gi|119391701|emb|AM179996.1|	100.00	639	0	0	1	639	1	639	0.0	1177
+# BLASTN 2.2.28+
+# Query: A/Lomas/Arg/00
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Lomas/Arg/00	gi|119391703|emb|AM179997.1|	100.00	639	0	0	1	639	1	639	0.0	1136
+# BLASTN 2.2.28+
+# Query: A/CPellegrini/Arg/00
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/CPellegrini/Arg/00	gi|119391705|emb|AM179998.1|	100.00	639	0	0	1	639	1	639	0.0	1170
+# BLASTN 2.2.28+
+# Query: A/Maraco/Arg/00
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Maraco/Arg/00	gi|119391707|emb|AM179999.1|	100.00	639	0	0	1	639	1	639	0.0	1173
+# BLASTN 2.2.28+
+# Query: A/Rivadavia/Arg/01
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Rivadavia/Arg/01	gi|119391709|emb|AM180000.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Chapaleu/Arg/01
+# RID: 5VTW3C05013
+# Database: nt
+# 0 hits found
+# BLASTN 2.2.28+
+# Query: A/Union/Arg/01
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Union/Arg/01	gi|119391713|emb|AM180002.1|	100.00	623	0	0	17	639	17	639	0.0	1144
+# BLASTN 2.2.28+
+# Query: A/Dupuy/Arg/01
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Dupuy/Arg/01	gi|119391715|emb|AM180003.1|	100.00	639	0	0	1	639	1	639	0.0	1170
+# BLASTN 2.2.28+
+# Query: A/GLopez/Arg/01
+# RID: 5VTW3C05013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/GLopez/Arg/01	gi|119391717|emb|AM180004.1|	100.00	639	0	0	1	639	1	639	0.0	1177
+# BLASTN 2.2.28+
+# Query: A/SAAreco/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/SAAreco/Arg/01	gi|119391719|emb|AM180005.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Atreuco/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Atreuco/Arg/01	gi|119391721|emb|AM180006.1|	100.00	639	0	0	1	639	1	639	0.0	1173
+# BLASTN 2.2.28+
+# Query: A/Lobos/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Lobos/Arg/01	gi|119391723|emb|AM180007.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/TLauquen/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# 0 hits found
+# BLASTN 2.2.28+
+# Query: A/Chivilcoy/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Chivilcoy/Arg/01	gi|119391727|emb|AM180009.1|	100.00	639	0	0	1	639	1	639	0.0	1170
+# BLASTN 2.2.28+
+# Query: A/Diareaux/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Diareaux/Arg/01	gi|119391729|emb|AM180010.1|	100.00	639	0	0	1	639	1	639	0.0	1177
+# BLASTN 2.2.28+
+# Query: A/Diamante/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Diamante/Arg/01	gi|119391731|emb|AM180011.1|	100.00	639	0	0	1	639	1	639	0.0	1158
+# BLASTN 2.2.28+
+# Query: A(b)/TLauquen/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(b)/TLauquen/Arg/01	gi|119391733|emb|AM180012.1|	100.00	638	0	0	1	638	1	638	0.0	1168
+# BLASTN 2.2.28+
+# Query: A(c)/TLauquen/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(c)/TLauquen/Arg/01	gi|119391757|emb|AM180024.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/CSuarez/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/CSuarez/Arg/01	gi|119391737|emb|AM180014.1|	100.00	639	0	0	1	639	1	639	0.0	1173
+# BLASTN 2.2.28+
+# Query: A/Lomas/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Lomas/Arg/01	gi|119391739|emb|AM180015.1|	100.00	639	0	0	1	639	1	639	0.0	1177
+# BLASTN 2.2.28+
+# Query: A/Guatreche/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Guatreche/Arg/01	gi|119391741|emb|AM180016.1|	100.00	639	0	0	1	639	1	639	0.0	1170
+# BLASTN 2.2.28+
+# Query: A/Junin/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# 0 hits found
+# BLASTN 2.2.28+
+# Query: A(b)/Junin/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(b)/Junin/Arg/01	gi|119391745|emb|AM180018.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Daireaux/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Daireaux/Arg/01	gi|119391747|emb|AM180019.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(c)/BuenosAires/Arg/01
+# RID: 5VTWMVTR013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(c)/BuenosAires/Arg/01	gi|119391749|emb|AM180020.1|	100.00	638	0	0	1	638	1	638	0.0	1171
+# BLASTN 2.2.28+
+# Query: A/GAlvear/Arg/01
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/GAlvear/Arg/01	gi|119391751|emb|AM180021.1|	100.00	638	0	0	1	638	1	638	0.0	1171
+# BLASTN 2.2.28+
+# Query: A/Mercedes/Arg/01
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Mercedes/Arg/01	gi|119391753|emb|AM180022.1|	100.00	638	0	0	1	638	1	638	0.0	1168
+# BLASTN 2.2.28+
+# Query: A/RCuarto/Arg/02
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/RCuarto/Arg/02	gi|119391757|emb|AM180024.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Cacapava/Bra/76
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Cacapava/Bra/76	gi|183579059|gb|EU553851.1|	100.00	639	0	0	1	639	1	639	0.0	1170
+# BLASTN 2.2.28+
+# Query: A/Ven/70
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Ven/70	gi|183579121|gb|EU553882.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Arg/00
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Arg/00	gi|119391687|emb|AM179989.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(b)/Rivadavia/Arg/01
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(b)/Rivadavia/Arg/01	gi|119391709|emb|AM180000.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/LaPampa/Arg/01
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/LaPampa/Arg/01	gi|383866494|gb|JQ082908.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/T.Lauquen/Arg/01
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/T.Lauquen/Arg/01	gi|383866496|gb|JQ082909.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Treita_y_Tres/Uru/01
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Treita_y_Tres/Uru/01	gi|383866498|gb|JQ082910.1|	100.00	639	0	0	1	639	1	639	0.0	1177
+# BLASTN 2.2.28+
+# Query: A/Colonia/Uru/01
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Colonia/Uru/01	gi|383866500|gb|JQ082911.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(b)/RS/Bra/01
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(b)/RS/Bra/01	gi|383866502|gb|JQ082912.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(c)/RS/Bra/01
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(c)/RS/Bra/01	gi|383866504|gb|JQ082913.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(d)/RS/Bra/01
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(d)/RS/Bra/01	gi|383866506|gb|JQ082914.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Sta.Cruz/Bol/00
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Sta.Cruz/Bol/00	gi|383866508|gb|JQ082915.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A(b)/Sta.Cruz/Bol/01
+# RID: 5VTX6XYB01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(b)/Sta.Cruz/Bol/01	gi|383866510|gb|JQ082916.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A(c)/Sta.Cruz/Bol/01
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(c)/Sta.Cruz/Bol/01	gi|383866510|gb|JQ082916.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A/Cochabamba/Bol/01
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Cochabamba/Bol/01	gi|383866514|gb|JQ082918.1|	100.00	636	0	0	1	636	1	636	0.0	1164
+# BLASTN 2.2.28+
+# Query: A/Oruro/Bol/01
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Oruro/Bol/01	gi|383866516|gb|JQ082919.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A/Potosi/Bol/01
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Potosi/Bol/01	gi|383866518|gb|JQ082920.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A/Beni/Bol/02
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Beni/Bol/02	gi|383866520|gb|JQ082921.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A/N._de_Santander/Col/04
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/N._de_Santander/Col/04	gi|383866522|gb|JQ082922.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A(b)/N.de_Santander/Col/08
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(b)/N.de_Santander/Col/08	gi|383866524|gb|JQ082923.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(c)/N.de_Santander/Col/08
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(c)/N.de_Santander/Col/08	gi|383866526|gb|JQ082924.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(d)/N.de_Santander/Col/08
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(d)/N.de_Santander/Col/08	gi|383866526|gb|JQ082924.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(e)/N.de_Santander/Col/08
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(e)/N.de_Santander/Col/08	gi|383866524|gb|JQ082923.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(f)/N.de_Santander/Col/08
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(f)/N.de_Santander/Col/08	gi|383866532|gb|JQ082927.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(g)/N.de_Santander/Col/08
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(g)/N.de_Santander/Col/08	gi|383866534|gb|JQ082928.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Ecu/02
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Ecu/02	gi|383866536|gb|JQ082929.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Per/00
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Per/00	gi|383866538|gb|JQ082930.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Per/99
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Per/99	gi|383866540|gb|JQ082931.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Tachira/Ven/01
+# RID: 5VTXREA4013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Tachira/Ven/01	gi|383866542|gb|JQ082932.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A/Bolivar/Ven/01
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Bolivar/Ven/01	gi|383866544|gb|JQ082933.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Merida/Ven/02
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Merida/Ven/02	gi|383866546|gb|JQ082934.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A/Bolivar/Ven/03
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Bolivar/Ven/03	gi|383866548|gb|JQ082935.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Barinas/Ven/03
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Barinas/Ven/03	gi|383866550|gb|JQ082936.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Merida/Ven/03
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Merida/Ven/03	gi|383866552|gb|JQ082937.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A(b)/Merida/Ven/03
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(b)/Merida/Ven/03	gi|383866554|gb|JQ082938.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Tachira/Ven/04
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Tachira/Ven/04	gi|383866556|gb|JQ082939.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(b)/Tachira/Ven/04
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(b)/Tachira/Ven/04	gi|383866558|gb|JQ082940.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Barinas/Ven/04
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Barinas/Ven/04	gi|383866560|gb|JQ082941.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(c)/Tachira/Ven/04
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(c)/Tachira/Ven/04	gi|383866562|gb|JQ082942.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Merida/Ven/04
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Merida/Ven/04	gi|383866564|gb|JQ082943.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Yaracuy/Ven/04
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Yaracuy/Ven/04	gi|383866566|gb|JQ082944.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Falcon/Ven/04
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Falcon/Ven/04	gi|383866568|gb|JQ082945.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(b)/Barinas/Ven/04
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(b)/Barinas/Ven/04	gi|383866570|gb|JQ082946.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(d)/Tachira/Ven/04
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(d)/Tachira/Ven/04	gi|383866572|gb|JQ082947.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Apure/Ven/04
+# RID: 5VTY8EXD016
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Apure/Ven/04	gi|383866574|gb|JQ082948.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Apure/Ven/05
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Apure/Ven/05	gi|383866576|gb|JQ082949.1|	100.00	639	0	0	1	639	1	639	0.0	1177
+# BLASTN 2.2.28+
+# Query: A/Merida/Ven/05
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Merida/Ven/05	gi|383866578|gb|JQ082950.1|	100.00	639	0	0	1	639	1	639	0.0	1177
+# BLASTN 2.2.28+
+# Query: A(b)/Merida/Ven/05
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(b)/Merida/Ven/05	gi|383866580|gb|JQ082951.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(c)/Merida/Ven/05
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(c)/Merida/Ven/05	gi|383866582|gb|JQ082952.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Apure/Ven/06
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Apure/Ven/06	gi|383866584|gb|JQ082953.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Portuguesa/Ven/07
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Portuguesa/Ven/07	gi|383866586|gb|JQ082954.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Bra/58
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Bra/58	gi|383866588|gb|JQ082955.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Belem/Bra/59
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Belem/Bra/59	gi|383866590|gb|JQ082956.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Guarulhos/Bra/59
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Guarulhos/Bra/59	gi|383866592|gb|JQ082957.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Zulia/Ven/62
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Zulia/Ven/62	gi|383866594|gb|JQ082958.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A/Suipacha/Arg/62
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Suipacha/Arg/62	gi|383866596|gb|JQ082959.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A/Cruzeiro/Bra/55
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Cruzeiro/Bra/55	gi|383866598|gb|JQ082960.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Arg/59
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Arg/59	gi|383866600|gb|JQ082961.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Arg/66
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Arg/66	gi|383866602|gb|JQ082962.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Col/67
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Col/67	gi|383866604|gb|JQ082963.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A/Per/69
+# RID: 5VTYTA1T013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Per/69	gi|383866606|gb|JQ082964.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(c)/Ven/70
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(c)/Ven/70	gi|183579121|gb|EU553882.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Bra/70
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Bra/70	gi|383866610|gb|JQ082966.1|	100.00	639	0	0	1	639	1	639	0.0	1173
+# BLASTN 2.2.28+
+# Query: A/Ecu/75
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Ecu/75	gi|383866612|gb|JQ082967.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A/San_Martin/Per/75
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/San_Martin/Per/75	gi|383866614|gb|JQ082968.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Bage/Bra/76
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Bage/Bra/76	gi|383866616|gb|JQ082969.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A(b)/Cacapava/Bra/76
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A(b)/Cacapava/Bra/76	gi|383866618|gb|JQ082970.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Pedregulho/Bra/76
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Pedregulho/Bra/76	gi|383866620|gb|JQ082971.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Cundinamarca/Col/76
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Cundinamarca/Col/76	gi|383866622|gb|JQ082972.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A/Ecu/79
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Ecu/79	gi|383866624|gb|JQ082973.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/RS/Bra/81
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/RS/Bra/81	gi|383866626|gb|JQ082974.1|	100.00	639	0	0	1	639	1	639	0.0	1177
+# BLASTN 2.2.28+
+# Query: A/SaoCarlos/Bra/84
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/SaoCarlos/Bra/84	gi|383866628|gb|JQ082975.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Col/84
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Col/84	gi|383866630|gb|JQ082976.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A/Sabana/Col/85
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Sabana/Col/85	gi|383866632|gb|JQ082977.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Ven/89
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Ven/89	gi|383866634|gb|JQ082978.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLASTN 2.2.28+
+# Query: A/Antioquia/Col/97
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Antioquia/Col/97	gi|383866636|gb|JQ082979.1|	100.00	639	0	0	1	639	1	639	0.0	1162
+# BLASTN 2.2.28+
+# Query: A/Cordoba/Col/97
+# RID: 5VTZAYER01R
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Cordoba/Col/97	gi|383866638|gb|JQ082980.1|	100.00	639	0	0	1	639	1	639	0.0	1155
+# BLASTN 2.2.28+
+# Query: A/Cundinamarca/Col/97
+# RID: 5VTZWTSM013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Cundinamarca/Col/97	gi|383866640|gb|JQ082981.1|	100.00	639	0	0	1	639	1	639	0.0	1177
+# BLASTN 2.2.28+
+# Query: A/RS/Bra/97
+# RID: 5VTZWTSM013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/RS/Bra/97	gi|383866642|gb|JQ082982.1|	100.00	636	0	0	1	636	1	636	0.0	1175
+# BLASTN 2.2.28+
+# Query: A/Arg/01
+# RID: 5VTZWTSM013
+# Database: nt
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 1 hits found
+A/Arg/01	gi|119391757|emb|AM180024.1|	100.00	639	0	0	1	639	1	639	0.0	1181
+# BLAST processed 131 queries

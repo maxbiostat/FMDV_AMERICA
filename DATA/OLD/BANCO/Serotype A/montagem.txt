@@ -1,0 +1,12 @@
+sequences were taken from \cite{molepiA}
+
+@article{molepiA,
+   author="Malirat, V.  and Bergmann, I. E.  and de Mendonca Campos, R.  and Conde, F.  and Quiroga, J. L.  and Villamil, M.  and Salgado, G.  and Ortiz, S. ",
+   Title="{{M}olecular epidemiology of foot-and-mouth disease virus type {A} in {S}outh {A}merica}",
+   journal="Vet. Microbiol.",
+   year="2012",
+   volume="158",
+   number="1-2",
+   pages="82--94",
+   month="Jul"
+}

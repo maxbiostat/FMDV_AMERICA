@@ -1,0 +1,9 @@
+COUNTRY REP
+Arg 58
+Bol 7
+Bra 16
+Col 14
+Ecu 3
+Per 4
+Uru 2
+Ven 27
