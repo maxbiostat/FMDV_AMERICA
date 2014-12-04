@@ -4,7 +4,7 @@ These are some of the BEAST configuration files, aka, XMLs to reproduce pretty m
 
 For serotype ``S`` (A or O), we provide:
 
-** ``S``_asymmetric_equal_rates.xml**: the equal rates prior, which places the same (reasonably) diffuse Gamma prior on all rates in the CTMC; 
+**``S``_asymmetric_equal_rates.xml**: the equal rates prior, which places the same (reasonably) diffuse Gamma prior on all rates in the CTMC; 
 
 **``S``_{``cattle, pig, sheep``}.xml**: the {``cattle, pigs, sheep``} predictor, elicited from FAO trade data, also provided in this repository;
 
