@@ -296,7 +296,7 @@ The results from the skyride non-parametric coalescent reconstruction show strik
 While serotype O exhibits a diversity peak occurring in the late years of the 1990's, diversity of serotype A has been slowly decreasing over the last $20$ years.
 Serotype A exhibits a more stable behavior over most of the 20th century, with most variation occurring within the temporal sampling interval, mainly in the last years of the 2000's.
 To gain insight the relationship between vaccination and viral diversity, we overlaid vaccination data to the skyride plots presented in the yellow line in Figure~\ref{fig:skyride}.
-These data were expressed as (log) doses per head, which we consider to be a more accurate measure of vaccination coverage, since it corrects for population size increase/decrease over time (see Figure ~\ref{sfig:trade} for livestock population time series). 
+These data were expressed as (log) doses per head, which we consider to be a more accurate measure of vaccination coverage, since it corrects for population size increase/decrease over time (see Figure ~\ref{sfig:prod} for livestock population time series). 
 
 Also, serotype-specific disease notification (number of cases) data was overlaid to the coalescent reconstruction to illustrate the relationship between viral diversity and the onset of epidemics. 
 For serotype A we observe a bottleneck of viral diversity around $2001$ (red ribbon) that coincides with a major epidemic by this serotype that affected several countries in the period $2000-2002$, specially Argentina.
@@ -357,7 +357,7 @@ Thus, being a major diversity hotspot may have different consequences for Colomb
 % %%%%%
 In this paper we conducted a computationally demanding Bayesian model selection study to assess the significance of various epidemiological predictors to FMDV diffusion, and our results indicate different factors influence the spread of serotypes A and O.
 Our analysis is similar in spirit to that presented in Nelson et. al (2011)~\cite{Nelson2011} in which the authors investigate the effect of pig trade on the diffusion of Influenza, but provides substantial improvement over the methods used to calculate the marginal log-likelihoods for each predictor.
-We employ recently developed importance sampling-based techniques, which have been shown to be significantly more accurate than the previously used harmonic mean estimator (HME)~\cite{Baele2012, Baele2013a, Baele2013b}.
+We employ recently developed marginal likelihood calculation techniques, which have been shown to be significantly more accurate than the previously used harmonic mean estimator (HME)~\cite{Baele2012, Baele2013a, Baele2013b}.
 Using data on trade of live cattle, pigs and sheep between South American countries as predictors for the rates of spatial CTMC matrix, we  were able to show that serotype O diffusion is strongly associated with cattle trade and geographic distance, while for serotype A only the association with distance could be recovered.  
 Inverse geographic distances between countries was the only predictor that yielded a positive Bayes factor compared to the equal-rates model for serotype A (BF = $3.83$), providing moderate evidence of association.
 On the other hand, results for serotype O tell a more interesting story.
@@ -464,8 +464,6 @@ We acknowledge the support of the National Evolutionary Synthesis Center (NESCen
 This work was also supported by National Institutes of Health grants R01 HG006139 and National Science Foundation grants DMS 1264153.
 
 \emph{Conflict of Interest:} none declared
-%LMC and WCS are former employees of the Pan American Health Organization (PAHO) and for full disclosure, they would like to stress that PAHO had no role in study design or decision to publish.
-% Responsibility for the statements in this article is solely of the authors.
 
 \newpage
 \bibliography{FMDV_AMERICA}
@@ -487,7 +485,7 @@ Coroplethic maps show the net migration rates for each country, for both serotyp
 For serotype O the origins of  all the Colombian sequences from 1994 (C) are shown along with the origins of the strain in Venezuela 2003 (D).
 
 {\bf Figure~\ref{fig:skyride}. Temporal dynamics of FMDV serotypes A and O in South America.} Population dynamics were reconstructed for both serotypes using the Gaussian Markov Random Field (Skyride) prior (see Methods).
-Additionally, data on vaccination  (doses per head) and (log) FMD serotype-specific notifications were superimposed on the demographic reconstruction, with 95 \% Bayesian credible intervals shaded in grey.
+Additionally, data on vaccination  (doses per head) and (log) FMD serotype-specific notifications were superimposed on the demographic reconstruction, with 95 \% Bayesian credible intervals shaded in gray.
 
 \newpage
 \section{Figures and Tables}
@@ -557,7 +555,7 @@ Additionally, data on vaccination  (doses per head) and (log) FMD serotype-speci
 \begin{table}[H]
 \caption{
 \textbf{Spatial model selection results for epidemiological predictors.}
-We assessed the significance of livestock trade in FMDV spread in South America using two importance sampling methods, path sampling (PS) and stepping-stone sampling (SS), to estimate (log) marginal likelihoods for each predictor using $64$ path steps and $2$ million iterations per path step, and corresponding Bayes factor (BF) comparisons.
+We assessed the significance of livestock trade in FMDV spread in South America using two marginal likelihood calculation methods, path sampling (PS) and stepping-stone sampling (SS), to estimate (log) marginal likelihoods for each predictor using $64$ path steps and $2$ million iterations per path step, and corresponding Bayes factor (BF) comparisons.
 We also present the (log) marginal likelihood estimates for two location priors under which the location rates are estimated, rather than being fixed (as for the livestock predictors).
 The results from the equal-rates gamma prior should not be directly compared to those of the livestock trade predictors.
 }
