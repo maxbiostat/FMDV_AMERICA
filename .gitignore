@@ -21,6 +21,7 @@
 *.bib~
 *.gitignore~
 *.Rhistory
+FIGURES/TO_PUB/*
 FMDV_AMERICA.bib~
 FMDV_AMERICA.tex~
 FMDV_AMERICA.pdf
