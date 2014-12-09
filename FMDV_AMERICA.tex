@@ -154,7 +154,7 @@ We used BEAST to infer time-structured phylogenies for each FMDV serotype, assum
 Figure~\ref{fig:trees}A shows the maximum clade credibility (MCC) tree estimated for serotype A.
 The estimated time to most recent common ancestor (tMRCA) of the circulating serotype A strains was 1932 ($95\%$ HPD: $1925$--$1939$).
 Figure~\ref{fig:trees}B presents the estimated MCC tree for serotype O.
-The tMRCA for serotype O was estimated around $20$ years ($1989$, $95\%$ HPD: $ 1986$--$1991$), showing a more recent origin. 
+The tMRCA for serotype O was estimated in around $20$ years ($1989$, $95\%$ HPD: $ 1986$--$1991$), showing a more recent origin. 
 
 Using the combination of best fitting demographic and molecular clock models for each serotype, the evolutionary rate for serotype A was estimated at $\approx 4 \times 10^{-3}$ substitutions/site/year.
 The estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e.~at $\approx 1 \times 10^{-2}$, consistent with previous studies~\cite{tully, Carvalho2013, Muellner2011}.
@@ -171,14 +171,14 @@ Figure~\ref{fig:trees}A shows that sequences from the same country tend to clust
 For example, Argentinian serotype A sequences were grouped in two clades, that either comprised only Argentinian isolates or included sequences from Brazil and Uruguay (Figure~\ref{fig:trees}A).
 Interestingly, the majority of the isolates from Venezuela and Colombia fall together within two distinct clades.
 For serotype O the same interspersing pattern can be noticed, with Ecuador and Colombia showing several interleaved clades (Figure~\ref{fig:trees}B).
-A smaller clade of Colombian isolates are found interspersed within from Venezuelan isolates.
+A smaller clade of Colombian isolates are found interspersed within Venezuelan isolates.
 In addition, isolates from Ecuador were grouped with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
 Overall, the Bayesian phylogenies suggest that most FMDV flow within South America occurred between neighboring countries. 
 
 The results of the spatial signal analysis using BaTS~\cite{bats} can be found in the Supplementary Information (Table ~\ref{stab:BaTS}) and show significant location-tip association for both serotypes.
 As an overall summary, our data sets present a high degree of spatial signal, justifying richer phylogeographic analyses to study the transmission network of FMDV on the continent.
 To gain insight into the spatio-temporal process of FMDV spread, we employed an asymmetric continuous-time Markov chain (CTMC) phylogeographic model~\cite{roots} available in BEAST~\cite{beast2012}, coupled  with model averaging using Bayesian stochastic search variable selection (BSSVS) procedure (see Methods).
-The results of the diffusion estimation are presented in Figure~\ref{fig:migration} and show that Brazil and Colombia were the most strongly connected regions (hubs) for both serotypes A and O, respectively. 
+Spatial projections of the maximum clade credibility trees are presented in Figure~\ref{fig:migration} and show that Brazil and Colombia were the most strongly connected regions (hubs) for both serotypes A and O, respectively. 
 In the network for serotype A, Brazil is connected to Argentina, Uruguay, Venezuela and Colombia, while for serotype O, Colombia was connected to Venezuela, Ecuador and Bolivia.
 These results suggest different spatial patterns for the two serotypes.
 
@@ -203,7 +203,7 @@ The period $2000-2010$ is characterized by a decrease in viral flow (almost no n
 \end{center}
 
 We further explore the spatial behavior of FMDV by  computing ``Markov jump'' (MJ) counts~\cite{Minin2008} to summarize the expected number of location state transitions along the branches of the phylogeny and provide a quantitative measure of viral flow between countries.
-The net migration flow (measured in mean transitions count) each country obtained from the MJ analysis, along with the Bayes factors from BSSVS show that supported migration routes differ for each serotype, with some overlapping routes connecting Venezuela, Colombia and Ecuador(Figure~\ref{fig:mj&BFs}). 
+The net migration flow (measured in mean transitions count) each country obtained from the MJ analysis, along with the Bayes factors from a separate BSSVS analysis show that supported migration routes differ for each serotype, with some overlapping routes connecting Venezuela, Colombia and Ecuador(Figure~\ref{fig:mj&BFs}). 
 For serotype A, highest (log BF~$>800$) support was observed for viral flow between Venezuela and Colombia and between Argentina and Uruguay.
 Transitions between Brazil and Bolivia and Peru and Ecuador also yielded considerable statistical support (log BF~$>10$).
 For serotype O, overall support was lower in magnitude, but similar routes were recovered.
@@ -212,7 +212,7 @@ Significant support was also observed for viral exchange between Venezuela and C
 
 Further, we compared the MJ counts between countries that share borders and those which do not and found that for serotype A the posterior median transition count between neighboring countries was $0.01$ (95 \% BCI: $0.00$ -- $1.19$), while ``non-border'' transitions had a posterior median of $0.04$ (95 \% BCI: $0.00$ --  $3.56$).
 For serotype O, similar results were observed, with $0.00$ ($0.00$ -- $2.13$) and $0.01$ ($0.00$ -- $2.48$) being observed for neighboring and non-neighboring countries, respectively.
-Since the difference in medians is substantial but credible intervals widely overlap, we set up a Monte Carlo re-sampling experiment to calculate the probability that a randomly chosen ``border'' ($B$) transition is larger than a randomly chosen ``non-border'' (NB) one.
+Since the difference in medians is substantial but credible intervals widely overlap, we set up a Monte Carlo re-sampling experiment to calculate the probability that a randomly chosen ``border'' ($B$) transition is bigger than a randomly chosen ``non-border'' (NB) one.
 For each data vector we obtained $10,000$ random draws and counted the number of times the above described event happened.
 From this experiment we found the posterior $\mbox{Pr}(B>NB)$  to be $0.41$ for serotype A and $0.35$ for serotype O.
 These results indicate there is little evidence for trans-border diffusion  for for serotype A, while long-range routes may play an important role for serotype O.
@@ -239,8 +239,6 @@ We provide evidence of Venezuela as a major viral source for serotype A in its r
 This notion of Venezuela as a seeder is further strengthened by the fact that the Colombian $2008$ strain was most likely imported from Venezuela (posterior probability $~1$, shown in Figure~\ref{sfig:epitrac}D).
 
 Remarkably, the origin of serotype O strains from Colombia in $1994$ was found to be the root of the phylogenies with high posterior probability ($0.76$), as shown in Figure~\ref{fig:epidemictracing}C.
-This finding may be due to confounding since Colombia holds most of the diversity for serotype O, as well as some of the deep (older) sequences in the sampling.
-Also, the  possibility that the $1994$ strains were already circulating in Colombia should not be ruled out.
 Similar to what was found for Venezuela and serotype A, Colombia seems to be the source of most of the strains circulating on the northern part of South America.
 As with the introduction of serotype A in Colombia in $2008$, the strains from Venezuela $2003$ have high probability of being imported from Colombia (Figure~\ref{fig:epidemictracing}D).
 Consistent with that, Figures~\ref{sfig:epitrac}B and~\ref{sfig:epitrac}C we show that Colombia was the most probable origin of the strains in Ecuador ($2002$).
@@ -342,7 +340,7 @@ A more definitive statement about this topic would require the inclusion of sequ
 %
 
 We found well supported migration paths between Venezuela, Colombia and Ecuador for both serotypes indicating an important spread pathway in the northern part of South America, while Argentina, Brazil and Uruguay form a well-supported (log BFs $> 9$) sub-network (see Figure~\ref{fig:mj&BFs}).
-Interestingly, specially for serotype O the Markov jumps analysis show a clear separation in two sub-networks (Figure~\ref{fig:mj&BFs}), one comprising the Southern cone and the other comprising Andean countries.
+Interestingly, for serotype O specially, the Markov jumps analysis show a clear separation in two sub-networks (Figure~\ref{fig:mj&BFs}), one comprising the Southern cone and the other comprising Andean countries.
 This separation suggests that viral transmission may follow different regimes in these two regions, which have different forms of livestock production~\cite{Saraiva2003,Naranjo2013}.
 The link between these two sub-networks appears to be Bolivia, where viral introduction took place around $2000$. 
 Further, we also estimate that the serotype A strain circulating in Bolivia $2001$ most likely came from Peru (Figure~\ref{sfig:epitrac}) which provides some evidence for the hypothesis of Bolivia as a link.
@@ -472,11 +470,11 @@ Tips were collapsed for clarity and colored according to geographic origin.
 Diamonds sizes are proportional to posterior probabilities.
 
 {\bf Figure~\ref{fig:migration}. Spatio-temporal dynamics of FMDV in South America} Using an asymmetric diffusion model, we reconstructed the spatial spread of FMDV serotypes A and O throughout the South American continent during the 20th century.
+The figure presents spatial projections of the maximum clade credibility trees produced with SPREAD~\cite{spread} and visualized using Google Earth (\url{http://www.google.com/earth/index.html}).
 Circle radius are proportional to lineage diversity.
-Illustrations produced using data annotated from SPREAD~\cite{spread} and visualized using Google Earth (\url{http://www.google.com/earth/index.html}).
 
 {\bf Figure~\ref{fig:mj&BFs}. Migration networks for FMDV serotypes A and O in South America.} We estimated the number of migration events between countries using Markov jumps.
-Bayesian Stochastic Search Variable Selection (BSSVS) was used to determine most significant migration routes and Bayes factors are depicted by arrows, with line thickness proportional to BF magnitude.
+Additionally, a separate analysis employing Bayesian Stochastic Search Variable Selection (BSSVS) was performed to determine most significant migration routes and Bayes factors are depicted by arrows, with line thickness proportional to BF magnitude.
 Coroplethic maps show the net migration rates for each country, for both serotypes.
 
 {\bf Figure~\ref{fig:epidemictracing}. Epidemic tracing using robust counting for serotypes A and O in South America.} We show the most probable sources of serotype A epidemics in Argentina 2001 (A) and Ecuador 2002 (B).

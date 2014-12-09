@@ -135,11 +135,11 @@ plot.spatnett <- function(map, nb, coords, ws, nets, nbrk = 3,
          cex = .7, y.intersp = 1)
   }
   if(!thck){
-   legend("bottomleft", fill = colors2, bty = "n", legend = alg$legend, title = "Markov Jumps",
+   legend("bottomleft", fill = colors2, bty = "n", legend = alg$legend, title = "Bayes factors",
           cex = .7, y.intersp = 1)
  }else{
    legend("bottomleft", lwd = 1:max(alg$indicators), bty = "n", legend = alg$legend,
-          title = "Markov Jumps", cex = .7, y.intersp = 1)
+          title = "Bayes factors", cex = .7, y.intersp = 1)
  }
 }
 ##############################################################
@@ -168,10 +168,10 @@ plot.spatnettinv <- function(map, nb, coords, ws, nets, nbrk = 3,
            cex = .7, y.intersp = 1)
   }
   if(!thck){
-    legend("bottom", fill = colors2, bty = "n", legend = alg$legend, title = "Markov Jumps",
+    legend("bottom", fill = colors2, bty = "n", legend = alg$legend, title = "Bayes factors",
            cex = .7, y.intersp = 1)
   }else{
     legend("bottom", lwd = 1:max(alg$indicators), bty = "n", legend = alg$legend,
-           title = "Markov Jumps", cex = .7, y.intersp = 1)
+           title = "Bayes factors", cex = .7, y.intersp = 1)
   }
 }
