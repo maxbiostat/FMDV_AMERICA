@@ -90,14 +90,14 @@ $\ast$ E-mail: lm.carvalho@ed.ac.uk
 Although foot-and-mouth disease virus (FMDV) occurrence has diminished over the years, the virus still circulates in certain areas of South America and the risk of re-emergence in previously FMDV-free areas is a constant threat.
 While the molecular epidemiology of FMDV in South America has been subject of several studies recently, an integrated quantitative approach to incorporate environmental and epidemiological data into the analyses is still lacking.
 %GB: perhaps explain in a few words, what VP1 is
+%LM: Don't think there is any need. VP1 is the de facto standard for FMDV molecular epidemiology. Maybe I'll add a sentence about why in the Discussion
 In this study, we combine state-of-the-art Bayesian phylogeographic inference with the most comprehensive data sets of VP1 (1D) sequences from FMDV serotypes A and O collected in South America to date  to  reconstruct the temporal and spatial pattern of FMDV and test evolutionary hypotheses.
-
 We found that South American FMDV serotypes A and O exhibit rate variation among lineages and are best fitted by different relaxed molecular clock models (A: log-normal; O: exponential).
 The phylogeographic analysis showed significant viral flow between Venezuela, Colombia and Ecuador while Brazil, Uruguay and Argentina also formed a well-connected sub network.
 Using data on livestock (cattle, sheep and pigs) trade and geographic distance also allowed us to assess the importance of each of these predictors in viral flow, showing geographic distance to be the best predictor of serotype A spatial spread while the trade of live cattle was the strongest predictor of serotype O spread on the continent.
-
+Our findings suggest that the two serotypes have different underlying dispersal determinants in the continent, although migration through short geographical distances is a common risk factor for spread.  
 %GB: it seems to me that the abstract needs some sort of concluding remark(s). For example, something like that last sentence of the author summary.
-
+%LM: agreed. See above.
 Key-words: Phylogeography, foot-and-mouth disease virus, South America, animal trade, BEAST.
 
 \section*{Author Summary} % 150--200 words
@@ -105,7 +105,7 @@ Foot-and-mouth diseases virus (FMDV) is a rapidly evolving and highly infectious
 In South America, although some molecular epidemiology studies are available, little is known about the virus phylodynamics.
 In this paper we analyze all available VP1 sequences of FMDV serotypes A and O isolated in South America to unravel the spatial and temporal dynamics of the virus on the continent.
 We show that both serotypes exhibit temporal structure and go on to estimate a time of origin of $\approx 70$ and $\approx 20$ years for serotypes A and O, respectively, and that serotype O presents a dispersal rate four times faster than serotype A.
-Additionally, we find that Brazil is a hub for serotype A spread but not for serotype O, while Colombia and Ecuador seem to be more important for serotype O dispersal on the continent.
+Additionally, we find that Venezuela and Brazil are hubs for serotype A spread but not for serotype O, while Colombia and Ecuador seem to be more important for serotype O dispersal on the continent.
 We identify the trade of live cattle as the most important predictor of serotype O, while for serotype A geographic distances seem to best predict viral flow between South American countries.
 Taken together, these results show that the FMDV serotypes' different biology is reflected in their different spatial dispersal patterns and reinforces the view that the trade of live cattle as well as short range migration are important threats to control programs.   
 
@@ -122,44 +122,49 @@ In South America, FMD control and eradication has traditionally been pursued usi
 Over time, passive and active surveillance programs have, with different degrees of success, succeeded to early detect FMDV.
 In order to achieve complete eradication however, we need to accurately characterize the strains involved in epidemics, especially those in previously FMDV-free areas.
 
-Phylogenetic analyses have proven useful in veterinary public health both by recovering the transmission pathways from genetic data~\cite{cottam2007, cottam2008} and providing insight into the processes that drive re-emergence~\cite{combining}.
-More recently, molecular epidemiology tools have been used to infer the origin and evolutionary history of emerging strains~\cite{Perez2001, Malirat2007, andean, Malirat2011, Maradei2013}.
+Phylogenetic analyses have proven useful in recovering the transmission pathways from genetic data~\cite{cottam2007, cottam2008} and providing insight into the processes that drive re-emergence~\cite{combining}.
+More recently, molecular epidemiology tools have been used to infer the origin and evolutionary history of emerging strains in South America~\cite{Perez2001, Malirat2007, andean, Malirat2011, Maradei2013}.
 %GB: not sure what you want to say in the sentence below? Do you mean that up to 2011 there was no unified quantitative framework?
-However, as pointed out by Di Nardo, Knowles \& Paton ~\cite{combining}, a joint evaluation of epidemiological, environmental and genetic data has usually been performed outside of an unified quantitative framework.
+% LM: Nope, I meant this is the case for FMDV. Modified the paragraph to make that evident.
+However, as pointed out by Di Nardo, Knowles \& Paton~\cite{combining}, a common feature of FMDV molecular epidemiology studies is that  joint evaluation of epidemiological, environmental and genetic data has usually been performed outside of an unified quantitative framework.
+In face of many sources of information, ranging from genetic data to environmental data on host distribution and outbreak counts, it would be desirable to have a framework capable of integrating these sources of information in a coherent way.
 %GB: perhaps expand a bit more on Bayesian phylodynamics?
-In this context, Bayesian phylodynamics offers an attractive statistical framework to combine multiple sources of information and draw more complete epidemiological inference~\cite{grenfell, vphylodynamics}.
-%GB: expand on the sentence below as well ...
-Furthermore, estimating time-calibrated phylogenies may give important insight into the temporal origins of epidemic strains~\cite{grenfell, vphylodynamics} and phylogeographic methods can be employed to understand viral spatio-temporal dynamics.
+%LM: yup. done.
+Phylodynamics combines population genetics and epidemiology to explicitly  model the interaction between ecological processes such as migration and selection and the shape of the phylogenies~\cite{grenfell, vphylodynamics}.
+Bayesian phylodynamics offers an attractive statistical framework to combine multiple sources of information while marginalizing over the topology space, thus accommodating phylogenetic uncertainty.
+In particular, phylogeographic methods can be employed to understand viral spatial dynamics under explicit spatial diffusion models~\cite{roots}.
 %GB: and on the following sentence as well, it all seems a bit rushed ...
-Another important research goal is to gain insight into the major determinants of FMDV spread in the continent.
-Animal movements constitute a major threat to eradication programs, being an important driving factor for re-emergence~\cite{movements}.
-Thus, using animal trade data as predictors can be a valuable tool to understand the role of livestock commerce in the spread of animal and zoonotic diseases~\cite{Nelson2011}.
-The ability to incorporate multiple sources of temporal and spatial information is becoming increasingly important in molecular epidemiology studies that aim to understand the driving forces of pathogen evolution and spread~\cite{towards, combining, MEP, roots}.
+%LM: tried my best to patch everything up.
+Moreover, an important research goal is to gain insight into the major determinants of FMDV spread in the continent.
+Since animal movements constitute a major threat to eradication programs~\cite{movements}, using animal trade data as predictors can be a valuable tool to understand the role of livestock commerce in the spread of FMDV.
+For example, Nelson et al. (2011)~\cite{Nelson2011} coupled pig trade data and genetic data to show swine movements in the United States drove the spread of a novel influenza virus of the H1 subtype.
 
 Here, we investigate for the first time the phylodynamics of serotypes A and O in South America using all publicly available VP1 (1D) sequences for those serotypes in South America, with data sets spanning over a long time-period (1955-2010 for serotype A and 1994-2010 for serotype O) from nearly all south American countries affected by FMD.
 We apply state-of-the-art Bayesian phylogeographic methods to investigate the evolutionary dynamics of serotypes A and O in South America incorporating  genetic, spatial and epidemiological data such as livestock trade, geographic distances and vaccination coverage.
 This flexible Bayesian phylogeographic framework allows to test hypotheses on viral dispersal, while naturally accommodating phylogenetic uncertainty~\cite{roots, towards}.
 We use BEAST~\cite{beast2012} to infer time-structured phylogenies and reconstruct past population dynamics, to which we overlay vaccination and serotype-specific notification data.
-Further, we use data on livestock trade and geographical distances as predictors for viral spatial diffusion and accurately estimate marginal likelihoods of competing spatial dynamics models involving each predictor using recently developed methods. %GB: to do/test what?
+To study the factors driving re-emergence, we use data on livestock trade and geographical distances as predictors for viral spatial diffusion and compare competing spatial dynamics models involving each predictor using recently developed methods. %GB: to do/test what? %LM: done. Think it's much clearer now.
 
 \section*{Results}
 
-\subsection*{Evolutionary rates and times of divergence of FMDV serotypes A and O}
+\subsection*{Evolutionary rates and times of origin of FMDV serotypes A and O}
 
 %GB: I would simply say: we use GTR+I+G, rather than spend much text on this. ModelTest is an ML-based test, which does not have a clock or demographic model, so doing the model selection in such a framework isn't all that relevant. Further, unless you're interested in some specific nucleotide substitution behaviour, the influence of the clock model and the demographic model on the MCC tree will be far more important than the influence of the substitution model (as long as you allow for varying rates across sites).
-Preliminary analysis using jModelTest suggested the general time-reversible (GTR) model with discretized gamma-distributed across-site rate variation and a proportion of invariant sites (GTR + I + $\Gamma_{4}$) model as the best fit nucleotide substitution model for both FMDV data sets.
-Next, we performed a computationally intensive model selection using path-sampling (PS) and stepping-stone (SS) to choose the best fitting demographic (tree) model and molecular clock model.
+%LM: agreed. Omitted the Markov model entirely. I'll state which one we used in the Methods section.
+First, we performed a computationally intensive model selection using path-sampling (PS) and stepping-stone (SS) to choose the best fitting demographic (tree) model and molecular clock model.
 Our results favor a non-parametric skyride model, that allows fluctuations in demographic growth through time, over the constant population assumption (serotype A: BF = $11$; serotype O: BF = $21$).
 Using a similar approach, we  found decisive support for the relaxed clock over the strict molecular clock model.
-Particularly, the exponential relaxed molecular clock provided a better fit for serotype O data (log BF = $56$) while the log-normal relaxed molecular clock model provided a better fit to serotype A (log BF = $34$) (see Table ~\ref{stab:treeclockselection} for details). 
+Particularly, the exponential relaxed molecular clock provided a better fit for serotype O data (log BF = $56$) while the log-normal relaxed molecular clock model provided a better fit to serotype A (log BF = $34$) (see Table~\ref{stab:treeclockselection} for details). 
 %GB: not sure what the sentence below brings to the table ... you're also not saying anything about serotype O ...
+%LM: This line is here to show that there is substantial branch-rate heterogeneity (Nuno's idea, btw). The reason we don't mention serotype O is because the coefficient of variation of the exponential is 1, as pointed out by Philippe in an earlier review.
 The coefficient of variation for the log-normal relaxed molecular clock model had a posterior mean of $0.32$ (95\% highest posterior density [HPD] interval: $0.21$--$0.43$) indicating substantial rate heterogeneity among lineages in the phylogeny.
-
+In addition, we compared a model with and without dated-tips (the `temporal signal' test~\cite{Faria2012} , see Methods) and found significant temporal structure for both serotypes (A: log BF = $310$; O: log BF = $348$), showing that sufficient temporal information is embedded in sequence data of both serotypes under investigation, which is essential for the estimation of divergence times and to reconstruct the population dynamics in natural time units~\cite{MEP}. 
 %GB: the paragraph below should perhaps become the first paragraph of this section. Also, explain a bit more this temporal signal test.
-The `temporal signal' test~\cite{Faria2012} (see Methods) also indicated significant temporal structure for both serotypes (A: log BF = $310$; O: log BF = $348$), showing that sufficient temporal information is embedded in sequence data of both serotypes under investigation, which is essential for the estimation of divergence times and to reconstruct the population dynamics in natural time units~\cite{MEP}.
+%LM: I beg to differ: the details of the 'test' are in the Methods section. What is important here is the result itself and what it allows us to say, IMHO.
 
 %GB: are there other times of interest that you'd like to report? If not, you may want to change the section title to: 'times of origin' instead of 'times of divergence'?
-We used BEAST to infer time-structured phylogenies for each FMDV serotype, assuming the best-fit combination of nucleotide substitution, demographic and molecular clock models.
+%LM: good idea. done.
+For the remainder of this paper we will report results from  time-structured phylogenies inferred with BEAST using the best-fit combination demographic and molecular clock models for each serotype.
 Figure~\ref{fig:trees}A shows the maximum clade credibility (MCC) tree estimated for serotype A.
 The estimated time to most recent common ancestor (tMRCA) of the circulating serotype A strains was 1932 ($95\%$ HPD: $1925$--$1939$).
 Figure~\ref{fig:trees}B presents the estimated MCC tree for serotype O.
@@ -167,6 +172,7 @@ The tMRCA for serotype O was estimated in around $20$ years ($1989$, $95\%$ HPD:
 
 Using the combination of best fitting demographic and molecular clock models for each serotype, the evolutionary rate for serotype A was estimated at $\approx 4 \times 10^{-3}$ substitutions/site/year.
 %GB: should we discuss these previous studies in the introduction as well, rather than simply citing them here?
+%LM: IMHO, nope. This is just a sanity check, to show that our rate estimates are on par with previous ones, ergo our divergence/origin time estimates are roughly realistic.
 The estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e.~at $\approx 1 \times 10^{-2}$, consistent with previous studies~\cite{tully, Carvalho2013, Muellner2011}.
 See Text S2, Tables~\ref{stab:SB_A} and~\ref{stab:SB_O} for more detailed estimates.
 
@@ -179,7 +185,7 @@ See Text S2, Tables~\ref{stab:SB_A} and~\ref{stab:SB_O} for more detailed estima
 
 Figure~\ref{fig:trees}A shows that sequences from the same country tend to cluster in small clades, although the inferred phylogenies for both serotypes also show considerable interspersing of lineages, indicating trans-border FMDV spread.
 For example, Argentinian serotype A sequences were grouped in two clades, that either comprised only Argentinian isolates or included sequences from Brazil and Uruguay (Figure~\ref{fig:trees}A).
-Interestingly, the majority of the isolates from Venezuela and Colombia fall together within two distinct clades. %GB: should we indicate this on the figure?
+Interestingly, the majority of the isolates from Venezuela and Colombia fall together within two distinct clades. %GB: should we indicate this on the figure? %LM: really duno. should we ask Philippe/Andrew/Nuno? 
 %GB: To my untrained eye, the serotype O tree looks less interspersed than the serotype A tree, there's essentially only 1 clade that has a lot of different locations in it. Perhaps modify the text accordingly?
 For serotype O the same interspersing pattern can be noticed, with Ecuador and Colombia showing several interleaved clades (Figure~\ref{fig:trees}B).
 A smaller clade of Colombian isolates are found interspersed within Venezuelan isolates.
@@ -409,7 +415,7 @@ These apparently contradictory results could be clarified by studying the releva
 % %%%%%
 % 
 %GB: should we already include this? Or wait until the reviewers ask for it?
-When performing inference under highly unbalanced designs, it is useful to perform a sensitivity analysis to assess the impact of the sampling scheme on phylogeographic inference~\cite{Faria2012, polar, fluPNAS}. 
+When performing inference under highly unbalanced designs, it is useful to perform a sensitivity analysis to assess the impact of the sampling scheme on phylogeographic inference~\cite{Faria2012, Bedford2010, polar, fluPNAS}. 
 We therefore conducted a detailed sensitivity analyses, of which the results show that although well-supported routes of spread (as inferred from BSSVS) are robust to sampling and to prior choices for both serotypes, root estimation yielded inconsistent results across sub-samples and using different predictors.
 One should thus refrain from putting too much weight on the results of the state at root analyses when sampling is unbalanced.
 A possible solution, unexplored in this study, is to place a narrower, elicited prior on the vector of state frequencies to increase statistical efficiency.
@@ -500,7 +506,7 @@ Using PS and SS, we first compared different demographic priors and clock models
 For more details on these model selection procedures please see Supplementary Text S2.
 %GB: should it be explained in more detail how we go about this? I think the next two sentences require more attention, as it won't be clear to the readers what it is we're doing and why ...
 To test the influence of different epidemiological predictors on viral diffusion through space, we used trade of live cattle, pigs and sheep to parameterize priors for the CTMC rate matrix.
-We compared these predictors to an equal-rates gamma prior, which basically represents a scenario where there is no preference over rates, and a distance-informed prior \cite{roots}.
+We compared these predictors to an equal-rates gamma prior, which basically represents a scenario where there is no preference over rates, and a distance-informed prior~\cite{roots}.
 
 \section*{Acknowledgments}
 The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Matthew Hall (Edinburgh) and Professor Oliver Pybus (Oxford) for insightful contributions and Miguel Carvalho, Felipe Figueiredo (PROCC) and Mauricio Oliveira (UFRJ) for operational support.
@@ -513,7 +519,7 @@ This work was also supported by National Institutes of Health grants R01 HG00613
 
 \newpage
 \bibliography{FMDV_AMERICA}
-\new page
+\newpage
 \section*{Figure Legends}
 
 %GB: make sure that the readers can see what the conclusion is of each figure/table, so put it in the figure legend, and explain clearly what is seen/drawn in the figure/table.
