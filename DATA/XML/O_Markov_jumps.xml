@@ -2257,7 +2257,7 @@
 	</operators>
 
 	<!-- Define MCMC                                                             -->
-	<mcmc id="mcmc" chainLength="1000" autoOptimize="true" operatorAnalysis="O_MJ.ops">
+	<mcmc id="mcmc" chainLength="100000000" autoOptimize="true" operatorAnalysis="O_MJ.ops">
 		<posterior id="posterior">
 			<prior id="prior">
 				<gammaPrior shape="0.05" scale="10.0" offset="0.0">
@@ -2391,7 +2391,7 @@
 		<operators idref="operators"/>
 
 		<!-- write log to screen                                                     -->
-		<log id="screenLog" logEvery="100">
+		<log id="screenLog" logEvery="1000">
 			<column label="Posterior" dp="4" width="12">
 				<posterior idref="posterior"/>
 			</column>
@@ -2421,7 +2421,7 @@
 		</log>
 
 		<!-- write log to file                                                       -->
-		<log id="fileLog" logEvery="100" fileName="O_MJ.log" overwrite="false">
+		<log id="fileLog" logEvery="10000" fileName="O_MJ.log" overwrite="false">
 			<posterior idref="posterior"/>
 			<prior idref="prior"/>
 			<likelihood idref="likelihood"/>
@@ -2486,7 +2486,7 @@
 
 
 		<!-- write tree log to file                                                  -->
-		<logTree id="treeFileLog" logEvery="100" nexusFormat="true" fileName="O_MJ.trees" sortTranslationTable="true">
+		<logTree id="treeFileLog" logEvery="10000" nexusFormat="true" fileName="O_MJ.trees" sortTranslationTable="true">
 			<treeModel idref="treeModel"/>
 			<trait name="rate" tag="banco_aln.rate">
 				<discretizedBranchRates idref="banco_aln.branchRates"/>

@@ -1889,7 +1889,7 @@
 	</operators>
 
 	<!-- Define MCMC                                                             -->
-	<mcmc id="mcmc" chainLength="1000" autoOptimize="true" operatorAnalysis="A_MJ_new.ops">
+	<mcmc id="mcmc" chainLength="100000000" autoOptimize="true" operatorAnalysis="A_MJ_new.ops">
 		<posterior id="posterior">
 			<prior id="prior">
 				<gammaPrior shape="0.05" scale="10.0" offset="0.0">

@@ -150,7 +150,7 @@ To study the factors driving re-emergence, we use data on livestock trade and ge
 \subsection*{Evolutionary rates and times of origin of FMDV serotypes A and O}
 
 %GB: I would simply say: we use GTR+I+G, rather than spend much text on this. ModelTest is an ML-based test, which does not have a clock or demographic model, so doing the model selection in such a framework isn't all that relevant. Further, unless you're interested in some specific nucleotide substitution behaviour, the influence of the clock model and the demographic model on the MCC tree will be far more important than the influence of the substitution model (as long as you allow for varying rates across sites).
-%LM: agreed. Omitted the Markov model entirely. I'll state which one we used in the Methods section.
+%LM: agreed. Omitted the  model entirely. I'll state which one we used in the Methods section.
 First, we performed a computationally intensive model selection using path-sampling (PS) and stepping-stone (SS) to choose the best fitting demographic (tree) model and molecular clock model.
 Our results favor a non-parametric skyride model, that allows fluctuations in demographic growth through time, over the constant population assumption (serotype A: BF = $11$; serotype O: BF = $21$).
 Using a similar approach, we  found decisive support for the relaxed clock over the strict molecular clock model.
@@ -187,15 +187,19 @@ Figure~\ref{fig:trees}A shows that sequences from the same country tend to clust
 For example, Argentinian serotype A sequences were grouped in two clades, that either comprised only Argentinian isolates or included sequences from Brazil and Uruguay (Figure~\ref{fig:trees}A).
 Interestingly, the majority of the isolates from Venezuela and Colombia fall together within two distinct clades. %GB: should we indicate this on the figure? %LM: really duno. should we ask Philippe/Andrew/Nuno? 
 %GB: To my untrained eye, the serotype O tree looks less interspersed than the serotype A tree, there's essentially only 1 clade that has a lot of different locations in it. Perhaps modify the text accordingly?
-For serotype O the same interspersing pattern can be noticed, with Ecuador and Colombia showing several interleaved clades (Figure~\ref{fig:trees}B).
+For serotype O there is also interspersing of clades from different locations, with  one large clade featuring interleaved Ecuadorian and Colombian clades (Figure~\ref{fig:trees}B). %LM: again, should we indicate this? I think Nuno is the guy here [he also made the plots].
 A smaller clade of Colombian isolates are found interspersed within Venezuelan isolates.
 %GB: perhaps add some more explanation/detail throughout this paragraph?
+%LM: Duno exactly what you mean, but I'll add some detail.
 In addition, isolates from Ecuador were grouped with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
 Overall, the inferred MCC trees suggest that most FMDV flow within South America occurred between neighboring countries. 
-
+These observations indicate that there is spatial structure in the data, i.e., that there is association between phylogeny and geography.
+We further explore this using the Bayesian Tip-Significance testing (BaTS)~\cite{bats} and show significant location-tip association for both serotypes (Supplementary Information, Table ~\ref{stab:BaTS}).
 %GB: I find Table S3 to be unclear. Please explain what's shown in the table and what the overall conclusion is. Did I ask already to explain in more detail what we can get from BaTS?
-The results of the spatial signal analysis using BaTS~\cite{bats} can be found in the Supplementary Information (Table ~\ref{stab:BaTS}) and show significant location-tip association for both serotypes.
+%LM: The main point is to show that I'm not waving my arms around talking about 'interspersing'. Rather, there is ''statistical support'' for the claim that there is spatial structure in the tree(s).
+
 %GB: what do you mean when you say 'richer' ?
+%LM: *I* don't mean anything: Marc wrote that line. :0)
 As an overall summary, our data sets present a high degree of spatial signal, justifying richer phylogeographic analyses to study the transmission network of FMDV on the continent.
 To gain insight into the spatio-temporal process of FMDV spread, we employed an asymmetric continuous-time Markov chain (CTMC) phylogeographic model~\cite{roots} available in BEAST~\cite{beast2012}, coupled  with model averaging using a Bayesian stochastic search variable selection (BSSVS) procedure (see Methods).
 Spatial projections of the maximum clade credibility trees are presented in Figure~\ref{fig:migration} and show that Brazil and Colombia were the most strongly connected regions (hubs) for both serotypes A and O, respectively. 
@@ -207,13 +211,13 @@ When we looked at the epidemiological linkage (as supported by Bayes factors), w
 On the other hand, the highest rates for serotype O were estimated for transitions between Colombia and Ecuador, Venezuela and Colombia and Uruguay and Argentina.
 When we analyzed support for various epidemiological links, the best supported (log BF$>9$) routes were between Peru and Brazil, Bolivia and Colombia, Uruguay and Argentina.
 
-We observe that for serotype A mainly long-range migration routes were inferred for the period before 1945.
-This result may be due to sparsity of information before 1970, which limits accurate inference about periods further back in time (see {\bf Discussion}). 
-Also, there is a major expansion in spatial spread from 1945 to 1965, characterized by Brazil as a source of virus for the rest of the continent.
-In the period 1965-1980, we observe a slower spread, mainly through short range routes.
-The 1980-2008 window is characterized by FMDV serotype A flow into Peru and Paraguay and the increase of intra-country diversity (depicted by the radius of the displayed circles in Figure~\ref{fig:migration}).   
+We observe that for serotype A mainly long-range migration routes were inferred for the period before $1945$.
+This result may be due to sparsity of information before $1970$, which limits accurate inference about periods further back in time (see {\bf Discussion}). 
+Also, there is a major expansion in spatial spread from $1945$ to $1965$, characterized by Brazil as a source of virus for the rest of the continent.
+In the period $1965-1980$, we observe a slower spread, mainly through short range routes.
+The $1980-2008$ window is characterized by FMDV serotype A flow into Peru and Paraguay and the increase of intra-country diversity (depicted by the radius of the displayed circles in Figure~\ref{fig:migration}).   
 
-On the other hand, the serotype O expansion seems to have occurred by the middle of the 1990's.
+On the other hand, the serotype O expansion seems to have occurred by the middle of the $1990$'s.
 Up to 1995, Colombia and Brazil appear to have acted as primary and secondary viral sources, respectively.
 From 1995 to $2000$, whilst Colombia acted as main source for the northern/Andean regions of the continent, the spread to the Southern Cone seems to originate in Brazil.
 The period $2000-2010$ is characterized by a decrease in viral flow (almost no new edges added to the network) and the main feature is the increase in viral diversity within countries, specially Ecuador, Colombia and Brazil.
@@ -222,25 +226,33 @@ The period $2000-2010$ is characterized by a decrease in viral flow (almost no n
  [Figure~\ref{fig:migration} about here]
 \end{center}
 
-We further explore the spatial behavior of FMDV by  computing ``Markov jump'' (MJ) counts~\cite{Minin2008} to summarize the expected number of location state transitions along the branches of the phylogeny and provide a quantitative measure of viral flow between countries.
-The net migration flow (measured in mean transitions count) each country obtained from the MJ analysis, along with the Bayes factors from a separate BSSVS analysis show that supported migration routes differ for each serotype, with some overlapping routes connecting Venezuela, Colombia and Ecuador(Figure~\ref{fig:mj&BFs}). 
 %GB: given that there are directional arrows in the figure, should we use 'from ... to ...' rather than simply 'between' ?
-For serotype A, the highest (log BF~$>800$) support was observed for viral flow between Venezuela and Colombia and between Argentina and Uruguay.
-Transitions between Brazil and Bolivia and Peru and Ecuador also yielded considerable statistical support (log BF~$>10$).
+%LM: good point. Modified accordingly.
+For serotype A, the highest (BF~$>800$) support was observed for viral flow from Venezuela to Colombia and from Argentina to Uruguay.
+Transitions from Brazil to Bolivia and Peru and Ecuador (bidirectional) also yielded considerable statistical support (BF~$>10$). % LM: Note these are Bayes factors rather than log-Bayes factors
 For serotype O, overall support was lower in magnitude, but similar routes were recovered.
-The highest BF support was found for transition between Ecuador and Peru and Colombia and Ecuador (log BF~$>100$).
-Significant support was also observed for viral exchange between Venezuela and Colombia (log BF~$>20$). 
+The highest BF support was found for migration from Colombia to Ecuador (BF~$>100$).
+Significant support was also observed for viral exchange from  Venezuela to Colombia (BF~$>20$). 
 
-Further, we compared the MJ counts between countries that share borders and those which do not and found that for serotype A the posterior median transition count between neighboring countries was $0.01$ (95 \% BCI: $0.00$ -- $1.19$), while ``non-border'' transitions had a posterior median of $0.04$ (95 \% BCI: $0.00$ --  $3.56$).
-For serotype O, similar results were observed, with $0.00$ ($0.00$ -- $2.13$) and $0.01$ ($0.00$ -- $2.48$) being observed for neighboring and non-neighboring countries, respectively.
+To further explore the spatial behavior of FMDV  we used robust counting~\cite{Minin2008} to compute the posterior expected number of location-state transitions along the branches of the phylogeny and provide a quantitative measure of viral flow between countries.
+We compared the transition counts between countries that share borders and those which do not and found that for serotype A the posterior median transition count between neighboring countries was $22$ (95 \% HPD: $17$--$27$), 
+while ``non-border'' transitions had a posterior median of $4$ (95 \% HPD: $0$--$7$).
+For serotype O, similar results were observed, with $16$ ($13$--$20$) and $1$ ($0$--$3$) location-transitions being observed for neighboring and non-neighboring countries, respectively.
 %GB: substantial difference? 0.04 and 0.01 doesn't seem very different from zero I think ...
-Since the difference in medians is substantial but credible intervals widely overlap, we set up a Monte Carlo re-sampling experiment to calculate the probability that a randomly chosen ``border'' ($B$) transition is bigger than a randomly chosen ``non-border'' (NB) one.
-For each data vector we obtained $10,000$ random draws and counted the number of times the above described event happened.
-From this experiment we found the posterior $\mbox{Pr}(B>NB)$  to be $0.41$ for serotype A and $0.35$ for serotype O.
+%LM: you're absolutely right, I must have been on dope when I wrote that. Decided to  re-do it completely.
 %GB: rephrase the sentence below, I don't think trans-border is the correct term here.
-These results indicate there is little evidence for trans-border diffusion for serotype A, while long-range routes may play an important role for serotype O.
+In the (reduced) map of South America, with  9 countries, there are $72$ possible transitions, of which $34$ are ``border'' (B), i.e., between countries that share borders and $38$ are ``non-border'' (NB).
+For serotype A, the figures have to be adjusted because we have samples from $8$ countries, giving $B = 26$ and $ \text{NB} = 30$.
+Assuming there is no preference towards spread through borders would give a prior expectation on the proportion $B/(B + \text{NB})\approx 0.5$ for both serotypes. 
+Since 
+Not entirely surprisingly, the posterior proportion of transitions occurring through borders indicate that most FMDV transmission occurs through shared borders for both serotypes.
+However, the importance of long-range migration routes seems to differ for both serotypes, since the posterior median proportion of ``non-border'' transitions is considerably different (A: $0.14$, $0.00$--$0.28$  and O: $0.05$, $0.00$--$0.20$).
+
 %GB: I would expand some more on the sentences below, as this is quite an interesting result
-When we analyzed the net migration rate (efflux - influx) for each country using the MJ counts, we noticed that the pattern of emitters/receivers is different for each serotype.
+[REWRITE BELOW]
+
+The net migration flow (efflux - influx) for each country, along with the Bayes factors from a separate BSSVS analysis show that supported migration routes differ for each serotype, with some overlapping routes connecting Venezuela, Colombia and Ecuador(Figure~\ref{fig:mj&BFs}). 
+When we analyzed the net migration rate  for each country using the MJ counts, we noticed that the pattern of emitters/receivers is different for each serotype.
 While for serotype A Brazil and Argentina acted as viral exporters, for serotype O Venezuela and Bolivia presented the highest net rates.
 Also, net migration rates were substantially higher for serotype A in comparison to serotype O (Figure~\ref{fig:mj&BFs}).
 
@@ -471,9 +483,10 @@ To assess the temporal signal for each serotype, we have used the approach of Fa
 We followed Kass and Raftery (1995)~\cite{KassRaftery1995} and considered a log BF$>$3 to be indicative of decisive support for the hypothesis of temporal structure.
 
 %GB: we need more info these BaTS analyses, i.e. a clear explanation what it does and allows us to conclude. I also wonder whether we need to test for temporal and spatial signal, I would only to do this if we wouldn't be able to get accurate posterior estimates (to explain why that is), but it's your choice.
+%LM: I sort of agree with you. But now it's here and would be worse to get rid of it than fixing it. Not gonna happen in the future... XDD. Also, I don't get you: I spend 3 lines explaining what BaTS is doing, man! What else could I say?
 Spatial signal was quantified using Bayesian tip-association tests, implemented through the BaTS software package~\cite{bats}.
-Each sequence was assigned to its country of origin and we computed association index (AI) and parsimony score (PI) using BaTS.
-Using a subset of 1000 samples from the posterior distribution of topologies, we obtained a null distribution for each statistic, against which the observed indices were compared and significance was assessed.
+To detect phylogeny-location association, each sequence was assigned to its country of origin and we computed association index (AI) and parsimony score (PI) using BaTS on  a subset of 1000 samples from the posterior distribution of topologies.
+We obtained a null distribution for each statistic (AI and PI), against which the observed indices were compared and significance was assessed.
 Additionally, we computed the monophyletic clade (MC) size for each state (country), as a local indicator of phylogeny-trait association for each state (country).
 
 
