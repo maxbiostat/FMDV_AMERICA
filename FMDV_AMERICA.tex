@@ -168,38 +168,35 @@ See Text S2, Tables~\ref{stab:SB_A} and~\ref{stab:SB_O} for more detailed estima
 \subsection*{Spatial Dynamics of FMDV in South America}
 
 Figure~\ref{fig:trees}A shows that sequences from the same country tend to cluster in small clades, although the inferred phylogenies for both serotypes also show considerable interspersing of lineages, indicating trans-border FMDV spread.
-For example, Argentinian serotype A sequences were grouped in two clades, that either comprised only Argentinian isolates or included sequences from Brazil and Uruguay (Figure~\ref{fig:trees}A).
-%GB: should we indicate this on the figure? 
-%LM: really dunno. should we ask Philippe/Andrew/Nuno? 
-Interestingly, the majority of the isolates from Venezuela and Colombia fall together within two distinct clades.
-%GB: To my untrained eye, the serotype O tree looks less interspersed than the serotype A tree, there's essentially only 1 clade that has a lot of different locations in it. Perhaps modify the text accordingly?
-%LM: again, should we indicate this? I think Nuno is the guy here [he also made the plots].
-For serotype O there is also interspersing of clades from different locations, with  one large clade featuring interleaved Ecuadorian and Colombian clades (Figure~\ref{fig:trees}B). 
-A smaller clade of Colombian isolates are found interspersed within Venezuelan isolates.
+For example, Argentinian serotype A sequences were grouped in two clades (in red in Figure~\ref{fig:trees}A), that either comprised only Argentinian isolates or included sequences from Brazil and Uruguay.
+Interestingly, the majority of the isolates from Venezuela and Colombia cluster together within two distinct clades.
+For serotype O there is also interspersing of clades from different locations, with one large cluster containing different Ecuadorian and Colombian lineages (in different green hues in Figure~\ref{fig:trees}B). 
+A smaller clade of Colombian isolates is found interspersed within Venezuelan isolates.
 In addition, isolates from Ecuador were grouped with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
-Overall, the inferred MCC trees suggest that most FMDV flow within South America occurred between neighboring countries. 
+Overall, the inferred MCC trees suggest that most FMDV flow within South America occurred between neighbouring countries. 
 These observations indicate that there is spatial structure in the data, i.e., that there is association between phylogeny and geography.
 We further explore this using the Bayesian Tip-Significance testing (BaTS)~\cite{bats} to calculate phylogeny-trait association indexes such as the parsimony score (PS), association index (AI) and maximum clade size (MC) (see Text S2 for details).
 Both serotypes show significant location-tip association for the three indexes (Text S2, Table ~\ref{stab:BaTS}).
 
-As an overall summary, our data sets present a high degree of spatial signal, justifying richer phylogeographic analyses to study the transmission network of FMDV on the continent.
-To gain insight into the spatio-temporal process of FMDV spread, we employed an asymmetric continuous-time Markov chain (CTMC) phylogeographic model~\cite{roots} available in BEAST~\cite{beast2012}, coupled  with model averaging using a Bayesian stochastic search variable selection (BSSVS) procedure (see Methods).
+As an overall summary, our data sets present a high degree of spatial signal, justifying more detailed phylogeographic analyses to study the transmission network of FMDV on the continent.
+To gain insight into the spatio-temporal process of FMDV spread, we employed an asymmetric continuous-time Markov chain (CTMC) phylogeographic model~\cite{roots} available in BEAST~\cite{beast2012}, coupled with model averaging using a Bayesian stochastic search variable selection (BSSVS) procedure (see Methods).
 Spatial projections of the maximum clade credibility trees are presented in Figure~\ref{fig:migration} and show that Brazil and Colombia were the most strongly connected regions (hubs) for both serotypes A and O, respectively. 
-In the network for serotype A, Brazil is connected to Argentina, Uruguay, Venezuela and Colombia, while for serotype O, Colombia was connected to Venezuela, Ecuador and Bolivia.
-These results suggest different spatial patterns for the two serotypes.
+In the serotype A phylogeography, Brazil is connected to Argentina, Uruguay, Venezuela and Colombia, while for serotype O, Colombia was connected to Venezuela, Ecuador and Bolivia.
+%These results suggest different spatial patterns for the two serotypes.
 
 The highest dispersal rates for serotype A were obtained for transitions between Brazil and Uruguay, Ecuador and Venezuela and Bolivia and Venezuela.
-When we looked at the epidemiological linkage (as supported by Bayes factors), we found the transitions between Uruguay and Argentina, Argentina and Bolivia, Brazil and Argentina and Bolivia and Venezuela to have the highest support (BF$>8$).
-On the other hand, the highest rates for serotype O were estimated for transitions between Colombia and Ecuador, Venezuela and Colombia and Uruguay and Argentina.
-When we analyzed support for various epidemiological links, the best supported (BF$>9$) routes were between Peru and Brazil, Bolivia and Colombia, Uruguay and Argentina.
+Based on Bayes factor estimates, we found epidemiological linkage between Uruguay and Argentina, Argentina and Bolivia, Brazil and Argentina and Bolivia and Venezuela to yield the highest support (BF$>8$).
+On the other hand, the best supported rates for serotype O were estimated for transitions between Colombia and Ecuador, Venezuela and Colombia and Uruguay and Argentina.
+When we analyzed support for various epidemiological links, %PL: i don't really understand what is meant here or how this differs from the A and O results reported?
+the best supported (BF$>9$) routes were between Peru and Brazil, Bolivia and Colombia, Uruguay and Argentina.
 
 We observe that for serotype A mainly long-range migration routes were inferred for the period before $1945$.
-This result may be due to sparsity of information before $1970$, which limits accurate inference about periods further back in time (see {\bf Discussion}). 
+This result may be due to sparsity of information before $1970$, which limits accurate inference in the distant past (see {\bf Discussion}). 
 Also, there is a major expansion in spatial spread from $1945$ to $1965$, characterized by Brazil as a source of virus for the rest of the continent.
 In the period $1965-1980$, we observe a slower spread, mainly through short range routes.
-The $1980-2008$ window is characterized by FMDV serotype A flow into Peru and Paraguay and the increase of intra-country diversity (depicted by the radius of the displayed circles in Figure~\ref{fig:migration}).   
+The $1980-2008$ window is characterised by FMDV serotype A flow into Peru and Paraguay and the increase of intra-country diversity (depicted by the radius of the displayed circles in Figure~\ref{fig:migration}).   
 
-On the other hand, the serotype O expansion seems to have occurred by the middle of the $1990$'s.
+On the other hand, the serotype O expansion seems to have occurred in the mid $1990$'s.
 Up to 1995, Colombia and Brazil appear to have acted as primary and secondary viral sources, respectively.
 From 1995 to $2000$, whilst Colombia acted as main source for the northern/Andean regions of the continent, the spread to the Southern Cone seems to originate in Brazil.
 The period $2000-2010$ is characterized by a decrease in viral flow (almost no new edges added to the network) and the main feature is the increase in viral diversity within countries, specially Ecuador, Colombia and Brazil.
@@ -208,7 +205,7 @@ The period $2000-2010$ is characterized by a decrease in viral flow (almost no n
  [Figure~\ref{fig:migration} about here]
 \end{center}
 
-Figure~\ref{fig:mj&BFs} presents the net migration flow (efflux - influx) for each country, along with the Bayes factors from a separate BSSVS analysis and shows that supported migration routes differ for each serotype, with some overlapping routes connecting Venezuela and Colombia. 
+Figure~\ref{fig:mj&BFs} presents the net migration flow (efflux - influx) for each country, along with the Bayes factors from a separate BSSVS analysis and shows that the supported migration routes differ for each serotype, with some overlapping routes connecting Venezuela and Colombia. 
 We also noticed that the pattern of emitters/receivers is different for each serotype.
 While for serotype A Brazil and Argentina acted as viral exporters, for serotype O Venezuela and Bolivia presented the highest net rates.
 Also, net migration rates were substantially higher for serotype A in comparison to serotype O (Figure~\ref{fig:mj&BFs}).
@@ -225,8 +222,9 @@ We compared the transition counts between countries that share borders and those
 while ``non-border'' transitions had a posterior median of $4$ (95 \% HPD: $0$--$7$).
 For serotype O, similar results were observed, with $16$ ($13$--$20$) and $1$ ($0$--$3$) location-transitions being observed for neighboring and non-neighboring countries, respectively.
 In the (reduced) map of South America, with  9 countries, there are $72$ possible transitions, of which $34$ are ``border'' (B), i.e., between countries that share borders and $38$ are ``non-border'' (NB).
-For serotype A, the figures have to be adjusted because we have samples from $8$ countries, giving $B = 26$ and $ \text{NB} = 30$.
+For serotype A, the figures have to be adjusted because we have samples from $8$ countries, resulting in $B = 26$ and $ \text{NB} = 30$.
 Assuming there is no preference towards spread through borders would give a prior expectation on the proportion $B/(B + \text{NB})\approx 0.5$ for both serotypes. 
+%PL: does this truly have an expectation of 0.5? Does this not depend on the bordering structure?
 Not entirely surprisingly, the posterior proportion of transitions occurring through borders indicate that most FMDV transmission occurs through shared borders for both serotypes.
 Remarkably, however, the importance of long-range migration routes seems to differ for both serotypes, since the posterior median proportion of ``non-border'' transitions is considerably different (A: $0.14$, $0.00$--$0.28$  and O: $0.05$, $0.00$--$0.20$).
 
@@ -234,8 +232,9 @@ Remarkably, however, the importance of long-range migration routes seems to diff
  [Figure~\ref{fig:mj&BFs} about here]
 \end{center}
 
-Figure~\ref{fig:epidemictracing} shows the posterior distribution of the  location of origin for some epidemics of interest.
+Figure~\ref{fig:epidemictracing} shows the posterior distribution of the location of origin for some epidemics of interest.
 %GB: and that root lies where exactly?
+%PL: i feel that the trees are far easier to interpret for the information you are trying to get at ...
 The most probable origin of the strains isolated in Argentina $2001$ (Figure~\ref{fig:epidemictracing}A) was the root of the circulating strains (posterior probability = $0.72$) while Brazil received $0.28$ posterior probability.
 Results for the Brazilian strains of the same year point to Argentina as the source of the epidemic with high probability, confirming the strong link between the two countries (Figure~\ref{sfig:epitrac}A).
 %GB: you sure about the following sentence, multiple origins with probability close to 1?
@@ -248,6 +247,7 @@ This notion of Venezuela as a seeder is further strengthened by the fact that th
 
 %GB: where is that root?
 %LM: what do you mean?
+%GB: I mean that 'root' is not an actual physical location on a map, but Brazil or Colombia are. Saying that the origin is the root makes no sense (or perfect sense, depending on how you look at it). If we don't believe that the root is the origin, then what are we doing? So yes, the origin is the root of the phylogenies, but which physical location is that?
 Remarkably, the origin of serotype O strains from Colombia in $1994$ was found to be the root of the phylogenies with substantial posterior probability ($0.76$), as shown in Figure~\ref{fig:epidemictracing}C.
 Similar to what was found for Venezuela and serotype A, Colombia seems to be the source of most of the strains circulating on the northern part of South America.
 As with the introduction of serotype A in Colombia in $2008$, the strains from Venezuela $2003$ have high probability of being imported from Colombia (Figure~\ref{fig:epidemictracing}D).
@@ -258,36 +258,36 @@ The link between Venezuela and Colombia thus seems to be supported from data for
  [Figure~\ref{fig:epidemictracing} about here]
 \end{center}
 
-In Figure~\ref{sfig:tradenets} we present the spatial networks of the detailed trade matrix available from the Food and Agriculture Organization (FAO) on the trade of cattle, pigs and sheep (totals from 1986 to 2009), where we can see that the cattle trade network is substantially more connected than the pig and sheep trade networks.
+In Figure~\ref{sfig:tradenets} we present the spatial networks of the detailed trade matrix available from the Food and Agriculture Organization (FAO) on the trade of cattle, pigs and sheep (totals from 1986 to 2009), where we can see that the cattle trade network is substantially more connected than the pig and sheep trade networks.%PL: this comes in a bit odd, maybe first state what the overall goal is what you are about to report. Also in the next sentence you talk about 'our analysis' but never state what it constitutes
 Our analysis is similar in spirit to that presented in Nelson et. al~\cite{Nelson2011} in which the authors investigated the effect of pig trade on the diffusion of Influenza, but provides substantial improvement over the methods used to calculate the marginal likelihood for each predictor.
 The sub-network connecting Venezuela, Colombia and Ecuador is present in all three graphs.
 Similarly, Southern Cone countries are also connected in the three networks.
 Additionally, for the sheep and cattle networks, some long-range trade routes are present, for instance the trade of sheep between Argentina and Colombia.
-We used geographic distances as well as the data on the trade of livestock to elicit CMTC rate matrix priors (predictors), using PS/SS to calculate (log) marginal likelihoods for each predictor to determine the importance of each variable for viral spread~\cite{Carvalho2013, Nelson2011}.
+We used geographic distances as well as the data on the trade of livestock to specify CMTC rate matrix priors (predictors), using PS/SS to calculate (log) marginal likelihoods for each predictor to determine the importance of each variable for viral spread~\cite{Carvalho2013, Nelson2011}.
 Intriguingly, the results of this analysis (Table~\ref{tab:preds}) show different best fitting predictors for each serotype.
-%GB: should we ditch the equal-rates prior? It seems out of place here. Why does the legend say we shouldn't compare the equal-rates prior to the other ones? Then we should definitely ditch it.
-%LM: I really dont know. I'd say we keep it, just to have a baseline to compare to. But I'm interested in Philippe's/Andrew's take on the matter.
+
 For serotype A, geographic distances and the equal-rates prior outperform all the predictors tested, obtaining higher (log) marginal likelihoods.
 For serotype O, the trade of live cattle as a predictor is the only one to outperform the distance-informed and equal-rates priors.
-While for serotype A the best predictor was the geographic distance between countries (log BF$\approx 4$, compared to the equal-rates gamma prior), the exchange of cattle was the best predictor for serotype O spread (log BF$\approx 13$).
+While for serotype A the best predictor was the geographic distance between countries (log BF$\approx 4$, compared to the equal-rates gamma prior), the exchange of cattle was the best predictor for serotype O spread (log BF$\approx 13$). 
+%PL: this sentence is a bit redundant... Actually I would just use this one and remove the two sentences before
 Also, while for serotype A we found moderate statistical support for geographic distances as predictors of viral spread, this predictor had higher statistical support for serotype O (log BF$\approx 9$).
 
 \begin{center}
  [Table~\ref{tab:preds} about here]
 \end{center}
 
-For each predictor, we also assessed the location state distribution at root, i.e., the stationary distribution of the CTMC. 
+For each predictor, we also assessed the location state distribution at root. %, i.e., the stationary distribution of the CTMC. %PL: deleted this as a nonreversible model has no 'stationary distribution'
 This vector gives the posterior probability of each country being the origin of the circulating strains.
 In Table~\ref{tab:roots} we show that for serotype A there was discordance between predictors about which country was the most probable source of FMDV on the continent.
 Peru was the most probable location of origin for the `cattle' predictor, but notably not for the best fitting predictor (geographic distance), for which Argentina was estimated as the origin with moderate probability ($0.75$).
-%GB: sounds strange to start talking about this gamma prior, as it's not really a predictor. You should motivate why this comparison is useful.
 Argentina was also the most probable root for the equal-rates gamma prior model ($Pr(\text{root})=0.84$).
 For the pigs trade predictors, Colombia was found to be the spatial origin.
 For serotype O, predictors showed much more concordance, and Colombia was pointed out as the spatial viral origin for all predictors with high probability (Table~\ref{tab:roots}).
 
-An attempt at resolving these discrepancies is to compare the spatial signal extraction, as measured by the KL divergence at root~\cite{roots} (see also Text S2) for each predictor.
-In general, KL divergences for these analyses ranged from $3.86$ to $5.91$, showing highly concentrated distributions at root. 
+An attempt at resolving these discrepancies is to compare the spatial signal extraction, as measured by the KL divergence at the root~\cite{roots} (see also Text S2) for each predictor.
+In general, KL divergences for these analyses ranged from $3.86$ to $5.91$, showing highly concentrated distributions at the root. 
 The predictors with highest KL divergences (relative  to a uniform prior) were pigs and sheep for serotypes A and O respectively.
+%GB&PL: this sounds a bit strange. Shouldn't we simply take the predictor with the highest log marginal likelihood to make such statements? There's no 1-on-1 relation between KL and root probability I think. So maybe we should play down the statement(s) in the following sentence?
 Therefore, despite the uncertainty in the estimation of the root location, choosing the most probable roots estimated by the most efficient predictors would point Colombia as the root for both serotypes, which is consistent with the Markov jumps (robust counting) analyses presented earlier.
 
 \begin{center}
