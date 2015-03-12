@@ -137,47 +137,44 @@ To study the factors driving re-emergence, we use data on livestock trade and ge
 
 \section*{Results}
 
-\subsection*{Evolutionary rates and times of origin of FMDV serotypes A and O}
+\subsection*{Evolutionary rates and times of origin of FMDV serotypes A and O circulating strains}
 
-First, we performed a computationally intensive model selection using path-sampling (PS) and stepping-stone (SS) to select the best fitting demographic (tree) model and molecular clock model.
+First, we performed a computationally intensive model selection using path-sampling (PS) and stepping-stone (SS) to select the best fitting demographic (tree) model and molecular clock model. % LM: Nuno wants to know if we should keep ``computationally intensive'' in. I think we should. GB?
 Our results favor a non-parametric skyride model, that allows fluctuations in demographic growth through time, over the constant population size assumption (serotype A: BF = $11$; serotype O: BF = $21$).
 Using a similar approach, we  found decisive support for the relaxed clock over the strict molecular clock model.
 Particularly, the exponential relaxed molecular clock provided a better fit for serotype O data (log BF = $56$) while the log-normal relaxed molecular clock model provided a better fit to serotype A (log BF = $34$) (see Table~\ref{stab:treeclockselection} for details). 
+The coefficient of variation for the log-normal relaxed molecular clock model had a posterior mean of $0.32$ (95\% highest posterior density [HPD] interval: $0.21$--$0.43$) indicating substantial rate heterogeneity among lineages in the phylogeny.
 Our finding that both serotypes support relaxed molecular clocks, suggesting different evolutionary dynamics, is consistent with the view that FMDV presents clock-like evolution only when large periods of time are considered, with short periods being dominated by quasi-species dynamics~\cite{Muellner2011}.  
 %GB: not sure what the sentence below brings to the table ... you're also not saying anything about serotype O ...
 %LM: This line is here to show that there is substantial branch-rate heterogeneity (Nuno's idea, btw). The reason we don't mention serotype O is because the coefficient of variation of the exponential is 1, as pointed out by Philippe in an earlier review.
-The coefficient of variation for the log-normal relaxed molecular clock model had a posterior mean of $0.32$ (95\% highest posterior density [HPD] interval: $0.21$--$0.43$) indicating substantial rate heterogeneity among lineages in the phylogeny.
 In addition, we compared a model with and without dated-tips (the `temporal signal' test~\cite{Faria2012} , see Methods) and found significant temporal structure for both serotypes (A: log BF = $310$; O: log BF = $348$), showing that sufficient temporal information is embedded in sequence data of both serotypes under investigation, which is essential for the estimation of divergence times and to reconstruct the population dynamics in natural time units~\cite{MEP}. 
 
-For the remainder of this paper we will report results from  time-structured phylogenies inferred with BEAST using the best-fit combination demographic and molecular clock models for each serotype.
-Figure~\ref{fig:trees}A shows the maximum clade credibility (MCC) tree estimated for serotype A.
-The estimated time to most recent common ancestor (tMRCA) of the circulating serotype A strains was 1932 ($95\%$ HPD: $1925$--$1939$).
-Figure~\ref{fig:trees}B presents the estimated MCC tree for serotype O.
-The tMRCA for serotype O was estimated in around $20$ years ($1989$, $95\%$ HPD: $ 1986$--$1991$), showing a more recent origin. 
+% For the remainder of this paper we will report results from  time-structured phylogenies inferred with BEAST using the best-fit combination demographic and molecular clock models for each serotype. %LM: Nuno is unhappy with this. OK. I personally find that people are imbecilic enough to ask which trees we're talking about later... But let us just see.
+Figure~\ref{fig:trees} shows the maximum clade credibility (MCC) trees estimated for serotype A and serotype O.
+The estimated time to most recent common ancestor (tMRCA) of the circulating serotype A strains was $1932$ ($95\%$ HPD: $1925$--$1939$) and  $1989$ ($95\%$ HPD: $ 1986$--$1991$) for serotype O, indicating a more recent origin of the latter. 
 
 Using the combination of best fitting demographic and molecular clock models for each serotype, the evolutionary rate for serotype A was estimated at $\approx 4 \times 10^{-3}$ substitutions/site/year.
 The estimated evolutionary rate for serotype O was approximately 2.5 times faster than serotype A, i.e.~at $\approx 1 \times 10^{-2}$, consistent with previous studies~\cite{tully, Carvalho2013, Muellner2011}.
 See Text S2, Tables~\ref{stab:SB_A} and~\ref{stab:SB_O} for more detailed estimates.
 
+Figure~\ref{fig:trees}A shows that sequences from the same country tend to cluster in small clades, although the inferred phylogenies for both serotypes also show considerable interspersing of lineages, indicating trans-border FMDV spread.
+For example, Argentinian serotype A sequences were grouped in two clades, that either comprised only Argentinian isolates or included sequences from Brazil and Uruguay (Figure~\ref{fig:trees}A).
+Interestingly, the majority of the isolates from Venezuela and Colombia fall together within two distinct clades.
+For serotype O there is also interspersing of clades from different locations, with one large clade featuring interleaved Ecuadorian and Colombian clades (Figure~\ref{fig:trees}B).
+A smaller clade of Colombian isolates are found interspersed within Venezuelan isolates.
+In addition, isolates from Ecuador were grouped with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
+% Overall, the inferred MCC trees suggest that most FMDV flow within South America occurred between neighboring countries. % LM: Maybe superfluous
+These observations indicate that there is spatial structure in the data, i.e., that there is association between phylogeny and geography.
+We further explore this using the Bayesian Tip-Significance testing (BaTS)~\cite{bats} to calculate phylogeny-trait association indexes such as the parsimony score (PS), association index (AI) and maximum clade size (MC) (see Text S2 for details).
+Both serotypes show significant (randomised p-value $< 0.05$) location-tip association for the three indexes (Table~\ref{stab:BaTS}).
+As an overall summary, our data sets present a high degree of spatial signal, justifying richer phylogeographic analyses to study the transmission network of FMDV on the continent.
+
 \begin{center}
  [Figure~\ref{fig:trees} about here]
 \end{center}
 
-
 \subsection*{Spatial Dynamics of FMDV in South America}
 
-Figure~\ref{fig:trees}A shows that sequences from the same country tend to cluster in small clades, although the inferred phylogenies for both serotypes also show considerable interspersing of lineages, indicating trans-border FMDV spread.
-For example, Argentinian serotype A sequences were grouped in two clades (in red in Figure~\ref{fig:trees}A), that either comprised only Argentinian isolates or included sequences from Brazil and Uruguay.
-Interestingly, the majority of the isolates from Venezuela and Colombia cluster together within two distinct clades.
-For serotype O there is also interspersing of clades from different locations, with one large cluster containing different Ecuadorian and Colombian lineages (in different green hues in Figure~\ref{fig:trees}B). 
-A smaller clade of Colombian isolates is found interspersed within Venezuelan isolates.
-In addition, isolates from Ecuador were grouped with isolates from Colombia, suggesting that the intra-country dynamics of FMDV between these two countries is intrinsically linked.
-Overall, the inferred MCC trees suggest that most FMDV flow within South America occurred between neighbouring countries. 
-These observations indicate that there is spatial structure in the data, i.e., that there is association between phylogeny and geography.
-We further explore this using the Bayesian Tip-Significance testing (BaTS)~\cite{bats} to calculate phylogeny-trait association indexes such as the parsimony score (PS), association index (AI) and maximum clade size (MC) (see Text S2 for details).
-Both serotypes show significant location-tip association for the three indexes (Text S2, Table ~\ref{stab:BaTS}).
-
-As an overall summary, our data sets present a high degree of spatial signal, justifying more detailed phylogeographic analyses to study the transmission network of FMDV on the continent.
 To gain insight into the spatio-temporal process of FMDV spread, we employed an asymmetric continuous-time Markov chain (CTMC) phylogeographic model~\cite{roots} available in BEAST~\cite{beast2012}, coupled with model averaging using a Bayesian stochastic search variable selection (BSSVS) procedure (see Methods).
 Spatial projections of the maximum clade credibility trees are presented in Figure~\ref{fig:migration} and show that Brazil and Colombia were the most strongly connected regions (hubs) for both serotypes A and O, respectively. 
 In the serotype A phylogeography, Brazil is connected to Argentina, Uruguay, Venezuela and Colombia, while for serotype O, Colombia was connected to Venezuela, Ecuador and Bolivia.
@@ -242,11 +239,11 @@ Results for the Brazilian strains of the same year point to Argentina as the sou
 %GB: you sure about the following sentence, multiple origins with probability close to 1?
 %LM: I am sure of the *fact* [prob ~ 1], not so sure about the interpretation, though. That means that in the posterior of topologies, sometimes Uruguay was in a clade with Brazil and sometimes with Argentina. This may be many things, the worst being non-convergence of the posterior of topologies.
 %LM: What does PL think about this?
-The two serotype A strains included from Uruguay $2001$ showed multiple origins with probability $~1$ (Figure~\ref{sfig:epitrac}B), indicating that multiple introductions may have occurred, most likely from Brazil and Argentina.
+The two serotype A strains included from Uruguay $2001$ showed multiple origins with probability $\approx 1$ (Figure~\ref{sfig:epitrac}B), indicating that multiple introductions may have occurred, most likely from Brazil and Argentina.
 However, these results should be interpreted with caution due to the low number of sequences from Uruguay.
 Contrasting to the connectivity with Argentina, Bolivia $2001$ seems to have had an independent introduction from Peru, as shown in Figure~\ref{sfig:epitrac}C
 We provide evidence of Venezuela as a major viral source for serotype A in its region in Figure~\ref{fig:epidemictracing}B, where we show the origins of the Ecuadorian strain isolated in $2002$.
-This notion of Venezuela as a seeder is further strengthened by the fact that the Colombian $2008$ strain was most likely imported from Venezuela (posterior probability $~1$, shown in Figure~\ref{sfig:epitrac}D).
+This notion of Venezuela as a seeder is further strengthened by the fact that the Colombian $2008$ strain was most likely imported from Venezuela (posterior probability $\approx 1$, shown in Figure~\ref{sfig:epitrac}D).
 
 %GB: where is that root?
 %LM: what do you mean?
