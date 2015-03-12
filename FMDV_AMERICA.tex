@@ -386,16 +386,15 @@ Serotype-specific outbreak notifications were obtained from FMD Bioportal (\url{
 
 \subsection*{Phylogenetic Analysis}
 
-First, we checked both data sets for recombination using the SBOP and GARD~\cite{sbpgard} tools available from the Datamonkey facility (\url{http://www.datamonkey.org/}), which did not yield any indications of recombination being present in our data sets.
-For all our analyses, a genreral time reversible (GTR)~\cite{Tavare1986} model of sequence evolution was assumed, along with Gamma distributed rate heterogeneity (4 categories).
-We take a Bayesian approach to the phylogenetic analyses conducted in this paper, in order to test evolutionary hypotheses while accommodating phylogenetic uncertainty. 
-To this end, we used the Bayesian Evolutionary Analysis by Sampling Trees (BEAST)~\cite{beast2012} framework to infer time-structured phylogenies for the two serotypes taking advantage of the  BEAGLE~\cite{BEAGLE} library to gain computational efficiency.
-Using the methods available in BEAST, we performed Bayesian model selection to assess the performance of several combinations of tree priors and molecular clocks for each data set (see Text S2).
-To this end, we used state-of-the-art marginal likelihood estimators, such as path sampling (PS)~\cite{LartillotPhilippe} and stepping-stone sampling (SS)~\cite{Xie}, which have only recently been introduced in the field of phylogenetics~\cite{LartillotPhilippe, Xie, Baele2012, Baele2013a, Baele2013b, Baele2013c}.
+Both data sets were checked for recombination using the SBOP and GARD~\cite{sbpgard} tools available from the Datamonkey facility (\url{http://www.datamonkey.org/}), which did not yield any indications of recombination being present in our data sets.
+For all our analyses, a general time reversible (GTR)~\cite{Tavare1986} model of sequence evolution was assumed, along with Gamma distributed rate heterogeneity (4 categories).
+We take a Bayesian approach to testing evolutionary hypotheses while accommodating phylogenetic uncertainty. 
+To this end, we used the Bayesian Evolutionary Analysis by Sampling Trees (BEAST)~\cite{beast2012} software package to infer time-structured phylogenies for the two serotypes taking advantage of the  BEAGLE~\cite{BEAGLE} library to gain computational efficiency.
+To compare the performance of several combinations of tree priors and molecular clocks for each data set (see Text S2), we used state-of-the-art marginal likelihood estimators, such as path sampling (PS)~\cite{LartillotPhilippe} and stepping-stone sampling (SS)~\cite{Xie}, which have only recently been introduced in the field of phylogenetics~\cite{LartillotPhilippe, Xie, Baele2012, Baele2013a, Baele2013b, Baele2013c}.
 
 \subsection*{Quantifying temporal and spatial signal} 
 
-To assess the temporal signal for each serotype, we have used the approach of Faria et al.~\cite{Faria2012} and Baele et. al~\cite{Baele2012} and compared the marginal likelihoods of a dated-tips model and a contemporaneous-tips model by calculating Bayes Factors (BF)~\cite{Suchard2001, suchard2005models} (see Spatial Model Selection for details).
+To assess the temporal signal for each serotype, we used the approach described in Faria et al.~\cite{Faria2012} and Baele et. al~\cite{Baele2012} and compared the marginal likelihoods of a dated-tips model and a contemporaneous-tips model by calculating Bayes Factors (BF)~\cite{Suchard2001, suchard2005models} (see Spatial Model Selection for details).
 We followed Kass and Raftery (1995)~\cite{KassRaftery1995} and considered a log BF$>$3 to be indicative of decisive support for the hypothesis of temporal structure.
 
 Spatial signal was quantified using Bayesian tip-association tests, implemented through the BaTS software package~\cite{bats}.
@@ -406,18 +405,20 @@ Please see Text S2 for further details on the BaTs analyses.
 
 \subsection*{Spatio-temporal Dynamics}
 
-We apply the non-parametric skyride coalescent model~\cite{skyride} in order to reconstruct the past population dynamics for both serotypes, using a Gaussian Markov Random Field (GMRF) prior to obtain smooth estimates for effective population size trajectories over time.
+We apply the non-parametric skyride coalescent model~\cite{skyride}% LM: Nuno wants to know why not skyride. My answer: because when I started this project, skygrid wasn't even out yet ;0)
+in order to reconstruct the past population dynamics for both serotypes, using a Gaussian Markov Random Field (GMRF) prior to obtain smooth estimates for effective population size trajectories over time.
 To gain insight into the mechanisms driving viral dynamics, we overlay the demographic reconstructions to serotype-specific outbreak and vaccination (doses per head) time series.
 Phylogeographic analyses of FMDV in South America were performed using the methods presented in Lemey et al.~\cite{roots}, available in BEAST. 
-An asymmetric, non-reversible discrete phylogeography model was applied to both data sets, with each country used as a discrete state.
-For statistical efficiency, we employ Bayesian stochastic search variable selection (BSSVS) in order to choose the minimal set of dispersal rates that sufficiently explain the observed data.
-BSSVS naturally allows for assessing the significance of each migration route by calculating Bayes factors.
-We used the SPREAD~\cite{spread} package to annotate the results of all the spatial analyses presented in this paper, generate KML files (visualized using Google Earth, \url{http://www.google.com/earth/index.html}) and calculate BFs using BSSVS.
-We then summarize the posterior distributions obtained as above using the Markov jumps~\cite{Minin2008} robust counting approach to estimate the rate of viral flow between countries, computing the expected number of transitions between each pair of locations conditional on the observed data, while incorporating phylogenetic uncertainty.
-For these analyses we used a sample of $10,000$ sequences from the posterior distribution of topologies (after removal of burn-in). 
-Finally, as already found in previous studies~\cite{Faria2012, Lemey2014}, unbalanced sampling can have an important impact on the inference of the spatial migration rates.
+An asymmetric, non-reversible discrete phylogeographic model was applied to both data sets, with each country used as a discrete state.
+For statistical efficiency, we used Bayesian stochastic search variable selection (BSSVS) to choose the minimal set of dispersal rates that sufficiently explain the observed data.
+BSSVS naturally allows for assessing the significance of each migration route through a Bayes factor (BF) test.
+We used SPREAD~\cite{spread} to generate KML files (visualized using Google Earth, \url{http://www.google.com/earth/index.html}) and calculate BFs for statistically significant epidemiological links between discrete locations.
+We then computed the expected number of transitions between each pair of locations conditional on the observed data and summarize the number of transitions between countries using a robust counting approach~\cite{Minin2008}.
+For these analyses we used a sample of $10,000$ trees from the posterior distribution of topologies.%LM: (after removal of 10\% burn-in). You see? This is just wrong: techinically, you remove the burn-in because it is NOT a part of the posterior.
+Unbalanced sampling can have an important impact on the inference of the spatial migration rates~\cite{Faria2012, Lemey2014, Frost2014}
 In this study, both data sets analyzed presented highly preferential sampling, with Ecuadorian sequences representing about 50\% of the serotype O data and about 45\% of serotype A sequences being from Argentina (see Text S1 for details).
-We conducted an extensive sensitivity analysis, exploring various sampling schemes and comparing the obtained parameter estimates (see Text S2 for a complete description).
+We therefore conducted an extensive sensitivity analysis, exploring various sampling schemes and comparing the obtained parameter estimates.
+Supplementary Text S2 shows a complete description of the parameter estimates under different sampling schemes. 
 
 \subsubsection*{Spatial Model Selection}
 
@@ -431,7 +432,7 @@ For more details on these model selection procedures please see Supplementary Te
 To test the influence of different epidemiological predictors on viral diffusion through space, we used trade of live cattle, pigs and sheep to parameterize priors for the CTMC rate matrix.
 The numbers of live animals exchanged between countries were normalized to have mean and coefficient of variation of $1$ and used as prior expectations in BEAST (see~\cite{roots}, pg. 14 and the Appendix in~\cite{Carvalho2013}).  
 We compared these predictors to a distance-informed prior~\cite{roots}, which represents a scenario where flow occurs as a function of the inverse of the geographic distances between locations.
-Finally, all predictors were compared against an equal-rates gamma prior, which basically represents a scenario where there is no preference over rates~\cite{Nelson2011}.
+Finally, all predictors were compared against an equal-rates gamma prior, which considers~\textit{a priori} a scenario where there is no preferential spread among different countries~\cite{Nelson2011}.
 
 \section*{Acknowledgments}
 The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Matthew Hall (Edinburgh) and Professor Oliver Pybus (Oxford) for insightful contributions and Miguel Carvalho, Felipe Figueiredo (PROCC) and Mauricio Oliveira (UFRJ) for operational support.
