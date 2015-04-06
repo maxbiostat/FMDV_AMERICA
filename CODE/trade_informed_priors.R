@@ -26,10 +26,10 @@ pwsheep <- c(Msheep[l], Msheep[u])
 ## Let's take a look
 
 pdf("../FIGURES/PLOTS/tradepriors.pdf")
-plot(density(pwcattle),lwd = 2, xlab = expression(m[jk]), main = "")
+plot(density(pwcattle), lwd = 2, xlab = expression(m[jk]), main = "")
 lines(density(pwpig), lwd = 2, col = 2)
 lines(density(pwsheep), lwd = 2, col = 3)
-legend(x = "top", legend = c("Cattle", "Pigs", "Sheep"), col = 1:3, lwd = rep(2, 3) , bty = "n")
+legend(x = "top", legend = c("Cattle", "Pigs", "Sheep"), col = 1:3, lwd = rep(2, 3), bty = "n")
 dev.off()
 
 # Exporting 
@@ -37,7 +37,7 @@ dev.off()
 K <- 9
 nk <- K*(K-1)
 if(K==8){
-  filt1 <- data.frame(subset(trade, FROM!=TO), ind =1:72)
+  filt1 <- data.frame(subset(trade, FROM!=TO), ind = 1:72)
   nonpar.pos <- subset(subset(filt1, FROM!="Paraguay"), TO!="Paraguay")$ind # the positions excluding Paraguay (which is absent for serotype A)
   pwcattle <- pwcattle[nonpar.pos]
   pwpig <- pwpig[nonpar.pos]
