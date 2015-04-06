@@ -22,9 +22,9 @@ SA <- world[unlist(which.polys), ]
 
 ################################
 trade <- data.frame(read.table("../DATA//EPI_DATA/TRADE.txt", header = TRUE))
-Mcattle <-matrix(trade$cattle, ncol = 9); colnames(Mcattle) <- rownames(Mcattle) <- Countries
-Mpig <-matrix(trade$pig, ncol = 9); colnames(Mpig) <- rownames(Mpig) <- Countries
-Msheep <-matrix(trade$sheep, ncol = 9); colnames(Msheep) <- rownames(Msheep) <- Countries
+Mcattle <- matrix(trade$cattle, ncol = 9); colnames(Mcattle) <- rownames(Mcattle) <- Countries
+Mpig <- matrix(trade$pig, ncol = 9); colnames(Mpig) <- rownames(Mpig) <- Countries
+Msheep <- matrix(trade$sheep, ncol = 9); colnames(Msheep) <- rownames(Msheep) <- Countries
 
 r <- c(0, .25)
 
