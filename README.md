@@ -40,4 +40,4 @@ The spread of serotype A was best described by geographic distances, while trade
 
 Key-words: Phylogeography, foot-and-mouth disease virus, South America, animal trade.
 
-![](/FIGURES/PLOTS/MJandBFs.svg)
+![](/FIGURES/PLOTS/MJandBFs.jpg)
