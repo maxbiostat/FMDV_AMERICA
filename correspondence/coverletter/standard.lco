@@ -1,0 +1,97 @@
+\ProvidesFile{standard.lco}
+ 
+\usepackage{graphicx}   
+\usepackage{fontspec}
+\usepackage{marvosym}
+\usepackage{eso-pic}
+\usepackage{adjustbox}
+\usepackage{url}
+\usepackage[english]{babel}
+
+% === LAYOUT SETTINGS
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=17cm, textheight=24.5cm, headheight=0cm, footskip=0.7cm}
+
+% === PDF SETUP
+%\usepackage[xetex, bookmarks, colorlinks, breaklinks, pdftitle={ \usekomavar{fromname} - letter }, pdfauthor={ \usekomavar{fromname} } ]{hyperref}  
+%\hypersetup{linkcolor=black, citecolor=blue, filecolor=black, urlcolor=black} 
+
+\newkomavar{department}
+\setkomavar{fromlogo}{\adjustbox{valign=t}{\includegraphics[scale=.5]{BiologicalSciences_black.eps}}}
+
+% ===  FORMATTING STUFF
+\@setplength{backaddrheight}{0cm}
+%~ \@setplength{refvpos}{100pt}%\useplength{toaddrvpos}
+%~ \@setplength{refhpos}{\paperwidth}
+
+% === FONT SETTINGS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont {Sans Serif}
+%\setsansfont {Serif}
+
+% shift the page body on the left to make room for data and logo
+\setlength{\oddsidemargin}{\useplength{toaddrhpos}}
+\addtolength{\oddsidemargin}{-1in}
+% Take care that the shift stays intact even after recalculating the page layout (see Kohm & Morawski 2005, section C.7)
+\l@addto@macro{\@typearea@end}{
+\setlength{\oddsidemargin}{\useplength{toaddrhpos}}
+\addtolength{\oddsidemargin}{-1in}
+}%
+
+%set the font size and leading
+\renewcommand{\normalsize}{\fontsize{10.0}{17}\selectfont}
+ 
+% === HEADER DEFINITION
+\firsthead{% 
+ \parbox[t]{0.5\textwidth}{% 
+    \usekomavar{fromlogo}}
+    \parbox[t]{0.5\textwidth}{\raggedleft{
+      \addfontfeature{LetterSpace=20.0}\fontsize{12}{17}\selectfont\scshape{
+      \usekomavar{fromname}\\[3mm]
+      \fontsize{11}{11}\selectfont\scshape \usekomavar{department}\\ %\usekomavar{fromaddress}
+         }%
+    }%
+  }%
+}%
+
+% avoid the display of the date in the default position
+%~ \l@addto@macro\@firstheadfootfield{\setkomavar{date}{}}
+
+% === FOOTER DEFINITION
+\firstfoot{
+  \centering
+  \addfontfeature{LetterSpace=20.0}\scshape
+  {
+      \renewcommand{\\}{\ {\large\textperiodcentered}\ }
+      \usekomavar{fromaddress}
+  }\\
+  {\Large\Letter} \usekomavar{fromemail} \ {\Large\Telefon} \usekomavar{fromphone}
+}
+
+% === NEXT FOOTER DEFINITION
+%~ TODO: this shit dont work
+\nextfoot{
+  \centering
+  \addfontfeature{LetterSpace=20.0}\scshape
+  {
+      \renewcommand{\\}{\ {\large\textperiodcentered}\ }
+      \usekomavar{fromaddress}
+  }\\
+  {\Large\Letter} \usekomavar{fromemail} \ {\Large\Telefon} \usekomavar{fromphone}
+}
+
+% === WATERMARK SETTINGS
+\newcommand\BackgroundPicture{
+  \put(0,0){
+     \parbox[b][\paperheight]{\paperwidth}{
+       \vfill
+       \centering
+       \includegraphics[width=0.8\paperwidth,height=0.8\paperheight,%
+                        keepaspectratio]{uedin_logo_wm_test.eps}%
+       \vfill
+     }}}
+% the picture is centered on the page background
+\AddToShipoutPicture{\BackgroundPicture}
+
+\endinput
+
