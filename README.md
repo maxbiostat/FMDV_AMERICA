@@ -41,3 +41,10 @@ The spread of serotype A was best described by geographic distances, while trade
 Key-words: Phylogeography, foot-and-mouth disease virus, South America, animal trade.
 
 ![](/FIGURES/PLOTS/MJandBFs.jpg)
+**Migration networks for FMDV serotypes A and O in South America.**
+We estimated the number of migration events between countries using the robust counting (Markov jumps) method.
+Additionally, a separate analysis employing Bayesian Stochastic Search Variable Selection (BSSVS) was performed to determine most significant migration routes and Bayes factors are depicted by arrows, with line thickness proportional to BF magnitude.
+We only plot BFs bigger than 3.
+Coroplethic maps show the net migration rates for each country, for both serotypes.
+From this it is clear that the pattern of spatial spread is different for both serotypes, although there is agreement on the likage between Venezuela and Colombia and Ecuador and Peru.
+For serotype O, Bolivia stands out as a hub, while for serotype A Brazil is highly connected. Also notice that exchange rates (depicted by the colors) are considerably higher for serotype A.
