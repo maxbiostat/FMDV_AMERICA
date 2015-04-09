@@ -43,7 +43,15 @@ Andrew Rambaut, Guy Baele
 
 All the data used in this paper, as well as code to produce many of the plots/analyses and BEAST XML files are hosted at \url{https://github.com/maxbiostat/FMDV_AMERICA}.
 
-\section*{Tests of phylogeny location association}
+\section*{Maximum likelihood phylogenies and root-to-tip divergences}
+
+In order to preliminarly assess whether the data sets used in this study contained evidence of clock-like evolution, we constructed phylogenies using the maximum likelihood procedures implemented in PhyML 3.0~\cite{M-phyml} under a GTR model~\cite{M-Tavare1986} of sequence evolution with Gamma distributed site-rate heterogeneity.
+The phylogenies produced by PhyML are unrooted.
+We root the trees at the branch -- as well as a position along it -- that minimises the sum of squared residuals of the linear regression of root-to-tip divergences on the sampling times.
+For this last step we used the routines in the program Path-O-Gen (\url{http://tree.bio.ed.ac.uk/software/pathogen/}).
+The resulting trend lines presented in Figure~\ref{sfig:root-to-tip} are consistent with clock-like evolution, despite considerable variation between lineages, which we address later in the paper using relaxed molecular clocks.
+
+\section*{Tests of phylogeny-location association}
 
 To assess whether there is evidence of geographic structure in our data we use the Bayesian Tip-significance testing (BaTS)~\cite{M-bats}.
 BaTS implements three measures of phylogeny-trait association for discrete traits: parsimony score (PS), association index (AI)~\cite{Wang2001} and maximum monophyletic clade size (MC)~\cite{Salemi2005}.
@@ -186,6 +194,11 @@ However, the distribution of states at root varies across sub-samples.
 
 \section*{Figure Legends}
 
+\textbf{Figure~\ref{sfig:root-to-tip}. Root-to-tip divergence against sampling time for serotypes A and O.}
+Maximum likelihood phylogenies were constructed with PhyML version 3.0~\cite{M-phyml}. 
+We then rooted the trees such that the linear regression between the root-to-tip divergences and sampling times yielded the smallest sum of squared residuals using the program Path-O-Gen (\url{http://tree.bio.ed.ac.uk/software/pathogen/}).
+The linear trends, along with their 95\% prediction intervals (shaded grey) are shown.
+
 \textbf{Figure~\ref{sfig:prod}. Production time series for pigs, cattle and sheep in South America.}
 We show log~(~\#~of heads) of live animals for pigs, sheep and cattle.
 It is clear that, while the production of sheep and pigs has decreased or remained largely stable in the last $50$ years, the number of cattle increased dramatically in the same period.
@@ -233,6 +246,18 @@ As in the main text, disease cases and vaccination in doses per head are overlai
 The same patterns presented at the main text for the full data can be recovered here: serotype A presents more oscillations through time whereas the trajectories for serotype O are smoother.
 Moreover we recover the marked drop in diversity near $2001$ for serotype A that, we think, indicates rapid transmission of a single variant of the virus.
 
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=.80]{FIGURES/rdvs.pdf}
+\end{center}
+\caption{}
+\label{sfig:root-to-tip}
+\end{figure}
+\end{center}
 %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%
 \newpage

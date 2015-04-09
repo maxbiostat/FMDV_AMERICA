@@ -144,8 +144,8 @@ Our results favor a non-parametric skyride model, that allows fluctuations in de
 Using a similar approach, we  found decisive support for the relaxed clock over the strict molecular clock model.
 Particularly, the exponential relaxed molecular clock provided a better fit for serotype O data (log BF = $56$) while the log-normal relaxed molecular clock model provided a better fit to serotype A (log BF = $34$) (see Table~\ref{stab:treeclockselection} for details). 
 The coefficient of variation for the log-normal relaxed molecular clock model for serotype A had a posterior mean of $0.32$ (95\% highest posterior density [HPD] interval: $0.21$--$0.43$) indicating substantial rate heterogeneity among lineages in the phylogeny.
-% Our finding that both serotypes support relaxed molecular clocks, suggesting different evolutionary dynamics, is consistent with the view that FMDV presents clock-like evolution only when large periods of time are considered, with short periods being dominated by quasi-species dynamics~\cite{Muellner2011}.  
-In addition, we compared a model with and without dated-tips (the `temporal signal' test~\cite{Faria2012} , see Methods) and found significant temporal structure for both serotypes (A: log BF = $310$; O: log BF = $348$), showing that sufficient temporal information is embedded in sequence data of both serotypes under investigation, which is essential for the estimation of divergence times and to reconstruct the population dynamics in natural time units~\cite{MEP}. 
+Root-to-tip plots against sampling times from maximum likelihood phylogenies constructed with PhyML~\cite{phyml} suggested a linear trend (Figure~\ref{sfig:root-to-tip}), which encouraged the pursuit of more detailed estimates.
+In addition, we compared a model with and without dated-tips (the `temporal signal' test~\cite{Faria2012, Baele2012}, see Methods) and found significant temporal structure for both serotypes (A: log BF = $310$; O: log BF = $348$), showing that sufficient temporal information is embedded in sequence data of both serotypes under investigation, which is essential for the estimation of divergence times and to reconstruct the population dynamics in natural time units~\cite{MEP}. 
 
 Figure~\ref{fig:trees} shows the maximum clade credibility (MCC) trees estimated for serotype A and serotype O.
 The estimated time to most recent common ancestor (tMRCA) of the circulating serotype A strains was $1932$ ($95\%$ HPD: $1925$--$1939$) and  $1989$ ($95\%$ HPD: $ 1986$--$1991$) for serotype O, indicating a more recent origin of the latter. 
@@ -202,17 +202,11 @@ Overall, net migration rates were substantially higher for serotype A in compari
 The presence of Bolivia as a viral hub for serotype O dispersal and its negligible role for serotype A  dispersal is an interesting difference between the two serotypes. 
 Likewise, Brazil is highly connected in the serotype A network but not on the serotype O network.
 
-% For serotype A, the highest support (BF~$>800$) was observed for viral flow from Venezuela to Colombia and from Argentina to Uruguay. % LM: Already presented.
-% Transitions from Brazil to Bolivia and Peru and Ecuador (bidirectional) also yielded considerable statistical support (BF~$>10$). 
-% For serotype O, overall support was lower in magnitude, but similar routes were recovered.
-% The highest BF support was found for migration from Colombia to Ecuador (BF~$>100$).
-% Significant support was also observed for viral exchange from  Venezuela to Colombia (BF~$>20$). 
 \subsubsection*{Preferential Spread of FMDV across neighbouring countries}
 We compared the transition counts between countries that share borders and those which do not and found that for serotype A the posterior median transition count between neighboring countries was  $22$ (95 \% HPD: $17$--$27$) while ``non-border'' transitions had a posterior median of $4$ (95~\% HPD: $0$--$7$). For serotype O, similar results were observed, with $16$ ($13$--$20$) and $1$ ($0$--$3$) location-transitions being observed for border (B) and non-bordering (NB) countries, respectively.
 Considering each South American country as a possible discrete state, there are  possible transitions ($34$ B AND $38$ NB transitions)
 For serotype A, the figures have to be adjusted because we have samples from $8$ countries, resulting in $B = 26$ and $ \text{NB} = 30$.
 Of course, these estimates have to be compared with their prior expectations
-% Assuming there is no preference towards spread through borders would give a prior expectation on the proportion $B/(B + \text{NB})\approx 0.5$ for both serotypes. 
 Remarkably, however, the importance of long-range migration routes seems to differ for both serotypes, since the posterior median proportion of ``non-border'' transitions is considerably different (A: $0.14$, $0.00$--$0.28$  and O: $0.05$, $0.00$--$0.20$).
 
 \begin{center}
@@ -222,26 +216,13 @@ Remarkably, however, the importance of long-range migration routes seems to diff
 \subsubsection*{Spatial origins for main South American FMDV outbreaks}
 
 Figure~\ref{fig:epidemictracing} shows the posterior distribution of the location of origin for some epidemics of interest.
-%GB: and that root lies where exactly?
-%LM: I'm sorry, but still don't get your question about the root...
-%PL: i feel that the trees are far easier to interpret for the information you are trying to get at ...
-%LM: I beg to strongly differ: we have over 100 taxa trees, with many internal nodes. The way to do it I think would be to put pie charts on the internal nodes of interest. 
 The most probable origin of the strains isolated in Argentina $2001$ (Figure~\ref{fig:epidemictracing}A) was Argentina (posterior probability = $0.72$) while Brazil received $0.28$ posterior probability.
 Results for the Brazilian strains of the same year point to Argentina as the source of the epidemic with high probability, confirming the strong link between the two countries (Figure~\ref{sfig:epitrac}B).
-%GB: you sure about the following sentence, multiple origins with probability close to 1?
-%LM: I am sure of the *fact* [prob ~ 1], not so sure about the interpretation, though. That means that in the posterior of topologies, sometimes Uruguay was in a clade with Brazil and sometimes with Argentina. This may be many things, the worst being non-convergence of the posterior of topologies.
-%LM: What does PL think about this?
-The two serotype A strains included from Uruguay $2001$ showed multiple origins with probability $\approx 1$ (Figure~\ref{sfig:epitrac}B), indicating that multiple introductions may have occurred, most likely from Brazil and Argentina.
 However, these results should be interpreted with caution due to the low number of sequences from Uruguay.
 Contrasting to the connectivity with Argentina, Bolivia $2001$ seems to have had an independent introduction from Peru, as shown in Figure~\ref{sfig:epitrac}C
 We provide evidence of Venezuela as a major viral source for serotype A in its region in Figure~\ref{fig:epidemictracing}B, where we show the origins of the Ecuadorian strain isolated in $2002$.
 This notion of Venezuela as a seeder is further strengthened by the fact that the Colombian $2008$ strain was most likely imported from Venezuela (posterior probability $\approx 1$, shown in Figure~\ref{sfig:epitrac}D).
 
-%GB: where is that root?
-%LM: what do you mean?
-%GB: I mean that 'root' is not an actual physical location on a map, but Brazil or Colombia are. Saying that the origin is the root makes no sense (or perfect sense, depending on how you look at it). If we don't believe that the root is the origin, then what are we doing? So yes, the origin is the root of the phylogenies, but which physical location is that?
-%LM: Oh, now I see. Made a small amendment that, I think, makes it clearer.
-The location origin of the circulating serotype O strains was found to be Colombia in $1994$ with substantial posterior probability ($0.76$, Figure~\ref{fig:epidemictracing}C.)
 Similar to what was found for Venezuela and serotype A, Colombia seems to be the source of most of the strains circulating on the northern part of South America.
 As with the introduction of serotype A in Colombia in $2008$, the strains from Venezuela $2003$ have high probability of being imported from Colombia (Figure~\ref{fig:epidemictracing}D).
 Consistent with these findings, Figures~\ref{sfig:epitrac}B and~\ref{sfig:epitrac}C we show that Colombia was the most probable origin of the strains in Ecuador ($2002$).
@@ -252,8 +233,6 @@ The link between Venezuela and Colombia thus seems to be supported from data for
 \end{center}
 
 To address the relevance of epidemiological predictors, such as geographic distance and livestock trade on viral diffusion, we collected data on the trade of live cattle, pigs and sheep  as well as geographic distances, and then estimated marginal likelihoods for each of these predictors.
-% Our analysis is similar in principle to that presented in Nelson et. al~\cite{Nelson2011} in which the authors investigated the effect of pig trade on the diffusion of Influenza, but provides substantial improvement over the methods used to calculate the marginal likelihood for each predictor~\cite{Baele2012}. %LM: Andrew  doesn't like this
-In Figure~\ref{sfig:tradenets} we present the spatial networks of the detailed trade matrix available from the Food and Agriculture Organization (FAO) on the trade of cattle, pigs and sheep (totals from 1986 to 2009), where we can see that the cattle trade network is substantially more connected than the pig and sheep trade networks.
 The sub-network connecting Venezuela, Colombia and Ecuador is present in all three graphs.
 Similarly, Southern Cone countries are also connected in the three networks.
 Additionally, for the sheep and cattle networks, we identified some long-range trade routes, for instance the trade of sheep between Argentina and Colombia.
@@ -276,9 +255,6 @@ Regarding spatial signal extraction, as measured by the Kullback-Liebler (KL) di
 The predictors with highest KL divergences  were pigs and sheep for serotypes A and O respectively.
 The results for serotype A are therefore inconclusive since the most efficient predictor (pigs) pointed a different origin than the best fitting predictor (distance).
 Further studies will be necessary to address the spatial origins of FMDV serotype A in South America.
-%GB&PL: this sounds a bit strange. Shouldn't we simply take the predictor with the highest log marginal likelihood to make such statements? There's no 1-on-1 relation between KL and root probability I think. So maybe we should play down the statement(s) in the following sentence?
-%LM: Agreed. My initial rationale was that we should go with the predictor which gave the more concentrated posterior (aka, more efficient). But this is wrong. The posterior could be just very concentrated at the WRONG values. I don't trust any of these roots though, no matter how high the marginal likelihood is. 
-% Therefore, despite the uncertainty in the estimation of the root location, choosing the most probable roots estimated by the most efficient predictors would point Colombia as the root for both serotypes, which is consistent with the Markov jumps (robust counting) analyses presented earlier.
 
 \begin{center}
  [Table~\ref{tab:roots} about here]
