@@ -202,6 +202,7 @@ Overall, net migration rates are substantially higher for serotype A in comparis
 The presence of Bolivia as a viral hub for serotype O dispersal and its negligible role for serotype A  dispersal is an interesting difference between the two serotypes. 
 Likewise, Brazil is highly connected in the serotype A network but not on the serotype O network.
 
+%GB: more work needed on this section
 \subsubsection*{Preferential Spread of FMDV across neighbouring countries}
 We compare the transition counts between countries that share borders and those that do not and find that for serotype A the posterior median transition count between neighboring countries amounts to $22$ (95 \% HPD: $17$--$27$) while ``non-border'' transitions have a posterior median of $4$ (95~\% HPD: $0$--$7$). 
 For serotype O, we observer similar results, with $16$ ($13$--$20$) and $1$ ($0$--$3$) location-transitions being observed for border (B) and non-bordering (NB) countries, respectively.
@@ -217,7 +218,7 @@ Remarkably, however, the importance of long-range migration routes seems to diff
 \subsubsection*{Spatial origins for main South American FMDV outbreaks}
 
 Figure~\ref{fig:epidemictracing} shows the posterior distribution of the location of origin for some epidemics of interest.
-The most probable origin of the strains isolated in Argentina $2001$ (Figure~\ref{fig:epidemictracing}A) was Argentina (posterior probability = $0.72$) while Brazil received $0.28$ posterior probability.
+The most probable origin of the strains isolated in Argentina $2001$ (Figure~\ref{fig:epidemictracing}A) was Argentina (posterior probability = $0.72$) while Brazil received a posterior probability of $0.28$.
 Results for the Brazilian strains of the same year point to Argentina as the source of the epidemic with high probability, confirming the strong link between the two countries (Figure~\ref{sfig:epitrac}B).
 However, these results should be interpreted with caution due to the low number of sequences from Uruguay.
 Contrasting to the connectivity with Argentina, Bolivia $2001$ seems to have had an independent introduction from Peru, as shown in Figure~\ref{sfig:epitrac}C
@@ -225,28 +226,27 @@ We provide evidence of Venezuela as a major viral source for serotype A in its r
 This notion of Venezuela as a seeder is further strengthened by the fact that the Colombian $2008$ strain was most likely imported from Venezuela (posterior probability $\approx 1$, shown in Figure~\ref{sfig:epitrac}D).
 
 Similar to what was found for Venezuela and serotype A, Colombia seems to be the source of most of the strains circulating on the northern part of South America.
-As with the introduction of serotype A in Colombia in $2008$, the strains from Venezuela $2003$ have high probability of being imported from Colombia (Figure~\ref{fig:epidemictracing}D).
-Consistent with these findings, Figures~\ref{sfig:epitrac}B and~\ref{sfig:epitrac}C we show that Colombia was the most probable origin of the strains in Ecuador ($2002$).
+As with the introduction of serotype A in Colombia in $2008$, the strains from Venezuela $2003$ have a high probability of being imported from Colombia (Figure~\ref{fig:epidemictracing}D).
+Consistent with these findings, we show in Figures~\ref{sfig:epitrac}B and~\ref{sfig:epitrac}C that Colombia was the most probable origin of the strains in Ecuador ($2002$).
 The link between Venezuela and Colombia thus seems to be supported from data for both serotypes, although the main viral seeder varies for each serotype (see \textbf{Discussion}).
 
 \begin{center}
  [Figure~\ref{fig:epidemictracing} about here]
 \end{center}
 
-To address the relevance of epidemiological predictors, such as geographic distance and livestock trade on viral diffusion, we collected data on the trade of live cattle, pigs and sheep  as well as geographic distances, and then estimated marginal likelihoods for each of these predictors.
-The sub-network connecting Venezuela, Colombia and Ecuador is present in all three graphs.
-Similarly, Southern Cone countries are also connected in the three networks.
-Additionally, for the sheep and cattle networks, we identified some long-range trade routes, for instance the trade of sheep between Argentina and Colombia.
-We used geographic distances as well as the data on the trade of livestock to specify CMTC rate matrix priors (potential predictors), and we use PS/SS to calculate (log) marginal likelihoods for each predictor to determine the importance of each variable for viral spread~\cite{Carvalho2013, Nelson2011}.
-While for serotype A the best predictor was the geographic distance between countries (log BF$\approx 4$, compared to the equal-rates gamma prior), the exchange of cattle was the best predictor for serotype O spread (log BF$\approx 13$). 
-Also, while for serotype A we found moderate statistical support for geographic distances as predictors of viral spread, this predictor had higher statistical support for serotype O (log BF$\approx 9$).
+To address the relevance of epidemiological predictors, such as geographic distance and livestock trade on viral diffusion, we collected data on the trade of live cattle, pigs and sheep  as well as geographic distances, and estimate marginal likelihoods for each of these predictors.
+The sub-network connecting Venezuela, Colombia and Ecuador is present in all three networks, as are the connections between the Southern Cone countries.
+Additionally, for the sheep and cattle networks, we identify some long-range trade routes, for instance the trade of sheep between Argentina and Colombia.
+We use geographic distances as well as the data on the trade of livestock to specify CMTC rate matrix priors (potential predictors), and we employ PS/SS to calculate (log) marginal likelihoods for each predictor to determine the importance of each variable for viral spread~\cite{Carvalho2013, Nelson2011}.
+For serotype A, we identify geographic distance as the best predictor for viral diffusion between countries (log BF$\approx 4$, compared to the equal-rates gamma prior), whereas the exchange of cattle is considered to be the best predictor for serotype O spread (log BF$\approx 13$). 
+Further, while we find moderate statistical support for geographic distances as predictors of viral spread for serotype A, this predictor has higher statistical support for serotype O (log BF$\approx 9$).
 
 \begin{center}
  [Table~\ref{tab:preds} about here]
 \end{center}
 
-For each predictor, we also assessed the location state distribution at root. 
-This vector gives the posterior probability of each country being the origin of the circulating strains.
+For each predictor, we also assessed the location state distribution at the root. 
+This vector contains the posterior probability of each country being the origin of the circulating strains.
 In Table~\ref{tab:roots} we show that for serotype A there was discordance between predictors about which country was the most probable source of FMDV on the continent.
 Peru was the most probable location of origin for the `cattle' predictor, but notably not for the best fitting predictor (geographic distance), for which Argentina was estimated as the origin with moderate probability ($0.75$).
 Argentina was also the most probable root for the equal-rates gamma prior model ($Pr(\text{root})=0.84$).
