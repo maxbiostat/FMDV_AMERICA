@@ -225,7 +225,7 @@ Contrasting to the connectivity with Argentina, Bolivia $2001$ seems to have had
 We provide evidence of Venezuela as a major viral source for serotype A in its region in Figure~\ref{fig:epidemictracing}B, where we show the origins of the Ecuadorian strain isolated in $2002$.
 This notion of Venezuela as a seeder is further strengthened by the fact that the Colombian $2008$ strain was most likely imported from Venezuela (posterior probability $\approx 1$, shown in Figure~\ref{sfig:epitrac}D).
 
-Similar to what was found for Venezuela and serotype A, Colombia seems to be the source of most of the strains circulating on the northern part of South America.
+Similar to what was found for Venezuela and serotype A, Colombia seems to be the source of most of the strains circulating in the northern part of South America.
 As with the introduction of serotype A in Colombia in $2008$, the strains from Venezuela $2003$ have a high probability of being imported from Colombia (Figure~\ref{fig:epidemictracing}D).
 Consistent with these findings, we show in Figures~\ref{sfig:epitrac}B and~\ref{sfig:epitrac}C that Colombia was the most probable origin of the strains in Ecuador ($2002$).
 The link between Venezuela and Colombia thus seems to be supported from data for both serotypes, although the main viral seeder varies for each serotype (see \textbf{Discussion}).
@@ -245,52 +245,52 @@ Further, while we find moderate statistical support for geographic distances as 
  [Table~\ref{tab:preds} about here]
 \end{center}
 
-For each predictor, we also assessed the location state distribution at the root. 
+For each predictor, we also assess the location state distribution at the root. 
 This vector contains the posterior probability of each country being the origin of the circulating strains.
-In Table~\ref{tab:roots} we show that for serotype A there was discordance between predictors about which country was the most probable source of FMDV on the continent.
-Peru was the most probable location of origin for the `cattle' predictor, but notably not for the best fitting predictor (geographic distance), for which Argentina was estimated as the origin with moderate probability ($0.75$).
-Argentina was also the most probable root for the equal-rates gamma prior model ($Pr(\text{root})=0.84$).
-For the swine trade predictors, Colombia was found to be the spatial origin.
-For serotype O, predictors showed much more concordance, and Colombia was pointed out as the spatial viral origin for all predictors with high probability (Table~\ref{tab:roots}).
-Regarding spatial signal extraction, as measured by the Kullback-Liebler (KL) divergence (relative  to a uniform prior) at the root~\cite{roots} (see also Text S2) for each predictor, we found KL divergences ranging from $3.86$ to $5.91$, showing highly concentrated distributions at the root. 
-The predictors with highest KL divergences  were pigs and sheep for serotypes A and O respectively.
-The results for serotype A are therefore inconclusive since the most efficient predictor (pigs) pointed a different origin than the best fitting predictor (distance).
-Further studies will be necessary to address the spatial origins of FMDV serotype A in South America.
+In Table~\ref{tab:roots} we show that for serotype A there is discordance between predictors about which country was the most probable source of FMDV on the continent.
+Peru is considered the most probable location of origin according to the `cattle' predictor, but notably not according to the best fitting predictor (geographic distance), for which Argentina is estimated as the origin with moderate probability ($0.75$).
+Argentina is also found to be the most probable origin according to the equal-rates gamma prior model ($Pr(\text{root})=0.84$).
+For the swine trade predictors, Colombia is found to be the spatial origin.
+For serotype O, the predictors show much more concordance, and Colombia is ascertained to be the spatial viral origin for all predictors with high probability (Table~\ref{tab:roots}).
+Regarding spatial signal extraction, as measured by the Kullback-Liebler (KL) divergence (relative  to a uniform prior) at the root~\cite{roots} (see also Text S2) for each predictor, we find KL divergences ranging from $3.86$ to $5.91$, showing highly concentrated distributions at the root. 
+The predictors with highest KL divergences are pigs and sheep for serotypes A and O respectively.
+The results for serotype A are therefore inconclusive since the most efficient predictor (pigs) point to a different origin than the best fitting predictor (distance).
+Further studies are necessary to address the spatial origins of FMDV serotype A in South America.
 
 \begin{center}
  [Table~\ref{tab:roots} about here]
 \end{center}
 \subsubsection*{Sensitivity analysis of spatial sampling heterogeneity}
 
-Since our data sets contain unbalanced geographic samples (Table~\ref{stab:reps}), we conducted a detailed sensitivity analysis to assess the robustness of our results to over-representation of some locations~\cite{Faria2012, fluPNAS, Bedford2010, polar}.
-We randomly draw five sequence sub-samples for each serotype in which over-represented geographic regions were down-sampled and run the asymmetric CTMC (with BSSVS) analysis for each sub-sample.
-We calculated log Bayes factors and observed good agreement between sub-samples in terms of supported routes for both serotypes (see Figures~\ref{sfig:bssvsA} and~\ref{sfig:bssvsO}). 
+Since our data sets contain unbalanced geographic samples (Table~\ref{stab:reps}), we conduct a detailed sensitivity analysis to assess the robustness of our results to over-representation of some locations~\cite{Faria2012, fluPNAS, Bedford2010, polar}.
+To this end, we randomly draw five sequence sub-samples for each serotype in which over-represented geographic regions are down-sampled and run the asymmetric CTMC (with BSSVS) analysis for each sub-sample.
+We calculate log Bayes factors and observe good agreement between sub-samples in terms of supported routes for both serotypes (see Figures~\ref{sfig:bssvsA} and~\ref{sfig:bssvsO}). 
 
-To further investigate the agreement between sub-samples, i.e., if parameter estimates were consistent across subsamples, we also computed the $L_1$ matrix distance norm across the estimated posterior mean rate matrices for each sub-sample, and no aberrant samples were detected (see Text S2 for detailed results).
+To further investigate the agreement between sub-samples, i.e. if parameter estimates are consistent across subsamples, we also compute the $L_1$ matrix distance norm across the estimated posterior mean rate matrices for each sub-sample, from which we detect no aberrant samples (see Text S2 for detailed results).
 Another aspect of interest is the amount of information extracted from each sample, which we measure by calculating Kullback-Leibler~\cite{KL} divergence between prior and posterior distributions of spatial location at root~\cite{roots}.
-Tables~\ref{stab:ED_A} and~\ref{stab:ED_O} show that for all sub-samples in both serotypes, there was lower information extraction when compared to the full analysis, with moderately concentrated posterior distributions at root.
-This result is expected, because each subsample has less data than the full data set.
-For serotype O, inference about location of origin was consistent across samples, with Venezuela being the most probable country of origin.
-In the case of serotype A, however, there was some disagreement about the most probable root state, with Argentina being pointed as root by one of the sub-samples.
-Also, we observe very similar support for Venezuela as root for serotype O when compared to Brazil as root for serotype A.
-While serotype O presented average probability that Venezuela was the root of $0.47$, the average probability that Brazil was the root for serotype A was $0.50$.
+Tables~\ref{stab:ED_A} and~\ref{stab:ED_O} show that for all sub-samples in both serotypes, there is lower information extraction when compared to the full analysis, with moderately concentrated posterior distributions at root.
+This result is expected however, because each subsample has less data than the full data set.
+For serotype O, inference about location of origin is consistent across samples, with Venezuela being the most probable country of origin.
+In the case of serotype A however, there is some disagreement concerning the most probable root state, with Argentina being pointed as root by one of the sub-samples.
+Further, we observe very similar support for Venezuela as the root for serotype O when compared to Brazil as the root for serotype A.
+While serotype O presents an averge probability of $0.47$ that Venezuela was the root, the average probability that Brazil was the root for serotype A is $0.50$.
 We take the lack of agreement between the distribution at root for the sub-samples and the results from the full data to be the result of the lack of information in the down-sampled analyses, as evidenced by the much lower KL divergences (Tables~\ref{stab:ED_A} and~\ref{stab:ED_O}). 
 
 \subsection*{Demographic reconstruction of FMDV}
 
 The demographic reconstruction using the non-parametric skyride coalescent model shows strikingly different dynamical behavior for the two serotypes (Figure~\ref{fig:skyride}).
-While serotype O exhibits a peak diversity in the late years of the 1990's, the diversity of serotype A has been slowly decreasing over the last $20$ years.
+While serotype O exhibits a peak diversity in the late years of the 1990s, the diversity of serotype A has been slowly decreasing over the last $20$ years.
 Serotype A exhibits a more stable behavior over most of the 20th century, with most variation occurring within the temporal sampling interval, mainly in the last years of the 2000s.
-To gain insight into the relationship between vaccination and viral diversity, we overlaid vaccination data to the skyride plots presented in the yellow line in Figure~\ref{fig:skyride}.
-These data were expressed as (log) doses per head, which we consider to be a more accurate measure of vaccination coverage, since it corrects for population size increase/decrease over time (see Figure~\ref{sfig:prod} for livestock population time series). 
+To gain insight into the relationship between vaccination and viral diversity, we overlay vaccination data on to the skyride plots presented by the yellow line in Figure~\ref{fig:skyride}.
+These data are expressed as (log) doses per head, which we consider to be a more accurate measure of vaccination coverage, since it corrects for population size increase/decrease over time (see Figure~\ref{sfig:prod} for livestock population time series). 
 
-Further, serotype-specific disease notification (number of cases) data was overlaid on the demographic reconstruction to illustrate the relationship between viral diversity and the onset of epidemics. 
+Further, we overlay serotype-specific disease notification (number of cases) on the demographic reconstruction to illustrate the relationship between viral diversity and the onset of epidemics. 
 For serotype A, we observe a bottleneck of viral diversity around $2001$ (red line) that coincides with a major epidemic by this serotype that affected several countries in the period $2000-2002$, especially Argentina.
 The effective population size for serotype O (blue line) shows a different, more steady pattern over the years, with diversity reaching its lowest level by end of the years $2000$.
-This decreasing trend in viral diversity is also observed for serotype A.
+We also observe this decreasing trend in viral diversity for serotype A.
 The number of vaccine doses shows a marked increase after $2001$ (note that the Y-axis in Figure~\ref{fig:skyride} in natural log units), and the number of cases also declines for both serotypes, in particular for serotype A.
 Although we do not provide any formal association analysis, the general intuition is that increasing vaccination efforts as well as other preventive measures decisively decreased transmission and thus viral diversity.
-Finally, to assess the robustness of our reconstructions we performed demographic reconstructions using a) only recent (sampling date $>2000$) sequences (see Text S2, Figure ~\ref{sfig:only2000sky}) and b) data sets without the over-represented locations (data not shown).
+Finally, to assess the robustness of our reconstructions we perform demographic reconstructions using a) only recent (sampling date $>2000$) sequences (see Text S2, Figure ~\ref{sfig:only2000sky}) and b) data sets without the over-represented locations (data not shown).
 These analyses gave very similar results to those presented in Figure~\ref{fig:skyride}.
 
 \begin{center}
