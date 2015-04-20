@@ -35,20 +35,20 @@ Luiz Max Fagundes de Carvalho, Nuno Rodrigues Faria, Andres M. Perez,\\
 Marc A. Suchard, Philippe Lemey, Waldemir de Castro Silveira,\\
 Andrew Rambaut, Guy Baele
 }
-\date{February, 2015}
+\date{April, 2015}
 
 \begin{document}
 
 \maketitle
 
-All the data used in this paper, as well as code to produce many of the plots/analyses and BEAST XML files are hosted at \url{https://github.com/maxbiostat/FMDV_AMERICA}.
+All the data used in this paper, as well as the code to produce many of the plots/analyses and BEAST XML files are hosted at \url{https://github.com/maxbiostat/FMDV_AMERICA}.
 
 \section*{Maximum likelihood phylogenies and root-to-tip divergences}
 
-In order to preliminarly assess whether the data sets used in this study contained evidence of clock-like evolution, we constructed phylogenies using the maximum likelihood procedures implemented in PhyML 3.0~\cite{M-phyml} under a GTR model~\cite{M-Tavare1986} of sequence evolution with Gamma distributed site-rate heterogeneity.
+In order to preliminarily assess whether the data sets used in this study contain evidence of clock-like evolution, we construct phylogenies using the maximum likelihood procedures implemented in PhyML 3.0~\cite{M-phyml} under a GTR model~\cite{M-Tavare1986} of sequence evolution with gamma-distributed site rate heterogeneity.
 The phylogenies produced by PhyML are unrooted.
 We root the trees at the branch -- as well as a position along it -- that minimises the sum of squared residuals of the linear regression of root-to-tip divergences on the sampling times.
-For this last step we used the routines in the program Path-O-Gen (\url{http://tree.bio.ed.ac.uk/software/pathogen/}).
+For this last step, we use the routines in the program Path-O-Gen (\url{http://tree.bio.ed.ac.uk/software/pathogen/}).
 The resulting trend lines presented in Figure~\ref{sfig:root-to-tip} are consistent with clock-like evolution, despite considerable variation between lineages, which we address later in the paper using relaxed molecular clocks.
 
 \section*{Tests of phylogeny-location association}
@@ -69,10 +69,9 @@ MC(t) = max(m_i\mathbb{I}(i)), \quad i \in \{1, 2, \ldots, N-1\}
 \end{equation}
 where $m_i$ is defined as above.
 The higher the MC statistic, the stronger the phylogeny trait association.
-The problem of determining the statistical relevance of the observed values for these indexes remains however.
-This problem has been addressing by randomizing the trait values at the tips and obtaining null distributions for the indexes, against which the observed values could then be compared.
-Such procedures usually rely on a single tree.
-BaTs~\cite{M-bats} extends this approach by accommodating phylogenetic uncertainty by averaging over topologies drawn from the posterior distribution of trees.
+The problem of determining the statistical relevance of the observed values for these indices remains however.
+We address this problem by randomizing the trait values at the tips to obtain null distributions for the indices, against which the observed values could then be compared.
+Such procedures usually rely on a single tree, but BaTs~\cite{M-bats} extends this approach by accommodating phylogenetic uncertainty by averaging over topologies drawn from the posterior distribution of trees.
 We report the monophyletic clade statistic obtained by applying BaTs to a sample of $10 000$ trees from the posterior distribution of topologies in Table~\ref{stab:BaTS}.
 The results show that there is substantial phylogeny-location association for both serotypes for most states (most p-values below the $0.001$ threshold).
 
@@ -88,17 +87,17 @@ While these methods are computationally demanding and require additional analyse
 Here, we use both PS and SS to construct an overall ranking of competing models, by estimating the (log) marginal likelihood for each model, while accommodating phylogenetic uncertainty.
 In order to obtain sufficient reliability and check convergence of our (log) marginal likelihood estimators, we perform multiple independent runs with varying computational settings in BEAST \cite{M-beast2012}.
 The increased computational demands associated with both PS and SS stem from the need to collect samples from a series of power posteriors, and hence to not only explore the posterior density that is already being explored while estimating the models' parameters.
-PS and SS calculations were performed using 64 power posteriors (with the powers going through a range of values from 1.0 to 0.0), each running for $250,000$, $500,000$, 1 million and 2 million iterations, taking up to over 1 month of computation for each model under evaluation.
+We perform PS and SS calculations using 64 power posteriors (with the powers going through a range of values from 1.0 to 0.0), each running for $250,000$, $500,000$, 1 million and 2 million iterations, taking up to over 1 month of computation for each model under evaluation.
 Gradually increasing the computational demands of PS/SS allows us to assess the convergence of the (log) marginal likelihood values for the different models being evaluated.
 
 Table~\ref{stab:treeclockselection} shows the results of the model selection study to determine the best combination of demographic and molecular clock models for each serotype.
 The results indicate that while the best model fit for serotype A is provided by a log-normal molecular clock, an exponential relaxed molecular clock offers a better model fit for serotype O, pointing to different evolutionary dynamics between the two serotypes with respect to branch-specific rate variation. 
-Further, the non-parameter squired demographic prior is consistently selected over a constant population size demographic prior for both serotypes. 
+Further, the non-parametric Bayesian skyride demographic prior is consistently selected over a constant population size demographic prior for both serotypes. 
 
 
 \section*{Livestock trade data}
 
-One of the main contributions lays with exploring the association between cattle, pigs and sheep trade and viral diffusion using a statistically sound approach that enables us to test evolutionary hypotheses concerning the influence of these predictors.
+One of the main contributions of our paper lies in exploring the association between cattle, pigs and sheep trade and viral diffusion using a statistically sound approach that enables us to test evolutionary hypotheses concerning the influence of these predictors.
 In this text we provide some additional exploratory plots of the data.
 In Figure~\ref{sfig:prod}, we show the time series of livestock production among the studied countries in over $50$ years, illustrating that the production of cattle is much larger than that of pigs and sheep.
 Perhaps more importantly, while pigs and cattle production maintain a trend of positive growth throughout the second half of the twentieth century, sheep production shows a decline after $1990$.
@@ -110,53 +109,52 @@ It seems the cattle network is the only one dense enough both in space and time 
 
 \section*{Assessing the impact of taxon sampling on phylogeographic and demographic reconstructions}
 
-The data sets used in this study presented exhibit over-representation of some countries (see Table~\ref{stab:reps} for the representations for each serotype).
+The data sets used in this study exhibit over-representation of some countries (see Table~\ref{stab:reps} for the representations for each serotype).
 Specifically, $58$ of the $131$ ($44.2\%$) sequences collected for serotype A came from Argentina, and $90$ of the $167$ ($53.9\%$) sequences for serotype O came from Ecuadorian isolates.
 This unbalanced design may introduce bias on our phylogeographic analyses, since under a null 'single rate' model, the more sequences available from a location, the higher the estimates to and from this location will be.
 Sampling bias constitutes an important point of concern in phylogeographic modeling, and several studies have performed sensitivity analyses to determine how robust inference is to biased sampling \cite{M-Faria2012, M-Lemey2014, M-Bedford2010, M-polar, M-fluPNAS}.
 One possible approach involves using equally sampled data sets, for which each location contributes the same number of sequences \cite{M-fluPNAS}, which is mainly useful when a reasonable number of sequences is available.
 Another approach is to devise prior distributions for the CTMC infinitesimal rate matrix ($\mathbf{Q}$) that explicitly counteract the effects of biased sampling~\cite{M-Faria2012}.
-Further, coalescent-based demographic reconstruction methods usually assume random sampling from a large homogeneous population, which may not be met for our sampling design.
-We therefore also performed a sensitivity analysis of the demographic reconstructions presented in the paper.
+Further, coalescent-based demographic reconstruction methods usually assume random sampling from a large homogeneous population, a condition which may not be met for our sampling design.
+We therefore also perform a sensitivity analysis of the demographic reconstructions presented in the paper.
 
 In this study, we provide a thorough assessment of the effects of sampling bias in phylogeographic and demographic inference through sub-sampling. 
-First, we assessed whether over-represented locations could influence model parameter estimation, by performing parameter estimation with and without these locations.
+First, we assess whether over-represented locations could influence model parameter estimation, by performing parameter estimation with and without these locations.
 Tables~\ref{stab:SB_A} and~\ref{stab:SB_O} show medians and $95 \%$ credible intervals for parameters of interest with and without the over-represented locations for both serotypes.
 This analysis shows that tMRCA estimates for serotype A were slightly affected by the removal of the sequences from Argentina, resulting in a difference of about 6 years in the estimates.
-On the other hand, tMRCA estimates with and without Ecuadorian sequences for serotype O showed substantial agreement.
-Estimates of relative codon position rates were consistent for both serotypes, whereas evolutionary rates estimates were lower with the removal of Argentinian sequences for serotype A, while the estimates for serotype O were consistent with and without sequences from Ecuador. 
+On the other hand, tMRCA estimates with and without Ecuadorian sequences for serotype O show substantial agreement.
+Estimates of relative codon position rates are consistent for both serotypes, whereas evolutionary rates estimates are lower with the removal of Argentinian sequences for serotype A, while the estimates for serotype O are consistent with and without sequences from Ecuador. 
 These results suggest Argentina is an important source of overall viral diversity, since sequences from this country contribute to higher rate estimates.
 Nevertheless, these results should not be confused with those presented in the main text for Venezuela, which seems to be more important in \textbf{maintaining} diversity in the continent and seeding the virus to other regions.
 
-To study the robustness of our demographic reconstructions and quantify the impact of including older sequences, which are not available for all locations, we performed temporal reconstruction by using only sequences from $2000$ to present.
-For this analysis, we used a non-parametric skyride demographic prior \cite{M-skyride} on the coalescent times.
+To study the robustness of our demographic reconstructions and quantify the impact of including older sequences, which are not available for all locations, we perform temporal reconstruction by using only sequences from $2000$ to present.
+For this analysis, we use a non-parametric skyride demographic prior \cite{M-skyride} on the coalescent times.
 These results are presented in Figure~\ref{sfig:only2000sky} and, compared to those presented in the main text (Figure~\ref{fig:skyride}), show the same temporal behavior with the exception of the absence of the marked drop in serotype A $N_e$ near 2001 that is present in Figure~\ref{fig:skyride}.
 
-While for large data sets it is possible to perform equal down-sampling, i.e. simple random stratified sampling~\cite{M-fluPNAS}, this was not possible with the data sets analyzed in this study. 
-Therefore, to further assess the effect of biased sampling while still using the information from over-represented locations, we used the down-sampling scheme detailed below.
+While for large data sets it is possible to perform equal down-sampling, i.e. simple random stratified sampling~\cite{M-fluPNAS}, this is not possible with the data sets analyzed in this study. 
+Therefore, to further assess the effect of biased sampling while still using the information from over-represented locations, we use the down-sampling scheme detailed below.
 We draw as many sequences from the most represented location as there are sequences from the second most represented location.
 For serotype A, the second most represented country was Venezuela ($27$ sequences) and for serotype O Colombia was the second location with more sequences ($36$).
-To compose the sub-samples for serotype A we then randomly drew $27$ sequences from Argentina and combined them with the other sequences of the original data set.
-This procedure was performed five times to obtain five sub-samples.
-Sub-sampling for serotype O was carried out analogously.
+To compose the sub-samples for serotype A we then randomly draw $27$ sequences from Argentina and combine them with the other sequences of the original data set.
+We perform this procedure five times to obtain five sub-samples (sub-sampling for serotype O was carried out in a similar fashion).
 The results of these experiments are presented in Tables~\ref{stab:ED_A} and~\ref{stab:ED_O}, which show that for most parameters there was substantial overlap between posterior distributions obtained using different sub-samples.
-Further, inference regarding the spatial origin (root) was consistent across sub-samples for both serotypes.
+Further, inference regarding the spatial origin (root) is consistent across sub-samples for both serotypes.
 
-Another point of interest is to assess whether the estimates of $\mathbf{Q}$ were consistent across sub-samples.
-First we plotted the estimated rates across each sub-sample against each other for both serotypes.
+Another point of interest is to assess whether the estimates of $\mathbf{Q}$ are consistent across sub-samples.
+First we plot the estimated rates across each sub-sample against each other for both serotypes.
 Scatterplots of the estimated rates for each sub-sample are shown in Figure~\ref{sfig:compz}A and~B, from which we conclude that estimates agree across sub-samples.
-To explore this further, we also calculated the $L_1$ matrix distance norm -- defined below -- for (each pair of) estimates of $\mathbf{Q}$ obtained from each sub-sample.
+To explore this further, we also calculate the $L_1$ matrix distance norm -- defined below -- for (each pair of) estimates of $\mathbf{Q}$ obtained from each sub-sample.
 Let $\mathbf{X}$ and $\mathbf{Y}$ be two $K \times K$ matrices.
 The $L_1$ matrix norm is defined as
 \begin{equation}
 \label{seq:L1}
- L_1 (\mathbf{X}, \mathbf{Y}) = \frac{1}{K(K-1)} \sum_{i=1}^{K(K-1)} |X_i-Y_i|  
+ L_1 (\mathbf{X}, \mathbf{Y}) = \frac{1}{K(K-1)} \sum_{i=1}^{K(K-1)} |X_i-Y_i|.
 \end{equation}
-Since all entries in our matrices are non-negative, they were log-transformed prior to computing distances.
-Calculations were performed using the \verb|norm()| in the \textbf{PET} package~\cite{PET} of the R statistical computing environment.
-The results of these analyses are presented in Figure~\ref{sfig:compz}C and~D, from which we can see that the divergence between sub-samples was very low (less than $10\%$), indicating that rate estimation was robust to sampling.
+Since all entries in our matrices are non-negative, they are log-transformed prior to computing distances.
+Calculations wae performed using the \verb|norm()| in the \textbf{PET} package~\cite{PET} of the R statistical computing environment.
+The results of these analyses are presented in Figure~\ref{sfig:compz}C and~D, from which we can see that the divergence between sub-samples is very low (less than $10\%$), indicating that rate estimation is robust to sampling.
 
-In a Bayesian context, it is sometimes desirable to quantify how much information we gain from updating our prior information using the available data.
+In a Bayesian context, it's sometimes desirable to quantify how much information we gain from updating our prior information using the available data.
 A common measure of this signal extraction is the Kullback-Leibler (KL) divergence between prior and posterior distributions~\cite{M-KL}.
 In a phylogeographic setting, Lemey et al. \cite{M-roots} propose to calculate the KL divergence between the posterior distribution for the states at root and a uniform discrete prior.
 Let $K$ be the number of discrete states (e.g. locations) and $\boldsymbol\theta$ be the $K$-dimensional vector of state probabilities.
@@ -174,19 +172,19 @@ The Kullback-Leibler divergence is given by:
 \sum_{i}^{K} p(\boldsymbol\theta_i|D)log\frac{p(\boldsymbol\theta_i|D)}{\pi(\boldsymbol\theta_i)}
 \end{equation}
 The higher the divergence, the more the posterior distribution differs from its prior expectation, hence the more signal is extracted from data.
-We computed~(\ref{seq:KL}) for the root state distributions for all sub-samples (presented in Tables~\ref{stab:ED_A} and~\ref{stab:ED_O}) and all predictors (see main text).
+We compute~(\ref{seq:KL}) for the root state distributions for all sub-samples (presented in Tables~\ref{stab:ED_A} and~\ref{stab:ED_O}) and all predictors (see main text).
 
 In a phylogeographic setting, even for moderate numbers of locations we are usually left with the task of estimating a potentially large number of parameters. 
 BSSVS seeks to select a parsimonious set of rates that sufficiently explain data variation.
 By transforming each entry of the infinitesimal rate matrix $\mathbf{Q}$ into a vertex of the graph $\mathcal{G}$, the algorithm then searches the whole graph space, assigning an indicator variable $\delta_{ij}$ to each vertex.
 Assuming each $\delta_{ij}$ is Bernoulli distributed with parameter $p_{ij}$, we can select only those entries with high probability of being included by BSSVS.
-Using the fact that $\sum\delta_{ij}$ converges to a truncated Poisson distribution if the success probability is sufficiently small, we can can compute Bayes factors analytically using Equation (6) in Lemey et al.~\cite{M-roots}.
+Using the fact that $\sum\delta_{ij}$ converges to a truncated Poisson distribution if the success probability is sufficiently small, we can compute Bayes factors analytically using Equation (6) in Lemey et al.~\cite{M-roots}.
 
-To gain further insight into the impact of down-sampling in our phylogeographic inference, we conducted Bayesian Stochastic Search Variable Selection (BSSVS) to search for the most parsimonious set of routes needed to explain data variation in each sub-sample.
+To gain further insight into the impact of down-sampling in our phylogeographic inference, we perform Bayesian Stochastic Search Variable Selection (BSSVS) to search for the most parsimonious set of routes needed to explain data variation in each sub-sample.
 As stated in the main text and in Lemey et al.~\cite{M-roots}, this strategy naturally allows for the analytic calculation of Bayes factors for each migration route (i.e. graph edge).
-BFs were then calculated for each sub-sample and plotted accordingly.
+BFs are then calculated for each sub-sample and plotted accordingly.
 In Figure~\ref{sfig:bssvsA} we present the results for serotype A, while the results for serotype O are presented in Figure~\ref{sfig:bssvsO}.
-For both serotypes a high degree of agreement between inferred significant (BF>3) routes between sub-samples.
+For both serotypes, we observe a high degree of agreement between inferred significant (BF>3) routes between sub-samples.
 However, the distribution of states at root varies across sub-samples.
 
 
@@ -196,7 +194,7 @@ However, the distribution of states at root varies across sub-samples.
 
 \textbf{Figure~\ref{sfig:root-to-tip}. Root-to-tip divergence against sampling time for serotypes A and O.}
 Maximum likelihood phylogenies were constructed with PhyML version 3.0~\cite{M-phyml}. 
-We then rooted the trees such that the linear regression between the root-to-tip divergences and sampling times yielded the smallest sum of squared residuals using the program Path-O-Gen (\url{http://tree.bio.ed.ac.uk/software/pathogen/}).
+We root the trees such that the linear regression between the root-to-tip divergences and sampling times yields the smallest sum of squared residuals using the program Path-O-Gen (\url{http://tree.bio.ed.ac.uk/software/pathogen/}).
 The linear trends, along with their 95\% prediction intervals (shaded grey) are shown.
 
 \textbf{Figure~\ref{sfig:prod}. Production time series for pigs, cattle and sheep in South America.}
@@ -213,38 +211,38 @@ In agreement with the data presented in Figure~\ref{sfig:prod}, the cattle netwo
 Note the long range trade routes of sheep between Argentina and Colombia, which are absent from the pig network.
 This data suggests that long range migration of the virus is possible, since sheep are successful carriers.
 
-\textbf{Figure~\ref{sfig:compz}. Comparison of of estimated rate matrices across sub-samples}
+\textbf{Figure~\ref{sfig:compz}. Comparison of of estimated rate matrices across sub-samples.}
 In panels A and B we show entry-wise scatterplots of the five sub-samples for serotypes A and O respectively.
 Colors depict country of origin.
-These plots show that substantial agreement was achieved between sub-samples regarding migration rate estimation.
-Panel C and D shows heat maps of the $5\times5$ matrices of $L_1$ norms comparing each sub-sample, for serotypes A and O, respectively.
-This analysis presents an univariate summary of the matrices under comparison and thus is complementary to that presented in panels A and B, and shows that no sub-sample was too divergent from the others and the maximum error (the numbers at the top of the color legend) are small. 
+These plots show that substantial agreement is achieved between sub-samples regarding migration rate estimation.
+Panels C and D show heat maps of the $5\times5$ matrices of $L_1$ norms comparing each sub-sample, for serotypes A and O, respectively.
+This analysis presents an univariate summary of the matrices under comparison and is thus complementary to the analysis presented in panels A and B, and shows that no sub-sample was too divergent from the others and the maximum errors (the numbers at the top of the color legend) are small. 
 
 \textbf{Figure~\ref{sfig:epitrac}. Posterior distribution of the origins of several strains/epidemics of interest for serotypes A and O.}
 We show the origins of serotype A strains in  Brazil (A), Uruguay (B) and Bolivia (C) in $2001$ and Colombia in $2008$ (D).
 As expected, the epidemic in Brazil $2001$ was most likely seeded from Argentina, which experienced a major epidemic the same year.
 The origins of the isolates from Uruguay $2001$, however, could not be traced to a particular location, which might indicate that Uruguay experienced introductions from both Brazil and Argentina.
-In contrast, the serotype A strains from Bolivia in the same period seem to have come from Peru (panel C), indicating migration downwards from the Northern part of the continent rather than upwards from Argentina.
+In contrast, the serotype A strains from Bolivia in the same period seem to have come from Peru (panel C), indicating migration downwards from the northern part of the continent rather than upwards from Argentina.
 Venezuela was an important viral seeder for serotype A, being the most likely origin of the Colombian $2008$ isolates with high probability.
 For serotype O, the most probable origins of the strains in Ecuador $2002$ (E) and Peru $2004$ (F).
 Interestingly, panels E and F show a transmission chain beginning in Colombia, which seeded the Ecuadorian strains, which in turn seeded the strains isolated in Peru in $2004$.
  
 \textbf{Figure~\ref{sfig:bssvsA}. Bayesian Stochastic Search Variable Selection (BSSVS) for five down-sampled sub-samples of serotype A sequences.}
-We performed the BSSVS analysis on five down-sampled data sets (reduced Argentina representation) and plotted the resulting Bayes factors (only BFs$>3$) as in the main text.
+We perform the BSSVS analysis on five down-sampled data sets (reduced Argentina representation) and plot the resulting Bayes factors (only BFs$>3$) as in the main text.
 Arrow thickness is proportional to Bayes factor magnitude and colors depict the probability of being root for each country.
 The results indicate substantial agreement between subsamples.
 The link from Brazil to Venezuela, for example, occurs in four out of the five sub-samples.
 
 \textbf{Figure~\ref{sfig:bssvsO}. Bayesian Stochastic Search Variable Selection (BSSVS) for five down-sampled sub-samples of serotype O sequences.}
-We performed the BSSVS analysis on five down-sampled (equal numbers of Ecuadorian and Colombian sequences) data sets and  plotted the resulting Bayes factors (only BFs$>3$).
+We perform the BSSVS analysis on five down-sampled (equal numbers of Ecuadorian and Colombian sequences) data sets and plot the resulting Bayes factors (only BFs$>3$).
 Arrow thickness is proportional to Bayes factor magnitude and colors depict the probability of being root for each country.
 Similar to what we found for serotype A, there was substantial agreement between subsamples regarding the well supported routes.
 
 \textbf{Figure~\ref{sfig:only2000sky}. Skyride coalescent reconstructions using sequences from $2000$ to present only for both serotypes.}
-We assessed the robustness of our coalescent reconstructions to sparsity of information as we progress further in time by re-running the analysis using only recent (i.e., sampling year $>2000$) sequences, for both serotypes.
-As in the main text, disease cases and vaccination in doses per head are overlaid to the demographic reconstructions.
-The same patterns presented at the main text for the full data can be recovered here: serotype A presents more oscillations through time whereas the trajectories for serotype O are smoother.
-Moreover we recover the marked drop in diversity near $2001$ for serotype A that, we think, indicates rapid transmission of a single variant of the virus.
+We assess the robustness of our coalescent reconstructions to sparsity of information as we progress further in time by re-running the analysis using only recent (i.e. sampling year $>2000$) sequences, for both serotypes.
+As in the main text, we overlay disease cases and vaccination in doses per head to the demographic reconstructions.
+The same patterns presented in the main text for the full data can be recovered here, i.e. serotype A presents more oscillations through time whereas the trajectories for serotype O are smoother.
+Moreover we recover the marked drop in diversity near $2001$ for serotype A which might indicate rapid transmission of a single variant of the virus.
 
 %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%
@@ -360,9 +358,9 @@ Moreover we recover the marked drop in diversity near $2001$ for serotype A that
 \caption{\textbf{Model selection using path sampling (PS) and stepping-stone sampling (SS) to determine the tree prior (coalescent) model and clock for both serotypes.}
 UCLD = uncorrelated relaxed clock with an underlying log-normal distribution; UCED = uncorrelated relaxed clock with an underlying exponential distribution.
 Best fitting models (highest log marginal likelihood obtained using SS) are highlighted in bold.
-The more flexible non-parametric skyride tree prior clearly outperforms the assumption of constant population size, what is consistent with the fact that FMDV (both serotypes) has experienced periods of population expansion, i.e., transmission within the time frame considered.
-The assumption of single rate for every lineage in the phylogeny was also rejected for both serotypes.
-Remarkably, the best fitting relaxed clock models were different for each serotype, suggesting different branch (lineage) level heterogeneity levels.
+The more flexible non-parametric skyride tree prior clearly outperforms the assumption of a constant population size, which is consistent with the fact that FMDV (both serotypes) has experienced periods of population expansion, i.e. transmission within the time frame considered.
+The assumption of a single rate for every lineage in the phylogeny is also rejected for both serotypes.
+Remarkably, the best fitting relaxed clock models are different for each serotype, suggesting different branch (lineage) level heterogeneity levels between serotypes.
 }
 \begin{center}
 \begin{tabular}{ccccccc}
@@ -393,7 +391,7 @@ O       & Skyride       & STRICT & -8131.91& -8125.31\\
  \caption{
  Representation of South American countries in the data sets analyzed.
  Full details (and accession numbers) are given in Text S1.
- From these summaries it is clear that some countries are over-represented in the data set.
+ From these summaries it's clear that some countries are over-represented in the data set.
  We provide a detailed sensitivity analysis to address the impact of this sample imbalance.
  }
  \begin{center}
@@ -421,7 +419,8 @@ Total     & $131$ ($1955$--$2008$) & $167$ ($1994$--$2010$)\\
  %%%%%%%%%%%%%%%%%%
 \begin{sidewaystable}[h]
 \caption{
-\textbf{Spatial signal for FMDV serotypes A and O data sets.} We used Bayesian tip-association significance testing (BaTS) to assess the degree of spatial signal, measured as phylogeny-location association, contained in the posterior distribution of trees for both serotypes. 1-Monophyletic clade size
+\textbf{Spatial signal for FMDV serotypes A and O data sets.} 
+We use Bayesian tip-association significance testing (BaTS) to assess the degree of spatial signal, measured as phylogeny-location association, contained in the posterior distribution of trees for both serotypes. 1-Monophyletic clade size
 Overall, our results show that there is substantial location-phylogeny association, justifying richer phylogeographic analyses.}
 \begin{tabular}{ccccccc}
 \toprule
@@ -446,7 +445,8 @@ Venezuela&1.82 (1.00, 2.00)	&1.02 (1.00, 1.08)	&0.010&6.00 (6.00, 6.00)&	1.28 (1
 %%%%%%%%%%%%%
 %%%%%%%%%%%%%
 \begin{table}[h]
-\caption{ {{\bf Parameter estimation using the complete and without Argentina data sets for serotype A.}} To assess the impact of the over-representation of Argentina in our sample we removed all sequence from this location and re-estimated parameters.
+\caption{ {{\bf Parameter estimation using the complete and without Argentina data sets for serotype A.}} 
+To assess the impact of the over-representation of Argentina in our sample we remove all sequences from this location and re-estimate the parameters.
 1- All 131 sequences were used. 2- Time to most recent common ancestor. 3- Codon positions $1$, $2$ and $3$.
 Not surprisingly, the TMRCA estimated without Argentina is older, but note that the posterior CI's overlap.
 These results show that the influence of Argentinian samples in the estimates is limited and over-representation does not pose an important problem for this analysis.}
@@ -468,7 +468,8 @@ Rate ($\times 10^{-3}$)	&4.14 (3.39-4.98)	&3.46 (2.82-4.11)\\
 %%%%%%%%%
 %%%%%%%%%
 \begin{table}[h]
-\caption{ {{\bf Parameter estimation using the complete and without Ecuador data sets for serotype O.}} To assess the impact of the overrepresentation of Ecuador (90 sequences) our sample we removed all sequence from this location and re-estimated parameters.
+\caption{ {{\bf Parameter estimation using the complete and without Ecuador data sets for serotype O.}} 
+To assess the impact of the overrepresentation of Ecuador (90 sequences) our sample we remove all sequence from this location and re-estimate the parameters.
 1- All 167 sequences were used. 2- Time to most recent common ancestor. 3- Codon positions $1$, $2$ and $3$.
 Similarly to what we found for serotype A, the results here suggest that the Ecuadorian sequences do not change the parameter estimates dramatically.}
 \begin{center}
@@ -497,9 +498,9 @@ Rate ($\times 10^{-2}$)	&1.11 (0.91-1.32)&0.91 (0.63-1.21)\\
 \caption{ {{\bf 'Equal down-sampling' experiment for serotype A.}} 
 Five random down-sampled sub-samples were obtained and used for parameter inference.
 1-- $\times 10^{-3}$; 2 -- $\times 10^{-2}$; 3-- Probability distribution at root node; 4-- Kullback-Leibler divergence (see Text).
-It is clear that parameter estimates were consistent between sub-samples.
-The estimation of the root state, however, was the exception.
-The sub-sampled analyses showed less concentrated posteriors (when compared with the full data) and one sub-sample yielded a different root than was found for the other four. 
+It is clear that parameter estimates are consistent between sub-samples.
+The estimation of the root state, however, is the exception.
+The sub-sampled analyses show less concentrated posteriors (when compared with the full data) and one sub-sample yields a different root than was found for the other four. 
 }
 \begin{tabular}{cccccc}
 \toprule
@@ -524,9 +525,10 @@ Sub-sample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration
 \medskip
 \begin{minipage}{\textwidth}
 \begin{center}
- \caption{ {{\bf 'Equal down-sampling' experiment for serotype O.}} Five random down-sampled sub-samples were obtained and used for parameter inference.
+ \caption{ {{\bf 'Equal down-sampling' experiment for serotype O.}} 
+ Five random down-sampled sub-samples were obtained and used for parameter inference.
 1-- $\times 10^{-3}$; 2--  Probability at root node; 3-- Kullback-Leibler divergence (see Text).
-For serotype O both the parameter estimates and root location were in agreement between sub-samples, but  likewise to serotype A, yielded less concentrated posteriors (smaller KL divergences).}
+For serotype O both the parameter estimates and root location are in agreement between sub-samples, but likewise to serotype A, yield less concentrated posteriors (smaller KL divergences).}
 \begin{tabular}{cccccc}
 \toprule
 Su-bsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration rate$^{1}$ (95 \% BCI)	&Root (Pr$^{2}$) & KL$^3$\\
