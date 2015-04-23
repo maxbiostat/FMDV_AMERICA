@@ -34,7 +34,7 @@ Spatio-temporal Dynamics of Foot-and-Mouth Disease Virus in South America
 
 Although foot-and-mouth disease virus (FMDV) incidence has decreased in South America over the last years, the pathogen still circulates in the region and the risk of re-emergence in previously FMDV free areas is a public health concern. Here we merge environmental, epidemiological and genetic data to reconstruct spatiotemporal patterns and determinants of FMDV serotypes A and O dispersal in South America.
 Our dating analysis suggests that serotype A emerged in South America by ≈ 1930, while serotype O ≈ 1990.
-The rate of evolution was significantly higher for serotype A compared to serotype O.
+The rate of evolution was significantly higher for serotype O compared to serotype A.
 Phylogeographic inference identified two well-connected sub networks of viral flow, one including Venezuela, Colombia and Ecuador; another including Brazil, Uruguay and Argentina.
 The spread of serotype A was best described by geographic distances, while trade of live cattle was the strongest predictor of serotype O spread. Our findings show that the two serotypes have different underlying evolutionary and spatial dynamics and may pose different threats to control programmes.
 
