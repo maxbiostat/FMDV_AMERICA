@@ -86,7 +86,7 @@ $\ast$ E-mail: lm.carvalho@ed.ac.uk
 \end{flushleft}
 % Please keep the abstract between 250 and 300 words
 \section*{Abstract}
-Although foot-and-mouth disease virus (FMDV) incidence has decreased in South America over the last years, the pathogen still circulates in the region and the risk of re-emergence in previously FMDV-free areas is a public health concern.
+Although foot-and-mouth disease virus (FMDV) incidence has decreased in South America over the last years, the pathogen still circulates in the region and the risk of re-emergence in previously FMDV-free areas is a veterinary public health concern.
 In this paper we merge environmental, epidemiological and genetic data to reconstruct spatiotemporal patterns and determinants of FMDV serotypes A and O dispersal in South America.
 Our dating analysis suggests that serotype A emerged in South America around 1930, while serotype O emerged around 1990.
 The rate of evolution for serotype A  was significantly higher compared to serotype O.
@@ -115,7 +115,7 @@ Serotype C on the other hand was last encountered in the continent in $1995$ in 
 Historical reports suggest that FMDV arrived in South America in the late years of the 19th century with European colonization~\cite{Naranjo2013, tully}. 
 By the 1970s, FMD was widespread in the region, with several large-scale epidemics being caused by multiple subtypes~\cite{Saraiva2003}.
 In South America, FMD control and eradication has traditionally been pursued using a combination of mass vaccination programs~\cite{vaccinationSA} and control of animal movements from areas in which FMDV infection was suspected.
-Over time, passive and active surveillance programs have, with different degrees of success, succeeded in the early detection of FMDV.
+Over time, passive and active surveillance programs have, with different degrees of success, managed the early detection of FMDV.
 In order to achieve complete eradication however, the strains involved in epidemics - especially those in previously FMDV-free areas - need to be accurately characterised.
 
 Phylogenetic analyses have proven useful in recovering the transmission pathways from genetic data~\cite{cottam2007, cottam2008} and providing insight into the processes that drive re-emergence~\cite{combining}.
@@ -206,7 +206,7 @@ Likewise, Brazil is highly connected in the serotype A network but not on the se
 \subsubsection*{Preferential Spread of FMDV across neighbouring countries}
 
 We compare the transition counts between countries that share borders and those that do not and find that for serotype A the posterior median transition count between neighboring countries amounts to $22$ (95 \% HPD: $17$--$27$) while ``non-border'' transitions have a posterior median of $4$ (95~\% HPD: $0$--$7$). 
-For serotype O, we observer similar results, with $16$ ($13$--$20$) and $1$ ($0$--$3$) location-transitions being observed for border (B) and non-bordering (NB) countries, respectively.
+For serotype O, we observe similar results, with $16$ ($13$--$20$) and $1$ ($0$--$3$) location-transitions being observed for border (B) and non-bordering (NB) countries, respectively.
 Considering each South American country as a possible discrete state, there are $72$ possible transitions ($34$ B and $38$ NB transitions).
 For serotype A, these numbers have to be adjusted because we have samples from $8$ countries, resulting in $\text{B} = 26$ and $\text{NB} = 30$.
 Remarkably, however, the importance of long-range migration routes seems to differ for both serotypes, since the posterior median proportion of ``non-border'' transitions is considerably different (A: $0.14$, $0.00$--$0.28$  and O: $0.05$, $0.00$--$0.20$).
@@ -347,6 +347,9 @@ Each data set was aligned using the MUSCLE~\cite{muscle} algorithm implemented i
 Data on animal trade were obtained from the FAO database (\url{http://faostat.fao.org/}).
 We retrieved data on the detailed trade matrix for cattle, pigs and sheep (number of live animals exchanged) covering the period from 1986 to 2009, for each of the nine countries.
 Serotype-specific outbreak notifications were obtained from FMD Bioportal (\url{http://fmdbioportal.ucdavis.edu:8080/}).
+
+\subsubsection*{Data availability}
+All the data used in this paper, as well as code to produce many of the plots/analyses and BEAST XML files are hosted at \url{https://github.com/maxbiostat/FMDV_AMERICA}.
 
 \subsection*{Phylogenetic Analysis}
 
