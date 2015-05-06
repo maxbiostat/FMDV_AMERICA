@@ -30,7 +30,7 @@ Spatio-temporal Dynamics of Foot-and-Mouth Disease Virus in South America
 
 10 - Centre for Immunology, Infection and Evolution at the University of Edinburgh, Edinburgh, United Kingdom.
 
-## Abstract
+## Abstract ([arXiv](http://arxiv.org/abs/1505.01105))
 
 Although foot-and-mouth disease virus (FMDV) incidence has decreased in South America over the last years, the pathogen still circulates in the region and the risk of re-emergence in previously FMDV free areas is a public health concern. Here we merge environmental, epidemiological and genetic data to reconstruct spatiotemporal patterns and determinants of FMDV serotypes A and O dispersal in South America.
 Our dating analysis suggests that serotype A emerged in South America by ≈ 1930, while serotype O ≈ 1990.
