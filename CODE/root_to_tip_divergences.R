@@ -3,11 +3,14 @@
 library(devtools)
 source_url("https://raw.githubusercontent.com/maxbiostat/CODE/master/R/PHYLO/find_best_rooting.R")
 library(ape)
-mltree.A <- read.tree("../DATA/SEQUENCES/serotype_A_ML_tree_GTR_G.newick")
-mltree.O <- read.tree("../DATA/SEQUENCES/serotype_O_ML_tree_GTR_G.newick")
+mltree.A <- read.tree("../DATA/SEQUENCES/serotype_A.newick")
+mltree.O <- read.tree("../DATA/SEQUENCES/serotype_O.newick")
 
+lastf <- function(x) x[length(x)]
+rm(get.ages)
+get.ages <- function(tree) as.numeric(unlist(lapply(strsplit(tree$tip.label, "_"), function(x) lastf(x))))
 brootingA <- find_best_rooting(tree = mltree.A)
-brootingO <- find_best_rooting(tree = mltree.O)
+brootingO <- find_best_rooting(tree = mltree.O, Optim = FALSE)
 
 brootingA$table$serotype <- rep("A", nrow(brootingA$table))
 brootingO$table$serotype <- rep("O", nrow(brootingO$table))
@@ -15,8 +18,8 @@ brootingO$table$serotype <- rep("O", nrow(brootingO$table))
 forplot <- rbind(brootingA$table, brootingO$table)
 
 library(ggplot2)
-p <- qplot(dates, rdv, data = forplot, colour = serotype) 
 pdf("../FIGURES/PLOTS/rdvs.pdf")
+p <- qplot(dates, rdv, data = forplot, colour = serotype) 
 p +
   geom_point(size = 3) +
   stat_smooth(method = "lm", se = TRUE) +
