@@ -1,4 +1,4 @@
-LOCUS       AJ004645                1009 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ004645                1009 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus, isolate O3/Venezuela/51, VP3/VP1.
 ACCESSION   AJ004645
 VERSION     AJ004645.1  GI:3786098
@@ -49,7 +49,7 @@ ORIGIN
       901 aacatactgc cccaggcccc tgctggccat tcacccgact gaagctagac acaagcagaa
       961 gattgtggca cctgtgaaac agactttgaa ctttgacctt ctcaaactg
 //
-LOCUS       AJ306212                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ306212                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus O 1D gene for VP1 protein, strain O
             Rivadavia/Arg/94, genomic RNA.
 ACCESSION   AJ306212
@@ -113,7 +113,7 @@ ORIGIN
       541 aagagggccg aaacatactg tccaaggccc ttgctggcaa tccacccaac tgaagccaga
       601 cacaaacaga aaattgtggc accggtgaaa cagactttg
 //
-LOCUS       AJ308705                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ308705                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus O partial 1D gene for VP1 protein,
             genomic RNA, strain O1/Arg/77.
 ACCESSION   AJ308705
@@ -173,7 +173,7 @@ ORIGIN
       541 aagagggccg aaacatactg tccaaggccc ttgctggcaa tccacccaac tgaagccaga
       601 cacaaacaga aaattgtggc accggtgaaa cagactttg
 //
-LOCUS       AJ308706                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ308706                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus O partial 1D gene for VP1 protein,
             genomic RNA, strain O1/Lujan/Arg/83.
 ACCESSION   AJ308706
@@ -234,7 +234,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttctggcca ttcatccgtc tgaagctaga
       601 tacaagcaga agattgtggc acctgtgaaa caaaccttg
 //
-LOCUS       AJ308707                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ308707                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus O partial 1D gene for VP1 protein,
             genomic RNA, strain O1/Ayacucho/Arg/90.
 ACCESSION   AJ308707
@@ -295,7 +295,7 @@ ORIGIN
       541 aagagggccg naacatactg tccaaggccc ttgctggcaa tccacccaac tgaagccaga
       601 gacaaacaga aaattgtggc accggtgaaa cagactttg
 //
-LOCUS       AJ308708                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ308708                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus O partial 1D gene for VP1 protein,
             genomic RNA, strain O1/Chapaleufu/Arg/92.
 ACCESSION   AJ308708
@@ -356,7 +356,7 @@ ORIGIN
       541 aagagggccg agacatactg tcccaggccc ctgctggcaa tccacccaac tgacgccaga
       601 cacaaacaga aaattgtggc accggtgaaa caaactctg
 //
-LOCUS       AM180025                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180025                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O partial gene for polyprotein,
             VP1 region, isolate Mercedes00.
 ACCESSION   AM180025
@@ -417,7 +417,7 @@ ORIGIN
       541 aagagggctg aaacatactg ccccaggcct cttctggcca ttcacccaac tgaagctaga
       601 cacaagcaga agattgtggc acctgtgaaa cagactttg
 //
-LOCUS       AM180026                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180026                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O partial gene for polyprotein,
             VP1 region, isolate Bermejo00.
 ACCESSION   AM180026
@@ -478,7 +478,7 @@ ORIGIN
       541 aagagggctg aaacatactg ccccaggcct cttctggcca ttcacccaac tgaagctaga
       601 cacaagcaga agattgtggc acctgtgaaa cagactttg
 //
-LOCUS       AM180027                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180027                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O partial gene for polyprotein,
             VP1 region, isolate Clorinda00A.
 ACCESSION   AM180027
@@ -539,7 +539,7 @@ ORIGIN
       541 aagagggctg aaacatactg ccccaggcct cttctggcca ttcacccaac tgaagctaga
       601 cacaagcaga agattgtggc acctgtgaaa cagactttg
 //
-LOCUS       AM180028                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180028                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O partial gene for polyprotein,
             VP1 region, isolate Clorinda00B.
 ACCESSION   AM180028
@@ -600,7 +600,7 @@ ORIGIN
       541 aagagggctg aaacatactg ccccaggcct cttctggcca ttcacccaac tgaagctaga
       601 cacaagcaga agattgtggc acctgtgaaa cagactttg
 //
-LOCUS       AM180029                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180029                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O partial gene for polyprotein,
             VP1 region, isolate Misiones00.
 ACCESSION   AM180029
@@ -661,7 +661,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttttggcaa ttcacccagc tgaagctaga
       601 cacaagcaga agattgtggc acctgtgaaa cagaccttg
 //
-LOCUS       AM180030                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180030                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O partial gene for polyprotein,
             VP1 region, isolate SMartin00.
 ACCESSION   AM180030
@@ -722,44 +722,7 @@ ORIGIN
       541 aagagggctg aaacgtactg ccccaggcct cttctggcca ttcacccaac tgaagctaga
       601 cacaagcaga agattgtggc acctgtgaaa cagactttg
 //
-LOCUS       APHVP1OC                 668 bp ss-RNA     linear   VRL 18-OCT-2016
-DEFINITION  Foot & mouth disease virus capsid protein VP1, serotype O1Campos/
-            Brazil/71.
-ACCESSION   K01201
-VERSION     K01201.1  GI:210544
-KEYWORDS    capsid protein.
-SOURCE      Foot-and-mouth disease virus
-  ORGANISM  Foot-and-mouth disease virus
-            Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA
-            stage; Picornavirales; Picornaviridae; Aphthovirus.
-REFERENCE   1  (bases 1 to 668)
-  AUTHORS   Cheung,A., DeLamarter,J., Weiss,S. and Kupper,H.
-  TITLE     Comparison of the major antigenic determinants of different
-            serotypes of foot-and-mouth disease virus
-  JOURNAL   J. Virol. 48 (2), 451-459 (1983)
-  PUBMED    6194313
-COMMENT     Original source text: Foot and mouth disease virus cDNA to viral
-            RNA, serotype O1Campos/Brazil/71.
-FEATURES             Location/Qualifiers
-     source          1..668
-                     /organism="Foot-and-mouth disease virus"
-                     /mol_type="genomic RNA"
-                     /db_xref="taxon:12110"
-ORIGIN      
-        1 accacttctg cgggcgagtc agcggatcct gtcaccgcca ctgttgaaaa ctacggtggc
-       61 gaaacacaga tccagaggcg ccaacacacg gacgtctcgt tcatcatgga cagatttgtg
-      121 aaagtgacac cgcaaaacca aattaacatt ttggacctca tgcagattcc atcacacact
-      181 ttggtgggag cgctcctacg cgcgtccact tactacttct ctgacttgga gatagcagta
-      241 aaacacgagg gagacctcac ctgggttcca aatggagcgc ctgaaaaggc gttggacaac
-      301 accaccaacc caactgctta ccacaaggca ccactcaccc ggcttgccct gccctacacc
-      361 gcgccccacc gcgtgttggc aaccgtgtac aacggtgagt gcaggtacag cagaaatgct
-      421 gtgcccaacg tgagaggtga ccttcaggtg ttggctcaaa aggtggcacg gacgctgcct
-      481 acctccttca actacggtgc catcaaagcg acccgggtca ccgagttgct ttaccggatg
-      541 aagagggccg aaacatactg tccaaggccc ttgctggcaa tccacccaac tgaagccaga
-      601 cacaaacaga aaattgtggc accggtgaaa cagactttga attttgacct tctcaagttg
-      661 gcaggaga
-//
-LOCUS       AY593814                8199 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593814                8199 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus O isolate o1argentina iso5, complete
             genome.
 ACCESSION   AY593814
@@ -978,7 +941,7 @@ ORIGIN
      8101 cacgacaacc gggctctgag gcgcgcgaca ccgtaggagt gaaaatcccg aaagggcttt
      8161 tcccgcttcc ttaatccaaa aaaaaaaaaa aaaaaaaaa
 //
-LOCUS       AY593818                8195 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593818                8195 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus O isolate o1campos iso96, complete
             genome.
 ACCESSION   AY593818
@@ -1197,7 +1160,7 @@ ORIGIN
      8101 aggccacgac aaccgggctc tgaggcgcgc gacaccgtag gagtgaaaat cccgaaaggg
      8161 cttttcccgc ttccttaatc aaaaaaaaaa aaaaa
 //
-LOCUS       AY593819                8197 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593819                8197 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus O isolate o1campos94 iso94, complete
             genome.
 ACCESSION   AY593819
@@ -1416,7 +1379,7 @@ ORIGIN
      8101 aggccacgac aaccgggctc tgaggcgcgc gacaccgtag gagtgaaaat cccgaaaggg
      8161 cttttcccgc ttccttaatc caaaaaaaaa aaaaaaa
 //
-LOCUS       AY593820                8195 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593820                8195 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus O isolate o1canefa iso59, complete
             genome.
 ACCESSION   AY593820
@@ -1635,7 +1598,7 @@ ORIGIN
      8101 aggccacgac aaccgggctc tgaggcgcgc gacaccgtag gagtgaaaat cccgaaaggg
      8161 cttttcccgc ttccttaatc aaaaaaaaaa aaaaa
 //
-LOCUS       AY593821                8204 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593821                8204 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus O isolate o1caseros iso35, complete
             genome.
 ACCESSION   AY593821
@@ -1854,7 +1817,7 @@ ORIGIN
      8101 agatcacaat tggcacaatg attctgaggc gcgcgacacc gtaggagtga aaagcccgaa
      8161 aggacttttt tcccgcttcc aattcagaaa aaaaaaaaaa aaaa
 //
-LOCUS       AY593825                8159 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593825                8159 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus O isolate o1valle iso64, complete
             genome.
 ACCESSION   AY593825
@@ -2072,7 +2035,7 @@ ORIGIN
      8041 tgacgcataa tccctcagag actacaattg gcacaatgac tctggggcgc gcgacgccgt
      8101 aggagtgaaa agtccgaaaa gggctttccc cgcttcctta ttctaaaaaa aaaaaaaaa
 //
-LOCUS       AY593827                8169 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593827                8169 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus O isolate o3venezuela iso15, complete
             genome.
 ACCESSION   AY593827
@@ -2291,7 +2254,7 @@ ORIGIN
      8101 ccgtaggagt gaaaagctcg aagggctttt tcccgcttcc ctatccaaaa aaaaaaaaaa
      8161 aaaaaaaaa
 //
-LOCUS       DQ834705                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834705                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Argentina/00 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834705
@@ -2352,7 +2315,7 @@ ORIGIN
       541 aagagggctg aaacatactg ccccaggcct cttctggcca ttcacccaac tgaagctaga
       601 cacaagcaga agattgtggc acctgtgaaa cagactttg
 //
-LOCUS       DQ834706                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834706                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/RS/Bra/00 VP1 (1D)
             gene, partial cds.
 ACCESSION   DQ834706
@@ -2413,7 +2376,7 @@ ORIGIN
       541 aagagggccg agacatactg ccccagacct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa cagaccttg
 //
-LOCUS       DQ834707                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834707                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Artigas/Uru/00 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834707
@@ -2474,7 +2437,7 @@ ORIGIN
       541 aagagggctg aaacatactg ccccaggcct cttttggcaa ttcacccagc tgaagctaga
       601 cacaagcaga agattgtggc acctgtgaaa cagaccttg
 //
-LOCUS       DQ834708                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834708                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Tarija/Bol/00 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834708
@@ -2535,7 +2498,7 @@ ORIGIN
       541 aagagggccg agacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa cagaccttg
 //
-LOCUS       DQ834709                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834709                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Tarija/Bol/01 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834709
@@ -2596,7 +2559,7 @@ ORIGIN
       541 aagagggccg agacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa cagaccttg
 //
-LOCUS       DQ834710                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834710                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Canindeyu/Par/02
             VP1 (1D) gene, partial cds.
 ACCESSION   DQ834710
@@ -2657,7 +2620,7 @@ ORIGIN
       541 aagagggctg aaacatactg ccccaggcct cttttggcaa ttcacccgac tgaagctaga
       601 cacaagcaga agattgtggc acctgtgaaa cagaccttg
 //
-LOCUS       DQ834711                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834711                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pozo Hondo/Par/03
             VP1 (1D) gene, partial cds.
 ACCESSION   DQ834711
@@ -2718,7 +2681,7 @@ ORIGIN
       541 aagagggccg agacatactg ccccaggcct cttttggcca ttcacccatc tgaagctagg
       601 cacaagcaga agattgtggc acctgtgaag cagaccttg
 //
-LOCUS       DQ834712                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834712                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Chuquisaca/Bol/03
             VP1 (1D) gene, partial cds.
 ACCESSION   DQ834712
@@ -2779,7 +2742,7 @@ ORIGIN
       541 aagagggccg agacatactg ccccaggcct cttttggcca ttcacccatc tgaagctagg
       601 cacaagcaga agattgtggc acctgtgaag cagaccttg
 //
-LOCUS       DQ834713                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834713                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Potosi/Bol/03 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834713
@@ -2840,7 +2803,7 @@ ORIGIN
       541 aagagggccg agacatactg ccccaggcct cttttggcca ttcacccatc tgaagctagg
       601 cacaagcaga agattgtggc acctgtgaag cagaccttg
 //
-LOCUS       DQ834714                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834714                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/MS(1a)/Bra/05 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834714
@@ -2901,7 +2864,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa caaaccttg
 //
-LOCUS       DQ834715                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834715                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/MS(1b)/Bra/05 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834715
@@ -2962,7 +2925,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa caaaccttg
 //
-LOCUS       DQ834716                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834716                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/MS(1c)/Bra/05 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834716
@@ -3023,7 +2986,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa caaaccttg
 //
-LOCUS       DQ834717                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834717                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/MS(1d)/Bra/05 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834717
@@ -3084,7 +3047,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa caaaccttg
 //
-LOCUS       DQ834718                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834718                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/MS(1e)/Bra/05 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834718
@@ -3145,7 +3108,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa caaaccttg
 //
-LOCUS       DQ834719                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834719                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/MS(1f)/Bra/05 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834719
@@ -3206,7 +3169,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa caaaccttg
 //
-LOCUS       DQ834720                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834720                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/MS(1g)/Bra/05 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834720
@@ -3267,7 +3230,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgngaaa ccaaccnng
 //
-LOCUS       DQ834721                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834721                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/MS(1h)/Bra/05 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834721
@@ -3328,7 +3291,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa caaaccttg
 //
-LOCUS       DQ834722                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834722                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/MS(1i)/Bra/05 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834722
@@ -3389,7 +3352,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa caaaccttg
 //
-LOCUS       DQ834723                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834723                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/MS(1j)/Bra/05 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834723
@@ -3450,7 +3413,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa caaaccttg
 //
-LOCUS       DQ834724                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834724                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/MS(2)/Bra/05 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834724
@@ -3511,7 +3474,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa caaaccttg
 //
-LOCUS       DQ834725                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834725                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/MS(3)/Bra/05 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834725
@@ -3572,7 +3535,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa caaaccttg
 //
-LOCUS       DQ834726                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834726                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/MS(4)/Bra/05 VP1
             (1D) gene, partial cds.
 ACCESSION   DQ834726
@@ -3633,7 +3596,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa caaaccttg
 //
-LOCUS       DQ834727                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       DQ834727                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Corrientes/Arg/06
             VP1 (1D) gene, partial cds.
 ACCESSION   DQ834727
@@ -3694,7 +3657,7 @@ ORIGIN
       541 aagagggccg agacatactg ccccaggcct cttttggccg ttcacccatc tgaagctagg
       601 cacaagcaga agatcgtggc acctgtgaaa cagagcttg
 //
-LOCUS       HQ695737                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695737                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pando/Bol/00 VP1
             gene, partial cds.
 ACCESSION   HQ695737
@@ -3750,7 +3713,7 @@ ORIGIN
       541 aagagggccg agacatactg ccccagacct ctcttggcca ttcatccgag tgaggctaga
       601 cacaagcaga agattgtggc acctgtgaaa cag
 //
-LOCUS       HQ695738                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695738                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Tarija/Bol/00(a)
             VP1 gene, partial cds.
 ACCESSION   HQ695738
@@ -3806,7 +3769,7 @@ ORIGIN
       541 aagagggccg agacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa cag
 //
-LOCUS       HQ695739                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695739                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Potosi/Bol/01 VP1
             gene, partial cds.
 ACCESSION   HQ695739
@@ -3862,7 +3825,7 @@ ORIGIN
       541 aagagggccg agacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa cag
 //
-LOCUS       HQ695740                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695740                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Tarija/Bol/01(a)
             VP1 gene, partial cds.
 ACCESSION   HQ695740
@@ -3918,7 +3881,7 @@ ORIGIN
       541 aagagggccg agacatactg ccccaggcct cttttggcca ttcacccatc tgaagctaga
       601 cacaagcaga agatcgtggc acctgtgaaa cag
 //
-LOCUS       HQ695741                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695741                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Beni/Bol/01 VP1
             gene, partial cds.
 ACCESSION   HQ695741
@@ -3974,7 +3937,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccagacct cttttggcca ttcatccgag tgaggctaga
       601 cacaagcaga agattgtggc acctgtgaaa cag
 //
-LOCUS       HQ695742                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695742                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/La Paz/Bol/02(a)
             VP1 gene, partial cds.
 ACCESSION   HQ695742
@@ -4030,7 +3993,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccagacct cttttggcca ttcatccgag tgaggctaga
       601 cacaagcaga agattgtggc acctgtgaaa cag
 //
-LOCUS       HQ695743                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695743                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/La Paz/Bol/02(b)
             VP1 gene, partial cds.
 ACCESSION   HQ695743
@@ -4086,7 +4049,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccagacct cttttggcca ttcatccgag tgaggctaga
       601 cacaagcaga agattgtggc acctgtgaaa cag
 //
-LOCUS       HQ695744                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695744                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/La Paz/Bol/02(c)
             VP1 gene, partial cds.
 ACCESSION   HQ695744
@@ -4142,7 +4105,7 @@ ORIGIN
       541 aagagggccg aaacatactg ccccagacct cttttggcca ttcatccgag tgaggctaga
       601 cacaagcaga agattgtggc acctgtgaaa cag
 //
-LOCUS       HQ695745                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695745                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Potosi/Bol/03(a)
             VP1 gene, partial cds.
 ACCESSION   HQ695745
@@ -4198,7 +4161,7 @@ ORIGIN
       541 aagagggccg agacatactg ccccaggcct cttttggcca ttcacccatc tgaagctagg
       601 cacaagcaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695746                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695746                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Santa_Cruz/Bol/07
             VP1 gene, partial cds.
 ACCESSION   HQ695746
@@ -4254,7 +4217,7 @@ ORIGIN
       541 aagagggctg aaacatactg tcccagacct cttctggcca ttcacccaac tgaggccaga
       601 cacaaacaaa agattgtggc acctgtgaaa caa
 //
-LOCUS       HQ695747                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695747                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Cundinamarca/Col/94(a) VP1 gene, partial cds.
 ACCESSION   HQ695747
@@ -4310,7 +4273,7 @@ ORIGIN
       541 aagagggctg agacatactg tccgaggcct ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695748                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695748                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Santander/Col/94
             VP1 gene, partial cds.
 ACCESSION   HQ695748
@@ -4366,7 +4329,7 @@ ORIGIN
       541 aagagggctg agacatactg tccgaggcct ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695749                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695749                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Boyaca/Col/94(a)
             VP1 gene, partial cds.
 ACCESSION   HQ695749
@@ -4422,7 +4385,7 @@ ORIGIN
       541 aagagggctg agacatactg cccgaggcct ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695750                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695750                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Boyaca/Col/94(b)
             VP1 gene, partial cds.
 ACCESSION   HQ695750
@@ -4478,7 +4441,7 @@ ORIGIN
       541 aagagggctg agacatactg tccgaggcct ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695751                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695751                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Boyaca/Col/94(c)
             VP1 gene, partial cds.
 ACCESSION   HQ695751
@@ -4534,7 +4497,7 @@ ORIGIN
       541 aagagggctg agacatactg cccgaggcct ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695752                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695752                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Valle/Col/94 VP1
             gene, partial cds.
 ACCESSION   HQ695752
@@ -4590,7 +4553,7 @@ ORIGIN
       541 aagagggctg agacatactg tccgaggcct ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695753                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695753                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Boyaca/Col/94(d)
             VP1 gene, partial cds.
 ACCESSION   HQ695753
@@ -4646,7 +4609,7 @@ ORIGIN
       541 aagagggctg agacatactg tccgaggccc ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695754                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695754                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Cundinamarca/Col/94(b) VP1 gene, partial cds.
 ACCESSION   HQ695754
@@ -4702,7 +4665,7 @@ ORIGIN
       541 aagagggctg agacatactg tccgaggcct ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695755                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695755                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Cundinamarca/Col/94(c) VP1 gene, partial cds.
 ACCESSION   HQ695755
@@ -4758,7 +4721,7 @@ ORIGIN
       541 aagagggctg agacatactg tccgaggcct ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695756                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695756                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Cundinamarca/Col/94(d) VP1 gene, partial cds.
 ACCESSION   HQ695756
@@ -4814,7 +4777,7 @@ ORIGIN
       541 aagagggctg agacatactg tccgaggcct ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695757                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695757                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Cundinamarca/Col/94(e) VP1 gene, partial cds.
 ACCESSION   HQ695757
@@ -4870,7 +4833,7 @@ ORIGIN
       541 aagagggctg agacatactg tccgaggcct ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695758                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695758                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Cauca/Col/94(a) VP1
             gene, partial cds.
 ACCESSION   HQ695758
@@ -4926,7 +4889,7 @@ ORIGIN
       541 aagagggctg agacatactg tccaagaccc ttgctggcaa tccacccaac ggaagccaga
       601 cacaaacaga aaattgtggc accggtgaaa cag
 //
-LOCUS       HQ695759                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695759                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Cundinamarca/Col/94(f) VP1 gene, partial cds.
 ACCESSION   HQ695759
@@ -4982,7 +4945,7 @@ ORIGIN
       541 gagagggctg agacatactg tccgaggcct ttgctggcaa tttccccaac cgaagccaga
       601 cacaaacaga aaattgtggg accagtgaag cag
 //
-LOCUS       HQ695760                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695760                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Narino/Col/94 VP1
             gene, partial cds.
 ACCESSION   HQ695760
@@ -5038,7 +5001,7 @@ ORIGIN
       541 aagagggctg agacatactg tccaagaccc ttgctggcaa tccacccaac ggaagccaga
       601 cacaaacaga aaattgtggc accggtgaaa cag
 //
-LOCUS       HQ695761                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695761                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Cauca/Col/94(b) VP1
             gene, partial cds.
 ACCESSION   HQ695761
@@ -5094,7 +5057,7 @@ ORIGIN
       541 aagagggccg agacatactg tccaagaccc ttgctggcaa tccacccaac ggaagccaga
       601 cacaaacaga aaatcgtggc accggtgaaa cag
 //
-LOCUS       HQ695762                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695762                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Casanare/Col/94 VP1
             gene, partial cds.
 ACCESSION   HQ695762
@@ -5150,7 +5113,7 @@ ORIGIN
       541 aagagggccg agacatactg tccaaggccc ttgctggcga tccacccaac tgaagccaga
       601 cacaaacaaa aaattgtggc gccggtgaaa cag
 //
-LOCUS       HQ695763                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695763                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Cundinamarca/Col/95(a) VP1 gene, partial cds.
 ACCESSION   HQ695763
@@ -5206,7 +5169,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ttgctggcaa tncacccaac ggaggccaga
       601 cacaaacaga aaattgtagc acctgtgaag cag
 //
-LOCUS       HQ695764                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695764                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Cundinamarca/Col/95(b) VP1 gene, partial cds.
 ACCESSION   HQ695764
@@ -5262,7 +5225,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccgaggcct ttgctggcaa ttcacccaaa ccaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695765                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695765                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Cundinamarca/Col/95(c) VP1 gene, partial cds.
 ACCESSION   HQ695765
@@ -5318,7 +5281,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccgaggcct ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695766                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695766                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Cundinamarca/Col/95(d) VP1 gene, partial cds.
 ACCESSION   HQ695766
@@ -5374,7 +5337,7 @@ ORIGIN
       541 aagagggctg agacatactg tccgaggcct ttgctggcaa ttcacccagc cgaagccaga
       601 cacaaacaga agattgtggc accagtgaag cag
 //
-LOCUS       HQ695767                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695767                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Cundinamarca/Col/95(e) VP1 gene, partial cds.
 ACCESSION   HQ695767
@@ -5430,7 +5393,7 @@ ORIGIN
       541 aagagggctg agacatactg tccgaggcct ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695768                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695768                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Cundinamarca/Col/95(f) VP1 gene, partial cds.
 ACCESSION   HQ695768
@@ -5486,7 +5449,7 @@ ORIGIN
       541 aagagggctg agacatactg tccgaggcct ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695769                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695769                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Cundinamarca/Col/95(g) VP1 gene, partial cds.
 ACCESSION   HQ695769
@@ -5542,7 +5505,7 @@ ORIGIN
       541 aagagggctg agacatactg tccgaggcct ttgctggcaa ttcacccaac cgaagccaga
       601 cacaaacaga aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695770                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695770                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Narino/Col/98(a)
             VP1 gene, partial cds.
 ACCESSION   HQ695770
@@ -5598,7 +5561,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ttgttggcaa tccacccaac ggaggccaga
       601 cacaaacaga aaattgtagc acctgtgaag cag
 //
-LOCUS       HQ695771                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695771                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Cauca/Col/98 VP1
             gene, partial cds.
 ACCESSION   HQ695771
@@ -5654,7 +5617,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ttgttggcaa tccacccaac ggaggccaga
       601 cacaaacaga aaattatagc acctgtgaag cag
 //
-LOCUS       HQ695772                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695772                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Narino/Col/98(b)
             VP1 gene, partial cds.
 ACCESSION   HQ695772
@@ -5710,7 +5673,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ttgttggcaa tccacccaac ggaggccaga
       601 cacaaacaga aaattgtagc acctgtgaag cag
 //
-LOCUS       HQ695773                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695773                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Narino/Col/98(c)
             VP1 gene, partial cds.
 ACCESSION   HQ695773
@@ -5766,7 +5729,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ttgttggcaa tccacccaac ggaggccaga
       601 cacaaacaga aaattatagc acctgtgaag cag
 //
-LOCUS       HQ695774                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695774                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Narino/Col/99 VP1
             gene, partial cds.
 ACCESSION   HQ695774
@@ -5822,7 +5785,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ttgttggcaa tccacccaac ggaggccaga
       601 cacaaacaga aaattgtagc acctgtgaag cag
 //
-LOCUS       HQ695775                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695775                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Narino/Col/00(a)
             VP1 gene, partial cds.
 ACCESSION   HQ695775
@@ -5878,7 +5841,7 @@ ORIGIN
       541 aagagggctg aggcgtactg tccaagacca ttgttggcaa tccacccaac ggaggccaga
       601 cacaaacaga aaattgtggc acctgtgaag cag
 //
-LOCUS       HQ695776                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695776                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Narino/Col/00(b)
             VP1 gene, partial cds.
 ACCESSION   HQ695776
@@ -5934,7 +5897,7 @@ ORIGIN
       541 aagagggctg aggcgtactg tccaagacca ttgttggcaa tccacccaac ggaggccaga
       601 cacaaacaga aaattgtggc acctgtgaag cag
 //
-LOCUS       HQ695777                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695777                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Cundinamarca/Col/00
             VP1 gene, partial cds.
 ACCESSION   HQ695777
@@ -5990,7 +5953,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccgaggcct ttgctggcaa tccacccaac tgaggccagg
       601 cacaaacaaa aaattgtggc accagtgaag cag
 //
-LOCUS       HQ695778                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695778                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Narino/Col/00(c)
             VP1 gene, partial cds.
 ACCESSION   HQ695778
@@ -6046,7 +6009,7 @@ ORIGIN
       541 aagagggctg aggcgtactg tccaagacca ttgttggcaa tccacccaac ggaggccaga
       601 cacaaacaga aaattgtggc acctgcgaag cag
 //
-LOCUS       HQ695779                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695779                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Narino/Col/00(d)
             VP1 gene, partial cds.
 ACCESSION   HQ695779
@@ -6102,7 +6065,7 @@ ORIGIN
       541 aagagggctg aggcgtactg tccaagacca ttgttggcaa tccacccaac ggaggccaga
       601 cacaaacaga aaattgtggc acctgcgaag cag
 //
-LOCUS       HQ695780                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695780                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Narino/Col/02 VP1
             gene, partial cds.
 ACCESSION   HQ695780
@@ -6158,7 +6121,7 @@ ORIGIN
       541 aagagggctg agacgtactg cccaagacca ctgttggcaa tccacccaac ggaggccaga
       601 cacaaacaga agattatagc acctatgaag cag
 //
-LOCUS       HQ695781                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695781                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Cucuta/N.de
             Santander/Col/08(a) VP1 gene, partial cds.
 ACCESSION   HQ695781
@@ -6214,7 +6177,7 @@ ORIGIN
       541 aagagggccg aaacatactg tccaagaccc ctgctggcaa tccaccctga agacgccaga
       601 cacaagcaga aaattgtggc gccggtgaaa cag
 //
-LOCUS       HQ695782                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695782                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Cucuta/N.de
             Santander/Col/08(b) VP1 gene, partial cds.
 ACCESSION   HQ695782
@@ -6270,7 +6233,7 @@ ORIGIN
       541 aagagggccg aaacatactg tccaagaccc ctgctggcaa tccaccctga agacgccaga
       601 cacaagcaga aaattgtggc gccggtgaaa cag
 //
-LOCUS       HQ695783                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695783                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Esmeraldas/Ecu/02
             (003-02) VP1 gene, partial cds.
 ACCESSION   HQ695783
@@ -6326,7 +6289,7 @@ ORIGIN
       541 aagagggccg agacatactg tccaagaccc ttgctggcaa tccacccaac ggaagccaga
       601 cacaaacaga agattgtggc accggtgaaa cag
 //
-LOCUS       HQ695784                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695784                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/02
             (027-02) VP1 gene, partial cds.
 ACCESSION   HQ695784
@@ -6382,7 +6345,7 @@ ORIGIN
       541 aagagggctg agacgtactg cccaaggcca ctgttggcaa tccacccaac ggaggccaga
       601 cacaaacaga agattatagc acctatgaag cag
 //
-LOCUS       HQ695785                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695785                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/02
             (071-02) VP1 gene, partial cds.
 ACCESSION   HQ695785
@@ -6438,7 +6401,7 @@ ORIGIN
       541 aaaagggctg agacgtactg tccaagacca ctattggcaa tccacccaac ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695786                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695786                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Napo/Ecu/03
             (005-03) VP1 gene, partial cds.
 ACCESSION   HQ695786
@@ -6494,7 +6457,7 @@ ORIGIN
       541 aaaagggctg agacgtactg tccaagacca ctattggcaa tccacccaac ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695787                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695787                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Napo/Ecu/03
             (009-03) VP1 gene, partial cds.
 ACCESSION   HQ695787
@@ -6550,7 +6513,7 @@ ORIGIN
       541 aaaagggctg agacgtactg tccaagacca ctattggcaa tccacccaac ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695788                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695788                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Sucumbios/Ecu/03
             (016-03) VP1 gene, partial cds.
 ACCESSION   HQ695788
@@ -6606,7 +6569,7 @@ ORIGIN
       541 aaaagggctg agacgtactg tccgagacca ctattggcaa ttcacccaac ggaggccaga
       601 cacaaacaaa agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695789                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695789                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Sucumbios/Ecu/03
             (019-03) VP1 gene, partial cds.
 ACCESSION   HQ695789
@@ -6662,7 +6625,7 @@ ORIGIN
       541 aaaagggctg agacgtactg tccgagacca ctattggcaa ttcacccaac ggaggccaga
       601 cataaacaaa agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695790                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695790                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Sucumbios/Ecu/03
             (020-03) VP1 gene, partial cds.
 ACCESSION   HQ695790
@@ -6718,7 +6681,7 @@ ORIGIN
       541 aaaagggctg agacgtactg tccgagacca ctattggcaa ttcacccaac ggaggccaga
       601 cacaaacaaa agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695791                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695791                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Loja/Ecu/03
             (025-03) VP1 gene, partial cds.
 ACCESSION   HQ695791
@@ -6774,7 +6737,7 @@ ORIGIN
       541 aaaagggctg agacgtactg tccaagacca ctattggcaa tccacccaac ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695792                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695792                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Loja/Ecu/03
             (027-03) VP1 gene, partial cds.
 ACCESSION   HQ695792
@@ -6830,7 +6793,7 @@ ORIGIN
       541 aaaagggctg agacgtactg tccaagacca ctattggcaa tccacccaac ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695793                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695793                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Sucumbios/Ecu/03
             (028-03) VP1 gene, partial cds.
 ACCESSION   HQ695793
@@ -6886,7 +6849,7 @@ ORIGIN
       541 aaaagggctg agacgtactg tccgagacca ctattggcaa ttcacccaac ggaggccaga
       601 cacaaacaaa agattgtggc acccgtgaag cag
 //
-LOCUS       HQ695794                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695794                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Sucumbios/Ecu/03
             (029-03) VP1 gene, partial cds.
 ACCESSION   HQ695794
@@ -6942,7 +6905,7 @@ ORIGIN
       541 aaaagggctg agacgtactg tccgagacca ctattggcaa ttcacccaac ggaggccaga
       601 cacaaacaaa agattgtggc acctgtaaag cag
 //
-LOCUS       HQ695795                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695795                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Sucumbios/Ecu/04
             (002-04) VP1 gene, partial cds.
 ACCESSION   HQ695795
@@ -6998,7 +6961,7 @@ ORIGIN
       541 aaaagggctg agacgtactg tccgagacca ctattggcaa ttcacccaac ggaggccaga
       601 cacaaacaaa agattgtggc acccgtgaag cag
 //
-LOCUS       HQ695796                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695796                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Cotopaxi/Ecu/04
             (034-04) VP1 gene, partial cds.
 ACCESSION   HQ695796
@@ -7054,7 +7017,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcag tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695797                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695797                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Tsachila/Ecu/04
             (035-04) VP1 gene, partial cds.
 ACCESSION   HQ695797
@@ -7110,7 +7073,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695798                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695798                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Imbabura/Ecu/04
             (038-04) VP1 gene, partial cds.
 ACCESSION   HQ695798
@@ -7166,7 +7129,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695799                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695799                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Tsachila/Ecu/04
             (039-04) VP1 gene, partial cds.
 ACCESSION   HQ695799
@@ -7222,7 +7185,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695800                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695800                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Cotopaxi/Ecu/04
             (040-04) VP1 gene, partial cds.
 ACCESSION   HQ695800
@@ -7278,7 +7241,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695801                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695801                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Carchi/Ecu/04
             (041-04) VP1 gene, partial cds.
 ACCESSION   HQ695801
@@ -7334,7 +7297,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695802                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695802                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Carchi/Ecu/04
             (042-04) VP1 gene, partial cds.
 ACCESSION   HQ695802
@@ -7390,7 +7353,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695803                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695803                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Bolivar/Ecu/04
             (043-04) VP1 gene, partial cds.
 ACCESSION   HQ695803
@@ -7446,7 +7409,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695804                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695804                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Tsachila/Ecu/04
             (045-04) VP1 gene, partial cds.
 ACCESSION   HQ695804
@@ -7502,7 +7465,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695805                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695805                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Cotopaxi/Ecu/04
             (048-04) VP1 gene, partial cds.
 ACCESSION   HQ695805
@@ -7558,7 +7521,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695806                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695806                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/04
             (050-04) VP1 gene, partial cds.
 ACCESSION   HQ695806
@@ -7614,7 +7577,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccagg
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695807                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695807                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Guayas/Ecu/04
             (057-04) VP1 gene, partial cds.
 ACCESSION   HQ695807
@@ -7670,7 +7633,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695808                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695808                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/04
             (064-04) VP1 gene, partial cds.
 ACCESSION   HQ695808
@@ -7726,7 +7689,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695809                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695809                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Cotopaxi/Ecu/04
             (067-04) VP1 gene, partial cds.
 ACCESSION   HQ695809
@@ -7782,7 +7745,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695810                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695810                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/04
             (070-04) VP1 gene, partial cds.
 ACCESSION   HQ695810
@@ -7838,7 +7801,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695811                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695811                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Los Rios/Ecu/04
             (071-04) VP1 gene, partial cds.
 ACCESSION   HQ695811
@@ -7894,7 +7857,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695812                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695812                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Carchi/Ecu/04
             (072-04) VP1 gene, partial cds.
 ACCESSION   HQ695812
@@ -7950,7 +7913,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695813                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695813                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Los Rios/Ecu/04
             (074-04) VP1 gene, partial cds.
 ACCESSION   HQ695813
@@ -8006,7 +7969,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695814                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695814                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Esmeraldas/Ecu/04
             (097-04) VP1 gene, partial cds.
 ACCESSION   HQ695814
@@ -8062,7 +8025,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695815                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695815                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Cotopaxi/Ecu/04
             (099-04) VP1 gene, partial cds.
 ACCESSION   HQ695815
@@ -8118,7 +8081,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695816                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695816                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Imbabura/Ecu/04
             (101-04) VP1 gene, partial cds.
 ACCESSION   HQ695816
@@ -8174,7 +8137,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695817                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695817                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Tsachila/Ecu/04
             (106-04) VP1 gene, partial cds.
 ACCESSION   HQ695817
@@ -8230,7 +8193,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acccgtgaag cag
 //
-LOCUS       HQ695818                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695818                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/05
             (01-05) VP1 gene, partial cds.
 ACCESSION   HQ695818
@@ -8286,7 +8249,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaaa cag
 //
-LOCUS       HQ695819                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695819                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Esmeraldas/Ecu/05
             (08-05) VP1 gene, partial cds.
 ACCESSION   HQ695819
@@ -8342,7 +8305,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga ggaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695820                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695820                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Esmeraldas/Ecu/05
             (10-05) VP1 gene, partial cds.
 ACCESSION   HQ695820
@@ -8398,7 +8361,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa tccatccaga cgaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695821                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695821                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/El Oro/Ecu/05
             (12-05) VP1 gene, partial cds.
 ACCESSION   HQ695821
@@ -8454,7 +8417,7 @@ ORIGIN
       541 aagagggctg agacgtactg cccaaggcca ctgttggcaa tccacccaac ggaagccaga
       601 cacaaacaga agatcatagc acctgtgaag cag
 //
-LOCUS       HQ695822                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695822                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Guayas/Ecu/05
             (13-05) VP1 gene, partial cds.
 ACCESSION   HQ695822
@@ -8510,7 +8473,7 @@ ORIGIN
       541 aagagggccg agacatactg tccaaggccc ttgctggcaa tccacccaac ggaggccaga
       601 cgcaaacaga aaattgtggc accggtgaaa caa
 //
-LOCUS       HQ695823                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695823                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/El Oro/Ecu/05
             (16-05) VP1 gene, partial cds.
 ACCESSION   HQ695823
@@ -8566,7 +8529,7 @@ ORIGIN
       541 aagagggctg agacgtactg cccaaggcca ctgttggcaa tccacccaac ggaagccaga
       601 cacaaacaga agatcatagc acctgtgaag cag
 //
-LOCUS       HQ695824                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695824                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/05
             (20-05) VP1 gene, partial cds.
 ACCESSION   HQ695824
@@ -8622,7 +8585,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaaggcca ctgttggcaa tccacccaac ggagcccaga
       601 cacaaacaga aaattgtggc acctgtcaag cag
 //
-LOCUS       HQ695825                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695825                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Imbabura/Ecu/05
             (23-05) VP1 gene, partial cds.
 ACCESSION   HQ695825
@@ -8678,7 +8641,7 @@ ORIGIN
       541 aagagggctg agacttactg cccaagacca ctgttggcga tccacccaac ggaggccaga
       601 cacaaacaga agattatagc acccacgaaa cag
 //
-LOCUS       HQ695826                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695826                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/05
             (24-05) VP1 gene, partial cds.
 ACCESSION   HQ695826
@@ -8734,7 +8697,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaaggcca ctgttggcaa tccacccaac ggagcccaga
       601 cacaaacaga aaattgtggc acctgtcaag cag
 //
-LOCUS       HQ695827                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695827                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/El Oro/Ecu/05
             (28-05) VP1 gene, partial cds.
 ACCESSION   HQ695827
@@ -8790,7 +8753,7 @@ ORIGIN
       541 aagagggctg agacgtactg cccaaggcca ctgttggcaa tccacccaac ggaagccaga
       601 cacaaacaga agatcatagc acctgtgaag cag
 //
-LOCUS       HQ695828                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695828                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/05
             (31-05) VP1 gene, partial cds.
 ACCESSION   HQ695828
@@ -8846,7 +8809,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaaggcca ctgttggcaa tccacccaac ggagcccaga
       601 cacaaacaga aaattgtgac acctgtcaag cag
 //
-LOCUS       HQ695829                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695829                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/05
             (32-05) VP1 gene, partial cds.
 ACCESSION   HQ695829
@@ -8902,7 +8865,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaaggcca ctgttggcaa tccacccaac ggagcccaga
       601 cacaaacaga aaattgtggc acctgtcaag cag
 //
-LOCUS       HQ695830                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695830                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/05
             (33-05) VP1 gene, partial cds.
 ACCESSION   HQ695830
@@ -8958,7 +8921,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaaggcca ctgttggcaa tccacccaac ggagcccaga
       601 cacaaacaga aaattgtggc acctgtcaag cag
 //
-LOCUS       HQ695831                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695831                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/05
             (35-05) VP1 gene, partial cds.
 ACCESSION   HQ695831
@@ -9014,7 +8977,7 @@ ORIGIN
       541 aagagggctg agacgtactg cccaaggcca ctgttggcaa tccacccaac ggaagccaga
       601 cacaaacaga agatcatagc acctgtgaag cag
 //
-LOCUS       HQ695832                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695832                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Esmeraldas/Ecu/05
             (37-05) VP1 gene, partial cds.
 ACCESSION   HQ695832
@@ -9070,7 +9033,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaagacca ctgctggcaa ttcatccaga cgaggccaga
       601 cacaaacaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695833                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695833                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/05
             (40-05) VP1 gene, partial cds.
 ACCESSION   HQ695833
@@ -9126,7 +9089,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaaggcca ctgttggcaa tccacccaac ggagcccaga
       601 cacaaacaga aaattgtggc acctgtcaag cag
 //
-LOCUS       HQ695834                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695834                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/05
             (44-05) VP1 gene, partial cds.
 ACCESSION   HQ695834
@@ -9182,7 +9145,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaaggcca ctgttggcaa tccacccaac ggagcccaga
       601 cacaaacaga aaattgtggc acctgtcaag cag
 //
-LOCUS       HQ695835                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695835                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/05
             (52-05) VP1 gene, partial cds.
 ACCESSION   HQ695835
@@ -9238,7 +9201,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaaggcca ctgttggcaa tccacccaac ggagcccaga
       601 cacaaacaga aaattgtggc acctgtcaag cag
 //
-LOCUS       HQ695836                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695836                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/05
             (54-05) VP1 gene, partial cds.
 ACCESSION   HQ695836
@@ -9294,7 +9257,7 @@ ORIGIN
       541 aagagggctg agacgtactg tccaaggcca ctgttggcaa tccacccaac ggagcccaga
       601 cacaaacaga aaattgtggc acctgtcaag cag
 //
-LOCUS       HQ695837                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695837                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/06
             (03-06) VP1 gene, partial cds.
 ACCESSION   HQ695837
@@ -9350,7 +9313,7 @@ ORIGIN
       541 aggagggctg agacgtactg cccaaggcca ctgctggcaa tccacccaac ggaagccaga
       601 cacaaacaga agatcatagc acctgtgaag cag
 //
-LOCUS       HQ695838                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695838                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/06
             (04-06) VP1 gene, partial cds.
 ACCESSION   HQ695838
@@ -9406,7 +9369,7 @@ ORIGIN
       541 aggagggctg agacgtactg cccaaggcca ctgctggcaa tccacccaac ggaagccaga
       601 cacaaacaga agatcatagc acctgtgaag cag
 //
-LOCUS       HQ695839                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695839                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Tsachila/Ecu/06
             (17-06) VP1 gene, partial cds.
 ACCESSION   HQ695839
@@ -9462,7 +9425,7 @@ ORIGIN
       541 aagagggctg agacgtactg cccaagacca ctattggcaa tccacccaac ggaggccaga
       601 cacaaacaga ggattgtggc acctgtgaag cag
 //
-LOCUS       HQ695840                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695840                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Imbabura/Ecu/07
             (13-07) VP1 gene, partial cds.
 ACCESSION   HQ695840
@@ -9518,7 +9481,7 @@ ORIGIN
       541 aagagagctg agacttactg cccaagacca ctgttggcga tccacccaac ggaggccaga
       601 cacaaacaga agattatagc acccgcgaaa cag
 //
-LOCUS       HQ695841                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695841                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Pichincha/Ecu/07(s.n) VP1 gene, partial cds.
 ACCESSION   HQ695841
@@ -9574,7 +9537,7 @@ ORIGIN
       541 aagagggctg agacttactg cccaagacca ctgttggcga tccacccaac ggaggccaga
       601 cacaaacaga agattatagc acccgcgaaa cag
 //
-LOCUS       HQ695842                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695842                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Esmeraldas/Ecu/08
             (11-08) VP1 gene, partial cds.
 ACCESSION   HQ695842
@@ -9630,7 +9593,7 @@ ORIGIN
       541 aagagggccg agatgtactg tccaagacca ctgctggcga tccatccaac ggagaccaga
       601 cacaagcaga agattgtggc acctgtgaag cag
 //
-LOCUS       HQ695843                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695843                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Los Rios/Ecu/08
             (14-08) VP1 gene, partial cds.
 ACCESSION   HQ695843
@@ -9686,7 +9649,7 @@ ORIGIN
       541 aagagggctg aaacatactg tccaagacca ctattggcaa tccacccagc ggacgctagg
       601 tacaaacaga agattgtagc acctgtgaaa cag
 //
-LOCUS       HQ695844                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695844                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Lima/Peru/04 VP1
             gene, partial cds.
 ACCESSION   HQ695844
@@ -9742,7 +9705,7 @@ ORIGIN
       541 aaaagggctg agacgtactg tccgagacca ctattggcaa tccacccaac ggaggccaga
       601 cacaaacaga agattgtggc acccgtgaag cag
 //
-LOCUS       HQ695845                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695845                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Yaracuy/Ven/03(21081) VP1 gene, partial cds.
 ACCESSION   HQ695845
@@ -9798,7 +9761,7 @@ ORIGIN
       541 aagagggctg agacttactg tccgaggccc ttactggcta tccacccaac tgaagccaga
       601 cacaaacaga aaattgtggc accgttgaaa cag
 //
-LOCUS       HQ695846                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695846                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Merida/Ven/04(21237) VP1 gene, partial cds.
 ACCESSION   HQ695846
@@ -9854,7 +9817,7 @@ ORIGIN
       541 aagagggccg aaacatactg tccaagaccc ctgctggcaa tccacccaac aggtgccaga
       601 cacaaacaga agatcgtggc gccggtgaaa cag
 //
-LOCUS       HQ695847                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695847                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Trujillo/Ven/05(21378) VP1 gene, partial cds.
 ACCESSION   HQ695847
@@ -9910,7 +9873,7 @@ ORIGIN
       541 aagagggctg aaacatactg tccaagaccc ctgctggcaa tccaccctgt ggccaccaga
       601 cacaaacaga agattgtggc gccggtgaaa cag
 //
-LOCUS       HQ695848                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695848                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Zulia/Ven/05(21386)
             VP1 gene, partial cds.
 ACCESSION   HQ695848
@@ -9966,7 +9929,7 @@ ORIGIN
       541 aagagggctg aaacatactg tccaagaccc ctgctggcaa tccaccctgt ggccaccaga
       601 cacaaacaga agattgtggc gccggtgaaa cag
 //
-LOCUS       HQ695849                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695849                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Trujillo/Ven/06(21522) VP1 gene, partial cds.
 ACCESSION   HQ695849
@@ -10022,7 +9985,7 @@ ORIGIN
       541 aagagggctg aaacatactg cccaagaccc ctgctggcaa tccaccctga ggacgccaga
       601 cacaaacaga agattgtggc gccggtgaaa cag
 //
-LOCUS       HQ695850                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       HQ695850                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate
             O/Trujillo/Ven/07(21555) VP1 gene, partial cds.
 ACCESSION   HQ695850
@@ -10078,7 +10041,7 @@ ORIGIN
       541 aagagggctg aaacatactg tccaagaccc ctgctggcaa tccaccctgc ggacgccaga
       601 cacaaacaga agattgtggc gccggtgaaa cag
 //
-LOCUS       JN005890                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005890                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Los
             Rios/Ecu/09(12-09) VP1 gene, partial cds.
 ACCESSION   JN005890
@@ -10139,7 +10102,7 @@ ORIGIN
       541 aagagggctg aaacatactg tccaagacca ctattagcaa tccacccaga ggacgctagg
       601 cacaaacaga agattgtagc acctgtgaag cag
 //
-LOCUS       JN005891                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005891                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Esmeraldas/Ecu/09
             (16-09) VP1 gene, partial cds.
 ACCESSION   JN005891
@@ -10200,7 +10163,7 @@ ORIGIN
       541 aagagggctg aaacatactg tccaagacca ctattggcaa tccacccagc ggacgctagg
       601 tacaaacaga ggattgtagc acctgtgaag cag
 //
-LOCUS       JN005892                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005892                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Napo/Ecu/09 (39-09)
             VP1 gene, partial cds.
 ACCESSION   JN005892
@@ -10261,7 +10224,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005893                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005893                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Tsachila/Ecu/09
             (50-09) VP1 gene, partial cds.
 ACCESSION   JN005893
@@ -10322,7 +10285,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005894                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005894                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/09
             (65-09) VP1 gene, partial cds.
 ACCESSION   JN005894
@@ -10383,7 +10346,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005895                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005895                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Carchi/Ecu/09
             (76-09) VP1 gene, partial cds.
 ACCESSION   JN005895
@@ -10444,7 +10407,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005896                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005896                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Tsachila/Ecu/09
             (78-09) VP1 gene, partial cds.
 ACCESSION   JN005896
@@ -10505,7 +10468,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005897                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005897                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Napo/Ecu/09 (83-09)
             VP1 gene, partial cds.
 ACCESSION   JN005897
@@ -10566,7 +10529,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005898                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005898                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/09
             (85-09) VP1 gene, partial cds.
 ACCESSION   JN005898
@@ -10627,7 +10590,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaatgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005899                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005899                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Guayas/Ecu/09
             (86-09) VP1 gene, partial cds.
 ACCESSION   JN005899
@@ -10688,7 +10651,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005900                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005900                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Tungurahua/Ecu/09
             (89-09) VP1 gene, partial cds.
 ACCESSION   JN005900
@@ -10749,7 +10712,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005901                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005901                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/09
             (109-09) VP1 gene, partial cds.
 ACCESSION   JN005901
@@ -10810,7 +10773,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005902                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005902                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Cotopaxi/Ecu/09
             (126-09) VP1 gene, partial cds.
 ACCESSION   JN005902
@@ -10871,7 +10834,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005903                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005903                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/09
             (145-09) VP1 gene, partial cds.
 ACCESSION   JN005903
@@ -10932,7 +10895,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005904                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005904                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Chimborazo/Ecu/09
             (148-09) VP1 gene, partial cds.
 ACCESSION   JN005904
@@ -10993,7 +10956,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005905                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005905                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/09
             (153-09) VP1 gene, partial cds.
 ACCESSION   JN005905
@@ -11054,7 +11017,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005906                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005906                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Imbabura/Ecu/09
             (169-09) VP1 gene, partial cds.
 ACCESSION   JN005906
@@ -11115,7 +11078,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005907                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005907                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/09
             (178-09) VP1 gene, partial cds.
 ACCESSION   JN005907
@@ -11176,7 +11139,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005908                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005908                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Bolivar/Ecu/09
             (188-09) VP1 gene, partial cds.
 ACCESSION   JN005908
@@ -11237,7 +11200,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005909                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005909                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Tsachila/Ecu/10
             (10-10) VP1 gene, partial cds.
 ACCESSION   JN005909
@@ -11298,7 +11261,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aaggccacta ttggcaatcc acccaacgga cgctaggcac
       601 aaacagaaga ttgtggcacc tgtgaagcag
 //
-LOCUS       JN005910                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005910                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/10
             (15-10) VP1 gene, partial cds.
 ACCESSION   JN005910
@@ -11359,7 +11322,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccactg ctagcaatcc acccagagga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005911                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005911                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Los Rios/Ecu/10
             (21-10) VP1 gene, partial cds.
 ACCESSION   JN005911
@@ -11420,7 +11383,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccactg ctagcgatcc acccaaggga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005912                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005912                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Tsachila/Ecu/10
             (23-10) VP1 gene, partial cds.
 ACCESSION   JN005912
@@ -11481,7 +11444,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccactg ctagcgatcc acccaaggga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaaacag
 //
-LOCUS       JN005913                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005913                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Sucumbios/Ecu/10
             (28-10) VP1 gene, partial cds.
 ACCESSION   JN005913
@@ -11542,7 +11505,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccactg ctagcgatcc acccaaggga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005914                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005914                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Cotopaxi/Ecu/10
             (32-10) VP1 gene, partial cds.
 ACCESSION   JN005914
@@ -11603,7 +11566,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccactg ctagcgatcc acccaaggga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005915                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005915                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Imbabura/Ecu/10
             (34-10) VP1 gene, partial cds.
 ACCESSION   JN005915
@@ -11664,7 +11627,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccactg ctagcgatcc acccaaggga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005916                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005916                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Bolivar/Ecu/10
             (44-10) VP1 gene, partial cds.
 ACCESSION   JN005916
@@ -11725,7 +11688,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccactg ctagcgatcc acccaaggga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005917                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005917                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Napo/Ecu/10 (46-10)
             VP1 gene, partial cds.
 ACCESSION   JN005917
@@ -11786,7 +11749,7 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccactg ctagcgatcc acccaaggga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       JN005918                 630 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JN005918                 630 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/Orellana/Ecu/10
             (58-10) VP1 gene, partial cds.
 ACCESSION   JN005918
@@ -11847,7 +11810,44 @@ ORIGIN
       541 agggctgaaa catactgtcc aagaccactg ctagcgatcc acccaaggga cgctaggcac
       601 aaacagaaga ttgtagcacc tgtgaagcag
 //
-LOCUS       KC519630                2205 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       APHVP1OC                 668 bp ss-RNA     linear   VRL 24-OCT-2016
+DEFINITION  Foot & mouth disease virus capsid protein VP1, serotype O1Campos/
+            Brazil/71.
+ACCESSION   K01201
+VERSION     K01201.1  GI:210544
+KEYWORDS    capsid protein.
+SOURCE      Foot-and-mouth disease virus
+  ORGANISM  Foot-and-mouth disease virus
+            Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA
+            stage; Picornavirales; Picornaviridae; Aphthovirus.
+REFERENCE   1  (bases 1 to 668)
+  AUTHORS   Cheung,A., DeLamarter,J., Weiss,S. and Kupper,H.
+  TITLE     Comparison of the major antigenic determinants of different
+            serotypes of foot-and-mouth disease virus
+  JOURNAL   J. Virol. 48 (2), 451-459 (1983)
+  PUBMED    6194313
+COMMENT     Original source text: Foot and mouth disease virus cDNA to viral
+            RNA, serotype O1Campos/Brazil/71.
+FEATURES             Location/Qualifiers
+     source          1..668
+                     /organism="Foot-and-mouth disease virus"
+                     /mol_type="genomic RNA"
+                     /db_xref="taxon:12110"
+ORIGIN      
+        1 accacttctg cgggcgagtc agcggatcct gtcaccgcca ctgttgaaaa ctacggtggc
+       61 gaaacacaga tccagaggcg ccaacacacg gacgtctcgt tcatcatgga cagatttgtg
+      121 aaagtgacac cgcaaaacca aattaacatt ttggacctca tgcagattcc atcacacact
+      181 ttggtgggag cgctcctacg cgcgtccact tactacttct ctgacttgga gatagcagta
+      241 aaacacgagg gagacctcac ctgggttcca aatggagcgc ctgaaaaggc gttggacaac
+      301 accaccaacc caactgctta ccacaaggca ccactcaccc ggcttgccct gccctacacc
+      361 gcgccccacc gcgtgttggc aaccgtgtac aacggtgagt gcaggtacag cagaaatgct
+      421 gtgcccaacg tgagaggtga ccttcaggtg ttggctcaaa aggtggcacg gacgctgcct
+      481 acctccttca actacggtgc catcaaagcg acccgggtca ccgagttgct ttaccggatg
+      541 aagagggccg aaacatactg tccaaggccc ttgctggcaa tccacccaac tgaagccaga
+      601 cacaaacaga aaattgtggc accggtgaaa cagactttga attttgacct tctcaagttg
+      661 gcaggaga
+//
+LOCUS       KC519630                2205 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate ECU/4/2010
             polyprotein gene, partial cds.
 ACCESSION   KC519630
@@ -11937,7 +11937,7 @@ ORIGIN
      2101 cggatgaaga gggctgaaac atactgtcca agaccactgc tagcgatcca cccaagggac
      2161 gctaggcaca aacagaagat tgtagcacct gtgaaacaga ctctg
 //
-LOCUS       KJ831672                2199 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831672                2199 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/EQU/01/2010 capsid
             protein gene, partial cds.
 ACCESSION   KJ831672
@@ -12031,7 +12031,7 @@ ORIGIN
      2101 cggatgaaga gggctgaaac atactgtcca agaccactgc tagcgatcca cccaagggac
      2161 gctaggcaca aacagaagat tgtagcacct gtgaagcag
 //
-LOCUS       KJ831673                2199 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831673                2199 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/EQU/09/2010 capsid
             protein gene, partial cds.
 ACCESSION   KJ831673
@@ -12125,7 +12125,7 @@ ORIGIN
      2101 cggatgaaga gggctgaaac atactgtcca agaccactgc tagcgatcca cccaagggac
      2161 gctaggcaca aacagaagat tgtagcacct gtgaagcag
 //
-LOCUS       KJ831728                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831728                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate PAR/1/2002 capsid
             protein gene, partial cds.
 ACCESSION   KJ831728
@@ -12219,7 +12219,7 @@ ORIGIN
      2101 taccggatga agagggctga aacatactgc cccaggcctc ttttggcaat tcacccgact
      2161 gaagctagac acaagcagaa gattgtggca cctgtgaaac ag
 //
-LOCUS       KJ831729                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831729                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate PAR/2/2002 capsid
             protein gene, partial cds.
 ACCESSION   KJ831729
@@ -12313,7 +12313,7 @@ ORIGIN
      2101 taccggatga agagggctga aacatactgc cccaggcctc ttttggcaat tcacccgact
      2161 gaagctagac acaagcagaa gattgtggca cctgtgaaac ag
 //
-LOCUS       KJ831730                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831730                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate PER/10/93 capsid
             protein gene, partial cds.
 ACCESSION   KJ831730
@@ -12407,7 +12407,7 @@ ORIGIN
      2101 taccggatga agagggccga gacatactgt ccaagacccc tgctggcaat ccacccaacg
      2161 gaagccagac acaaacagaa aattgtggca ccggtgaaac ag
 //
-LOCUS       KJ831731                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831731                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate PER/14/93 capsid
             protein gene, partial cds.
 ACCESSION   KJ831731
@@ -12501,7 +12501,7 @@ ORIGIN
      2101 taccggatga agagggccga gacatactgt ccaagacccc tgctggcaat ccacccaacg
      2161 gaagccagac acaaacagaa aattgtggca ccggtgaaac ag
 //
-LOCUS       KJ831732                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831732                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate PER/5/94 capsid
             protein gene, partial cds.
 ACCESSION   KJ831732
@@ -12595,7 +12595,7 @@ ORIGIN
      2101 taccggatga agagggccga gacatactgt ccaagacccc tgctagcaat ccacccaacg
      2161 gaagccagac acaaacagaa aattgtggca ccggtgaaac ag
 //
-LOCUS       KJ831733                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831733                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate PER/6/94 capsid
             protein gene, partial cds.
 ACCESSION   KJ831733
@@ -12689,7 +12689,7 @@ ORIGIN
      2101 taccggatga agagggccga gacatactgt ccaagacccc tgctggcaat ccacccaacg
      2161 gaagccagac acaaacagaa aattgtggca ccggtgaaac ag
 //
-LOCUS       KJ831734                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831734                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate PER/7/94 capsid
             protein gene, partial cds.
 ACCESSION   KJ831734
@@ -12783,101 +12783,7 @@ ORIGIN
      2101 taccggatga agagggccga gacatactgt ccaagacccc tgctagcaat ccacccaacg
      2161 gaagccagac acaaacagaa aattgtggca ccggtgaaac ag
 //
-LOCUS       KJ831735                2202 bp    RNA     linear   VRL 18-OCT-2016
-DEFINITION  Foot-and-mouth disease virus - type O isolate PHI/3/95 capsid
-            protein gene, partial cds.
-ACCESSION   KJ831735
-VERSION     KJ831735.1  GI:765669654
-KEYWORDS    .
-SOURCE      Foot-and-mouth disease virus - type O (FMDV-O)
-  ORGANISM  Foot-and-mouth disease virus - type O
-            Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA
-            stage; Picornavirales; Picornaviridae; Aphthovirus.
-REFERENCE   1  (bases 1 to 2202)
-  AUTHORS   Reeve,R., Borley,D.W., Maree,F.F., Upadhyaya,S., Lukhwareni,A.,
-            Esterhuysen,J.J., Harvey,W.T., Blignaut,B., Fry,E.E., Parida,S.,
-            Paton,D.J. and Mahapatra,M.
-  TITLE     Tracking the Antigenic Evolution of Foot-and-Mouth Disease Virus
-  JOURNAL   PLoS ONE 11 (7), E0159360 (2016)
-  PUBMED    27448206
-  REMARK    Publication Status: Online-Only
-REFERENCE   2  (bases 1 to 2202)
-  AUTHORS   Borley,D. and Mahapatra,M.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (14-MAY-2014) The Pirbright Institute, Ash Road, Woking,
-            Surrey GU24 0NF, United Kingdom
-COMMENT     ##Assembly-Data-START## Assembly Method :: DNA Star Lasergene v. 11
-            Coverage :: Complete Sequencing Technology :: Sanger dideoxy
-            sequencing ##Assembly-Data-END##.
-FEATURES             Location/Qualifiers
-     source          1..2202
-                     /organism="Foot-and-mouth disease virus - type O"
-                     /mol_type="genomic RNA"
-                     /serotype="O"
-                     /isolate="PHI/3/95"
-                     /host="porcine"
-                     /db_xref="taxon:12118"
-                     /country="Philippines"
-                     /collection_date=1995
-     CDS             <1..>2202
-                     /note="P1; VP1-4"
-                     /codon_start=1
-                     /product="capsid protein"
-                     /protein_id="AJS13683.1"
-                     /db_xref="GI:765669655"
-                     /translation="GAGQSSPTTGSQNQSGNTGSIINNYYMQQYQNSMDTQLGDNAIS
-                     GGSNEGSTDTTSTHTNNTQNNDWFSKLANTAFSGLFGALLADKKTEETTLLEDRILTT
-                     RNGHTTSTTQSSVGVTYGYATAEDFVSGPNTSGLETRVVQAERFFKTHLFDWVTSDPF
-                     GRCHLLELPTDHKGVYGSLTDSYAYMRNGWDVEVTAVGNQFNGGCLLVAMVPELCSIN
-                     KRESYQLTLFPHQFINPRTNMTAHITVPYLGVNRYDQYKVHKPWTLVVMVVAPLTVNN
-                     EGAPQIKVYANIAPTNVHVAGELPSKEGIFPVACSDGYGGLVTTDPKTADPVYGKVFN
-                     PPRNLLPGRFTNLLDVAEACPTFLYFDGGVPYVTTKTDSDRVLAQFDLSLAAKHMSNT
-                     FLAGLAQYYTQYSGTINLHFMFTGPTDAKARYMVAYAPPGMEPPKTPEAAAHCIHAEW
-                     DTGLNSKFTFSIPYLSAADYAYTASDVAETTNVQGWVCLFQITHGKADGDALVVLASA
-                     GKDFDLRLPVDARTQTTSAGESADPVTATVENYGGETQVQRRQHTDIAFILDRFVKVK
-                     PKEQVNVLDLMQIPAHTLVGALLRTATYYFSDLELAVKHEGDLTWVPNGAPETALDNT
-                     TNPTAYHKEPLTRLALPYTAPHRVLATVYNGSSRYGDTSTNNVRGDLQVLAQKAERTL
-                     PTSFNFGAIKATRVTELLYRMKRAETYCPRPLLAIQPSDARHKQKIVAPAKQ"
-ORIGIN      
-        1 ggcgccgggc aatccagccc gacgaccggg tcacaaaacc aatctggcaa cactggtagc
-       61 atcattaaca actattacat gcagcagtac cagaactcaa tggacaccca acttggcgac
-      121 aacgccatta gtggagggtc caatgagggc tccacggaca ctacctctac ccacaccaac
-      181 aatacccaga acaacgactg gttttcaaaa ctggccaaca ccgctttcag cggcctcttc
-      241 ggtgctcttc ttgccgacaa aaagacggaa gaaaccaccc tcctcgaaga ccgcatcctc
-      301 accacccgca acgggcacac gacctcgaca acccagtcta gcgtcggggt gacgtacggg
-      361 tacgcaacgg ctgaagactt tgtgagtggg cctaacacct ctggtcttga gaccagagtc
-      421 gtccaggccg aacggttctt caaaacccac ctgtttgact gggtcaccag tgacccgttt
-      481 gggcggtgtc acttgttgga gctaccgact gaccacaaag gcgtctacgg cagcctgacc
-      541 gactcgtacg catacatgag gaacggttgg gacgttgaag tcaccgcagt ggggaaccag
-      601 ttcaacggag gttgtttgct ggtggcgatg gtaccggagc tctgctccat caacaagaga
-      661 gagtcgtacc agctcacgct tttcccccac cagttcatca acccacggac gaacatgacg
-      721 gcacacatca ccgtacccta cctcggtgtc aacaggtacg accagtacaa ggtacacaaa
-      781 ccctggaccc tcgtggtcat ggttgtggcc cccttgacgg ttaacaacga gggcgctccg
-      841 caaatcaagg tgtatgccaa catcgccccc accaatgttc acgtcgcggg cgagctccct
-      901 tcgaaagagg ggatcttccc cgtggcatgc agcgacggtt acggtggctt agtgaccacg
-      961 gatccgaaga cggcagaccc cgtctacggg aaagtgttca acccaccccg caacctgttg
-     1021 ccggggcggt ttacaaacct ccttgacgtg gccgaggcgt gtcccacgtt cctatacttc
-     1081 gacggtggcg tcccgtacgt gaccacgaag acggactcgg acagggtgct ggcccagttc
-     1141 gacttgtccc tcgcggcaaa acacatgtcg aacacctttc tcgcgggtct tgcccagtac
-     1201 tacacacagt acagcggcac cattaacctg cacttcatgt tcacggggcc caccgacgcg
-     1261 aaggcacgct acatggttgc gtacgcccct cctggcatgg agccgccgaa aacgcctgag
-     1321 gcggctgcac actgtatcca tgctgagtgg gacacagggc tgaattcgaa attcacgttt
-     1381 tcaatcccat acctttcggc agccgactac gcgtacaccg cgtccgacgt cgccgagacc
-     1441 acaaacgtgc agggatgggt ctgtttgttc cagataacac acgggaaagc cgacggtgat
-     1501 gccctggtcg tgctagctag tgctggcaaa gactttgact tgcgcctgcc ggttgacgcc
-     1561 cgaacccaaa ccacctctgc gggcgagtct gcggaccccg tgactgccac cgtcgagaac
-     1621 tacggtggtg agacacaagt ccagaggcgc cagcacacgg acattgcgtt catattggac
-     1681 aggttcgtga aagtcaaacc aaaggaacaa gttaatgtgt tggacctgat gcagatccct
-     1741 gcccacacct tggtaggggc gctcctgcga acggccacct actacttctc tgacctggaa
-     1801 ctggccgtca agcacgaggg cgatctcacc tgggtcccaa acggcgcccc tgagacagca
-     1861 ctggacaaca ctaccaaccc aacagcttac cacaaggaac cgctcacacg gctggcactg
-     1921 ccttacacgg ctccacaccg tgtcttagcg accgtctaca acgggagcag taggtacggt
-     1981 gacaccagca ctaacaacgt gagaggtgac cttcaagtgt tggctcagaa ggcagaaaga
-     2041 actctgccta cctccttcaa ctttggtgcc attaaggcaa ctcgtgtgac tgaactgctc
-     2101 tacagaatga agagagccga gacgtactgt cccaggcccc ttctcgccat tcaaccgagt
-     2161 gacgccaggc acaagcagaa gattgtggca cccgcaaaac ag
-//
-LOCUS       KJ831736                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831736                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate BRA/4/94 capsid
             protein gene, partial cds.
 ACCESSION   KJ831736
@@ -12971,101 +12877,7 @@ ORIGIN
      2101 taccggatga agagggctga aacatactgc cctcggcccc tgttggctat tcacccggcc
      2161 gaagctagac acaagcaaaa gattgtggca ccagtgaaac ag
 //
-LOCUS       KJ831737                2202 bp    RNA     linear   VRL 18-OCT-2016
-DEFINITION  Foot-and-mouth disease virus - type O isolate ALG/02/1999 capsid
-            protein gene, partial cds.
-ACCESSION   KJ831737
-VERSION     KJ831737.1  GI:765669658
-KEYWORDS    .
-SOURCE      Foot-and-mouth disease virus - type O (FMDV-O)
-  ORGANISM  Foot-and-mouth disease virus - type O
-            Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA
-            stage; Picornavirales; Picornaviridae; Aphthovirus.
-REFERENCE   1  (bases 1 to 2202)
-  AUTHORS   Reeve,R., Borley,D.W., Maree,F.F., Upadhyaya,S., Lukhwareni,A.,
-            Esterhuysen,J.J., Harvey,W.T., Blignaut,B., Fry,E.E., Parida,S.,
-            Paton,D.J. and Mahapatra,M.
-  TITLE     Tracking the Antigenic Evolution of Foot-and-Mouth Disease Virus
-  JOURNAL   PLoS ONE 11 (7), E0159360 (2016)
-  PUBMED    27448206
-  REMARK    Publication Status: Online-Only
-REFERENCE   2  (bases 1 to 2202)
-  AUTHORS   Borley,D., Upadhyaya,S., Paton,D. and Mahapatra,M.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (12-MAY-2014) The Pirbright Institute, Ash Road, Woking,
-            Surrey GU24 0NF, United Kingdom
-COMMENT     ##Assembly-Data-START## Assembly Method :: DNA Star Lasergene v. 11
-            Coverage :: Complete Sequencing Technology :: Sanger dideoxy
-            sequencing ##Assembly-Data-END##.
-FEATURES             Location/Qualifiers
-     source          1..2202
-                     /organism="Foot-and-mouth disease virus - type O"
-                     /mol_type="genomic RNA"
-                     /serotype="O"
-                     /isolate="ALG/02/1999"
-                     /host="bovine"
-                     /db_xref="taxon:12118"
-                     /country="Algeria"
-                     /collection_date=1999
-     CDS             <1..>2202
-                     /note="P1; VP1-4"
-                     /codon_start=1
-                     /product="capsid protein"
-                     /protein_id="AJS13685.1"
-                     /db_xref="GI:765669659"
-                     /translation="GAGQSSPATGSQNQSGNTGSIINNYYMQQYQNSMDTQLGDNAIS
-                     GGSNEGSTDTTSNHTTNTQNNDWFSKLASSAFSGLFGALLADKKTEETTLLEDRILTT
-                     RNGHTTSTTQSSVGVTYGYATAEDFVSGPNTSGLETRVVQAERFFKTHLFDWVTSDPF
-                     GRCHLLELPTDHKGVYGSLTDSYAYMRNGWDVEVTAVGNQFNGGCLLVAMVPELCSIQ
-                     ERELYQLTLFPHQFINPRTNMTAHITVPFVGVNRYDQYKQHKPWTLVVMVVAPLTVNN
-                     EGAPQIKVYANIAPTNVHVAGELPSKEGIFPVACSDGYGGLVTTDPKTADPAYGKVFN
-                     PPRNMLPGRFTNFLDVAEACPTFLHFEGDVPYVTTKTDSDRVLAQFDLSLASKHMSNT
-                     FLAGLAQYYTQYSGTINLHFMFTGPTDAKARYMIAYAPPGMEPPKTPEAAAHCIHAEW
-                     DTGLNSKFTFSIPYLSAADYAYTASDTAETTNVQGWVCLFQITHGKADGDALVVLASA
-                     GKDFELRLPVDARRQTTSPGESADPVTATVENYGGETQIQRRQHTDVSFILDRFVKVT
-                     PQEQINVLDLMQTPAHTLVGALLRTATYYFADLEVAVKHEGDLTWVPNGAPETALDNT
-                     TNPTAYHKAPLTRLALPYTAPHRVLATVYNGSCRYSGAVTPNVRGDLQVLARRAAPML
-                     PTSFNFGAIKATRVTELLYRMKRAETYCPRPLLAFHPSEARHKQKIVAPVKQ"
-ORIGIN      
-        1 ggagccgggc aatccagccc ggcgaccggg tcgcaaaacc aatcaggcaa cactgggagc
-       61 atcatcaaca actactacat gcaacagtac caaaattcca tggacacaca gcttggtgac
-      121 aacgccatca gtggaggctc taacgaggga tccacggaca caacctctaa ccacacaacc
-      181 aacactcaga acaacgactg gttttcaaaa ctggccagct cagccttcag cggtcttttc
-      241 ggcgcgcttc tcgccgacaa aaagaccgag gagaccacgc tcctcgaaga ccgcattctc
-      301 actacccgca acgggcacac aacctcgaca acccagtcga gcgttggagt cacttacggg
-      361 tacgcaacag ctgaggattt tgtgagtggg ccgaacacct ctggtcttga gacccgagtt
-      421 gttcaggcag agcggttttt caaaacccac ttgttcgact gggtcaccag tgacccgttc
-      481 ggacgctgcc acttgttgga gcttccaact gaccacaagg gtgtctacgg tagcttgact
-      541 gactcatatg cttatatgag aaatggttgg gacgttgaag tcaccgctgt gggcaaccag
-      601 ttcaacggtg ggtgccttct ggtagcaatg gtccctgagc tttgttccat ccaagagaga
-      661 gagctgtacc aactaacact tttcccacac cagttcatca acccccggac gaacatgacg
-      721 gcacacatca ctgtgccctt tgttggcgtc aaccgctacg accaatacaa acaacacaaa
-      781 ccctggaccc ttgtggtcat ggttgtagcc cccctgactg tcaacaatga aggtgcgcca
-      841 cagatcaagg tgtacgccaa catcgcccct accaacgtgc acgtcgcagg cgagctcccc
-      901 tctaaggagg ggatctttcc tgtggcctgt agcgacggtt acggcggttt ggtgaccacg
-      961 gacccaaaga cggctgaccc cgcttacggg aaagtgttca acccccctcg caacatgttg
-     1021 ccagggcggt tcaccaactt ccttgatgtg gctgaggcgt gccctacgtt tctgcacttt
-     1081 gagggcgacg taccatacgt gaccacaaag acagattcgg acagggtgct tgctcaattt
-     1141 gacttgtctt tggcttcaaa gcacatgtcg aacaccttcc ttgcaggtct tgcccagtac
-     1201 tacacacagt acagcggcac catcaacctg cacttcatgt tcacaggtcc cactgacgcg
-     1261 aaggcacgct atatgattgc ctacgcacca cctggcatgg agccgccaaa gacgcctgag
-     1321 gcggccgccc actgcattca tgccgagtgg gacacgggtt tgaactcaaa attcacattc
-     1381 tcgatcccgt acttgtcggc ggccgattac gcgtacaccg cgtctgacac tgccgaaacc
-     1441 acaaacgtac agggttgggt ctgtttgttc cagataacac acgggaaagc tgatggtgat
-     1501 gccttggtcg tgctggccag cgccggcaag gactttgagc tgcgtctacc agtggatgct
-     1561 cgtagacaga ccacctctcc gggtgagtca gctgaccccg tgactgccac tgtcgagaac
-     1621 tacggtggcg agacacagat tcagaggcgc caacacacgg acgtctcgtt tattctggac
-     1681 agatttgtga aagtgacacc acaagaacaa atcaatgtgt tagacttgat gcaaacccct
-     1741 gctcacacgc tggttggagc gctcctccgt accgccactt actacttcgc tgatttagaa
-     1801 gtggcagtaa aacacgaggg agacctcacg tgggtcccga acggggcgcc agaaacagct
-     1861 ctggacaaca ccaccaatcc aacagcatac cacaaagcac cgctcacgcg gcttgctctg
-     1921 ccgtatacgg caccccaccg tgtattggca actgtttaca acggaagttg taggtacagt
-     1981 ggagctgtga caccaaacgt gaggggcgac cttcaagttc tggcccggag ggcggcgccg
-     2041 atgctgccca cttctttcaa ctttggtgcc atcaaggcca ctcgggtgac tgagttgctt
-     2101 taccgcatga agagggctga gacgtactgc cctcggcccc tcctggcctt ccatccgagc
-     2161 gaagccaggc acaagcagaa gattgtggca cccgtgaaac aa
-//
-LOCUS       KJ831738                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831738                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate ARG/02/2000 capsid
             protein gene, partial cds.
 ACCESSION   KJ831738
@@ -13159,7 +12971,7 @@ ORIGIN
      2101 taccggatga agagggctga aacatactgc cccaggcctc ttctggccat tcacccaact
      2161 gaagctagac acaagcagaa gattgtggca cctgtgaaac ag
 //
-LOCUS       KJ831739                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831739                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate ARG/03/2000 capsid
             protein gene, partial cds.
 ACCESSION   KJ831739
@@ -13253,7 +13065,7 @@ ORIGIN
      2101 taccggatga agagggctga aacatactgc cccaggcctc ttctggccat tcacccaact
      2161 gaagctagac acaagcagaa gattgtggca cctgtgaaac ag
 //
-LOCUS       KJ831741                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831741                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/BRA/01/1992 capsid
             protein gene, partial cds.
 ACCESSION   KJ831741
@@ -13347,7 +13159,7 @@ ORIGIN
      2101 taccggatga agagggctga aacatactgc cctcggcccc tgttggccat tcacccggcc
      2161 gaagctagac acaagcaaaa gattgtggca ccagtgaaac ag
 //
-LOCUS       KJ831742                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831742                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/BRA/01/1994 capsid
             protein gene, partial cds.
 ACCESSION   KJ831742
@@ -13441,7 +13253,7 @@ ORIGIN
      2101 taccggatga agagggctga aacatactgc cctcggcccc tgttggccat tcacccggcc
      2161 gaagctagac acaagcaaaa gattgtggca ccagtgaaac ag
 //
-LOCUS       KJ831743                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831743                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/BRA/02/1994 capsid
             protein gene, partial cds.
 ACCESSION   KJ831743
@@ -13535,7 +13347,7 @@ ORIGIN
      2101 taccggatga agagggctga aacatactgc cctcggcccc tgttggccat tcacccggcc
      2161 gaagctagac acaagcaaaa gattgtggca ccagtgaaac ag
 //
-LOCUS       KJ831744                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831744                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/BRA/03/1994 capsid
             protein gene, partial cds.
 ACCESSION   KJ831744
@@ -13629,7 +13441,7 @@ ORIGIN
      2101 taccggatga agagggctga aacatactgc cctcggcccc tgttggccat tcacccggct
      2161 gaagctagac acaagcaaaa gattgtggca ccagtgaaac ag
 //
-LOCUS       KJ831745                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831745                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/BRA/05/1994 capsid
             protein gene, partial cds.
 ACCESSION   KJ831745
@@ -13723,7 +13535,7 @@ ORIGIN
      2101 taccggatga agagggctga aacatactgc cctcggcccc tgttggccat tcacccggcc
      2161 gaagctagac acaagcaaaa gattgtggca ccagtgaaac ag
 //
-LOCUS       KJ831746                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831746                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/BRA/06/1994 capsid
             protein gene, partial cds.
 ACCESSION   KJ831746
@@ -13817,7 +13629,7 @@ ORIGIN
      2101 taccggatga agagggctga aacatactgc cctcggcccc tgttggccat tcacccggcc
      2161 gaagctagac acaagcaaaa gattgtggca ccagtgaaac ag
 //
-LOCUS       KJ831747                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831747                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/BRA/08/1994 capsid
             protein gene, partial cds.
 ACCESSION   KJ831747
@@ -13911,7 +13723,7 @@ ORIGIN
      2101 taccggatga agagggctga aacatactgc cctcggcccc tgttggccat tcacccggcc
      2161 gaagctagac acaagcaaaa gattgtggca ccagtgaaac ag
 //
-LOCUS       KJ831748                2202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KJ831748                2202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type O isolate O/BRA/01/1995 capsid
             protein gene, partial cds.
 ACCESSION   KJ831748

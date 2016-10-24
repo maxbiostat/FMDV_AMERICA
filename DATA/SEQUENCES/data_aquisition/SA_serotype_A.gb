@@ -1,46 +1,4 @@
-LOCUS       A06733                   648 bp    RNA     linear   PAT 18-OCT-2016
-DEFINITION  Foot and mouth disease virus (A-24 Cruzeiro) RNA for capsid protein
-            VP-1.
-ACCESSION   A06733
-VERSION     A06733.1  GI:413681
-KEYWORDS    capsid protein VP1.
-SOURCE      Foot-and-mouth disease virus
-  ORGANISM  Foot-and-mouth disease virus
-            Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA
-            stage; Picornavirales; Picornaviridae; Aphthovirus.
-REFERENCE   1  (bases 1 to 648)
-  AUTHORS   Boothroyd,J.C. and Makoff,A.J.
-  TITLE     Novel antigens and vaccines containing them
-  JOURNAL   Patent: EP 0105481-A1 22 18-APR-1984; THE WELLCOME FOUNDATION
-            LIMITED
-FEATURES             Location/Qualifiers
-     source          1..648
-                     /organism="Foot-and-mouth disease virus"
-                     /mol_type="unassigned RNA"
-                     /db_xref="taxon:12110"
-     CDS             <1..>648
-                     /codon_start=1
-                     /product="capsid protein VP1"
-                     /protein_id="CAA00589.1"
-                     /db_xref="GI:1334778"
-                     /translation="TTTVENYGGETQIQRRHHTDIGFIMDRFVKIQSLSPTHVIDLMQ
-                     THQHGLVGALLRATTYYFSDLEIVVRHEGNLTWVPNGAPESALLNTSNPTAYNKAPFT
-                     RLALPYTAPHRVPATVYNGTSKYAVGGSGRRGDMGSLAARVVKQLPASFNYGAIKADA
-                     IHELLVRMKRAELYCPRPLLAIEVSSQDRHKQKIIAPAKQLLNFDLLKLAGDVESN"
-ORIGIN      
-        1 accaccaccg tggagaacta cggcggtgag acacaaatcc agagacgtca ccacacggac
-       61 attggtttca tcatggacag atttgtgaag atccaaagct tgagcccaac acatgtcatt
-      121 gacctcatgc agactcacca acacggtctg gtgggtgcct tgctgcgtgc aaccacgtac
-      181 tacttttctg acctggaaat tgttgtacgg cacgaaggca atctgacctg ggtgcccaac
-      241 ggcgcccctg aatcagccct gttgaacacc agcaacccca ctgcctacaa caaggcacca
-      301 ttcacgagac tcgctctccc ctacactgcg ccgcaccgtg tgccggcaac agtgtacaac
-      361 gggacgagta agtatgctgt gggtggttca ggcagaagag gcgacatggg gtctctcgcg
-      421 gcgcgagtcg tgaaacagct tcctgcttca tttaactacg gtgcaatcaa ggccgacgcc
-      481 atccacgaac ttctcgtgcg catgaaacgg gccgagctct actgccccag accgctgttg
-      541 gcaatagagg tgtcttcgca agacaggcac aagcaaaaga tcattgcacc agcaaagcag
-      601 cttctgaatt ttgacctgct caagttggcc ggagacgttg agtccaac
-//
-LOCUS       AJ251476                3579 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ251476                3579 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A gene for L, VP4, VP2, VP3, VP1, 2A,
             2B coding polyprotein, strain A24/Cruzeiro/Brazil/55.
 ACCESSION   AJ251476
@@ -196,7 +154,7 @@ ORIGIN
      3481 cttctgaatt ttgacctgct caagttggcc ggagacgttg agtccaaccc tgggcccttc
      3541 ttcttctccg acgttaggtc aaacttttcc aagctggta
 //
-LOCUS       AJ306219                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ306219                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A 1D gene for VP1 protein, strain A
             Alem/Arg/81, genomic RNA.
 ACCESSION   AJ306219
@@ -262,7 +220,7 @@ ORIGIN
       541 cgggccgagc tctactgccc cagaccactg ctggcaatag aggtgtcttc acaagacagg
       601 cacaaacaga agatcattgc acccgcaaaa cagtctctg
 //
-LOCUS       AJ306220                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ306220                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A 1D gene for VP1 protein, strain A 25
             de Mayo/Arg/87, genomic RNA.
 ACCESSION   AJ306220
@@ -328,7 +286,7 @@ ORIGIN
       541 cgggccgaac tctactgccc cagaccactg ctggcaatag aggtgtcttc acaagacaga
       601 cacaaacaga agatcattgc acccgcaaaa cagtctttg
 //
-LOCUS       AJ306221                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ306221                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A 1D gene for VP1 protein, strain A
             Utracan/Arg/87, genomic RNA.
 ACCESSION   AJ306221
@@ -394,7 +352,7 @@ ORIGIN
       541 cgggccgagc tctactgccc cagaccactg ctggcaacag aggtgccttc gcagggcagg
       601 tacaaacaga agattattgc acccgcaaaa cagaccctg
 //
-LOCUS       AJ306222                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ306222                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A 1D gene for VP1 protein, strain A
             Castellanos/Arg/87, genomic RNA.
 ACCESSION   AJ306222
@@ -460,7 +418,7 @@ ORIGIN
       541 cgggccgaac tctactgccc cagaccactg ctggcaatag aggtgtcttc acaagacaga
       601 cacaaacaga agatcattgc acccgcaaaa cagtctttg
 //
-LOCUS       AJ308694                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ308694                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A partial 1D gene for VP1 protein,
             genomic RNA, strain A/Arg/68.
 ACCESSION   AJ308694
@@ -521,7 +479,7 @@ ORIGIN
       541 cgggctgagc tctactgtcc tagacctctg ttggcaatag aggtgtcttc acaagatagg
       601 cacaagcaga agattattgc acccgcaaag cagctcttg
 //
-LOCUS       AJ308695                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ308695                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A partial 1D gene for VP1 protein,
             genomic RNA, strain A24/Bahia Blanca/Arg/71.
 ACCESSION   AJ308695
@@ -582,7 +540,7 @@ ORIGIN
       541 agagcggagc tgtactgccc cagaccactg ctggcagtag aagtgacttc acaakacagg
       601 cacaagcaga agattattgc acctgcaaag caactcctg
 //
-LOCUS       AJ308696                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ308696                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A partial 1D gene for VP1 protein,
             genomic RNA, strain A/Ayacucho/Arg/90.
 ACCESSION   AJ308696
@@ -643,7 +601,7 @@ ORIGIN
       541 cgggccgaac tctactgccc cagaccactg ttggcaatag aggtgtcttc acaagacaga
       601 cacaaacaaa agatcattgc acctgcaaaa cagtctttg
 //
-LOCUS       AJ308697                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ308697                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A partial 1D gene for VP1 protein,
             genomic RNA, strain A24/Cordoba/Arg/90.
 ACCESSION   AJ308697
@@ -703,7 +661,7 @@ ORIGIN
       541 cgggccgagc tctactgccc cagaccactg ttggcaatag aggtgtcttc gcaagacagg
       601 cacaaacaga ggatcattgc acccgcaaaa cagcttttg
 //
-LOCUS       AJ308698                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ308698                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A partial 1D gene for VP1 protein,
             genomic RNA, strain A/San Ignacio/Arg/90.
 ACCESSION   AJ308698
@@ -764,7 +722,7 @@ ORIGIN
       541 cgggccgaac tctactgccc cagaccactg ttggcaatag aggtgtcttc acaagacaga
       601 cacaaacaaa agatcattgc acctgcaaaa cagtctttg
 //
-LOCUS       AJ308699                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ308699                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A partial 1D gene for VP1 protein,
             genomic RNA, strain A/Rivadavia/Arg/91.
 ACCESSION   AJ308699
@@ -825,7 +783,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ctggcaatag aggtgtcttc ccaagacaga
       601 cacaaacaga agatcattgc acccgcaaaa cagtccctg
 //
-LOCUS       AJ308700                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ308700                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A partial 1D gene for VP1 protein,
             genomic RNA, strain A/Cordoba/Arg/92.
 ACCESSION   AJ308700
@@ -885,7 +843,7 @@ ORIGIN
       541 cgggccgagc tctactgccc cagaccattg ttggcaatat nnytgtcctc gcaaaacagg
       601 cacaaacaga ggatcattgc acccgcaaaa cagcttttg
 //
-LOCUS       AJ308701                 633 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ308701                 633 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A partial 1D gene for VP1 protein,
             genomic RNA, strain A/Corrrientes/Arg/92.
 ACCESSION   AJ308701
@@ -945,7 +903,7 @@ ORIGIN
       541 gaactctact gccctagacc actgctggca atagaggtgt cttcacaaga cagacacaaa
       601 cagaggacca tcgcacccgc aaaacagtcc cta
 //
-LOCUS       AJ308702                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AJ308702                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A partial 1D gene for VP1 protein,
             genomic RNA, strain A/Pehuajo/Arg/92.
 ACCESSION   AJ308702
@@ -1006,7 +964,7 @@ ORIGIN
       541 cgggccgaac tctactgccc cagaccactt ctggcaatag aggtgtcttc acaagacaga
       601 cacaaacaga agatcattgc acccgcaaaa cagtctttg
 //
-LOCUS       AJ409219                 639 bp    mRNA    linear   VRL 18-OCT-2016
+LOCUS       AJ409219                 639 bp    mRNA    linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A mRNA for VP1 protein (1D gene),
             strain A76/Argentina/76.
 ACCESSION   AJ409219
@@ -1072,7 +1030,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactt ttggcaatag aagtgtcttc ccaagacagg
       601 cacaagcaga agattattgc acctgcaaag cagcttttg
 //
-LOCUS       AM179988                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM179988                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Craik00.
 ACCESSION   AM179988
@@ -1133,7 +1091,7 @@ ORIGIN
       541 cgggccgagc tctactgccc ccgaccactg ctggcaatag aggtgtcatc acaggacaga
       601 cacaaacaaa agatcattgc acccgcaaaa cagtctctg
 //
-LOCUS       AM179989                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM179989                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate GVillegas00A.
 ACCESSION   AM179989
@@ -1194,7 +1152,7 @@ ORIGIN
       541 cgggccgagc tctactgccc ccgaccactg ctggcaatag aggtgtcatc acaggacaga
       601 cacaaacaaa agatcattgc acccgcaaaa cagtctctg
 //
-LOCUS       AM179990                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM179990                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate 9Julio800.
 ACCESSION   AM179990
@@ -1255,7 +1213,7 @@ ORIGIN
       541 cgggccgagc tctactgccc ccgaccactg ctggcaatag aggtgtcatc acaggacaga
       601 cacaaacaaa agatcattgc acccgcaaaa cagtctctg
 //
-LOCUS       AM179991                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM179991                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate RSegundo00.
 ACCESSION   AM179991
@@ -1316,7 +1274,7 @@ ORIGIN
       541 cgggccgagc tctactgccc ccgaccactg ctggcaatag aggtgtcatc acaggacaga
       601 cacaaacaaa agatcattgc acccgcaaaa cagtctctg
 //
-LOCUS       AM179992                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM179992                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate GVillegas00B.
 ACCESSION   AM179992
@@ -1377,7 +1335,7 @@ ORIGIN
       541 cgggccgagc tctactgccc ccgaccactg ctggcaatag aggtgtcatc acaggacaga
       601 cacaaacaaa agatcattgc acccgcaaaa cagtctctg
 //
-LOCUS       AM179993                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM179993                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Chapaleufu00.
 ACCESSION   AM179993
@@ -1438,7 +1396,7 @@ ORIGIN
       541 cgggccgagc tctactgccc ccgaccactg ctggcaatag aggtgtcatc acaggacaga
       601 cacaaannaa ngatcattgc acccgcaaaa cagtctctg
 //
-LOCUS       AM179994                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM179994                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate SJusto00.
 ACCESSION   AM179994
@@ -1499,7 +1457,7 @@ ORIGIN
       541 cgggccgagc tctactgccc ccgaccactg ctggcaatag aggtgtcatc acaggacaga
       601 cacaaacaaa agatcattgc acccgcaaaa cagtctctg
 //
-LOCUS       AM179995                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM179995                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate 9Julio900.
 ACCESSION   AM179995
@@ -1560,7 +1518,7 @@ ORIGIN
       541 cgggccgagc tctactgccc ccgaccactg ctggcaatag aggtgtcatc acaggacaga
       601 cacaaacaaa agatcattgc acccgcaaaa cagtctctg
 //
-LOCUS       AM179996                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM179996                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate CTejedor00.
 ACCESSION   AM179996
@@ -1621,7 +1579,7 @@ ORIGIN
       541 cgggccgagc tctactgccc ccgaccactg ctggcaatag aggtgtcatc acaggacaga
       601 cacaaacaaa agatcattgc acccgcaaaa cagtctctg
 //
-LOCUS       AM179997                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM179997                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate 3Lomas00.
 ACCESSION   AM179997
@@ -1682,7 +1640,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgtcctc acaagacagg
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttt
 //
-LOCUS       AM179998                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM179998                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate CPellegrini00.
 ACCESSION   AM179998
@@ -1743,7 +1701,7 @@ ORIGIN
       541 cgggccgagc tctactgccc cckaccactg ctggcaatag aggtgtcatc acaggacaga
       601 cacaaacaaa agatcattgc acccgcaaaa cagtctctg
 //
-LOCUS       AM179999                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM179999                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Maraco00.
 ACCESSION   AM179999
@@ -1804,7 +1762,7 @@ ORIGIN
       541 cgggccgagc tctactgccc ccgaccactg ctggcaatag aggtgtcatc acaggacaga
       601 cacaaacaaa agatcattgc acccgcaaaa cagtctctg
 //
-LOCUS       AM180000                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180000                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Rivadavia01.
 ACCESSION   AM180000
@@ -1865,7 +1823,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcaatag aggtgtcctc acaagacaga
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180001                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180001                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Chapaleufu01.
 ACCESSION   AM180001
@@ -1926,7 +1884,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacagg
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180002                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180002                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Union01.
 ACCESSION   AM180002
@@ -1987,7 +1945,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgtcctc acaagacaga
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180003                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180003                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Dupuy01.
 ACCESSION   AM180003
@@ -2048,7 +2006,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgtcctc acaagacaga
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180004                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180004                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate GLopez01.
 ACCESSION   AM180004
@@ -2109,7 +2067,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ctggcactag aggtgatctc acaagacaga
       601 cacanacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180005                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180005                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate SAAreco01.
 ACCESSION   AM180005
@@ -2170,7 +2128,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacagg
       601 cgcaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180006                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180006                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Atreuco01.
 ACCESSION   AM180006
@@ -2231,7 +2189,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaanacagg
       601 cacaaacaga agatcattgc acccraaaaa cagcttttg
 //
-LOCUS       AM180007                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180007                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Lobos01.
 ACCESSION   AM180007
@@ -2292,7 +2250,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacagg
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180008                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180008                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate TLauquen301.
 ACCESSION   AM180008
@@ -2353,7 +2311,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacaga
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180009                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180009                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Chivilcoy01.
 ACCESSION   AM180009
@@ -2414,7 +2372,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacagg
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180010                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180010                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Diareaux401.
 ACCESSION   AM180010
@@ -2475,7 +2433,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacaga
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180011                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180011                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Diamante01.
 ACCESSION   AM180011
@@ -2536,7 +2494,7 @@ ORIGIN
       541 cggaccgaac tctactgccc tagaccactg ttggcactag aggtgacctc acaagacagr
       601 cacaagcaga agatcattgc accngaaaaa cagcctttg
 //
-LOCUS       AM180012                 638 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180012                 638 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate TLauquen401A.
 ACCESSION   AM180012
@@ -2597,7 +2555,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaasacaga
       601 cacaaacaga agatcattgc acccnaaaaa cagctttt
 //
-LOCUS       AM180013                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180013                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate TLauquen401B.
 ACCESSION   AM180013
@@ -2658,7 +2616,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacaga
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180014                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180014                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate CSuarez01.
 ACCESSION   AM180014
@@ -2719,7 +2677,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacaga
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180015                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180015                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate 3Lomas01.
 ACCESSION   AM180015
@@ -2780,7 +2738,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacaga
       601 cacaaacaga agatcattgc acccggaaaa cagcttttg
 //
-LOCUS       AM180016                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180016                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Guatreche01.
 ACCESSION   AM180016
@@ -2841,7 +2799,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacaga
       601 cacaaacaga agatcattgc acccgraaaa cagcttttg
 //
-LOCUS       AM180017                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180017                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate JuninI01.
 ACCESSION   AM180017
@@ -2902,7 +2860,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacaga
       601 nacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180018                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180018                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate JuninII01.
 ACCESSION   AM180018
@@ -2963,7 +2921,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacaga
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180019                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180019                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Daireaux501.
 ACCESSION   AM180019
@@ -3024,7 +2982,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacaga
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       AM180020                 638 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180020                 638 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate 9Julio01.
 ACCESSION   AM180020
@@ -3085,7 +3043,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacaga
       601 cacaaacaga agatcattgc acccnaaaaa cagctttt
 //
-LOCUS       AM180021                 638 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180021                 638 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate GAlvear01.
 ACCESSION   AM180021
@@ -3146,7 +3104,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaanacaga
       601 cacaaacaga agatcattgc acccnaaaaa cagctttt
 //
-LOCUS       AM180022                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180022                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate Mercedes01.
 ACCESSION   AM180022
@@ -3207,7 +3165,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttgacacgag aggtcacttc acaabacagg
       601 tacamacagg agatcattgc acccbaaaaa cagctttts
 //
-LOCUS       AM180024                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AM180024                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A partial gene for polyprotein,
             VP1 region, isolate RCuarto02.
 ACCESSION   AM180024
@@ -3268,56 +3226,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacaga
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       APHA24VP                 648 bp ss-RNA     linear   VRL 18-OCT-2016
-DEFINITION  Foot and mouth disease virus, serotype A-24-Cruzeiro, capsid
-            protein (VP1) complete, p52 partial.
-ACCESSION   J02183
-VERSION     J02183.1  GI:210312
-KEYWORDS    coat protein; polyprotein.
-SOURCE      Foot-and-mouth disease virus
-  ORGANISM  Foot-and-mouth disease virus
-            Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA
-            stage; Picornavirales; Picornaviridae; Aphthovirus.
-REFERENCE   1  (bases 1 to 648)
-  AUTHORS   Makoff,A.J., Paynter,C.A., Rowlands,D.J. and Boothroyd,J.C.
-  TITLE     Comparison of the amino acid sequence of the major immunogen from
-            three serotypes of foot and mouth disease virus
-  JOURNAL   Nucleic Acids Res. 10 (24), 8285-8295 (1982)
-  PUBMED    6298715
-COMMENT     Original source text: FMDV serotype A-24-Cruzeiro from calf, cDNA
-            to viral RNA, clone pFA-24-t17.
-FEATURES             Location/Qualifiers
-     source          1..648
-                     /organism="Foot-and-mouth disease virus"
-                     /mol_type="genomic RNA"
-                     /db_xref="taxon:12110"
-     CDS             <1..>648
-                     /note="FMDV polyprotein"
-                     /codon_start=1
-                     /protein_id="AAA42596.1"
-                     /db_xref="GI:210313"
-                     /translation="TTTVENYGGETQIQRRHHTDIGFIMDRFVKIQSLSPTHVIDLMQ
-                     THQHGLVGALLRATTYYFSDLEIVVRHEGNLTWVPNGAPESALLNTSNPTAYNKAPFT
-                     RLALPYTAPHRVPATVYNGTSKYAVGGSGRRGDMGSLAARVVKQLPASFNYGAIKADA
-                     IHELLVRMKRAELYCPRPLLAIEVSSQDRHKQKIIAPAKQLLNFDLLKLAGDVESN"
-     mat_peptide     <1..606
-                     /product="VP1 mature peptide"
-     mat_peptide     607..>648
-                     /product="p52 mature peptide"
-ORIGIN      
-        1 accaccaccg tggagaacta cggcggtgag acacaaatcc agagacgtca ccacacggac
-       61 attggtttca tcatggacag atttgtgaag atccaaagct tgagcccaac acatgtcatt
-      121 gacctcatgc agactcacca acacggtctg gtgggtgcct tgctgcgtgc aaccacgtac
-      181 tacttttctg acctggaaat tgttgtacgg cacgaaggca atctgacctg ggtgcccaac
-      241 ggcgcccctg aatcagccct gttgaacacc agcaacccca ctgcctacaa caaggcacca
-      301 ttcacgagac tcgctctccc ctacactgcg ccgcaccgtg tgccggcaac agtgtacaac
-      361 gggacgagta agtatgctgt gggtggttca ggcagaagag gcgacatggg gtctctcgcg
-      421 gcgcgagtcg tgaaacagct tcctgcttca tttaactacg gtgcaatcaa ggccgacgcc
-      481 atccacgaac ttctcgtgcg catgaaacgg gccgagctct actgccccag accgctgttg
-      541 gcaatagagg tgtcttcgca agacaggcac aagcaaaaga tcattgcacc agcaaagcag
-      601 cttctgaatt ttgacctgct caagttggcc ggagacgttg agtccaac
-//
-LOCUS       APHA76                   639 bp ss-RNA     linear   VRL 18-OCT-2016
+LOCUS       APHA76                   639 bp ss-RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot and mouth disease virus (serotype Aven76), capsid protein VP1
             mRNA.
 ACCESSION   K03344
@@ -3365,7 +3274,7 @@ ORIGIN
       541 cgggccgaac tctactgccc cagaccactt ttggcggtgg aagtgtcgtc gcaagaccga
       601 cacaaacaga gcatcattgc acctgcaaaa cagcttttg
 //
-LOCUS       APHA79                   639 bp ss-RNA     linear   VRL 18-OCT-2016
+LOCUS       APHA79                   639 bp ss-RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot and mouth disease virus (serotype Aarg79), capsid protein VP1
             mRNA.
 ACCESSION   K03345
@@ -3413,272 +3322,7 @@ ORIGIN
       541 cgggccgaac tctactgtcc caggccactc ctggcggtgg aagtgtcgtc acaagaccgg
       601 cacaaacaga agattattgc acctgcaaaa cagcttttg
 //
-LOCUS       APHVP1A                  639 bp ss-RNA     linear   VRL 18-OCT-2016
-DEFINITION  Foot and mouth disease virus strain A Venceslau VP1 gene, complete
-            cds.
-ACCESSION   M12905
-VERSION     M12905.1  GI:210512
-KEYWORDS    .
-SOURCE      Foot-and-mouth disease virus
-  ORGANISM  Foot-and-mouth disease virus
-            Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA
-            stage; Picornavirales; Picornaviridae; Aphthovirus.
-REFERENCE   1  (bases 1 to 639)
-  AUTHORS   Cheung,A., Whitehead,P., Weiss,S. and Kupper,H.
-  TITLE     Nucleotide sequence of the VP1 gene of the foot-and-mouth disease
-            virus strain A Venceslau
-  JOURNAL   Gene 30 (1-3), 241-245 (1984)
-  PUBMED    6096217
-COMMENT     Original source text: foot and mouth disease virus strain A
-            Venesclau. The VP1 gene is not flanked by ribosome binding sites,
-            initiation or termination codons.
-FEATURES             Location/Qualifiers
-     source          1..639
-                     /organism="Foot-and-mouth disease virus"
-                     /mol_type="genomic RNA"
-                     /db_xref="taxon:12110"
-     CDS             <1..>639
-                     /note="capsid protein (VP1)"
-                     /codon_start=1
-                     /protein_id="AAA42663.1"
-                     /db_xref="GI:210513"
-                     /translation="TTATGESADPVTTTVENYGGETQVQRRHHTDIGFIMDRFVKIKD
-                     VTPTHVIDLMQTHQHGLVGAMLRAATYYFSDLEIVVQHDGNLTWVPNGAPVSALENTS
-                     NPTAYNKAPFTRLALPYTAPHRVLATVYNGTSKYTVSGSGRRGDMGSLAARVAKQLPA
-                     SFNYGAIKATAIHELLVRMKRAELYCPRPLLAVEVSSQDRHKQSIIAPAKQLL"
-ORIGIN      
-        1 accaccgcca ccggggagtc agcagaccct gtcaccacca ccgtggagaa ctacggtggt
-       61 gagacacaag ttcagagacg ccatcacact gacattggct tcatcatgga taggtttgtg
-      121 aagattaagg acgtgacacc aacacacgtc attgacctca tgcagactca ccaacatggc
-      181 ctggtgggtg caatgctgcg tgcagctacg tactactttt ctgacttgga aattgttgta
-      241 cagcacgacg gcaacctgac ttgggtgccc aacggcgccc ccgtgtcagc cctagagaat
-      301 actagcaatc ccactgccta caacaaggca ccattcacga gacttgctct cccttacacg
-      361 gcaccacacc gtgtgctggc aacagtgtac aacgggacaa gcaaatacac cgtgagtggt
-      421 tcaggcaggc gtggtgacat ggggtctctc gcggcacgtg tcgcgaaaca gcttcctgct
-      481 tcatttaact atggtgcaat caaggccacc gccatccacg agctcctcgt gcgcatgaaa
-      541 cgggccgaac tctactgccc cagaccactt ttggcggtgg aagtgtcgtc gcaagaccga
-      601 cacaaacaga gcatcattgc acctgcaaaa cagcttttg
-//
-LOCUS       AY593752                8204 bp    RNA     linear   VRL 18-OCT-2016
-DEFINITION  Foot-and-mouth disease virus A isolate a12valle 119 iso20, complete
-            genome.
-ACCESSION   AY593752
-VERSION     AY593752.1  GI:46810760
-KEYWORDS    .
-SOURCE      Foot-and-mouth disease virus - type A (FMDV-A)
-  ORGANISM  Foot-and-mouth disease virus - type A
-            Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA
-            stage; Picornavirales; Picornaviridae; Aphthovirus.
-REFERENCE   1  (bases 1 to 8204)
-  AUTHORS   Carrillo,C., Tulman,E.R., Delhon,G., Lu,Z., Carreno,A.,
-            Vagnozzi,A., Kutish,G.F. and Rock,D.L.
-  TITLE     Comparative genomics of foot-and-mouth disease virus
-  JOURNAL   J. Virol. 79 (10), 6487-6504 (2005)
-  PUBMED    15858032
-REFERENCE   2  (bases 1 to 8204)
-  AUTHORS   Carrillo,C., Lu,Z., Carreno,A., Tulman,E., Vagnozzi,A., Delhon,G.,
-            Kutish,G.F. and Rock,D.L.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (07-APR-2004) African Swine Fever Research, Plum Island
-            Animal Disease Center, U.S. Dept. Agriculture, Agricultural
-            Research Service, P.O. Box 848, Greenport, NY 11944-0848, USA
-FEATURES             Location/Qualifiers
-     source          1..8204
-                     /organism="Foot-and-mouth disease virus - type A"
-                     /mol_type="genomic RNA"
-                     /strain="A12-119"
-                     /serotype="A"
-                     /isolate="a12valle 119 iso20"
-                     /db_xref="taxon:12111"
-                     /country="United Kingdom"
-                     /note="Plum Island Animal Disease Center Virus
-                     Collection,isolated 1932, vaccine"
-     CDS             1094..8095
-                     /codon_start=1
-                     /product="polyprotein"
-                     /protein_id="AAT01695.1"
-                     /db_xref="GI:46810761"
-                     /translation="MNTTNCFIALVHAIREIRAFFLSRATGKMEFTLYNGERKTFYSR
-                     PNNHDNCWLNTILQLFRYVDEPFFDWVYNSPENLTLAAIKQLEELTGLELHEGGPPAL
-                     VIWNIKHLLQTGIGTASRPSEVCMVDGTDMCLADFHAGIFLKGQEHAVFACVTSNGWY
-                     AIDDEDFYPWTPDPSDVLVFVPYDQEPLNGGWKANVQRKLKGAGQSSPATGSQNQSGN
-                     TGSIINNYYMQQYQNSMDTQLGDNAISGGSNEGSTDTTSTHTTNTQNNDWFSKLASSA
-                     FTGLFGALLADKKTEETTLLEDRILTTRNGHTTSTTQSSVGVTYGYSTEEDHVAGPNT
-                     SGLETRVVQAERFFKKFLFDWTTDKPFGHLEKLELPTDHHGVFGHLVDSYAYMRNGWD
-                     VEVSAVGNQFNGGCLLVAMVPEWKEFDKREKYQLTLFPHQFISPRTNMTAHITVPYLG
-                     VNRYDQYKKHKPWTLVIMVVSPLTVSNTAATQIKVYANIAPTYVHVAGELPSKEGIFP
-                     VACSDGYGGLVTTDPKTADPVYGKVYNPPRTNYPGRFTNLLDVAEACPTFLCFDDGKP
-                     YVVTRTDDTRLLAKFDVSLAAKHMSNTYLSGIAQYYTQYSGTINLHFMFTGSTDSKAR
-                     YMVAYIPPGVETPPETPEGAAHCIHAEWDTGLNSKFTFSIPYVSAADYAYTASDTAET
-                     TNVQGWVCIYQITHGKAEGDTLVVSASAGKDFELRLPIDPRSQTTATGESADPVTTTV
-                     ENYGGETQVQRRHHTDVSFIMDRFVKIKSLNPTHVIDLMQTHQHGLVGALLRAATYYF
-                     SDLEIVVRHDGNLTWVPNGAPEAALSNTGNPTAYNKAPFTRLALPYTAPHRVLATVYN
-                     GTNKYSASGSGVRGDSGSLAPRVARQLPASFNYGAIKAETIHELLVRMKRAELYCPRP
-                     LLAIEVSSQDRHKQKIIAPGKQLLNFDLLKLAGDVESNPGPFFFADVRSNFSKLVDTI
-                     NQMQEDMSTKHGPDFNRLVSAFEELATGVKAIRTGLDEAKPWYKLIKLLSRLSCMAAV
-                     AARSKDPVLVAIMLADTGLEILDSTFVVKKISDSLSSLFHVPAPVFSFGAPVLLAGLV
-                     KVASSFFRSTPEDLERAEKQLKARDINDIFAILKNGEWLVKLILAIRDWIKAWIASEE
-                     KFVTTTDLVPGILEKQRDLNDPSKYKEAKEWLDNARQACLKSGNVHIANLCKVVAPAP
-                     SKSRPEPVVVCLRGKSGQGKSFLANVLAQAISTHFTGRTDSVWYCPPDPDHFDGYNQQ
-                     TVVVMDDLGQNPDGKDFKYFAQMVSTTGFIPPMASLEDKGKPFNSKVIIATTNLYSGF
-                     TPRTMVCPDALNRRFHFDIDVSAKDGYKINNKLDIIKALEDTHTNPVAMFQYDCALLN
-                     GMAVEMKRMQQDMFKPQPPLQNVYQLVQEVIERVELHEKVSSHPIFKQISIPSQKSVL
-                     YFLIEKGQHEAAIEFFEGMVHDSIKEELRPLIQQTSFVKRAFKRLKENFEIVALCLTL
-                     LANIVIMIRETRKRQKMVDDAVNEYIEKANITTDDTTLDEAEKNPLETSGASTVGFRE
-                     RTLTGQRACNDVNSEPARPAEEQPQAEGPYTGPLERQRPLKVRAKLPQQEGPYAGPLE
-                     RQKPLKVKAKAPVVKEGPYEGPVKKPVALKVKAKNLIVTESGAPPTDLQKMVMGNTKP
-                     VELILDGKTVAICCATGVFGTAYLVPRHLFAEKYDKIMLDGRAMTDSDYRVFEFEIKV
-                     KGQDMLSDAALMVLHRGNRVRDITKHFRDTARMKKGTPVVGVVNNADVGRLIFSGEAL
-                     TYKDIVVCMDGDTMPGLFAYKAATKAGYCGGAVLAKDGADTFIVGTHSAGGNGVGYCS
-                     CVSRSMLLRMKAHVDPEPHHEGLIVDTRDVEERVHVMRKTKLAPTVAHGVFNPEFGPA
-                     ALSNKDPRLNEGVVLDEVIFSKHKGDTKMSAEDKALFRRCAADYASRLHSVLGTANAP
-                     LSIYEAIKGVDGLDAMESDTAPGLPWAFQGKRRGALIDFENGTVGPEVEAALKLMEKR
-                     EYKFACQTFLKDEIRPMEKVRAGKTRIVDVLPVEHILYTRMMIGRFCAQMHSNNGPQI
-                     GSAVGCNPDVDWQRFGTHFAQYRNVWDVDYSAFDANHCSDAMNIMFEEVFRTDFGFHP
-                     NAEWILKTLVNTEHAYENKRITVEGGMPSGCSATSIINTILNNIYVLYALRRHYEGVE
-                     LDTYTMISYGDDIVVASDYDLDFEALKPHFKSLGQTITPADKSDKGFVLGHSITDVTF
-                     LKRHFHIDYGTGFYKPVMASKTLEAILSFARRGTIQEKLTSVAGLAVHSGPDEYRRLF
-                     EPFQGLFEIPSYRSLYLRWVNAVCGDA"
-ORIGIN      
-        1 ttgaaagggg gcgctagggt ttcaccccta gcacaccaac gacagtccct gcgttgcact
-       61 ccacacttac gttgtgcgta cgcggggccc aatggacctt cgttcaccca cctacagctg
-      121 gactcacggc accgcgtggc cattttagct ggactgtgcg gacgaacgcc gcttgcgcaa
-      181 ctcgcgtgac cggttagtac tcttaccact ctccgcctac ttggtcgtta gcgctgtctt
-      241 gggcactcct gttgggggcc gttcgacgct ccacgggttc ccctgtgcgg caactacggt
-      301 gatgggaccg tttcgcgcgg gctgaccgcc tggtctgttt cggctgtcac ccgacgtccg
-      361 cctttcaccc ccccccccct aagttttacc gtcgttcccg acgcaaaagg gaggtaacca
-      421 caagcttgac gccgtctgtc ccgacgttaa agggtagtaa ccacaagctt gctaccgccc
-      481 atcccggcgt taaaagggtg taaccacaag atgcaccttc gtccggaagt aaaacggcaa
-      541 tttcacacag ttttgcccgt tttcacgaga aacgggacgt ctgcgcacga aacgcgctgt
-      601 cgcttgagga gggcttgtac aaacacgatc taagcaggtt tccccaactg acacaaaccg
-      661 tgcaatttgg aactccgcct ggtctttcca ggtctagagg ggtgacactt tgtactgtgt
-      721 ttggctccac gctcggtcca ctggcgagtg ttagtaacag caccgttgct tcgtagcgga
-      781 gcatgatggc cgtgggaact cctccttggt aacaaggacc cacggggccg aaagccacgt
-      841 ccaatcggac ccatcatgtg tgcaacccca gcacagcaac ttttctgcga aactcacttc
-      901 aaggtgacac tgatactggt actcaaacac tggtgacagg ctaaggatgc ccttcaggta
-      961 ccccgaggta acacgcgtca ctcgggatct gagaagggga ctggggcttc tataaaagcg
-     1021 tccagtttaa aaagcttcta tgcctgaata ggtgaccgga ggccggcacc ttttctttac
-     1081 agccactgac tttatgaaca caaccaactg ttttatcgct ttggtacacg ctatcagaga
-     1141 gatcagagca tttttccttt cacgagctac aggaaagatg gaattcacgc tgtacaacgg
-     1201 cgagaggaag actttttact ccaggcccaa caaccacgac aactgttggt tgaacaccat
-     1261 cctccagttg tttaggtatg tcgacgaacc tttcttcgac tgggtctaca actcgcctga
-     1321 gaacctcaca ctagcagcca tcaaacagct ggaggaactc acagggcttg agttgcacga
-     1381 gggcggacca cctgctctcg tgatctggaa catcaaacac ttgctccaaa ccggcattgg
-     1441 taccgcctcg cgacccagcg aggtgtgtat ggttgacggc acggacatgt gtctggctga
-     1501 tttccatgca ggcattttcc tgaaaggaca ggaacacgcc gtgtttgcgt gtgtcacctc
-     1561 caacgggtgg tacgcgatcg atgacgagga cttttacccc tggacgccgg acccgtccga
-     1621 tgtcctggtg tttgttccgt acgatcaaga gccactcaac ggaggatgga aagccaacgt
-     1681 tcagcgaaag ctcaagggag ctgggcaatc cagcccagca accggctcgc agaaccagtc
-     1741 tggcaacact ggcagcataa tcaacaacta ctacatgcaa cagtaccaga actccatgga
-     1801 cacacagctt ggtgacaacg ccatcagcgg aggctccaac gagggctcca cggacacaac
-     1861 ctcaacacac acaaccaaca ctcaaaacaa cgactggttt tcaaaacttg ccagttcagc
-     1921 tttcaccggt ctgttcggcg cactgctcgc cgacaagaag acggaagaga ccacacttct
-     1981 ggaagaccgc atcctcacca cccgcaacgg gcacaccact tcgactaccc aatcgagtgt
-     2041 gggagtcacg tacgggtact ccaccgagga agaccacgtt gctgggccca acacatcggg
-     2101 cttggagacg cgggtggtgc aggcagagag attttttaag aagtttctgt ttgattggac
-     2161 aacggacaaa ccttttggac atctggaaaa gctggagctc cccaccgacc accacggcgt
-     2221 tttcggacac ctggtggact catacgcgta catgagaaac ggctgggatg ttgaggtgtc
-     2281 tgccgttggc aaccagttca acggcgggtg ccttctggtg gccatggtgc cagagtggaa
-     2341 agaatttgac aaacgtgaga aataccagct taccctcttc ccacaccagt tcattagccc
-     2401 cagaactaac atgactgccc acatcacggt tccgtatctt ggtgtgaaca ggtatgatca
-     2461 gtacaaaaag cacaagccct ggacgctggt cattatggta gtgtcgcccc tcacggtcag
-     2521 caacactgcc gcgacacaaa ttaaggtcta tgccaacatt gccccaacct acgttcacgt
-     2581 ggctggagaa ctcccctcga aagaggggat tttcccggtt gcgtgttcgg acggttatgg
-     2641 aggactggtg acaacagacc cgaaaacagc tgaccctgtc tacggtaagg tgtacaaccc
-     2701 gcccaggacc aactaccctg gacgcttcac aaacctgttg gacgtggccg aagcatgtcc
-     2761 cactttcctc tgtttcgacg acgggaaacc gtacgtcgtt acgcggacag acgacacccg
-     2821 acttttggcc aagtttgacg tctcccttgc cgcaaaacac atgtccaaca catacctatc
-     2881 agggattgca cagtactaca cacagtactc tggtaccatc aacctgcact tcatgttcac
-     2941 aggctctact gactcaaaag cccgctacat ggtggcttac atcccacctg gggtggagac
-     3001 gccaccggaa acacctgaag gggccgctca ctgcatccac gctgaatggg acacaggact
-     3061 gaactccaaa ttcacctttt caatcccgta cgtgtccgcc gcggattacg cgtacaccgc
-     3121 gtctgacacg gcagaaacaa ccaacgtaca gggatgggtc tgtatttacc aaattacaca
-     3181 cgggaaggct gaaggtgaca ccttggttgt gtcggctagc gccggcaaag actttgagtt
-     3241 acgcctcccg attgaccccc ggtcacaaac caccgctacc ggggagtctg cagaccctgt
-     3301 caccaccacc gtggagaact acggcggtga gacacaagtc cagagacgtc accacacgga
-     3361 cgtcagtttc atcatggaca gatttgtgaa gataaaaagc ttgaacccca cacacgtcat
-     3421 tgacctcatg cagacccacc aacacgggct ggtgggtgcg ttgttgcgtg cagccacgta
-     3481 ctacttctcc gacttggaga ttgttgtgcg gcacgatggc aatctgacct gggtgcccaa
-     3541 cggtgccccc gaggcagccc tgtcaaacac cggcaacccc actgcctaca acaaggcacc
-     3601 gttcacgagg cttgctctcc cttacactgc gccacaccgc gtgttggcaa ctgtgtacaa
-     3661 cgggacgaac aagtactccg cgagcggttc gggagtgcga ggcgattcgg ggtctctcgc
-     3721 gccgcgagtc gcgagacaac ttcctgcttc tttcaactac ggtgcaatta aggccgagac
-     3781 catccacgag cttctcgtgc gcatgaaacg ggctgagctc tactgcccca ggccactgct
-     3841 ggcaatagag gtgtcttcgc aagacaggca caagcaaaag atcattgcac ccggaaaaca
-     3901 gctgctgaac tttgacttac tcaagttggc aggtgacgtt gagtccaacc ctggaccctt
-     3961 cttctttgct gacgttaggt caaacttttc aaagttggta gacacaatca accagatgca
-     4021 ggaggacatg tccacaaaac acgggcccga cttcaaccgg ttggtgtccg catttgagga
-     4081 attggccact ggagttaaag ctatcaggac cggtctcgac gaggccaaac cctggtacaa
-     4141 gcttatcaaa ctcctaagcc gcctgtcgtg catggccgct gtggcagcac ggtccaagga
-     4201 cccagtcctt gtggccatca tgctggccga caccggtctc gagattctgg acagcacctt
-     4261 tgtcgtgaag aagatctctg actcgctctc cagtctcttt cacgtgccgg cccccgtctt
-     4321 cagtttcgga gccccggtcc tgttggctgg gttggtcaag gtcgcctcga gtttcttccg
-     4381 gtccacaccc gaagacctcg agagagcaga gaaacagctc aaagcacgtg acattaacga
-     4441 cattttcgcc attctcaaga acggcgagtg gctggtcaag ctgatccttg ccatccgcga
-     4501 ctggatcaag gcatggatcg cctcagaaga gaagtttgtc accacgacag acttggtacc
-     4561 tggtatcctt gaaaagcaac gggacctcaa cgacccaagc aagtacaagg aggctaagga
-     4621 gtggctcgac aacgcgcgcc aggcgtgttt gaagagcggg aacgtccaca ttgccaacct
-     4681 gtgcaaagtg gtcgccccag cacccagcaa gtcgagaccc gaacccgtgg tcgtttgcct
-     4741 ccgtggcaaa tctggccagg ggaagagttt ccttgcaaac gtgctcgctc aagcaatctc
-     4801 cacccacttc accggcagaa ctgattcagt ttggtactgc ccgcctgacc ctgaccactt
-     4861 cgacggttac aaccagcaga ccgtcgtcgt gatggatgat ttgggccaga accctgatgg
-     4921 caaggacttc aagtactttg cccaaatggt ttcaactacg gggttcatcc cgcccatggc
-     4981 atcacttgag gacaaaggta aacctttcaa cagcaaggtc atcattgcga ccaccaacct
-     5041 gtactcgggc ttcaccccga gaaccatggt gtgccctgat gcactgaacc ggaggttcca
-     5101 ctttgacatc gatgtgagcg ccaaggacgg gtacaaaatt aacaacaaat tggacattat
-     5161 caaagcactt gaagacaccc acactaaccc agtggcaatg tttcagtacg attgtgccct
-     5221 tctcaacggc atggccgttg aaatgaagag aatgcaacaa gatatgttca agcctcaacc
-     5281 gcccctccag aacgtatacc aactcgttca ggaggtgatt gaacgggtcg agctccacga
-     5341 gaaagtgtcg agccacccaa ttttcaagca gatctcaatt ccttcccaaa aatccgtgtt
-     5401 gtacttcctc attgagaagg gccagcacga agcagcaatt gaattctttg agggcatggt
-     5461 gcacgactcc attaaggagg agctccggcc tctcatccaa caaacttcat ttgtgaaacg
-     5521 cgctttcaag cgcttgaagg aaaactttga gattgttgcc ctatgcttga cccttctggc
-     5581 caacatagtg atcatgatcc gcgaaactcg caagaggcag aagatggtgg atgatgcggt
-     5641 gaacgagtac atcgagaagg caaacatcac cacggatgac acgactcttg acgaggcgga
-     5701 gaagaaccct ctggagacca gtggtgccag cactgttggt ttcagagaga gaactctaac
-     5761 gggtcaaagg gcgtgtaatg acgtgaactc cgagcctgcc cggcccgctg aagagcaacc
-     5821 acaagctgaa ggaccctata ccgggccact cgagcgtcag agacctctga aagtgagagc
-     5881 taagctccca cagcaggaag gaccttacgc tggcccgttg gagagacaga aaccgctgaa
-     5941 agtgaaagca aaagccccgg tcgtcaagga aggaccttac gagggaccgg tgaagaagcc
-     6001 tgtcgctttg aaagtgaaag ctaagaactt gatagtcact gagagtggtg ccccaccgac
-     6061 cgacttgcaa aagatggtca tgggcaacac aaagcctgtt gagctcatcc ttgacgggaa
-     6121 gacagtagcc atctgttgtg ctactggagt gtttggcact gcttacctcg tgcctcgtca
-     6181 tcttttcgca gagaagtatg acaagatcat gctggatggc agagccatga cagacagtga
-     6241 ctacagagtg tttgagtttg agattaaagt aaaaggacag gacatgctct cagacgctgc
-     6301 gctcatggtg ctccaccgtg ggaaccgcgt gagagatatc acgaaacact ttcgtgatac
-     6361 agcaagaatg aagaaaggca cccccgtcgt cggtgtggtc aacaacgccg acgttgggag
-     6421 actgattttc tctggtgagg ccctcaccta caaggatatt gtagtgtgca tggacggaga
-     6481 caccatgcct ggcctctttg cctacaaagc cgccaccaag gcaggctact gtggaggagc
-     6541 cgttctcgcc aaggacgggg ccgacacttt catcgtcggc actcactccg caggaggcaa
-     6601 tggagttgga tactgctcat gcgtttccag gtccatgctt ctcagaatga aggcacacgt
-     6661 tgaccctgaa ccacaccacg aggggttaat cgttgatacc agagatgtgg aagagcgcgt
-     6721 tcacgtgatg cgcaaaacca agcttgcacc caccgttgcg cacggtgtgt tcaaccctga
-     6781 gtttgggccc gctgccttgt ccaacaagga cccgcgcctg aacgagggtg ttgtcctcga
-     6841 cgaagtcatc ttctccaaac acaaaggaga cacaaagatg tctgcagagg acaaagcgct
-     6901 gttccgccgc tgcgctgctg actacgcgtc acgcttgcac agcgtactgg gtacagcaaa
-     6961 tgccccactg agcatttacg aggcaatcaa aggcgtcgac gggctcgatg ccatggagtc
-     7021 ggacaccgcg cctggcctcc cctgggcctt ccaggggaag cgccgcggcg cgctcattga
-     7081 cttcgagaac ggcacggtcg gacccgaagt cgaggctgcc ttgaagctca tggagaaaag
-     7141 agaatacaag tttgcttgtc agaccttcct gaaggacgaa attcgcccga tggagaaagt
-     7201 acgtgccggc aagactcgca ttgtcgatgt tttgcctgtt gaacacattc tttacaccag
-     7261 gatgatgatt ggcagatttt gtgcacaaat gcactcaaac aacggaccgc aaattggctc
-     7321 agcggtcggt tgcaaccctg atgttgattg gcaaagattt ggcacacact tcgcccagta
-     7381 cagaaatgtg tgggacgtgg actactcggc ctttgatgct aaccactgca gtgatgctat
-     7441 gaacatcatg tttgaggagg tgttccgcac ggactttggt ttccacccaa atgctgagtg
-     7501 gatcctgaag actctcgtga acacggagca cgcctatgag aacaaacgca ttactgttga
-     7561 gggcggaatg ccgtctggct gttccgcaac aagcatcatc aacacaattt tgaacaacat
-     7621 ctacgtgctc tacgccttgc gcagacacta tgagggagtt gagctggaca cttacaccat
-     7681 gatctcctac ggagacgaca tcgtggtggc aagtgattac gatttggact ttgaggctct
-     7741 taagccccac tttaaatctc ttggtcaaac catcactcca gctgacaaaa gcgacaaagg
-     7801 ttttgttctt ggtcactcca ttaccgatgt cactttcctc aaaagacact tccacataga
-     7861 ttacggaact gggttttaca aacctgtgat ggcctcaaag acccttgagg ctatcctctc
-     7921 ctttgcacgc cgtgggacca tacaggagaa gttgacctcc gtggcaggac tcgccgtcca
-     7981 ctctggacca gacgagtacc ggcgtctctt tgagcccttc cagggtctct ttgagatacc
-     8041 aagctacaga tcactttacc tgcgttgggt gaacgccgtg tgcggtgacg cataatcccc
-     8101 cagagatcac aattggcaca atgattctgg ggcgcgcgac gccgtaggag tgaaaagtcc
-     8161 gaaagggctt ttcccgcttc cttttctttt aaaaaaaaaa aaaa
-//
-LOCUS       AY593753                8202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593753                8202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate a13brazil iso75, complete
             genome.
 ACCESSION   AY593753
@@ -3897,226 +3541,7 @@ ORIGIN
      8101 cagatatcac aattggcaca atgattctgg ggcgcgcgac accgtaggag tgaaaagctc
      8161 gaaagggctt ttcccgcttc catactccaa aaaaaaaaaa aa
 //
-LOCUS       AY593754                8209 bp    RNA     linear   VRL 18-OCT-2016
-DEFINITION  Foot-and-mouth disease virus A isolate a14 spain iso39, complete
-            genome.
-ACCESSION   AY593754
-VERSION     AY593754.1  GI:46810764
-KEYWORDS    .
-SOURCE      Foot-and-mouth disease virus - type A (FMDV-A)
-  ORGANISM  Foot-and-mouth disease virus - type A
-            Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA
-            stage; Picornavirales; Picornaviridae; Aphthovirus.
-REFERENCE   1  (bases 1 to 8209)
-  AUTHORS   Carrillo,C., Tulman,E.R., Delhon,G., Lu,Z., Carreno,A.,
-            Vagnozzi,A., Kutish,G.F. and Rock,D.L.
-  TITLE     Comparative genomics of foot-and-mouth disease virus
-  JOURNAL   J. Virol. 79 (10), 6487-6504 (2005)
-  PUBMED    15858032
-REFERENCE   2  (bases 1 to 8209)
-  AUTHORS   Carrillo,C., Lu,Z., Carreno,A., Tulman,E., Vagnozzi,A., Delhon,G.,
-            Kutish,G.F. and Rock,D.L.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (07-APR-2004) African Swine Fever Research, Plum Island
-            Animal Disease Center, U.S. Dept. Agriculture, Agricultural
-            Research Service, P.O. Box 848, Greenport, NY 11944-0848, USA
-FEATURES             Location/Qualifiers
-     source          1..8209
-                     /organism="Foot-and-mouth disease virus - type A"
-                     /mol_type="genomic RNA"
-                     /strain="A14 Spain"
-                     /serotype="A"
-                     /isolate="a14 spain iso39"
-                     /db_xref="taxon:12111"
-                     /country="Spain"
-                     /note="Plum Island Animal Disease Center Virus
-                     Collection,isolated 1959"
-     CDS             1093..8091
-                     /codon_start=1
-                     /product="polyprotein"
-                     /protein_id="AAT01697.1"
-                     /db_xref="GI:46810765"
-                     /translation="MNTTDCFIALVHAIREIRALFLPRTTGKMELTLYNGEKKTFYSR
-                     PNNHDNCWLNTILQLFRYVDEPFFDWVYNSPENLTLEAINQLEELTGLELHEGGPPAL
-                     VIWNIKHLLHTGIGTASRPSEVCMVDGTDMCLADFHAGIFLKGQEHAVFACVTSNGWY
-                     AIDDEEFYPWTPDPSDVLVFVPYDQEPLNGDWKAMVQRKLKGAGQSSPATGSQNQSGN
-                     TGSIINNYYMQQYQNSMDTQLGDNAISGGSNEGSTDTTSTHTTNTQNNDWFSKLASSA
-                     FTGLFGALLADKKTEETTLLEDRILTTRNGHTISTTQSSVGVTYGYSTGEDHVAGPNT
-                     SGLETRVVQAERFFKKFLFDWTTDKPFGHLEKLELPADHHGVFGHLVESYAYMRNGWD
-                     VEVSAVGNQFNGGCLLVAMVPEWKEFEQREKYQLTLFPHQFISPRTNMTAHITVPYLG
-                     VNRYDQYKKHKPWTLVVMVVSPLTVSDTAATQIKVYANIAPTYVHVAGELPSKEGIFP
-                     VACSDGYGGLVTTDPKTADPAYGKVYNPPRTNYPGRFTNLLDVAEACPTFLCFDDGKP
-                     YVVTRTDDTRLLAKFDVSLAAKHMSNTYLSGVAQYYAQYSGTINLHFMFTGSTDSKAR
-                     YMVAYIPPGVEVPPDTPERAAHCIHAEWDTGLNSKFTFSIPYVSAADYAYTASDTAET
-                     TNVQGWVCIYQITHGKAENDTLVVSASAGKDFELRLPIDPRQQTTAVGESADPVTTAV
-                     ENYGGETQTRRRHHTDVGFIMDRFVKINSLSPTHVIDLMQTHQHGLVGALLRAATYYF
-                     SDLEIVVRHDGNLTWVPNGAPEAALSNTSNPTAYNKAPFTRLALPYTAPHRVLATVYN
-                     GTNKYSTGGLRRGDTGSLAARAAKQLPASFNYGAIGAVTIHELLVRMKRAELYCPRPL
-                     LAVEVSLQDRHKQKIIAPARQLLNFDLLKLAGDVESNPGPFFFSDVRSNFSKLVETIN
-                     QMQEDMSTKHGPDFNRLVSAFEELAAGVKAIRTGLDEAKPWYKLIKLLSRLSCMAAVA
-                     ARSKDPVLVAIMLADTGLEILDSTFVVKKISDSLSSLFHVPAPVFSFGAPSLLAGLVK
-                     VASSFFRSTPEDLERAEKQLKARDINDIFAILKNGEWLVKLILAIRDWIKAWIASEEK
-                     FVTMTDLVPGILEKQRDLNDPSRYKEAKEWLDNARQACLKSGNVHIANLCKVVAPAPS
-                     KSRPEPVVVCLRGKSGQGKSFLANVLAQAISTHFTGRTDSVWYCPPDPDHFDGYNQQT
-                     VVVMDDLGQNPDGKDFKYFAQMVSTTGFIPPMASLEDKGKPFNSKVIIATTNLYSGFT
-                     PRTMVCPDALNRRFHFDIDVSAKDEYKINNKLDITKALEDTHTNPVAMFQYDCALLNG
-                     MAVEMKRLQQDMFKPQPPLQNVYQLVQEVIDRVALHEKVSSHPIFKQISIPSQKSVLY
-                     FLIEKGQHEAAIEFFEGMVHDSVKEELRPLIQQTSFVKRAFKRLKENFEIVALCLTLL
-                     ANIVIMIRETRKRQKMVDDAVNEYIEKANITTDDKTLDEAEKNPLETSGASTVGFRER
-                     TLPDQKARNDVNSEPAQPAEEQPQAEGPYAGPLERQRPLKVRTKLPQQEGPYAGPMER
-                     QKPLKVKAKAPVVKEGPYEGPVKKPVALKVKAKNLIVTESGAPPTDLQKMVMGNTKPV
-                     ELILDGKTVAICCATGVFGTAYLVPRHLFAEKYDKIMLDGRAMTDSDYRVFEFEIRVK
-                     GQDMLSDAALMVLHRGNRVRDITKHFRDTARMKKGTPIVGVINNADVGRLIFSGEALT
-                     YKDIVVCMDGDTMPGLFAYRAATKAGYCGGAVLAKDGADTFIVGTHSAGGNGVGYCSC
-                     VSRSMLLKMKAHIDPEPHHEGLIVDTRDVEERVHVMRKTKLAPTVAHGVFNPEFGPAA
-                     LSNKDPRLNEGVVLDEVIFSKHKGDTKMSEEDKALFRRCAADYASRLHSVLGTANAPL
-                     SIYEAVKGVDGLDAMEPDTAPGLPWALQGKRRGALIDFENGTVGPEVEAALKLMEKRE
-                     YKFVCQTFLKDEIRPMEKVRAGKTRIVDVLPVEHILYTRMMIGRFCAQMHSNNGPQIG
-                     SAVGCNPDVDWQRFGTHFAQYRNVWDVDYSAFDANHCSDAMNIMFEEVFRTDFGFHPN
-                     AEWILKTLVHTEHAYENKRITVEGGMPSGCSATSIINTILNNIYVLYALRRHYEGVEL
-                     DTYTMISYGDDIVVASDYDLDFEALKPHFKSLGQTITPADKSDKGFVLGHSITDVTFL
-                     KRHFHMDYGTGFYKPVMASKTLEAILSFARRGTIQEKLISVAGLAVHSGPDEYRRLFE
-                     PFQGLFEIPSYRSLYLRWVNAVCGDA"
-ORIGIN      
-        1 ttgaaagggg gcgctagggt ctcaccccta gcgggccaac gacagtccct gcgttgtact
-       61 ccacacttac gttgtgcgta cgcggggccc gacgaactat cgttcaccca cctacagctg
-      121 gactcacggc accgcgtggc cattttagct ggattgtgcg gacgaacacc ccttgcgctc
-      181 ctcgcgtgac cggttagtac tcttaccacc ttccgcctac ttggtcgtta gcgctgtctt
-      241 gggcactcct gttgggggcc gctcgatgct tcgcgggctt ccctgtgcgg caactacggt
-      301 gatggggcca cttcgcgcgg gctgatcgct tggtttgctt cggctgtcgc ccaaagcccg
-      361 cctttcaccc ccccccccct aagttttgcc gtcgttcccg acgtgaaggg gagtaaccac
-      421 aagcttgacg ccgtctgtcc cgacgtttaa agggagacaa ccgcaagctt ttgccgcctt
-      481 tcccggcgat aacgggatgt aaccacaaga aacaccttcg cccggaagta aaacggttcc
-      541 ttcacacagt tttgcccgtt ttcacgagaa tcgggacgtc tgcgcacgaa acgcgccgtc
-      601 gcttgaagag gacttgtaca aacacgatct aagcaggttt ctccaactga cacaaaccgt
-      661 gcaacttgaa actccgcctg gtctttccag gtctagaggg gtgacacttt gtactgtgtt
-      721 tggctccacg ttcgatccac tggcgagtgt tagtaacacc actgctgctt cgtagcggag
-      781 catgacggcc gtgggaactc ctccttggta acaaggaccc acggggccga aagccacgtc
-      841 cgaatggacc cgccatgtgt gcaaccccag cacggtagct ttgttgtgaa acccacttta
-      901 aagtgacatt gatactggta cccaaatact ggtgacaggc taaggatgcc cttcaggtac
-      961 cccgaggtaa cacgcgacac tcgggatctg agaaggggac tggggcttct gtaaaagcgc
-     1021 ccagtttaaa aagcttctat gcctgaatag gtgaccggag gccggcacct tttctctaac
-     1081 tactttgact ctatgaatac aactgactgt tttatcgctt tggtgcacgc tatcagagag
-     1141 atcagagcac tttttctacc acgaaccaca ggaaagatgg aactcaccct gtacaacggc
-     1201 gagaaaaaga ctttttactc ccgacccaac aaccacgaca actgttggtt gaacaccatc
-     1261 cttcagttgt tcaggtatgt cgatgaaccc ttcttcgact gggtctacaa ttcgcccgag
-     1321 aacctcacgc ttgaagccat caaccaattg gaggaactca caggacttga gttgcacgag
-     1381 ggcggaccac ctgcccttgt gatctggaac atcaaacact tgctccacac cggcatcggc
-     1441 actgcctcac gacccagtga ggtgtgtatg gtggacggca cggacatgtg tcttgctgac
-     1501 ttccacgcag gcattttcct gaagggacag gaacacgcag tctttgcgtg tgtcacctcc
-     1561 aacgggtggt acgcgattga cgacgaggaa ttttacccct ggacgcctga cccgtcagac
-     1621 gtcctggtgt ttgtcccgta cgatcaagaa ccactcaacg gggactggaa agcgatggtt
-     1681 cagaggaagc ttaagggtgc cgggcaatcc agcccggcga ccggctccca gaaccagtct
-     1741 ggcaacactg gcagcataat taacaactac tatatgcaac agtaccagaa ctccatggac
-     1801 acacagcttg gtgacaatgc cattagtgga ggctccaacg aaggctccac ggacacaact
-     1861 tcaacacata caaccaacac ccaaaacaac gattggtttt caaaacttgc cagttcagcc
-     1921 ttcaccggtc tgttcggcgc cttgctcgcc gacaagaaga cggaagagac tacacttctg
-     1981 gaagaccgca ttctcaccac ccgcaacggg cacactatct cgaccaccca atcgagcgtg
-     2041 ggagtcacct acgggtactc cactggagaa gaccatgttg ctgggcccaa cacatcgggc
-     2101 ctggagacgc gggtggtgca ggcagagaga ttttttaaaa agtttttgtt tgactggaca
-     2161 acggacaaac cttttggaca tttggaaaag ctggaacttc ccgccgacca ccacggcgtt
-     2221 ttcgggcacc tggtggaatc gtatgcttac atgagaaatg gttgggacgt tgaggtgtct
-     2281 gctgttggca accagttcaa cggcgggtgc ctcctggtgg ctatggtacc ggagtggaaa
-     2341 gagtttgaac agcgcgagaa ataccaactc accctcttcc cgcaccagtt catcagcccc
-     2401 agaacaaaca tgactgccca catcacagtc ccataccttg gagtgaacag gtacgatcag
-     2461 tacaagaaac acaaaccttg gacactggtt gtcatggtag tgtcgcccct cacggttagc
-     2521 gacactgccg cgacacagat taaggtctac gccaatattg ctccgaccta cgttcacgtg
-     2581 gctggggaac tcccctcgaa agaggggatt ttcccagttg catgctcgga cggttacgga
-     2641 ggactggtga caacggaccc gaaaacagct gaccccgcct acggtaaggt gtacaacccg
-     2701 cccaggacca actaccctgg gcggtttacc aacctgttgg acgtggctga agcgtgtccc
-     2761 actttcctct gtttcgacga cgggaaaccg tacgttgtca cgcggacaga tgacacacga
-     2821 ctattggcca agttcgacgt ctcccttgct gcaaaacaca tgtccaacac gtacctgtca
-     2881 ggggttgcac agtactacgc acagtactct ggtaccatca acttgcactt catgttcaca
-     2941 ggctcaactg actcaaaagc ccgctacatg gtggcctaca tcccgcctgg ggtggaagtg
-     3001 ccaccggaca cacctgaaag ggccgctcac tgcatccacg ctgaatggga cacaggactg
-     3061 aactccaaat tcactttctc aatcccgtac gtgtccgccg cagattacgc gtataccgcg
-     3121 tctgacacgg cagaaacaac caacgtacag ggctgggttt gcatatacca gatcacacac
-     3181 gggaaggccg agaacgacac attggtggtg tcggccagcg ccggcaaaga ctttgagttg
-     3241 cgcctcccga ttgacccccg acagcaaact actgctgtcg gggagtccgc agaccctgtc
-     3301 accaccgccg tggagaacta cggcggtgag acacaaaccc ggagacggca ccacacggat
-     3361 gtcggtttca tcatggacag atttgtgaag ataaacagtt tgagtcccac gcatgtcatt
-     3421 gacctcatgc agacccacca gcacgggctg gtgggtgcgc tgctgcgtgc agccacgtac
-     3481 tacttctctg acttggagat tgttgtgcgg catgacggca atttgacttg ggtgcccaat
-     3541 ggtgcccctg aagcagcttt gtcaaacacc agcaacccca ctgcctacaa caaggcaccg
-     3601 ttcacgaggc ttgctctccc ttacactgcg ccacaccgcg tgttggcaac cgtgtacaac
-     3661 gggacgaaca agtactccac aggcggtctg agacgaggcg acacggggtc gctcgcggcg
-     3721 cgggccgcga aacaacttcc tgcctctttt aattacggtg caattggggc cgtcaccatc
-     3781 cacgagcttc tcgtgcgcat gaaacgggca gagctctact gccccaggcc actactggca
-     3841 gtagaggtgt ctttacaaga caggcacaag caaaagatca ttgcacccgc aagacagttg
-     3901 ctgaactttg acctacttaa gttggctgga gacgtggagt ccaaccctgg gcccttcttc
-     3961 ttctctgacg ttaggtcaaa cttttctaag ctggtggaaa ccatcaacca gatgcaggaa
-     4021 gacatgtcaa caaaacacgg gcccgacttt aaccggttgg tgtccgcctt tgaggaactg
-     4081 gccgccggag taaaagccat caggaccggc ctcgacgagg ccaaaccctg gtacaagctt
-     4141 atcaagctcc taagccgcct gtcgtgcatg gccgctgtgg cagcacggtc caaggacccg
-     4201 gtccttgtgg ccatcatgct ggccgacacc ggtctcgaga ttctggacag cactttcgtc
-     4261 gtgaagaaga tctccgactc gctctccagt ctcttccacg tgccggcccc cgtcttcagt
-     4321 ttcggagccc cgagtctgct agccgggttg gtcaaggtcg cctcgagttt cttccggtcc
-     4381 acgcccgaag accttgagag agcagagaaa cagctcaaag cacgtgacat caacgacatt
-     4441 ttcgccattc tcaagaacgg cgagtggctg gtcaaactga tccttgccat ccgcgactgg
-     4501 attaaggcgt ggattgcctc agaagaaaag tttgtcacta tgacagactt agtgcctggc
-     4561 atccttgaaa agcagcggga tctcaacgac ccaagcaggt acaaggaggc caaggagtgg
-     4621 ctcgacaacg cgcgccaagc gtgtctgaag agcgggaacg tccacattgc caacctgtgc
-     4681 aaagtggtcg ccccggcacc cagcaagtcg agacccgaac ccgtggtggt ttgcctccgt
-     4741 ggtaaatcag gccagggcaa gagtttcctt gcgaacgtgc tcgcacaagc aatctctacc
-     4801 cacttcaccg ggcggactga ctcagtctgg tactgcccac ctgaccctga ccacttcgac
-     4861 ggttacaacc aacagactgt tgttgtgatg gacgatttgg gccagaatcc tgacggcaag
-     4921 gacttcaagt acttcgccca aatggtctcg accactgggt tcatcccgcc catggcatca
-     4981 ctcgaggaca aaggtaaacc cttcaacagt aaggtcatca ttgcaaccac caacctgtac
-     5041 tcgggcttca ccccgaggac tatggtgtgc cctgacgccc tgaaccggag gtttcacttt
-     5101 gacattgacg tgagcgccaa ggatgagtac aaaattaaca acaaattgga cattaccaaa
-     5161 gcgcttgaag acacccacac caacccagta gcaatgtttc agtacgactg cgcccttctc
-     5221 aacggcatgg ctgttgaaat gaagagactg cagcaagaca tgttcaaacc tcaaccacct
-     5281 ctccagaacg tgtaccaact agttcaggag gtaattgacc gggtggcgct ccacgagaag
-     5341 gtgtcaagcc acccaatttt taaacagatc tcaattcctt cccaaaaatc tgtgttgtac
-     5401 ttcctcattg agaaagggca gcacgaggca gcaattgaat tctttgaggg catggtgcat
-     5461 gactccgtca aggaggagct ccggccgctc atccaacaaa cctcatttgt gaaacgcgcg
-     5521 tttaagcgcc tgaaggaaaa ctttgagatt gttgctctgt gcctaacact tttggccaac
-     5581 atcgtgatca tgatccgcga gacccgtaag agacagaaga tggtggacga tgcggtgaac
-     5641 gagtacatcg agaaagcaaa catcaccacc gatgacaaga ctcttgacga ggcggaaaag
-     5701 aaccctctgg agactagcgg tgccagtacc gttggtttca gagagagaac tcttccagat
-     5761 cagaaggcgc gtaatgacgt gaactccgag cccgcccaac ctgctgaaga acaaccacaa
-     5821 gctgaaggac cctacgccgg gccacttgag cgtcagagac ccctgaaggt gagaaccaag
-     5881 ctcccacaac aggaaggacc ctacgctggc ccgatggaga gacagaaacc gctgaaagtg
-     5941 aaagcaaaag ccccggtcgt caaggaagga ccttacgaag gaccggtgaa gaaacctgtc
-     6001 gctttgaaag tgaaagctaa gaatttgatt gtcactgaga gtggtgcccc cccgaccgac
-     6061 ctgcaaaaga tggtcatggg caacacaaag cccgttgagc tcatcctcga cgggaagaca
-     6121 gtagccatct gctgtgctac tggagtgttt ggtactgcct acctcgtgcc tcgtcatctt
-     6181 ttcgctgaga agtatgacaa gatcatgttg gacggcagag ccatgacaga cagtgactac
-     6241 agggtgtttg agttcgagat cagagtaaaa ggacaggaca tgctctcaga cgccgcactc
-     6301 atggtgctcc accgtgggaa ccgcgtgaga gacatcacga agcatttccg tgacacagca
-     6361 agaatgaaga aaggcacccc cattgtcggc gtgattaaca atgccgatgt cgggagactg
-     6421 attttctctg gcgaagctct tacctacaaa gacattgtag tgtgcatgga cggagacacc
-     6481 atgcccgggc tttttgccta cagagccgcc actaaggctg gctactgcgg gggagccgtt
-     6541 ctcgctaagg acggggctga cacttttatc gttggcactc actctgcagg aggtaacgga
-     6601 gttggatact gctcatgcgt ttccaggtcc atgcttctca agatgaaggc acacattgac
-     6661 cctgagccgc accacgaggg gttgattgta gacaccagag atgtggaaga gcgcgtccac
-     6721 gtgatgcgca aaaccaagct tgcacccacc gttgcacacg gtgtgttcaa ccccgagttt
-     6781 gggccagctg ccttgtccaa caaggacccg cgtctgaacg agggtgttgt ccttgatgaa
-     6841 gtcattttct ccaaacacaa gggagacaca aagatgtctg aggaggacaa agcgctgttc
-     6901 cgccgatgtg ctgctgacta cgcgtcacgc ctgcacagcg tgctgggtac ggcaaatgcc
-     6961 ccattgagca tctacgaggc agtcaagggc gtcgacggac tcgacgccat ggagccagac
-     7021 accgcacctg gcctcccctg ggctctccag ggaaaacgcc gtggtgcgct catcgacttt
-     7081 gagaacggca cggtcgggcc cgaagtcgag gctgccttga agctcatgga gaaaagagag
-     7141 tacaagtttg tttgtcagac cttcctgaag gacgagattc gcccgatgga gaaagtacgt
-     7201 gccggcaaga ctcgcattgt cgacgtcctg cccgttgaac acattcttta caccaggatg
-     7261 atgattggca gattttgtgc acaaatgcac tcaaacaacg gaccgcaaat tggctcggcg
-     7321 gtcggttgta accctgatgt tgattggcaa agatttggca cacacttcgc ccaatacaga
-     7381 aacgtgtggg atgtggacta ttcggccttt gatgctaacc actgcagtga cgccatgaac
-     7441 atcatgtttg aggaggtgtt ccgcacggac ttcgggttcc acccaaatgc tgagtggatc
-     7501 ttgaagactc tcgtgcacac ggaacatgcc tatgagaaca aacgcatcac tgttgaaggc
-     7561 gggatgccat ctggttgttc cgcaacgagc atcatcaaca caattttgaa caacatctac
-     7621 gtgctctacg ccttgcgtag acactatgag ggagttgagc tggacactta caccatgatc
-     7681 tcctacggag acgacattgt ggtggcaagt gattatgatc tggactttga ggctctcaag
-     7741 cctcacttca aatctcttgg tcaaaccatt actccagctg acaaaagcga caaaggtttt
-     7801 gttcttggtc actccatcac cgatgtcact ttcctcaaaa gacacttcca catggattat
-     7861 ggaaccgggt tttacaaacc tgtgatggcc tcaaagaccc ttgaggctat cctctccttt
-     7921 gcacgccgtg ggaccataca ggagaagctg atctccgtgg caggactcgc tgtccactct
-     7981 ggaccagacg agtaccggcg tctctttgag ccctttcagg gcctctttga gattccaagc
-     8041 tacagatcac tttacctgcg ttgggtgaac gccgtgtgtg gcgacgcata atcccccaga
-     8101 tatcacaatt ggcacagtga ttttggggcg cgcgacgccg taggagtgaa aagcccgaaa
-     8161 ggacttttcc cgcttcctta gtcaaaaaaa aaaaaaaaaa aaaaaaaaa
-//
-LOCUS       AY593756                8114 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593756                8114 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate a16belem iso80, complete
             genome.
 ACCESSION   AY593756
@@ -4334,7 +3759,7 @@ ORIGIN
      8041 gaggcgcgcg acgccgtagg agtgaaaagc ccgaaaggac ttttcccgct tcctgattca
      8101 aaaaaaaaaa aaaa
 //
-LOCUS       AY593757                8202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593757                8202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate a17 Aguarulbos iso83,
             complete genome.
 ACCESSION   AY593757
@@ -4553,7 +3978,7 @@ ORIGIN
      8101 agatatcaca attggcacaa tgattctggg gcgcgcgaca ccgtaggagt gaaaagcccg
      8161 aaaaggcttt tcccgcttcc atattccaaa aaaaaaaaaa aa
 //
-LOCUS       AY593758                8204 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593758                8204 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate a18zulia iso40, complete
             genome.
 ACCESSION   AY593758
@@ -4772,7 +4197,7 @@ ORIGIN
      8101 agatatcaca attggcacaa tgattctggg gcgcgcgaca ccgtaggagt gaaaagctcg
      8161 aaagggcttt tcccgcttcc atactccaaa aaaaaaaaaa aaaa
 //
-LOCUS       AY593767                8195 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593767                8195 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate a24 argentina iso9, complete
             genome.
 ACCESSION   AY593767
@@ -4991,7 +4416,7 @@ ORIGIN
      8101 gccacgacaa ccgggctctg aggcgcgcga caccgtagga gtgaaaatcc cgaaagggct
      8161 tttcccgctt cctgtttcaa aaaaaaaaaa aaaaa
 //
-LOCUS       AY593768                8156 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593768                8156 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate a24cruzeiro iso71, complete
             genome.
 ACCESSION   AY593768
@@ -5209,7 +4634,7 @@ ORIGIN
      8041 cgacgcataa tccctcagag actacattgg catactgttt ctgaggcgcg cgacgccgta
      8101 ggagtgaaaa gcccgaaagg gcttttcccg cttcctattc caaaaaaaaa aaaaaa
 //
-LOCUS       AY593769                8135 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593769                8135 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate a25 argentina iso38,
             complete genome.
 ACCESSION   AY593769
@@ -5427,7 +4852,7 @@ ORIGIN
      8041 caatgattct ggggcgcgcg acgccgtagg agtgaaagcc cgtaacggct ttcccgcttc
      8101 cttaaaccca aaaaaaaaaa aaaaaaaaaa aaaaa
 //
-LOCUS       AY593770                8115 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593770                8115 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate a26arg iso74, complete
             genome.
 ACCESSION   AY593770
@@ -5645,7 +5070,7 @@ ORIGIN
      8041 tggggcgcgc gacgccgtag gagtgaaaag tccgaaagga cttttcccgc ttcctaattg
      8101 aaaaaaaaaa aaaaa
 //
-LOCUS       AY593771                8200 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593771                8200 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate a27columbia iso78, complete
             genome.
 ACCESSION   AY593771
@@ -5864,7 +5289,7 @@ ORIGIN
      8101 taccacgatt ggcacaatga ttttggggcg cgcgacaccg taggagtgaa aagtccgaaa
      8161 gggcttttcc cgcttcctta cttcaaaaaa aaaaaaaaaa
 //
-LOCUS       AY593773                8202 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593773                8202 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate a29peru iso37, complete
             genome.
 ACCESSION   AY593773
@@ -6083,7 +5508,7 @@ ORIGIN
      8101 ctcagaggcc acgaagaccg ggcactgagg cgcgcgacac cgtaggagtg aaaggcccga
      8161 aaaggctttt cccgcttcct taatccaaaa aaaaaaaaaa aa
 //
-LOCUS       AY593775                8211 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593775                8211 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate a32ven iso36, complete
             genome.
 ACCESSION   AY593775
@@ -6302,226 +5727,7 @@ ORIGIN
      8101 ctcagaggcc acgaagaccg ggcactgagg cgcgcgacac cgtaggagtg aaaggcccga
      8161 aaaggctttt cccgcttcct taatccataa aaaaaaaaaa aaaaaaaaaa a
 //
-LOCUS       AY593780                8199 bp    RNA     linear   VRL 18-OCT-2016
-DEFINITION  Foot-and-mouth disease virus A isolate a5allier iso45, complete
-            genome.
-ACCESSION   AY593780
-VERSION     AY593780.1  GI:46810816
-KEYWORDS    .
-SOURCE      Foot-and-mouth disease virus - type A (FMDV-A)
-  ORGANISM  Foot-and-mouth disease virus - type A
-            Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA
-            stage; Picornavirales; Picornaviridae; Aphthovirus.
-REFERENCE   1  (bases 1 to 8199)
-  AUTHORS   Carrillo,C., Tulman,E.R., Delhon,G., Lu,Z., Carreno,A.,
-            Vagnozzi,A., Kutish,G.F. and Rock,D.L.
-  TITLE     Comparative genomics of foot-and-mouth disease virus
-  JOURNAL   J. Virol. 79 (10), 6487-6504 (2005)
-  PUBMED    15858032
-REFERENCE   2  (bases 1 to 8199)
-  AUTHORS   Carrillo,C., Lu,Z., Carreno,A., Tulman,E., Vagnozzi,A., Delhon,G.,
-            Kutish,G.F. and Rock,D.L.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (07-APR-2004) African Swine Fever Research, Plum Island
-            Animal Disease Center, U.S. Dept. Agriculture, Agricultural
-            Research Service, P.O. Box 848, Greenport, NY 11944-0848, USA
-FEATURES             Location/Qualifiers
-     source          1..8199
-                     /organism="Foot-and-mouth disease virus - type A"
-                     /mol_type="genomic RNA"
-                     /strain="A5 Allier"
-                     /serotype="A"
-                     /isolate="a5allier iso45"
-                     /db_xref="taxon:12111"
-                     /country="France"
-                     /note="Plum Island Animal Disease Center Virus
-                     Collection,isolated 1960"
-     CDS             1093..8091
-                     /codon_start=1
-                     /product="polyprotein"
-                     /protein_id="AAT01723.1"
-                     /db_xref="GI:46810817"
-                     /translation="MNATDCFIALVHAIREIRALFLPRTTGKMELTLYNGEKKTFYSR
-                     PNNHDNCWLNTILQLFRYVDEPFFDWVYNSPENLTLEAINQLEELTGLELHEGGPPAL
-                     VIWNIKHLLHTGIGTASRPSEVCMVDGTDMCLADFHAGIFLKGQEHAVFACVTSNGWY
-                     AIDDEEFYPWTPDPSDVLVFVPYDQEPLNGDWKAMVQRKLKGAGQSSPATGSQNQSGN
-                     TGSIINNYYMQQYQNSMDTQLGDNAISGGSNEGSTDTTSTHTTNTQNNDWFSKLASSA
-                     FTGLFGALLADKKTEETTLLEDRILTTRNGHTISTTQSSVGVTYGYSTGEDHVAGPNT
-                     SGLETRVVQAERFFKKFLFDWTTDKPFGHLEKLELPADHHGVFGHLVESYAYMRNGWD
-                     VEVSAVGNQFNGGCLLVAMVPEWKEFEQREKYQLTLFPHQFISPRTNMTAHITVPYLG
-                     VNRYDQYKKHKPWTLVVMVVSPLTVSDTAAAQIKVYANIAPTYVHVAGELPSKEGIFP
-                     VACSDGYGGLVTTDPKTADPAYGKVYNPPRTNYPGRFTNLLDVAEACPTFLCFDDGKP
-                     YVVTRTDDTRLLAKFDVSLAAKHMSNTYLSGIAQYYAQYSGTINLHFMFTGSTDSKAR
-                     YMVAYIPPGVEVPPDTPERAAHCIHAEWDTGLNSKFTFSIPYVSAADYAYTASDTAET
-                     TNVQGWVCIYQITHGKAENDTLVVSASAGKDFELRLPIDPRQQTTAVGESADPVTTTV
-                     ENYGGETQTQRRHHTDVGFIMDRFVKINSLSPTHVIDLMQTHQHGLVGALLRAATYYF
-                     SDLEIVVRHDGNLTWVPNGAPEAALSNTSNPTAYNKAPFTRLALPYTAPHRVLATVYN
-                     GTNKYSTDGPRRGDMGSLAARAAKQLPASFNYGAIRAVTIHELLVRMKRAELYCPRPL
-                     LAIEVSSQDRHKQKIIAPARQLLNFDLLKLAGDVESNPGPFFFSDVRSNFSKLVETIN
-                     QMQEDMSTKHGPDFNRLVSAFEELAAGVKAIRTGLDEAKPWYKLIKLLSRLSCMAAVA
-                     ARSKDPVLVAIMLADTGLEILDSTFVVKKISDSLSSLFHVPAPVFSFGAPILLAGLVK
-                     VASSFFRSTPEDLERAEKQLKARDINDIFAILKNGEWLVKLILAIRDWIKAWIASEEK
-                     FVTMTDLVPGILEKQRDLNDPSKYKEAKEWLDNARQACLKSGNVHIANLCKVVAPAPS
-                     KSRPEPVVVCLRGKSGQGKSFLANVLAQAISTHFTGRTDSVWYCPPDPDHFDGYNQQT
-                     VVVMDDLGQNPDGKDFKYFAQMVSTTGFIPPMASLEDKGKPFNSKVIIATTNLYSGFT
-                     PRTMVCPDALNRRFHFDIDVSAKDGYKINNKLDIIKALEDTHTNPVAMFQYDCALLNG
-                     MAVEMKRLQQDMFKPQPPLQNVYQLVQEVIDRVELHEKVSSHPIFKQISIPSQKSVLY
-                     FLIEKGQHEAAIEFFEGMVHDSVKEELRPLIQQTSFVKRAFKRLKENFEIVALCLTLL
-                     ANIVIMIRETRKRQKMVDDAVNEYIEKANITTDDKTLDEAEKNPLETSGASTVGFRER
-                     TLPGQKARNDVNSEPAQPAEEQPQAEGPYAGPLERQRPLKVRAKLPQQEGPYAGPMER
-                     QKPLKVKAKAPVVKEGPYEGPVKKPVALKVKAKNLIVTESGAPPTDLQKMVMGNTKPV
-                     ELILDGKTVAICCATGVFGTAYLVPRHLFAEKYDKIMLDGRAMTDSDYRVFEFEIKVK
-                     GQDMLSDAALMVLHRGNRVRDITKHFRDTARMKKGTPIVGVINNADVGRLIFSGEALT
-                     YKDIVVCMDGDTMPGLFAYRAATKAGYCGGAVLAKDGADTFIVGTHSAGGNGVGYCSC
-                     VSRSMLLKMKAHIDPEPHHEGLIVDTRDVEERVHVMRKTKLAPTVAHGVFNPEFGPAA
-                     LSNKDPRLNEGVVLDEVIFSKHKGDTKMSEEDKALFRRCAADYASRLHSVLGTANAPL
-                     SIYEAIKGVDGLDAMEPDTAPGLPWALQGKRRGALIDFENGTVGPEVEAALKLMERRE
-                     YKFVCQTFLKDEIRPMEKIRAGKTRIVDVLPVEHILYTRMMIGRFCAQMHSNNGPQIG
-                     SAVGCNPDVDWQRFGTHFAQYRNVWDVDYSAFDANHCSDAMNIMFEEVFHTDFGFHPN
-                     AEWILKTLVNTEHAYENKRITVEGGMPSGCSATSIINTILNNIYVLYALRRHYEGVEL
-                     DTYTMISYGDDIVVASDYDLDFEALKPHFKSLGQTITPADKSDKGFVLGHSITDVTFL
-                     KRHFHMDYGTGFYKPVMASKTLEAILSFARRGTMQEKLISVAGLAVHSGPDEYRRLFE
-                     PFQGLFEIPSYRSLYLRWVNAVCGDA"
-ORIGIN      
-        1 ttgaaagggg gcgctagggt ttcaccccta gcaggccaac gacagtccct gcgttgtact
-       61 ccacacttac gttgtgcgta cgcggggccc gacgaactat cgttcaccca cctacagctg
-      121 gactcacggc accgcgtggc cattttagct ggattgtgcg gacgaacacc gcttgcgctc
-      181 ctcgcgtgac cggttagtac tcttaccacc ttccgcctac ttggtcgtta gcgctgtctt
-      241 gggcactcct gttgggggcc gctcgatgct tcgcgggctt ccctgtgcgg caactacggt
-      301 gatggggcca cttcgcgcgg gctgatcgct tggtctgctt cggctgtcgc ccaaagcccg
-      361 cctttcaccc ccccccccct aagttttacc gtcgttcccg acgtaaaggg ggagtaacca
-      421 aaagcttgac gccgtctgtc ccgacgttaa agggaggcaa ccgcaagctt ttaccgcctt
-      481 tcccggcgat aacgggatgt aaccacaaga aacaccttcg cccggaagta aaacggttcc
-      541 ttcacacagt tttgcccgtt ttcacgagaa acgggacgtc tgcgcacgaa acgcgccgtc
-      601 gcttgaggag gacttgtaca aacacgatct aagcaggttt ccccaactga cacaaaccgt
-      661 gcaacttgaa actccgcctg gtctttccag gtctagaggg gtgacacttt gtactgtgtt
-      721 tggctccacg ttcgatccac tggcgagtgt tagtaacacc actgctgctt cgtagcggag
-      781 catgacggcc gtgggaactc ctccttggta acaaggaccc acggggccga aagccacgtc
-      841 cgaatggacc cgtcatgtgt gcaaccccag cacggtagct ttgttgtgaa actcacttta
-      901 aagtgacatt gatactggta cccaaatact ggtgacaggc taaggatgcc cttcaggtac
-      961 cccgaggcaa catgcgacac tcgggatctg agaaggggac tggggcttct gtaaaagcgc
-     1021 ccagtttaaa aagcttctat gcctgaatag gtgaccggag gccggcacct tttctctaac
-     1081 tactttgact ctatgaatgc aactgactgt tttatcgctt tggtacacgc tatcagagag
-     1141 atcagagcac tttttctacc acgaaccaca ggaaagatgg aactcaccct gtacaacggc
-     1201 gagaaaaaga ctttttactc tagacccaac aaccacgaca actgctggtt gaacaccatc
-     1261 cttcagctgt tcaggtatgt cgatgaaccc ttcttcgact gggtctacaa ctcgcccgag
-     1321 aacctcacgc ttgaagccat caaccaattg gaggaactca caggacttga gttgcacgag
-     1381 ggcggaccgc ctgcccttgt gatctggaac atcaagcact tgctccacac cggcatcggc
-     1441 actgcctcac gacccagtga ggtgtgtatg gtggacggca cggacatgtg tcttgctgac
-     1501 ttccacgcag gcattttcct gaagggacag gaacacgcag tctttgcgtg tgtcacctcc
-     1561 aacgggtggt acgcgattga cgacgaggaa ttttacccct ggacgcctga cccgtcagac
-     1621 gtcctggtgt ttgtcccgta cgatcaagaa ccactcaacg gggactggaa agcgatggtt
-     1681 cagaggaagc ttaagggtgc cgggcaatcc agcccggcga ccggctccca gaaccagtct
-     1741 ggcaacactg gcagcataat taacaactac tacatgcagc agtatcagaa ctccatggac
-     1801 acacagcttg gtgacaatgc catcagtgga ggctccaacg aaggctccac ggacacaact
-     1861 tcaacacaca caaccaacac ccaaaacaac gattggtttt caaaacttgc cagttcagcc
-     1921 ttcaccggtc tgttcggcgc cctgctcgcc gacaagaaga cggaagagac tacacttctg
-     1981 gaagaccgca ttctcaccac ccgcaacggg cacaccatct cgaccaccca atcgagcgtg
-     2041 ggagtcacct acgggtactc cactggagaa gaccatgttg ctgggcccaa cacatcgggc
-     2101 ctggagacgc gggtggtgca ggcagagaga ttttttaaaa agtttttgtt tgactggaca
-     2161 acggacaaac cttttggaca tttggaaaag ctggaacttc ccgccgacca ccacggcgtt
-     2221 ttcgggcacc tggtggaatc atatgcttac atgagaaatg gttgggacgt tgaggtgtct
-     2281 gctgttggca accagttcaa cggcgggtgc ctcctggtgg ctatggtacc ggagtggaaa
-     2341 gagtttgaac agcgcgagaa ataccaactc accctcttcc cgcaccagtt catcagcccc
-     2401 agaacaaaca tgactgctca catcacagtc ccataccttg gagtgaacag gtacgatcag
-     2461 tacaagaaac acaaaccttg gacactggtt gttatggtag tgtcgcccct cacggttagc
-     2521 gacactgccg cggcacagat taaggtctac gccaatattg ctccgaccta cgttcacgtg
-     2581 gctggggaac tcccctcgaa agaggggatt ttcccagttg catgttcgga cggttacgga
-     2641 ggactggtga caacggaccc gaaaacagct gaccccgcct acggcaaggt gtacaacccg
-     2701 cccaggacca actaccctgg gcggtttacc aacttgttgg atgtggctga agcgtgtccc
-     2761 actttcctct gtttcgacga cgggaaaccg tacgttgtca cgcggacaga tgacacacga
-     2821 ctattggcca agttcgacgt ctcccttgct gcaaaacaca tgtccaacac gtacctgtca
-     2881 gggattgcac agtactacgc acagtactct ggtaccatca acttgcactt catgttcaca
-     2941 ggctcaactg actcaaaagc ccgctacatg gtggcctaca tcccgcccgg ggtggaagtg
-     3001 ccaccggaca cacctgaaag ggccgctcac tgcatccacg ctgaatggga cacaggactg
-     3061 aactccaaat tcactttctc aatcccgtac gtgtccgccg cagattacgc gtacaccgcg
-     3121 tctgacacgg cagaaacaac caacgtacag ggctgggtct gcatctacca gatcacacac
-     3181 gggaaggccg agaacgacac attggtggtg tcggccagcg ccggcaaaga ctttgagttg
-     3241 cgcctcccga tcgacccccg acagcaaact actgctgttg gggagtccgc agaccctgtc
-     3301 accaccaccg tggagaacta cggcggtgag acacaaaccc agagacggca ccacacggat
-     3361 gtcggtttca tcatggacag atttgtgaag ataaacagtt tgagtcctac gcatgtcatt
-     3421 gacctcatgc agacccacca gcacgggctg gtgggtgcgc tgttgcgtgc agccacgtac
-     3481 tacttctctg acttggagat tgttgtgcgg catgacggca atttgacttg ggtgcccaac
-     3541 ggtgcccctg aagcagcttt gtcaaacacc agcaacccca ctgcctacaa caaggcaccg
-     3601 ttcacgaggc tcgctctccc ttacactgcg ccacaccgcg tgttggcaac cgtgtacaac
-     3661 gggacgaaca agtactccac ggacggtccg agacgaggcg acatggggtc gctcgcggcg
-     3721 cgggccgcga aacaacttcc tgcctctttt aactacggtg caatcagggc cgtcaccatc
-     3781 cacgagcttc tcgtgcgcat gaaacgggca gagctctact gccccaggcc actattggca
-     3841 atagaggtgt cttcacaaga caggcacaag caaaagatca ttgcacctgc aagacagttg
-     3901 ctgaactttg acctacttaa gttggctgga gacgtggagt ccaaccctgg gcccttcttc
-     3961 ttctctgacg ttaggtcaaa cttttctaag ctggtggaaa ccatcaacca gatgcaggaa
-     4021 gacatgtcaa caaaacacgg gcccgacttt aaccggttgg tgtccgcctt tgaggaactg
-     4081 gccgctggag tgaaagccat caggaccggc ctcgacgagg ccaaaccctg gtacaagctt
-     4141 atcaaactcc taagccgcct gtcgtgcatg gccgctgtgg cagcacggtc caaggacccg
-     4201 gtccttgtgg ccatcatgct ggccgacacc ggtctcgaga ttctggacag cactttcgtc
-     4261 gtgaagaaga tctccgactc gctctccagt ctctttcacg tgccggcccc cgtcttcagt
-     4321 ttcggagccc cgattctgct agccgggctg gtcaaggtcg cctcgagttt cttccggtcc
-     4381 acgcccgaag accttgagag agcagagaaa cagctcaaag cacgtgacat caacgacatt
-     4441 ttcgccattc tcaagaacgg cgagtggctg gtcaaactga tccttgccat ccgcgactgg
-     4501 attaaggctt ggattgcctc agaagaaaag tttgtcacca tgacagactt agtgcctggc
-     4561 atccttgaaa agcagcggga cctcaacgac ccaagcaagt acaaggaggc caaggagtgg
-     4621 ctcgacaacg cgcgccaagc gtgtctgaag agcgggaacg tccacattgc caacctgtgc
-     4681 aaagtggtcg ccccggcacc cagcaagtcg agacccgaac ccgtggtggt ttgcctccgt
-     4741 ggcaaatcag gccagggcaa gagtttcctt gcgaacgtgc tcgcacaagc aatctctacc
-     4801 cacttcaccg ggcggactga ttcagtctgg tactgcccac ctgaccctga ccacttcgac
-     4861 ggttacaacc aacagactgt cgttgtgatg gacgatttgg gccagaaccc tgacggcaag
-     4921 gacttcaagt acttcgccca aatggtctcg accacggggt tcatcccgcc catggcatca
-     4981 cttgaggaca aaggtaaacc cttcaacagt aaggtcatca ttgcaaccac caacctgtac
-     5041 tcgggcttca ccccgaggac tatggtgtgc cctgacgccc tgaaccggag gtttcacttt
-     5101 gacattgacg tgagcgccaa ggatgggtac aaaattaaca acaaattgga cattatcaaa
-     5161 gcacttgaag acacccacac caacccagtg gcaatgtttc agtacgactg cgcccttctc
-     5221 aacggcatgg ctgttgaaat gaagagactt cagcaagaca tgttcaaacc tcaaccaccc
-     5281 ctccagaacg tgtaccaact agttcaggag gtgattgatc gggtggagct ccacgagaaa
-     5341 gtgtcgagcc acccaatttt taagcagatc tcaattcctt cccaaaaatc tgtgttgtac
-     5401 ttcctcattg agaaagggca gcacgaggca gcaattgaat tctttgaggg catggtgcat
-     5461 gactccgtca aggaggagct ccggccgctc atccaacaaa cctcatttgt gaaacgcgct
-     5521 ttcaagcgcc tgaaggaaaa ctttgagatt gttgctctgt gcctaacact tttggccaac
-     5581 attgtgatca tgatccgcga gacccgcaag agacagaaga tggtggacga tgcggtgaac
-     5641 gagtacatcg agaaagcaaa catcaccacc gatgacaaga cacttgacga ggcggaaaag
-     5701 aaccctctgg agactagcgg tgccagcacc gttggtttca gagagagaac tcttccaggt
-     5761 cagaaggcgc gtaatgacgt gaattccgag cccgcccaac ctgctgaaga acaaccacaa
-     5821 gctgaaggac cctacgccgg gccacttgag cgtcagagac ccctgaaggt gagagccaag
-     5881 ctcccacaac aggaaggacc ctacgctggc ccgatggaga gacagaaacc gctgaaagtg
-     5941 aaagcaaaag ccccggtcgt caaggaagga ccttacgaag gaccggtgaa gaaacctgtc
-     6001 gctttgaaag tgaaagctaa gaatttgatt gtcactgaga gtggtgcccc cccgaccgac
-     6061 ttgcaaaaga tggtcatggg caacacaaag cctgttgagc tcattctcga cgggaagaca
-     6121 gtagccatct gctgtgctac tggagtgttt ggcactgcct acctcgtgcc tcgtcatctt
-     6181 ttcgctgaga agtatgacaa gatcatgttg gacggcagag ccatgacaga cagtgactac
-     6241 agagtgtttg agttcgagat caaagtaaaa ggacaggaca tgctctcaga cgccgcactc
-     6301 atggtgctcc accgtgggaa ccgcgtgaga gacatcacga agcatttccg tgacacagca
-     6361 agaatgaaga aaggcacccc cattgtcggc gtgatcaaca atgccgatgt cgggagactg
-     6421 attttctctg gcgaagctct tacctacaaa gacattgtag tgtgcatgga cggagatacc
-     6481 atgcccgggc tttttgccta cagagccgcc actaaggctg gctactgcgg gggagccgtt
-     6541 ctcgctaagg acggggctga cactttcatc gttggcactc actctgcagg aggtaatgga
-     6601 gttggatact gctcatgcgt ttccaggtcc atgcttctca agatgaaggc acacattgac
-     6661 cctgagccgc accacgaggg gttgattgta gacaccagag atgtggaaga gcgcgtccac
-     6721 gtaatgcgca agaccaagct tgcacccacc gttgcacacg gtgtgtttaa ccccgagttt
-     6781 gggccagctg ccttgtccaa caaggacccg cgtctgaacg agggtgttgt ccttgatgaa
-     6841 gtcattttct ccaaacacaa gggagacaca aagatgtctg aggaggacaa agcgctgttc
-     6901 cgtcgatgtg ctgctgacta cgcgtcacgc ctgcacagcg tgctgggtac ggcaaacgcc
-     6961 ccattgagca tctacgaggc aatcaaaggc gtcgacggac tcgacgccat ggagccagac
-     7021 accgcacctg gcctcccctg ggctctccag ggaaaacgcc gtggtgcgct catcgacttt
-     7081 gagaacggca cggtcgggcc cgaagtcgag gctgccttga agctcatgga gagaagagag
-     7141 tacaagtttg tttgtcagac cttcctgaag gacgagattc gcccgatgga gaaaatacgt
-     7201 gccggcaaga ctcgcattgt cgacgtcctg cccgttgaac acattcttta caccaggatg
-     7261 atgattggca gattttgtgc acaaatgcac tcaaacaacg gaccgcaaat tggctcggcg
-     7321 gtaggttgta accctgatgt tgattggcaa agatttggca cacacttcgc ccaatacaga
-     7381 aatgtgtggg atgtggacta ttcggccttt gatgctaacc actgcagtga cgccatgaac
-     7441 atcatgtttg aggaggtgtt ccacacggac ttcgggttcc acccaaatgc tgagtggatc
-     7501 ttgaagactc tcgtgaacac ggaacatgcc tatgagaaca aacgcatcac tgttgaaggc
-     7561 gggatgccat ctggttgttc cgcaacgagc atcatcaaca caattttgaa caacatctac
-     7621 gtgctctacg ccttgcgtag acactatgag ggagttgagc tggacactta caccatgatc
-     7681 tcctacggag acgacattgt ggtggcaagt gattacgatc tggactttga ggctctcaag
-     7741 ccccacttca aatctcttgg tcaaaccatt actccagctg acaaaagcga caaaggtttt
-     7801 gttcttggtc actccatcac cgatgtcact ttcctcaaaa gacacttcca catggattat
-     7861 ggaactgggt tttacaaacc tgtgatggcc tcaaagaccc ttgaggctat cctctccttt
-     7921 gcacgccgtg ggaccatgca ggagaagctg atttccgtgg caggactcgc tgtccactct
-     7981 ggaccagacg agtaccggcg tctctttgag ccctttcagg gcctctttga gattccaagc
-     8041 tacagatcac tttacctgcg ttgggtgaac gccgtgtgcg gcgacgcata atcccccaaa
-     8101 taccacaatt ggcacaatga ttttggggcg cgcgacgccg taggagtgaa aagcccgaaa
-     8161 gggcttttcc cgcttcctta gtcaaaaaaa aaaaaaaaa
-//
-LOCUS       AY593782                8200 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593782                8200 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate a argentina 2000 iso104,
             complete genome.
 ACCESSION   AY593782
@@ -6740,7 +5946,7 @@ ORIGIN
      8101 tcacgattgg cagactttga ggcgcgcgac gccgctggag tgaaaggccg aacggccttt
      8161 cccgcttcct aattccaaaa aaaaaaaaaa aaaaaaaaaa
 //
-LOCUS       AY593783                8196 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593783                8196 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate aarg2001 iso93, complete
             genome.
 ACCESSION   AY593783
@@ -6959,7 +6165,7 @@ ORIGIN
      8101 agatcacgat tggcagactt tgaggcgcgc gacgccgctg gagtgaaaag ctcgaaagag
      8161 cttttcccgc ttcctgtttc aaaaaaaaaa aaaaaa
 //
-LOCUS       AY593784                8196 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593784                8196 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate aargp55 iso99, complete
             genome.
 ACCESSION   AY593784
@@ -7178,7 +6384,7 @@ ORIGIN
      8101 agatcacgat tggcagactt tgaggcgcgc gacgccgctg gagtgaaaag ctcgaaagag
      8161 cttttcccgc ttcccatttc aaaaaaaaaa aaaaaa
 //
-LOCUS       AY593785                8196 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593785                8196 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate aargp64 iso100, complete
             genome.
 ACCESSION   AY593785
@@ -7397,7 +6603,7 @@ ORIGIN
      8101 agatcacgat tggcagactt tgaggcgcgc gacgccgctg gagtgaaaag ctcgaaagag
      8161 cttttcccgc ttcccatttc aaaaaaaaaa aaaaaa
 //
-LOCUS       AY593786                8209 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593786                8209 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate aarg Trenquelauquen iso103,
             complete genome.
 ACCESSION   AY593786
@@ -7616,7 +6822,7 @@ ORIGIN
      8101 gatcacgatt ggcagacttt gaggcgcgcg acgccgctgg agtgaaaagc tcgaaagagc
      8161 ttttcccgct tcctatttca aaaaaaaaaa aaaaaaaaaa aaaaaaaaa
 //
-LOCUS       AY593787                8196 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593787                8196 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate abage iso63, complete
             genome.
 ACCESSION   AY593787
@@ -7834,7 +7040,7 @@ ORIGIN
      8101 cagagatcaa ttggcacaac ggctctgagg cgcgcgacgc cgtaggagtg aaaagccgag
      8161 gcttttcccg cttcctagtt caaaaaaaaa aaaaaa
 //
-LOCUS       AY593788                8217 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593788                8217 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate abrazil iso67, complete
             genome.
 ACCESSION   AY593788
@@ -8053,7 +7259,7 @@ ORIGIN
      8101 agagaccaat tggcacaacg gctctgaggc gcgcgacgcc gtaggagtga aaagccggaa
      8161 ggcttttccc gcttcctagt tttttttaaa aaaaaaaaaa aaaaaaaaaa aaaaaaa
 //
-LOCUS       AY593789                8132 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593789                8132 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate acanefa iso48, complete
             genome.
 ACCESSION   AY593789
@@ -8271,7 +7477,7 @@ ORIGIN
      8041 acaatgattc tggggcgcgc gacgccgtag gagtgaaagc ccgtaacggc tttcccgctt
      8101 ccttaaacca aaaaaaaaaa aaaaaaaaaa aa
 //
-LOCUS       AY593790                8195 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593790                8195 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate a general lopez iso102,
             complete genome.
 ACCESSION   AY593790
@@ -8490,7 +7696,7 @@ ORIGIN
      8101 gatcacgatt ggcagacttt gaggcgcgcg acgccgctgg agtgaaaagc tcgaaagagc
      8161 ttttcccgct tcctatttca aaaaaaaaaa aaaaa
 //
-LOCUS       AY593791                8280 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593791                8280 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate airan iso105, complete
             genome.
 ACCESSION   AY593791
@@ -8710,7 +7916,7 @@ ORIGIN
      8161 tccctcagat gttacaattg gcagaaagac tctgaggcga gcgacgccgt aggagtgaaa
      8221 ggcccgaagg acctttcccg cttcctattt caaaaaaaaa aaaaaaaaaa aaaaaaaaaa
 //
-LOCUS       AY593794                8201 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593794                8201 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate asabana iso68, complete
             genome.
 ACCESSION   AY593794
@@ -8929,7 +8135,7 @@ ORIGIN
      8101 gagtctacaa ttggcacact ggctctgggg cgcgcgacgc cgtaggagtg aaaagcccga
      8161 ggggcttttc ctgcttcctt aaaccaaaaa aaaaaaaaaa a
 //
-LOCUS       AY593801                8201 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593801                8201 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate A30 Uruguay/68 iso90,
             complete genome.
 ACCESSION   AY593801
@@ -9148,7 +8354,7 @@ ORIGIN
      8101 agatcacgag gcagactttg aggcgcgcga cgccgctgga gtcaaagctc gaaagagctt
      8161 ttcccgcttc ctatttcaaa aaaaaaaaaa aaaaaaaaaa a
 //
-LOCUS       AY593802                8201 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593802                8201 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate A uruguay 2001 iso98,
             complete genome.
 ACCESSION   AY593802
@@ -9367,7 +8573,7 @@ ORIGIN
      8101 agatcacgag gcagactttg aggcgcgcga cgccgctgga gtcaaagctc gaaagagctt
      8161 ttcccgcttc ctatttcaaa aaaaaaaaaa aaaaaaaaaa a
 //
-LOCUS       AY593803                8199 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       AY593803                8199 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus A isolate avenceslau iso70, complete
             genome.
 ACCESSION   AY593803
@@ -9586,48 +8792,7 @@ ORIGIN
      8101 cagaggccaa ttggcactgt gactctgagg cgcgcgacgc cgtaggagtg aaaagtccgg
      8161 aagggctttt cccgcttcct attcaaaaaa aaaaaaaaa
 //
-LOCUS       E00223                   648 bp    RNA     linear   PAT 18-OCT-2016
-DEFINITION  cDNA encoding VP1 protein of FMDV A24 cruzeiro type.
-ACCESSION   E00223
-VERSION     E00223.1  GI:2168515
-KEYWORDS    JP 1984167549-A/1.
-SOURCE      Foot-and-mouth disease virus
-  ORGANISM  Foot-and-mouth disease virus
-            Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA
-            stage; Picornavirales; Picornaviridae; Aphthovirus.
-REFERENCE   1  (bases 1 to 648)
-  AUTHORS   Jiyon,C.B. and Andoriyuu,J.M.
-  TITLE     NOVEL ANTIGENS AND VACCINE CONTAINING THEM
-  JOURNAL   Patent: JP 1984167549-A 1 21-SEP-1984; WELLCOME FOUND LTD:THE
-COMMENT     OS Foot and mouth disease virus PN JP 1984167549-A/1 PD 21-SEP-1984
-            PF 30-SEP-1983 JP 1983182967 PR 30-SEP-1982 GB 82 8227860,
-            03-DEC-1982 GB 82 8234638 PI JIYON CHIYAARUZU BUUSUROIDO, ANDORIYUU
-            JIYOSEFU MAKOFU PC
-            C07C103/52,A61K39/135,C12N1/20,C12N15/00,C12P21/00//C07H21/02, PC
-            C07H21/04, PC (C12N1/20,C12R1:19) CC strandedness: Double CC
-            topology: Linear CC hypothetical: No CC anti-sense: No CC *source:
-            strain=A24 Cruzeiro Type FH Key Location/Qualifiers FH FT CDS
-            1..606 FT /product='VP1 protein of FMDV A24 cruzeiro FT type' FT
-            CDS 607..>648 FT /product='p52 of FMDV A24 Cruzeiro Type'.
-FEATURES             Location/Qualifiers
-     source          1..648
-                     /organism="Foot-and-mouth disease virus"
-                     /mol_type="unassigned RNA"
-                     /db_xref="taxon:12110"
-ORIGIN      
-        1 accaccaccg tggagaacta cggcggtgag acacaaatcc agagacgtca ccacacggac
-       61 attggtttca tcatggacag atttgtgaag atccaaagct tgagcccaac acatgtcatt
-      121 gacctcatgc agactcacca acacggtctg gtgggtgcct tgctgcgtgc aaccacgtac
-      181 tacttttctg acctggaaat tgttgtacgg cacgaaggca atctgacctg ggtgcccaac
-      241 ggcgcccctg aatcagccct gttgaacacc agcaacccca ctgcctacaa caaggcacca
-      301 ttcacgagac tcgctctccc ctacactgcg ccgcaccgtg tgccggcaac agtgtacaac
-      361 gggacgagta agtatgctgt gggtggttca ggcagaagag gcgacatggg gtctctcgcg
-      421 gcgcgagtcg tgaaacagct tcctgcttca tttaactacg gtgcaatcaa ggccgacgcc
-      481 atccacgaac ttctcgtgcg catgaaacgg gccgagctct actgccccag accgctgttg
-      541 gcaatagagg tgtcttcgca agacaggcac aagcaaaaga tcattgcacc agcaaagcag
-      601 cttctgaatt ttgacctgct caagttggcc ggagacgttg agtccaac
-//
-LOCUS       EU553851                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       EU553851                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A79/Cacapava/BRA/76
             VP1 protein (1D) gene, partial cds.
 ACCESSION   EU553851
@@ -9687,127 +8852,7 @@ ORIGIN
       541 cgggccgaac tctactgccc caggccactc ctggcngtgg aagtgtcgtc gcaagaccgg
       601 cacaaacaga agatnattgc acctgcaaaa cagcttttg
 //
-LOCUS       EU553876                 636 bp    RNA     linear   VRL 18-OCT-2016
-DEFINITION  Foot-and-mouth disease virus - type A isolate A14/Bandujo/SPA/1/59
-            VP1 protein (1D) gene, partial cds.
-ACCESSION   EU553876
-VERSION     EU553876.1  GI:183579109
-KEYWORDS    .
-SOURCE      Foot-and-mouth disease virus - type A (FMDV-A)
-  ORGANISM  Foot-and-mouth disease virus - type A
-            Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA
-            stage; Picornavirales; Picornaviridae; Aphthovirus.
-REFERENCE   1  (bases 1 to 636)
-  AUTHORS   Valarcher,J.F., Leforban,Y., Rweyemamu,M., Roeder,P.L., Gerbier,G.,
-            Mackay,D.K., Sumption,K.J., Paton,D.J. and Knowles,N.J.
-  TITLE     Incursions of foot-and-mouth disease virus into Europe between 1985
-            and 2006
-  JOURNAL   Transbound Emerg Dis 55 (1), 14-34 (2008)
-  PUBMED    18397506
-REFERENCE   2  (bases 1 to 636)
-  AUTHORS   Knowles,N.J.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (10-MAR-2008) World Reference Laboratory for
-            Foot-and-Mouth Disease, Institute for Animal Health, Pirbright
-            Laboratory, Ash Road, Pirbright, Woking, Surrey GU24 0NF, United
-            Kingdom
-FEATURES             Location/Qualifiers
-     source          1..636
-                     /organism="Foot-and-mouth disease virus - type A"
-                     /mol_type="genomic RNA"
-                     /serotype="A"
-                     /isolate="A14/Bandujo/SPA/1/59"
-                     /isolation_source="cell-culture supernatants"
-                     /db_xref="taxon:12111"
-                     /country="Spain"
-                     /collection_date=1959
-     gene            <1..>636
-                     /gene="1D"
-     CDS             <1..>636
-                     /gene="1D"
-                     /note="capsid polypeptide"
-                     /codon_start=1
-                     /product="VP1 protein"
-                     /protein_id="ACC63166.1"
-                     /db_xref="GI:183579110"
-                     /translation="TTAVGESADPVTTAVENYGGETQTRRRHHTDVGFIMDRFVKINS
-                     LSPTHVIDLMQTHQHGLVGALLRAATYYFSDLEIVVRHDGNLTWVPNGAPEAALSNTS
-                     NPTAYNKAPFTRLALPYTAPHRVLATVYNGTNKYSTGGLRRGDTGSPAARAAKQLPAS
-                     FNYGAIGAVTIHELLVRMKRAELYCPRPLLAVEVSLQDRHKQKIIAPARQLL"
-ORIGIN      
-        1 actactgctg tcggggagtc cgcagaccct gtcaccaccg ccgtggagaa ctacggcggt
-       61 gagacacaaa cccggagacg gcaccacacg gatgtcggtt tcatcatgga cagatttgtg
-      121 aagataaaca gtttgagtcc cacgcatgtc attgacctca tgcagaccca ccagcacggg
-      181 ctggtgggtg cgctgctgcg tgcagccacg tactacttct ctgacttgga gattgttgtg
-      241 cggcatgacg gcaatttgac ttgggtgccc aatggtgccc ctgaagcagc tttgtcaaac
-      301 accagcaacc ccactgccta caacaaggca ccgttcacga ggcttgctct cccttacact
-      361 gcgccacacc gcgtgttggc aaccgtgtac aacgggacga acaagtactc cacaggcggt
-      421 ctgagacgag gcgacacggg gtcgcccgcg gcgcgggccg cgaaacaact tcctgcctct
-      481 tttaattacg gtgcaattgg ggccgtcacc atccacgagc ttctcgtgcg catgaaacgg
-      541 gcagagctct actgccccag gccactactg gcagtagagg tgtctttaca agacaggcac
-      601 aagcaaaaga tcattgcacc cgcaagacag ttgctg
-//
-LOCUS       EU553877                 639 bp    RNA     linear   VRL 18-OCT-2016
-DEFINITION  Foot-and-mouth disease virus - type A isolate
-            A24/Santander/SPA/1/73 VP1 protein (1D) gene, partial cds.
-ACCESSION   EU553877
-VERSION     EU553877.1  GI:183579111
-KEYWORDS    .
-SOURCE      Foot-and-mouth disease virus - type A (FMDV-A)
-  ORGANISM  Foot-and-mouth disease virus - type A
-            Viruses; ssRNA viruses; ssRNA positive-strand viruses, no DNA
-            stage; Picornavirales; Picornaviridae; Aphthovirus.
-REFERENCE   1  (bases 1 to 639)
-  AUTHORS   Valarcher,J.F., Leforban,Y., Rweyemamu,M., Roeder,P.L., Gerbier,G.,
-            Mackay,D.K., Sumption,K.J., Paton,D.J. and Knowles,N.J.
-  TITLE     Incursions of foot-and-mouth disease virus into Europe between 1985
-            and 2006
-  JOURNAL   Transbound Emerg Dis 55 (1), 14-34 (2008)
-  PUBMED    18397506
-REFERENCE   2  (bases 1 to 639)
-  AUTHORS   Knowles,N.J.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (10-MAR-2008) World Reference Laboratory for
-            Foot-and-Mouth Disease, Institute for Animal Health, Pirbright
-            Laboratory, Ash Road, Pirbright, Woking, Surrey GU24 0NF, United
-            Kingdom
-FEATURES             Location/Qualifiers
-     source          1..639
-                     /organism="Foot-and-mouth disease virus - type A"
-                     /mol_type="genomic RNA"
-                     /serotype="A"
-                     /isolate="A24/Santander/SPA/1/73"
-                     /isolation_source="cell-culture supernatants"
-                     /db_xref="taxon:12111"
-                     /country="Spain"
-                     /collection_date=1973
-     gene            <1..>639
-                     /gene="1D"
-     CDS             <1..>639
-                     /gene="1D"
-                     /note="capsid polypeptide"
-                     /codon_start=1
-                     /product="VP1 protein"
-                     /protein_id="ACC63167.1"
-                     /db_xref="GI:183579112"
-                     /translation="TTATGESADPVTTTVENYGGETQVQRRHHTDIGFVMDRFVRIKN
-                     VSSTHVIDLMQTHQHGLVGALLRAATYYFSDLEIVVRHDGNLTWVPNGAPELALSNTS
-                     NPTAYNKAPFTRLALPYTAPHRVLATVYNGTSKYSVSGSNRRGDLGSLAARVAKQLPA
-                     SFNYGAIKADHVHELLVRMKRAELYCPRPLLAIEVSSQDRHKQKIIAPAKQLL"
-ORIGIN      
-        1 acaaccgcta ccggggaatc agcagaccct gtcaccacca ccgtggagaa ctacggcggt
-       61 gagacacaag ttcagagacg gcatcacacg gacattggct ttgttatgga cagatttgta
-      121 aggataaaga atgtgtcttc aacccacgtc attgacctca tgcaaaccca ccaacacggc
-      181 cttgtgggcg cgctgctgcg tgcggccacc tactacttct ctgacttgga aatcgtcgtg
-      241 cgacacgacg gcaacctgac ctgggtgccc aacggtgctc ccgaactggc cctgtccaac
-      301 accagcaacc ccaccgccta caacaaggca ccgtttacga gacttgcgct cccttacact
-      361 gcgccgcacc gagtgttggc aaccgtgtac aatgggacta gcaagtattc tgtgagtggt
-      421 tccaacaggc gaggcgacct ggggtctctc gcagcgcgag tcgcgaaaca acttcctgcc
-      481 tccttcaact atggtgcaat caaggccgac cacgtccacg agctcctcgt gcgcatgaag
-      541 cgggccgagc tctactgccc caggccactg ttggcaatag aggtgtcttc acaagacagg
-      601 cacaaacaga agatcattgc acccgcaaag cagcttttg
-//
-LOCUS       JQ082906                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082906                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Argentina/00 VP1
             gene, partial cds.
 ACCESSION   JQ082906
@@ -9863,7 +8908,7 @@ ORIGIN
       541 cgggccgagc tctactgccc ccgaccactg ctggcaatag aggtgtcatc acaggacaga
       601 cacaaacaaa agatcattgc acccgcaaaa cagtctctg
 //
-LOCUS       JQ082907                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082907                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate
             A/Rivadavia/BsAs/Arg/01 VP1 gene, partial cds.
 ACCESSION   JQ082907
@@ -9919,7 +8964,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcaatag aggtgtcctc acaagacaga
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       JQ082908                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082908                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate
             A/Chapaleufu/LaPampa/Arg/01 VP1 gene, partial cds.
 ACCESSION   JQ082908
@@ -9975,7 +9020,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacagg
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       JQ082909                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082909                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate
             A/T.Lauquen/BsAs/Arg/01 VP1 gene, partial cds.
 ACCESSION   JQ082909
@@ -10031,7 +9076,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacaga
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       JQ082910                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082910                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate
             A/Treita_y_Tres/Uru/01 VP1 gene, partial cds.
 ACCESSION   JQ082910
@@ -10087,7 +9132,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacaga
       601 cacaaacaga agatcattgc acccgaaaaa cagcttttg
 //
-LOCUS       JQ082911                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082911                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Colonia/Uru/01 VP1
             gene, partial cds.
 ACCESSION   JQ082911
@@ -10143,7 +9188,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacagg
       601 cacaaacaga agatcattgc acccgaaaga cagcttttg
 //
-LOCUS       JQ082912                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082912                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate
             A/S.doLivramento/RS/Bra/01(a) VP1 gene, partial cds.
 ACCESSION   JQ082912
@@ -10199,7 +9244,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc gcaagacagg
       601 cacaaacaga agatcattgc acccgaaaaa cagctttta
 //
-LOCUS       JQ082913                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082913                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate
             A/S.doLivramento/RS/Bra/01(b) VP1 gene, partial cds.
 ACCESSION   JQ082913
@@ -10255,7 +9300,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc gcaagacagg
       601 cacaaacaga agatcattgc acccgaaaaa cagctttta
 //
-LOCUS       JQ082914                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082914                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate
             A/S.doLivramento/RS/Bra/01(c) VP1 gene, partial cds.
 ACCESSION   JQ082914
@@ -10311,7 +9356,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactg ttggcactag aggtgatctc acaagacagg
       601 cacaaacaga agatcattgc acccgaaaaa cagctttta
 //
-LOCUS       JQ082915                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082915                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Sta_Cruz/Bol/00 VP1
             gene, partial cds.
 ACCESSION   JQ082915
@@ -10367,7 +9412,7 @@ ORIGIN
       541 agggccgaac tctactgccc caggccactg ttggcaatgg aggtagccca ggacagatac
       601 aaacagaaga tcattgcacc tgcaaagcag cttttg
 //
-LOCUS       JQ082916                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082916                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Sta.Cruz/Bol/01(a)
             VP1 gene, partial cds.
 ACCESSION   JQ082916
@@ -10423,7 +9468,7 @@ ORIGIN
       541 agggccgaac tctattgccc caggccactg ttggcaatag aggtgtccca ggacagacac
       601 aaacagaaga tcattgcacc tgcaaaacag cttttg
 //
-LOCUS       JQ082917                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082917                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Sta.Cruz/Bol/01(b)
             VP1 gene, partial cds.
 ACCESSION   JQ082917
@@ -10479,7 +9524,7 @@ ORIGIN
       541 agggccgaac tctattgccc caggccactg ttggcaatag aggtgtccca ggacagacac
       601 aaacagaaga tcattgcacc tgcaaaacag cttttg
 //
-LOCUS       JQ082918                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082918                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Cochabamba/Bol/01
             VP1 gene, partial cds.
 ACCESSION   JQ082918
@@ -10535,7 +9580,7 @@ ORIGIN
       541 agggccgaan tctattgccc caggccactg ttggcaatag aggtgtccca ggacagacac
       601 aaacagaaga tcattgcacc tgcaaaacag cttttg
 //
-LOCUS       JQ082919                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082919                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Oruro/Bol/01 VP1
             gene, partial cds.
 ACCESSION   JQ082919
@@ -10591,7 +9636,7 @@ ORIGIN
       541 agggccgaac tctattgccc caggccactg ttggcaatac aggtgtccca ggacagacac
       601 aaacagaaga tcattgcacc tgcaaaacag cttttg
 //
-LOCUS       JQ082920                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082920                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Potosi/Bol/01 VP1
             gene, partial cds.
 ACCESSION   JQ082920
@@ -10647,7 +9692,7 @@ ORIGIN
       541 agggccgaac tctattgccc caggccactg ttggcaatag aggtgtccca ggacagacac
       601 aaacagaaga tcattgcacc tgcaaaacag cttttg
 //
-LOCUS       JQ082921                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082921                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Beni/Bol/02 VP1
             gene, partial cds.
 ACCESSION   JQ082921
@@ -10703,7 +9748,7 @@ ORIGIN
       541 agggccgaac tctactgccc cagaccactc ttggcaatag aggtgtccca ggacaggcac
       601 aaacagaaga tcattgcacc tgcaaaacag cttttg
 //
-LOCUS       JQ082922                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082922                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Tibu/N. de
             Santander/Col/04 VP1 gene, partial cds.
 ACCESSION   JQ082922
@@ -10759,7 +9804,7 @@ ORIGIN
       541 gctgagctct actgtcccag gccgctgttg gcagtagagg tgtcgtcgca agacagacac
       601 aaacaaaaga tcattgcacc cgcaaagcag ctcttg
 //
-LOCUS       JQ082923                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082923                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/N.de
             Santander/Col/08(a) VP1 gene, partial cds.
 ACCESSION   JQ082923
@@ -10815,7 +9860,7 @@ ORIGIN
       541 cgagccgaac tctactgccc taggccgctc ctggcagtgg cggtgtcctc gcaagacaga
       601 cacaagcaga agatcattgc accggcaaag cagctcctg
 //
-LOCUS       JQ082924                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082924                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/N.de
             Santander/Col/08(b) VP1 gene, partial cds.
 ACCESSION   JQ082924
@@ -10871,7 +9916,7 @@ ORIGIN
       541 cgagccgaac tctactgccc taggccgctc ctggcagtgg cggtgtcctc gcaagacaga
       601 cacaagcaga agatcattgc accggcaaag cagctcctg
 //
-LOCUS       JQ082925                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082925                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/N.de
             Santander/Col/08(c) VP1 gene, partial cds.
 ACCESSION   JQ082925
@@ -10927,7 +9972,7 @@ ORIGIN
       541 cgagccgaac tctactgccc taggccgctc ctggcagtgg cggtgtcctc gcaagacaga
       601 cacaagcaga agatcattgc accggcaaag cagctcctg
 //
-LOCUS       JQ082926                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082926                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/N.de
             Santander/Col/08(d) VP1 gene, partial cds.
 ACCESSION   JQ082926
@@ -10983,7 +10028,7 @@ ORIGIN
       541 cgagccgaac tctactgccc taggccgctc ctggcagtgg cggtgtcctc gcaagacaga
       601 cacaagcaga agatcattgc accggcaaag cagctcctg
 //
-LOCUS       JQ082927                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082927                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/N.de
             Santander/Col/08(e) VP1 gene, partial cds.
 ACCESSION   JQ082927
@@ -11039,7 +10084,7 @@ ORIGIN
       541 cgagccgaac tctactgccc taggccgctc ctggcagtgg cggtgtcctc gcaagacaga
       601 cacaagcaga agatcattgc accggcaaag cagctcctg
 //
-LOCUS       JQ082928                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082928                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/N.de
             Santander/Col/08(f) VP1 gene, partial cds.
 ACCESSION   JQ082928
@@ -11095,7 +10140,7 @@ ORIGIN
       541 cgagccgaac tctactgccc taggccgctc ctggcagtgg cggtgtcctc gcaagacaga
       601 cacaagcaga agatcattgc accggcaaag cagctcctg
 //
-LOCUS       JQ082929                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082929                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Ecuador/02 VP1
             gene, partial cds.
 ACCESSION   JQ082929
@@ -11151,7 +10196,7 @@ ORIGIN
       541 cgggctgagc tctactgtcc cagaccactt ctggcggtgg aggtgtcgtc gcaagacaga
       601 cacaaacaga agatcattgc acccgcaaaa cagctcttg
 //
-LOCUS       JQ082930                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082930                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Peru/00 VP1 gene,
             partial cds.
 ACCESSION   JQ082930
@@ -11207,7 +10252,7 @@ ORIGIN
       541 cgggctgagc tctactgccc cagaccgctt ctggcggtgg aggtgtcgtc acaggacaga
       601 cacaaacaga agatcattgc acctgcaaag cagctcttg
 //
-LOCUS       JQ082931                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082931                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Peru/99 VP1 gene,
             partial cds.
 ACCESSION   JQ082931
@@ -11263,7 +10308,7 @@ ORIGIN
       541 cgggccgagc tctactgccc cagaccactt ctggcggtgg aggtgtcgtc acaagacaga
       601 cacaaacaga agatcattgc acctgcaaaa cagctcttg
 //
-LOCUS       JQ082932                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082932                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Tachira/Ven/01 VP1
             gene, partial cds.
 ACCESSION   JQ082932
@@ -11319,7 +10364,7 @@ ORIGIN
       541 gctgagctct actgtcccag accactgttg gcagtagagg tgtcgtcgca agacagatac
       601 aaacagaaga tcattgcacc cgcaaagcag ctgttg
 //
-LOCUS       JQ082933                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082933                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Bolivar/Ven/01 VP1
             gene, partial cds.
 ACCESSION   JQ082933
@@ -11375,7 +10420,7 @@ ORIGIN
       541 cgggccgaac tctattgccc caggccactt ctggcaatag aggtgtcttc acaagacagg
       601 cacaaacaaa agatcattgc accggcaaaa cagcttctg
 //
-LOCUS       JQ082934                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082934                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Merida/Ven/02 VP1
             gene, partial cds.
 ACCESSION   JQ082934
@@ -11431,7 +10476,7 @@ ORIGIN
       541 gctgagctct actgtcccag gccactgttg gcagtagaag tatcgtcgca agacagatac
       601 aaacaaaaga tcattgcacc cgcaaagcag ctgttg
 //
-LOCUS       JQ082935                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082935                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Bolivar/Ven/03 VP1
             gene, partial cds.
 ACCESSION   JQ082935
@@ -11487,7 +10532,7 @@ ORIGIN
       541 cgggccgaac tctattgccc caggccactt ctggcaatag aggtgtctac acaagacagg
       601 cacaaacaaa agatcattgc accggcaaaa cagcttctg
 //
-LOCUS       JQ082936                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082936                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Barinas/Ven/03 VP1
             gene, partial cds.
 ACCESSION   JQ082936
@@ -11543,7 +10588,7 @@ ORIGIN
       541 cgggccgaac tctactgccc taggccactc ttggcggtgg aggtgtcctc gcaagacaga
       601 cacaaacaga agatcattgc accggcaaaa cagctcctg
 //
-LOCUS       JQ082937                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082937                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Merida/Ven/03(a)
             VP1 gene, partial cds.
 ACCESSION   JQ082937
@@ -11599,7 +10644,7 @@ ORIGIN
       541 gctgagctct actgccccag accactgttg gcagtagagg tgtcgtcgca agacagacac
       601 aaacaaaaga ttattgcacc cgcaaagcag ttgttg
 //
-LOCUS       JQ082938                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082938                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Merida/Ven/03(b)
             VP1 gene, partial cds.
 ACCESSION   JQ082938
@@ -11655,7 +10700,7 @@ ORIGIN
       541 cgggccgagc tctactgccc cagaccactg ctggcactag aggtgtcttc gcaagacaga
       601 cacaagcaaa agatcattgc accagcaaaa caactgatg
 //
-LOCUS       JQ082939                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082939                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Tachira/Ven/04(a)
             VP1 gene, partial cds.
 ACCESSION   JQ082939
@@ -11711,7 +10756,7 @@ ORIGIN
       541 cgagccgaac tctactgccc tagaccgatc ttagcggtgg aggtgtcctc gcaagacaga
       601 cacaaacaga agatcattgc accggcaaaa cagctcctg
 //
-LOCUS       JQ082940                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082940                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Tachira/Ven/04(b)
             VP1 gene, partial cds.
 ACCESSION   JQ082940
@@ -11767,7 +10812,7 @@ ORIGIN
       541 cgagccgaac tctactgccc tagaccaatc ttggcggtgg aggtgtcctc gcaagacaga
       601 cacaaacaga agatcattgc accggcaaaa cagctcctg
 //
-LOCUS       JQ082941                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082941                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Barinas/Ven/04(a)
             VP1 gene, partial cds.
 ACCESSION   JQ082941
@@ -11823,7 +10868,7 @@ ORIGIN
       541 cgagccgaac tctactgccc tagaccactc ttggcggtgg aggtgtcctc gcaagacaga
       601 cacaaacaga agatcattgc accggcaaaa cagctcctg
 //
-LOCUS       JQ082942                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082942                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Tachira/Ven/04(c)
             VP1 gene, partial cds.
 ACCESSION   JQ082942
@@ -11879,7 +10924,7 @@ ORIGIN
       541 cgagccgaac tctactgtcc tagaccactc ttggcggtgg aggtgtcctc gcaagacaga
       601 tacaaacaga agatcattgc accggcaaaa cagctcctg
 //
-LOCUS       JQ082943                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082943                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Merida/Ven/04 VP1
             gene, partial cds.
 ACCESSION   JQ082943
@@ -11935,7 +10980,7 @@ ORIGIN
       541 cgagccgaac tctactgccc cagaccactc ttggcggtgg aggtgtcctt gcaagacaga
       601 cacaaacaga agatcattgc accggcaaaa cagctcctg
 //
-LOCUS       JQ082944                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082944                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Yaracuy/Ven/04 VP1
             gene, partial cds.
 ACCESSION   JQ082944
@@ -11991,7 +11036,7 @@ ORIGIN
       541 cgagccgaac tctactgccc tagaccactc ttggcggtgg aggtgtcttc gcaagacaga
       601 cacaaacaga agatcattgc accggcaaaa cagctcctg
 //
-LOCUS       JQ082945                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082945                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Falcon/Ven/04 VP1
             gene, partial cds.
 ACCESSION   JQ082945
@@ -12047,7 +11092,7 @@ ORIGIN
       541 cgggccgaac tctactgccc caggccactc ttggcggtgg aggtgtcctc gcaagacaga
       601 cacaaacaga agatcattgc accggcaaaa cagctcctg
 //
-LOCUS       JQ082946                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082946                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Barinas/Ven/04(b)
             VP1 gene, partial cds.
 ACCESSION   JQ082946
@@ -12103,7 +11148,7 @@ ORIGIN
       541 cgagccgaac tctactgccc tagaccactc ttggcggtgg aggtgtcctc acaaggcaga
       601 cacaaacaga agatcattgc accggcaaaa cagctcctg
 //
-LOCUS       JQ082947                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082947                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Tachira/Ven/04(d)
             VP1 gene, partial cds.
 ACCESSION   JQ082947
@@ -12159,7 +11204,7 @@ ORIGIN
       541 cgagccgaac tctactgccc tagaccaatc ttggcggtgg aggtgtcctc gcaagacaga
       601 cacaaacaga agatcattgc accggcaaaa cagctcctg
 //
-LOCUS       JQ082948                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082948                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Apure/Ven/04 VP1
             gene, partial cds.
 ACCESSION   JQ082948
@@ -12215,7 +11260,7 @@ ORIGIN
       541 cgagccgaac tctactgccc tagaccactc ttggcggtgg aggtgtcctc gcaagacaga
       601 cacaaacaga agatcattgc accggcaaaa cagcttctg
 //
-LOCUS       JQ082949                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082949                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Apure/Ven/05 VP1
             gene, partial cds.
 ACCESSION   JQ082949
@@ -12271,7 +11316,7 @@ ORIGIN
       541 cgggccgagc tctactgccc cagaccactc ttggcggtgg aggtgccttc gcaagacagg
       601 cacaaacaga agatcattgc accggcaaaa cagctcctg
 //
-LOCUS       JQ082950                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082950                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Merida/Ven/05(a)
             VP1 gene, partial cds.
 ACCESSION   JQ082950
@@ -12327,7 +11372,7 @@ ORIGIN
       541 cgagccgaac tctactgccc tagaccactc ttggcggtgg aggtgtcctc gcaagacaga
       601 cacaagcaaa agatcattgc accggcaaag cagctcctg
 //
-LOCUS       JQ082951                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082951                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Merida/Ven/05(b)
             VP1 gene, partial cds.
 ACCESSION   JQ082951
@@ -12383,7 +11428,7 @@ ORIGIN
       541 cgggccgagc tctattgtcc cagaccactg ctgggaatag aggtgtcctc acaagacaga
       601 cacaaacaaa ggatcattgc accagcaaaa cagttggtg
 //
-LOCUS       JQ082952                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082952                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Merida/Ven/05(c)
             VP1 gene, partial cds.
 ACCESSION   JQ082952
@@ -12439,7 +11484,7 @@ ORIGIN
       541 cgggccgagc tctattgtcc cagaccactg ctgggaatag aggtgtcctc acaagacaga
       601 cacaaacaaa ggatcattgc accagcaaaa cagttgttg
 //
-LOCUS       JQ082953                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082953                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Apure/Ven/06 VP1
             gene, partial cds.
 ACCESSION   JQ082953
@@ -12495,7 +11540,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactt ttggcggtgg aggtgtcctc gcaagacaga
       601 cacaaacaga agatcattgc accggcaaaa cagctcctg
 //
-LOCUS       JQ082954                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082954                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Portuguesa/Ven/07
             VP1 gene, partial cds.
 ACCESSION   JQ082954
@@ -12551,7 +11596,7 @@ ORIGIN
       541 cgggctgaac tctactgtcc cagaccactc ttggcagtag aggtgtcttc aggagacaga
       601 cacaaacaaa agatcattgc accagcaaaa caactgctg
 //
-LOCUS       JQ082955                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082955                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A13/Brasil/58 VP1
             gene, partial cds.
 ACCESSION   JQ082955
@@ -12610,7 +11655,7 @@ ORIGIN
       541 cgggccgagc tctactgtcc caggccactc ctggcgatag aggtgctttc ccaaggcaga
       601 tacaagcaaa agatcattgc acctgaaaaa cagcttttg
 //
-LOCUS       JQ082956                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082956                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A16/Belem/Bra/59 VP1
             gene, partial cds.
 ACCESSION   JQ082956
@@ -12669,7 +11714,7 @@ ORIGIN
       541 cgggccgagc tctactgccc cagaccgctg ttagcagtag aagtgtcttc gcaagacagg
       601 tacaagcaaa agatcattgc acctgcaaag cagcttctg
 //
-LOCUS       JQ082957                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082957                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A17/Guarulhos/Bra/59
             VP1 gene, partial cds.
 ACCESSION   JQ082957
@@ -12728,7 +11773,7 @@ ORIGIN
       541 cgggccgagc tctactgtcc caggccactc ctggcgatag aggtgctttc ccaagacaga
       601 tacaagcaaa agatcattgc acctgcaaaa cagcttttg
 //
-LOCUS       JQ082958                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082958                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A18/Zulia/Ven/62 VP1
             gene, partial cds.
 ACCESSION   JQ082958
@@ -12787,7 +11832,7 @@ ORIGIN
       541 gcagagctct actgccccag gccgatattg gcaatagagg tgtcttcaca ggacaggcac
       601 aagcaaaaga ttattgcacc cgcaaggcag ttgctg
 //
-LOCUS       JQ082959                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082959                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A19/Suipacha/Arg/62
             VP1 gene, partial cds.
 ACCESSION   JQ082959
@@ -12846,7 +11891,7 @@ ORIGIN
       541 gctgagctct actgccccag gccactgttg gcaatagagg tggtttcaca agacagacac
       601 aagcaaaaga tcattgcacc cgcaaagcag ctgttg
 //
-LOCUS       JQ082960                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082960                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate
             A24/Cruzeiro/Bra/55-PANAFTOSA VP1 gene, partial cds.
 ACCESSION   JQ082960
@@ -12905,7 +11950,7 @@ ORIGIN
       541 cgggccgagc tctactgccc cagaccgctg ttggcaatag aggtgtcttc gcaagacagg
       601 cacaagcaaa agatcattgc accagcaaag cagcttctg
 //
-LOCUS       JQ082961                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082961                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A25/Argentina/59 VP1
             gene, partial cds.
 ACCESSION   JQ082961
@@ -12964,7 +12009,7 @@ ORIGIN
       541 cgggccgaac tctactgccc cagaccactg ctggcaatag aggtgtcctc acaagacagg
       601 cacaagcaaa agatcattgc acctgcaaag cagctgctg
 //
-LOCUS       JQ082962                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082962                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A26/Argentina/66 VP1
             gene, partial cds.
 ACCESSION   JQ082962
@@ -13023,7 +12068,7 @@ ORIGIN
       541 cgggccgagc tctactgccc cagaccgctg ttggctgtag aagtgtcttc acaagacagg
       601 cacaaacaaa agatcattgc acctacaaag caacttcta
 //
-LOCUS       JQ082963                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082963                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A27/Colombia/67 VP1
             gene, partial cds.
 ACCESSION   JQ082963
@@ -13082,7 +12127,7 @@ ORIGIN
       541 gcggagctct actgccccag accactgttg gcaatagagg tgtcttcgca agacaggcac
       601 aagcagaaga tcattgcacc cgcaaagcag ttgctg
 //
-LOCUS       JQ082964                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082964                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A29/Peru/69 VP1 gene,
             partial cds.
 ACCESSION   JQ082964
@@ -13141,7 +12186,7 @@ ORIGIN
       541 cgagctgagc tctactgccc tagaccactg ttggcagtag aggtgtctac acaagacagg
       601 cacaaacaga agatcattgc acctgcaaaa cagctcctg
 //
-LOCUS       JQ082965                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082965                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A32/Venezuela/70 VP1
             gene, partial cds.
 ACCESSION   JQ082965
@@ -13200,7 +12245,7 @@ ORIGIN
       541 cgggccgagc tctactgtcc cagaccgctg ttggcagtag aggtgtcttc gcaagacagg
       601 cacaagcaaa agatcattgc accagcaaag cagcttttg
 //
-LOCUS       JQ082966                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082966                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A24/Bra/70 VP1 gene,
             partial cds.
 ACCESSION   JQ082966
@@ -13259,7 +12304,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccactt ttggcaatag aggtgtcttc gcaagatagg
       601 cacaagcaga agatcattgc acccgcaaag cagcttttg
 //
-LOCUS       JQ082967                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082967                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Ecuador/75 VP1
             gene, partial cds.
 ACCESSION   JQ082967
@@ -13318,7 +12363,7 @@ ORIGIN
       541 gctgagctct actgccccag gccactgttg gcagtagagg tgtcctcgca agacagacac
       601 aagcaaaaga tcattgcgcc cgcaaagcag ttgctg
 //
-LOCUS       JQ082968                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082968                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/San Martin/Per/75
             VP1 gene, partial cds.
 ACCESSION   JQ082968
@@ -13377,7 +12422,7 @@ ORIGIN
       541 cgagccgaac tctactgccc caggccactg ttggcaatag aggtgtcttc ccaggataga
       601 cacaaacaaa agatcattgc acctgcaaaa cagctttta
 //
-LOCUS       JQ082969                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082969                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A79/Bage/Bra/76 VP1
             gene, partial cds.
 ACCESSION   JQ082969
@@ -13436,7 +12481,7 @@ ORIGIN
       541 cgggccgaac tctactgccc caggccactc ctggcggtgg aagtgtcgtc gcaagaccgg
       601 cacaaacaga agattattgc acctgcaaaa cagcttttg
 //
-LOCUS       JQ082970                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082970                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A79/Cacapava/Bra/76
             VP1 gene, partial cds.
 ACCESSION   JQ082970
@@ -13495,7 +12540,7 @@ ORIGIN
       541 cgggccgaac tctactgccc caggccactc ctggcggtgg aagtgtcgtc gcaagaccgg
       601 cacaaacaga agattattgc acctgcaaaa cagcttttg
 //
-LOCUS       JQ082971                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082971                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A79/Pedregulho/Bra/76
             VP1 gene, partial cds.
 ACCESSION   JQ082971
@@ -13554,7 +12599,7 @@ ORIGIN
       541 cgggccgaac tctactgccc caggccactc ctggcggtgg aagtgtcgtc gcaagaccga
       601 cacaaacaga agatcattgc acctgcaaaa cagcttttg
 //
-LOCUS       JQ082972                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082972                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate
             A27/Cundinamarca/Col/76 VP1 gene, partial cds.
 ACCESSION   JQ082972
@@ -13613,7 +12658,7 @@ ORIGIN
       541 gcggagctct actgccccag accactgttg gcaatagagg tgtcttcgca agacaggcac
       601 aagcagaaga tcattgcgcc cgcaaagcag ttgttg
 //
-LOCUS       JQ082973                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082973                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Ecuador/79 VP1
             gene, partial cds.
 ACCESSION   JQ082973
@@ -13672,7 +12717,7 @@ ORIGIN
       541 cgggccgagc tctactgccc cagaccactg ctggcagtag aggtgtcgtc gcaagacagg
       601 cacaaacaaa agatcattgc acctgcaaaa cagctcttg
 //
-LOCUS       JQ082974                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082974                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/RS/Bra/81 VP1 gene,
             partial cds.
 ACCESSION   JQ082974
@@ -13731,7 +12776,7 @@ ORIGIN
       541 cgggccgagc tctactgccc cagaccactg ttggcaatag aggtgtcttc acaagacaga
       601 cacaaacaga agattattgc acctgcaaaa cagtcctcg
 //
-LOCUS       JQ082975                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082975                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/SaoCarlos/Bra/84
             VP1 gene, partial cds.
 ACCESSION   JQ082975
@@ -13790,7 +12835,7 @@ ORIGIN
       541 cgggccgaac tctactgccc cagaccacta ctggcagtag aagtctttgg acaagacaga
       601 cacaagcaga aaatcattgc acctgcaaaa caactactg
 //
-LOCUS       JQ082976                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082976                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Colombia/84 VP1
             gene, partial cds.
 ACCESSION   JQ082976
@@ -13849,7 +12894,7 @@ ORIGIN
       541 gctgagctct actgccccag gcctctgctg gcagtggagg tgtcttcgca aggtagacac
       601 aaacaaaaga tcattgcacc tgcaaaacac ttgttg
 //
-LOCUS       JQ082977                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082977                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Sabana/Col/85 VP1
             gene, partial cds.
 ACCESSION   JQ082977
@@ -13908,7 +12953,7 @@ ORIGIN
       541 cgagccgagc tctactgccc caggccacta ctggcggtag aggtgtcctc acaagacagg
       601 tacaaacaac agatcattgc accggcaaaa cagcttttg
 //
-LOCUS       JQ082978                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082978                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Venezuela/89 VP1
             gene, partial cds.
 ACCESSION   JQ082978
@@ -13967,7 +13012,7 @@ ORIGIN
       541 cgggccgaac tctactgccc tagaccgctc ttggcggtgg aggtgtcctc gcaagacaga
       601 cacaagcaga agatcattgc accggcaaaa cagctcctg
 //
-LOCUS       JQ082979                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082979                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Antioquia/Col/97
             VP1 gene, partial cds.
 ACCESSION   JQ082979
@@ -14026,7 +13071,7 @@ ORIGIN
       541 cgggccgagc tctactgtcc cagaccactg ttggcaatag aggtgtcttc acaagacagg
       601 cacaaacaaa agatcattgc accagcaaaa cagctcctg
 //
-LOCUS       JQ082980                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082980                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Cordoba/Col/97 VP1
             gene, partial cds.
 ACCESSION   JQ082980
@@ -14085,7 +13130,7 @@ ORIGIN
       541 cgggccgagc tctactgtcc cagaccactg ttggcaatag aggtgtcttc acaagacagg
       601 cacaaacaaa agatcattgc accagcaaaa cagctcctg
 //
-LOCUS       JQ082981                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082981                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Cundinamarca/Col/97
             VP1 gene, partial cds.
 ACCESSION   JQ082981
@@ -14144,7 +13189,7 @@ ORIGIN
       541 cgggccgagc tctactgtcc cagaccactg ttggcaattg aggtgtcttc acaagacagg
       601 cacaaacaaa agatcattgc accagcaaaa cagctcctg
 //
-LOCUS       JQ082982                 636 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       JQ082982                 636 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/RS/Bra/97 VP1 gene,
             partial cds.
 ACCESSION   JQ082982
@@ -14203,7 +13248,7 @@ ORIGIN
       541 agggccgaac tctactgccc cagaccactg ttggctgtag aggcgtctca ggacagatac
       601 aaacagaaga tcattgcacc cgcaaaacag ctcctg
 //
-LOCUS       KF112899                2205 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KF112899                2205 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Alem/ARG/81 capsid
             protein gene, partial cds.
 ACCESSION   KF112899
@@ -14297,7 +13342,7 @@ ORIGIN
      2101 gtgcgcatga aacgggccga gctctactgc cccagaccac tgttggcaat agaggtgtct
      2161 tcacaagaca ggcacaaaca gaagatcatt gcacccgcaa aacag
 //
-LOCUS       KU234721                 639 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KU234721                 639 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/Barinas/Ven/13a VP1
             gene, partial cds.
 ACCESSION   KU234721
@@ -14360,7 +13405,7 @@ ORIGIN
       541 cgagccgaac tctactgccc tagaccactc ttggcggtgg aggtgtcctc acaagacaga
       601 cacaaacaga agatcattgc accggcaaaa cagctcctg
 //
-LOCUS       KX002176                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002176                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/1155_BsAs_MCh
             polyprotein gene, partial cds.
 ACCESSION   KX002176
@@ -14562,7 +13607,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agataccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002177                6995 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002177                6995 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/1185_ER_Par
             polyprotein-like gene, partial sequence.
 ACCESSION   KX002177
@@ -14720,7 +13765,7 @@ ORIGIN
      6901 accggcgtct ctttgagcct tttcaaggcc tctttgagat tccaagctac agatcacttt
      6961 acctgcgttg ggtgaacgcc gtgtgcggtg acgca
 //
-LOCUS       KX002178                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002178                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/129_LPam_Capital
             polyprotein gene, partial cds.
 ACCESSION   KX002178
@@ -14922,7 +13967,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agataccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002179                6998 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002179                6998 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/1293_BsAs_Indio
             polyprotein-like gene, partial sequence.
 ACCESSION   KX002179
@@ -15080,7 +14125,7 @@ ORIGIN
      6901 agtaccggcg tctctttgag ccttttcaag gcctctttga gattccaagc tacagatcac
      6961 tttacctgcg ttgggtgaac gccgtgtgcg gtgacgca
 //
-LOCUS       KX002180                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002180                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/1300_BS_As_Gguido
             polyprotein gene, partial cds.
 ACCESSION   KX002180
@@ -15282,7 +14327,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agataccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002181                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002181                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/1441_BsAs_Lflores
             polyprotein gene, partial cds.
 ACCESSION   KX002181
@@ -15484,7 +14529,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcag ggcctctttg agattccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002182                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002182                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/1452_longMCH
             polyprotein gene, partial cds.
 ACCESSION   KX002182
@@ -15686,7 +14731,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agataccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002183                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002183                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/1514_LPam_HU
             polyprotein gene, partial cds.
 ACCESSION   KX002183
@@ -15888,7 +14933,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agataccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002184                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002184                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/1893_longMCH
             polyprotein gene, partial cds.
 ACCESSION   KX002184
@@ -16090,7 +15135,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agataccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002185                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002185                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/2026_Tuc_Tuc
             polyprotein gene, partial cds.
 ACCESSION   KX002185
@@ -16292,7 +15337,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agattccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002186                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002186                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/2027_Cor_Col
             polyprotein gene, partial cds.
 ACCESSION   KX002186
@@ -16494,7 +15539,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agattccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002187                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002187                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/2059_BsAs_Hirig
             polyprotein gene, partial cds.
 ACCESSION   KX002187
@@ -16696,7 +15741,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agataccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002188                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002188                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/2063_Cor_Ccuat
             polyprotein gene, partial cds.
 ACCESSION   KX002188
@@ -16898,7 +15943,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agattccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002189                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002189                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/2071_LPam_Chali
             polyprotein gene, partial cds.
 ACCESSION   KX002189
@@ -17100,7 +16145,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg aggtaccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002190                6998 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002190                6998 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/2084_StEst_OjoAgua
             polyprotein-like gene, partial sequence.
 ACCESSION   KX002190
@@ -17258,7 +16303,7 @@ ORIGIN
      6901 agtaccggcg tctctttgag ccttttcaag gcctctttga gattccaagc tacagatcac
      6961 tttacctgcg ttgggtgaac gccgtgtgcg gtgacgca
 //
-LOCUS       KX002191                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002191                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/2107_BsAs_Merced
             polyprotein gene, partial cds.
 ACCESSION   KX002191
@@ -17460,7 +16505,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agattccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002192                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002192                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/2118_LPam_Lmahu
             polyprotein gene, partial cds.
 ACCESSION   KX002192
@@ -17662,7 +16707,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg aggtaccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002193                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002193                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/258_ER_Diamante
             polyprotein gene, partial cds.
 ACCESSION   KX002193
@@ -17864,7 +16909,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agattccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002194                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002194                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/38950_For_Pat
             polyprotein gene, partial cds.
 ACCESSION   KX002194
@@ -18066,7 +17111,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agattccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002195                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002195                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/39064_SL_Ped
             polyprotein gene, partial cds.
 ACCESSION   KX002195
@@ -18268,7 +17313,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agattccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002196                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002196                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/39111_Cor_Gpaz
             polyprotein gene, partial cds.
 ACCESSION   KX002196
@@ -18470,7 +17515,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gcctttccaa ggcctctttg agattccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002197                6998 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002197                6998 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/423_Cor_Union
             polyprotein-like gene, partial sequence.
 ACCESSION   KX002197
@@ -18628,7 +17673,7 @@ ORIGIN
      6901 agtaccggcg tctctttgag cctttccaag gcctctttga gattccaagc tacagatcac
      6961 tttacctgcg ttgggtgaac gccgtgtgcg gtgacgca
 //
-LOCUS       KX002198                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002198                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/467_SFe_Irio
             polyprotein gene, partial cds.
 ACCESSION   KX002198
@@ -18830,7 +17875,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agataccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002199                6995 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002199                6995 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/548_LP_Guatrech
             polyprotein-like gene, partial sequence.
 ACCESSION   KX002199
@@ -18988,7 +18033,7 @@ ORIGIN
      6901 taccggcgtc tctttgagcc ttttcaaggc ctctttgaga ttccaagcta cagatcactt
      6961 tacctgcgtt gggtgaacgc cgtgtgcggg acgca
 //
-LOCUS       KX002200                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002200                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/820_Cor_Groca
             polyprotein gene, partial cds.
 ACCESSION   KX002200
@@ -19190,7 +18235,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agattccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002201                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002201                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/915_SEst_Riv
             polyprotein gene, partial cds.
 ACCESSION   KX002201
@@ -19392,7 +18437,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agattccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002202                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002202                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/973_SL_Pede
             polyprotein gene, partial cds.
 ACCESSION   KX002202
@@ -19594,7 +18639,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agattccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002203                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002203                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/AAreco01
             polyprotein gene, partial cds.
 ACCESSION   KX002203
@@ -19796,7 +18841,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga gccttttcaa ggcctctttg agattccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002204                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002204                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/AGLopez01
             polyprotein gene, partial cds.
 ACCESSION   KX002204
@@ -19998,7 +19043,7 @@ ORIGIN
      6901 gagtaccggc gtctctttga accttttcaa ggcctctttg agataccaag ctacagatca
      6961 ctttacctgc gttgggtgaa cgccgtgtgc ggtgacgca
 //
-LOCUS       KX002205                6999 bp    RNA     linear   VRL 18-OCT-2016
+LOCUS       KX002205                6999 bp    RNA     linear   VRL 24-OCT-2016
 DEFINITION  Foot-and-mouth disease virus - type A isolate A/ATLauquen01
             polyprotein gene, partial cds.
 ACCESSION   KX002205
