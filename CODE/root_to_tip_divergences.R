@@ -1,16 +1,16 @@
 ## This script will take two maximum likelihood trees (one for each serotype) constructed with PhyML and plot the root-to-tip divergences
-### Copyleft (or the one to blame): Carvalho, LMF (2015)
+### Copyleft (or the one to blame): Carvalho, LMF (2016)
 library(devtools)
 source_url("https://raw.githubusercontent.com/maxbiostat/CODE/master/R/PHYLO/find_best_rooting.R")
 library(ape)
-mltree.A <- read.tree("../DATA/SEQUENCES/serotype_A.newick")
-mltree.O <- read.tree("../DATA/SEQUENCES/serotype_O.newick")
+mltree.A <- read.tree("../DATA/SEQUENCES/ML_tree_serotype_A_VP1_renamed.newick")
+mltree.O <- read.tree("../DATA/SEQUENCES/ML_tree_serotype_O_VP1_renamed.newick")
 
 lastf <- function(x) x[length(x)]
 rm(get.ages)
 get.ages <- function(tree) as.numeric(unlist(lapply(strsplit(tree$tip.label, "_"), function(x) lastf(x))))
 brootingA <- find_best_rooting(tree = mltree.A)
-brootingO <- find_best_rooting(tree = mltree.O, Optim = FALSE)
+brootingO <- find_best_rooting(tree = mltree.O)
 
 brootingA$table$serotype <- rep("A", nrow(brootingA$table))
 brootingO$table$serotype <- rep("O", nrow(brootingO$table))
