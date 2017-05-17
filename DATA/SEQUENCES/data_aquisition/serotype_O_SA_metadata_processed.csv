@@ -1,57 +1,20 @@
-Name,Sequences,Date,date,country
+accession,Sequences,name,date,country
 AJ004645,AJ004645,"Foot-and-mouth disease virus, isolate O3/Venezuela/51, VP3/VP1",1951,Venezuela
-AJ306212,AJ306212,"Foot-and-mouth disease virus O 1D gene for VP1 protein, strain O Rivadavia/Arg/94, genomic RNA",1994,Argentina
+AY593818,AY593818,"Foot-and-mouth disease virus O isolate o1campos iso96, complete genome",1958,Brazil
+AY593820,AY593820,"Foot-and-mouth disease virus O isolate o1canefa iso59, complete genome",1964,Argentina
+AY593814,AY593814,"Foot-and-mouth disease virus O isolate o1argentina iso5, complete genome",1965,Argentina
+AY593821,AY593821,"Foot-and-mouth disease virus O isolate o1caseros iso35, complete genome",1967,Argentina
+APHVP1OC,K01201,"Foot & mouth disease virus capsid protein VP1, serotype O1Campos/ Brazil/71",1971,Brazil
+AY593827,AY593827,"Foot-and-mouth disease virus O isolate o3venezuela iso15, complete genome",1971,Venezuela
 AJ308705,AJ308705,"Foot-and-mouth disease virus O partial 1D gene for VP1 protein, genomic RNA, strain O1/Arg/77",1977,Argentina
 AJ308706,AJ308706,"Foot-and-mouth disease virus O partial 1D gene for VP1 protein, genomic RNA, strain O1/Lujan/Arg/83",1983,Argentina
 AJ308707,AJ308707,"Foot-and-mouth disease virus O partial 1D gene for VP1 protein, genomic RNA, strain O1/Ayacucho/Arg/90",1990,Argentina
 AJ308708,AJ308708,"Foot-and-mouth disease virus O partial 1D gene for VP1 protein, genomic RNA, strain O1/Chapaleufu/Arg/92",1992,Argentina
-AM180025,AM180025,"Foot-and-mouth disease virus - type O partial gene for polyprotein, VP1 region, isolate Mercedes00",2000,Argentina
-AM180026,AM180026,"Foot-and-mouth disease virus - type O partial gene for polyprotein, VP1 region, isolate Bermejo00",2000,Argentina
-AM180027,AM180027,"Foot-and-mouth disease virus - type O partial gene for polyprotein, VP1 region, isolate Clorinda00A",2000,Argentina
-AM180028,AM180028,"Foot-and-mouth disease virus - type O partial gene for polyprotein, VP1 region, isolate Clorinda00B",2000,Argentina
-AM180029,AM180029,"Foot-and-mouth disease virus - type O partial gene for polyprotein, VP1 region, isolate Misiones00",2000,Argentina
-AM180030,AM180030,"Foot-and-mouth disease virus - type O partial gene for polyprotein, VP1 region, isolate SMartin00",2000,Argentina
-APHVP1OC,K01201,"Foot & mouth disease virus capsid protein VP1, serotype O1Campos/ Brazil/71",1971,Brazil
-AY593814,AY593814,"Foot-and-mouth disease virus O isolate o1argentina iso5, complete genome",1965,Argentina
-AY593818,AY593818,"Foot-and-mouth disease virus O isolate o1campos iso96, complete genome",1958,Argentina
+KJ831741,KJ831741,"Foot-and-mouth disease virus - type O isolate O/BRA/01/1992 capsid protein gene, partial cds",1992,Brazil
+KJ831730,KJ831730,"Foot-and-mouth disease virus - type O isolate PER/10/93 capsid protein gene, partial cds",1993,Peru
+KJ831731,KJ831731,"Foot-and-mouth disease virus - type O isolate PER/14/93 capsid protein gene, partial cds",1993,Peru
+AJ306212,AJ306212,"Foot-and-mouth disease virus O 1D gene for VP1 protein, strain O Rivadavia/Arg/94, genomic RNA",1994,Argentina
 AY593819,AY593819,"Foot-and-mouth disease virus O isolate o1campos94 iso94, complete genome",1994,Argentina
-AY593820,AY593820,"Foot-and-mouth disease virus O isolate o1canefa iso59, complete genome",1964,Argentina
-AY593821,AY593821,"Foot-and-mouth disease virus O isolate o1caseros iso35, complete genome",1967,Argentina
-AY593825,AY593825,"Foot-and-mouth disease virus O isolate o1valle iso64, complete genome",1953,Argentina
-AY593827,AY593827,"Foot-and-mouth disease virus O isolate o3venezuela iso15, complete genome",1971,Venezuela
-DQ834705,DQ834705,"Foot-and-mouth disease virus - type O isolate O/Argentina/00 VP1 (1D) gene, partial cds",2000,Argentina
-DQ834706,DQ834706,"Foot-and-mouth disease virus - type O isolate O/RS/Bra/00 VP1 (1D) gene, partial cds",2000,Brazil
-DQ834707,DQ834707,"Foot-and-mouth disease virus - type O isolate O/Artigas/Uru/00 VP1 (1D) gene, partial cds",2000,Uruguay
-DQ834708,DQ834708,"Foot-and-mouth disease virus - type O isolate O/Tarija/Bol/00 VP1 (1D) gene, partial cds",2000,Bolivia
-DQ834709,DQ834709,"Foot-and-mouth disease virus - type O isolate O/Tarija/Bol/01 VP1 (1D) gene, partial cds",2001,Bolivia
-DQ834710,DQ834710,"Foot-and-mouth disease virus - type O isolate O/Canindeyu/Par/02 VP1 (1D) gene, partial cds",2002,Paraguay
-DQ834711,DQ834711,"Foot-and-mouth disease virus - type O isolate O/Pozo Hondo/Par/03 VP1 (1D) gene, partial cds",2003,Paraguay
-DQ834712,DQ834712,"Foot-and-mouth disease virus - type O isolate O/Chuquisaca/Bol/03 VP1 (1D) gene, partial cds",2003,Bolivia
-DQ834713,DQ834713,"Foot-and-mouth disease virus - type O isolate O/Potosi/Bol/03 VP1 (1D) gene, partial cds",2003,Bolivia
-DQ834714,DQ834714,"Foot-and-mouth disease virus - type O isolate O/MS(1a)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
-DQ834715,DQ834715,"Foot-and-mouth disease virus - type O isolate O/MS(1b)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
-DQ834716,DQ834716,"Foot-and-mouth disease virus - type O isolate O/MS(1c)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
-DQ834717,DQ834717,"Foot-and-mouth disease virus - type O isolate O/MS(1d)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
-DQ834718,DQ834718,"Foot-and-mouth disease virus - type O isolate O/MS(1e)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
-DQ834719,DQ834719,"Foot-and-mouth disease virus - type O isolate O/MS(1f)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
-DQ834720,DQ834720,"Foot-and-mouth disease virus - type O isolate O/MS(1g)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
-DQ834721,DQ834721,"Foot-and-mouth disease virus - type O isolate O/MS(1h)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
-DQ834722,DQ834722,"Foot-and-mouth disease virus - type O isolate O/MS(1i)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
-DQ834723,DQ834723,"Foot-and-mouth disease virus - type O isolate O/MS(1j)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
-DQ834724,DQ834724,"Foot-and-mouth disease virus - type O isolate O/MS(2)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
-DQ834725,DQ834725,"Foot-and-mouth disease virus - type O isolate O/MS(3)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
-DQ834726,DQ834726,"Foot-and-mouth disease virus - type O isolate O/MS(4)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
-DQ834727,DQ834727,"Foot-and-mouth disease virus - type O isolate O/Corrientes/Arg/06 VP1 (1D) gene, partial cds",2006,Argentina
-HQ695737,HQ695737,"Foot-and-mouth disease virus - type O isolate O/Pando/Bol/00 VP1 gene, partial cds",2000,Bolivia
-HQ695738,HQ695738,"Foot-and-mouth disease virus - type O isolate O/Tarija/Bol/00(a) VP1 gene, partial cds",2000,Bolivia
-HQ695739,HQ695739,"Foot-and-mouth disease virus - type O isolate O/Potosi/Bol/01 VP1 gene, partial cds",2001,Bolivia
-HQ695740,HQ695740,"Foot-and-mouth disease virus - type O isolate O/Tarija/Bol/01(a) VP1 gene, partial cds",2001,Bolivia
-HQ695741,HQ695741,"Foot-and-mouth disease virus - type O isolate O/Beni/Bol/01 VP1 gene, partial cds",2001,Bolivia
-HQ695742,HQ695742,"Foot-and-mouth disease virus - type O isolate O/La Paz/Bol/02(a) VP1 gene, partial cds",2002,Bolivia
-HQ695743,HQ695743,"Foot-and-mouth disease virus - type O isolate O/La Paz/Bol/02(b) VP1 gene, partial cds",2002,Bolivia
-HQ695744,HQ695744,"Foot-and-mouth disease virus - type O isolate O/La Paz/Bol/02(c) VP1 gene, partial cds",2002,Bolivia
-HQ695745,HQ695745,"Foot-and-mouth disease virus - type O isolate O/Potosi/Bol/03(a) VP1 gene, partial cds",2003,Bolivia
-HQ695746,HQ695746,"Foot-and-mouth disease virus - type O isolate O/Santa_Cruz/Bol/07 VP1 gene, partial cds",2007,Bolivia
 HQ695747,HQ695747,"Foot-and-mouth disease virus - type O isolate O/Cundinamarca/Col/94(a) VP1 gene, partial cds",1994,Colombia
 HQ695748,HQ695748,"Foot-and-mouth disease virus - type O isolate O/Santander/Col/94 VP1 gene, partial cds",1994,Colombia
 HQ695749,HQ695749,"Foot-and-mouth disease virus - type O isolate O/Boyaca/Col/94(a) VP1 gene, partial cds",1994,Colombia
@@ -68,6 +31,16 @@ HQ695759,HQ695759,"Foot-and-mouth disease virus - type O isolate O/Cundinamarca/
 HQ695760,HQ695760,"Foot-and-mouth disease virus - type O isolate O/Narino/Col/94 VP1 gene, partial cds",1994,Colombia
 HQ695761,HQ695761,"Foot-and-mouth disease virus - type O isolate O/Cauca/Col/94(b) VP1 gene, partial cds",1994,Colombia
 HQ695762,HQ695762,"Foot-and-mouth disease virus - type O isolate O/Casanare/Col/94 VP1 gene, partial cds",1994,Colombia
+KJ831732,KJ831732,"Foot-and-mouth disease virus - type O isolate PER/5/94 capsid protein gene, partial cds",1994,Peru
+KJ831733,KJ831733,"Foot-and-mouth disease virus - type O isolate PER/6/94 capsid protein gene, partial cds",1994,Peru
+KJ831734,KJ831734,"Foot-and-mouth disease virus - type O isolate PER/7/94 capsid protein gene, partial cds",1994,Peru
+KJ831736,KJ831736,"Foot-and-mouth disease virus - type O isolate BRA/4/94 capsid protein gene, partial cds",1994,Brazil
+KJ831742,KJ831742,"Foot-and-mouth disease virus - type O isolate O/BRA/01/1994 capsid protein gene, partial cds",1994,Brazil
+KJ831743,KJ831743,"Foot-and-mouth disease virus - type O isolate O/BRA/02/1994 capsid protein gene, partial cds",1994,Brazil
+KJ831744,KJ831744,"Foot-and-mouth disease virus - type O isolate O/BRA/03/1994 capsid protein gene, partial cds",1994,Brazil
+KJ831745,KJ831745,"Foot-and-mouth disease virus - type O isolate O/BRA/05/1994 capsid protein gene, partial cds",1994,Brazil
+KJ831746,KJ831746,"Foot-and-mouth disease virus - type O isolate O/BRA/06/1994 capsid protein gene, partial cds",1994,Brazil
+KJ831747,KJ831747,"Foot-and-mouth disease virus - type O isolate O/BRA/08/1994 capsid protein gene, partial cds",1994,Brazil
 HQ695763,HQ695763,"Foot-and-mouth disease virus - type O isolate O/Cundinamarca/Col/95(a) VP1 gene, partial cds",1995,Colombia
 HQ695764,HQ695764,"Foot-and-mouth disease virus - type O isolate O/Cundinamarca/Col/95(b) VP1 gene, partial cds",1995,Colombia
 HQ695765,HQ695765,"Foot-and-mouth disease virus - type O isolate O/Cundinamarca/Col/95(c) VP1 gene, partial cds",1995,Colombia
@@ -75,22 +48,49 @@ HQ695766,HQ695766,"Foot-and-mouth disease virus - type O isolate O/Cundinamarca/
 HQ695767,HQ695767,"Foot-and-mouth disease virus - type O isolate O/Cundinamarca/Col/95(e) VP1 gene, partial cds",1995,Colombia
 HQ695768,HQ695768,"Foot-and-mouth disease virus - type O isolate O/Cundinamarca/Col/95(f) VP1 gene, partial cds",1995,Colombia
 HQ695769,HQ695769,"Foot-and-mouth disease virus - type O isolate O/Cundinamarca/Col/95(g) VP1 gene, partial cds",1995,Colombia
+KJ831748,KJ831748,"Foot-and-mouth disease virus - type O isolate O/BRA/01/1995 capsid protein gene, partial cds",1995,Brazil
 HQ695770,HQ695770,"Foot-and-mouth disease virus - type O isolate O/Narino/Col/98(a) VP1 gene, partial cds",1998,Colombia
 HQ695771,HQ695771,"Foot-and-mouth disease virus - type O isolate O/Cauca/Col/98 VP1 gene, partial cds",1998,Colombia
 HQ695772,HQ695772,"Foot-and-mouth disease virus - type O isolate O/Narino/Col/98(b) VP1 gene, partial cds",1998,Colombia
 HQ695773,HQ695773,"Foot-and-mouth disease virus - type O isolate O/Narino/Col/98(c) VP1 gene, partial cds",1998,Colombia
 HQ695774,HQ695774,"Foot-and-mouth disease virus - type O isolate O/Narino/Col/99 VP1 gene, partial cds",1999,Colombia
+AM180025,AM180025,"Foot-and-mouth disease virus - type O partial gene for polyprotein, VP1 region, isolate Mercedes00",2000,Argentina
+AM180026,AM180026,"Foot-and-mouth disease virus - type O partial gene for polyprotein, VP1 region, isolate Bermejo00",2000,Argentina
+AM180027,AM180027,"Foot-and-mouth disease virus - type O partial gene for polyprotein, VP1 region, isolate Clorinda00A",2000,Argentina
+AM180028,AM180028,"Foot-and-mouth disease virus - type O partial gene for polyprotein, VP1 region, isolate Clorinda00B",2000,Argentina
+AM180029,AM180029,"Foot-and-mouth disease virus - type O partial gene for polyprotein, VP1 region, isolate Misiones00",2000,Argentina
+AM180030,AM180030,"Foot-and-mouth disease virus - type O partial gene for polyprotein, VP1 region, isolate SMartin00",2000,Argentina
+DQ834705,DQ834705,"Foot-and-mouth disease virus - type O isolate O/Argentina/00 VP1 (1D) gene, partial cds",2000,Argentina
+DQ834706,DQ834706,"Foot-and-mouth disease virus - type O isolate O/RS/Bra/00 VP1 (1D) gene, partial cds",2000,Brazil
+DQ834707,DQ834707,"Foot-and-mouth disease virus - type O isolate O/Artigas/Uru/00 VP1 (1D) gene, partial cds",2000,Uruguay
+DQ834708,DQ834708,"Foot-and-mouth disease virus - type O isolate O/Tarija/Bol/00 VP1 (1D) gene, partial cds",2000,Bolivia
+HQ695737,HQ695737,"Foot-and-mouth disease virus - type O isolate O/Pando/Bol/00 VP1 gene, partial cds",2000,Bolivia
+HQ695738,HQ695738,"Foot-and-mouth disease virus - type O isolate O/Tarija/Bol/00(a) VP1 gene, partial cds",2000,Bolivia
 HQ695775,HQ695775,"Foot-and-mouth disease virus - type O isolate O/Narino/Col/00(a) VP1 gene, partial cds",2000,Colombia
 HQ695776,HQ695776,"Foot-and-mouth disease virus - type O isolate O/Narino/Col/00(b) VP1 gene, partial cds",2000,Colombia
 HQ695777,HQ695777,"Foot-and-mouth disease virus - type O isolate O/Cundinamarca/Col/00 VP1 gene, partial cds",2000,Colombia
 HQ695778,HQ695778,"Foot-and-mouth disease virus - type O isolate O/Narino/Col/00(c) VP1 gene, partial cds",2000,Colombia
 HQ695779,HQ695779,"Foot-and-mouth disease virus - type O isolate O/Narino/Col/00(d) VP1 gene, partial cds",2000,Colombia
+KJ831738,KJ831738,"Foot-and-mouth disease virus - type O isolate ARG/02/2000 capsid protein gene, partial cds",2000,Argentina
+KJ831739,KJ831739,"Foot-and-mouth disease virus - type O isolate ARG/03/2000 capsid protein gene, partial cds",2000,Argentina
+DQ834709,DQ834709,"Foot-and-mouth disease virus - type O isolate O/Tarija/Bol/01 VP1 (1D) gene, partial cds",2001,Bolivia
+HQ695739,HQ695739,"Foot-and-mouth disease virus - type O isolate O/Potosi/Bol/01 VP1 gene, partial cds",2001,Bolivia
+HQ695740,HQ695740,"Foot-and-mouth disease virus - type O isolate O/Tarija/Bol/01(a) VP1 gene, partial cds",2001,Bolivia
+HQ695741,HQ695741,"Foot-and-mouth disease virus - type O isolate O/Beni/Bol/01 VP1 gene, partial cds",2001,Bolivia
+DQ834710,DQ834710,"Foot-and-mouth disease virus - type O isolate O/Canindeyu/Par/02 VP1 (1D) gene, partial cds",2002,Paraguay
+HQ695742,HQ695742,"Foot-and-mouth disease virus - type O isolate O/La Paz/Bol/02(a) VP1 gene, partial cds",2002,Bolivia
+HQ695743,HQ695743,"Foot-and-mouth disease virus - type O isolate O/La Paz/Bol/02(b) VP1 gene, partial cds",2002,Bolivia
+HQ695744,HQ695744,"Foot-and-mouth disease virus - type O isolate O/La Paz/Bol/02(c) VP1 gene, partial cds",2002,Bolivia
 HQ695780,HQ695780,"Foot-and-mouth disease virus - type O isolate O/Narino/Col/02 VP1 gene, partial cds",2002,Colombia
-HQ695781,HQ695781,"Foot-and-mouth disease virus - type O isolate O/Cucuta/N.de Santander/Col/08(a) VP1 gene, partial cds",2008,Colombia
-HQ695782,HQ695782,"Foot-and-mouth disease virus - type O isolate O/Cucuta/N.de Santander/Col/08(b) VP1 gene, partial cds",2008,Colombia
 HQ695783,HQ695783,"Foot-and-mouth disease virus - type O isolate O/Esmeraldas/Ecu/02 (003-02) VP1 gene, partial cds",2002,Ecuador
 HQ695784,HQ695784,"Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/02 (027-02) VP1 gene, partial cds",2002,Ecuador
 HQ695785,HQ695785,"Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/02 (071-02) VP1 gene, partial cds",2002,Ecuador
+KJ831728,KJ831728,"Foot-and-mouth disease virus - type O isolate PAR/1/2002 capsid protein gene, partial cds",2002,Paraguay
+KJ831729,KJ831729,"Foot-and-mouth disease virus - type O isolate PAR/2/2002 capsid protein gene, partial cds",2002,Paraguay
+DQ834711,DQ834711,"Foot-and-mouth disease virus - type O isolate O/Pozo Hondo/Par/03 VP1 (1D) gene, partial cds",2003,Paraguay
+DQ834712,DQ834712,"Foot-and-mouth disease virus - type O isolate O/Chuquisaca/Bol/03 VP1 (1D) gene, partial cds",2003,Bolivia
+DQ834713,DQ834713,"Foot-and-mouth disease virus - type O isolate O/Potosi/Bol/03 VP1 (1D) gene, partial cds",2003,Bolivia
+HQ695745,HQ695745,"Foot-and-mouth disease virus - type O isolate O/Potosi/Bol/03(a) VP1 gene, partial cds",2003,Bolivia
 HQ695786,HQ695786,"Foot-and-mouth disease virus - type O isolate O/Napo/Ecu/03 (005-03) VP1 gene, partial cds",2003,Ecuador
 HQ695787,HQ695787,"Foot-and-mouth disease virus - type O isolate O/Napo/Ecu/03 (009-03) VP1 gene, partial cds",2003,Ecuador
 HQ695788,HQ695788,"Foot-and-mouth disease virus - type O isolate O/Sucumbios/Ecu/03 (016-03) VP1 gene, partial cds",2003,Ecuador
@@ -100,6 +100,7 @@ HQ695791,HQ695791,"Foot-and-mouth disease virus - type O isolate O/Loja/Ecu/03 (
 HQ695792,HQ695792,"Foot-and-mouth disease virus - type O isolate O/Loja/Ecu/03 (027-03) VP1 gene, partial cds",2003,Ecuador
 HQ695793,HQ695793,"Foot-and-mouth disease virus - type O isolate O/Sucumbios/Ecu/03 (028-03) VP1 gene, partial cds",2003,Ecuador
 HQ695794,HQ695794,"Foot-and-mouth disease virus - type O isolate O/Sucumbios/Ecu/03 (029-03) VP1 gene, partial cds",2003,Ecuador
+HQ695845,HQ695845,"Foot-and-mouth disease virus - type O isolate O/Yaracuy/Ven/03(21081) VP1 gene, partial cds",2003,Venezuela
 HQ695795,HQ695795,"Foot-and-mouth disease virus - type O isolate O/Sucumbios/Ecu/04 (002-04) VP1 gene, partial cds",2004,Ecuador
 HQ695796,HQ695796,"Foot-and-mouth disease virus - type O isolate O/Cotopaxi/Ecu/04 (034-04) VP1 gene, partial cds",2004,Ecuador
 HQ695797,HQ695797,"Foot-and-mouth disease virus - type O isolate O/Tsachila/Ecu/04 (035-04) VP1 gene, partial cds",2004,Ecuador
@@ -123,6 +124,20 @@ HQ695814,HQ695814,"Foot-and-mouth disease virus - type O isolate O/Esmeraldas/Ec
 HQ695815,HQ695815,"Foot-and-mouth disease virus - type O isolate O/Cotopaxi/Ecu/04 (099-04) VP1 gene, partial cds",2004,Ecuador
 HQ695816,HQ695816,"Foot-and-mouth disease virus - type O isolate O/Imbabura/Ecu/04 (101-04) VP1 gene, partial cds",2004,Ecuador
 HQ695817,HQ695817,"Foot-and-mouth disease virus - type O isolate O/Tsachila/Ecu/04 (106-04) VP1 gene, partial cds",2004,Ecuador
+HQ695846,HQ695846,"Foot-and-mouth disease virus - type O isolate O/Merida/Ven/04(21237) VP1 gene, partial cds",2004,Venezuela
+DQ834714,DQ834714,"Foot-and-mouth disease virus - type O isolate O/MS(1a)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
+DQ834715,DQ834715,"Foot-and-mouth disease virus - type O isolate O/MS(1b)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
+DQ834716,DQ834716,"Foot-and-mouth disease virus - type O isolate O/MS(1c)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
+DQ834717,DQ834717,"Foot-and-mouth disease virus - type O isolate O/MS(1d)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
+DQ834718,DQ834718,"Foot-and-mouth disease virus - type O isolate O/MS(1e)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
+DQ834719,DQ834719,"Foot-and-mouth disease virus - type O isolate O/MS(1f)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
+DQ834720,DQ834720,"Foot-and-mouth disease virus - type O isolate O/MS(1g)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
+DQ834721,DQ834721,"Foot-and-mouth disease virus - type O isolate O/MS(1h)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
+DQ834722,DQ834722,"Foot-and-mouth disease virus - type O isolate O/MS(1i)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
+DQ834723,DQ834723,"Foot-and-mouth disease virus - type O isolate O/MS(1j)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
+DQ834724,DQ834724,"Foot-and-mouth disease virus - type O isolate O/MS(2)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
+DQ834725,DQ834725,"Foot-and-mouth disease virus - type O isolate O/MS(3)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
+DQ834726,DQ834726,"Foot-and-mouth disease virus - type O isolate O/MS(4)/Bra/05 VP1 (1D) gene, partial cds",2005,Brazil
 HQ695818,HQ695818,"Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/05 (01-05) VP1 gene, partial cds",2005,Ecuador
 HQ695819,HQ695819,"Foot-and-mouth disease virus - type O isolate O/Esmeraldas/Ecu/05 (08-05) VP1 gene, partial cds",2005,Ecuador
 HQ695820,HQ695820,"Foot-and-mouth disease virus - type O isolate O/Esmeraldas/Ecu/05 (10-05) VP1 gene, partial cds",2005,Ecuador
@@ -142,20 +157,22 @@ HQ695833,HQ695833,"Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/05
 HQ695834,HQ695834,"Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/05 (44-05) VP1 gene, partial cds",2005,Ecuador
 HQ695835,HQ695835,"Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/05 (52-05) VP1 gene, partial cds",2005,Ecuador
 HQ695836,HQ695836,"Foot-and-mouth disease virus - type O isolate O/Manabi/Ecu/05 (54-05) VP1 gene, partial cds",2005,Ecuador
+HQ695847,HQ695847,"Foot-and-mouth disease virus - type O isolate O/Trujillo/Ven/05(21378) VP1 gene, partial cds",2005,Venezuela
+HQ695848,HQ695848,"Foot-and-mouth disease virus - type O isolate O/Zulia/Ven/05(21386) VP1 gene, partial cds",2005,Ecuador
+DQ834727,DQ834727,"Foot-and-mouth disease virus - type O isolate O/Corrientes/Arg/06 VP1 (1D) gene, partial cds",2006,Argentina
 HQ695837,HQ695837,"Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/06 (03-06) VP1 gene, partial cds",2006,Ecuador
 HQ695838,HQ695838,"Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/06 (04-06) VP1 gene, partial cds",2006,Ecuador
 HQ695839,HQ695839,"Foot-and-mouth disease virus - type O isolate O/Tsachila/Ecu/06 (17-06) VP1 gene, partial cds",2006,Ecuador
+HQ695849,HQ695849,"Foot-and-mouth disease virus - type O isolate O/Trujillo/Ven/06(21522) VP1 gene, partial cds",2006,Venezuela
+HQ695746,HQ695746,"Foot-and-mouth disease virus - type O isolate O/Santa_Cruz/Bol/07 VP1 gene, partial cds",2007,Bolivia
 HQ695840,HQ695840,"Foot-and-mouth disease virus - type O isolate O/Imbabura/Ecu/07 (13-07) VP1 gene, partial cds",2007,Ecuador
 HQ695841,HQ695841,"Foot-and-mouth disease virus - type O isolate O/Pichincha/Ecu/07(s.n) VP1 gene, partial cds",2007,Ecuador
+HQ695850,HQ695850,"Foot-and-mouth disease virus - type O isolate O/Trujillo/Ven/07(21555) VP1 gene, partial cds",2007,Venezuela
+HQ695781,HQ695781,"Foot-and-mouth disease virus - type O isolate O/Cucuta/N.de Santander/Col/08(a) VP1 gene, partial cds",2008,Colombia
+HQ695782,HQ695782,"Foot-and-mouth disease virus - type O isolate O/Cucuta/N.de Santander/Col/08(b) VP1 gene, partial cds",2008,Colombia
 HQ695842,HQ695842,"Foot-and-mouth disease virus - type O isolate O/Esmeraldas/Ecu/08 (11-08) VP1 gene, partial cds",2008,Ecuador
 HQ695843,HQ695843,"Foot-and-mouth disease virus - type O isolate O/Los Rios/Ecu/08 (14-08) VP1 gene, partial cds",2008,Ecuador
 HQ695844,HQ695844,"Foot-and-mouth disease virus - type O isolate O/Lima/Peru/04 VP1 gene, partial cds",2008,Peru
-HQ695845,HQ695845,"Foot-and-mouth disease virus - type O isolate O/Yaracuy/Ven/03(21081) VP1 gene, partial cds",2003,Venezuela
-HQ695846,HQ695846,"Foot-and-mouth disease virus - type O isolate O/Merida/Ven/04(21237) VP1 gene, partial cds",2004,Venezuela
-HQ695847,HQ695847,"Foot-and-mouth disease virus - type O isolate O/Trujillo/Ven/05(21378) VP1 gene, partial cds",2005,Venezuela
-HQ695848,HQ695848,"Foot-and-mouth disease virus - type O isolate O/Zulia/Ven/05(21386) VP1 gene, partial cds",2005,Ecuador
-HQ695849,HQ695849,"Foot-and-mouth disease virus - type O isolate O/Trujillo/Ven/06(21522) VP1 gene, partial cds",2006,Venezuela
-HQ695850,HQ695850,"Foot-and-mouth disease virus - type O isolate O/Trujillo/Ven/07(21555) VP1 gene, partial cds",2007,Venezuela
 JN005890,JN005890,"Foot-and-mouth disease virus - type O isolate O/Los Rios/Ecu/09(12-09) VP1 gene, partial cds",2009,Ecuador
 JN005891,JN005891,"Foot-and-mouth disease virus - type O isolate O/Esmeraldas/Ecu/09 (16-09) VP1 gene, partial cds",2009,Ecuador
 JN005892,JN005892,"Foot-and-mouth disease virus - type O isolate O/Napo/Ecu/09 (39-09) VP1 gene, partial cds",2009,Ecuador
@@ -186,23 +203,5 @@ JN005916,JN005916,"Foot-and-mouth disease virus - type O isolate O/Bolivar/Ecu/1
 JN005917,JN005917,"Foot-and-mouth disease virus - type O isolate O/Napo/Ecu/10 (46-10) VP1 gene, partial cds",2010,Ecuador
 JN005918,JN005918,"Foot-and-mouth disease virus - type O isolate O/Orellana/Ecu/10 (58-10) VP1 gene, partial cds",2010,Ecuador
 KC519630,KC519630,"Foot-and-mouth disease virus - type O isolate ECU/4/2010 polyprotein gene, partial cds",2010,Ecuador
-KJ831672,KJ831672,"Foot-and-mouth disease virus - type O isolate O/EQU/01/2010 capsid protein gene, partial cds",1994,Ecuador
-KJ831673,KJ831673,"Foot-and-mouth disease virus - type O isolate O/EQU/09/2010 capsid protein gene, partial cds",1994,Ecuador
-KJ831728,KJ831728,"Foot-and-mouth disease virus - type O isolate PAR/1/2002 capsid protein gene, partial cds",2002,Paraguay
-KJ831729,KJ831729,"Foot-and-mouth disease virus - type O isolate PAR/2/2002 capsid protein gene, partial cds",2002,Paraguay
-KJ831730,KJ831730,"Foot-and-mouth disease virus - type O isolate PER/10/93 capsid protein gene, partial cds",1993,Peru
-KJ831731,KJ831731,"Foot-and-mouth disease virus - type O isolate PER/14/93 capsid protein gene, partial cds",1993,Peru
-KJ831732,KJ831732,"Foot-and-mouth disease virus - type O isolate PER/5/94 capsid protein gene, partial cds",1994,Peru
-KJ831733,KJ831733,"Foot-and-mouth disease virus - type O isolate PER/6/94 capsid protein gene, partial cds",1994,Peru
-KJ831734,KJ831734,"Foot-and-mouth disease virus - type O isolate PER/7/94 capsid protein gene, partial cds",1994,Peru
-KJ831736,KJ831736,"Foot-and-mouth disease virus - type O isolate BRA/4/94 capsid protein gene, partial cds",1994,Brazil
-KJ831738,KJ831738,"Foot-and-mouth disease virus - type O isolate ARG/02/2000 capsid protein gene, partial cds",2000,Argentina
-KJ831739,KJ831739,"Foot-and-mouth disease virus - type O isolate ARG/03/2000 capsid protein gene, partial cds",2000,Argentina
-KJ831741,KJ831741,"Foot-and-mouth disease virus - type O isolate O/BRA/01/1992 capsid protein gene, partial cds",1992,Brazil
-KJ831742,KJ831742,"Foot-and-mouth disease virus - type O isolate O/BRA/01/1994 capsid protein gene, partial cds",1994,Brazil
-KJ831743,KJ831743,"Foot-and-mouth disease virus - type O isolate O/BRA/02/1994 capsid protein gene, partial cds",1994,Brazil
-KJ831744,KJ831744,"Foot-and-mouth disease virus - type O isolate O/BRA/03/1994 capsid protein gene, partial cds",1994,Brazil
-KJ831745,KJ831745,"Foot-and-mouth disease virus - type O isolate O/BRA/05/1994 capsid protein gene, partial cds",1994,Brazil
-KJ831746,KJ831746,"Foot-and-mouth disease virus - type O isolate O/BRA/06/1994 capsid protein gene, partial cds",1994,Brazil
-KJ831747,KJ831747,"Foot-and-mouth disease virus - type O isolate O/BRA/08/1994 capsid protein gene, partial cds",1994,Brazil
-KJ831748,KJ831748,"Foot-and-mouth disease virus - type O isolate O/BRA/01/1995 capsid protein gene, partial cds",1995,Brazil
+KJ831672,KJ831672,"Foot-and-mouth disease virus - type O isolate O/EQU/01/2010 capsid protein gene, partial cds",2010,Ecuador
+KJ831673,KJ831673,"Foot-and-mouth disease virus - type O isolate O/EQU/09/2010 capsid protein gene, partial cds",2010,Ecuador
