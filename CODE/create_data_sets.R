@@ -1,5 +1,5 @@
 ### This script will retrieve the sequences from Genbank after we figured out which ones we want
-### Copyleft (or the one to blame): Carvalho, LMF (2016)
+### Copyleft (or the one to blame): Carvalho, LMF (2017)
 library(seqinr)
 dataBaseA <- data.frame(read.csv("../DATA/SEQUENCES/data_aquisition/serotype_A_SA_metadata_final.csv", header = TRUE))
 dataBaseO <- data.frame(read.csv("../DATA/SEQUENCES/data_aquisition/serotype_O_SA_metadata_final.csv", header = TRUE))  
