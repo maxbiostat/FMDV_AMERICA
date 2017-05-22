@@ -1745,7 +1745,7 @@
 	</operators>
 
 	<!-- Define MCMC                                                             -->
-	<mcmc id="mcmc" chainLength="50000000" autoOptimize="true" operatorAnalysis="serotype_O_tn93_strict.ops">
+	<mcmc id="mcmc" chainLength="50000000" fullEvaluation="50000000" autoOptimize="true" operatorAnalysis="serotype_O_tn93_strict.ops">
 		<posterior id="posterior">
 			<prior id="prior">
 				<logNormalPrior mean="1.0" stdev="1.25" offset="0.0" meanInRealSpace="false">

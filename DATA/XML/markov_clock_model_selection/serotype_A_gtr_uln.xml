@@ -1697,7 +1697,7 @@
 	</operators>
 
 	<!-- Define MCMC                                                             -->
-	<mcmc id="mcmc" chainLength="50000000" autoOptimize="true" operatorAnalysis="serotype_A_gtr_uln.ops">
+	<mcmc id="mcmc" chainLength="50000000" fullEvaluation="50000000" autoOptimize="true" operatorAnalysis="serotype_A_gtr_uln.ops">
 		<posterior id="posterior">
 			<prior id="prior">
 				<gammaPrior shape="0.05" scale="10.0" offset="0.0">
