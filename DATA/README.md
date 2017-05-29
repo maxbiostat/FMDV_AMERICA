@@ -6,7 +6,10 @@ Sharing data is important, period. So here is pretty much all the data we collec
 Contains processed output from BEAST, such as Bayes factors from BSSVS, state-change counts from Markov jumps, etc.
 
 **EPI_DATA**:
-Data on vaccination, outbreaks and livestock trade are here.
+Data on vaccination and outbreaks are here.
+
+**TRADE_DATA**:
+Data on livestock trade and production are here.
 
 **REPORTS**:
 These are reports from the Pan American Centre for Foot-and-mouth Disease (PANAFTOSA), which are available elsewhere on the internet, but are kept here to facilitate access.
