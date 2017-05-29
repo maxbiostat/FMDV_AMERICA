@@ -5,4 +5,4 @@ parts=${name//./}
 size=${#parts[@]}
 stem0=${parts[size-1]}
 stem=${stem0//fasta/}
-beastgen -D "chain_length=1000,log_every=50" -date_order -1 -date_prefix \_ -date_precision $2 $1 $3_$stem.xml
+beastgen -D "chain_length=100000000,log_every=10000" -date_order -1 -date_prefix \_ -date_precision $2 $1 $3_$stem.xml
