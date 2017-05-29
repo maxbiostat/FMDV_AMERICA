@@ -3,8 +3,7 @@
 library(seqinr)
 dataBaseA <- data.frame(read.csv("../DATA/SEQUENCES/data_aquisition/serotype_A_SA_metadata_final.csv", header = TRUE))
 dataBaseO <- data.frame(read.csv("../DATA/SEQUENCES/data_aquisition/serotype_O_SA_metadata_final.csv", header = TRUE))  
-rawA <- read.fasta("../DATA/SEQUENCES/data_aquisition/SA_serotype_A_VP1_alignment.fasta")
-rawO <- read.fasta("../DATA/SEQUENCES/data_aquisition/SA_serotype_O_VP1_alignment.fasta")
+raw <- read.fasta("../DATA/SEQUENCES/data_aquisition/VP1.fasta")
 
 createSeqName <- function(database, i, serotype = "A"){
   paste(serotype, "_", sprintf("%03d", i), "_", database$accession[i],
@@ -13,10 +12,15 @@ createSeqName <- function(database, i, serotype = "A"){
 newNamesA <- sapply(1:nrow(dataBaseA), createSeqName, database = dataBaseA)
 newNamesO <- sapply(1:nrow(dataBaseO), createSeqName, database = dataBaseO, serotype = "O")
 
-posA <- sapply(dataBaseA$accession, function(x) grep(x, names(rawA)))
-posO <- sapply(dataBaseO$accession, function(x) grep(x, names(rawO)))
-orderedA <- rawA[posA]
-orderedO <- rawO[posO] 
+posA <- sapply(dataBaseA$accession, function(x) grep(x, names(raw)))
+posO <- sapply(dataBaseO$accession, function(x) grep(x, names(raw)))
 
-write.fasta(orderedA, names = newNamesA, file = "../DATA/SEQUENCES/serotype_A_VP1_renamed.fasta")
-write.fasta(orderedO, names = newNamesO, file = "../DATA/SEQUENCES/serotype_O_VP1_renamed.fasta")
+## asserting
+length(unique(posA)) == nrow(dataBaseA)
+length(unique(posO)) == nrow(dataBaseO)
+
+orderedA <- raw[posA]
+orderedO <- raw[posO] 
+
+write.fasta(orderedA, names = newNamesA, file = "../DATA/SEQUENCES/serotype_A_VP1_renamed_unaligned.fasta")
+write.fasta(orderedO, names = newNamesO, file = "../DATA/SEQUENCES/serotype_O_VP1_renamed_unaligned.fasta")
