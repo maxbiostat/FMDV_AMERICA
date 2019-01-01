@@ -32,3 +32,5 @@ FMDV_AMERICA.docx
 Text_S2.docx
 Text_S2-blx.bib
 Text_S2.rar
+DATA/REPORTS/*
+CODE/notebooks/.ipynb_checkpoints/*

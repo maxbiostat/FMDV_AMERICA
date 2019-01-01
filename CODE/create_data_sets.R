@@ -1,9 +1,11 @@
 ### This script will retrieve the sequences from Genbank after we figured out which ones we want
 ### Copyleft (or the one to blame): Carvalho, LMF (2017)
 library(seqinr)
-dataBaseA <- data.frame(read.csv("../DATA/SEQUENCES/data_aquisition/serotype_A_SA_metadata_final.csv", header = TRUE))
-dataBaseO <- data.frame(read.csv("../DATA/SEQUENCES/data_aquisition/serotype_O_SA_metadata_final.csv", header = TRUE))  
-raw <- read.fasta("../DATA/SEQUENCES/data_aquisition/VP1.fasta")
+dataBaseA <- data.frame(read.csv("../DATA/SEQUENCES/data_acquisition/serotype_A_SA_metadata_final.csv",
+                                 header = TRUE))
+dataBaseO <- data.frame(read.csv("../DATA/SEQUENCES/data_acquisition/serotype_O_SA_metadata_final.csv",
+                                 header = TRUE))  
+raw <- read.fasta("../DATA/SEQUENCES/data_acquisition/VP1.fasta")
 
 createSeqName <- function(database, i, serotype = "A"){
   paste(serotype, "_", sprintf("%03d", i), "_", database$accession[i],

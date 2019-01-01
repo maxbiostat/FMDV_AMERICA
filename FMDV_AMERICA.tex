@@ -4,7 +4,7 @@
 \usepackage{graphicx}
 \usepackage{color} % for revision purposes only, may be not present in the final file
 % cite package, to clean up citations in the main text. Do not remove.
-\usepackage{cite}
+% \usepackage{cite}
 \usepackage{color}
 \usepackage{indentfirst} %% LM: in order to indent the first paragraph of each section
 \usepackage{url} %% LM: in order to include nice urls
@@ -119,36 +119,42 @@ To study the factors driving re-emergence, we use data on livestock trade and ge
 
 \section*{Results}
 
+\section*{Discussion}
+
+\subsection*{Sampling bias}
+
 \section*{Methods}
 
 \subsection*{Genetic and epidemiological data}
 
 \textbf{Acquisition of genetic data.}
 We retrieved all FMDV nucleotide sequences available from GenBank~\citep{Benson2013} from the National Center for Biotechnology Information (NCBI, \url{ http://www.ncbi.nlm.nih.gov/}) with more than $600$ bp.
-This first step yielded $6, 907$ sequences which were then filtered to exclude all sequences that did not include the 1D (VP1) gene resulting in $4, 507$ sequences being kept.
+This first step yielded $6, 907$ sequences which were then filtered to exclude all sequences that did not include the 1D (VP1) gene, resulting in $4, 507$ sequences being kept.
 We then filtered for sequences from serotypes A and O, yielding $1051$ and $2350$ sequences, respectively.
-Next we excluded sequences that had been extensively passaged in cell culture and selected all sequences from South America (Argentina, Bolivia, Brazil, Colombia, Ecuador, Paraguay, Peru, Uruguay, Venezuela) for which information on country and year of isolation was available.
+Next, we excluded sequences that had been extensively passaged in cell culture and selected all sequences from South America (Argentina, Bolivia, Brazil, Colombia, Ecuador, Paraguay, Peru, Uruguay, Venezuela) for which information on country and year of isolation was available.
 
-After a preliminary phylogenetic analysis, an early sequence (Venezuela 1951) was excluded because its root-to-tip divergences was incompatible with its sampling date~\citep{Rambaut2016}.
-This resulted in $184$ sequences (from eight countries) for serotype A and $215$ sequences (nine countries) for serotype O, covering time spans of $58$ (1955-2013) and $53$ (1958-2011) years, respectively (see Text S1 for details).
+This resulted in $185$ sequences (from eight countries) for serotype A and $215$ sequences (nine countries) for serotype O, covering time spans of $58$ ($1955$-$2013$) and $53$ (1958-2011) years, respectively (see Tables~\ref{stab:sequences_A} and~\ref{stab:sequences_O} for details).
 We aligned each data set using the MAFFT~\citep{Katoh2002} algorithm implemented in the Geneious~\citep{Kearse2012} software package.
+After a preliminary phylogenetic analysis (see below), an early serotype A sequence (Venezuela 1951) was excluded because its root-to-tip divergences was incompatible with its sampling date~\citep{Rambaut2016}.
+For serotype O, five sequences were excluded under the same criteria (Table~\ref{stab:exclseqs}).
+The final data sets had $184$ and $210$ sequences for serotypes A and O, respectively.
 
 \textbf{Acquisition of trade data.}
 Data on animal trade were obtained from the FAO database (\url{http://faostat.fao.org/}).
-We retrieved data on the detailed trade matrix for cattle, pigs and sheep (number of live animals exchanged) covering the period from $1986$ to 2009, for each of the nine countries.
+We retrieved data on the \textit{detailed trade matrix} for cattle, pigs and sheep (number of live animals exchanged) covering the period from $1986$ to $2009$, for each of the nine countries.
 Serotype-specific outbreak notifications were obtained from FMD Bioportal (\url{http://fmdbioportal.ucdavis.edu:8080/}).
 
-\subsubsection*{Data availability}
-All the data used in this paper, as well as code to produce many of the plots/analyses and BEAST XML files are hosted at~\url{https://github.com/maxbiostat/FMDV_AMERICA}.
+\textbf{Data availability.} All the data used in this paper, BEAST XML files as well as code to produce many of the plots/analyses are hosted at~\url{https://github.com/maxbiostat/FMDV_AMERICA}.
 
 \subsection*{Phylogenetic Analysis}
 
-% We have checked both data sets for recombination using the SBOP and GARD~\citep{Kosakovsky2006} tools available from the Datamonkey facility (\url{http://www.datamonkey.org/}), which did not yield any indications of recombination being present in our data sets.
-For all our analyses, we assume a general time reversible (GTR)~\citep{Tavare1986} model of sequence evolution, along with gamma-distributed rate heterogeneity (4 categories).
-We take a Bayesian approach to testing evolutionary hypotheses while accommodating phylogenetic uncertainty. 
-To this end, we use the Bayesian Evolutionary Analysis by Sampling Trees (BEAST)~\citep{Drummond2012} software package to infer time-structured phylogenies for the two serotypes taking advantage of the BEAGLE~\citep{Ayres2012} library to gain computational efficiency.
-To compare the performance of several combinations of tree priors and molecular clocks for each data set (see Text S2), we use state-of-the-art marginal likelihood estimators, such as path sampling (PS)~\citep{Lartillot2006} and stepping-stone sampling (SS)~\citep{Xie2011}, which have only recently been introduced in the field of phylogenetics~\citep{Lartillot2006, Xie2011, Baele2012, Baele2013a, Baele2013b, Baele2013c}.
-% 
+We assume a general time reversible (GTR)~\citep{Tavare1986} model of sequence evolution, along with gamma-distributed rate heterogeneity (4 categories) for all our analyses.
+We conducted an initial analysis of the two data sets described, employing PhyML~\citep{Guindon2003} to obtain maximum likelihood phylogenies which we then used in conjunction with Tempest~\citep{Rambaut2016} to produce root-to-tip divergence (RDV) plots and identify discrepant sequences (see ~\cite{Rambaut2016} for details).
+
+
+% From here on we take a Bayesian approach to testing evolutionary hypotheses while accommodating phylogenetic uncertainty. 
+Having identified considerable rate variation among branches we used the Bayesian Evolutionary Analysis by Sampling Trees (BEAST)~\citep{Drummond2012,Suchard2018} software package to infer time-structured phylogenies under relaxed clock models~\citep{Drummond2006}, employing the BEAGLE~\citep{Ayres2012} library to gain computational efficiency.
+
 % \subsection*{Quantifying temporal and spatial signal} 
 % 
 % To assess the temporal signal for each serotype, we use the approach described in Faria et al.~\citep{Faria2012} and Baele et. al~\citep{Baele2012} and compare the marginal likelihoods of a dated-tips model and a contemporaneous-tips model by calculating Bayes Factors (BF)~\citep{Suchard2001, Suchard2005} (see Spatial Model Selection for details).
@@ -162,34 +168,34 @@ To compare the performance of several combinations of tree priors and molecular 
 
 \subsection*{Spatio-temporal Dynamics}
 
-We apply the non-parametric skyride coalescent model~\citep{Minin2008a} in order to reconstruct the past population dynamics for both serotypes, using a Gaussian Markov Random Field (GMRF) prior to obtain smooth estimates for effective population size trajectories over time.
-To gain insight into the mechanisms driving viral dynamics, we overlay the demographic reconstructions to serotype-specific outbreak and vaccination (doses per head) time series.
-We perform phylogeographic analyses of FMDV in South America using the methods presented in Lemey et al.~\citep{Lemey2009}, available in BEAST, and apply an asymmetric, non-reversible discrete phylogeographic model to both data sets, with each country used as a discrete state.
-For statistical efficiency, we use Bayesian stochastic search variable selection (BSSVS) to choose the minimal set of dispersal rates that sufficiently explain the observed data.
-BSSVS naturally allows for assessing the significance of each migration route through a Bayes factor (BF) test.
-We use SPREAD~\citep{Bielejec2011} to generate KML files (visualized using Google Earth, \url{http://www.google.com/earth/index.html}) and calculate BFs for statistically significant epidemiological links between discrete locations.
-We go on to compute the expected number of transitions between each pair of locations conditional on the observed data and summarize the number of transitions between countries using a robust counting approach~\citep{Minin2008b}.
-For these analyses we use a sample of $10,000$ trees from the posterior distribution of topologies.
-Unbalanced sampling can have an important impact on the inference of the spatial migration rates~\citep{Faria2012, Lemey2014, Frost2015}.
-In this study, both data sets analyzed present highly preferential sampling, with Ecuadorian sequences representing about 50\% of the serotype O data and about 45\% of serotype A sequences being from Argentina (see Text S1 for details).
-We therefore conduct an extensive sensitivity analysis, exploring various sampling schemes and comparing the obtained parameter estimates.
-Supplementary Text S2 shows a complete description of the parameter estimates under different sampling schemes. 
+\textbf{Effective population size reconstruction}.
+We employed the Skygrid coalescent model~\citep{Gill2012} to reconstruct that past population dynamics of both serotypes.
+Skygrid necessitates the specification of a cutoff value, $K$, commensurate with the age of the root.
+We have used $K = 100$ years for both data sets as a conservative estimate of the maximum age of the most recent common ancestor (mRCA) of the sampled sequences. 
 
-\subsubsection*{Model selection}
-
-In this study we exploit recent developments in Bayesian model selection~\citep{Baele2012, Baele2013a, Baele2013b, Baele2013c}, as implemented in the BEAST software program~\citep{Drummond2012} to compare the different epidemiological predictors.
-Specifically, we perform accurate estimation of the (log) marginal likelihood using path sampling (PS)~\citep{Lartillot2006} and stepping-stone sampling (SS)~\citep{Xie2011}, two computationally demanding approaches that yield accurate estimates of model fit while accommodating phylogenetic uncertainty.
-Using these (log) marginal likelihoods, it's possible to calculate Bayes Factors, which provide a measure of the relative performance of each model. 
-We have estimated all the (log) marginal likelihoods in this study using 64 power posteriors, which were each run for 2 million iterations, taking up to 4 weeks of (wall time) computation for each model under evaluation. 
-Using PS and SS, we first compare different demographic priors and clock models (see Supplementary Text S2) for both serotypes. 
-For more details on these model selection procedures please see Supplementary Text S2.
-
+\textbf{Phylogeography}.
 To study the influence of different epidemiological predictors on viral diffusion through space, we used information on the trade of live cattle, pigs and sheep divided in three periods ($1986-1995$ , $1996-2004$, $2005-2013$).
 Additionally, to assess the influence of over (under) sampling, we also included absolute differences in sequence (samples) numbers between locations as a predictor of flow (see the appendix in~\cite{Lemey2014} for a discussion).
+
+\subsection*{Model selection}
+
+In order to compare the performance of combinations of sequence evolution (Markov) and relaxed clock models for each data set
+% (see Text S2)
+, we use state-of-the-art marginal likelihood estimators, namely generalised stepping-stone sampling (SS)~\citep{Baele2015} implemented in BEAST~\citep{Suchard2018}.
+% In this study we exploit recent developments in Bayesian model selection~\citep{Baele2012, Baele2013a, Baele2013b, Baele2013c, Baele2015}, as implemented in the BEAST software program~\citep{Suchard2018}.
+Following a preliminary Skygrid analysis, we chose the constant population size coalescent parametric model and its associated working prior as the tree prior for these comparisons.
+% Specifically, we perform accurate estimation of the (log) marginal likelihood using path sampling (PS)~\citep{Lartillot2006} and stepping-stone sampling (SS)~\citep{Xie2011}, two computationally demanding approaches that yield accurate estimates of model fit while accommodating phylogenetic uncertainty.
+% Using these (log) marginal likelihoods, it's possible to calculate Bayes Factors, which provide a measure of the relative performance of each model. 
+% We have estimated all the (log) marginal likelihoods in this study using 64 power posteriors, which were each run for 2 million iterations, taking up to 4 weeks of (wall time) computation for each model under evaluation. 
+% Using PS and SS, we first compare different demographic priors and clock models (see Supplementary Text S2) for both serotypes. 
+% For more details on these model selection procedures please see Supplementary Text S2.
+
+
 % To test the influence of different epidemiological predictors on viral diffusion through space, we use to parameterize priors for the CTMC rate matrix.
 % We normalize the numbers of live animals exchanged between countries to a mean and coefficient of variation of $1$ and use these as prior expectations in BEAST (see~\citep{Lemey2009}, pg. 14 and the Appendix in~\citep{Carvalho2013}).  
 % We compare these predictors to a distance-informed prior~\citep{Lemey2009}, which represents a scenario where flow occurs as a function of the inverse of the geographic distances between locations.
 % Finally, we compare all predictors against an equal-rates gamma prior, which considers~\textit{a priori} a scenario where there is no preferential spread among different countries~\citep{Nelson2011}.
+\section{Software versions and computer codes}
 
 \section*{Acknowledgments}
 The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Matthew Hall (Oxford) and Oliver Pybus (Oxford) for insightful contributions and Miguel Carvalho, Felipe Figueiredo (PROCC) and Mauricio Oliveira (UFRJ) for operational support.

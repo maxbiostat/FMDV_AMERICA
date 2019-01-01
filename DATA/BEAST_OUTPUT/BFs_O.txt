@@ -1,8 +1,0 @@
-FROM	TO	BF
-Paraguay	Bolivia	11.51
-Colombia	Ecuador	557.73
-Paraguay	Uruguay	7.71
-Ecuador	Peru	223.49
-Paraguay	Argentina	6.23
-Brazil	Bolivia	14.02
-Venezuela	Colombia	52.95
