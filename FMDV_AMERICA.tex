@@ -122,12 +122,13 @@ To study the factors driving re-emergence, we use data on livestock trade and ge
 \section*{Discussion}
 
 \subsection*{Sampling bias}
+Spatial: sequences included as predictors in various ways in spatial genetic GLM
+Temporal: 
 
 \section*{Methods}
-
 \subsection*{Genetic and epidemiological data}
 
-\textbf{Acquisition of genetic data.}
+\textbf{Genetic data.}
 We retrieved all FMDV nucleotide sequences available from GenBank~\citep{Benson2013} from the National Center for Biotechnology Information (NCBI, \url{ http://www.ncbi.nlm.nih.gov/}) with more than $600$ bp.
 This first step yielded $6, 907$ sequences which were then filtered to exclude all sequences that did not include the 1D (VP1) gene, resulting in $4, 507$ sequences being kept.
 We then filtered for sequences from serotypes A and O, yielding $1051$ and $2350$ sequences, respectively.
@@ -142,63 +143,67 @@ The final data sets had $184$ and $210$ sequences for serotypes A and O, respect
 \textbf{Acquisition of trade data.}
 Data on animal trade were obtained from the FAO database (\url{http://faostat.fao.org/}).
 We retrieved data on the \textit{detailed trade matrix} for cattle, pigs and sheep (number of live animals exchanged) covering the period from $1986$ to $2009$, for each of the nine countries.
+
+\textbf{Vaccination and case data.}
+Data on the number of vaccine doses (irrespective of serotype) from 1990 to 2010 were obtained from the PANAFTOSA annual reports (\url{https://www.paho.org/panaftosa/}) and then standardised to doses per (cattle) head in each country.
 Serotype-specific outbreak notifications were obtained from FMD Bioportal (\url{http://fmdbioportal.ucdavis.edu:8080/}).
 
-\textbf{Data availability.} All the data used in this paper, BEAST XML files as well as code to produce many of the plots/analyses are hosted at~\url{https://github.com/maxbiostat/FMDV_AMERICA}.
+\textbf{Data availability.} All the data used in this paper including BEAST XML files are hosted at~\url{https://github.com/maxbiostat/FMDV_AMERICA}.
 
+
+In this study we take a Bayesian approach to testing evolutionary hypotheses while accommodating phylogenetic uncertainty.
+Details on computational settings and prior choice can be found in Text S2.
 \subsection*{Phylogenetic Analysis}
 
 We assume a general time reversible (GTR)~\citep{Tavare1986} model of sequence evolution, along with gamma-distributed rate heterogeneity (4 categories) for all our analyses.
 We conducted an initial analysis of the two data sets described, employing PhyML~\citep{Guindon2003} to obtain maximum likelihood phylogenies which we then used in conjunction with Tempest~\citep{Rambaut2016} to produce root-to-tip divergence (RDV) plots and identify discrepant sequences (see ~\cite{Rambaut2016} for details).
 
-
-% From here on we take a Bayesian approach to testing evolutionary hypotheses while accommodating phylogenetic uncertainty. 
 Having identified considerable rate variation among branches we used the Bayesian Evolutionary Analysis by Sampling Trees (BEAST)~\citep{Drummond2012,Suchard2018} software package to infer time-structured phylogenies under relaxed clock models~\citep{Drummond2006}, employing the BEAGLE~\citep{Ayres2012} library to gain computational efficiency.
 
-% \subsection*{Quantifying temporal and spatial signal} 
-% 
-% To assess the temporal signal for each serotype, we use the approach described in Faria et al.~\citep{Faria2012} and Baele et. al~\citep{Baele2012} and compare the marginal likelihoods of a dated-tips model and a contemporaneous-tips model by calculating Bayes Factors (BF)~\citep{Suchard2001, Suchard2005} (see Spatial Model Selection for details).
-% We follow Kass and Raftery (1995)~\citep{KassRaftery1995} and consider a log BF$>$3 to be indicative of decisive support for the hypothesis of temporal structure.
-% 
-% We quantify spatial signal using Bayesian tip-association tests, implemented through the BaTS software package~\citep{Parker2008}.
-% To detect phylogeny-location association, we assign each sequence to its country of origin and compute association index (AI) and parsimony score (PI) using BaTS on a subset of 1000 samples from the posterior distribution of topologies.
-% We obtain a null distribution for each statistic (AI and PI), against which the observed indices are compared and significance is assessed.
-% Additionally, we compute the monophyletic clade (MC) size for each state (country), as a local indicator of phylogeny-trait association for each state (country).
-% Please see Text S2 for further details on the BaTs analyses.
+\subsection*{Model selection}
+
+In order to compare the performance of combinations of sequence evolution (Markov) and relaxed clock models for each data set (see Text S2), we use state-of-the-art marginal likelihood estimators, namely generalised stepping-stone sampling (SS)~\citep{Baele2015} implemented in BEAST~\citep{Suchard2018}.
+Following a preliminary Skygrid analysis, we chose the constant population size coalescent parametric model -- and its associated working prior -- as the tree prior for these comparisons.
 
 \subsection*{Spatio-temporal Dynamics}
 
 \textbf{Effective population size reconstruction}.
 We employed the Skygrid coalescent model~\citep{Gill2012} to reconstruct that past population dynamics of both serotypes.
-Skygrid necessitates the specification of a cutoff value, $K$, commensurate with the age of the root.
-We have used $K = 100$ years for both data sets as a conservative estimate of the maximum age of the most recent common ancestor (mRCA) of the sampled sequences. 
+Skygrid necessitates the specification of a cutoff value, $K$, commensurate with the age of the root (time to the most recent common ancestor, tMRCA) .
+We have used $K = 150$ years for serotype A and $K = 100$ for serotype O sets as conservative estimates of the tMRCA of the sampled sequences. 
+In addition, we employed the generalised linear model proposed by~\cite{Gill2016} to test the association between several temporal predictors such as vaccination, overall livestock trade and production in South America and numbers of cases of each serotype, as follows.
+These were the total number of live animals produced and traded between the 9 countries considered here for five livestock: cattle, goats, sheep, pigs and horses, totalling 10 predictors.
+In addition to these livestock-associated predictors, we also considered the number of vaccine doses per (cattle) head along with its dispersion (see Text S2) and the number of cases for each serotype.
+In total there were $13$ temporal predictors for each serotype.
+To facilitate computation we divided each predictor by its maximum value so as to bring all predictors to the common scale of $[0, 1]$ (see Text S2 for more details).
+%TODO: thinking of presenting a table with rows = predictors and cols = name, temporal_range, { beta (CI) } x serotype
 
-\textbf{Phylogeography}.
-To study the influence of different epidemiological predictors on viral diffusion through space, we used information on the trade of live cattle, pigs and sheep divided in three periods ($1986-1995$ , $1996-2004$, $2005-2013$).
-Additionally, to assess the influence of over (under) sampling, we also included absolute differences in sequence (samples) numbers between locations as a predictor of flow (see the appendix in~\cite{Lemey2014} for a discussion).
+\textbf{Phylogeographic generalised linear models}.
 
-\subsection*{Model selection}
+In order to study the influence of different epidemiological predictors on viral diffusion through space, we used information on the trade of live cattle, pigs and sheep divided in three periods ($1986-1995$,~$1996-2004$,~$2005-2013$).
+We also included the great circle distance between the (centroids of) countries and the presence/absence of borders between countries as predictors.
+Additionally, to assess the influence of sequence (spatial) sampling, we also included the product and absolute differences in sequence (samples) numbers between locations as a predictor of flow (see the appendix in~\cite{Lemey2014} for a discussion).
+The numbers of sequences in each location were also included as origin and destination predictors (see~\cite{Dudas2017}), leading to a total of $14$ predictors being considered.
+In order to test the relevance of each predictor to spatial spread we used Bayesian stochastic variable selection (BSSVS, \cite{Lemey2009}).
+All predictors with the exception of the borders were transformed using $\log(x +1)$ in order to map $0$ to $0$ and standardised to have mean $0$ and standard deviation $1$.
+The relevance of each predictor can then be determined using Bayes factors~\citep{KassRaftery1995,Lemey2009,Lemey2014}.
+Details are given in Text S2.
 
-In order to compare the performance of combinations of sequence evolution (Markov) and relaxed clock models for each data set
-% (see Text S2)
-, we use state-of-the-art marginal likelihood estimators, namely generalised stepping-stone sampling (SS)~\citep{Baele2015} implemented in BEAST~\citep{Suchard2018}.
-% In this study we exploit recent developments in Bayesian model selection~\citep{Baele2012, Baele2013a, Baele2013b, Baele2013c, Baele2015}, as implemented in the BEAST software program~\citep{Suchard2018}.
-Following a preliminary Skygrid analysis, we chose the constant population size coalescent parametric model and its associated working prior as the tree prior for these comparisons.
-% Specifically, we perform accurate estimation of the (log) marginal likelihood using path sampling (PS)~\citep{Lartillot2006} and stepping-stone sampling (SS)~\citep{Xie2011}, two computationally demanding approaches that yield accurate estimates of model fit while accommodating phylogenetic uncertainty.
-% Using these (log) marginal likelihoods, it's possible to calculate Bayes Factors, which provide a measure of the relative performance of each model. 
-% We have estimated all the (log) marginal likelihoods in this study using 64 power posteriors, which were each run for 2 million iterations, taking up to 4 weeks of (wall time) computation for each model under evaluation. 
-% Using PS and SS, we first compare different demographic priors and clock models (see Supplementary Text S2) for both serotypes. 
-% For more details on these model selection procedures please see Supplementary Text S2.
+\section*{Software versions and computer programs}
 
+\begin{itemize}
+ \item \textbf{PhyML} version 3.0, downloaded from~\url{www.atgc-montpellier.fr/phyml/};
+ \item \textbf{Tempest} version 1.5.1, downloaded from~\url{http://tree.bio.ed.ac.uk/software/tempest/}  ;
+ \item \textbf{BEAST} version 1.10.4, downloaded from~\url{https://github.com/beast-dev/beast-mcmc/releases/download/v1.10.4/};
+ \item  \textbf{Jupyter} version 4.4.0, installed from the official Ubuntu repositories;
+ \item \textbf{R} version 3.5.0, downloaded from~\url{https://cran.r-project.org/}.
+\end{itemize}
 
-% To test the influence of different epidemiological predictors on viral diffusion through space, we use to parameterize priors for the CTMC rate matrix.
-% We normalize the numbers of live animals exchanged between countries to a mean and coefficient of variation of $1$ and use these as prior expectations in BEAST (see~\citep{Lemey2009}, pg. 14 and the Appendix in~\citep{Carvalho2013}).  
-% We compare these predictors to a distance-informed prior~\citep{Lemey2009}, which represents a scenario where flow occurs as a function of the inverse of the geographic distances between locations.
-% Finally, we compare all predictors against an equal-rates gamma prior, which considers~\textit{a priori} a scenario where there is no preferential spread among different countries~\citep{Nelson2011}.
-\section{Software versions and computer codes}
+All analyses conducted within a GNU/Linux computational environment.
+Code to produce many of the plots/analyses is available from~\url{https://github.com/maxbiostat/FMDV_AMERICA}.
 
 \section*{Acknowledgments}
-The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Matthew Hall (Oxford) and Oliver Pybus (Oxford) for insightful contributions and Miguel Carvalho, Felipe Figueiredo (PROCC) and Mauricio Oliveira (UFRJ) for operational support.
+The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Matthew Hall (Oxford), Mandev Gill (Leuven) and Oliver Pybus (Oxford) for insightful contributions and Miguel Carvalho, Felipe Figueiredo (Fiocruz) and Mauricio Oliveira (UFRJ) for operational support.
 We acknowledge the support of the National Evolutionary Synthesis Center (NESCent) through a working group (Software for Bayesian Evolutionary Analysis).
 
 \emph{Funding:} The research leading to these results has received funding from the European Union Seventh Framework Programme [FP7/2007-2013] under Grant Agreement no. 278433-PREDEMICS and ERC Grant agreement no. 260864.
