@@ -134,17 +134,19 @@ This first step yielded $6, 907$ sequences which were then filtered to exclude a
 We then filtered for sequences from serotypes A and O, yielding $1051$ and $2350$ sequences, respectively.
 Next, we excluded sequences that had been extensively passaged in cell culture and selected all sequences from South America (Argentina, Bolivia, Brazil, Colombia, Ecuador, Paraguay, Peru, Uruguay, Venezuela) for which information on country and year of isolation was available.
 
-This resulted in $185$ sequences (from eight countries) for serotype A and $215$ sequences (nine countries) for serotype O, covering time spans of $58$ ($1955$-$2013$) and $53$ (1958-2011) years, respectively (see Tables~\ref{stab:sequences_A} and~\ref{stab:sequences_O} for details).
+This resulted in $185$ sequences (from eight countries) for serotype A and $215$ sequences (nine countries) for serotype O, covering time spans of $62$ ($1951$-$2013$) and $53$ (1958-2011) years, respectively (see Tables~\ref{stab:sequences_A} and~\ref{stab:sequences_O} for details).
 We aligned each data set using the MAFFT~\citep{Katoh2002} algorithm implemented in the Geneious~\citep{Kearse2012} software package.
 After a preliminary phylogenetic analysis (see below), an early serotype A sequence (Venezuela 1951) was excluded because its root-to-tip divergences was incompatible with its sampling date~\citep{Rambaut2016}.
 For serotype O, five sequences were excluded under the same criteria (Table~\ref{stab:exclseqs}).
-The final data sets had $184$ and $210$ sequences for serotypes A and O, respectively.
+The final data sets had $184$ ($1955 -- 2013$) and $210$ ($1958-2011$) sequences for serotypes A and O, respectively.
 
 \textbf{Acquisition of trade data.}
+
 Data on animal trade were obtained from the FAO database (\url{http://faostat.fao.org/}).
 We retrieved data on the \textit{detailed trade matrix} for cattle, pigs and sheep (number of live animals exchanged) covering the period from $1986$ to $2009$, for each of the nine countries.
 
 \textbf{Vaccination and case data.}
+
 Data on the number of vaccine doses (irrespective of serotype) from 1990 to 2010 were obtained from the PANAFTOSA annual reports (\url{https://www.paho.org/panaftosa/}) and then standardised to doses per (cattle) head in each country.
 Serotype-specific outbreak notifications were obtained from FMD Bioportal (\url{http://fmdbioportal.ucdavis.edu:8080/}).
 
@@ -156,7 +158,7 @@ Details on computational settings and prior choice can be found in Text S2.
 \subsection*{Phylogenetic Analysis}
 
 We assume a general time reversible (GTR)~\citep{Tavare1986} model of sequence evolution, along with gamma-distributed rate heterogeneity (4 categories) for all our analyses.
-We conducted an initial analysis of the two data sets described, employing PhyML~\citep{Guindon2003} to obtain maximum likelihood phylogenies which we then used in conjunction with Tempest~\citep{Rambaut2016} to produce root-to-tip divergence (RDV) plots and identify discrepant sequences (see ~\cite{Rambaut2016} for details).
+We conducted an initial analysis of the two data sets described, employing PhyML~\citep{Guindon2003} to obtain maximum likelihood phylogenies which we then used in conjunction with Tempest~\citep{Rambaut2016} to produce root-to-tip divergence (RDV) plots and identify discrepant sequences (see~\cite{Rambaut2016} for details).
 
 Having identified considerable rate variation among branches we used the Bayesian Evolutionary Analysis by Sampling Trees (BEAST)~\citep{Drummond2012,Suchard2018} software package to infer time-structured phylogenies under relaxed clock models~\citep{Drummond2006}, employing the BEAGLE~\citep{Ayres2012} library to gain computational efficiency.
 
@@ -168,6 +170,7 @@ Following a preliminary Skygrid analysis, we chose the constant population size 
 \subsection*{Spatio-temporal Dynamics}
 
 \textbf{Effective population size reconstruction}.
+
 We employed the Skygrid coalescent model~\citep{Gill2012} to reconstruct that past population dynamics of both serotypes.
 Skygrid necessitates the specification of a cutoff value, $K$, commensurate with the age of the root (time to the most recent common ancestor, tMRCA) .
 We have used $K = 150$ years for serotype A and $K = 100$ for serotype O sets as conservative estimates of the tMRCA of the sampled sequences. 
@@ -177,6 +180,12 @@ In addition to these livestock-associated predictors, we also considered the num
 In total there were $13$ temporal predictors for each serotype.
 To facilitate computation we divided each predictor by its maximum value so as to bring all predictors to the common scale of $[0, 1]$ (see Text S2 for more details).
 %TODO: thinking of presenting a table with rows = predictors and cols = name, temporal_range, { beta (CI) } x serotype
+
+\textbf{Reconstructing geographical movements through BSSVS and robust counting}
+
+We employ the Bayesian stochastic search variable selection (BSSVS) of~\cite{Lemey2009} to compute Bayes factors for migration routes between countries and stablish which routes are relevant to the spatial spread of FMDV in South America.
+Following the approach of~\cite{Hall2013}, we employ the robust counting technique (Markov jump) of~\cite{Minin2008b} to obtain a probability distribution for the location (country) of origin of each of epidemic.
+Each epidemic is represented by sequences from it, taken as representative (see Text S2 for details).
 
 \textbf{Phylogeographic generalised linear models}.
 
@@ -203,7 +212,7 @@ All analyses conducted within a GNU/Linux computational environment.
 Code to produce many of the plots/analyses is available from~\url{https://github.com/maxbiostat/FMDV_AMERICA}.
 
 \section*{Acknowledgments}
-The authors would like to thank Ant\^onio Mendes (PANAFTOSA) for clarifications regarding the vaccination data, Matthew Hall (Oxford), Mandev Gill (Leuven) and Oliver Pybus (Oxford) for insightful contributions and Miguel Carvalho, Felipe Figueiredo (Fiocruz) and Mauricio Oliveira (UFRJ) for operational support.
+The authors would like to thank Ant\^onio Mendes for clarifications regarding the vaccination data, Matthew Hall, Mandev Gill, Vladmir Minin, Gytis Dudas and Oliver Pybus for insightful discussions and Miguel Carvalho, Felipe Figueiredo and Mauricio Oliveira for operational support.
 We acknowledge the support of the National Evolutionary Synthesis Center (NESCent) through a working group (Software for Bayesian Evolutionary Analysis).
 
 \emph{Funding:} The research leading to these results has received funding from the European Union Seventh Framework Programme [FP7/2007-2013] under Grant Agreement no. 278433-PREDEMICS and ERC Grant agreement no. 260864.
@@ -214,20 +223,72 @@ This work was also supported by National Institutes of Health grants R01 HG00613
 \newpage
 \bibliography{FMDV_AMERICA}
 % \newpage
-\section*{Figure Legends}
-\newpage
-\section{Figures and Tables}
+% \section*{Figure Legends}
+% \newpage
+% \section{Figures and Tables}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{figure}[!ht]
-% \begin{center}
-% \subfigure[A]{\includegraphics[scale=.45]{FIGURES/A.pdf}}\\
-% \subfigure[O]{\includegraphics[scale=.30]{FIGURES/O.pdf}}
-% \end{center}
-% \caption{}
-% \label{fig:trees}
-% \end{figure}
+\begin{figure}[!ht]
+\begin{center}
+\subfigure[A]{\includegraphics[scale=.30]{FIGURES/PLOTS/tree_A.pdf}}\\
+\subfigure[O]{\includegraphics[scale=.30]{FIGURES/PLOTS/tree_O.pdf}}
+\end{center}
+\caption{\textbf{Phylogenetic trees reconstructed for FMDV serotypes A and O, with country information mapped}. 
+Internal branches are coloured according to the most probable state (country).
+Please notice the slight difference in colour scheme in the legend of both panels.
+}
+\label{fig:trees}
+\end{figure}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[scale=0.6]{FIGURES/PLOTS/population_size_reconstructions_full.pdf}
+\end{center}
+\caption{\textbf{Reconstructed population dynamics for serotypes A and O in South America}.
+}
+In the left panel we show reconstructions that do not take sampling (sequencing) patterns into account, whereas the right panel shows reconstructions using a model that accounts for the sampling time as covariate, as well as taking preferential sampling into account~\citep{Karcher2019}.
+All estimates were obtained using the \verb|BNPR()| and \verb|BNPR_PS()| functions from the \textbf{phylodyn} package~\citep{Karcher2017}. 
+\label{fig:popdyn}
+\end{figure}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[scale=1]{FIGURES/PLOTS/MJandBFs.pdf}
+\end{center}
+\caption{\textbf{Migration networks for FMDV serotypes A and O in South America}.
+We estimate the number of migration events between countries using the robust counting (Markov jumps) techinique of~\cite{Minin2008b}.
+Additionally, we perform a separate analysis employing Bayesian Stochastic Search Variable Selection (BSSVS) to determine the most significant migration routes.
+Bayes factors are depicted by arrows, with line thickness proportional to BF magnitude (we only plot BFs bigger than $3$).
+Coroplethic maps show the net migration rates (from - to) for each country, for both serotypes.
+}
+\label{fig:mj&BFs}
+\end{figure}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+\begin{center}
+\subfigure[][]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_A_Argentina_early_2001.pdf}}
+\subfigure[][]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_A_Ecuador_2002.pdf}}\\
+\subfigure[][]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_O_Venezuela_2003.pdf}}
+\subfigure[][]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_O_Paraguay_2011.pdf}}
+\end{center}
+\caption{\textbf{Epidemic tracing using robust counting for serotypes A and O in South America}.
+We show the most probable sources of serotype A epidemics in Argentina 2001 (A) and Ecuador 2002 (B).
+For serotype O the origins of all the Venezuelan sequences from 2003 (C) are shown along with the origins of the strain in Paraguay 2011 (D).
+}
+\label{fig:epidemictracing}
+\end{figure}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+\begin{center}
+\subfigure[][Serotype A]{\includegraphics[scale=.50]{FIGURES/PLOTS/glm_A.pdf}}
+\subfigure[][Serotype O]{\includegraphics[scale=.50]{FIGURES/PLOTS/glm_O.pdf}}
+\end{center}
+\caption{\textbf{Phylogeographic generalised linear models for the spatial spread of FMDV in South America}.
+We show the inclusion probabilities (posterior mean) and coefficient estimates (mean and 95\% credible intervals) for each of $15$ predictors of spatial spread, for serotype A (panel A) and O (panel B).
+Vertical lines on the left subpanel of each plot show the inclusion probabilities corresponding to Bayes factors $3$ and $50$, while the vertical line on the right subpanel marks $\beta | \delta = 0$.
+}
+\label{fig:glm_spatial}
+\end{figure}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{table}[H]
 % \caption{
