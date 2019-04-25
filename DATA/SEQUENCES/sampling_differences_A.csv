@@ -1,0 +1,9 @@
+"sampleSizeDiff","Argentina","Bolivia","Brazil","Colombia","Ecuador","Peru","Uruguay","Venezuela"
+"Argentina",0,87,71,78,91,89,90,62
+"Bolivia",87,0,16,9,4,2,3,25
+"Brazil",71,16,0,7,20,18,19,9
+"Colombia",78,9,7,0,13,11,12,16
+"Ecuador",91,4,20,13,0,2,1,29
+"Peru",89,2,18,11,2,0,1,27
+"Uruguay",90,3,19,12,1,1,0,28
+"Venezuela",62,25,9,16,29,27,28,0
