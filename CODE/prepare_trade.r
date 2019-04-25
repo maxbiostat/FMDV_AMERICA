@@ -58,7 +58,7 @@ makeTradeArray <- function(db, var){
 #
 exportTradeArray <- function(obj, name, out = "../DATA/TRADE_DATA/"){
   years <- dimnames(obj)$year
-  for (y in years) write.csv(obj[,, y], row.names = TRUE,
+  for (y in years) write.csv(obj[, , y], row.names = TRUE,
                              file = paste(out, "tradeMatrix_", name, "_", y, ".csv", sep = "") )
 }
 ################
