@@ -1,0 +1,10 @@
+diff_seqs_O,Argentina,Bolivia,Brazil,Colombia,Ecuador,Paraguay,Peru,Uruguay,Venezuela
+Argentina,1,7,5,16,75,17,16,21,16
+Bolivia,7,1,11,22,81,11,10,15,10
+Brazil,5,11,1,12,71,21,20,25,20
+Colombia,16,22,12,1,60,32,31,36,31
+Ecuador,75,81,71,60,1,91,90,95,90
+Paraguay,17,11,21,32,91,1,2,5,2
+Peru,16,10,20,31,90,2,1,6,1
+Uruguay,21,15,25,36,95,5,6,1,6
+Venezuela,16,10,20,31,90,2,1,6,1

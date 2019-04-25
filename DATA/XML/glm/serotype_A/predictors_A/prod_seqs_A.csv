@@ -1,0 +1,9 @@
+prod_seqs_A,Argentina,Bolivia,Brazil,Colombia,Ecuador,Peru,Uruguay,Venezuela
+Argentina,1,659,2163,1505,283,471,377,3009
+Bolivia,659,1,162,113,22,36,29,225
+Brazil,2163,162,1,369,70,116,93,737
+Colombia,1505,113,369,1,49,81,65,513
+Ecuador,283,22,70,49,1,16,13,97
+Peru,471,36,116,81,16,1,21,161
+Uruguay,377,29,93,65,13,21,1,129
+Venezuela,3009,225,737,513,97,161,129,1

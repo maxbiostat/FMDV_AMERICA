@@ -1,0 +1,10 @@
+borders,Argentina,Bolivia,Brazil,Colombia,Ecuador,Paraguay,Peru,Uruguay,Venezuela
+Argentina,1,1,0,0,0,1,0,1,0
+Bolivia,1,1,0,0,0,1,1,0,0
+Brazil,0,0,1,1,0,0,0,0,1
+Colombia,0,0,1,1,1,0,0,0,1
+Ecuador,0,0,0,1,1,0,0,0,0
+Paraguay,1,1,0,0,0,1,0,0,0
+Peru,0,1,0,0,0,0,1,0,0
+Uruguay,1,0,0,0,0,0,0,1,0
+Venezuela,0,0,1,1,0,0,0,0,1
