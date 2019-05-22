@@ -3,7 +3,7 @@ require(spdep)
 require(RColorBrewer)
 ########################################################
 pal <- c("green", "black", "darkorchid1", "gray")
-#Off-diagonal vector to square matrix
+# Off-diagonal vector to square matrix
 vec2sqmat <- function(v)
 {
   k <- (1 + sqrt(1 + 4 * length(v)))/2
@@ -14,13 +14,13 @@ vec2sqmat <- function(v)
   return(m)
 }
 #________________
-#Square matrix to off-diagonal vector
+# Square matrix to off-diagonal vector
 sqmat2vec <- function(M){
   k <- ncol(M)
   pos <- setdiff(1:k^2, seq(1, k^2, k+1))
   return(as.vector(M)[pos])}
 ############################
-#Generates a legend from a vector
+# Generates a legend from a vector
 genleg<-function(x, nbreaks = 5)
 { 
   breaks <- round(quantile(x, probs = seq(0.01, 1, 1/nbreaks)), digits = 2)
@@ -28,7 +28,7 @@ genleg<-function(x, nbreaks = 5)
 return(list(legend = legendd,  indicators = findInterval(x, breaks, all.inside = TRUE), breaks = breaks))
 }
 #####
-#modified plot.nb that allows for different thickness for each link
+# modified plot.nb that allows for different thickness for each link
 mplot.nb <- function (x, coords, col = "black", lwd = 2, points = TRUE, add = FALSE, 
                     arrows = FALSE, length = 0.1, xlim = NULL, ylim = NULL, ...) 
 {
