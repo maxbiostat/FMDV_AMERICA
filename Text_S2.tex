@@ -9,6 +9,7 @@
 \usepackage{amssymb}
 \usepackage{indentfirst}
 \usepackage{float}
+\usepackage{listings}
 \usepackage{url}
 \usepackage{cite}
 \usepackage{amsmath}
@@ -23,6 +24,30 @@
 \renewcommand{\thesubfigure}{(\Alph{subfigure})}
 \renewcommand{\thetable}{S\arabic{table}}   
 \renewcommand{\thefigure}{S\arabic{figure}}
+
+%%%% XML syntax highlighting
+\usepackage{color}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  showstringspaces=false,
+  commentstyle=\color{gray}\upshape
+}
+
+\lstdefinelanguage{XML}
+{
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  morekeywords={xmlns,version,type}% list your attributes here
+}
 
 %%%%%
 \topmargin 0.0cm
@@ -48,8 +73,440 @@ Andrew Rambaut and Guy Baele
 
 \section*{Data collection and curation}
 
+\subsection*{Sequence data}
+
 In Tables~\ref{stab:sequences_A} and~\ref{stab:sequences_O} we provide the GenBank accession numbers, date and country of collection of all sequences used in this study.
 
+\subsection*{Livestock trade data}
+
+One of the main contributions of this study lies in exploring the association between the trade of cattle, pigs and sheep and viral diffusion using a statistically sound approach that enables us to test evolutionary hypotheses concerning the influence of these predictors.
+In this text we provide some additional exploratory plots of the data.
+In Figure~\ref{sfig:prod}, we show the time series of livestock production among the studied countries in over $50$ years, illustrating that the production of cattle is much larger than that of any other livestock.
+Perhaps more importantly, while pigs and cattle production maintain a trend of positive growth throughout the second half of the twentieth century, sheep production shows a decline after $1990$.
+Spatially, the trade of all three livestock is rather different, as shown in Figure~\ref{sfig:tradenets}.
+The cattle trade network is more connected, while the pig and sheep trade networks are considerably more sparse.
+Further, the pig network presents a clear regional pattern, with two sub-networks.
+
+Temporally, overall trade shows remarkably different trends depending the livestock analysed.
+While cattle trade shows a positive trend, pig trade is mostly  stable and all other livestock considered show a declining trend.
+The FAO trade matrix is sometimes inconsistent, i.e., sometimes the exports from country $i$ to country $j$ do not correspond to the imports into country $j$ from country $i$.
+In cases like these we have picked the largest value for a given year and pair of countries $i$ and $j$.
+
+\subsection*{Vaccination and case data}
+
+We obtained the number of vaccine doses distributed in a given country in a given year starting from 1986 and ending in 2010 and divided this total by the number of live cattle produced per country and year.
+We could not find information for the years of 1991 and 1996 and these were manually imputed by taking the arithmetic mean of the two adjacent years.
+This indicator is only a proxy for vaccination in continent since (i) not all vaccines administered protect against all serotypes and (ii) cattle are not the only susceptible livestock.
+We argue our choices are justified, however, because (i) most vaccine doses were actually protective against all 3 serotypes (trivalent) and (ii) cattle are by far the most numerous livestock in South America and their vaccination is mandatory across all affected countries.
+
+We obtained a temporal measure of vaccination by computing the average across the nine countries per year.
+As a measure of dispersion, we employed the standard error, multiplied by the 95\% quantile of a Student t distribution with either $\nu = 8 -1 = 7$ or $\nu = 9-1 = 8$ degrees of freedom ($2.36$ and $2.31$, respectively).
+We show these vaccination time series in Figure~\ref{sfig:vaccination_temporal}, where it can be observed that there is substantial heterogeneity across countries in terms of temporal vaccination pattern.
+
+\section*{Analysis}
+
+\subsection*{Maximum likelihood phylogenies and root-to-tip divergences}
+
+In order to preliminarily assess whether the data sets used in this study contain evidence of clock-like evolution, we construct phylogenies using the maximum likelihood procedures implemented in PhyML 3.0~\cite{M-Guindon2003} under a GTR model~\cite{M-Tavare1986} of sequence evolution with gamma-distributed site rate heterogeneity.
+The phylogenies produced by PhyML are unrooted.
+We root the trees at the branch -- as well as a position along it -- that minimises the sum of squared residuals of the linear regression of root-to-tip divergences (RDV) on the sampling times.
+For this last step, we use the routines in the program Tempest~\citep{M-Rambaut2016}.
+The resulting trend lines presented in Figure~\ref{sfig:root-to-tip} are consistent with clock-like evolution, despite considerable variation between lineages, which we address later in the paper using relaxed molecular clocks.
+
+An initial RDV analysis indicated that some sequences collected for serotype O had evolutionary divergences incompatible with their dates, and they were excluded from subsquent analyses.
+These sequences are listed in Table~\ref{stab:exclseqs}.
+
+\begin{table}[H]
+\caption{\textbf{Sequences excluded from analysis.}
+Serotype O sequences that displayed genetic divergences inconsistent with their sampling dates were excluded from analysis.
+These were sequences with older dates that presented a much higher than expected number of mutations.
+}
+\begin{center}
+\begin{tabular}{ccccccc}
+\toprule
+Accession & Year & Country \\      
+\midrule
+AY593818 & 1958 & Brazil \\
+AY593837 & 1963 & Uruguay \\ 
+AY593820 & 1964 & Argentina  \\
+AY593814 & 1965 & Argentina \\
+AY593821 & 1967 & Argentina \\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{flushleft}
+\end{flushleft}
+\label{stab:exclseqs}
+ \end{table}
+
+ 
+\subsection*{Bayesian Model Selection}
+
+%TODO: Flagged for Guy
+We employed generalised stepping stone sampling (GSS, \cite{M-Baele2015}) to compute marginal likelihoods for six combinations of Markov sequence evolution and molecular clock models.
+A constant population size coalescent tree prior was used across all combinations.
+We used $50$ steps with $250, 000$ iterations per step and beta quantile $\alpha = 0.3$.
+Table~\ref{stab:treeclockselection} shows the results of this model selection study to determine the best combination of demographic and molecular clock models for each serotype.
+
+For serotype A, the model combination with highest marginal likelihood is a GTR sequence evolution model coupled with a Gamma relaxed clock, whereas for serotype O the best model combination was GTR and an uncorrelated log-normal (ULN) relaxed clock.
+The quantile inversions for the Gamma relaxed clock model are very compute-intensive and computations for this model took much longer to finish.
+In the interest of computational  expediency for the large number of subsequent analyses we performed in this paper, we decided to use the ULN model for serotype A also.
+
+\begin{table}[!ht]
+\caption{\textbf{Marginal likelihoods for combinations of sequence evolution (Markov) and molecular clock models.}
+We used the generalised stepping stone (GSS) from~\cite{M-Baele2015} to compute marginal likelihoods using a constant population size coalescent tree prior.
+Best fitting models are highlighted in bold.
+See text for a discussion of the models we chose to employ, however.
+}
+\begin{center}
+ \begin{tabular}{cclc}
+\hline
+Serotype & Markov model & Clock & Marginal likelihood \\
+\hline
+\multirow{6}{*}{A} & GTR & ULN & -13649.55 \\
+ & GTR & Gamma & \textbf{-13619.52} \\
+ & GTR & Strict & -13721.67 \\
+ & HKY & ULN & -13668.54 \\
+ & HKY & Gamma & -13664.53 \\
+ & HKY & Strict & -13760.31 \\
+ \hline
+\multirow{6}{*}{O}& GTR & \multicolumn{1}{l}{ULN} & \textbf{-9917.44} \\
+\multicolumn{1}{l}{} & GTR & \multicolumn{1}{l}{Gamma} & -9925.08 \\
+\multicolumn{1}{l}{} & GTR & \multicolumn{1}{l}{Strict} & -10085.06 \\
+\multicolumn{1}{l}{} & HKY & \multicolumn{1}{l}{ULN} & -9959.38 \\
+\multicolumn{1}{l}{} & HKY & \multicolumn{1}{l}{Gamma} & -9955.12 \\
+\multicolumn{1}{l}{} & HKY & \multicolumn{1}{l}{Strict} & -10102.83\\
+\hline
+\end{tabular}
+\end{center}
+\label{stab:treeclockselection}
+\end{table}
+\newpage
+
+\subsection*{Temporal analysis -- accounting for preferential sampling}
+
+Since our sample is likely to be biased temporally -- as well as spatially, see below --, we employ a population reconstruction method that allows accommodating the tip sampling structure, as well as the inclusion of temporal covariates~\citep{M-Karcher2019}.
+The model of~\cite{M-Karcher2019} assumes sequences are collected according to a Poisson point process with intensity
+\begin{equation}
+ \label{eq:skytrack}
+ \lambda_s(t) = \exp\left( \beta_0 + \beta_1\gamma(t) + \beta_2 f_1(t)  + \beta_2 f_2(t) + \ldots + \beta_P f_P(t) + \left[\delta_2 f_2(t) + \ldots + \delta_P f_P(t) \right]\gamma(t) \right),
+\end{equation}
+where $\gamma(t)$ is the log population size at time $t$, the $\boldsymbol\beta$ are coefficients, $\mathcal{F} = \{f_1, f_2, \ldots, f_P\}$ are functions of interest and the $\boldsymbol\delta$ control interaction terms, which we do not use here.
+Following~\cite{M-Karcher2019}, we consider four models:
+\begin{enumerate}
+ \item \textbf{Model 0:} ``Naive'' model, in which sampling not accounted for~\citep{Palacios2015}.
+ \item \textbf{Model 1:} Preferential model with $\lambda_s(t) = \exp(\beta_0 + \beta_1\gamma(t))$, denoted $\{\gamma(t)\}$~\citep{M-Karcher2016};
+ \item \textbf{Model 2:} Preferential model using $-t$ as a covariate, thus $\lambda_s(t) = \exp(\beta_0 + \beta_1\gamma(t) -\beta_2 t)$, denoted $\{\gamma(t), -t\}$;
+ \item \textbf{Model 3:} Preferential model using both $-t$ and $-t^2$ as covariates, thus $\lambda_s(t) = \exp(\beta_0 + \beta_1\gamma(t) -\beta_2 t - \beta_3t^2)$, denoted $\{\gamma(t), -t, -t^2\}$;
+\end{enumerate}
+
+These models were fitted using three maximum clade credibility (MCC) trees for each serotype, obtained from three independent chains.
+Since results were consistent across MCC trees, we shall discuss only results for one MCC for each serotype.
+Complete analyses can be found at~\url{https://github.com/maxbiostat/FMDV_AMERICA/blob/master/CODE/notebooks/BNPR_analysis_covariates.ipynb}.
+
+In order to compare models, we employ marginal likelihoods to compute Bayes factors.
+Model 0 does not use sampling data and thus is not directly comparable to the other models.
+Models 1 and 2 can be seen as special cases of model 3, with suitably constructed, point-mass priors on the non-shared parameters.
+Therefore, we compare models 1, 2 and 3 using the marginal likelihood estimate provided by the underlying integrated nested Laplace approximation (INLA, \cite{Martins2013}), which is computed following~\cite{Hubin2016}.
+
+\subsubsection*{Prior modelling}
+
+% We follow the framework of~\cite{M-Gill2016} in order to incorporate information from temporal predictors into the reconstruction of past (effective) population size.
+% This necessitates the specification of priors for the predictor coefficients ($\beta^{\text{Skygrid}}_i, i = 1, \ldots, 13$).
+% We assign independent standard normal (Gaussian) priors, $\beta^{\text{Skygrid}}_i \sim \text{Normal}(0, 1)$.
+The smoothness of the population trajectory in Skygrid~\citep{M-Gill2012} and related models is controlled by a precision parameter, $\tau$, which needs to be estimated from data and thus be given a prior.
+The prior usually employed is a Gamma distribution with parameters $\alpha = \beta = 0.001$. 
+However, we feel this prior places too much mass on small precisions (which would make estimates noisier) while at the same time allowing rather extreme values, which would artificially inflate confidence.
+We instead employ the penalised complexity (PC) prior from~\cite{M-Simpson2017} (pg.14), a density from Gumbel type II family.
+Let $a, b > 0$ be the shape and scale hyperparameters respectively; the probability density function is then
+\begin{equation}
+ \pi_2(\tau \mid a, b) = ab \cdot \tau^{-a-1}\exp\left(-b\tau^{-a}\right),\: \tau > 0.
+\end{equation}
+The authors recommend $a = 1/2$ and $b$ to be chosen such that $Pr(1/\sqrt{\tau} > S) = p$, where the value $S$ and the probability $p$ are to be chosen on substantive grounds, such that $b = \ln(p)/S$.
+Here we will choose $S = 1$ and $p = 0.1$, which is to say that the prior is constructed such that there is a $10\%$ probability that the standard deviation of the log-population sizes is greater than $1$.
+This argument leads to $b = 2.302585$.
+This prior has been implemented in BEAST and can be used with the Skygrid model by using the following XML syntax:
+\lstset{language=XML}
+\begin{center}
+\begin{tabular}{c}
+\begin{lstlisting}
+<gumbelPrior shape="0.5" scale="2.30">
+    <parameter idref="skygrid.precision"/>
+</gumbelPrior>	
+\end{lstlisting}
+\end{tabular}
+\end{center}
+replacing the default XML block.
+For the~\textbf{phylodyn} package~\citep{M-Karcher2017}, the PC prior is also implemented in this fork:~\url{https://github.com/maxbiostat/phylodyn}, and can be used by calling~\verb|BNPR(..., pc_prior = TRUE, S, p)| and~\verb|BNPR_PS(..., pc_prior = TRUE, S, p)|.
+
+ 
+\subsubsection*{Simulations}
+
+In order to understand how the sequence sampling structure of both serotypes (see Figure~\ref{sfig:sampling}) might influence results, we simulated four scenarios for each data set:
+\begin{itemize}
+ \item[A)] Using the empirical sampling dates, simulate phylogenies under a constant population size with $N_e = 10$;
+ \item[B)] Using the empirical sampling dates, simulate phylogenies under an exponential growth model with $N_0 = 10$ and $r = 0.1$;
+ \item[C)] Using a regular grid of dates spanning the range of observed dates, simulate phylogenies under a constant population size with $N_e = 10$;
+ \item[D)]  Using a regular grid of dates spanning the range of observed dates, simulate phylogenies under an exponential growth model with $N_0 = 10$ and $r = 0.1$.
+\end{itemize}
+For all scenarios we simulated $10$ phylogenies for each serotype using the R package~\textbf{timeTreeSim} (\url{https://github.com/maxbiostat/timeTreeSim}).
+We fitted the four models outlined above to all simulated data sets.
+Since results were consistent across phylogenies, we will discuss results for a single representative simulation per scenario and serotype.
+All simulations and analyses can be found at~\url{https://github.com/maxbiostat/FMDV_AMERICA/blob/master/CODE/notebooks/}.
+
+Typical (representative) reconstructions obtained with all four models for each scenario are shown in Figures~\ref{sfig:reconplots_A} and~\ref{sfig:reconplots_O} for serotypes A and O, respectively.
+We can see that results are consistent across serotypes and that preferential sampling (i.e. using the empirical dates of the sequences in this study) leads to noisier reconstructions.
+In addition, we notice that when the true population trajectory is exponential growth, the preferential model ($\{\gamma(t)\}$) does not recover the true population trajectory, but a model that includes time as a covariate (e.g. $\{\gamma(t), -t\}$) does.
+These results suggest that when population changes over time, a preferential model that includes simple functions of calendar time can capture the true behaviour and lead to narrower credibility intervals (compare ``naive'' and $\{\gamma(t), -t\}$ models for all scenarios and both serotypes.
+
+In terms of model comparison, Figure~\ref{sfig:BNPR_simu_marglikes} shows the estimated marginal likelihoods for models 1, 2 and 3 for all four scenarios.
+Again, results were consistent across serotypes. 
+For scenario A, model 1 ($ \{ \gamma(t) \}$) attains the highest marginal likelihood for all replicates.
+For scenario B, model 2 ($ \{ \gamma(t), -t\}$) performs best across replicates, likely because it is consistent with the exponential growth of the population.
+For scenarios C and D, model 1 is again the best fit across all replicates, showing that model selection based on marginal likelihoods is parsimonious in that the simplest of model (between 1, 2 and 3) is selected in a situation with no preferential sampling.
+
+\subsection*{Spatial analysis -- phylogeographic GLM}
+
+In order to study the influence of several predictors on the spatial spread of FMDV in the continent, we employed a sparse generalised linear model (GLM)~\cite{M-Lemey2014,M-Dudas2017}.
+Let $P$ be the number of predictors -- in this study, $P = 12$ -- and $K$ be the number of locations -- here, $K = 8$ for serotype A and $K = 9$ for serotype O.
+Moreover, let $\Lambda_{ij}$ be the transition rate between locations $i$ and $j$ and $\boldsymbol X_{ij}$ be the relevant row of design matrix.
+Then~\citep{M-Dudas2017}:
+\begin{align*}
+ \log \Lambda_{ij}  &= \boldsymbol X_{ij}^T \boldsymbol\delta \boldsymbol{\beta}
++ \epsilon_i + \epsilon_j, \\
+\epsilon_k &\sim \text{Normal}(0, \sigma^2) \text{ for } k = 1, \ldots, K, \text{with} \\
+\sigma^2 &\sim \text{Inverse-Gamma}(0.001, 0.001),\\
+\beta_j &\sim \text{Normal}(0, 16),
+\end{align*}
+where the $\boldsymbol\epsilon$ are location-specific origin and destination random effects.
+$\boldsymbol\delta$ is a vector containing variables $\delta_i \in \{0, 1\}$ that describe whether predictor $i$ is included ($\delta_i = 1$) or excluded ($\delta_i = 0$) from the model and $\boldsymbol\beta$ are the regression coefficients.
+Let $p_j$ be the \textit{prior} probability that predictor $j$ is included in the model.
+Here we will make the simplifying assumption that $p_j = q$ for all $j$.
+If we let $w$ be the probability that no predictors are included in the model, we obtain  $q = 1 - w^{1/P}$.
+We can then fit the model and compute the \textit{posterior} inclusion probability $\hat{\delta_j}$ from which we can compute the Bayes factor in support of the $j$-th predictor:
+\begin{align*}
+ \text{BF}_j &= \frac{\hat{\delta_j} }{1-\hat{\delta_j} }/\frac{p_j}{1-p_j}, \\
+  &= \frac{\hat{\delta_j} (1 + w^{1/P})}{(1-\hat{\delta_j})(1 - w^{1/P}) }.
+\end{align*}
+In this study we choose $w = 1/2$ to enforce a parsimonious model.
+See~\cite{M-KassRaftery1995} for how to interpret Bayes factors.
+
+
+\bibliography{TEXTS2}
+
+\newpage
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=.80]{FIGURES/PLOTS/sampling_bubble_plot.pdf}
+\end{center}
+\caption{
+\textbf{Spatio-temporal sampling pattern of the sequences used in this study.} Circle radius is proportional to number of sequences.
+}
+\label{sfig:sampling}
+\end{figure}
+\end{center}
+% %%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=.75]{FIGURES/PLOTS/rdvs.pdf}
+\end{center}
+\caption{
+\textbf{Root-to-tip divergence against sampling time for serotypes A and O.}
+Maximum likelihood phylogenies were constructed with PhyML version 3.0~\cite{M-Guindon2003}. 
+We root the trees such that the linear regression between the root-to-tip divergences and sampling times yields the smallest sum of squared residuals using the program Tempest~\citep{M-Rambaut2016}.
+The linear trends, along with their 95\% prediction intervals (shaded) are shown.
+}
+\label{sfig:root-to-tip}
+\end{figure}
+\end{center}
+% %%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=.80]{FIGURES/PLOTS/production.pdf}
+\end{center}
+\caption{
+\textbf{Production time series for several livestock in South America.}
+We show $\log$(\#~of heads) of live animals for pigs, sheep and cattle, goat and horses.
+}
+\label{sfig:prod}
+\end{figure}
+\end{center}
+% %%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\subfigure[]{\includegraphics[scale=.400]{FIGURES/PLOTS/tradenets_cattle_s=0.pdf}}
+\subfigure[]{\includegraphics[scale=.400]{FIGURES/PLOTS/tradenets_pig_s=0.pdf}} \\
+\subfigure[]{\includegraphics[scale=.400]{FIGURES/PLOTS/tradenets_sheep_s=0.pdf}}
+\end{center}
+\caption{
+\textbf{Spatial networks of livestock trade in South America.}
+We represent the total trade of live animals from $1986$ to $2017$.
+Arrows connect countries if there was a non-zero number of exchanges between them.
+Colour scale represents total exports in number of live animals.
+In agreement with the data presented in Figure~\ref{sfig:prod}, the cattle network is the most connected, indicating that not only the number of animals has increased, but also the migration of this particular host is more frequent. 
+Note the long range trade routes of sheep between Argentina and Colombia, which are absent from the pig network.
+}
+\label{sfig:tradenets}
+\end{figure}
+\end{center}
+% %%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=.80]{FIGURES/PLOTS/trade_through_time.pdf}
+\end{center}
+\caption{
+\textbf{Overall livestock trade in South America through time.}
+We show $\log$(\#~of heads) of live animals traded for pigs, sheep and cattle, goat and horses.
+Solid lines are linear trends fitted using ordinary least squares.
+}
+\label{sfig:trade_temporal}
+\end{figure}
+\end{center}
+% %%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\subfigure[]{\includegraphics[scale=.600]{FIGURES/PLOTS/vaccination_per_country_time.pdf}} \\
+\subfigure[]{\includegraphics[scale=.600]{FIGURES/PLOTS/vaccination_overall_time.pdf}}
+\end{center}
+\caption{
+\textbf{FMD vaccination in South America through time.}
+We show the number of vaccine doses per cattle head per country (Panel a) and overall (Panel b).
+In panel b the solid line shows the average and the dashed lines show Student t empirical intervals (see text).
+}
+\label{sfig:vaccination_temporal}
+\end{figure}
+\end{center}
+% %%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=.600]{FIGURES/PLOTS/cases_per_serotype_per_time.pdf}
+\end{center}
+\caption{
+\textbf{FMD cases per serotype in South America through time.}
+We show the number of reported FMD cases per serotype.
+}
+\label{sfig:case_temporal}
+\end{figure}
+\end{center}
+% %%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\subfigure[]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_A_Brazil_2001.pdf}}
+\subfigure[]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_A_Uruguay_2001.pdf}}\\
+\subfigure[]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_A_Bolivia_2001.pdf}}
+\subfigure[]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_A_Colombia_2008.pdf}}\\
+\subfigure[]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_O_Venezuela_2003.pdf}}
+\subfigure[]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_O_Peru_2008.pdf}}
+\end{center}
+\caption{\textbf{Epidemic tracing of FMDV in South America -- extra results}.
+For serotype A, we show the most probable origins of the 2001 outbreaks in Brazil (A), Uruguay (B) and Bolivia (C), along with the origins of the Colombian 2008 strain (D).
+Panels E and F show the origins of serotype O in Venezuela 2003 and Peru 2008, respectively.
+}
+\label{sfig:epitrac}
+\end{figure}
+\end{center}
+% %%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\subfigure[Constant size, empirical dates]{\includegraphics[scale=.38]{FIGURES/PLOTS/typical_reconstruction_scenario_A_serotype_A.png}}\\
+\subfigure[Exponential growth, empirical dates]{\includegraphics[scale=.38]{FIGURES/PLOTS/typical_reconstruction_scenario_B_serotype_A.png}}\\
+\subfigure[Constant size, uniform dates]{\includegraphics[scale=.38]{FIGURES/PLOTS/typical_reconstruction_scenario_C_serotype_A.png}}\\
+\subfigure[Exponential size, uniform dates]{\includegraphics[scale=.38]{FIGURES/PLOTS/typical_reconstruction_scenario_D_serotype_A.png}}\\
+\end{center}
+\caption{\textbf{Typical reconstructions in BNPR simulation study, serotype A}.
+A: constant population size $N_e = 10$ with empirical dates; B: exponential population growth with $N_0 = 10$ and $r = 0.1$ with empirical dates; C: constant population size $N_e = 10$ with uniform temporal sampling; D: exponential population growth with $N_0 = 10$ and $r = 0.1$ with uniform temporal sampling.
+Dashed line shows the true population trajectory, and shaded are shows the 95\% BCI.
+Vertical tiles show the four models considered (see text for details).
+}
+\label{sfig:reconplots_A}
+\end{figure}
+\end{center}
+% %%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\subfigure[Constant size, empirical date]{\includegraphics[scale=.38]{FIGURES/PLOTS/typical_reconstruction_scenario_A_serotype_O.png}}\\
+\subfigure[Exponential growth, empirical dates]{\includegraphics[scale=.38]{FIGURES/PLOTS/typical_reconstruction_scenario_B_serotype_O.png}}\\
+\subfigure[Constant size, uniform dates]{\includegraphics[scale=.38]{FIGURES/PLOTS/typical_reconstruction_scenario_C_serotype_O.png}}\\
+\subfigure[Exponential size, uniform dates]{\includegraphics[scale=.38]{FIGURES/PLOTS/typical_reconstruction_scenario_D_serotype_O.png}}\\
+\end{center}
+\caption{\textbf{Typical reconstructions in BNPR simulation study, serotype O}.
+A: constant population size $N_e = 10$ with empirical dates; B: exponential population growth with $N_0 = 10$ and $r = 0.1$ with empirical dates; C: constant population size $N_e = 10$ with uniform temporal sampling; D: exponential population growth with $N_0 = 10$ and $r = 0.1$ with uniform temporal sampling.
+Dashed line shows the true population trajectory, and shaded are shows the 95\% BCI.
+Vertical tiles show the four models considered (see text for details).
+}
+\label{sfig:reconplots_O}
+\end{figure}
+\end{center}
+% %%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\subfigure[Constant size, empirical date]{\includegraphics[scale=.3]{FIGURES/PLOTS/BNPR_simulations_scenario_A.pdf}}
+\subfigure[Exponential growth, empirical dates]{\includegraphics[scale=.3]{FIGURES/PLOTS/BNPR_simulations_scenario_B.pdf}}\\
+\subfigure[Constant size, uniform dates]{\includegraphics[scale=.3]{FIGURES/PLOTS/BNPR_simulations_scenario_C.pdf}}
+\subfigure[Exponential size, uniform dates]{\includegraphics[scale=.3]{FIGURES/PLOTS/BNPR_simulations_scenario_D.pdf}}
+\end{center}
+\caption{\textbf{Estimated marginal likelihoods for the BNPR simulation study}.
+A: constant population size $N_e = 10$ with empirical dates; B: exponential population growth with $N_0 = 10$ and $r = 0.1$ with empirical dates; C: constant population size $N_e = 10$ with uniform temporal sampling; D: exponential population growth with $N_0 = 10$ and $r = 0.1$ with uniform temporal sampling.
+Points show actual data points and boxplots show the quantiles.
+Only results for models 1, 2 and 3 are shown because model 0 is not directly comparable (see text).
+}
+\label{sfig:BNPR_simu_marglikes}
+\end{figure}
+\end{center}
+% %%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%
+\newpage
+\begin{center}
+\begin{figure}[H]
+\begin{center}
+\subfigure[Serotype A]{\includegraphics[scale=.600]{FIGURES/PLOTS/typical_reconstruction_BNPR_serotype_A.png}} \\
+\subfigure[Serotype O]{\includegraphics[scale=.600]{FIGURES/PLOTS/typical_reconstruction_BNPR_serotype_O.png}}
+\end{center}
+\caption{
+\textbf{Population reconstructions for serotypes A and O under different preferential sampling models.}
+Reconstructions for serotype A are shown in panel A, while reconstructions for serotype O are in panel B.
+}
+\label{sfig:full_reconstructions_BNPR}
+\end{figure}
+\end{center}
+% %%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \begin{center}
  \begin{longtable}{ccc}
   \caption{\textbf{Accession numbers, date and country of collection for the serotype A sequences}. When only the year of collection was known, we used the 15th of July as the collection date.}
@@ -485,591 +942,4 @@ KC519630 & 2010-07-15 & Ecuador \\
 JX514427 & 2011-09-15 & Paraguay
  \end{longtable}
 \end{center}
-
-
-\subsection*{Livestock trade data}
-
-One of the main contributions of this study lies in exploring the association between the trade of cattle, pigs and sheep and viral diffusion using a statistically sound approach that enables us to test evolutionary hypotheses concerning the influence of these predictors.
-In this text we provide some additional exploratory plots of the data.
-In Figure~\ref{sfig:prod}, we show the time series of livestock production among the studied countries in over $50$ years, illustrating that the production of cattle is much larger than that of any other livestock.
-Perhaps more importantly, while pigs and cattle production maintain a trend of positive growth throughout the second half of the twentieth century, sheep production shows a decline after $1990$.
-Spatially, the trade of all three livestock is rather different, as shown in Figure~\ref{sfig:tradenets}.
-The cattle trade network is more connected, while the pig and sheep trade networks are considerably more sparse.
-Further, the pig network presents a clear regional pattern, with two sub-networks.
-
-Temporally, overall trade shows remarkably different trends depending the livestock analysed.
-While cattle trade shows a positive trend, pig trade is mostly  stable and all other livestock considered show a declining trend.
-The FAO trade matrix is sometimes not consistent, i.e., sometimes the exports from country $i$ to country $j$ do not correspond to the imports into country $j$ from country $i$.
-In these cases we picked the largest value for a given year and pair of countries $i$ and $j$.
-
-\subsection*{Vaccination and case data}
-
-We obtained the number of vaccine doses distributed in a given country in a given year starting from 1986 and ending in 2010 and divided this total by the number of live cattle produced per country and year.
-We could not find information for the years of 1991 and 1996 and these were manually imputed by taking the arithmetic mean of the two adjacent years.
-This indicator is only a proxy for vaccination in continent since (i) not all vaccines administered protect against all serotypes and (ii) cattle are not the only susceptible livestock.
-We argue our choices are justified, however, because (i) most vaccine doses were actually protective against all 3 serotypes (trivalent) and (ii) cattle are by far the most numerous livestock in South America and their vaccination is mandatory across all affected countries.
-
-We obtained a temporal measure of vaccination by computing the average across the nine countries per year.
-As a measure of dispersion, we employed the standard error, multiplied by the 95\% quantile of a Student t distribution with either $\nu = 8 -1 = 7$ or $\nu = 9-1 = 8$ degrees of freedom ($2.36$ and $2.31$, respectively).
-We show these vaccination time series in Figure~\ref{sfig:vaccination_temporal}, where it can be observed that there is substantial heterogeneity across countries in terms of temporal vaccination pattern.
-
-\section*{Analysis}
-
-\subsection*{Maximum likelihood phylogenies and root-to-tip divergences}
-
-In order to preliminarily assess whether the data sets used in this study contain evidence of clock-like evolution, we construct phylogenies using the maximum likelihood procedures implemented in PhyML 3.0~\cite{M-Guindon2003} under a GTR model~\cite{M-Tavare1986} of sequence evolution with gamma-distributed site rate heterogeneity.
-The phylogenies produced by PhyML are unrooted.
-We root the trees at the branch -- as well as a position along it -- that minimises the sum of squared residuals of the linear regression of root-to-tip divergences (RDV) on the sampling times.
-For this last step, we use the routines in the program Tempest~\citep{M-Rambaut2016}.
-The resulting trend lines presented in Figure~\ref{sfig:root-to-tip} are consistent with clock-like evolution, despite considerable variation between lineages, which we address later in the paper using relaxed molecular clocks.
-
-An initial RDV analysis indicated that some sequences collected for serotype O had evolutionary divergences incompatible with their dates, and they were excluded from subsquent analyses.
-These sequences are listed in Table~\ref{stab:exclseqs}.
-
-\begin{table}[H]
-\caption{\textbf{Sequences excluded from analysis.}
-Serotype O sequences that displayed inconsistent genetic divergence were excluded from analysis.
-These were sequences with older dates that presented a higher than expected number of mutations.
-}
-\begin{center}
-\begin{tabular}{ccccccc}
-\toprule
-Accession & Year & Country \\      
-\midrule
-AY593818 & 1958 & Brazil \\
-AY593837 & 1963 & Uruguay \\ 
-AY593820 & 1964 & Argentina  \\
-AY593814 & 1965 & Argentina \\
-AY593821 & 1967 & Argentina \\
-\bottomrule
-\end{tabular}
-\end{center}
-\begin{flushleft}
-\end{flushleft}
-\label{stab:exclseqs}
- \end{table}
-
- 
-\subsection*{Bayesian Model Selection}
-
-%TODO: Flagged for Guy
-We employed generalised stepping stone sampling (GSS, \cite{M-Baele2015}) to compute marginal likelihoods for six combinations of Markov sequence evolution and molecular clock models.
-A constant population size coalescent tree prior was used across all combinations.
-We used $50$ steps with $250, 000$ iterations per step and beta quantile $\alpha = 0.3$.
-Table~\ref{stab:treeclockselection} shows the results of this model selection study to determine the best combination of demographic and molecular clock models for each serotype.
-
-For serotype A, the model combination with highest marginal likelihood is a GTR sequence evolution model coupled with a Gamma relaxed clock, whereas for serotype O the best model combination was GTR and an uncorrelated log-normal (ULN) relaxed clock.
-The quantile inversions for the Gamma relaxed clock model are very compute-intensive and computations for this model took much longer to finish.
-In the interest of computational  expediency for the large number of subsequent analyses we performed in this paper, we decided to use the ULN model for serotype A also.
-
-\begin{table}[!ht]
-\caption{\textbf{Marginal likelihoods for combinations of sequence evolution (Markov) and molecular clock models.}
-We used the generalised stepping stone (GSS) from~\cite{M-Baele2015} to compute marginal likelihoods using a constant population size coalescent tree prior.
-Best fitting models are highlighted in bold.
-See text for a discussion of the models we chose to employ, however.
-}
-\begin{center}
- \begin{tabular}{cclc}
-\hline
-Serotype & Markov model & Clock & Marginal likelihood \\
-\hline
-\multirow{6}{*}{A} & GTR & ULN & -13649.55 \\
- & GTR & Gamma & \textbf{-13619.52} \\
- & GTR & Strict & -13721.67 \\
- & HKY & ULN & -13668.54 \\
- & HKY & Gamma & -13664.53 \\
- & HKY & Strict & -13760.31 \\
- \hline
-\multirow{6}{*}{O}& GTR & \multicolumn{1}{l}{ULN} & \textbf{-9917.44} \\
-\multicolumn{1}{l}{} & GTR & \multicolumn{1}{l}{Gamma} & -9925.08 \\
-\multicolumn{1}{l}{} & GTR & \multicolumn{1}{l}{Strict} & -10085.06 \\
-\multicolumn{1}{l}{} & HKY & \multicolumn{1}{l}{ULN} & -9959.38 \\
-\multicolumn{1}{l}{} & HKY & \multicolumn{1}{l}{Gamma} & -9955.12 \\
-\multicolumn{1}{l}{} & HKY & \multicolumn{1}{l}{Strict} & -10102.83\\
-\hline
-\end{tabular}
-\end{center}
-\label{stab:treeclockselection}
-\end{table}
-
-\subsection*{Temporal analysis -- Skygrid + covariates}
-
-Here we give the statistical details of the effective population size reconstructions presented in the main text.
-We follow the framework of~\cite{M-Gill2016} in order to incorporate information from temporal predictors into the reconstruction of past (effective) population size.
-This necessitates the specification of priors for the predictor coefficients ($\beta^{\text{Skygrid}}_i, i = 1, \ldots, 13$).
-We assign independent standard normal (Gaussian) priors, $\beta^{\text{Skygrid}}_i \sim \text{Normal}(0, 1)$.
-
-In addition, the Skygrid precision, $\tau$, which controls the smoothness of the population size trajectory also needs to be estimated from data and thus be given a prior.
-The prior usually employed is a Gamma distribution with parameters $\alpha = \beta = 0.001$. 
-However, we feel this prior places too much mass on small precisions (which would make estimates noisier) while at the same time allowing rather extreme values, which would artificially inflate confidence.
-We instead employ the penalised complexity (PC) prior from~\cite[pg.14]{Simpson2017}, a density from Gumbel type II family.
-Let $a, b > 0$ be the shape and scale hyperparameters respectively; the probability density function is then
-\begin{equation}
- \pi_2(\tau \mid a, b) = ab \cdot \tau^{-a-1}\exp\left(-b\tau^{-a}\right),\: \tau > 0.
-\end{equation}
-The authors recommend $a = 1/2$ and $b$ to be chosen such that $Pr(1/\sqrt{\tau} > S) = p$, where the value $S$ and the probability $p$ are to be chosen on substantive grounds, such that $b = \ln(p)/S$.
-Here we will choose $S = 1$ and $p = 0.1$, which is to say that the prior is constructed such that there is a $10\%$ probability that the standard deviation of the log-population sizes is greater than $1$.
-This argument leads to $b = 2.302585$.
-%TODO: this prior has been implemented in BEAST/development branch in BEAST, etc
-
-\subsection*{Spatial analysis -- phylogeographic GLM}
-
-In order to study the influence of several predictors on the spatial spread of FMDV in the continent, we employed a sparse generalised linear model (GLM)~\cite{M-Lemey2014,M-Dudas2017}.
-Let $P$ be the number of predictors -- in this study, $P = 12$ -- and $K$ be the number of locations -- here, $K = 8$ for serotype A and $K = 9$ for serotype O.
-Moreover, let $\Lambda_{ij}$ be the transition rate between locations $i$ and $j$ and $\boldsymbol X_{ij}$ be the relevant row of design matrix.
-Then~\citep{M-Dudas2017}:
-\begin{align*}
- \log \Lambda_{ij}  &= \boldsymbol X_{ij}^T \boldsymbol\delta \boldsymbol{\beta}
-+ \epsilon_i + \epsilon_j, \\
-\epsilon_k &\sim \text{Normal}(0, \sigma^2) \text{ for } k = 1, \ldots, K, \text{with} \\
-\sigma^2 &\sim \text{Inverse-Gamma}(0.001, 0.001),
-\end{align*}
-where the $\boldsymbol\epsilon$ are location-specific origin and destination random effects.
-$\boldsymbol\delta$ is a vector containing variables $\delta_i \in \{0, 1\}$ that describe whether predictor $i$ is included ($\delta_i = 1$) or excluded ($\delta_i = 0$) from the model.
-Let $p_j$ be the \textit{prior} probability that predictor $j$ is included in the model.
-Here we will make the simplifying assumption that $p_j = q$ for all $j$.
-If we let $w$ be the probability that no predictors are included in the model, we obtain  $q = 1 - w^{1/P}$.
-We can then fit the model and compute the \textit{posterior} inclusion probability $\hat{\delta_j}$ from which we can compute the Bayes factor in support of the $j$-th predictor:
-\begin{align*}
- \text{BF}_j &= \frac{\hat{\delta_j} }{1-\hat{\delta_j} }/\frac{p_j}{1-p_j}, \\
-  &= \frac{\hat{\delta_j} (1 + w^{1/P})}{(1-\hat{\delta_j})(1 - w^{1/P}) }.
-\end{align*}
-In this study we choose $w = 1/2$ to enforce a parsimonious model.
-See~\cite{M-KassRaftery1995} for how to interpret Bayes factors.
-We complete the prior specification by assigning $\boldsymbol\beta$ independent normal priors with mean $0$ and standard deviation $4$.
-
-\bibliography{TEXTS2}
-
-% \section*{Figure Legends}
-% 
-% \textbf{Figure~\ref{sfig:root-to-tip}. Root-to-tip divergence against sampling time for serotypes A and O.}
-% Maximum likelihood phylogenies were constructed with PhyML version 3.0~\cite{M-Guindon2003}. 
-% We root the trees such that the linear regression between the root-to-tip divergences and sampling times yields the smallest sum of squared residuals using the program Tempest~\citep{M-Rambaut2016}.
-% The linear trends, along with their 95\% prediction intervals (shaded) are shown.
-% %%
-% \textbf{Figure~\ref{sfig:sampling}. Spatio-temporal sampling pattern of the sequences used in this study.} Circle radius is proportional to number of sequences.
-% %%
-% \textbf{Figure~\ref{sfig:prod}. Production time series for several livestock in South America.}
-% We show $\log$(\#~of heads) of live animals for pigs, sheep and cattle, goat and horses.
-% %%
-% \textbf{Figure~\ref{sfig:tradenets}. Spatial networks of livestock trade in South America.}
-% We represent the total trade of live animals from $1986$ to $2017$.
-% Arrows connect countries if there was a non-zero number of exchanges between them.
-% Colour scale represents total exports in number of live animals.
-% In agreement with the data presented in Figure~\ref{sfig:prod}, the cattle network is the most connected, indicating that not only the number of animals has increased, but also the migration of this particular host is more frequent. 
-% Note the long range trade routes of sheep between Argentina and Colombia, which are absent from the pig network.
-% %%
-% \textbf{Figure~\ref{sfig:trade_temporal}. Overall livestock trade in South America through time.}
-% We show $\log$(\#~of heads) of live animals traded for pigs, sheep and cattle, goat and horses.
-% Solid lines are linear trends fitted using ordinary least squares.
-% %%
-% \textbf{Figure~\ref{sfig:vaccination_temporal}. FMD vaccination in South America through time.}
-% We show the number of vaccine doses per cattle head per country (Panel a) and overall (Panel b).
-% In panel b the solid line shows the average and the dashed lines show Student t empirical intervals (see text).
-% %%
-% \textbf{Figure~\ref{sfig:cases_temporal}. FMD cases per serotype in South America through time.}
-% We show the number of reported FMD cases per serotype.
-%% 
-% \textbf{Figure~\ref{sfig:compz}. Comparison of of estimated rate matrices across sub-samples.}
-% In panels A and B we show entry-wise scatterplots of the five sub-samples for serotypes A and O respectively.
-% Colors depict country of origin.
-% These plots show that substantial agreement is achieved between sub-samples regarding migration rate estimation.
-% Panels C and D show heat maps of the $5\times5$ matrices of $L_1$ norms comparing each sub-sample, for serotypes A and O, respectively.
-% This analysis presents an univariate summary of the matrices under comparison and is thus complementary to the analysis presented in panels A and B, and shows that no sub-sample was too divergent from the others and the maximum errors (the numbers at the top of the color legend) are small. 
-%% 
-% \textbf{Figure~\ref{sfig:epitrac}. Posterior distribution of the origins of several strains/epidemics of interest for serotypes A and O.}
-% We show the origins of serotype A strains in  Brazil (A), Uruguay (B) and Bolivia (C) in $2001$ and Colombia in $2008$ (D).
-% As expected, the epidemic in Brazil $2001$ was most likely seeded from Argentina, which experienced a major epidemic the same year.
-% The origins of the isolates from Uruguay $2001$, however, could not be traced to a particular location, which might indicate that Uruguay experienced introductions from both Brazil and Argentina.
-% In contrast, the serotype A strains from Bolivia in the same period seem to have come from Peru (panel C), indicating migration downwards from the northern part of the continent rather than upwards from Argentina.
-% Venezuela was an important viral seeder for serotype A, being the most likely origin of the Colombian $2008$ isolates with high probability.
-% For serotype O, the most probable origins of the strains in Ecuador $2002$ (E) and Peru $2004$ (F).
-% Interestingly, panels E and F show a transmission chain beginning in Colombia, which seeded the Ecuadorian strains, which in turn seeded the strains isolated in Peru in $2004$.
-%  
-% \textbf{Figure~\ref{sfig:bssvsA}. Bayesian Stochastic Search Variable Selection (BSSVS) for five down-sampled sub-samples of serotype A sequences.}
-% We perform the BSSVS analysis on five down-sampled data sets (reduced Argentina representation) and plot the resulting Bayes factors (only BFs$>3$) as in the main text.
-% Arrow thickness is proportional to Bayes factor magnitude and colors depict the probability of being root for each country.
-% The results indicate substantial agreement between subsamples.
-% The link from Brazil to Venezuela, for example, occurs in four out of the five sub-samples.
-% 
-% \textbf{Figure~\ref{sfig:bssvsO}. Bayesian Stochastic Search Variable Selection (BSSVS) for five down-sampled sub-samples of serotype O sequences.}
-% We perform the BSSVS analysis on five down-sampled (equal numbers of Ecuadorian and Colombian sequences) data sets and plot the resulting Bayes factors (only BFs$>3$).
-% Arrow thickness is proportional to Bayes factor magnitude and colors depict the probability of being root for each country.
-% Similar to what we found for serotype A, there was substantial agreement between subsamples regarding the well supported routes.
-% 
-% \textbf{Figure~\ref{sfig:only2000sky}. Skyride coalescent reconstructions using sequences from $2000$ to present only for both serotypes.}
-% We assess the robustness of our coalescent reconstructions to sparsity of information as we progress further in time by re-running the analysis using only recent (i.e. sampling year $>2000$) sequences, for both serotypes.
-% As in the main text, we overlay disease cases and vaccination in doses per head to the demographic reconstructions.
-% The same patterns presented in the main text for the full data can be recovered here, i.e. serotype A presents more oscillations through time whereas the trajectories for serotype O are smoother.
-% Moreover we recover the marked drop in diversity near $2001$ for serotype A which might indicate rapid transmission of a single variant of the virus.
-
-%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%
-\newpage
-\begin{center}
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=.80]{FIGURES/PLOTS/sampling_bubble_plot.pdf}
-\end{center}
-\caption{
-\textbf{Spatio-temporal sampling pattern of the sequences used in this study.} Circle radius is proportional to number of sequences.
-}
-\label{sfig:sampling}
-\end{figure}
-\end{center}
-% %%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%
-\newpage
-\begin{center}
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=.75]{FIGURES/PLOTS/rdvs.pdf}
-\end{center}
-\caption{
-\textbf{Root-to-tip divergence against sampling time for serotypes A and O.}
-Maximum likelihood phylogenies were constructed with PhyML version 3.0~\cite{M-Guindon2003}. 
-We root the trees such that the linear regression between the root-to-tip divergences and sampling times yields the smallest sum of squared residuals using the program Tempest~\citep{M-Rambaut2016}.
-The linear trends, along with their 95\% prediction intervals (shaded) are shown.
-}
-\label{sfig:root-to-tip}
-\end{figure}
-\end{center}
-% %%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%
-\newpage
-\begin{center}
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=.80]{FIGURES/PLOTS/production.pdf}
-\end{center}
-\caption{
-\textbf{Production time series for several livestock in South America.}
-We show $\log$(\#~of heads) of live animals for pigs, sheep and cattle, goat and horses.
-}
-\label{sfig:prod}
-\end{figure}
-\end{center}
-% %%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%
-\newpage
-\begin{center}
-\begin{figure}[H]
-\begin{center}
-\subfigure[]{\includegraphics[scale=.400]{FIGURES/PLOTS/tradenets_cattle_s=0.pdf}}
-\subfigure[]{\includegraphics[scale=.400]{FIGURES/PLOTS/tradenets_pig_s=0.pdf}} \\
-\subfigure[]{\includegraphics[scale=.400]{FIGURES/PLOTS/tradenets_sheep_s=0.pdf}}
-\end{center}
-\caption{
-\textbf{Spatial networks of livestock trade in South America.}
-We represent the total trade of live animals from $1986$ to $2017$.
-Arrows connect countries if there was a non-zero number of exchanges between them.
-Colour scale represents total exports in number of live animals.
-In agreement with the data presented in Figure~\ref{sfig:prod}, the cattle network is the most connected, indicating that not only the number of animals has increased, but also the migration of this particular host is more frequent. 
-Note the long range trade routes of sheep between Argentina and Colombia, which are absent from the pig network.
-}
-\label{sfig:tradenets}
-\end{figure}
-\end{center}
-% %%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%
-\newpage
-\begin{center}
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=.80]{FIGURES/PLOTS/trade_through_time.pdf}
-\end{center}
-\caption{
-\textbf{Overall livestock trade in South America through time.}
-We show $\log$(\#~of heads) of live animals traded for pigs, sheep and cattle, goat and horses.
-Solid lines are linear trends fitted using ordinary least squares.
-}
-\label{sfig:trade_temporal}
-\end{figure}
-\end{center}
-% %%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%
-\newpage
-\begin{center}
-\begin{figure}[H]
-\begin{center}
-\subfigure[]{\includegraphics[scale=.600]{FIGURES/PLOTS/vaccination_per_country_time.pdf}} \\
-\subfigure[]{\includegraphics[scale=.600]{FIGURES/PLOTS/vaccination_overall_time.pdf}}
-\end{center}
-\caption{
-\textbf{FMD vaccination in South America through time.}
-We show the number of vaccine doses per cattle head per country (Panel a) and overall (Panel b).
-In panel b the solid line shows the average and the dashed lines show Student t empirical intervals (see text).
-}
-\label{sfig:vaccination_temporal}
-\end{figure}
-\end{center}
-% %%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%
-\newpage
-\begin{center}
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=.600]{FIGURES/PLOTS/cases_per_serotype_per_time.pdf}
-\end{center}
-\caption{
-\textbf{FMD cases per serotype in South America through time.}
-We show the number of reported FMD cases per serotype.
-}
-\label{sfig:case_temporal}
-\end{figure}
-\end{center}
-% %%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%
-% \newpage
-\begin{center}
-\begin{figure}[H]
-\begin{center}
-\subfigure[]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_A_Brazil_2001.pdf}}
-\subfigure[]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_A_Uruguay_2001.pdf}}\\
-\subfigure[]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_A_Bolivia_2001.pdf}}
-\subfigure[]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_A_Colombia_2008.pdf}}\\
-\subfigure[]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_O_Ecuador_2002.pdf}}
-\subfigure[]{\includegraphics[scale=.40]{FIGURES/PLOTS/Origins_O_Peru_2008.pdf}}
-\end{center}
-\caption{\textbf{Epidemic tracing of FMDV in South America -- extra results}.
-}
-\label{sfig:epitrac}
-\end{figure}
-\end{center}
-% %%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%
-% \newpage
-% \begin{figure}[H]
-% \begin{center}
-% \subfigure[]{\includegraphics[scale=.350]{FIGURES/A_ss1.pdf}}
-% \subfigure[]{\includegraphics[scale=.350]{FIGURES/A_ss2.pdf}}\\
-% \subfigure[]{\includegraphics[scale=.350]{FIGURES/A_ss3.pdf}}
-% \subfigure[]{\includegraphics[scale=.350]{FIGURES/A_ss4.pdf}}\\
-% \subfigure[]{\includegraphics[scale=.350]{FIGURES/A_ss5.pdf}}
-% \caption{}
-% \label{sfig:bssvsA}
-% \end{center}
-% \end{figure}
-% %%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%
-% \newpage
-% \begin{figure}[H]
-% \begin{center}
-% \subfigure[]{\includegraphics[scale=.350]{FIGURES/O_ss1.pdf}}
-% \subfigure[]{\includegraphics[scale=.350]{FIGURES/O_ss2.pdf}}\\
-% \subfigure[]{\includegraphics[scale=.350]{FIGURES/O_ss3.pdf}}
-% \subfigure[]{\includegraphics[scale=.350]{FIGURES/O_ss4.pdf}}\\
-% \subfigure[]{\includegraphics[scale=.350]{FIGURES/O_ss5.pdf}}
-% \end{center}
-% \caption{}
-% \label{sfig:bssvsO}
-% \end{figure}
-% %%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%
-% \newpage
-% \begin{figure}[H]
-% \begin{center}
-% \subfigure[]{\includegraphics[scale=.60]{FIGURES/SFig_A2000sky.pdf}}\\
-% \subfigure[]{\includegraphics[scale=.60]{FIGURES/SFig_O2000sky.pdf}}
-% \end{center}
-% \caption{}
-% \label{sfig:only2000sky}
-% \end{figure}
-% %%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%
-% \newpage
-% \begin{table}[H]
-% \caption{\textbf{Model selection using path sampling (PS) and stepping-stone sampling (SS) to determine the tree prior (coalescent) model and clock for both serotypes.}
-% UCLD = uncorrelated relaxed clock with an underlying log-normal distribution; UCED = uncorrelated relaxed clock with an underlying exponential distribution.
-% Best fitting models (highest log marginal likelihood obtained using SS) are highlighted in bold.
-% The more flexible non-parametric skyride tree prior clearly outperforms the assumption of a constant population size, which is consistent with the fact that FMDV (both serotypes) has experienced periods of population expansion, i.e. transmission within the time frame considered.
-% The assumption of a single rate for every lineage in the phylogeny was also rejected for both serotypes.
-% Remarkably, the best fitting relaxed clock models are different for each serotype, suggesting different branch (lineage) level heterogeneity between serotypes.
-% }
-% \begin{center}
-% \begin{tabular}{ccccccc}
-% \toprule
-% Serotype	& Coalescent	& Clock	& PS  & SS\\             
-% \midrule
-% A	& Constant	 & UCLD	& -12280.50& -12285.02\\
-% A	& Skyride 	& UCLD	& \textbf{-12273.68} & \textbf{-12274.59}\\
-% A	& Constant	 & UCED	& -12320.36 & -12316.16\\
-% A	& Skyride 	& UCED	& -12311.20 & -12307.87\\
-% A       & Skyride       & STRICT & -12315.31 & -12308.19\\
-% O	& Constant	& UCLD	& -8089.96& -8087.76\\
-% O	& Skyride 	& UCLD	& -8078.77 & -8082.64\\
-% O	& Constant	& UCED	&-8087.57 & -8090.10\\
-% O	& Skyride 	& UCED	& \textbf{-8064.67}& \textbf{-8069.47}\\
-% O       & Skyride       & STRICT & -8131.91& -8125.31\\
-% \bottomrule
-% \end{tabular}
-% \end{center}
-% \begin{flushleft}
-% \end{flushleft}
-% \label{stab:treeclockselection}
-%  \end{table}
-% 
-% %%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%
-% \begin{table}[H]
-%  \caption{
-%  Representation of South American countries in the data sets analyzed.
-%  Full details (and accession numbers) are given in Text S1.
-%  From these summaries it's clear that some countries are over-represented in the data set.
-%  We provide a detailed sensitivity analysis to address the impact of this sample imbalance.
-%  }
-%  \begin{center}
-%  \begin{tabular}{cccc}
-%  \toprule
-%    \multicolumn{2}{c}{Serotype A}& \multicolumn{2}{c}{Serotype O}\\
-%  Country & number of sequences (time span)& number of sequences (time span) & \\ 
-%   \midrule
-% Argentina & $58$ ($1959$--$2001$)& $2$ ($2000$--$2006$)  \\
-% Bolivia   & $7$ ($2000$--$2001$)& $14$ ($2000$--$2002$)  \\
-% Brazil    & $16$ ($1955$--$2001$)& $15$ ($1998$--$2005$)  \\
-% Colombia  & $14$ ($1967$--$2008$)& $36$ ($1994$--$2008$)  \\
-% Ecuador   & $3$ ($1975$--$2002$)& $90$ ($2002$--$2010$)  \\
-% Paraguay                    & --& $2$ ($2002$--$2003$)  \\
-% Peru      & $4$ ($1969$--$2000$)& $1$ ($2004$)  \\
-% Uruguay   & $2$ ($2001$)& $1$ ($2000$)  \\
-% Venezuela & $27$ ($1962$--$2007$)& $6$ ($2003$--$2007$)  \\
-% Total     & $131$ ($1955$--$2008$) & $167$ ($1994$--$2010$)\\
-%   \bottomrule
-%  \end{tabular}
-%  \end{center}
-% \label{stab:reps}
-% \end{table}
-%  %%%%%%%%%%%%%%%%%%
-%  %%%%%%%%%%%%%%%%%%
-% \begin{sidewaystable}[h]
-% \caption{
-% \textbf{Spatial signal for FMDV serotypes A and O data sets.} 
-% We use Bayesian tip-association significance testing (BaTS) to assess the degree of spatial signal, measured as phylogeny-location association, contained in the posterior distribution of trees for both serotypes. 1-Monophyletic clade size
-% Overall, our results show that there is substantial location-phylogeny association, justifying richer phylogeographic analyses.}
-% \begin{tabular}{ccccccc}
-% \toprule
-% &\multicolumn{3}{c}{Serotype A} & \multicolumn{3}{c}{Serotype O} \\
-% MC$^1$ Statistic &Observed mean (95\% CI)&Null mean (95\% CI)&p-value &Observed mean (95\% CI)&Null mean (95\% CI)&p-value\\
-% \midrule
-% Argentina &12.31 (12.00, 14.00)	&3.45	(2.22, 5.11)	&0.001& 1.00 (1.00, 1.00)&	1.00 (1.00, 1.00)&	1.000\\
-% Brazil &10.27	(10.00, 11.00)	&2.02 (1.25, 3.00) &0.001& 19.00 (19.00, 19.00)&	2.19 (1.66, 3.03)&	0.001\\
-% Bolivia &6.00 (6.00, 6.00)	&1.39 (1.00, 2.00)	&0.001&1.00 (1.00, 1.00)&	1.00 (1.00, 1.00)&	1.000\\
-% Colombia &5.11 (5.00, 6.00)	&1.10  (1.00, 1.99)	&0.001&1.00 (1.00, 1.00)&	1.00 (1.00, 1.00)&	1.000\\
-% Ecuador &1.00 (1.00, 1.00)	&1.00 (1.00, 1.00)	&1.000&13.00 (13.00, 13.00)&	1.34 (1.00, 2.00)&	0.001\\
-% Paraguay&-- &-- &--  & 39.40 (31.00, 58.00)& 4.67 (3.43, 6.39)&0.001\\
-% Peru&1.00 (1.00, 1.00)	&1.02 (1.00, 1.00)&1.000&1.00 (1.00, 1.00)&1.01 (1.00, 1.00)&1.000\\
-% Uruguay &5.11 (5.00, 7.00)	&1.50	(1.00, 2.03)	&0.001&4.00 (4.00, 4.00)&	1.06 (1.00, 1.32)&	0.001\\
-% Venezuela&1.82 (1.00, 2.00)	&1.02 (1.00, 1.08)	&0.010&6.00 (6.00, 6.00)&	1.28 (1.00, 2.00)&	0.001\\
-% \bottomrule
-% \end{tabular}
-% \begin{flushleft}
-% \end{flushleft}
-% \label{stab:BaTS}
-% \end{sidewaystable}
-% %%%%%%%%%%%%%
-% %%%%%%%%%%%%%
-% \begin{table}[h]
-% \caption{ {{\bf Parameter estimation using the complete and without Argentina data sets for serotype A.}} 
-% To assess the impact of the over-representation of Argentina in our sample we remove all sequences from this location and re-estimate the parameters.
-% 1- All 131 sequences were used. 2- Time to most recent common ancestor. 3- Codon positions $1$, $2$ and $3$.
-% Not surprisingly, the TMRCA estimated without Argentina is older, but note that the posterior CI's overlap.
-% These results show that the influence of Argentinian samples in the estimates is limited and over-representation does not pose an important problem for this analysis.}
-% \begin{center}
-% \begin{tabular}{ccc}
-% \toprule
-% Parameter	&Complete$^{1}$	& Without Argentina\\
-% \midrule
-% TMRCA$^{2}$	&76.40 (69.48-83.65)	&82.31 (72.40-92.81)\\
-% CP1$	^{3}$	&0.65 (0.54-0.76)	&0.62 (0.51-0.75)\\
-% CP2	&0.46 (0.37-0.58)	&0.41 (0.31-0.53)\\
-% CP3	&1.87 (1.74-2.00)	& 1.95 (1.81 -2.09)\\
-% Rate ($\times 10^{-3}$)	&4.14 (3.39-4.98)	&3.46 (2.82-4.11)\\
-% \bottomrule
-% \end{tabular}
-% \end{center}
-% \label{stab:SB_A}
-%  \end{table}
-% %%%%%%%%%
-% %%%%%%%%%
-% \begin{table}[h]
-% \caption{ {{\bf Parameter estimation using the complete and without Ecuador data sets for serotype O.}} 
-% To assess the impact of the overrepresentation of Ecuador (90 sequences) our sample we remove all sequence from this location and re-estimate the parameters.
-% 1- All 167 sequences were used. 2- Time to most recent common ancestor. 3- Codon positions $1$, $2$ and $3$.
-% Similarly to what we found for serotype A, the results here suggest that the Ecuadorian sequences do not change the parameter estimates dramatically.}
-% \begin{center}
-% \begin{tabular}{ccc}
-% \toprule
-% Parameter	&Complete$^{1}$	&Without Ecuador\\
-% \midrule
-% TMRCA$^{2}$ & 21.25 (19.20-23.60) &22.65 (17.6-29.5)\\
-% CP1$^{3}$ & 0.51 (0.39-0.63) &0.51 (0.39-0.64)\\
-% CP2  &0.53 (0.39-0.69) & 0.42 (0.29-0.59)\\
-% CP3 &1.94 (1.78-2.10) & 2.05 (1.87 -2.21)\\
-% Rate ($\times 10^{-2}$)	&1.11 (0.91-1.32)&0.91 (0.63-1.21)\\
-% \bottomrule
-% \end{tabular}
-% \end{center}
-% \label{stab:SB_O}
-%  \end{table}
-% 
-% %%%%%%%%
-% %%%%%%%%
-% \newpage
-% \begin{sidewaystable}
-% \medskip
-% \begin{minipage}{\textwidth} 
-% \begin{center}
-% \caption{ {{\bf 'Equal down-sampling' experiment for serotype A.}} 
-% Five random down-sampled sub-samples were obtained and used for parameter inference.
-% 1-- $\times 10^{-3}$; 2 -- $\times 10^{-2}$; 3-- Probability distribution at root node; 4-- Kullback-Leibler divergence (see Text).
-% It is clear that parameter estimates are consistent between sub-samples.
-% The estimation of the root state, however, is the exception.
-% The sub-sampled analyses show less concentrated posteriors (when compared with the full data) and one sub-sample yields a different root than was found for the other four. 
-% }
-% \begin{tabular}{cccccc}
-% \toprule
-% Sub-sample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration rate$^{2}$  (95 \% BCI)	&Root (Pr$^{3}$)& KL$^4$\\
-% \midrule
-% 1	&4.21 (3.43-5.05)	&78.97 (71.21-86.82)	&2.63 (1.34-4.08)	&Argentina (0.41)& 1.76\\
-% 2	&4.25 (3.44-5.07)	&79.64 (71.49-88.04)	&2.54 (1.28-3.98)	&Brazil (0.40)& 1.41\\
-% 3	&4.12 (3.38-4.94)	&77.74 (70.26-85-86)	&2.49 (1.27-3.88)	&Brazil (0.57)&1.47\\
-% 4	&4.12 (3.41-4.82)	&77.60 (69.41-85.88)	&2.44 (1.21-3.85)	&Brazil (0.61)&0.98\\
-% 5	&4.19 (3.49-4.93)	&78.28 (70.23-86.96)	&2.66 (1.31-4.11)	&Brazil (0.45)& 1.00\\
-% \bottomrule
-% \end{tabular}
-% \label{stab:ED_A}
-% \end{center}
-% \end{minipage}
-% \end{sidewaystable}
-% 
-% %%%%
-% %%%%
-% \newpage
-% \begin{sidewaystable}
-% \medskip
-% \begin{minipage}{\textwidth}
-% \begin{center}
-%  \caption{ {{\bf 'Equal down-sampling' experiment for serotype O.}} 
-%  Five random down-sampled sub-samples were obtained and used for parameter inference.
-% 1-- $\times 10^{-3}$; 2--  Probability at root node; 3-- Kullback-Leibler divergence (see Text).
-% For serotype O both the parameter estimates and root location are in agreement between sub-samples, but likewise to serotype A, yield less concentrated posteriors (smaller KL divergences).}
-% \begin{tabular}{cccccc}
-% \toprule
-% Su-bsample	&mean subs. rate$^{1}$ (95 \% BCI)	&TMRCA (95 \% BCI)	&mean migration rate$^{1}$ (95 \% BCI)	&Root (Pr$^{2}$) & KL$^3$\\
-% \midrule
-% 1	&1.11 (0.86-1.37)	&20.27 (18.45-21.95)	&8.48 (3.91-13.59)	&Venezuela  (0.45)& 1.24\\
-% 2	&0.865 (0.62-1.11)	&22.40 (19.78-25.31)	&8.74 (3.84-14.28)	&Venezuela  (0.46)&1.04\\
-% 3	&0.94 (0.68-1.21)	&21.91 (19.46-24.56)	&8.72 (4.03-14.17)	&Venezuela  (0.51)&1.52\\
-% 4	&0.84 (0.62-1.18)	&22.54 (19.80-25.45)	&8.43 (3.77-13.67)	&Venezuela  (0.49)&1.00\\
-% 5	&0.88 (0.63-1.13)	&22.33 (19.55-25.26)	&8.58 (3.89-13.18)	&Venezuela  (0.44)&1.23\\
-% \bottomrule
-% \end{tabular}
-% \label{stab:ED_O}
-% \end{center}
-% \end{minipage}
-% \end{sidewaystable}
-% %%%%
-% %%%%
 \end{document}
