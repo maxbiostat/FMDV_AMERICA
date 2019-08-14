@@ -56,7 +56,7 @@
 % Insert Author names, affiliations and corresponding author email.
 \\
 Luiz Max Carvalho$^{1\ast}$,
-Nuno Rodrigues Faria$^{2,3}$,
+Nuno Rodrigues Faria$^{3}$, %GB: no longer affiliated with KU Leuven
 Andres Perez$^{4}$,
 Marc A.~Suchard$^{5,6}$,
 Philippe Lemey$^{2}$,
@@ -65,7 +65,7 @@ Andrew Rambaut$^{1,8,9}$,
 Guy Baele$^{2}$
 \\
 \bf{1} Institute of Evolutionary Biology, University of Edinburgh, Edinburgh, United Kingdom.\\
-\bf{2} Department of Microbiology and Immunology, Rega Institute -- KU Leuven, Leuven, Belgium.\\
+\bf{2} Department of Microbiology, Immunology and Transplantation, Rega Institute, KU Leuven, Leuven, Belgium.\\
 \bf{3} Department of Zoology, University of Oxford, Oxford, United Kingdom.\\
 \bf{4} University of Minnesota, Department of Veterinary Population Medicine, College of Veterinary Medicine, Saint Paul, USA.\\
 \bf{5} Departments of Biomathematics and Human Genetics, David Geffen School of Medicine at UCLA, University of California, Los Angeles,  United States of America.\\
@@ -80,10 +80,10 @@ $\ast$ E-mail: lm.carvalho@ed.ac.uk
 
 \myedit{RefOneComOne}{
 Although foot-and-mouth disease virus (FMDV) incidence has decreased in South America over the last years, the pathogen still circulates in the region and the risk of re-emergence in previously FMDV-free areas is a veterinary public health concern.
-In this paper we employ modern phylodynamic methods to merge epidemiological and genetic data to reconstruct spatiotemporal patterns and determinants of FMDV serotypes A and O dispersal in South America.
+In this paper we employ modern phylodynamic methods to merge epidemiological and genetic data to reconstruct spatiotemporal patterns and determinants of FMDV serotypes A and O dispersal in South America. %GB: if these are the main serotypes, we should stress this already here; also, we'll have to list our main findings as a result of employing these phylodynamic methods; in particular, the use of the different nonparametric coalescent models and what we can learn from these, may be worth mentioning
 }
 
-Key-words: Phylogeography, foot-and-mouth disease virus, South America, animal trade.
+Key-words: foot-and-mouth disease virus, South America, animal trade, pathogen phylodynamics, phylogenetics, Bayesian inference, BEAST.
 
 \section*{Introduction}
 
@@ -100,22 +100,24 @@ In South America, FMD control and eradication has traditionally been pursued usi
 Over time, passive and active surveillance programs have, with different degrees of success, managed the early detection of FMDV.
 In order to achieve complete eradication however, the strains involved in epidemics - especially those in previously FMDV-free areas - need to be accurately characterised.
 
-Phylogenetic analyses have proven useful in recovering the transmission pathways from genetic data~\citep{Cottam2008a, Cottam2008b} and providing insight into the processes that drive re-emergence~\citep{DiNardo2011}.
+Phylogenetic analyses have proven useful in recovering the transmission pathways from genetic data~\citep{Cottam2008a, Cottam2008b} and in providing insight into the processes that drive re-emergence~\citep{DiNardo2011}.
 More recently, molecular epidemiology tools have been used to infer the origin and evolutionary history of emerging strains in South America~\citep{Perez2001, Malirat2007, Malirat2011a, Malirat2011b, Maradei2013}.
-However, as pointed out by Di Nardo, Knowles \& Paton~\citep{DiNardo2011}, a common feature of FMDV molecular epidemiology studies is that  joint evaluation of epidemiological, environmental and genetic data has usually been performed outside of an unified quantitative framework.
-In the face of many sources of information, ranging from genetic data to environmental data on host distribution and outbreak counts, it's desirable to have a framework capable of integrating these sources of information coherently.
-Phylodynamics combines population genetics and epidemiology to explicitly  model the interaction between ecological processes such as migration and selection and the shape of the phylogenies~\citep{Grenfell2004, Volz2013}.
+However, as pointed out by \citet{DiNardo2011}, a common feature of FMDV molecular epidemiology studies is that  joint evaluation of epidemiological, environmental and genetic data has usually been performed outside of a unified quantitative framework. %GB: how have these studies been performed then and what are the main downsides of not using a unified framework?
+In the face of many sources of information, ranging from genetic data to environmental data on host distribution and outbreak counts, it's desirable to have a framework capable of integrating these sources of information coherently. %GB: we should provide some references - if possible - of studies that don't do this and how they arrived to poor conclusions; probably easier to provide examples that did use proper joint data analysis
+
+The field of (pathogen) phylodynamics combines population genetics and epidemiology to explicitly  model the interaction between ecological processes such as migration and selection and the shape of the phylogenies~\citep{Grenfell2004, Volz2013}.
 Bayesian phylodynamics offers an attractive statistical framework to combine multiple sources of information while marginalizing over the topology space, thus accommodating phylogenetic uncertainty.
 In particular, phylogeographic methods can be employed to understand viral spatial dynamics under explicit spatial diffusion models~\citep{Lemey2009}.
 Further, an important research goal is to gain insight into the major determinants of FMDV spread in the continent.
 Since animal movements constitute a major threat to eradication programs~\citep{Schley2009}, using animal trade data as predictors can be a valuable tool to understand the role of livestock commerce in the spread of FMDV.
-For example, Nelson et al. ~\citep{Nelson2011} coupled swine trade data and genetic data to show that swine movements in the United States drove the spread of a novel influenza virus of the H1 subtype.
+For example, \citet{Nelson2011} coupled swine trade data and genetic data to show that swine movements in the United States drove the spread of a novel influenza virus of the H1 subtype. %GB: should we be more specific here about the actual methodology that was used? after all, neither covariate modelling approaches in BEAST (i.e. for the spatial diffusion and the population size over time) that allow linking these covariates to estimable quantities had been developed yet (Lemey et al. 2014; Gill et al. 2016)?
 
 Here, we investigate the phylodynamic patterns of serotypes A and O in South America using all publicly available VP1 (1D) sequences for those serotypes in South America, sampled over a long time-period (1955-2010 for serotype A and 1994-2010 for serotype O) in nearly all south American countries affected by FMD.
-We apply Bayesian phylogeographic methods to investigate the evolutionary dynamics of serotypes A and O in South America incorporating  genetic, spatial and epidemiological data such as livestock trade, geographic distances and vaccination coverage.
-This flexible Bayesian phylogeographic framework allows for the testing of hypotheses concerning viral dispersal, while naturally accommodating phylogenetic uncertainty~\citep{Lemey2009, Faria2011}.
-We use BEAST~\citep{Drummond2012} to infer time-structured phylogenies and reconstruct past population dynamics, to which we overlay vaccination and serotype-specific notification data.
-To study the factors driving re-emergence, we use data on livestock trade and geographical distances as predictors for viral spatial diffusion and compare competing spatial dynamics models involving each predictor using recently developed methods. 
+We apply Bayesian phylodynamic methods to investigate the evolutionary dynamics of serotypes A and O in South America incorporating  genetic, spatial and epidemiological data such as livestock trade, geographic distances and vaccination coverage.
+This flexible Bayesian phylodynamic framework allows for the testing of hypotheses concerning viral dispersal, while naturally accommodating phylogenetic uncertainty~\citep{Lemey2009, Faria2011}. %GB: update references to include Lemey et al. 2014 and Gill et al. 2016?
+We use BEAST~\citep{Suchard2018} to infer time-structured phylogenies and reconstruct past population dynamics, to which we overlay vaccination and serotype-specific notification data.
+To study the factors driving re-emergence, we use data on livestock trade and geographical distances as predictors for viral spatial diffusion and compare competing spatial dynamics models involving each predictor using recently developed methods. %GB: be more specific on the 'recently developed methods'
+
 
 \section*{Results}
 
@@ -124,7 +126,7 @@ The maximum clade credibility (MCC) phylogenetic trees shown in Figure~\ref{fig:
 The tree for serotype A (Figure~\ref{fig:trees}A) shows two major clades that diverge early on, one containing most of the Argentinian sequences, the other clade being more geographically heterogeneous.
 For serotype O (Figure~\ref{fig:trees}B), we also notice an early split, with a long-lasting Venezuelan lineage leading that persisted into the 1970s. 
 A major lineage containing all of the Ecuadorian sequences is interspersed with sequences from Colombia.
-The age of the most recent common ancestor (aMRCA) for serotype A was estimated at $1919$ ($1903$ -- $1935$), while the aMRCA for serotype O was estimated at $1946$ ($1924$--$1966$).
+The time of the most recent common ancestor (tMRCA) for serotype A was estimated at $1919$ ($1903$-$1935$), while the tMRCA for serotype O was estimated at $1946$ ($1924$--$1966$).
 Relaxed molecular clock analysis showed both serotypes have high substitution rates with the rate estimated at $3.52$ ($2.80$--$4.27$) $\times 10^{-3}$ substitutions/site/year (s/s/y) for serotype A  and at  $5.41$ ($4.00$--$6.92$) $\times 10^{-3}$ s/s/y for serotype O.
 Both serotypes showed considerable inter-lineage rate variation with coefficients of variation (posterior mean) of $1$ and $1.6$ for serotypes A and O, respectively.
 
@@ -132,14 +134,13 @@ Both serotypes showed considerable inter-lineage rate variation with coefficient
 Reconstructions of past population dynamics for both serotypes under naive and sampling-aware models are presented in Figure~\ref{fig:popdyn} and show that effective population sizes for serotype A display a pattern of steady increase until circa the 1970s and then steady decline, which then becomes faster closer to the present.
 For serotype O, the naive reconstruction, which does not take preferential sampling into account, shows substantial oscillations, not present for the preferential sampling model.
 Reconstructions that do not account for preferential sampling also lead to considerably wider Bayesian credibility intervals.
-We used MCC trees obtained from three independent chains per serotype as fixed phylogenies for the population reconstructions, and results were largely consistent across these replicates.
-In particular, model 3 ($\{\gamma(t), -t, -t^2\}$, see TextS2), which includes both a linear and a quadratic term on the sampling time, had the highest marginal likelihood for all three replicates of serotype A and for two of three replicates for serotype O.
+We used MCC trees obtained from three independent chains per serotype as fixed phylogenies for the population dynamics reconstructions, and results were largely consistent across these replicates. %GB: is such a fixed topology/tree analysis a requirement? I think (but I may have messed up) that I used the model of Karcher et al. in BEAST, accommodating phylogenetic uncertainty? Or is that simply not possible?
+In particular, model 3 ($\{\gamma(t), -t, -t^2\}$, see TextS2), which includes both a linear and a quadratic term on the sampling time, yielded the highest (log) marginal likelihood for all three replicates of serotype A and for two of three replicates for serotype O.
 For all of the concordant replicates, the smallest log-Bayes factors in support of model 3 were $\approx 9$ for serotype A and $\approx 3$ for serotype O.
-This less decisive support in favour of model 3 for serotype O is also manifested in the discrepant replicate, in which model 2, which includes only a linear term on $t$, is favoured with a log Bayes factor of $\approx 1.7$.
-
+This less decisive support in favour of model 3 for serotype O is also manifested in the discrepant replicate, in which model 2, which includes only a linear term on $t$, is favoured with a log Bayes factor of $\approx 1.7$. %GB: this is unclear to me; why is this replicate discrepant? shouldn't that be a sign that we need to increase the computational settings in order to reduce estimator variance?
 
 %%% Markov Jumps + BSSVS
-Figure~\ref{fig:mj&BFs} shows the network of FMDV spread for both serotypes in South America, reconstructed using Bayesian stochastic search variable selection (BSSVS,~\cite{Lemey2009}) and robust counting~\citep{Minin2008b}. 
+Figure~\ref{fig:mj&BFs} shows the network of FMDV spread for both serotypes in South America, reconstructed using Bayesian stochastic search variable selection (BSSVS,~\cite{Lemey2009}) and robust counting~\citep{Minin2008b}. %GB: I believe the term 'stochastic mapping' is in use rather than 'robust counting' for this application of the method.
 Many connections, for example the Argentina-Brazil, Argentina-Uruguay, Venezuela-Colombia and Brazil-Venezuela links are shared between serotypes, with varying degrees of statistical support.
 Overall, connections exist mostly between countries that share borders, and these cross-border connections are mostly concordant across serotypes.
 A notable exception is a strong connection between Argentina and Peru for serotype A, which is absent in the network for serotype O.
@@ -147,9 +148,9 @@ Peru seems to be a hub for serotype A, with most connections being imports into 
 When we look at source-sink dynamics by computing the net exchange rate of a country, i.e., the difference between the expected transitions from and to that country, differences between serotypes emerge.
 For instance,  Brazil is a sink for serotype A, but acts as a source for serotype O.
 The opposite is true for Colombia.
-Ecuador and Argentina, on the hand, seem to be a source and a sink for both serotypes, respectively.
-In addition, while the largest positive net exchange rates are similar for both serotypes, negative exchange rates differ.
-Argentina and Colombia are strong sinks for serotype O, but we not observe a similar pattern for serotype A. 
+Ecuador and Argentina, on the other hand, seem to be a source and a sink for both serotypes, respectively.
+In addition, while the largest positive net exchange rates are similar for both serotypes, negative exchange rates differ. %GB: this will require some more explaining, i.e. what are these rates specifically?
+Argentina and Colombia are strong sinks for serotype O, but we do not observe a similar pattern for serotype A. 
 
 %%% Epidemic tracing 
 We traced the origins of specific epidemics and found that the origin of the 2001 serotype A lies within the root of the tree (Figure~\ref{fig:epidemictracing}A), which indicates that the strains responsible for the 2001 epidemic were likely already present in the country -- which is the most likely state of the root for serotype A.
@@ -157,7 +158,7 @@ We traced the origins of the 2002 serotype A Ecuadorian epidemic to Brazil with 
 For serotype O, we also traced the origins of the 2002 epidemic in Ecuador, and found overwhelming evidence of a Colombian origin (posterior probability $0.92$, Figure~\ref{fig:epidemictracing}C).
 We estimated the most probable location of origin of the serotype O Paraguay 2011 isolate (Figure~\ref{fig:epidemictracing}D) and found that Argentina is the most likely place of origin (posterior probability $0.5$) followed by Brazil ($0.36$).
 Tracing the origins of the serotype A 2001 epidemics in Brazil and Uruguay revealed multiple countries of origin (Figure~\ref{sfig:epitrac}) A and B), while the Bolivian 2001 strains probably originated in Peru (posterior probability ($0.47$, Figure~\ref{sfig:epitrac}C).
-The origins of the 2008 strains of serotype A in Colombia  and serotype O in Peru can be traced with almost complete certainty to Venezuela and Ecuador, respectively (Figure~\ref{sfig:epitrac}D and F).
+The origins of the 2008 strains of serotype A in Colombia and serotype O in Peru can be traced with almost complete certainty to Venezuela and Ecuador, respectively (Figure~\ref{sfig:epitrac}D and F).
 
 %%% Spatial GLM
 The results of our spatial GLM analysis are summarised in Figure~\ref{fig:glm_spatial}, and show that out of $15$ predictors, only the trade of pigs ($1995-2004$) and cattle ($1986-1994$) are significant predictors of spread for serotypes A and O respectively.
@@ -166,30 +167,31 @@ Examples include the product of the number of sequences and pigs trade ($2004-20
 
 \section*{Discussion}
 
-Our population reconstructions suggest that while serotype A has experienced a rise and fall trajectory with sharp increase and then decrease of effective population size after a single peak.
-Serotype O, in contrast, shows a long period of stability, followed by a period of decline starting in the mid 1990s.
+Our population dynamics reconstructions suggest that serotype A has experienced a rise and fall trajectory with a sharp increase and subsequent decrease of its effective population size.
+Serotype O, in contrast, shows a long period of stability in terms of its population size, followed by a period of decline starting in the mid 1990s. %GB: can we link this to a vaccination program or some other intervention strategy or phenomenon in general?
 Overall, effective population sizes follow the downward trend of FMD case counts shown in Figure~\ref{sfig:case_temporal}, but the limited temporal span of the case data (1990 to 2010) precludes more general conclusions.
-\cite{Naranjo2013} provide a longer time series (Figure 3 therein) which shows a spike in cases for serotype A around the mid 1970s and that serotype O cases show a decreasing trend from the 1970s which intensifies around the mid 1990s, which coincides with the start of the decline seen in the left panel of Figure~\ref{fig:popdyn} in the present paper.
-Interestingly, the 2001 serotype A epidemic does not seem to lead to noticeable changes in diversity.
+\citet{Naranjo2013} provide a longer time series (Figure 3 therein) which shows a spike in cases for serotype A around the mid 1970s and that serotype O cases show a decreasing trend from the 1970s which intensifies around the mid 1990s, which coincides with the start of the decline seen in the left panel of Figure~\ref{fig:popdyn} in the present paper.
+Interestingly, the 2001 serotype A epidemic does not seem to lead to noticeable changes in diversity. %GB: what do you mean here?
 
 FMDV spread in South America seems to happen mostly through transnational borders, with long migration routes being rarer.
 In keeping with the spatial Bayes factors results (Figure~\ref{fig:mj&BFs}), we found that the presence of borders between countries attained a positive albeit not significant (BF $<3$) coefficient (Figure~\ref{fig:glm_spatial}).
 This is specially true for serotype O, for which the 95\% BCI for the coefficient excluded zero (Figure~\ref{fig:glm_spatial}B).
-These results are consistent also with the fact the geographic distance yielded a negative coefficient, with the 95\% BCI for serotype O excluding zero.
-Taken together, these results indicate that, specially for serotype O, FMDV spread takes place over shorter distances, across shared borders and is connected with the trade of live pigs and cattle.
-The finding that the Ecuadorian epidemic was most likely seeded from Colombia (Figure~\ref{fig:epidemictracing}C) also suggests an effect of cattle trade, since~\cite{Carvalho2013} show that the origin of the Ecuadorian epidemic was the province of Esmeraldas in the border between the two countries and is where most of the Ecuadorian cattle trade takes place. 
+These results are consistent also with the fact that geographic distance yielded a negative coefficient, with the 95\% BCI for serotype O excluding zero.
+Taken together, these results indicate that, especially for serotype O, FMDV dispersal takes place over shorter distances, across shared borders and is connected with the trade of live pigs and cattle.
+The finding that the Ecuadorian epidemic was most likely seeded from Colombia (Figure~\ref{fig:epidemictracing}C) also suggests an effect of cattle trade, since~\citet{Carvalho2013} show that the origin of the Ecuadorian epidemic was the province of Esmeraldas in the border between the two countries and is where most of the Ecuadorian cattle trade takes place. %GB: source/citation for the final part of this sentence? 
 Distance to the border is considered one of the most important factors to FMD spread, at least in the context of the Paraguay/Brazil border~\citep{Amaral2016}.
-Figure~\ref{sfig:epitrac}F shows that Ecuador is most certainly the origin of the Peruvian 2008 outbreak what could be connected with the illegal movement of cattle across the border, as suggested by~\cite{Correa2002}.
-Regarding the reservoirs of FMDV in the continent, our results for serotype O partially confirm the common wisdom (e.g.\citep{Saraiva2003} and~\citep{Naranjo2013}) that the (possibly illegal) trade of cattle is a driving force of FMDV spread.
-On the other hand, our results for serotype A seem to implicate the swine population in the spread of the virus, a mechanism that could be facilitated by swine and caprines only being vaccinated in emergencies~\citep{Saraiva2003}.
+Figure~\ref{sfig:epitrac}F shows that Ecuador is most certainly the origin of the Peruvian 2008 outbreak, which may be connected with the illegal movement of cattle across the border, as suggested by~\citet{Correa2002}.
+Regarding the reservoirs of FMDV in the continent, our results for serotype O partially confirm common knowledge (e.g.\citep{Saraiva2003} and~\citep{Naranjo2013}) that the (possibly illegal) trade of cattle is a driving force of FMDV spread.
+On the other hand, our results for serotype A seem to implicate the swine population in the spread of the virus, a mechanism that could be facilitated by swine and caprines only being vaccinated during public health emergencies~\citep{Saraiva2003}.
 
 % \subsection*{Sampling bias}
 
-A crucial goal of the present study was to draw phylodynamic inference while accounting for preferential sampling, both in time and space.
-In order to tackle temporal sampling bias, we have employed a model that explicitly incorporates the sequence sampling dates~\citep{Karcher2019}, while also allowing for the inclusion of covariates to help boost explanatory power.
+A crucial goal of the present study was to perform phylodynamic inference while accounting for preferential sampling, both in time and space.
+In order to tackle temporal sampling bias, we have employed a model that explicitly incorporates the sequence sampling dates~\citep{Karcher2019}, while also allowing for the inclusion of covariates to help increase explanatory power.
 Our finding that accounting for preferential sampling lead to narrower credibility intervals and better fitting models highlights the dangers of ``naive'' reconstructions based on non-uniform temporal sampling.
 In particular, we found that our sampling-aware reconstructions showed fewer oscillations, which could be mistakenly interpreted as genuine changes in population dynamics under a naive model. 
 In Text S2, we provide further simulations that investigate the effect of the specific temporal sampling patterns observed for both serotypes when compared to uniform temporal sampling.
+%GB: we do not mention nor investigate possible spatial sampling bias though, but let's stay away from this if possible.
 
 % Spatial: sequences included as predictors in various ways in spatial genetic GLM
 To account for spatial preferential sampling, we included the number of sequences isolated in each location as a predictor of spread. 
@@ -202,24 +204,23 @@ In addition to~\textit{detecting} spatial sampling bias, the inclusion of sampli
 As discussed above, we have employed modern statistical methods to quantify and mitigate spatial and temporal sampling bias in the data analysed in this study.
 Despite this, however, we feel it is important to clarify its limitations as they relate to the nature of the sampling process.
 We highlight three key limitations, which in our view cannot be completely circumvented by the use of state-of-the-art statistical methods. 
- 
-%  - sampling bias
+ %  - sampling bias
 First, it is important to understand that while the methods employed in this paper help quantify and mitigate the effects of sampling bias, ultimately biased data lack information and hence force us to draw more conservative conclusions.
 % - fragment vs full genome
-Secondly, the sequences in the present study are from a particular gene (1D, VP1) rather than the full genomes, for which there are considerably fewer sequences.
-This restricts our ability to resolve finer details in the phylogenies and by extension limits the ability of phylodynamic models~\cite{Dudas2019}.
+Secondly, the sequences in the present study are from a particular gene (1D, VP1) rather than the full genomes, for which there are considerably fewer sequences that originate only from a few countries.
+This restricts our ability to resolve finer details in the phylogenies and by extension limits the ability of phylodynamic models~\citep{Dudas2019}.
 % - limited covariate information
 A final difficulty we would like to point out is the lack of detailed covariate information.
-For example, due to the fact that our phylogenies spanned periods of time much longer than the available data, we could not include any temporal predictors of FMDV dynamics.
+For example, due to the fact that our phylogenies spanned periods of time much longer than the available data, we could not include any temporal predictors of FMDV dynamics. %GB: not sure the term 'temporal predictor' is in use, perhaps explain or phrase differently?
 In the supplementary material we provide all of the data collected for this study, including data that we could not employ directly, such as vaccination and animal production data.
 We hope these data can be of use to other researchers in future studies of more limited temporal and spatial scope.
 
 \section*{Conclusions}
 
-In this paper, we have assembled the largest data set of FMDV sequences from South America and employed state-of-the-art statistical methods to analysed the spatio-temporal dynamics of the virus, while accounting for sampling bias.
+In this paper, we have assembled a large data set of FMDV VP1 gene sequences from South America and employed state-of-the-art statistical methods to analysed the spatio-temporal dynamics of the virus, while accounting for sampling bias. %GB: not sure I would use the term 'sampling bias' as readers may interpret it from a spatial perspective; perhaps be more specific and talk about preferential sampling more explicitly?
 We found that FMDV spread occurs mostly through shared borders and  is connected to livestock trade.
 We have traced the origins of several epidemics on the continent, providing valuable information to policy makers.
-Ultimately, however, the convenience nature of the sampling process creates biases that cannot be easily accommodated, a problem which is made worse by the sequencing of seq rather than full genomes.
+Ultimately, however, the convenience nature of the sampling process creates biases that cannot be easily accommodated, a problem which is made worse by the sequencing of genes rather than full genomes~\citep{Dudas2019}.
 We hope this study showcases the power of phylodynamic methods in aiding epidemiological surveillance of FMD in South America and prompts Public Health agencies to adopt sequencing as an integral part of the surveillance apparatus. 
 
 \section*{Methods}
@@ -239,12 +240,13 @@ This resulted in $185$ sequences (from eight countries) for serotype A and $215$
 We aligned each data set using the MAFFT~\citep{Katoh2002} algorithm implemented in the Geneious~\citep{Kearse2012} software package.
 After a preliminary phylogenetic analysis (see below), an early serotype A sequence (Venezuela 1951) was excluded because its root-to-tip divergences was incompatible with its sampling date~\citep{Rambaut2016}.
 For serotype O, five sequences were excluded under the same criteria (Table~\ref{stab:exclseqs}).
-The final data sets had $184$ ($1955 -- 2013$) and $210$ ($1958-2011$) sequences for serotypes A and O, respectively.
+The final data comprised had $184$ ($1955-2013$) and $210$ ($1958-2011$) sequences for serotypes A and O, respectively.
 
 \textbf{Acquisition of trade data.}
 
 Data on animal trade were obtained from the FAO database (\url{http://faostat.fao.org/}).
-We retrieved data on the \textit{detailed trade matrix} for cattle, pigs and sheep (number of live animals exchanged) covering the period from $1986$ to $2009$, for each of the nine countries.
+We retrieved data on the \textit{detailed trade matrix} %GB: this will need more explanation in my opinion
+for cattle, pigs and sheep (number of live animals exchanged) covering the period from $1986$ to $2009$, for each of the nine countries.
 
 \textbf{Vaccination and case data.}
 
@@ -260,48 +262,48 @@ Details on computational settings and prior choices can be found in Text S2.
 
 We assume a general time reversible (GTR)~\citep{Tavare1986} model of sequence evolution, along with gamma-distributed rate heterogeneity (4 categories) for all our analyses.
 We conducted an initial analysis of the two data sets described, employing PhyML~\citep{Guindon2003} to obtain maximum likelihood phylogenies which we then used in conjunction with Tempest~\citep{Rambaut2016} to produce root-to-tip divergence (RDV) plots and identify discrepant sequences (see~\cite{Rambaut2016} for details).
-
-Having identified considerable rate variation among branches we used the Bayesian Evolutionary Analysis by Sampling Trees (BEAST)~\citep{Drummond2012,Suchard2018} software package to infer time-structured phylogenies under relaxed clock models~\citep{Drummond2006}, employing the BEAGLE~\citep{Ayres2012} library to gain computational efficiency.
-
-\subsection*{Model selection}
-
-In order to compare the performance of combinations of sequence evolution (Markov) and relaxed clock models for each data set (see Text S2), we use state-of-the-art marginal likelihood estimators, namely generalised stepping-stone sampling (SS)~\citep{Baele2015} implemented in BEAST~\citep{Suchard2018}.
-Following a preliminary Skygrid analysis, we chose the constant population size coalescent parametric model -- and its associated working prior -- as the tree prior for these comparisons.
+Having identified considerable rate variation among branches we used the Bayesian Evolutionary Analysis by Sampling Trees (BEAST)~\citep{Suchard2018} software package to infer time-structured phylogenies under relaxed clock models~\citep{Drummond2006}, employing the BEAGLE~\citep{Ayres2012} library to gain computational efficiency. %GB: update reference to BEAGLE 3
+%\subsection*{Bayesian model selection}
+In order to select an appropriate combination of sequence evolution (Markov), coalescent and relaxed clock models for each data set (see Text S2), we use state-of-the-art marginal likelihood estimators, namely generalised stepping-stone sampling (SS)~\citep{Baele2015} %GB: change publication year to 2016
+implemented in BEAST~\citep{Suchard2018}.
+Following a preliminary Skygrid analysis~\citep{Gill2012}, we selected the constant population size coalescent parametric model -- and its associated working prior -- as the tree prior for these comparisons.
 
 \subsection*{Spatio-temporal Dynamics}
 
 \textbf{Effective population size reconstruction}.
 
-For an initial analysis , we employed the Skygrid coalescent model~\citep{Gill2012} to reconstruct that past population dynamics of both serotypes.
+For an initial analysis, we employed the Skygrid coalescent model~\citep{Gill2012} %GB: publication year is wrong? would be nice to cite my protocol paper on the skygrid as well
+ to reconstruct the past population dynamics of both serotypes.
 Skygrid necessitates the specification of a cutoff value, $K$, commensurate with the age of the root (time to the most recent common ancestor, tMRCA) .
 We used $K = 150$ years for serotype A and $K = 100$ for serotype O sets as conservative estimates of the tMRCA of the sampled sequences. 
-This prior was used in all subsequent BEAST analysis.
+This demographic prior was used in all subsequent BEAST analysis.
 
-In order to accommodate the effect of preferential (temporal) sampling of the sequences, we employed the  Bayesian Nonparametric Population Reconstruction under Preferential Sampling (BNPR-PS) model of~\cite{Karcher2019} (see also~\cite{Karcher2016}), that accounts for sampling pattern of sequences through an inhomogeneous Poisson process the and allows the inclusion of time-varying covariates.
-We used the function \verb|BNPR_PS()| in the~\textbf{phylodyn}~\citep{Karcher2017} R package to fit the preferential-sampling model.
+In order to accommodate the effect of preferential (temporal) sampling, we employed the Bayesian Nonparametric Population Reconstruction under Preferential Sampling (BNPR-PS) model of~\cite{Karcher2019} (see also~\cite{Karcher2016}), that accounts for sampling pattern of sequences through an inhomogeneous Poisson process and allows the inclusion of time-varying covariates.
+We used the function \verb|BNPR_PS()| in the~\textbf{phylodyn}~\citep{Karcher2017} R package to fit the preferential-sampling model. %GB: did a tree already have to be provided for this R analysis? how does this method interact with the BEAST analysis?
 Both the BNPR and Skygrid models necessitate the estimation of a precision parameter, to which one usually assigns a Gamma distribution with parameters $\alpha = \beta = 0.001$.
 In this study however, we employed the penalised complexity (PC) prior of~\cite{Simpson2017}, which has better theoretical properties. %% LM: I have a simulation study and a few analyses to support that claim also, but no need to cite here.
-More details on model formulation, testing and comparison are given in Text S2.
+More details on model formulation, testing and comparison are given in Text S2. %GB: is there also a Text S1?
 
-\textbf{Reconstructing geographical movements through BSSVS and robust counting}
+\textbf{Reconstructing geographical movements using BSSVS and robust counting}
 
-We employ the Bayesian stochastic search variable selection (BSSVS) of~\cite{Lemey2009} to compute Bayes factors for migration routes between countries and stablish which routes are relevant to the spatial spread of FMDV in South America.
-Following the approach of~\cite{Hall2013}, we employ the robust counting technique (Markov jump) of~\cite{Minin2008b} to obtain a probability distribution for the location (country) of origin of each of epidemic.
-Each epidemic is represented by sequences from it, taken as representative (see Text S2 for details).
+We employ Bayesian stochastic search variable selection (BSSVS)~\citep{Lemey2009} to compute Bayes factors for migration routes between countries and establish which routes are relevant to the spatial spread of FMDV in South America.
+Following the approach of~\citet{Hall2013}, we employ the robust counting technique (Markov jump) of~\cite{Minin2008b} to obtain a probability distribution for the location (country) of origin of each of epidemic.
+Each epidemic is represented by sequences from it, taken as representative (see Text S2 for details). %GB: I don't understand this sentence, can you rephrase?
 
 \textbf{Phylogeographic generalised linear models}.
 
-In order to study the influence of different epidemiological predictors on viral diffusion through space, we used information on the trade of live cattle, pigs and sheep divided in three periods ($1986-1995$,~$1996-2004$,~$2005-2013$).
+In order to study the influence of different epidemiological predictors on viral diffusion through space, we used information on the trade of live cattle, pigs and sheep divided in three periods ($1986-1995$,~$1996-2004$,~$2005-2013$). %GB: can this be phrased differently? Do you mean that data for cattle was only available from 1986-1995, pigs for 1996-2004 and sheep for 2005-2013?
 We also included the great circle distance between the (centroids of) countries and the presence/absence of borders between countries as predictors.
 Additionally, to assess the influence of sequence (spatial) sampling, we also included the product and absolute differences in sequence (samples) numbers between locations as a predictor of flow (see the appendix in~\cite{Lemey2014} for a discussion).
 The numbers of sequences in each location were also included as origin and destination predictors (see~\cite{Dudas2017}), leading to a total of $14$ predictors being considered.
 In order to test the relevance of each predictor to spatial spread we used Bayesian stochastic variable selection (BSSVS, \cite{Lemey2009}).
-All predictors with the exception of the borders were transformed using $\log(x +1)$ in order to map $0$ to $0$ and standardised to have mean $0$ and standard deviation $1$.
+All predictors with the exception of the borders were standard log-transformed. %using $\log(x +1)$ in order to map $0$ to $0$ and standardised to have mean $0$ and standard deviation $1$.
 The relevance of each predictor can then be determined using Bayes factors~\citep{KassRaftery1995,Lemey2009,Lemey2014}.
 Details are given in Text S2.
 
 \section*{Software versions and computer programs}
 
+%GB: also list BEAGLE?
 \begin{itemize}
  \item \textbf{PhyML} version 3.0, downloaded from~\url{www.atgc-montpellier.fr/phyml/};
  \item \textbf{Tempest} version 1.5.1, downloaded from~\url{http://tree.bio.ed.ac.uk/software/tempest/}  ;
@@ -315,10 +317,17 @@ Code to produce many of the plots/analyses is available from~\url{https://github
 
 \section*{Acknowledgments}
 The authors would like to thank Ant\^onio Mendes for clarifications regarding the vaccination data, Matthew Hall, Mandev Gill, Vladmir Minin, Gytis Dudas and Oliver Pybus for insightful discussions and Miguel Carvalho, Felipe Figueiredo and Mauricio Oliveira for operational support.
-We acknowledge the support of the National Evolutionary Synthesis Center (NESCent) through a working group (Software for Bayesian Evolutionary Analysis).
+%We acknowledge the support of the National Evolutionary Synthesis Center (NESCent) through a working group (Software for Bayesian Evolutionary Analysis).
 
-\emph{Funding:} The research leading to these results has received funding from the European Union Seventh Framework Programme [FP7/2007-2013] under Grant Agreement no. 278433-PREDEMICS and ERC Grant agreement no. 260864.
-This work was also supported by National Institutes of Health grants R01 HG006139 and National Science Foundation grants DMS 1264153.
+%GB: this will need to be further updated
+\emph{Funding:} %The research leading to these results has received funding from the European Union Seventh Framework Programme [FP7/2007-2013] under Grant Agreement no. 278433-PREDEMICS and ERC Grant agreement no. 260864.
+%This work was also supported by National Institutes of Health grants R01 HG006139 and National Science Foundation grants DMS 1264153.
+The research leading to these results has received funding from the European Research Council under the European Union's Horizon 2020 research and innovation programmes (grant agreement no.~725422-ReservoirDOCS).
+This work was partially supported by the European Union's Horizon 2020 Research and Innovation Programme under ZIKAlliance Grant Agreement no. 734548 and under VIROGENESIS Grant Agreement no. 634650.
+The Artic Network receives funding from the Wellcome Trust through project 206298/Z/17/Z.
+PL acknowledges support by the Research Foundation -- Flanders (`Fonds voor Wetenschappelijk Onderzoek -- Vlaanderen', G066215N, G0D5117N and G0B9317N). 
+GB acknowledges support from the Interne Fondsen KU Leuven / Internal Funds KU Leuven under grant agreement C14/18/094.
+
 
 \emph{Conflict of Interest:} none declared
 
@@ -332,23 +341,23 @@ This work was also supported by National Institutes of Health grants R01 HG00613
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
 \begin{center}
-\subfigure[A]{\includegraphics[scale=.30]{FIGURES/PLOTS/tree_A.pdf}}\\
-\subfigure[O]{\includegraphics[scale=.30]{FIGURES/PLOTS/tree_O.pdf}}
+\subfigure[Serotype A]{\includegraphics[scale=.25]{FIGURES/PLOTS/tree_A.pdf}}\\
+\subfigure[Serotype O]{\includegraphics[scale=.25]{FIGURES/PLOTS/tree_O.pdf}} %GB: should we show some measure of uncertainty (for example with respect to the ancestral location states) on the figures?
 \end{center}
 \caption{\textbf{Maximum clade credibility (MCC) phylogenetic trees reconstructed for FMDV serotypes A and O, with country information mapped}. 
 Internal branches are coloured according to the most probable country.
-Please notice the slight difference in colour scheme in the legend of both panels.
+Please notice the slight difference in colour scheme in the legend of both panels. %GB: best to write some text in the caption that discusses the main findings (1 sentence per figure, as you did in the main text)
 }
 \label{fig:trees}
 \end{figure}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[scale=0.6]{FIGURES/PLOTS/population_size_reconstructions_full.pdf}
+\includegraphics[scale=0.54]{FIGURES/PLOTS/population_size_reconstructions_full.pdf}
 \end{center}
 \caption{\textbf{Reconstructed population dynamics for serotypes A and O in South America}.
 }
-In the left panel we show reconstructions that do not take sampling (sequencing) patterns into account, whereas the right panel shows reconstructions using a preferential sampling model~\citep{Karcher2019} which includes a quadratic term on the log-intensity, $\{\gamma(t), -t, -t^2\}$ (see Text S2 for more details).
+In the left panel we show reconstructions that do not take sampling (sequencing) patterns into account, whereas the right panel shows reconstructions using a preferential sampling model~\citep{Karcher2019} that includes a quadratic term on the log-intensity, $\{\gamma(t), -t, -t^2\}$ and which yielded the highest (log) marginal likelihood among the coalescent models tested (see Text S2 for more details).
 Colours depict serotypes.
 
 % All estimates were obtained using the \verb|BNPR()| and \verb|BNPR_PS()| functions from the \textbf{phylodyn} package~\citep{Karcher2017}. 
@@ -357,7 +366,7 @@ Colours depict serotypes.
 % %%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[scale=1]{FIGURES/PLOTS/MJandBFs.pdf}
+\includegraphics[scale=0.87]{FIGURES/PLOTS/MJandBFs.pdf}
 \end{center}
 \caption{\textbf{Migration networks for FMDV serotypes A and O in South America}.
 We estimate the number of migration events between countries using the robust counting (Markov jumps) techinique of~\cite{Minin2008b}.
