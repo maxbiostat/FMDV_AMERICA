@@ -79,13 +79,24 @@ In Tables~\ref{stab:sequences_A} and~\ref{stab:sequences_O} we provide the GenBa
 
 \subsection*{Livestock trade data}
 
+<<<<<<< HEAD
+One of the main contributions of this study lies in exploring the association between the trade of cattle, pigs and sheep and viral diffusion using a statistically sound approach that enables us to test evolutionary hypotheses concerning the influence of these predictors on viral spread~\citep{M-Lemey2014}. %GB: cite Lemey et al. 2014
+=======
 One of the main contributions of this study lies in exploring the association between the trade of cattle, pigs and sheep and viral diffusion using a statistically sound approach that enables us to test evolutionary hypotheses concerning the influence of these predictors on viral spread. %GB: cite Lemey et al. 2014
+>>>>>>> 70003a1eefa926aa60457e03dc38f71a7caa684d
 In this text we provide some additional exploratory plots of the covariate data.
 In Figure~\ref{sfig:prod}, we show the time series of livestock production among the studied countries for a time frame of over $50$ years, illustrating that the production of cattle is much larger than that of any other livestock. %GB: I think that a simple line plot, connecting the dots would make the figure more clear than drawing a straight regression line through the dots
 Perhaps more importantly, while pigs and cattle production maintain a trend of positive growth throughout the second half of the twentieth century, sheep production shows a decline after $1990$.
 Spatially, the trade of all three livestock is rather different, as shown in Figure~\ref{sfig:tradenets}. %GB: this figure is not very clear; would it not be better to use dot matrices, with the size of the dots proportional to the trade intensity? Or perhaps use the existing figure(s) but play with the width of the different arrows according to trade intensity?
+<<<<<<< HEAD
+% LM: I strongly disagree. But then again I'm biased; this took me a long time to code up and is clear enough to me. I'll wait to see whether this bothers others too.
 The cattle trade network is more connected, while the pig and sheep trade networks are considerably more sparse.
 Further, the pig network presents a clear regional pattern, with two sub-networks. %GB: clearly illustrate these two networks on the figure?
+%LM: Good idea. Will see what I can do. Later.
+=======
+The cattle trade network is more connected, while the pig and sheep trade networks are considerably more sparse.
+Further, the pig network presents a clear regional pattern, with two sub-networks. %GB: clearly illustrate these two networks on the figure?
+>>>>>>> 70003a1eefa926aa60457e03dc38f71a7caa684d
 
 Temporally, overall trade shows remarkably different trends depending on the livestock analysed.
 While cattle trade shows a positive trend, pig trade is mostly stable over time and all other livestock considered show a declining trend.
@@ -141,7 +152,11 @@ AY593821 & 1967 & Argentina \\
  
 \subsection*{Bayesian Model Selection}
 
+<<<<<<< HEAD
+We employed generalised stepping stone sampling (GSS, \citet{M-Baele2016}) to compute (log) marginal likelihoods for six combinations of Markov sequence evolution and molecular clock models. %GB: citation year is wrong, should be 2016
+=======
 We employed generalised stepping stone sampling (GSS, \citet{M-Baele2015}) to compute (log) marginal likelihoods for six combinations of Markov sequence evolution and molecular clock models. %GB: citation year is wrong, should be 2016
+>>>>>>> 70003a1eefa926aa60457e03dc38f71a7caa684d
 A constant population size coalescent tree prior was used across all combinations. %GB: the main manuscript seemed to suggest that the constant population size model was going to be compared against the Skygrid model using model selection
 We used $50$ steps with $250,000$ iterations per step, with the resulting 51 power posteriors spaced according to a Beta($\alpha = 0.3$, 1.0) distribution. %GB: cite Xie et al. 2011 and Baele et al. 2016
 Table~\ref{stab:treeclockselection} shows the results of this model selection study to determine the best combination of sequence substitution and molecular clock models for each serotype.
@@ -152,7 +167,11 @@ In the interest of computational expediency for the large number of subsequent a
 
 \begin{table}[!ht]
 \caption{\textbf{Marginal likelihoods for combinations of sequence evolution (Markov) and molecular clock models.}
+<<<<<<< HEAD
+We used the generalised stepping stone (GSS) from~\citep{M-Baele2016} to compute (log) marginal likelihoods using a constant population size coalescent tree prior.
+=======
 We used the generalised stepping stone (GSS) from~\citep{M-Baele2015} to compute (log) marginal likelihoods using a constant population size coalescent tree prior.
+>>>>>>> 70003a1eefa926aa60457e03dc38f71a7caa684d
 We compared the HKY and GTR substitution models, in combination with the strict clock and the uncorrelated relaxed clock models assuming either an underlying log-normal distribution (UCLN) or gamma distribution (UCG).
 The best fitting model for each serotype is highlighted in bold.
 }
@@ -198,7 +217,11 @@ Following~\cite{M-Karcher2019}, we consider four models:
  \item \textbf{Model 3:} Preferential model using both $-t$ and $-t^2$ as covariates, thus $\lambda_s(t) = \exp(\beta_0 + \beta_1\gamma(t) -\beta_2 t - \beta_3t^2)$, denoted $\{\gamma(t), -t, -t^2\}$;
 \end{enumerate}
 
+<<<<<<< HEAD
+These models were fitted using three maximum clade credibility (MCC) trees for each serotype, obtained from three independent chains. %GB: but ideally these 3 MCC trees should be identical, so this could raise some questions %LM: I beg to strongly differ. MCC trees are estimates and hence subject to variation. At this tree size, seeing to identical trees is extremely improbable.
+=======
 These models were fitted using three maximum clade credibility (MCC) trees for each serotype, obtained from three independent chains. %GB: but ideally these 3 MCC trees should be identical, so this could raise some questions
+>>>>>>> 70003a1eefa926aa60457e03dc38f71a7caa684d
 Since results were consistent across MCC trees, we shall discuss only results for one MCC for each serotype.
 Complete analyses can be found at~\url{https://github.com/maxbiostat/FMDV_AMERICA/blob/master/CODE/notebooks/BNPR_analysis_covariates.ipynb}.
 
@@ -212,7 +235,11 @@ Therefore, we compare models 1, 2 and 3 using the (log) marginal likelihood esti
 % We follow the framework of~\cite{M-Gill2016} in order to incorporate information from temporal predictors into the reconstruction of past (effective) population size.
 % This necessitates the specification of priors for the predictor coefficients ($\beta^{\text{Skygrid}}_i, i = 1, \ldots, 13$).
 % We assign independent standard normal (Gaussian) priors, $\beta^{\text{Skygrid}}_i \sim \text{Normal}(0, 1)$.
+<<<<<<< HEAD
+The smoothness of the population trajectory in the Skygrid~\citep{M-Gill2013} %GB: incorrect citation year, should be 2013
+=======
 The smoothness of the population trajectory in the Skygrid~\citep{M-Gill2012} %GB: incorrect citation year, should be 2013
+>>>>>>> 70003a1eefa926aa60457e03dc38f71a7caa684d
 and related models is controlled by a precision parameter, $\tau$, which needs to be estimated from the data and thus be given a prior.
 The prior usually employed is a Gamma distribution with parameters $\alpha = \beta = 0.001$. 
 However, we feel this prior places too much mass on small precisions (which would make estimates noisier) while at the same time allowing rather extreme values, which would artificially inflate confidence.
@@ -245,9 +272,14 @@ In order to understand how the sequence sampling structure of both serotypes (se
 \begin{itemize}
  \item[A)] Using the empirical sampling dates, simulate phylogenies under a constant population size with $N_e = 10$;
  \item[B)] Using the empirical sampling dates, simulate phylogenies under an exponential growth model with $N_0 = 10$ and $r = 0.1$;
+<<<<<<< HEAD
+ \item[C)] Using a regular grid of dates spanning the range of observed dates, simulate phylogenies under a constant population size with $N_e = 10$; %GB: what constitutes a 'regular grid'? %LM: Really?? Anyway, added explanation below.
+=======
  \item[C)] Using a regular grid of dates spanning the range of observed dates, simulate phylogenies under a constant population size with $N_e = 10$; %GB: what constitutes a 'regular grid'?
+>>>>>>> 70003a1eefa926aa60457e03dc38f71a7caa684d
  \item[D)]  Using a regular grid of dates spanning the range of observed dates, simulate phylogenies under an exponential growth model with $N_0 = 10$ and $r = 0.1$.
 \end{itemize}
+To construct a regular grid we created a sequence of $N$ dates from youngest to oldest observed date, where $N$ is the number of sequences collected for each serotype.
 For all scenarios we simulated $10$ phylogenies for each serotype using the R package~\textbf{timeTreeSim} (\url{https://github.com/maxbiostat/timeTreeSim}).
 We fitted the four models outlined above to all simulated data sets.
 Since results were consistent across phylogenies, we will discuss results for a single representative simulation per scenario and serotype.
