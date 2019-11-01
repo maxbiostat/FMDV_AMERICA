@@ -57,22 +57,22 @@
 \\
 Luiz Max Carvalho$^{1\ast}$,
 Nuno Rodrigues Faria$^{3}$, %GB: no longer affiliated with KU Leuven
-Andres Perez$^{4}$,
+Guido K\"onig$^{4}$,
 Marc A.~Suchard$^{5,6}$,
 Philippe Lemey$^{2}$,
 Waldemir de Castro Silveira$^{7}$,
-Andrew Rambaut$^{1,8,9}$,
+% Andrew Rambaut$^{1,8,9}$,
 Guy Baele$^{2}$
 \\
 \bf{1} Institute of Evolutionary Biology, University of Edinburgh, Edinburgh, United Kingdom.\\
 \bf{2} Department of Microbiology, Immunology and Transplantation, Rega Institute, KU Leuven, Leuven, Belgium.\\
 \bf{3} Department of Zoology, University of Oxford, Oxford, United Kingdom.\\
-\bf{4} University of Minnesota, Department of Veterinary Population Medicine, College of Veterinary Medicine, Saint Paul, USA.\\
+\bf{4} Institute of Agrobiotechnology and Molecular Biology, INTA-CONICET, Buenos Aires, Argentina.\\
 \bf{5} Departments of Biomathematics and Human Genetics, David Geffen School of Medicine at UCLA, University of California, Los Angeles,  United States of America.\\
 \bf{6} Department of Biostatistics, UCLA Fielding School of Public Health, University of California, Los Angeles,  United States of America.\\
 \bf{7} Research and Development Division, Trimatrix Applied Biotechnology Ltd, Rio de Janerio, Brazil.\\
-\bf{8} Fogarty International Center, National Institutes of Health, Bethesda, MD,  United States of America.\\
-\bf{9} Centre for Immunology, Infection and Evolution at the University of Edinburgh, Edinburgh, United Kingdom.
+% \bf{8} Fogarty International Center, National Institutes of Health, Bethesda, MD,  United States of America.\\
+% \bf{9} Centre for Immunology, Infection and Evolution at the University of Edinburgh, Edinburgh, United Kingdom.
 $\ast$ E-mail: lm.carvalho@ed.ac.uk
 \end{flushleft}
 % Please keep the abstract between 250 and 300 words
@@ -80,8 +80,12 @@ $\ast$ E-mail: lm.carvalho@ed.ac.uk
 
 \myedit{RefOneComOne}{
 Although foot-and-mouth disease virus (FMDV) incidence has decreased in South America over the last years, the pathogen still circulates in the region and the risk of re-emergence in previously FMDV-free areas is a veterinary public health concern.
-In this paper we employ modern phylodynamic methods to merge epidemiological and genetic data to reconstruct spatiotemporal patterns and determinants of the two most prevalent FMDV serotypes A and O dispersal in South America. %GB: if these are the main serotypes, we should stress this already here; also, we'll have to list our main findings as a result of employing these phylodynamic methods; in particular, the use of the different nonparametric coalescent models and what we can learn from these, may be worth mentioning
-%LM: partially addressed. Will write more in the end.
+In this paper we employ modern phylodynamic methods to merge epidemiological and genetic data  to reconstruct spatiotemporal patterns and determinants of the two most prevalent FMDV serotypes A and O dispersal in South America, while accounting for temporal and spatial sampling bias.
+We find that serotypes A and O differ in their temporal pattern of population dynamics, with serotype A displaying more temporal oscillation.
+Spatially, we traced the origins of the 2011 Paraguay outbreak to Argentina (posterior probability $0.5$) and Brazil (pp $0.36$).
+Overall, we find that FMDV spread seems to happen mostly through transnational borders, with few long range transmissions, such as a well-supported link between Argentina and Peru for serotype A.
+We also found that the trade of different livestock (pigs for serotype A and cattle for serotype O) to be associated with viral spread, providing a possible explanation for this pattern of spread.
+Our results showcase the usefulness of phylodynamic methods to the study and surveillance of FMDV in the continent.
 }
 
 Key-words: foot-and-mouth disease virus, South America, animal trade, pathogen phylodynamics, phylogenetics, Bayesian inference, BEAST.
@@ -93,7 +97,7 @@ Key-words: foot-and-mouth disease virus, South America, animal trade, pathogen p
 Foot-and-mouth disease virus (FMDV) is a rapidly evolving picornavirus and the causative agent of foot-and-mouth disease (FMD), the most important disease of domestic and wild cloven-hoofed animals~\citep{Grubman2004}.
 The virus can be classified in seven serotypes, three of which (A, O, and C) have circulated in South America.
 Serotype A caused large epidemics throughout the Southern cone in recent years~\citep{Perez2001, Malirat2012}, while endemic circulation has been mostly limited to Venezuela~\citep{Malirat2012}.
-Historically, serotype O has been the most prevalent serotype on the continent, but is now limited to areas in the Andean region, and in particular to Ecuador~\citep{Malirat2011a}.
+Historically, serotype O has been the most prevalent serotype on the continent, and was limited to areas in the Andean region, in particular to Ecuador~\citep{Malirat2011a}, until recent outbreaks in Colombia~\citep{OIE2017, OIE2018}.
 \myedit{RefOneComTwo}{Serotype C on the other hand was last encountered in the continent in $1995$ in Brazil~\citep{Correa2002}.}
 Historical reports suggest that FMDV arrived in South America in the late years of the 19th century with European colonization~\citep{Naranjo2013, Tully2008}. 
 By the 1970s, FMD was widespread in the region, with several large-scale epidemics being caused by multiple subtypes~\citep{Saraiva2003}.
@@ -128,7 +132,7 @@ The maximum clade credibility (MCC) phylogenetic trees shown in Figure~\ref{fig:
 The tree for serotype A (Figure~\ref{fig:trees}A) shows two major clades that diverge early on, one containing most of the Argentinian sequences, the other clade being more geographically heterogeneous.
 For serotype O (Figure~\ref{fig:trees}B), we also notice an early split, with a long-lasting Venezuelan lineage leading that persisted into the 1970s. 
 A major lineage containing all of the Ecuadorian sequences is interspersed with sequences from Colombia.
-The time of the most recent common ancestor (tMRCA) for serotype A was estimated at $1919$ ($1903$-$1935$), while the tMRCA for serotype O was estimated at $1946$ ($1924$--$1966$).
+The time of the most recent common ancestor (tMRCA) for serotype A was estimated at $1919$ ($1903$-$1935$), while the tMRCA for serotype O was estimated at $1946$ ($1924$--$1966$), which covers the date of early sequences from 1958 (ultimately excluded from the analyses, see methods).
 Relaxed molecular clock analysis showed both serotypes have high substitution rates with the rate estimated at $3.52$ ($2.80$--$4.27$) $\times 10^{-3}$ substitutions/site/year (s/s/y) for serotype A  and at  $5.41$ ($4.00$--$6.92$) $\times 10^{-3}$ s/s/y for serotype O.
 Both serotypes showed considerable inter-lineage rate variation with coefficients of variation (posterior mean) of $1$ and $1.6$ for serotypes A and O, respectively.
 
@@ -151,7 +155,7 @@ Peru seems to be a hub for serotype A, with most connections being imports into 
 When we look at source-sink dynamics by computing the net exchange rate of a country, i.e., the difference between the expected transitions from and to that country, differences between serotypes emerge.
 For instance,  Brazil is a sink for serotype A, but acts as a source for serotype O.
 The opposite is true for Colombia.
-Ecuador and Argentina, on the other hand, seem to be a source and a sink for both serotypes, respectively.
+On the other hand, Ecuador is a source and a sink (i.e. a hub) for serotype A, while  Argentina seems to act as both source and a sink for serotype O.
 In addition, while the largest positive net exchange rates (imports minus exports) are similar for both serotypes, negative exchange rates differ. %GB: this will require some more explaining, i.e. what are these rates specifically?
 Argentina and Colombia are strong sinks for serotype O, but we do not observe a similar pattern for serotype A. 
 
@@ -159,9 +163,10 @@ Argentina and Colombia are strong sinks for serotype O, but we do not observe a 
 We traced the origins of specific epidemics and found that the origin of the 2001 serotype A lies within the root of the tree (Figure~\ref{fig:epidemictracing}A), which indicates that the strains responsible for the 2001 epidemic were likely already present in the country -- which is the most likely state of the root for serotype A.
 We traced the origins of the 2002 serotype A Ecuadorian epidemic to Brazil with posterior probability $0.52$, while Peru ($0.2$) and Venezuela ($0.17$) were alternative locations of origin (Figure~\ref{fig:epidemictracing}B).
 For serotype O, we also traced the origins of the 2002 epidemic in Ecuador, and found overwhelming evidence of a Colombian origin (posterior probability $0.92$, Figure~\ref{fig:epidemictracing}C).
-We estimated the most probable location of origin of the serotype O Paraguay 2011 isolate (Figure~\ref{fig:epidemictracing}D) and found that Argentina is the most likely place of origin (posterior probability $0.5$) followed by Brazil ($0.36$).
+We estimated the most probable location of origin of the serotype O Paraguay 2011 isolate (Figure~\ref{fig:epidemictracing}D) and found that Argentina is the most likely place of origin (posterior probability $0.5$) followed by Brazil ($0.36$, see Discussion).
 Tracing the origins of the serotype A 2001 epidemics in Brazil and Uruguay revealed multiple countries of origin (Figure~\ref{sfig:epitrac}) A and B), while the Bolivian 2001 strains probably originated in Peru (posterior probability ($0.47$, Figure~\ref{sfig:epitrac}C).
-The origins of the 2008 strains of serotype A in Colombia and serotype O in Peru can be traced with almost complete certainty to Venezuela and Ecuador, respectively (Figure~\ref{sfig:epitrac}D and F).
+The origins of the 2008 strains of serotype A in Colombia and serotype O in Peru can be traced with almost complete certainty to Venezuela and Ecuador, respectively (Figure~\ref{sfig:epitrac}D and F) -- see Lineage 1 in ~\cite{Malirat2012}
+.
 
 %%% Spatial GLM
 The results of our spatial GLM analysis are summarised in Figure~\ref{fig:glm_spatial}, and show that out of $15$ predictors, only the trade of pigs ($1995-2004$) and cattle ($1986-1994$) are significant predictors of spread for serotypes A and O respectively.
@@ -170,12 +175,13 @@ Examples include the product of the number of sequences and pigs trade ($2004-20
 
 \section*{Discussion}
 
+Dating analyses showed serotype A to be older than serotype O in the continent, a finding consistent with a global analysis of both serotypes~\citep{Tully2008}.
 Our population dynamics reconstructions suggest that serotype A has experienced a rise and fall trajectory with a sharp increase and subsequent decrease of its effective population size.
 Serotype O, in contrast, shows a long period of stability in terms of its population size, followed by a period of decline starting in the mid 1990s. %GB: can we link this to a vaccination program or some other intervention strategy or phenomenon in general?
 % LM: Let's wait to see what Andres and Waldemir say.
 Overall, effective population sizes follow the downward trend of FMD case counts shown in Figure~\ref{sfig:case_temporal}, but the limited temporal span of the case data (1990 to 2010) precludes more general conclusions.
 \citet{Naranjo2013} provide a longer time series (Figure 3 therein) which shows a spike in cases for serotype A around the mid 1970s and that serotype O cases show a decreasing trend from the 1970s which intensifies around the mid 1990s, which coincides with the start of the decline seen in the left panel of Figure~\ref{fig:popdyn} in the present paper.
-Interestingly, the 2001 serotype A epidemic does not seem to lead to noticeable changes in diversity. %GB: what do you mean here?
+Interestingly, the 2001 serotype A epidemic does not seem to lead to noticeable changes in diversity. %GB: what do you mean here? %LM: I mean that such a huge outbreak could lead to a spike in Ne(t), what does not happen.
 
 FMDV spread in South America seems to happen mostly through transnational borders, with long migration routes being rarer.
 In keeping with the spatial Bayes factors results (Figure~\ref{fig:mj&BFs}), we found that the presence of borders between countries attained a positive albeit not significant (BF $<3$) coefficient (Figure~\ref{fig:glm_spatial}).
@@ -184,6 +190,9 @@ These results are consistent also with the fact that geographic distance yielded
 Taken together, these results indicate that, especially for serotype O, FMDV dispersal takes place over shorter distances, across shared borders and is connected with the trade of live pigs and cattle.
 The finding that the Ecuadorian epidemic was most likely seeded from Colombia (Figure~\ref{fig:epidemictracing}C) also suggests an effect of cattle trade, since~\citet{Carvalho2013} show that the origin of the Ecuadorian epidemic was the province of Esmeraldas in the border between the two countries and is where most of the Ecuadorian cattle trade takes place~\citep{Maradei2011}. %GB: source/citation for the final part of this sentence? %LM: Done.
 Distance to the border is considered one of the most important factors to FMD spread, at least in the context of the Paraguay/Brazil border~\citep{Amaral2016}.
+On the other hand, our finding that Argentina was the most likely origin of the 2011 Paraguayan isolate is in disagreement with~\cite{Maradei2013}, who state that, antigenically, the O/San Pedro/Par/11 isolate is not very similar to Argentinian strains such as O/Corrientes/Arg/06.
+We note that out analysis here takes genomic information into account, not just phenotypic traits, which might explain the disagreement.
+
 Figure~\ref{sfig:epitrac}F shows that Ecuador is most certainly the origin of the Peruvian 2008 outbreak, which may be connected with the illegal movement of cattle across the border, as suggested by~\citet{Correa2002}.
 Regarding the reservoirs of FMDV in the continent, our results for serotype O partially confirm common knowledge (e.g.\citep{Saraiva2003} and~\citep{Naranjo2013}) that the (possibly illegal) trade of cattle is a driving force of FMDV spread.
 On the other hand, our results for serotype A seem to implicate the swine population in the spread of the virus, a mechanism that could be facilitated by swine and caprines only being vaccinated during public health emergencies~\citep{Saraiva2003}.
@@ -211,6 +220,7 @@ Despite this, however, we feel it is important to clarify its limitations as the
 We highlight three key limitations, which in our view cannot be completely circumvented by the use of state-of-the-art statistical methods. 
  %  - preferential sampling
 First, it is important to understand that while the methods employed in this paper help quantify and mitigate the effects of preferential sampling, ultimately biased data lack information and hence force us to draw more conservative conclusions.
+This is particularly important to consider in light of the fact that early reporting for FMD was not reliable and sampling is likely to be significantly biased downward in the period before 1980s.
 % - fragment vs full genome
 Secondly, the sequences in the present study are from a particular gene (1D, VP1) rather than the full genomes, for which there are considerably fewer sequences that originate only from a few countries.
 This restricts our ability to resolve finer details in the phylogenies and by extension limits the ability of phylodynamic models~\citep{Dudas2019}.
