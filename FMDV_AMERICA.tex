@@ -97,7 +97,7 @@ Key-words: foot-and-mouth disease virus, South America, animal trade, pathogen p
 Foot-and-mouth disease virus (FMDV) is a rapidly evolving picornavirus and the causative agent of foot-and-mouth disease (FMD), the most important disease of domestic and wild cloven-hoofed animals~\citep{Grubman2004}.
 The virus can be classified in seven serotypes, three of which (A, O, and C) have circulated in South America.
 Serotype A caused large epidemics throughout the Southern cone in recent years~\citep{Perez2001, Malirat2012}, while endemic circulation has been mostly limited to Venezuela~\citep{Malirat2012}.
-Historically, serotype O has been the most prevalent serotype on the continent, and was limited to areas in the Andean region, in particular to Ecuador~\citep{Malirat2011a}, until recent outbreaks in Colombia~\citep{OIE2017, OIE2018}.
+Historically, serotype O has been the most prevalent serotype on the continent, and was limited to areas in the Andean region, in particular to Ecuador~\citep{Malirat2011}, until recent outbreaks in Colombia~\citep{OIE2017, OIE2018}.
 \myedit{RefOneComTwo}{Serotype C on the other hand was last encountered in the continent in $1995$ in Brazil~\citep{Correa2002}.}
 Historical reports suggest that FMDV arrived in South America in the late years of the 19th century with European colonization~\citep{Naranjo2013, Tully2008}. 
 By the 1970s, FMD was widespread in the region, with several large-scale epidemics being caused by multiple subtypes~\citep{Saraiva2003}.
@@ -106,7 +106,7 @@ Over time, passive and active surveillance programs have, with different degrees
 In order to achieve complete eradication however, the strains involved in epidemics - especially those in previously FMDV-free areas - need to be accurately characterised.
 
 Phylogenetic analyses have proven useful in recovering the transmission pathways from genetic data~\citep{Cottam2008a, Cottam2008b} and in providing insight into the processes that drive re-emergence~\citep{DiNardo2011}.
-More recently, molecular epidemiology tools have been used to infer the origin and evolutionary history of emerging strains in South America~\citep{Perez2001, Malirat2007, Malirat2011a, Malirat2011b, Maradei2013}.
+More recently, molecular epidemiology tools have been used to infer the origin and evolutionary history of emerging strains in South America~\citep{Perez2001, Malirat2007, Malirat2011, Malirat2011, Maradei2013}.
 However, as pointed out by \citet{DiNardo2011}, a common feature of FMDV molecular epidemiology studies is that  joint evaluation of epidemiological, environmental and genetic data has usually been performed outside of a unified quantitative framework. %GB: how have these studies been performed then and what are the main downsides of not using a unified framework?
 In the face of many sources of information, ranging from genetic data to environmental data on host distribution and outbreak counts, it's desirable to have a framework capable of integrating these sources of information coherently. %GB: we should provide some references - if possible - of studies that don't do this and how they arrived to poor conclusions; probably easier to provide examples that did use proper joint data analysis
 
@@ -176,12 +176,14 @@ Examples include the product of the number of sequences and pigs trade ($2004-20
 \section*{Discussion}
 
 Dating analyses showed serotype A to be older than serotype O in the continent, a finding consistent with a global analysis of both serotypes~\citep{Tully2008}.
+Serotype O also showed remarkably higher substitution rates, but caution should be exercised when interpreting these findings, as the substitution rate is a quantity that incorporates molecular characteristics linked to replication as well as populational processes driving mutation fixation~\citep{Holmes2016}.
 Our population dynamics reconstructions suggest that serotype A has experienced a rise and fall trajectory with a sharp increase and subsequent decrease of its effective population size.
 Serotype O, in contrast, shows a long period of stability in terms of its population size, followed by a period of decline starting in the mid 1990s. %GB: can we link this to a vaccination program or some other intervention strategy or phenomenon in general?
 % LM: Let's wait to see what Andres and Waldemir say.
+%LM: I'm none the wiser about this. PL?
 Overall, effective population sizes follow the downward trend of FMD case counts shown in Figure~\ref{sfig:case_temporal}, but the limited temporal span of the case data (1990 to 2010) precludes more general conclusions.
 \citet{Naranjo2013} provide a longer time series (Figure 3 therein) which shows a spike in cases for serotype A around the mid 1970s and that serotype O cases show a decreasing trend from the 1970s which intensifies around the mid 1990s, which coincides with the start of the decline seen in the left panel of Figure~\ref{fig:popdyn} in the present paper.
-Interestingly, the 2001 serotype A epidemic does not seem to lead to noticeable changes in diversity. %GB: what do you mean here? %LM: I mean that such a huge outbreak could lead to a spike in Ne(t), what does not happen.
+Interestingly, the 2001 serotype A epidemic does not seem to lead to noticeable changes in diversity. %GB: what do you mean here? %LM: I mean that such a huge outbreak could lead to a spike in Ne(t), which does not happen.
 
 FMDV spread in South America seems to happen mostly through transnational borders, with long migration routes being rarer.
 In keeping with the spatial Bayes factors results (Figure~\ref{fig:mj&BFs}), we found that the presence of borders between countries attained a positive albeit not significant (BF $<3$) coefficient (Figure~\ref{fig:glm_spatial}).
@@ -211,7 +213,11 @@ In Text S2, we provide further simulations that investigate the effect of the sp
 To account for spatial preferential sampling, we included the number of sequences isolated in each location as a predictor of spread. 
 Since our goal was a conservative analysis, we included the sampling structure in different ways -- difference and product of the number of sequences between countries, numbers of sequences in both origin and destination -- in order to maximise our ability to detect an effect of sampling.
 Our results show a mild, not statistically significant effect of sampling as evidenced by the zero-excluding 95\% BCIs obtained for the predictors ``Product \# sequences'' and `` \# sequences destination'' for serotype O.
-In addition to~\textit{detecting} spatial preferential sampling, the inclusion of sampling-related predictors allows for~\textit{accommodating} preferential sampling so that other coefficient estimates, made conditionally, are robust to it. 
+In addition to~\textit{detecting} spatial preferential sampling, the inclusion of sampling-related predictors allows for~\textit{accommodating} preferential sampling so that other coefficient estimates, made conditionally, are robust to it.
+
+Finally, it is important to point out that differences between serotypes should not be readily attributed to inherent biological differences.
+Most inferences reported here depend on complex population-level processes such as the migration of infected hosts, immunological composition of host populations and rearing practices.
+As an example, we note that even quantities more strongly linked to molecular processes such as the evolutionary rate depend on population-level processes that obscure or magnify biological differences in mutation rate by influencing rates of fixation.
 
 \subsection*{Limitations of this study}
 
