@@ -1,3 +1,4 @@
+
 \documentclass[a4paper,10pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -63,7 +64,6 @@
 Luiz Max Carvalho, Nuno Rodrigues Faria, Guido K\"onig,
 Marc A. Suchard,\\ 
 Philippe Lemey, Waldemir de Castro Silveira,\\
-% Andrew Rambaut
 and Guy Baele
 }
 
@@ -186,14 +186,14 @@ Serotype & Markov model & Clock model & log marginal likelihood \\
 
 \subsection*{Temporal analysis -- accounting for preferential sampling}
 
-Since our sample is likely to be biased temporally -- as well as spatially (but see below) --, we employ a population dynamics reconstruction method that allows accommodating the tip sampling structure, as well as the inclusion of temporal covariates~\citep{M-Karcher2019}.
-The model of~\cite{M-Karcher2019} assumes sequences are collected according to a Poisson point process with intensity
+Since our sample is likely to be biased temporally -- as well as spatially (but see below) --, we employ a population dynamics reconstruction method that allows accommodating the tip sampling structure, as well as the inclusion of temporal covariates~\citep{M-Karcher2020}.
+The model of~\cite{M-Karcher2020} assumes sequences are collected according to a Poisson point process with intensity
 \begin{equation}
  \label{eq:skytrack}
  \lambda_s(t) = \exp\left( \beta_0 + \beta_1\gamma(t) + \beta_2 f_1(t)  + \beta_2 f_2(t) + \ldots + \beta_P f_P(t) + \left[\delta_2 f_2(t) + \ldots + \delta_P f_P(t) \right]\gamma(t) \right),
 \end{equation}
 where $\gamma(t)$ is the log population size at time $t$, the $\boldsymbol\beta$ are coefficients, $\mathcal{F} = \{f_1, f_2, \ldots, f_P\}$ are functions of interest and the $\boldsymbol\delta$ control interaction terms, which we do not use here.
-Following~\cite{M-Karcher2019}, we consider four models:
+Following~\cite{M-Karcher2020}, we consider four models:
 \begin{enumerate}
  \item \textbf{Model 0:} ``Naive'' model, in which sampling is not accounted for~\citep{Palacios2015}.
  \item \textbf{Model 1:} Preferential model with $\lambda_s(t) = \exp(\beta_0 + \beta_1\gamma(t))$, denoted $\{\gamma(t)\}$~\citep{M-Karcher2016};
