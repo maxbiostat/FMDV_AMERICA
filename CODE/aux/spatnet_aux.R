@@ -21,16 +21,16 @@ sqmat2vec <- function(M){
   return(as.vector(M)[pos])}
 ############################
 # Generates a legend from a vector
-genleg<-function(x, nbreaks = 5)
+genleg <- function(x, nbreaks = 5, breaks = NULL)
 { 
-  breaks <- round(quantile(x, probs = seq(0.01, 1, 1/nbreaks)), digits = 2)
+  if(is.null(breaks)) breaks <- round(quantile(x, probs = seq(0.01, 1, 1/nbreaks)), digits = 2)
   legendd <- leglabs(breaks, over = "over") 
-return(list(legend = legendd,  indicators = findInterval(x, breaks, all.inside = TRUE), breaks = breaks))
+  return(list(legend = legendd,  indicators = findInterval(x, breaks, all.inside = TRUE), breaks = breaks))
 }
 #####
 # modified plot.nb that allows for different thickness for each link
 mplot.nb <- function (x, coords, col = "black", lwd = 2, points = TRUE, add = FALSE, 
-                    arrows = FALSE, length = 0.1, xlim = NULL, ylim = NULL, ...) 
+                      arrows = FALSE, length = 0.1, xlim = NULL, ylim = NULL, ...) 
 {
   nb <- x
   unb <- unlist(nb)[unlist(nb)>0]
@@ -82,8 +82,12 @@ mplot.nb <- function (x, coords, col = "black", lwd = 2, points = TRUE, add = FA
     points(x, y, ...)
 }
 ##############################
-plot.spatnet <- function(map, nmat, s, coords, net, nets, dir, brk = 5, ltitle, mtitle = "", main = ""){
+plot.spatnet <- function(map, nmat, s, coords, net,
+                         pallete = c("heat", "rainbow"),
+                         nbreaks = NULL,
+                         nets, dir, brk = 5, ltitle, mtitle = "", main = ""){
   ## s is a threshold to decide which edges to show. Only edges with weight > s are plotted 
+  if(!is.null(breaks)) brk <- length(nbreaks)
   if(net){
     if(missing(nets)){
       if(dir == "from"){
@@ -92,8 +96,11 @@ plot.spatnet <- function(map, nmat, s, coords, net, nets, dir, brk = 5, ltitle, 
         nets <- colSums(nmat)
       }   
     }   
-    colors <- brewer.pal(brk,"YlOrRd")  
-    lg <- genleg(nets[nets > 0], nbreaks = brk)
+    colors <- switch(pallete,
+                     "heat" = brewer.pal(lbrk, "YlOrRd"),
+                     "rainbow" = c('blue', 'lightblue', 'green', 'yellow', 'orange', 'red')[1:nbrk]
+    ) 
+    lg <- genleg(nets[nets > 0], breaks = breaks, nbreaks = brk)
   }
   nmat <- nmat/max(nmat)
   nmatind <- ifelse(nmat > s, 1, 0)
@@ -112,54 +119,67 @@ plot.spatnet <- function(map, nmat, s, coords, net, nets, dir, brk = 5, ltitle, 
 
 ##############################################################
 plot.spatnett <- function(map, nb, coords, ws, nets, nbrk = 3, 
+                          nbreaks = NULL, lbreaks = NULL,
                           lbrk = 5, thck = FALSE,
-                          coropleth = TRUE, arrows = TRUE, title, main = ""){
+                          coropleth = TRUE, pallete = c("heat", "rainbow"),
+                          arrows = TRUE, title, main = ""){
+  if(!is.null(nbreaks)) nbrk  <- length(nbreaks) + 1
+  if(!is.null(lbreaks)) lbrk  <- length(lbreaks) + 1
   if(missing(nb)){nb <- poly2nb(map)}
   if(missing(coords)){coords <- coordinates(map)}
-  colors <- brewer.pal(lbrk, "YlOrRd")
-  colors2 <- rainbow(nbrk)
-  clg <- genleg(nets, nbreaks = lbrk)  
-  alg <- genleg(ws, nbreaks = nbrk)
+  colors <- switch (pallete,
+                    "heat" = brewer.pal(lbrk, "YlOrRd"),
+                    "rainbow" = c('blue', 'lightblue', 'green', 'yellow', 'orange', 'red')[1:nbrk]
+  ) 
+  clg <- genleg(nets, breaks = lbreaks, nbreaks = lbrk)  
+  alg <- genleg(ws, breaks = nbreaks, nbreaks = nbrk)
   if(coropleth){
     plot(map, col = colors[clg$indicators])
   }else{
     plot(map)
   }
   if(!thck){
-   mplot.nb(nb, coords, col = colors2[alg$indicators], points = FALSE, arrows = arrows, add = TRUE)
+    mplot.nb(nb, coords, col = colors[alg$indicators], points = FALSE, arrows = arrows, add = TRUE)
   }else{
-   mplot.nb(nb, coords, lwd = alg$indicators, points = FALSE, arrows = arrows, add = TRUE)
+    mplot.nb(nb, coords, lwd = alg$indicators, points = FALSE, arrows = arrows, add = TRUE)
   }
   if(coropleth){
-  legend("bottom", fill = colors, bty = "n", legend = clg$legend, title = title,
-         cex = .7, y.intersp = 1)
+    legend("bottom", fill = colors, bty = "n", legend = clg$legend, title = title,
+           cex = .7, y.intersp = 1)
   }
   if(!thck){
-   legend("bottomleft", fill = colors2, bty = "n", legend = alg$legend, title = "Bayes factors",
-          cex = .7, y.intersp = 1)
- }else{
-   legend("bottomleft", lwd = 1:max(alg$indicators), bty = "n", legend = alg$legend,
-          title = "Bayes factors", cex = .7, y.intersp = 1)
- }
+    legend("bottomleft", fill = colors, bty = "n", legend = alg$legend, title = "Bayes factors",
+           cex = .7, y.intersp = 1)
+  }else{
+    legend("bottomleft", lwd = 1:max(alg$indicators), bty = "n", legend = alg$legend,
+           title = "Bayes factors", cex = .7, y.intersp = 1)
+  }
 }
 ##############################################################
 ## FAIR WARNING: if you continue reading you'll see what might very well be the most heinous hack in all of R coding history. I advise against it.
-plot.spatnettinv <- function(map, nb, coords, ws, nets, nbrk = 3, 
-                          lbrk = 5, thck = FALSE,
-                          coropleth = TRUE, arrows = TRUE, title, main = ""){
+plot.spatnettinv <- function(map, nb, coords, ws, nets,
+                             nbreaks = NULL, lbreaks = NULL,
+                             nbrk = 3, lbrk = 5, thck = FALSE,
+                             coropleth = TRUE, pallete = c("heat", "rainbow"),
+                             arrows = TRUE, title, main = ""){
+  if(!is.null(nbreaks)) nbrk  <- length(nbreaks) + 1
+  if(!is.null(lbreaks)) lbrk  <- length(lbreaks) + 1
   if(missing(nb)){nb <- poly2nb(map)}
   if(missing(coords)){coords <- coordinates(map)}
-  colors <- brewer.pal(lbrk, "YlOrRd")
-  colors2 <- rainbow(nbrk)
-  clg <- genleg(nets, nbreaks = lbrk)  
-  alg <- genleg(ws, nbreaks = nbrk)
+  
+  colors <- switch (pallete,
+                    "heat" = brewer.pal(lbrk, "YlOrRd"),
+                    "rainbow" = c('blue', 'lightblue', 'green', 'yellow', 'red')
+  ) 
+  clg <- genleg(nets, breaks = lbreaks, nbreaks = lbrk)  
+  alg <- genleg(ws, breaks = nbreaks, nbreaks = nbrk)
   if(coropleth){
     plot(map, col = colors[clg$indicators])
   }else{
     plot(map)
   }
   if(!thck){
-    mplot.nb(nb, coords, col = colors2[alg$indicators], points = FALSE, arrows = arrows, add = TRUE)
+    mplot.nb(nb, coords, col = colors[alg$indicators], points = FALSE, arrows = arrows, add = TRUE)
   }else{
     mplot.nb(nb, coords, lwd = alg$indicators, points = FALSE, arrows = arrows, add = TRUE)
   }
@@ -168,7 +188,7 @@ plot.spatnettinv <- function(map, nb, coords, ws, nets, nbrk = 3,
            cex = .7, y.intersp = 1)
   }
   if(!thck){
-    legend("bottom", fill = colors2, bty = "n", legend = alg$legend, title = "Bayes factors",
+    legend("bottom", fill = colors, bty = "n", legend = alg$legend, title = "Bayes factors",
            cex = .7, y.intersp = 1)
   }else{
     legend("bottom", lwd = 1:max(alg$indicators), bty = "n", legend = alg$legend,

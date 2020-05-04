@@ -1,3 +1,4 @@
+
 \documentclass[a4paper,10pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -63,7 +64,6 @@
 Luiz Max Carvalho, Nuno Rodrigues Faria, Guido K\"onig,
 Marc A. Suchard,\\ 
 Philippe Lemey, Waldemir de Castro Silveira,\\
-% Andrew Rambaut
 and Guy Baele
 }
 
@@ -81,7 +81,7 @@ In Tables~\ref{stab:sequences_A} and~\ref{stab:sequences_O} we provide the GenBa
 \subsection*{Livestock trade data}
 
 One of the main contributions of this study lies in exploring the association between the trade of cattle, pigs and sheep and viral diffusion using a statistically sound approach that enables us to test evolutionary hypotheses concerning the influence of these predictors on viral spread~\citep{M-Lemey2014}. %GB: cite Lemey et al. 2014
-In this text we provide some additional exploratory plots of the covariate data.
+In this text, we provide some additional exploratory plots of the covariate data.
 In Figure~\ref{sfig:prod}, we show the time series of livestock production among the studied countries for a time frame of over $50$ years, illustrating that the production of cattle is much larger than that of any other livestock. %GB: I think that a simple line plot, connecting the dots would make the figure more clear than drawing a straight regression line through the dots
 Perhaps more importantly, while pigs and cattle production maintain a trend of positive growth throughout the second half of the twentieth century, sheep production shows a decline after $1990$.
 Spatially, the trade of all three livestock is rather different, as shown in Figure~\ref{sfig:tradenets}. %GB: this figure is not very clear; would it not be better to use dot matrices, with the size of the dots proportional to the trade intensity? Or perhaps use the existing figure(s) but play with the width of the different arrows according to trade intensity?
@@ -92,8 +92,8 @@ Further, the pig network presents a clear regional pattern, with two sub-network
 
 Temporally, overall trade shows remarkably different trends depending on the livestock analysed.
 While cattle trade shows a positive trend, pig trade is mostly stable over time and all other livestock considered show a declining trend.
-The FAO trade matrix is sometimes inconsistent, i.e. sometimes the exports from country $i$ to country $j$ do not correspond to the imports into country $j$ from country $i$.
-In cases like these we have picked the largest value for a given year and pair of countries $i$ and $j$.
+The FAO trade matrix is sometimes inconsistent, i.e. the exports from country $i$ to country $j$ do not always correspond to the imports into country $j$ from country $i$.
+In cases like these, we have picked the largest value for a given year and pair of countries $i$ and $j$.
 
 \subsection*{Vaccination and case data}
 
@@ -108,7 +108,7 @@ We show these vaccination time series in Figure~\ref{sfig:vaccination_temporal},
 
 \section*{Analysis}
 
-\subsection*{Maximum likelihood phylogenies and root-to-tip divergences}
+\subsection*{Maximum-likelihood phylogenies and root-to-tip divergences}
 
 In order to preliminarily assess whether the data sets used in this study contain evidence of clock-like evolution, we construct unrooted phylogenies using the maximum-likelihood procedures implemented in PhyML 3.0~\citep{M-Guindon2003} under a GTR model~\citep{M-Tavare1986} of sequence evolution with gamma-distributed site rate heterogeneity. %GB: cite Yang 1994 or 1996
 We root the trees at the branch -- as well as a position along it -- that minimises the sum of squared residuals of the linear regression of root-to-tip divergences (RDV) on the sampling times.
@@ -142,7 +142,7 @@ AY593821 & 1967 & Argentina \\
  \end{table}
 
  
-\subsection*{Bayesian Model Selection}
+\subsection*{Bayesian model selection}
 
 We employed generalised stepping stone sampling (GSS, \citet{M-Baele2016}) to compute (log) marginal likelihoods for six combinations of Markov sequence evolution and molecular clock models. %GB: citation year is wrong, should be 2016
 A constant population size coalescent tree prior was used across all combinations. %GB: the main manuscript seemed to suggest that the constant population size model was going to be compared against the Skygrid model using model selection
@@ -154,8 +154,8 @@ The quantile inversions for the Gamma relaxed clock model are very compute-inten
 In the interest of computational expediency for the large number of subsequent analyses we performed in this paper, we decided to use the UCLN model for serotype A as well.
 
 \begin{table}[!ht]
-\caption{\textbf{Marginal likelihoods for combinations of sequence evolution (Markov) and molecular clock models.}
-We used the generalised stepping stone (GSS) from~\citep{M-Baele2016} to compute (log) marginal likelihoods using a constant population size coalescent tree prior.
+\caption{\textbf{Log marginal likelihoods for combinations of sequence evolution (Markov) and molecular clock models.}
+We used generalised stepping stone sampling (GSS) from~\citep{M-Baele2016} to compute (log) marginal likelihoods using a constant population size coalescent tree prior.
 We compared the HKY and GTR substitution models, in combination with the strict clock and the uncorrelated relaxed clock models assuming either an underlying log-normal distribution (UCLN) or gamma distribution (UCG).
 The best fitting model for each serotype is highlighted in bold.
 }
@@ -186,14 +186,14 @@ Serotype & Markov model & Clock model & log marginal likelihood \\
 
 \subsection*{Temporal analysis -- accounting for preferential sampling}
 
-Since our sample is likely to be biased temporally -- as well as spatially (but see below) --, we employ a population dynamics reconstruction method that allows accommodating the tip sampling structure, as well as the inclusion of temporal covariates~\citep{M-Karcher2019}.
-The model of~\cite{M-Karcher2019} assumes sequences are collected according to a Poisson point process with intensity
+Since our sample is likely to be biased temporally -- as well as spatially (but see below) --, we employ a population dynamics reconstruction method that allows accommodating the tip sampling structure, as well as the inclusion of temporal covariates~\citep{M-Karcher2020}.
+The model of~\cite{M-Karcher2020} assumes sequences are collected according to a Poisson point process with intensity
 \begin{equation}
  \label{eq:skytrack}
  \lambda_s(t) = \exp\left( \beta_0 + \beta_1\gamma(t) + \beta_2 f_1(t)  + \beta_2 f_2(t) + \ldots + \beta_P f_P(t) + \left[\delta_2 f_2(t) + \ldots + \delta_P f_P(t) \right]\gamma(t) \right),
 \end{equation}
 where $\gamma(t)$ is the log population size at time $t$, the $\boldsymbol\beta$ are coefficients, $\mathcal{F} = \{f_1, f_2, \ldots, f_P\}$ are functions of interest and the $\boldsymbol\delta$ control interaction terms, which we do not use here.
-Following~\cite{M-Karcher2019}, we consider four models:
+Following~\cite{M-Karcher2020}, we consider four models:
 \begin{enumerate}
  \item \textbf{Model 0:} ``Naive'' model, in which sampling is not accounted for~\citep{Palacios2015}.
  \item \textbf{Model 1:} Preferential model with $\lambda_s(t) = \exp(\beta_0 + \beta_1\gamma(t))$, denoted $\{\gamma(t)\}$~\citep{M-Karcher2016};
@@ -251,29 +251,29 @@ In order to understand how the sequence sampling structure of both serotypes (se
  \item[C)] Using a regular grid of dates spanning the range of observed dates, simulate phylogenies under a constant population size with $N_e = 10$; %GB: what constitutes a 'regular grid'? %LM: Really?? Anyway, added explanation below.
  \item[D)]  Using a regular grid of dates spanning the range of observed dates, simulate phylogenies under an exponential growth model with $N_0 = 10$ and $r = 0.1$.
 \end{itemize}
-To construct a regular grid we created a sequence of $N$ dates from youngest to oldest observed date, where $N$ is the number of sequences collected for each serotype.
-For all scenarios we simulated $10$ phylogenies for each serotype using the R package~\textbf{timeTreeSim} (\url{https://github.com/maxbiostat/timeTreeSim}).
+To construct a regular grid, we created a sequence of $N$ dates from youngest to oldest observed date, where $N$ is the number of sequences collected for each serotype.
+For all scenarios, we simulated $10$ phylogenies for each serotype using the R package~\textbf{timeTreeSim} (\url{https://github.com/maxbiostat/timeTreeSim}).
 We fitted the four models outlined above to all simulated data sets.
 Since results were consistent across phylogenies, we will discuss results for a single representative simulation per scenario and serotype.
 All simulations and analyses can be found at~\url{https://github.com/maxbiostat/FMDV_AMERICA/blob/master/CODE/notebooks/}.
 
 Typical (representative) reconstructions obtained with all four models for each scenario are shown in Figures~\ref{sfig:reconplots_A} and~\ref{sfig:reconplots_O} for serotypes A and O, respectively.
-We can see that results are consistent across serotypes and that preferential sampling (i.e. using the empirical dates of the sequences in this study) leads to noisier reconstructions.
+According to these figures, the results are consistent across serotypes and preferential sampling (i.e. using the empirical dates of the sequences in this study) leads to noisier reconstructions.
 In addition, we notice that when the true population trajectory is exponential growth, the preferential model ($\{\gamma(t)\}$) does not recover the true population trajectory, but a model that includes time as a covariate (e.g. $\{\gamma(t), -t\}$) does.
-These results suggest that when population changes over time, a preferential model that includes simple functions of calendar time can capture the true behaviour and lead to narrower credibility intervals (compare ``naive'' and $\{\gamma(t), -t\}$ models for all scenarios and both serotypes.
+These results suggest that when population size changes over time, a preferential model that includes simple functions of calendar time can capture the true behaviour and lead to narrower credibility intervals (compare ``naive'' and $\{\gamma(t), -t\}$ models for all scenarios and both serotypes).
 
 In terms of model comparison, Figure~\ref{sfig:BNPR_simu_marglikes} shows the estimated (log) marginal likelihoods for models 1, 2 and 3 for all four scenarios.
 Again, results were consistent across serotypes. 
-For scenario A, model 1 ($ \{ \gamma(t) \}$) attains the highest marginal likelihood for all replicates.
+For scenario A, model 1 ($ \{ \gamma(t) \}$) attains the (log) highest marginal likelihood for all replicates.
 For scenario B, model 2 ($ \{ \gamma(t), -t\}$) performs best across replicates, likely because it is consistent with the exponential growth of the population.
 For scenarios C and D, model 1 is again the best fit across all replicates, showing that model selection based on (log) marginal likelihoods is parsimonious in that the simplest of model (between models 1, 2 and 3) is selected in a situation with no preferential sampling.
 
 \subsection*{Spatial analysis -- phylogeographic GLM}
 
-In order to study the influence of several predictors on the spatial spread of FMDV in the continent, we employed a sparse generalised linear model (GLM)~\citep{M-Lemey2014,M-Dudas2017}.
+In order to study the influence of several predictors on the spatial spread of FMDV in the continent, we employed a generalised linear model (GLM)~\citep{M-Lemey2014,M-Dudas2017}.
 Let $P$ be the number of predictors -- in this study, $P = 12$ -- and $K$ be the number of locations -- here, $K = 8$ for serotype A and $K = 9$ for serotype O.
 Moreover, let $\Lambda_{ij}$ be the transition rate between locations $i$ and $j$ and $\boldsymbol X_{ij}$ be the relevant row of design matrix.
-Then~\citep{M-Dudas2017}:
+Then:
 \begin{align*}
  \log \Lambda_{ij}  &= \boldsymbol X_{ij}^T \boldsymbol\delta \boldsymbol{\beta}
 + \epsilon_i + \epsilon_j, \\
@@ -281,7 +281,7 @@ Then~\citep{M-Dudas2017}:
 \sigma^2 &\sim \text{Inverse-Gamma}(0.001, 0.001),\\
 \beta_j &\sim \text{Normal}(0, 16),
 \end{align*}
-where the $\boldsymbol\epsilon$ are location-specific origin and destination random effects.
+where the $\boldsymbol\epsilon$ are location-specific origin and destination random effects~\citep{M-Dudas2017}.
 $\boldsymbol\delta$ is a vector containing variables $\delta_i \in \{0, 1\}$ that describe whether predictor $i$ is included ($\delta_i = 1$) or excluded ($\delta_i = 0$) from the model and $\boldsymbol\beta$ are the regression coefficients.
 Let $p_j$ be the \textit{prior} probability that predictor $j$ is included in the model.
 Here we will make the simplifying assumption that $p_j = q$ for all $j$.
