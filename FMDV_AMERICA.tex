@@ -13,7 +13,7 @@
 \usepackage[authoryear,round]{natbib}
 \bibliographystyle{apalike}
 \usepackage{xr} % automatic cross-referencing
-\externaldocument{Text_S2}
+\externaldocument{Text_S1}
 % Use doublespacing - comment out for single spacing
 %\usepackage{setspace}
 %\doublespacing
@@ -79,7 +79,7 @@ $\ast$ E-mail: luiz.fagundes@fgv.br
 Despite  the decrease in incidence of foot-and-mouth disease virus (FMDV) in South America over the last years, the pathogen still circulates in the region and the risk of re-emergence in previously FMDV-free areas is a veterinary public health concern.
 In this paper, we employ modern phylodynamic methods to merge epidemiological and genetic data  and reconstruct spatiotemporal patterns and determinants of the dispersal of the two most prevalent FMDV serotypes A and O in South America, while accounting for temporal and spatial sampling bias.
 We find that serotypes A and O differ in their temporal pattern of population dynamics, with serotype A displaying more temporal oscillation.
-Spatially, we traced the origins of the 2011 Paraguay outbreak to Argentina (posterior probability $0.5$) and Brazil (posterior probability $0.36$). %GB: this seems to be quite a specific statement to be put in the abstract, and it breaks the flow of the abstract in my opinion
+Spatially, we traced the origins of the 2011 Paraguay outbreak to Argentina and Brazil. %GB: this seems to be quite a specific statement to be put in the abstract, and it breaks the flow of the abstract in my opinion % LM: done
 Overall, we find that FMDV spread seems to happen mostly through transnational borders, with few long range transmissions, such as a well-supported link between Argentina and Peru for serotype A.
 We also found the trade of different livestock (pigs for serotype A and cattle for serotype O) to be associated with viral spread, providing a possible explanation for this pattern of spread.
 Our results showcase the usefulness of phylodynamic methods to the study and surveillance of FMDV in South America.
@@ -148,7 +148,7 @@ the preferential sampling model.
 Reconstructions that do not account for preferential sampling also lead to considerably wider Bayesian credibility intervals.
 We used MCC trees obtained from three independent chains per serotype as fixed phylogenies for the population dynamics reconstructions, and results were largely consistent across these replicates. %GB: is such a fixed topology/tree analysis a requirement? I think (but I may have messed up) that I used the model of Karcher et al. in BEAST, accommodating phylogenetic uncertainty? Or is that simply not possible?
 %LM: It is indeed possible. The reasons I did not pursue this further are: (i) can only use 'simple' covariates anyway, which is not that interesting and (ii) using the fixed tree approach I could explore simulations to understand robustness, which would take way longer to do with full joint modelling.
-In particular, model 3 ($\{\gamma(t), -t, -t^2\}$, see Text S2), which includes both a linear and a quadratic term on the sampling time, yielded the highest (log) marginal likelihood for all three replicates of serotype A and for two of three replicates for serotype O. %GB: this may lead to a discussion, i.e. not all replicates yielded the same results.
+In particular, model 3 ($\{\gamma(t), -t, -t^2\}$, see Text S1), which includes both a linear and a quadratic term on the sampling time, yielded the highest (log) marginal likelihood for all three replicates of serotype A and for two of three replicates for serotype O. %GB: this may lead to a discussion, i.e. not all replicates yielded the same results. %LM: I know. Good point. It can be solved by joint sampling during review.
 For all of the concordant replicates, the smallest log-Bayes factors in support of model 3 were $\approx 9$ for serotype A and $\approx 3$ for serotype O.
 This less decisive support in favour of model 3 for serotype O is also manifested in the discrepant replicate, in which model 2, which includes only a linear term on $t$, is favoured with a log Bayes factor of $\approx 1.7$. %GB: this is unclear to me; why is this replicate discrepant? shouldn't that be a sign that we need to increase the computational settings in order to reduce estimator variance?
 %LM: In this case, the 'estimator variance' is minuscule, as this relies on marginal likelihoods computed from INLA.These are, however, approximate and that may be the problem here. Or the marginal likelihood displays some dependence on the underlying topology for these models, which would make perfect sense. Maybe material for a future project. For now, I think we're good, but let me know if you feel strongly.
@@ -214,9 +214,9 @@ A crucial goal of the present study was to perform phylodynamic inference while 
 In order to tackle temporal preferential sampling, we have employed a model that explicitly incorporates the sequence sampling dates~\citep{Karcher2020}, while also allowing for the inclusion of covariates to help increase explanatory power.
 Our finding that accounting for preferential sampling leads to narrower credibility intervals and better fitting models highlights the dangers of ``naive'' reconstructions based on non-uniform temporal sampling.
 In particular, we found that our sampling-aware reconstructions showed fewer oscillations, which could be mistakenly interpreted as genuine changes in population dynamics under a naive model. 
-In Text S2, we provide further simulations that investigate the effect of the specific temporal sampling patterns observed for both serotypes when compared to uniform temporal sampling.
+In Text S1, we provide further simulations that investigate the effect of the specific temporal sampling patterns observed for both serotypes when compared to uniform temporal sampling.
 %GB: we do not mention nor investigate possible spatial preferential sampling though, but let's stay away from this if possible.
-% LM: This is not entirely true. We do investigate spatial preferential sampling by including the appropriate covariates in the spatial genetic GLM. It's just that we report this in the main text, rather than Text S2.
+% LM: This is not entirely true. We do investigate spatial preferential sampling by including the appropriate covariates in the spatial genetic GLM. It's just that we report this in the main text, rather than Text S1.
 
 % Spatial: sequences included as predictors in various ways in spatial genetic GLM
 To account for spatial preferential sampling, we included the number of sequences isolated in each location as a predictor of spread. 
@@ -285,7 +285,7 @@ We retrieved data on the \textit{detailed trade matrix} %GB: this will need more
 for cattle, pigs and sheep (number of live animals exchanged) covering the period from $1986$ to $2009$, for each of the nine countries.
 The detailed trade matrix includes information on export quantity, export value, import quantity and import value for each variable.
 We used the information on export and import quantity to compose our predictors.
-We refer to Supplementary Text S2 for more details.
+We refer to Supplementary Text S1 for more details.
 %LM: added more information
 
 \textbf{Vaccination and case data.}
@@ -296,7 +296,7 @@ Serotype-specific outbreak notifications were obtained from the FMD Bioportal (\
 \textbf{Data availability.} All the data used in this paper including BEAST XML files are hosted at~\url{https://github.com/maxbiostat/FMDV_AMERICA}.
 
 In this study we take a Bayesian approach to testing evolutionary hypotheses while accommodating phylogenetic uncertainty.
-Details on computational settings and prior choices can be found in Text S2.
+Details on computational settings and prior choices can be found in Text S1.
 
 \subsection*{Phylogenetic Analysis}
 
@@ -305,7 +305,7 @@ We conducted an initial analysis of the two data sets described, employing PhyML
 Having identified considerable rate variation among branches we used the Bayesian Evolutionary Analysis by Sampling Trees (BEAST)~\citep{Suchard2018} software package to infer time-structured phylogenies under relaxed clock models~\citep{Drummond2006}, employing the BEAGLE~\citep{Ayres2012,Ayres2019} library to gain computational efficiency. %GB: update reference to BEAGLE 3
 % LM: Done.
 %\subsection*{Bayesian model selection}
-In order to select an appropriate combination of sequence evolution (Markov), coalescent and relaxed clock models for each data set (see Text S2), we use state-of-the-art marginal likelihood estimators, namely generalised stepping-stone sampling (SS)~\citep{Baele2016} %GB: change publication year to 2016 % LM: Done.
+In order to select an appropriate combination of sequence evolution (Markov), coalescent and relaxed clock models for each data set (see Text S1), we use state-of-the-art marginal likelihood estimators, namely generalised stepping-stone sampling (SS)~\citep{Baele2016} %GB: change publication year to 2016 % LM: Done.
 implemented in BEAST~\citep{Suchard2018}.
 Following a preliminary skygrid analysis~\citep{Gill2013}, we selected the constant population size coalescent parametric model -- and its associated working prior -- as the tree prior for these comparisons.
 
@@ -324,14 +324,14 @@ We employed the function \verb|BNPR_PS()| in the~\textbf{phylodyn}~\citep{Karche
 %LM: Added a few words answer this.
 Both the BNPR and skygrid models necessitate the estimation of a precision parameter, to which one usually assigns a Gamma distribution with parameters $\alpha = \beta = 0.001$.
 In this study however, we employed the penalised complexity (PC) prior of~\cite{Simpson2017}, which has better theoretical properties. %% LM: I have a simulation study and a few analyses to support that claim also, but no need to cite here.
-More details on model formulation, testing and comparison are given in Text S2. %GB: is there also a Text S1? LM: No. But there was. So I'll wait until the very end to rechristen Text S2.
+More details on model formulation, testing and comparison are given in Text S1. %GB: is there also a Text S1? LM: No. But there was. So I'll wait until the very end to rechristen Text S1.
 
 \textbf{Reconstructing geographical movements using BSSVS and stochastic mapping}
 
 We employ Bayesian stochastic search variable selection (BSSVS)~\citep{Lemey2009} to compute Bayes factors for migration routes between countries and establish which routes are relevant to the spatial spread of FMDV in South America.
 Following the approach of~\citet{Hall2013}, we employ the stochastic mapping technique (Markov jump) of~\cite{Minin2008b} to obtain a probability distribution for the location (country) of origin of each of epidemic.
-% Each epidemic is represented by sequences from it, taken as representative (see Text S2 for details). %GB: I don't understand this sentence, can you rephrase? %LM: See below
-To represent each epidemic (e.g. Ecuador 2002), we selected a group of representative sequences from that epidemic (country and year) and traced their origins.(see Text S2 for details)
+% Each epidemic is represented by sequences from it, taken as representative (see Text S1 for details). %GB: I don't understand this sentence, can you rephrase? %LM: See below
+To represent each epidemic (e.g. Ecuador 2002), we selected a group of representative sequences from that epidemic (country and year) and traced their origins.(see Text S1 for details)
 
 \textbf{Phylogeographic generalised linear models}
 
@@ -343,7 +343,7 @@ The numbers of sequences in each location were also included as origin and desti
 In order to test the relevance of each predictor to spatial spread, we used Bayesian stochastic variable selection (BSSVS, \cite{Lemey2009}).
 All predictors with the exception of the borders were standard log-transformed. %using $\log(x +1)$ in order to map $0$ to $0$ and standardised to have mean $0$ and standard deviation $1$.
 The relevance of each predictor can then be determined using Bayes factors~\citep{KassRaftery1995,Lemey2009,Lemey2014}.
-Details are given in Text S2.
+Details are given in Text S1.
 
 \section*{Software versions and computer programs}
 
@@ -405,7 +405,7 @@ Please notice the slight difference in colour scheme in the legend of both panel
 \end{center}
 \caption{\textbf{Reconstructed population dynamics for serotypes A and O in South America}.
 }
-In the left panel we show reconstructions that do not take sampling (sequencing) patterns into account, whereas the right panel shows reconstructions using a preferential sampling model~\citep{Karcher2020} that includes a quadratic term on the log-intensity, $\{\gamma(t), -t, -t^2\}$ and which yielded the highest (log) marginal likelihood among the coalescent models tested (see Text S2 for more details).
+In the left panel we show reconstructions that do not take sampling (sequencing) patterns into account, whereas the right panel shows reconstructions using a preferential sampling model~\citep{Karcher2020} that includes a quadratic term on the log-intensity, $\{\gamma(t), -t, -t^2\}$ and which yielded the highest (log) marginal likelihood among the coalescent models tested (see Text S1 for more details).
 Colours depict serotypes.
 
 % All estimates were obtained using the \verb|BNPR()| and \verb|BNPR_PS()| functions from the \textbf{phylodyn} package~\citep{Karcher2017}. 
